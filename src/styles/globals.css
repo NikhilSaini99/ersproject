@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*-------------------CSS Reset-------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+/*------------------Our Resources-------------------*/
+
+.container .fill {
+  /* filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(38deg)
+    brightness(105%) contrast(103%); */
+  filter: brightness(0) contrast(100%);
+}
+
+/* .container:hover .fill {
+  filter: none;
+} */
+
+/*------------------Search Bar-------------------*/
+
+body {
+  overflow-x: hidden;
+}
+
+.search-container-open {
+  left: 0;
+}
+
+.search-input {
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+  width: 525px;
+  border: none;
+  background-color: #17197C;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.search-container-open .search-input {
+  transform: translateX(0);
+}
+
+/*------------------Menu Bar-------------------*/
+
+.line {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(#FFC43A, #FFC43A);
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
+}
+
+.line:hover {
+  background-size: 100% 2px;
+}
+
+.main:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/*------------------Slider-------------------*/
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+  height: 80vh;
+  width: 100%;
+}
+
+.slider-indicator {
+  display: inline-block;
+  background-image: linear-gradient(#FFC43A, #FFC43A);
+  background-position: right -100% top 0;
+  background-size: 200% 4px;
+  background-repeat: no-repeat;
+}
+
+.slider-indicator.active {
+  padding: 12px 0px;
+  background-position: left 100% top 0;
+  transition: background-position ease-in-out 6s;
+}
+
+/*------------------News Section-------------------*/
+
+.main:hover .item {
+  scale: 1.1;
+}
+
+.main:hover .para {
+  transform: translateY(-2%);
+  color: #17197C;
+}
+
+.main:hover .head {
+  transform: translateY(2%);
+  color: #000000;
+}
+
+/*---------------------Buttons---------------------*/
+
+.box:hover .btn {
+  transform: translateX(20%);
+}
+
+.slideshowDots {
+  text-align: center;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 15px 7px 0px;
+  background-color: #DAD8CC;
+}
+
+.slideshowDot.active {
+  background-color: #17197C;
+}
