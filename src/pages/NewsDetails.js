@@ -72,7 +72,7 @@ export default function NewsDetails() {
           {/* Right Side End */}
         </Grid>
       </section>
-
+              
       {/*-----------------------Footer---------------------*/}
 
       <Footer />

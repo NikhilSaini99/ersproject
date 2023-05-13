@@ -21,6 +21,7 @@ import monitoring from "../assets/icons/monitoring.png";
 import table from "../assets/icons/table.png";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { FcAbout } from "react-icons/fc";
+import { Paper } from "@mui/material";
 
 export default function Home() {
   // ----------------------Resources-----------------------
@@ -202,14 +203,14 @@ export default function Home() {
           </h1>
           <div className="border w-56 border-yellowish mt-2"></div>
         </div>
-
         <div className="grid grid-cols-2 gap-32 mt-10 px-32">
           {NewsData.map((item, key) => (
             <News
-              key={key}
+            key={key}
               img={item.img}
               icon={item.icon}
               description={item.description}
+              
             />
           ))}
         </div>

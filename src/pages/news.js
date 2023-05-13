@@ -33,7 +33,7 @@ export const LatestNewsSection = ()=>{
       fontWeight: 'bold', textAlign: 'left', top: '5rem', margin: '0 auto 0 4rem', top: '6.8rem'
     }}>Latest News</Typography>
     <Stack sx={{
-      background: 'white', width: '50%', position: 'relative',
+      background: 'white', width: {xs:'74%',lg:'50%'}, position: 'relative',
       margin: '0 auto 0 4rem', top: '8rem'
     }}>
 

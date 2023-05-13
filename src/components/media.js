@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Twitter from "../assets/images/twitter-page.jpg";
 import Instagram from "../assets/images/insta-page.jpg";
-import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
+import ShareIcon from '@mui/icons-material/Share';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { Avatar, Box, Button, Divider, Grid, IconButton, Modal, Paper, SpeedDial, SpeedDialAction, Stack, Typography } from "@mui/material";
 
 function Media() {
+
   return (
     <>
       <section>
@@ -70,7 +77,9 @@ function Media() {
                   borderColor: "#DADAEB",
                   cursor: "pointer",
                   borderRadius: '12px',
-                  padding: '0.5rem'
+                  padding: '0.5rem',
+                  minWidth: '344px',
+                  minHeight: '450px'
                 }}
               />
               <Link href="https://twitter.com/AECOM" target="_blank">
@@ -109,7 +118,9 @@ function Media() {
                   borderColor: "#DADAEB",
                   cursor: "pointer",
                   borderRadius: '12px',
-                  padding: '0.5rem'
+                  padding: '0.5rem',
+                  minWidth: '344px',
+                  minHeight: '450px'
                 }}
               />
               <Link href="https://www.instagram.com/aecom" target="_blank">
@@ -126,6 +137,7 @@ function Media() {
 }
 
 function NewsCard({ url, img, title, date, description }) {
+  const [cardHover, setCardHover] = useState(false)
   return (
     <>
       {/* OLD CODE  */}
@@ -148,26 +160,82 @@ function NewsCard({ url, img, title, date, description }) {
 
       {/* NEW ONE BELOW THIS */}
 
-      <Paper elevation={18} sx={{margin:'0 5rem 4rem auto',width:'60%'}}>
-        <Stack sx={{ flexDirection: 'column' }}>
-        <Box sx={{'&:hover':{
-          opacity:'0.9',
-          cursor:'pointer', 
-        }}}>
-          <Image src={img} alt={title} style={{width:'100%',height:'100%',display:'block',}}/>
+      <Paper elevation={12} sx={{ margin: { md: '0 5rem 4rem 6rem', xl: '0 5rem 4rem 20rem' }, width: { xs: '80%', lg: '60%' } }}>
+        <Stack sx={{ flexDirection: 'column', overflow: 'hidden' }}>
+          <Box sx={{ position: 'relative' }}>
+            <Box sx={{
+              transition: '0.5s',
+              ...(cardHover && {
+                transform: 'scale(1.1)',
+                cursor: 'pointer',
+                transition: '0.5s',
+                filter: 'brightness(60%)'
+              }),
+
+            }} onMouseOver={() => setCardHover(true)}
+              onMouseOut={() => setCardHover(false)}>
+              <Image src={img} alt={title} style={{ width: '100%', height: '100%', display: 'block', }} />
+            </Box>
+            <Button variant="contained" style={{ background: '#f4c402', color: 'black' }} sx={{
+              textTransform: 'capitalize',
+              position: 'absolute', bottom: '3rem', right: '1rem', '&:hover': { background: '#f4c402' },
+              opacity: '0',
+              fontWeight: 'bold',
+              ...(cardHover && {
+                opacity: '100%',
+              })
+            }} onMouseOver={() => setCardHover(true)}>Read More</Button>
           </Box>
-          <Stack sx={{flexDirection:'column',p:'3rem',gap:'0.8rem'}}>
-          <Typography variant="h4" sx={{"&:hover":{
-            textDecoration:'underline',color:'#f4c402'
-          }}}>
-           <Link href={`${url}`}>{title}</Link>
-          </Typography>
-          <Typography variant="subtitle2" sx={{color:'grey'}}>
-            {date}
-          </Typography>
-          <Typography variant="body1" sx={{color:'grey'}}>
-            {description}
-          </Typography>
+          <Stack sx={{ flexDirection: 'column', p: '3rem', gap: '0.8rem', pb: '2rem !important' }}>
+            <Typography variant="h4" sx={{
+              transition: '0.5s',
+              "&:hover": {
+                transition: '0.5s',
+                textDecoration: 'underline', color: '#f4c402'
+              }
+            }}>
+              <Link href={`${url}`}>{title}</Link>
+            </Typography>
+            <Typography variant="subtitle2" sx={{ color: 'grey' }}>
+              {date}
+            </Typography>
+            <Typography variant="body1" sx={{ color: 'grey' }}>
+              {description}
+            </Typography>
+            <Divider />
+
+            <Stack direction={'row'} sx={{ display: 'flex', justifyContent: 'space-between' }}>
+              <Box sx={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                <Avatar />
+                <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'black', fontSize: '14px' }}>BY ADMIN</Typography>
+              </Box>
+              <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+
+                {/* <Divider orientation="vertical" flexItem /> */}
+
+                <SpeedDial ariaLabel="Share_Speed_dial" direction="left" sx={{
+                  '&:hover': {
+                    '& .MuiButtonBase-root': {
+                      backgroundColor: 'white',
+                    }
+                  }
+                }}
+                  icon={<ShareIcon sx={{ color: 'grey' }} />}>
+                  <SpeedDialAction
+                    icon={<FacebookIcon />}
+                    tooltipTitle="Facebook"
+                  ></SpeedDialAction>
+                  <SpeedDialAction
+                    icon={<TwitterIcon />}
+                    tooltipTitle="Twitter"
+                  ></SpeedDialAction>
+                  <SpeedDialAction
+                    icon={<LinkedInIcon />}
+                    tooltipTitle="Linkedin"
+                  ></SpeedDialAction>
+                </SpeedDial>
+              </Box>
+            </Stack>
           </Stack>
         </Stack>
       </Paper>
@@ -175,47 +243,77 @@ function NewsCard({ url, img, title, date, description }) {
   );
 }
 
-function GallaryCard({ img, group, date, description }) {
+function GallaryCard({ img, group, date, description, checking, item }) {
+  const [imgIndex, setimgIndex] = useState(0)
+  const [imageModal, setimageModal] = useState(false)
+  function handleImageOpen(item) {
+    setimageModal(true);
+    setimgIndex(item)
+  }
+
+  function handlePreviousImg() {
+
+    setimgIndex(imgIndex - 1)
+
+    if (imgIndex < 1) {
+      setimgIndex(checking.length - 1)
+    }
+  }
+
+  function handleNextImg() {
+
+    setimgIndex(imgIndex + 1)
+    if (imgIndex >= checking.length - 1) {
+      setimgIndex(0)
+    }
+  }
+
+  const handleClose = () => setimageModal(false);
   return (
     <>
-      {/* <div className="bg-white cursor-pointer">
-        <div className="object-cover">
-          <Image
-            src={img}
-            alt="..."
-            className="h-60 hover:brightness-[.25] ease-in-out duration-500"
-          />
-        </div>
-        <div className="flex flex-col gap-2 px-4 py-4">
-          <h1 className="inline-flex text-[22px] leading-7 font-semibold text-black hover:text-subColor duration-400">
-            {group}
-          </h1>
-          <h3 className="text-base text-[#969fb0] font-normal">
-            Published On {date}
-          </h3>
-          <p className="text-[15px] font-normal text-justify">{description}</p>
-        </div>
-      </div> */}
-
-      <div className="flex flex-col justify-between relative group cursor-pointer">
-        <div className="overflow-hidden object-cover">
+      <div className="flex flex-col justify-between relative group cursor-pointer ">
+        <div className="overflow-hidden" onClick={() => handleImageOpen(item)}>
           <Image
             src={img}
             alt=""
-            className="h-80 scale-100 group-hover:scale-110 ease-in-out duration-500 group-hover:brightness-50"
+            className="h-80 scale-100 group-hover:scale-110 ease-in-out duration-500 group-hover:brightness-50 object-cover"
           />
+
         </div>
 
-        <div className="absolute opacity-0 group-hover:opacity-100 ease-in duration-500  bottom-0 text-center">
+        <div className="absolute opacity-0 group-hover:opacity-100 ease-in duration-500  bottom-0 text-center w-full">
           <h3 className="text-lg text-white font-medium mx-4">
-            Published On {date}
+            {date}
           </h3>
-          <div className="flex flex-col gap-2 px-6 py-3 text-white bg-mainColor">
-            <h1 className="text-[22px] leading-[22px] tracking-wide font-bold">{group}</h1>
-            <h2 className="text-sm leading-5 tracking-normal font-normal text-justify">{description}</h2>
+          <div className="flex flex-col gap-2 px-6 pt-10 pb-4 text-white bg-mainColor">
+            <h1 className="text-[17px] leading-[22px] tracking-wide font-bold">{group}</h1>
+            <h2 className="text-sm leading-5 tracking-normal font-normal text-center">{description.substring(0, 18)}</h2>
           </div>
         </div>
       </div>
+      <Modal open={imageModal} onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        sx={{}}
+      >
+        <Box sx={{
+          width: { xs: '96%', lg: '70%' },margin: '0 auto', position: 'relative', height: '80%', display: 'flex', top: '10%',
+          border: 'none'
+        }}>
+          <IconButton sx={{ position: 'absolute', left: '0', top: '50%' }} onClick={handlePreviousImg}>
+            <ArrowBackIosIcon sx={{ fontSize: '3rem', color: '#f4c402' }} />
+          </IconButton>
+          <Image src={checking[imgIndex].img.src} alt="" width={`${checking[imgIndex].img.width}`} height={`${checking[imgIndex].img.height}`}
+            style={{
+              justifyContent: 'center', alignContent: 'center', objectFit: 'cover', width: '100%', height:'auto',transition: 'opacity 0.5s ease-in-out',
+              display: 'block',borderRadius:'12px',
+            }}/>
+          <IconButton sx={{ position: 'absolute', right: '0', top: '50%' }} onClick={handleNextImg}>
+            <ArrowForwardIosIcon sx={{ fontSize: '3rem', color: '#f4c402' }} />
+          </IconButton>
+        </Box>
+
+      </Modal>
     </>
   );
 }

@@ -3091,6 +3091,11 @@
   "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
   "version" "0.6.1"
 
+"spotlight.js@^0.7.8":
+  "integrity" "sha512-zq822gqhjaMHt31oZi4do211NwqBcxZ4u7Xtb+OEsbLrz37dcELhBCoQXFu/0sTiomqD6tm5g6tmqvE7S6h4ng=="
+  "resolved" "https://registry.npmjs.org/spotlight.js/-/spotlight.js-0.7.8.tgz"
+  "version" "0.7.8"
+
 "stop-iteration-iterator@^1.0.0":
   "integrity" "sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ=="
   "resolved" "https://registry.npmjs.org/stop-iteration-iterator/-/stop-iteration-iterator-1.0.0.tgz"

@@ -22,6 +22,7 @@
     "react-icons": "^4.8.0",
     "react-twitter-embed": "^4.0.4",
     "sharp": "^0.32.0",
+    "spotlight.js": "^0.7.8",
     "yarn": "^1.22.19"
   },
   "devDependencies": {

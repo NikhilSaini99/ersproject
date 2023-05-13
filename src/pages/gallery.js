@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
@@ -7,7 +7,12 @@ import Banner from "../assets/images/gallery.jpg";
 import { GallaryCard } from "@/components/media";
 import { GalleryData } from "@/content/data";
 
+
+
 export default function Gallery() {
+ 
+    
+
   const [isVisible, setIsVisible] = useState({
     group1: true,
     group2: false,
@@ -26,6 +31,7 @@ export default function Gallery() {
   }
 
   const ImageTitle = ["Works", "Campagn", "Event", "Speech", "Vote"];
+
 
   return (
     <>
@@ -47,7 +53,7 @@ export default function Gallery() {
 
       {/*-----------------------Gallery---------------------*/}
 
-      <section className="bg-white px-20 py-16">
+      <section className="bg-white px-8 py-16">
         <div>
           <h1 className=" text-[#2F3192] text-4xl font-semibold">
             ERS Image Gallery
@@ -70,15 +76,16 @@ export default function Gallery() {
             </button>
           ))}
         </div>
-        
+
         {/* Content First Group */}
         <div
-          className={`grid grid-cols-3 px-3 ${
-            isVisible.group1 ? "block" : "hidden"
-          }`}
+          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group1 ? "block" : "hidden"
+            }`}
         >
           {GalleryData.group1.map((item, key) => (
             <GallaryCard
+            item={key}
+              checking = {GalleryData.group1}
               key={key}
               img={item.img}
               group={item.group}
@@ -87,15 +94,16 @@ export default function Gallery() {
             />
           ))}
         </div>
-        
+
         {/* Content Second Group */}
         <div
-          className={`grid grid-cols-3 px-3 ${
-            isVisible.group2 ? "block" : "hidden"
-          }`}
+          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group2 ? "block" : "hidden"
+            }`}
         >
           {GalleryData.group2.map((item, key) => (
             <GallaryCard
+             item={key}
+             checking = {GalleryData.group2}
               key={key}
               img={item.img}
               group={item.group}
@@ -107,12 +115,13 @@ export default function Gallery() {
 
         {/* Content Third Group */}
         <div
-          className={`grid grid-cols-3 px-3 ${
-            isVisible.group3 ? "block" : "hidden"
-          }`}
+          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group3 ? "block" : "hidden"
+            }`}
         >
           {GalleryData.group3.map((item, key) => (
             <GallaryCard
+           item={key}
+             checking = {GalleryData.group3}
               key={key}
               img={item.img}
               group={item.group}
@@ -124,12 +133,13 @@ export default function Gallery() {
 
         {/* Content Fourth Group */}
         <div
-          className={`grid grid-cols-3 px-3 ${
-            isVisible.group4 ? "block" : "hidden"
-          }`}
+          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group4 ? "block" : "hidden"
+            }`}
         >
           {GalleryData.group4.map((item, key) => (
             <GallaryCard
+             item={key}
+             checking = {GalleryData.group4}
               key={key}
               img={item.img}
               group={item.group}
@@ -141,12 +151,13 @@ export default function Gallery() {
 
         {/* Content Fifth Group */}
         <div
-          className={`grid grid-cols-3 px-3 ${
-            isVisible.group5 ? "block" : "hidden"
-          }`}
+          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group5 ? "block" : "hidden"
+            }`}
         >
           {GalleryData.group5.map((item, key) => (
             <GallaryCard
+             item={key}
+             checking = {GalleryData.group5}
               key={key}
               img={item.img}
               group={item.group}
