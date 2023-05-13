@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ImHome3 } from "react-icons/im";
 
 function News({ icon, description, img }) {
   return (
@@ -88,10 +89,13 @@ function Centers({ title, description }) {
     <>
       <div className="">
         <h1 className="text-[#333333] font-bold text-sm leading-6">{title}</h1>
+        <p className="flex  gap-2">
+        <ImHome3 className="text-xl" />
         <p
           className="text-[#333333] font-normal text-sm leading-5"
           dangerouslySetInnerHTML={{ __html: description }}
         ></p>
+        </p>
       </div>
     </>
   );

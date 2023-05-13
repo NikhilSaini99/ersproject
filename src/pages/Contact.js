@@ -113,7 +113,7 @@ export default function Contact() {
 
                 <span className="text-sm leading-6 font-normal">[+268] 2406 4000</span>
               </p>
-              <p className="flex f gap-1">
+              <p className="flex  gap-1">
                 <IoLogoWhatsapp className="text-xl" />
                 <span className="text-sm leading-6 font-normal">WhatsApp-7606 3735</span>
               </p>
