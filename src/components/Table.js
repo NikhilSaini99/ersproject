@@ -86,9 +86,9 @@ export default function FormTable({ title }) {
   return (
     <>
       <section className="px-6 py-16 bg-[#F7F7FA]">
-        <div className="pb-10 flex justify-between items-center">
+        <div className="pb-10 flex justify-between items-center" style={{width:'90%',margin:'0 auto'}}>
           <div>
-            <h1 className=" text-[#2F3192] text-4xl font-semibold">{title}</h1>
+            <h1 className=" text-[#2F3192] text-4xl font-semibold ">{title}</h1>
             <div className="border mr-12 border-yellowish mt-1"></div>
           </div>
 
@@ -124,41 +124,17 @@ export default function FormTable({ title }) {
           </div>
         </div>
 
-        {/* <div className="grid grid-cols-6 gap-12 place-items-center bg-mainColor text-white text-xl font-medium py-[10px]">
-          <h1>S.No.</h1>
-          <h1>Form Name</h1>
-          <h1 className="pl-8">Category</h1>
-          <h1 className="pr-8">Size</h1>
-          <h1>Description</h1>
-          <h1>Download</h1>
-        </div>
-        {Form.map((item, key) => (
-          <div
-            key={key}
-            className="grid grid-cols-6 gap-12 place-items-center py-5 bg-white hover:bg-gray-200 text-black text-[15px] font-medium border-t border-[#DAD8CC] w-full"
-          >
-            <h2>{item.num}</h2>
-            <h1 className="text-center w-64">{item.name}</h1>
-            <h1 className="pl-8">{item.category}</h1>
-            <h2 className="pr-8">{item.size}</h2>
-            <p className="text-center w-72">{item.description}</p>
-            <p className="text-4xl cursor-pointer text-black">
-              <MdDownloadForOffline />
-            </p>
-          </div>
-        ))}
-        <div></div> */}
-        <Paper elevation={20} sx={{borderRadius:'10px'}}>
+        <Paper elevation={20} sx={{borderRadius:'10px',width:'90%',margin:'0 auto'}}>
           <TableContainer sx={{borderRadius:'10px'}}>
             <Table className={''} aria-label="Form Table">
               <TableHead>
                 <TableRow sx={{ backgroundColor: '#2f2483', }}>
-                  <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>S.No</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}> Form Name</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Category</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold',minWidth:'8rem' }}>Size</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Description</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Download</TableCell>
+                  <TableCell sx={{ color: 'white', fontWeight: 'bold',fontSize:'1rem' }}>S.No</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold',fontSize:'1rem' }}> Form Name</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' ,fontSize:'1rem'}}>Category</TableCell>
+                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold',minWidth:'8rem',fontSize:'1rem' }}>Size</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold',fontSize:'1rem' }}>Description</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold',fontSize:'1rem' }}>Download</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>

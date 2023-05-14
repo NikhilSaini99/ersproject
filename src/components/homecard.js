@@ -105,7 +105,9 @@ function Centers({ title, description,contact }) {
               dangerouslySetInnerHTML={{ __html: contact }}></span>
           </div>
           <div>
-          <Button variant="contained" href={'/'} sx={{background:'black',borderRadius:'50px','&:hover':{background:'black'}}}>Get Direction</Button>
+          <Button variant="contained" href={'/'} sx={{background:'black',borderRadius:'50px',
+          fontWeight:'light',marginTop:'1rem', p:'0.5em 1.5rem',
+          '&:hover':{background:'black'}}}>Get Direction</Button>
           </div>
         </div>
       </div>

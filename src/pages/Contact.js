@@ -71,6 +71,7 @@ export default function Contact() {
             <h1 className="text-subColor text-3xl font-bold leading-8">
               CONTACT ERS
             </h1>
+            <div className="border mr-12 border-yellowish mt-1 w-14 "></div>
           </div>
         </div>
       </section>
@@ -140,6 +141,7 @@ export default function Contact() {
             <h1 className="text-xl text-mainColor font-bold leading-8">
               Service Centers and Branches
             </h1>
+            <div className="border mr-12 border-yellowish mt-1 w-32"></div>
             <div className="grid grid-cols-3 gap-x-16 gap-y-10 pt-5 items-end">
               {CentersData.map((item, key) => (
                 <Centers
@@ -154,7 +156,7 @@ export default function Contact() {
         </div>
         {/* Map */}
 
-        <div className="px-10">
+        <div className="px-10 py-8">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4331.816287766545!2d31.17508431726318!3d-26.418809908319176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee8cee83ab4d14b%3A0x2c8213d352acb5f3!2sEswatini%20Revenue%20Service!5e0!3m2!1sen!2sin!4v1680769959819!5m2!1sen!2sin"
             width={"100%"}

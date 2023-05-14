@@ -33,14 +33,15 @@ export default function IncomeTax() {
         <Image src={Banner} alt="..." className="h-512 w-full object-fill" width="100%" height="100%" />
       </section>
 
-      <section className="py-8 px-20 w-full my-0 flex flex-row leading-8">
+      <section className="py-8  w-95 my-0 flex flex-row leading-8">
 
-        <div className="relative w-2/4 mx-auto my-0 relative" >
-        <div className="flex flex-col gap-y-4 float-right clear-right w-20 absolute right-0" style={{marginRight:'calc((12.5% + 2px)*2*-1)', top:'16rem'}}>
+        <div className="relative w-3/5 mx-auto my-0 relative">
+        <div className="flex flex-col gap-y-4 float-right clear-right w-20 absolute right-0"
+            style={{ marginRight: 'calc((12.5% + 2px)*2*-1)', top: '1.5rem' }}>
             <div className="border-t border-black font-bold"></div>
             <h6 className="font-semibold">DOWNLOADS</h6>
             <a href="_target" className="w-5 text-normalBlue hover:underline">
-                <div className="flex flex-row gap-x-2" style={{width:'75%'}}>
+              <div className="flex flex-row gap-x-2" style={{ width: '75%' }}>
                 <Image src={downloadIcon} className="fill-current" alt="downloadIcon" width="100%" height="100%" />
                 <p className="">Article</p>
               </div>
@@ -50,23 +51,23 @@ export default function IncomeTax() {
           {IncomeTaxData.map((item, key) => (
 
             <div key={key}>
-              <h1 className=" text-[38px] font-semibold text-subColor px-8 mb-10 mt-6">
+              <h1 className=" text-[38px] font-semibold text-subColor mb-10 mt-6">
                 {item.heading}
               </h1>
-              <h1 className=" text-3xl font-medium text-mainColor px-8 mb-8">
+              <h1 className=" text-2xl font-medium text-mainColor  mb-8">
                 {item.heading1}
               </h1>
               {/* <button>button</button> */}
-              <h1 className=" text-3xl font-medium text-mainColor px-8">
+              <h1 className=" text-3xl font-medium text-mainColor">
                 {item.heading2}
               </h1>
 
-              <div className="px-8 py-5">
-                
-                  <p className={`text-xl font-medium text-gray-500 ${styles.first_heading}`}>
-                    {item.title}
-                  </p>
-                  <p className="mb-4  mt-8 text-black/80">
+              <div className=" py-5">
+
+                <p className={`text-xl font-medium text-gray-500 ${styles.first_heading}`}>
+                  {item.title}
+                </p>
+                <p className="mb-4  mt-8 text-black/80">
                   <span className={`tracking-wide `}>{item.description}{" "}</span>
                 </p>
                 <p className={`mb-2  text-black/80 tracking-wide`}>{item.description1} </p>

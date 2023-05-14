@@ -55,10 +55,10 @@ export default function Gallery() {
 
       <section className="bg-white px-6 py-16">
         <div>
-          <h1 className=" text-[#2F3192] text-4xl font-semibold">
+          <h1 className=" text-[#2F3192] text-4xl font-semibold w-80" style={{marginLeft:'2rem'}}>
             ERS Image Gallery
           </h1>
-          <div className="border w-[264px] border-yellowish mt-2"></div>
+          <div className="border w-[264px] border-yellowish mt-2" style={{marginLeft:'2rem'}}></div>
         </div>
 
         {/* Group Indicator */}

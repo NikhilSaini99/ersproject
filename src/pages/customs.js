@@ -91,12 +91,12 @@ export default function Customs() {
           <div className="border w-[270px] border-yellowish mt-1 mx-auto"></div>
         </div>
 
-        <Box sx={{ width: "100%", position: 'relative' }}>
-          <Stack sx={{ width: { xs: 'fit-content' } }}>
-            <Image src={Banner} width={'100%'} height={'auto'} alt="" style={{ width: '2000px' }} />
+        <Box sx={{ width: "100%", position: 'relative',mt:'1rem' }}>
+          <Stack sx={{ width: {xs:'80%'}, margin:'0 auto' }}>
+            <Image src={Banner} width={'100%'} height={'auto'} alt="" />
           </Stack>
-          <Box sx={{ position: 'absolute', background: 'white', width: '80%', height: { xs: '40%', lg: '20%', xl: '25%' }, bottom: { xs: '-30%', lg: '-15%', xl: '-15%' }, left: '50%', transform: 'translate(-50%, -50%)', borderRadius: '25px', p: '2rem' }}>
-            <Typography variant="h1" sx={{ fontSize: '4rem', fontWeight: 'bold', color: '#2f2483', textAlign: 'center' }}>eCustoms Tariff for Eswatini</Typography>
+          <Box sx={{ position: 'absolute', background: 'white', width: '62%', height: { xs: '40%', lg: '20%',xl:'25%' }, bottom: { xs: '-30%', lg: '-15%',xl:'-15%' }, left: '50%', transform: 'translate(-50%, -50%)', borderRadius: '25px', p: '2rem' }}>
+            <Typography variant="h1" sx={{ fontSize: '3rem', fontWeight: 'bold', color: '#2f2483', textAlign: 'center' }}>eCustoms Tariff for Eswatini</Typography>
             <Typography variant="body1" sx={{ color: 'grey', textAlign: 'center' }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero nostrum, delectus quis in non similique ab doloremque reiciendis incidunt ipsum porro iure, omnis ad provident doloribus sequi. Aperiam, possimus?</Typography>
           </Box>
         </Box>
