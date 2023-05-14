@@ -6,12 +6,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { NewsData } from "@/content/data";
 import Banner from "../assets/images/news-banner.jpg";
-import Twitter from "../assets/images/twitter-page.jpg";
-import Instagram from "../assets/images/insta-page.jpg";
-import rightSideBackground from '../assets/images/sidebar-bg-image.jpg'
-import quoteIcon from '../assets/icons/quoteicon.png'
 import { LatestNewsSection } from '../pages/news'
 import { Grid, Stack, Typography } from "@mui/material";
+
 
 export default function NewsDetails() {
   return (
@@ -42,7 +39,7 @@ export default function NewsDetails() {
             {NewsData.map((item, index) => {
               return (
 
-                <Stack key={index} sx={{ flexDirection: 'column', width: '60%', margin: '0 5rem 4rem auto', gap: '2rem' }}>
+                <Stack key={index} sx={{ flexDirection: 'column', margin: { xs: '0px 5rem 4rem 6rem', md: '0px 5rem 4rem 2rem', lg:'0px 5rem 4rem 6rem', xl: '0px 5rem 4rem 15rem' }, width: { xs: '85%', md:'90%', lg: '78%',xl:'70%' }, gap: '2rem' }}>
                   <Image src={item.img} alt={item.title} style={{ width: '100%', height: '100%' }} />
                   <Typography variant="body1" sx={{ color: 'grey' }}>{item.head}</Typography>
                   <Stack sx={{ flexDirection: 'column', gap: '1.5rem' }}>
@@ -72,7 +69,7 @@ export default function NewsDetails() {
           {/* Right Side End */}
         </Grid>
       </section>
-              
+
       {/*-----------------------Footer---------------------*/}
 
       <Footer />

@@ -53,7 +53,7 @@ export default function Gallery() {
 
       {/*-----------------------Gallery---------------------*/}
 
-      <section className="bg-white px-8 py-16">
+      <section className="bg-white px-6 py-16">
         <div>
           <h1 className=" text-[#2F3192] text-4xl font-semibold">
             ERS Image Gallery
@@ -79,7 +79,7 @@ export default function Gallery() {
 
         {/* Content First Group */}
         <div
-          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group1 ? "block" : "hidden"
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group1 ? "block" : "hidden"
             }`}
         >
           {GalleryData.group1.map((item, key) => (
@@ -97,7 +97,7 @@ export default function Gallery() {
 
         {/* Content Second Group */}
         <div
-          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group2 ? "block" : "hidden"
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group2 ? "block" : "hidden"
             }`}
         >
           {GalleryData.group2.map((item, key) => (
@@ -115,7 +115,7 @@ export default function Gallery() {
 
         {/* Content Third Group */}
         <div
-          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group3 ? "block" : "hidden"
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group3 ? "block" : "hidden"
             }`}
         >
           {GalleryData.group3.map((item, key) => (
@@ -133,7 +133,7 @@ export default function Gallery() {
 
         {/* Content Fourth Group */}
         <div
-          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group4 ? "block" : "hidden"
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group4 ? "block" : "hidden"
             }`}
         >
           {GalleryData.group4.map((item, key) => (
@@ -151,7 +151,7 @@ export default function Gallery() {
 
         {/* Content Fifth Group */}
         <div
-          className={`grid grid-cols-3 md:w-full xl:w-70 mx-auto ${isVisible.group5 ? "block" : "hidden"
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group5 ? "block" : "hidden"
             }`}
         >
           {GalleryData.group5.map((item, key) => (

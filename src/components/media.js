@@ -160,7 +160,7 @@ function NewsCard({ url, img, title, date, description }) {
 
       {/* NEW ONE BELOW THIS */}
 
-      <Paper elevation={12} sx={{ margin: { md: '0 5rem 4rem 6rem', xl: '0 5rem 4rem 20rem' }, width: { xs: '80%', lg: '60%' } }}>
+      <Paper elevation={12} sx={{ margin: { xs: '0px 5rem 4rem 6rem', md: '0px 5rem 4rem 2rem', lg:'0px 5rem 4rem 6rem', xl: '0px 5rem 4rem 15rem' }, width: { xs: '85%', md:'90%', lg: '78%',xl:'70%' } }}>
         <Stack sx={{ flexDirection: 'column', overflow: 'hidden' }}>
           <Box sx={{ position: 'relative' }}>
             <Box sx={{
