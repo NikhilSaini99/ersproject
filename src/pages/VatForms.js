@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Table from "@/components/Table";
 import Banner from "../assets/images/bg.png"
+import FormTable from "@/components/Table";
 
 export default function VatForms() {
   return (
@@ -27,7 +27,7 @@ export default function VatForms() {
 
       {/*-----------------------Table---------------------*/}
 
-      <Table title={"Vat Forms"} />
+      <FormTable title={"Vat Forms"} />
 
       {/*-----------------------Footer---------------------*/}
 

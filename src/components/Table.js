@@ -1,10 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { MdDownloadForOffline } from "react-icons/md";
 import searchIcon from "../assets/icons/search.png";
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import DownloadForOfflineRoundedIcon from '@mui/icons-material/DownloadForOfflineRounded';
 
-export default function Table({ title }) {
-  const Form = [
+
+export default function FormTable({ title }) {
+  const formdata = [
     {
       num: "1",
       name: "Notice of Objection Form_Printable",
@@ -89,40 +91,40 @@ export default function Table({ title }) {
             <h1 className=" text-[#2F3192] text-4xl font-semibold">{title}</h1>
             <div className="border mr-12 border-yellowish mt-1"></div>
           </div>
-          
-          <div className="flex gap-10 text-black">
-          <div className="text-base border border-[#DAD8CC] rounded-md">
-            <select
-              name="category"
-              className="bg-transparent focus:outline-none px-4 py-[6px]"
-            >
-              <option>Category</option>
-              <option>VAT Forms</option>
-              <option>Income Tax Forms</option>
-              <option>Customs & Excise Forms</option>
-            </select>
-          </div>
 
-          <div className="px-3 py-[6px] border border-[#DAD8CC] rounded-md">
-            <button className="mr-3">
-              <Image
-                src={searchIcon}
-                alt="search"
-                height={17}
-                width={17}
-                className="inline-block"
-              />
-            </button>
-            <input
-              type="text"
-              placeholder="Search"
-              className="w-52 focus:outline-none text-base font-normal bg-transparent"
-            ></input>
-          </div>
+          <div className="flex gap-10 text-black">
+            <div className="text-base border border-[#DAD8CC] rounded-md">
+              <select
+                name="category"
+                className="bg-transparent focus:outline-none px-4 py-[6px]"
+              >
+                <option>Category</option>
+                <option>VAT Forms</option>
+                <option>Income Tax Forms</option>
+                <option>Customs & Excise Forms</option>
+              </select>
+            </div>
+
+            <div className="px-3 py-[6px] border border-[#DAD8CC] rounded-md">
+              <button className="mr-3">
+                <Image
+                  src={searchIcon}
+                  alt="search"
+                  height={17}
+                  width={17}
+                  className="inline-block"
+                />
+              </button>
+              <input
+                type="text"
+                placeholder="Search"
+                className="w-52 focus:outline-none text-base font-normal bg-transparent"
+              ></input>
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-6 gap-12 place-items-center bg-mainColor text-white text-xl font-medium py-[10px]">
+        {/* <div className="grid grid-cols-6 gap-12 place-items-center bg-mainColor text-white text-xl font-medium py-[10px]">
           <h1>S.No.</h1>
           <h1>Form Name</h1>
           <h1 className="pl-8">Category</h1>
@@ -145,7 +147,41 @@ export default function Table({ title }) {
             </p>
           </div>
         ))}
-        <div></div>
+        <div></div> */}
+        <Paper elevation={20}>
+          <TableContainer>
+            <Table className={''} aria-label="Form Table">
+              <TableHead>
+                <TableRow sx={{ backgroundColor: '#2f2483', }}>
+                  <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>S.No</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}> Form Name</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Category</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Size</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Description</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Download</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {formdata.map((form) => (
+                  <TableRow key={formdata.num} sx={{
+                    '&:hover': {
+                      background: '#F2F2F2'
+                    }
+                  }}>
+                    <TableCell component="th" scope="row" align="right" sx={{ fontWeight: 'bold' }}>
+                      {form.num}
+                    </TableCell>
+                    <TableCell align="left" sx={{ fontWeight: 'bold' }}>{form.name}</TableCell>
+                    <TableCell align="left" sx={{ fontWeight: 'bold' }}>{form.category}</TableCell>
+                    <TableCell align="right" sx={{ fontWeight: 'bold' }}>{form.size}</TableCell>
+                    <TableCell align="left" sx={{ fontWeight: 'bold' }}>{form.description}</TableCell>
+                    <TableCell align="left" sx={{ fontWeight: 'bold' }}><DownloadForOfflineRoundedIcon sx={{ fontSize: '2rem' }} /></TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Paper>
       </section>
     </>
   );

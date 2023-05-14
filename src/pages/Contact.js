@@ -18,29 +18,35 @@ export default function Contact() {
       title: "MANZINI SERVICE CENTRE",
       description:
         "Sivuno Building, <br /> Ground floor, adjacent to Estel <br /> House, Manzini <br /> MANZINI",
+        contact:'[+268] 2406 4050'
     },
     {
       title: "MATSAPHA BRANCH",
       description: "Matsamo Shopping Complex <br /> (kaMahhala) <br /> MATSAPHA",
+      contact:'[+268] 2406 4050'
     },
     {
       title: "MBABANE SERVICE CENTRE",
       description:
         "3rd Floor, Corporate Place, Swazi <br /> Plaza <br /> MBABANE",
+        contact:'[+268] 2406 4050'
     },
     {
       title: "NHLANGANO BRANCH",
       description:
         "Old Skonkwane Building <br /> Corner of 6th Street and 3rd Avenue <br /> NHLANGANO",
+        contact:'[+268] 2406 4050'
     },
     {
       title: "PIGGS PEAK SERVICE CENTRE",
       description:
         "1st Floor, Supreme Building <br /> Evelyn Baring Road <br /> PIGGS PEAK",
+        contact:'[+268] 2406 4050'
     },
     {
       title: "SITEKI SERVICE CENTRE",
       description: "Mafumbe Building <br /> Jacaranda Road <br /> SITEKI",
+      contact:'[+268] 2406 4050'
     },
   ];
 
@@ -134,12 +140,13 @@ export default function Contact() {
             <h1 className="text-xl text-mainColor font-bold leading-8">
               Service Centers and Branches
             </h1>
-            <div className="grid grid-cols-3 gap-x-16 gap-y-10 pt-5">
+            <div className="grid grid-cols-3 gap-x-16 gap-y-10 pt-5 items-end">
               {CentersData.map((item, key) => (
                 <Centers
                   key={key}
                   title={item.title}
                   description={item.description}
+                  contact = {item.contact}
                 />
               ))}
             </div>

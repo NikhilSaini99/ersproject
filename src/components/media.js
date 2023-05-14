@@ -160,7 +160,7 @@ function NewsCard({ url, img, title, date, description }) {
 
       {/* NEW ONE BELOW THIS */}
 
-      <Paper elevation={12} sx={{ margin: { xs: '0px 5rem 4rem 6rem', md: '0px 5rem 4rem 2rem', lg:'0px 5rem 4rem 6rem', xl: '0px 5rem 4rem 15rem' }, width: { xs: '85%', md:'90%', lg: '78%',xl:'70%' } }}>
+      <Paper elevation={12} sx={{ margin: { xs: '0px 5rem 4rem 6rem', md: '0px 5rem 4rem 2rem', lg: '0px 5rem 4rem 6rem', xl: '0px 5rem 4rem 15rem' }, width: { xs: '85%', md: '90%', lg: '78%', xl: '70%' } }}>
         <Stack sx={{ flexDirection: 'column', overflow: 'hidden' }}>
           <Box sx={{ position: 'relative' }}>
             <Box sx={{
@@ -297,7 +297,7 @@ function GallaryCard({ img, group, date, description, checking, item }) {
         sx={{}}
       >
         <Box sx={{
-          width: { xs: '96%', lg: '70%' },margin: '0 auto', position: 'relative', height: '80%', display: 'flex', top: '10%',
+          width: { xs: '96%', lg: '70%' }, margin: '0 auto', position: 'relative', height: '80%', display: 'flex', top: '10%',
           border: 'none'
         }}>
           <IconButton sx={{ position: 'absolute', left: '0', top: '50%' }} onClick={handlePreviousImg}>
@@ -305,9 +305,9 @@ function GallaryCard({ img, group, date, description, checking, item }) {
           </IconButton>
           <Image src={checking[imgIndex].img.src} alt="" width={`${checking[imgIndex].img.width}`} height={`${checking[imgIndex].img.height}`}
             style={{
-              justifyContent: 'center', alignContent: 'center', objectFit: 'cover', width: '100%', height:'auto',transition: 'opacity 0.5s ease-in-out',
-              display: 'block',borderRadius:'12px',
-            }}/>
+              justifyContent: 'center', alignContent: 'center', objectFit: 'cover', width: '100%', height: 'auto', transition: 'opacity 0.5s ease-in-out',
+              display: 'block', borderRadius: '12px',
+            }} />
           <IconButton sx={{ position: 'absolute', right: '0', top: '50%' }} onClick={handleNextImg}>
             <ArrowForwardIosIcon sx={{ fontSize: '3rem', color: '#f4c402' }} />
           </IconButton>

@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ImHome3 } from "react-icons/im";
+import { BsTelephoneFill } from "react-icons/bs";
+import { Button } from "@mui/material";
 
 function News({ icon, description, img }) {
   return (
@@ -46,12 +48,12 @@ function News({ icon, description, img }) {
           />
         </div>
       </div> */}
-{/*  */}
-      <div className=" border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400 " style={{borderRadius:'50px 50px 150px 0'}}>
+      {/*  */}
+      <div className=" border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400 " style={{ borderRadius: '50px 50px 150px 0' }}>
         <div className="object-cover relative " >
           <Image src={img} alt="..." className=" rounded-t-2xl h-48 w-full" />
           <div className="rounded-2xl absolute -bottom-[76px] left-8 px-8 py-4 bg-white ">
-          <Image src={icon} alt="..." className="w-40" />
+            <Image src={icon} alt="..." className="w-40" />
           </div>
         </div>
         <div className="px-8 pt-14 pb-4 gap-5">
@@ -84,18 +86,28 @@ function Resources({ icon, title, description }) {
   );
 }
 
-function Centers({ title, description }) {
+function Centers({ title, description,contact }) {
   return (
     <>
       <div className="">
         <h1 className="text-[#333333] font-bold text-sm leading-6">{title}</h1>
-        <p className="flex  gap-2">
-        <ImHome3 className="text-xl" />
-        <p
-          className="text-[#333333] font-normal text-sm leading-5"
-          dangerouslySetInnerHTML={{ __html: description }}
-        ></p>
-        </p>
+        <div className="flex flex-col gap-2">
+          <div className="flex gap-2">
+          <ImHome3 className="text-xl" />
+            <span
+              className="text-[#333333] font-normal text-sm leading-5"
+              dangerouslySetInnerHTML={{ __html: description }}></span>
+            </div>
+          <div className="flex gap-2">
+          <BsTelephoneFill className="text-xl" />
+            <span
+              className="text-[#333333] font-normal text-sm leading-5"
+              dangerouslySetInnerHTML={{ __html: contact }}></span>
+          </div>
+          <div>
+          <Button variant="contained" href={'/'} sx={{background:'black',borderRadius:'50px','&:hover':{background:'black'}}}>Get Direction</Button>
+          </div>
+        </div>
       </div>
     </>
   );
