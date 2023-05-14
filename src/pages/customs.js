@@ -83,7 +83,7 @@ export default function Customs() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <section className="mb-14 mt-5">
+      <section className="mt-5" style={{ marginBottom: '8rem' }}>
         <div>
           <h1 className="text-subColor text-center text-5xl font-bold uppercase">
             e-Customs
@@ -91,83 +91,59 @@ export default function Customs() {
           <div className="border w-[270px] border-yellowish mt-1 mx-auto"></div>
         </div>
 
-        <div className="relative mx-28">
-          <Image src={Banner} alt="..." className="h-[500px] mt-8" />
-          <div className="absolute -bottom-12 left-40 right-40 bg-white py-8 text-center">
-            <h1 className="text-5xl text-subColor font-black">
-              eCustoms Tariff for Eswatini
-            </h1>
-          </div>
-        </div>
+        <Box sx={{ width: "100%", position: 'relative' }}>
+          <Stack sx={{width:'fit-content'}}>
+            <Image src={Banner} width={'100%'} height={'auto'} alt=""/>
+          </Stack>
+          <Box sx={{ position: 'absolute', background: 'white', width: '80%', height: {xs:'40%',lg:'20%'}, bottom: {xs:'-30%',lg:'-15%'}, left: '50%', transform: 'translate(-50%, -50%)', borderRadius: '25px', p: '2rem' }}>
+            <Typography variant="h1" sx={{ fontSize: '4rem', fontWeight: 'bold', color: '#2f2483', textAlign: 'center' }}>eCustoms Tariff for Eswatini</Typography>
+            <Typography variant="body1" sx={{ color: 'grey', textAlign: 'center' }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero nostrum, delectus quis in non similique ab doloremque reiciendis incidunt ipsum porro iure, omnis ad provident doloribus sequi. Aperiam, possimus?</Typography>
+          </Box>
+        </Box>
+
       </section>
 
       {/*-----------------------Customs---------------------*/}
-
-      {/* <section className="mx-14 pt-8 px-3">
-        <div className="grid grid-cols-3 gap-8">
-          {CustomData.map((item, key) => (
-            <NewsCard
-              key={key}
-              img={item.img}
-              title={item.title}
-              description={item.description}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-14 my-10">
-        <div className="grid grid-cols-3 gap-8 mx-3 py-12 border-y border-black">
-          {TariffData.map((item, key) => (
-            <NewsCard
-              key={key}
-              img={item.img}
-              title={item.title}
-              description={item.description}
-            />
-          ))}
-        </div>
-      </section> */}
-      <Box sx={{ width: { xs: '96%', md:'98%',lg: '90%',xl:'70%' }, margin: '0 auto'}}>
+      <Box sx={{ width: { xs: '96%', md: '98%', lg: '78%', xl: '70%' }, margin: {xs:'0 auto'} }}>
         <Grid container gap={4}>
           {CustomData.map((item, index) => (
-            <Paper elevation={20} key={index} sx={{width:'350px'}}>
-            <Grid item xs={12} md={12}  sx={{
-              position: 'relative', p: '2rem', transition: '0.5s',
-              ...(isHover === index && {
-                transition: '0.5s',
-                border: '0.5px solid #f4c402'
-              }),
-
-            }}
-              onMouseEnter={() => handleHoverEffect(index)} onMouseLeave={handleHoverExit}>
-              <Box sx={{
-                position: 'absolute', width: '80px', height: '80px', background: 'grey', transition: '0.5s', opacity: '0.5',
-                top: '0', right: '0', borderRadius: '0px 0px 0px 120%', ...(isHover === index && {
+            <Paper elevation={20} key={index} sx={{ width: { xs: '300px', xl: '350px' } }}>
+              <Grid item xs={12} md={12} sx={{
+                position: 'relative', p: '2rem', transition: '0.5s',
+                ...(isHover === index && {
                   transition: '0.5s',
-                  background: '#f4c402',
-                  opacity: 1
-                })
-              }}></Box>
-              <Stack sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', lineHeight: '1.5' }}>
-                <Box >
-                  <Image src={item.img} alt="item.title" width={'100%'} height={'auto'}
-                    style={{ color: 'yellow' }} />
-                </Box>
-                <Typography variant="h1" sx={{
-                  fontSize: '1.5rem', fontWeight: 'bold', color: '#003b49', transition: '0.5s',
-                  ...(isHover === index && {
+                  boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(244, 196, 2) 0px 0px 0px 2px'
+                }),
+
+              }}
+                onMouseEnter={() => handleHoverEffect(index)} onMouseLeave={handleHoverExit}>
+                <Box sx={{
+                  position: 'absolute', width: '80px', height: '80px', background: 'grey', transition: '0.5s', opacity: '0.5',
+                  top: '0', right: '0', borderRadius: '0px 0px 0px 120%', ...(isHover === index && {
                     transition: '0.5s',
-                    color: '#f4c402'
+                    background: '#f4c402',
+                    opacity: 1
                   })
-                }}>
-                  {item.title}
-                </Typography>
-                <Typography variant="body1" sx={{ fontWeight: 'light', color: 'grey' }}>
-                  {item.description.substring(0, 50)}
-                </Typography>
-              </Stack>
-            </Grid>
+                }}></Box>
+                <Stack sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', lineHeight: '1.5' }}>
+                  <Box >
+                    <Image src={item.img} alt="item.title" width={'100%'} height={'auto'}
+                      style={{ color: 'yellow' }} />
+                  </Box>
+                  <Typography variant="h1" sx={{
+                    fontSize: '1.5rem', fontWeight: 'bold', color: '#003b49', transition: '0.5s',
+                    ...(isHover === index && {
+                      transition: '0.5s',
+                      color: '#f4c402'
+                    })
+                  }}>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body1" sx={{ fontWeight: 'light', color: 'grey' }}>
+                    {item.description.substring(0, 50)}
+                  </Typography>
+                </Stack>
+              </Grid>
             </Paper>
           ))}
 
