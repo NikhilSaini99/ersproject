@@ -218,9 +218,14 @@ function NewsCard({ url, img, title, date, description }) {
                     '& .MuiButtonBase-root': {
                       backgroundColor: 'white',
                     }
+                  },
+                  '& .MuiButtonBase-root':{
+                    backgroundColor: 'white'
                   }
                 }}
-                  icon={<ShareIcon sx={{ color: 'grey' }} />}>
+                  icon={<ShareIcon sx={{ color: 'grey','& .MuiButtonBase-root':{
+                    backgroundColor: 'white'
+                  } }} />}>
                   <SpeedDialAction
                     icon={<FacebookIcon />}
                     tooltipTitle="Facebook"

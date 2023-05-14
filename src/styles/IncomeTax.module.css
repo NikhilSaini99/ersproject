@@ -1,5 +1,5 @@
 .first_heading::first-letter {
-    font-size: 4rem;
+    font-size: 2rem;
     color: grey;
     float: left;
     margin-bottom: 2rem;

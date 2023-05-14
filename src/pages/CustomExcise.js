@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Banner from "../assets/images/customs.jpg";
 import Custom from "../assets/images/customs-img.jpg";
 import { customData } from "../content/data";
+import { Paper } from "@mui/material";
 
 export default function CustomExcise() {
   const data = customData.find((item) => item.id === 1);
@@ -33,19 +34,19 @@ export default function CustomExcise() {
         <Image src={Banner} alt="..." className="h-96 w-full" />
       </section>
 
-      <section className="my-12 mx-20">
+      <section className="my-12 mx-20 w-[70%] mx-auto">
         {/* ------------------Importants---------------------------- */}
 
         <div className=" w-[80%]">
           <h1 className="text-4xl text-subColor font-bold mt-4">{data.title}</h1>
-          <h1 className="text-3xl font-bold mt-4">{data.title1}</h1>
+          <h1 className="text-3xl font-semibold mt-4">{data.title1}</h1>
           <h1 className="text-md font-semibold mt-4">{data.title2}</h1>
           <ul className="mt-2">
             {data.description.map((desc) => (
               <li
                 key={desc}
                 style={{ listStyleType: "circle" }}
-                className="mx-4"
+                className="mx-4 lightBlack"
               >
                 {desc}
               </li>
@@ -59,40 +60,40 @@ export default function CustomExcise() {
               <li
                 key={desc}
                 style={{ listStyleType: "circle" }}
-                className="mx-4 mt-1"
+                className="mx-4 mt-1 lightBlack"
               >
                 {desc}
               </li>
             ))}
           </ul>
         </div>
-          <hr className=" border-2 border-black  w-[80%] mt-10"></hr>
+          <hr className=" border-1 border-gray-400 w-[80%] mt-10"></hr>
             {/* ----------------------EXPORTATION------------------------ */}
             <div className=" my-10 w-[80%] ">
-              <h1 className="text-3xl font-bold">{data4.title1}</h1>
-              <hr className=" border-1 border-black  w-full my-10"></hr>
+              <h1 className="text-3xl font-semibold">{data4.title1}</h1>
+              <hr className=" border-1 text-zinc-500  w-full my-10"></hr>
               <h1 className="text-md font-semibold mt-8 ">{data4.title2}</h1>
               <ul>
                 {data4.description.map((desc) => (
                   <li
                     key={desc}
                     style={{ listStyleType: "circle" }}
-                    className="mx-4"
+                    className="mx-4 lightBlack"
                   >
                     {desc}
                   </li>
                 ))}
               </ul>
-              <h1 className="text-lg mt-4 text-justify "><span className="font-semibold">{data4.title5}</span> {data4.title3}</h1>
-              <h1 className="text-lg mt-4 text-justify "><span className="font-semibold" >{data4.title6}</span>{data4.title4}</h1>
+              <h1 className="text-lg mt-4 text-justify font-semibold ">{data4.title5}<span className="lightBlack font-normal"> {data4.title3}</span></h1>
+              <h1 className="text-lg mt-4 text-justify font-semibold">{data4.title6}<span className="lightBlack font-normal">{data4.title4}</span></h1>
             </div>
         {/* ----------------------Personal Imports------------------------ */}
         
         <div className="flex  my-10">
         <div className="w-[60%]">
         <div className="  ">
-          <h1 className="text-3xl font-bold">{data2.title}</h1>
-          <p className="mt-2 text-justify"><span className="font-semibold">{data2.title1}</span>{data2.description}</p>
+          <h1 className="text-3xl font-semibold">{data2.title}</h1>
+          <p className="mt-2 text-justify font-semibold">{data2.title1}<span className="lightBlack font-normal">{data2.description}</span></p>
         </div>
 
         <div className=" mt-8 ">
@@ -102,40 +103,42 @@ export default function CustomExcise() {
               <li
                 key={desc}
                 style={{ listStyleType: "circle" }}
-                className="mx-4"
+                className="mx-4 lightBlack"
               >
                 {desc}
               </li>
             ))}
           </ul>
           </div>
-          <h1 className="text-lg mt-4  text-justify "><span className="font-semibold">{data3.title4}</span> {data3.title2}</h1>
-          <h1 className="text-lg mt-4  "><span className="font-semibold">{data3.title5}</span> {data3.title3}</h1>
+          <h1 className="text-lg mt-4 text-justify font-semibold">{data3.title4}<span className="lightBlack font-normal"> {data3.title2}</span></h1>
+          <h1 className="ttext-lg mt-4 text-justify font-semibold">{data3.title5}<span className="lightBlack font-normal"> {data3.title3}</span></h1>
           </div>
           <div className="mt-10 w-[60%] mx-6">
-          <Image src={Custom} alt="..." className="h-[70%] w-full" />
+          <Paper elevation={20} sx={{borderRadius:'25px'}}>
+          <Image src={Custom} alt="..." className="h-[55%] w-full rounded-xl" />
+          </Paper>
           </div>
         </div>
 
         {/* --------------------CROSS BORDER CASH DECLARATION------------------ */}
 
         <div className=" my-10 w-[80%] ">
-          <h1 className="text-3xl font-bold">{data5.title1}</h1>
-          <h1 className="text-lg mt-4 text-justify "><span className="font-semibold">{data5.title4}</span> {data5.title2}</h1>
-          <h1 className="text-lg mt-4 text-justify "><span className="font-semibold">{data5.title5}</span>{data5.title3}</h1>
+          <h1 className="text-3xl font-semibold">{data5.title1}</h1>
+          <h1 className="text-lg mt-4 text-justify font-semibold">{data5.title4}<span className="lightBlack font-normal"> {data5.title2}</span></h1>
+          <h1 className="text-lg mt-4 text-justify font-semibold">{data5.title5}<span className="lightBlack font-normal">{data5.title3}</span></h1>
         </div>
         {/* ------------------------OFFENCE AND CONFISCATION-------------------- */}
         <div className=" my-10 w-[80%] ">
-          <h1 className="text-3xl font-bold">{data6.title1}</h1>
-          <h1 className="text-lg mt-4 text-justify "><span className="font-semibold">{data6.title4}</span> {data6.title2}</h1>
-          <h1 className="text-lg mt-4 text-justify "><span className="font-semibold">{data6.title5}</span> {data6.title3}</h1>
+          <h1 className="text-3xl font-semibold">{data6.title1}</h1>
+          <h1 className="text-lg mt-4 text-justify font-semibold">{data6.title4}<span className="lightBlack font-normal"> {data6.title2}</span></h1>
+          <h1 className="text-lg mt-4 text-justify font-semibold">{data6.title5}<span className="lightBlack font-normal"> {data6.title3}</span></h1>
         </div>
         {/* ------------------------SEARCH-------------------- */}
 
        <div className=" my-10 w-[80%] ">
-          <h1 className="text-3xl font-bold">{data7.title1}</h1>
-          <h1 className="text-lg mt-4 text-justify "><span className="font-semibold">{data7.title4}</span> {data7.title2}</h1>
-          <h1 className="text-lg mt-4 text-justify"><span className="font-semibold">{data7.title5}</span> {data7.title3}</h1>
+          <h1 className="text-3xl font-semibold">{data7.title1}</h1>
+          <h1 className="text-lg mt-4 text-justify font-semibold">{data7.title4}<span className="lightBlack font-normal"> {data7.title2}</span></h1>
+          <h1 className="text-lg mt-4 text-justify font-semibold">{data7.title5}<span className="lightBlack font-normal"> {data7.title3}</span></h1>
         </div>
       </section>
 

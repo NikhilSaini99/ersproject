@@ -149,3 +149,7 @@ body {
 .slideshowDot.active {
   background-color: #17197C;
 }
+
+.lightBlack{
+  color:#000000CC !important
+}
