@@ -85,7 +85,7 @@ export default function FormTable({ title }) {
 
   return (
     <>
-      <section className="px-14 py-16 bg-[#F7F7FA]">
+      <section className="px-6 py-16 bg-[#F7F7FA]">
         <div className="pb-10 flex justify-between items-center">
           <div>
             <h1 className=" text-[#2F3192] text-4xl font-semibold">{title}</h1>
@@ -148,15 +148,15 @@ export default function FormTable({ title }) {
           </div>
         ))}
         <div></div> */}
-        <Paper elevation={20}>
-          <TableContainer>
+        <Paper elevation={20} sx={{borderRadius:'10px'}}>
+          <TableContainer sx={{borderRadius:'10px'}}>
             <Table className={''} aria-label="Form Table">
               <TableHead>
                 <TableRow sx={{ backgroundColor: '#2f2483', }}>
                   <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>S.No</TableCell>
                   <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}> Form Name</TableCell>
                   <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Category</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Size</TableCell>
+                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold',minWidth:'8rem' }}>Size</TableCell>
                   <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Description</TableCell>
                   <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' }}>Download</TableCell>
                 </TableRow>
@@ -175,7 +175,7 @@ export default function FormTable({ title }) {
                     <TableCell align="left" sx={{ fontWeight: 'bold' }}>{form.category}</TableCell>
                     <TableCell align="right" sx={{ fontWeight: 'bold' }}>{form.size}</TableCell>
                     <TableCell align="left" sx={{ fontWeight: 'bold' }}>{form.description}</TableCell>
-                    <TableCell align="left" sx={{ fontWeight: 'bold' }}><DownloadForOfflineRoundedIcon sx={{ fontSize: '2rem' }} /></TableCell>
+                    <TableCell align="center" sx={{ fontWeight: 'bold' }}><DownloadForOfflineRoundedIcon sx={{ fontSize: '2rem' }} /></TableCell>
                   </TableRow>
                 ))}
               </TableBody>

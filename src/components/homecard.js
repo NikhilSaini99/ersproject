@@ -49,9 +49,9 @@ function News({ icon, description, img }) {
         </div>
       </div> */}
       {/*  */}
-      <div className=" border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400 " style={{ borderRadius: '50px 50px 150px 0' }}>
+      <div className=" border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400 ">
         <div className="object-cover relative " >
-          <Image src={img} alt="..." className=" rounded-t-2xl h-48 w-full" />
+          <Image src={img} alt="..." className="h-48 w-full" />
           <div className="rounded-2xl absolute -bottom-[76px] left-8 px-8 py-4 bg-white ">
             <Image src={icon} alt="..." className="w-40" />
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,44 +12,57 @@ import Browse from "../assets/images/tariff-browse.jpg";
 import Duty from "../assets/images/tariff-duty.jpg";
 import Search from "../assets/images/tariff-search.jpg";
 import Trade from "../assets/images/trade-portal.png"
+import education from '../assets/icons/education.png'
+
+
+import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
+
 
 export default function Customs() {
+  const [isHover, setisHover] = useState(-1);
+
+  function handleHoverEffect(index) {
+
+    setisHover(index);
+  }
+
+  function handleHoverExit() {
+    setisHover(-1);
+  }
+
   const CustomData = [
     {
-      img: Asycuda,
+      img: education,
       title: "Asycuda World",
       description:
         "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
     },
     {
-      img: Advance,
+      img: education,
       title: "Advance Rolling",
       description:
         "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
     },
     {
-      img: Asycuda,
+      img: education,
       title: "Tariff",
       description:
         "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
     },
-  ];
-
-  const TariffData = [
     {
-      img: Browse,
+      img: education,
       title: "Tariff Browse",
       description:
         "The Tariff Browse function is used to easily browse through the Customs Tariff by section and chapter and view all the classification notes.",
     },
     {
-      img: Duty,
+      img: education,
       title: "Duty Estimator",
       description:
         "Estimate Customs and Excise Duties using the Duty Estimator. This function removes the need for any manual calculations and allows for more accurate costing.",
     },
     {
-      img: Search,
+      img: education,
       title: "Tariff Search",
       description:
         "The Tariff Search allows for targeted way of searching by tariff code. Tariff classification of goods is one of the more complex issues under the Customs and Excise Act.",
@@ -72,10 +85,10 @@ export default function Customs() {
 
       <section className="mb-14 mt-5">
         <div>
-        <h1 className="text-subColor text-center text-5xl font-bold uppercase">
-          e-Customs
-        </h1>
-        <div className="border w-[270px] border-yellowish mt-1 mx-auto"></div>
+          <h1 className="text-subColor text-center text-5xl font-bold uppercase">
+            e-Customs
+          </h1>
+          <div className="border w-[270px] border-yellowish mt-1 mx-auto"></div>
         </div>
 
         <div className="relative mx-28">
@@ -90,7 +103,7 @@ export default function Customs() {
 
       {/*-----------------------Customs---------------------*/}
 
-      <section className="mx-14 pt-8 px-3">
+      {/* <section className="mx-14 pt-8 px-3">
         <div className="grid grid-cols-3 gap-8">
           {CustomData.map((item, key) => (
             <NewsCard
@@ -114,8 +127,53 @@ export default function Customs() {
             />
           ))}
         </div>
-      </section>
+      </section> */}
+      <Box sx={{ width: { xs: '96%', md:'98%',lg: '90%',xl:'70%' }, margin: '0 auto'}}>
+        <Grid container gap={4}>
+          {CustomData.map((item, index) => (
+            <Paper elevation={20} key={index} sx={{width:'350px'}}>
+            <Grid item xs={12} md={12}  sx={{
+              position: 'relative', p: '2rem', transition: '0.5s',
+              ...(isHover === index && {
+                transition: '0.5s',
+                border: '0.5px solid #f4c402'
+              }),
 
+            }}
+              onMouseEnter={() => handleHoverEffect(index)} onMouseLeave={handleHoverExit}>
+              <Box sx={{
+                position: 'absolute', width: '80px', height: '80px', background: 'grey', transition: '0.5s', opacity: '0.5',
+                top: '0', right: '0', borderRadius: '0px 0px 0px 120%', ...(isHover === index && {
+                  transition: '0.5s',
+                  background: '#f4c402',
+                  opacity: 1
+                })
+              }}></Box>
+              <Stack sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', lineHeight: '1.5' }}>
+                <Box >
+                  <Image src={item.img} alt="item.title" width={'100%'} height={'auto'}
+                    style={{ color: 'yellow' }} />
+                </Box>
+                <Typography variant="h1" sx={{
+                  fontSize: '1.5rem', fontWeight: 'bold', color: '#003b49', transition: '0.5s',
+                  ...(isHover === index && {
+                    transition: '0.5s',
+                    color: '#f4c402'
+                  })
+                }}>
+                  {item.title}
+                </Typography>
+                <Typography variant="body1" sx={{ fontWeight: 'light', color: 'grey' }}>
+                  {item.description.substring(0, 50)}
+                </Typography>
+              </Stack>
+            </Grid>
+            </Paper>
+          ))}
+
+        </Grid>
+      </Box>
+      {/*-----------------------Customs ENDS ---------------------*/}
       <section className="m-14">
         <h1 className="text-2xl text-subColor text-center font-semibold uppercase">
           New! HS2022 Amendments are available.
@@ -168,7 +226,7 @@ export default function Customs() {
           </h1>
           <ul className="grid grid-cols-2 gap-x-32 list-disc text-mainColor text-[15px] px-10 leading-7 font-normal">
             <li className="hover:underline cursor-pointer">
-              WCO HS2022 Background            
+              WCO HS2022 Background
             </li>
             <li className="hover:underline cursor-pointer">
               WCO HS2022 Correlation Tables
@@ -249,10 +307,10 @@ export default function Customs() {
       </section>
 
       <section className="mx-14">
-            <div className="border-t border-black mx-5 py-8 flex items-center gap-14 text-base font-normal leading-7 text-black">
-              <Image src={Trade} alt="..." className="w-96" />
-              <p>The Trade Information Portal provides a single platform to create transparency on Trade laws, Non-tariff measures and procedures for trading in Eswatini.</p>
-            </div>
+        <div className="border-t border-black mx-5 py-8 flex items-center gap-14 text-base font-normal leading-7 text-black">
+          <Image src={Trade} alt="..." className="w-96" />
+          <p>The Trade Information Portal provides a single platform to create transparency on Trade laws, Non-tariff measures and procedures for trading in Eswatini.</p>
+        </div>
       </section>
 
       {/*-----------------------Footer---------------------*/}
