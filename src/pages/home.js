@@ -186,7 +186,7 @@ export default function Home() {
                 key={key}
                 icon={item.icon}
                 title={item.title}
-                // description={item.description}
+              // description={item.description}
               />
             ))}
           </div>
@@ -206,11 +206,11 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-32 mt-10 px-32">
           {NewsData.map((item, key) => (
             <News
-            key={key}
+              key={key}
               img={item.img}
               icon={item.icon}
               description={item.description}
-              
+
             />
           ))}
         </div>
@@ -222,18 +222,16 @@ export default function Home() {
         <div className="flex flex-row bg-white text-xl justify-center font-semibold leading-6">
           <button
             onClick={() => toggleVisibility("div1")}
-            className={`py-3 w-60 rounded-t-xl ${
-              isVisible.div1 ? "bg-subColor text-white" : "bg-white text-black"
-            }`}
+            className={`py-3 w-60 rounded-t-xl ${isVisible.div1 ? "bg-subColor text-white" : "bg-white text-black"
+              }`}
           >
             Recently Approved
           </button>
 
           <button
             onClick={() => toggleVisibility("div2")}
-            className={`py-3 w-60 rounded-t-xl ${
-              isVisible.div2 ? "bg-subColor text-white" : "bg-white text-black"
-            }`}
+            className={`py-3 w-60 rounded-t-xl ${isVisible.div2 ? "bg-subColor text-white" : "bg-white text-black"
+              }`}
           >
             Notice Board
           </button>
@@ -241,9 +239,8 @@ export default function Home() {
 
         {/* Recently Approved */}
         <div
-          className={`${
-            isVisible.div1 ? "block" : "hidden"
-          } bg-subColor text-white w-full`}
+          className={`${isVisible.div1 ? "block" : "hidden"
+            } bg-subColor text-white w-full`}
         >
           <div className="flex justify-between px-14 py-8 h-[364px]">
             {/* <!-- Content for first div --> */}
@@ -356,9 +353,8 @@ export default function Home() {
 
         {/* Notice Board */}
         <div
-          className={`${
-            isVisible.div2 ? "block" : "hidden"
-          } bg-subColor text-white w-full`}
+          className={`${isVisible.div2 ? "block" : "hidden"
+            } bg-subColor text-white w-full`}
         >
           <div className="px-14 pt-4 text-lg font-medium leading-6">
             For the latest tenders, Vacancies, Public Notes and Meetings. Click
@@ -481,13 +477,21 @@ export default function Home() {
                 <div key={key} className={`flex flex-col gap-2 py-5 text-black ${card.id && "border-b border-[#DAD8CC]"}`}>
                   <h1 className="text-lg font-medium leading-6">{card.head}</h1>
                   <ul className=" text-sm font-normal leading-7">
-                    <li className={`${card.para && "before:content-['\\2726']"}`}>
+                    <li
+                    // className={`${card.para && "before:content-['\\2726']"}`}
+                    >{card.para && <span>&#10022;</span>}
                       {card.para}
                     </li>
-                    <li className={`${card.para2 && "before:content-['\\2726']"}`}>
+                    <li
+                    // className={`${card.para2 && "before:content-['\\2726']"}`}
+                    >
+                      {card.para2 && <span>&#10022;</span>}
                       {card.para2}
                     </li>
-                    <li className={`${card.para3 && "before:content-['\\2726']"}`}>
+                    <li
+                    // className={`${card.para3 && "<span>&#10022;</span>"}`}
+                    >
+                      {card.para3 && <span>&#10022;</span>}
                       {card.para3}
                     </li>
                   </ul>
@@ -500,7 +504,7 @@ export default function Home() {
             <div key={id} className="flex flex-col">
               <div className="flex justify-between items-center">
                 <h1 className="flex items-center gap-1 text-subColor text-2xl font-medium leading-8">
-                <FcAbout className="text-5xl" />
+                  <FcAbout className="text-5xl" />
                   {item.title}
                 </h1>
                 <button className="text-white hover:bg-opacity-75 bg-black text-base leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5">
@@ -514,22 +518,19 @@ export default function Home() {
                   </h1>
                   <ul className=" text-sm font-normal leading-7 text-mainColor">
                     <Link href={""}>
-                      <li style={{listStyle:'none'}}
-                        className={`hover:underline ${card.para && "before:content-['\\2726']"}`}>
+                      <li>{card.para && <span>&#10022;</span>}
                         {card.para}
                       </li>
                     </Link>
                     <Link href={""}>
-                      <li
-                        className={`hover:underline ${card.para2 && "before:content-['\\2726']"}`}
-                      >
+                      <li>
+                        {card.para2 && <span>&#10022;</span>}
                         {card.para2}
                       </li>
                     </Link>
                     <Link href={""}>
-                      <li
-                        className={`hover:underline ${card.para3 && "before:content-['\\2726']"}`}
-                      >
+                      <li>
+                        {card.para3 && <span>&#10022;</span>}
                         {card.para3}
                       </li>
                     </Link>
