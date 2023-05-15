@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill } from "react-icons/bs";
-import { Button } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
+import HomeIcon from '@mui/icons-material/Home';
+
 
 function News({ icon, description, img }) {
   return (
@@ -86,10 +88,10 @@ function Resources({ icon, title, description }) {
   );
 }
 
-function Centers({ title, description,contact }) {
+function Centers({ title, description, contact }) {
   return (
     <>
-      <div className="">
+      {/* <div className="">
         <h1 className="text-[#333333] font-bold text-sm leading-6">{title}</h1>
         <div className="flex flex-col gap-2">
           <div className="flex gap-2">
@@ -110,7 +112,30 @@ function Centers({ title, description,contact }) {
           '&:hover':{background:'black'}}}>Get Direction</Button>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <Stack direction={'column'} sx={{justifyContent:'space-between'}} spacing={1}>
+        <Typography variant="h1" sx={{ fontSize: {xs:'0.8rem',xl:'1rem'}, fontWeight: 'bold' }}>
+          {title}
+        </Typography>
+        <Stack direction={'row'} spacing={1}>
+          <HomeIcon sx={{fontSize:{xs:'1.2rem',lg:'1.65rem'}}}/>
+          <Typography variant="subtitle2" sx={{fontSize:{xs:'0.7rem',lg:'0.8rem'}}}>{description}</Typography>
+        </Stack>
+        <Stack direction={'row'} spacing={2}>
+          <BsTelephoneFill className="sm:text-1xl xl:text-xl"/>
+          <Typography variant="subtitle2" sx={{fontSize:{xs:'0.7rem',lg:'0.8rem'}}}>{contact}</Typography>
+        </Stack>
+        <Stack direction={'row'}>
+          <Button variant="contained" href={'/'} sx={{
+            fontSize:{xs:'0.6rem',lg:'0.8rem'},
+            background: 'black', borderRadius: '50px',
+            fontWeight: 'light', marginTop: '1rem', p: { xs: '0.5em 0.8rem', xl: '0.5em 1.5rem' },
+            '&:hover': { background: 'black' }
+          }}>Get Direction</Button>
+        </Stack>
+      </Stack>
+
     </>
   );
 }

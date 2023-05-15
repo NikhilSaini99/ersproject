@@ -17,35 +17,35 @@ export default function Contact() {
     {
       title: "MANZINI SERVICE CENTRE",
       description:
-        "Sivuno Building, <br /> Ground floor, adjacent to Estel <br /> House, Manzini <br /> MANZINI",
+        "Sivuno Building, Ground floor, adjacent to Estel House, Manzini MANZINI",
         contact:'[+268] 2406 4050'
     },
     {
       title: "MATSAPHA BRANCH",
-      description: "Matsamo Shopping Complex <br /> (kaMahhala) <br /> MATSAPHA",
-      contact:'[+268] 2406 4050 <br><br>'
+      description: "Matsamo Shopping Complex (kaMahhala) MATSAPHA",
+      contact:'[+268] 2406 4050'
     },
     {
       title: "MBABANE SERVICE CENTRE",
       description:
-        "3rd Floor, Corporate Place, Swazi  Plaza <br /> MBABANE <br> <br>",
-        contact:'[+268] 2406 4050 <br><br>'
+        "3rd Floor, Corporate Place, Swazi  Plaza MBABANE ",
+        contact:'[+268] 2406 4050'
     },
     {
       title: "NHLANGANO BRANCH",
       description:
-        "Old Skonkwane Building <br /> Corner of 6th Street and 3rd Avenue <br /> NHLANGANO",
+        "Old Skonkwane Building  Corner of 6th Street and 3rd Avenue NHLANGANO",
         contact:'[+268] 2406 4050'
     },
     { 
       title: "PIGGS PEAK SERVICE CENTRE",
       description:
-        "1st Floor, Supreme Building <br /> Evelyn Baring Road <br /> PIGGS PEAK",
+        "1st Floor, Supreme Building  Evelyn Baring Road  PIGGS PEAK",
         contact:'[+268] 2406 4050 '
     },
     {
       title: "SITEKI SERVICE CENTRE",
-      description: "Mafumbe Building <br /> Jacaranda Road <br /> SITEKI",
+      description: "Mafumbe Building Jacaranda Road  SITEKI",
       contact:'[+268] 2406 405'
     },
   ];
@@ -142,7 +142,7 @@ export default function Contact() {
               Service Centers and Branches
             </h1>
             <div className="border mr-12 border-yellowish mt-1 w-32"></div>
-            <div className="grid grid-cols-3 gap-x-16 gap-y-10 pt-5 items-start">
+            <div className="grid grid-cols-3 gap-x-16 gap-y-10 pt-5">
               {CentersData.map((item, key) => (
                 <Centers
                   key={key}

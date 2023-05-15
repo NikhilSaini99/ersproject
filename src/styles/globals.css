@@ -154,3 +154,9 @@ body {
   color:#000000CC !important
 }
 
+
+
+ul li.starclass:before {
+  content: '\2605';
+  margin-right: 0.5rem;
+}

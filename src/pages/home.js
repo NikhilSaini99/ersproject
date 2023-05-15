@@ -479,19 +479,19 @@ export default function Home() {
                   <ul className=" text-sm font-normal leading-7">
                     <li
                     // className={`${card.para && "before:content-['\\2726']"}`}
-                    >{card.para && <span>&#10022;</span>}
+                    >{card.para && <span className="mr-2">&#10022;</span>}
                       {card.para}
                     </li>
                     <li
                     // className={`${card.para2 && "before:content-['\\2726']"}`}
                     >
-                      {card.para2 && <span>&#10022;</span>}
+                      {card.para2 && <span className="mr-2">&#10022;</span>}
                       {card.para2}
                     </li>
                     <li
                     // className={`${card.para3 && "<span>&#10022;</span>"}`}
                     >
-                      {card.para3 && <span>&#10022;</span>}
+                      {card.para3 && <span className="mr-2">&#10022;</span>}
                       {card.para3}
                     </li>
                   </ul>
@@ -518,19 +518,19 @@ export default function Home() {
                   </h1>
                   <ul className=" text-sm font-normal leading-7 text-mainColor">
                     <Link href={""}>
-                      <li>{card.para && <span>&#10022;</span>}
+                      <li>{card.para && <span className="mr-2">&#10022;</span>}
                         {card.para}
                       </li>
                     </Link>
                     <Link href={""}>
                       <li>
-                        {card.para2 && <span>&#10022;</span>}
+                        {card.para2 && <span className="mr-2">&#10022;</span>}
                         {card.para2}
                       </li>
                     </Link>
                     <Link href={""}>
                       <li>
-                        {card.para3 && <span>&#10022;</span>}
+                        {card.para3 && <span className="mr-2">&#10022;</span>}
                         {card.para3}
                       </li>
                     </Link>
