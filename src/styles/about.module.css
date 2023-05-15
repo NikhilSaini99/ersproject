@@ -33,12 +33,23 @@
     border-radius: 50%;
 }
 
-.slick-slider
-.slick-next {
-    background-color: black !important;
+.cardeffect::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4c402;
+    opacity: 0.93;
 }
 
-.custom-slider .slick-prev,
-.custom-slider .slick-next {
-  background-color: black !important;
+.borderLine::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    bottom: 100px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 3;
 }
