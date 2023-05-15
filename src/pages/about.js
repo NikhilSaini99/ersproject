@@ -1,9 +1,145 @@
 import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import person1 from '../assets/images/Member1.jpg'
+import person2 from '../assets/images/Member2.jpg'
+import person3 from '../assets/images/Member3.jpg'
+import person4 from '../assets/images/Member4.jpg'
+import banner from '../assets/images/contact-bg.png'
+import hero1 from '../assets/images/herosection1.jpg'
+import hero2 from '../assets/images/herosection2.jpg'
+import hero3 from '../assets/images/herosection3.jpg'
+import hero4 from '../assets/images/herosection4.jpg'
+import hero5 from '../assets/images/herosection5.jpg'
+import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
+import Image from "next/image";
+import styles from '@/styles/about.module.css'
+import Slider from "react-slick";
+
+
+
 
 export default function about() {
+
+  const memeberData = [
+    {
+      id: 1,
+      img: person1,
+      name: 'David Dlamini',
+      role: 'Chairman'
+    },
+    {
+      id: 2,
+      img: person2,
+      name: 'Brightwell Nkambule (CG)',
+      role: 'Board Memeber'
+    },
+    {
+      id: 3,
+      img: person3,
+      name: 'Carol Muir',
+      role: 'Director'
+    },
+    {
+      id: 4,
+      img: person4,
+      name: 'Phil Mnisi',
+      role: 'CEO'
+    },
+    {
+      id: 5,
+      img: person1,
+      name: 'David Dlamini',
+      role: 'Chairman'
+    },
+    {
+      id: 6,
+      img: person2,
+      name: 'Brightwell Nkambule (CG)',
+      role: 'Board Memeber'
+    },
+    {
+      id: 7,
+      img: person3,
+      name: 'Carol Muir',
+      role: 'Director'
+    },
+    {
+      id: 8,
+      img: person4,
+      name: 'Phil Mnisi',
+      role: 'CEO'
+    },
+  ]
+
+
+  const strategicSection = [
+    {
+      id: 1,
+      title: 'COST EFFICIENCIES',
+      description: 'To collect the required revenue effectively and efficiently, manage cost of doing business whilst building a financially sustainable organisation.'
+    },
+    {
+      id: 2,
+      title: 'CUSTOMER AND STAKEHOLDER CENTRICITY',
+      description: 'To deliver customer and stakeholder centricity.'
+    },
+    {
+      id: 3,
+      title: 'HUMAN CAPITAL',
+      description: 'To attract, retain and build capacity of our staff to meet our revenue, operational and strategic objectives.'
+    },
+    {
+      id: 4,
+      title: 'MODERNISATION',
+      description: 'Develop an effective institutional framework that promotes correct, uniform and consistent administration of revenue laws/legislation and ease of doing business with and within ERS.'
+    },
+  ];
+
+  const heroSectionData = {
+    title: 'About Eswatini Revenue Service',
+    description: 'The Eswatini Revenue Service (ERS) is a semi-autonomous revenue administration agency, established through the Revenue Authority Act No. 1 of 2008. It operates within the broad framework of Government but outside of the civil service.The ERS is structured as a corporate entity and strives for operational excellence and efficiency. It is headed by a Commissioner General, Mr Dumsani E. Masilela and is organised on functional lines – this link provides more details. The ERS has a Governing Board which is appointed by the Honorable Minister of Finance in accordance with the Eswatini Public Enterprise Act, and read with the founding Act.In furtherance of our mandate, as well as in working towards adopting best practice, the ERS is a member of various international organisations, such as the World Customs Organization (WCO); the Commonwealth Association of Tax Administrators (CATA) and the African Tax Administration Forum (ATAF). Alliances with established revenue agencies such as the South African Revenue Service (SARS), the Lesotho Revenue Authority (LRA) and the Zambia Revenue Authority (ZRA) have also been pursued to this end.'
+
+  }
+
+  //settings for carousel
+  const settings = {
+    autoplay: true,
+    autoplaySpeed:3000,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    dots:true,
+    responsive: [
+      {
+        breakpoint: 1280, // screens between 1280px and 960px
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 960, // screens between 960px and 600px
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600, // screens below 600px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
+
+
   return (
     <>
       <Head>
@@ -16,7 +152,82 @@ export default function about() {
 
       <Header />
 
-      
+      {/*----------------------- About Us Banner ------------------*/}
+      <Box sx={{ position: 'relative', width: '100%', }}>
+        {/* <Image src={banner} alt="about_us" width="100%" height="100%" layout="responsive" objectFit="contain" /> */}
+        <Image src={banner} alt="about_us" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto', filter: 'blur(2px)' }} />
+        <Typography variant="h1" sx={{
+          fontSize: { xs: '1.2rem', lg: '2.8rem' }, color: 'black', fontFamily: 'inherit', fontWeight: '400',
+          position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'
+        }}>About Us</Typography>
+      </Box>
+
+      {/* -------------------------About Us Banner END HERE --------------------------*/}
+
+      {/*------------------------- Hero Section Start-------------------------- */}
+
+      <Stack direction={'row'} lineHeight={'1.6em'} spacing={5} width={'95%'} sx={{ margin: { xs: '3rem auto', lg: '3rem auto' } }}>
+        <Stack direction={'column'} spacing={1.5} width={'50%'} >
+          <Typography variant="h2" sx={{ fontSize: '2.8rem' }}>About Eswatini Revenue Service</Typography>
+          <Stack className={styles.circleContainer}>
+            <div className={styles.circleDiv}></div>
+            <div className={styles.circleDiv}></div>
+            <div className={styles.circleDiv}></div>
+          </Stack>
+          <Typography variant="body1" sx={{ fontSize: '0.9rem', color: 'grey', letterSpacing: '0.1rem' }}>The Eswatini Revenue Service (ERS) is a semi-autonomous revenue administration agency, established through the Revenue Authority Act No. 1 of 2008. It operates within the broad framework of Government but outside of the civil service.
+            The ERS is structured as a corporate entity and strives for operational excellence and efficiency. It is headed by a Commissioner General, Mr Dumsani E. Masilela and is organised on functional lines – this link provides more details. The ERS has a Governing Board which is appointed by the Honorable Minister of Finance in accordance with the Eswatini Public Enterprise Act, and read with the founding Act.
+            In furtherance of our mandate, as well as in working towards adopting best practice, the ERS is a member of various international organisations, such as the World Customs Organization (WCO); the Commonwealth Association of Tax Administrators (CATA) and the African Tax Administration Forum (ATAF). Alliances with established revenue agencies such as the South African Revenue Service (SARS), the Lesotho Revenue Authority (LRA) and the Zambia Revenue Authority (ZRA) have also been pursued to this end.
+          </Typography>
+        </Stack>
+
+        {/*------------------------ Right Side with images ------------------------*/}
+        <Box sx={{ width: '70%' }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(2, minmax(200px,210px))', lg: 'repeat(2, minmax(280px,320px))' }, gap: '0.5rem', mb: '0.5rem' }}>
+            <Paper elevation={20}><Image src={hero1} alt="" width={'100%'} height={0} /></Paper>
+            <Paper elevation={20}><Image src={hero2} alt="" width={'100%'} height={0} /></Paper>
+          </Box>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(auto-fit, minmax(220px,220px))', lg: 'repeat(auto-fit, minmax(220px,220px))' }, gap: '0.3rem' }}>
+            <Paper elevation={20}><Image src={hero3} alt="" width={'100%'} height={"100%"} layout="responsive" objectFit="contain" /></Paper>
+            <Paper elevation={20}><Image src={hero4} alt="" width={'100%'} height={"100%"} layout="responsive" objectFit="contain" /></Paper>
+            <Paper elevation={20}><Image src={hero5} alt="" width={'100%'} height={"100%"} layout="responsive" objectFit="contain" /></Paper>
+          </Box>
+        </Box>
+      </Stack>
+
+      {/* --------------------------Hero Section End------------------------- */}
+
+      {/* ------------------------Council Memeber section start-------------------------- --*/}
+
+      <Box width={'65%'} sx={{ margin: '0 auto', textAlign: 'center' }}>
+        <Stack direction={'column'} spacing={3} sx={{ mt: '8rem', mb: '5rem' }}>
+          <Typography variant="h2" sx={{ fontSize: '3rem', fontWeight: '400' }}>Meet Council Member</Typography>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Stack className={styles.circleContainer}>
+              <div className={styles.circleDiv}></div>
+              <div className={styles.circleDiv}></div>
+              <div className={styles.circleDiv}></div>
+            </Stack>
+          </div>
+          <Typography variant="body1" sx={{ color: 'grey', maxWidth: '500px', margin: '0 auto', placeSelf: 'center' }}>
+            Denounce with righteous indignation and dislike men who are so beguiled & demoralized our power of choice.
+          </Typography>
+
+          {/*-------------------carousel----------------------- */}
+          <Box sx={{ maxWidth: '100%',}}>
+            <Slider className={''} {...settings}>
+              {memeberData.map((item) => {
+                return (
+                  <Box key={item.id} sx={{position: 'relative'}}>
+                    <Image src={item.img} alt={item.name} width={'100%'} height={0} layout="responsive" objectFit="contain" style={{ border: 'none' }} />
+                  </Box>
+                )
+              })}
+            </Slider>
+          </Box>
+        </Stack>
+      </Box>
+
+      {/*-------------------------- Council Memeber section End here------------------- */}
 
       {/*-----------------------Footer---------------------*/}
 

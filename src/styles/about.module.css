@@ -1,0 +1,44 @@
+.circleContainer {
+    display: flex;
+    position: relative;
+}
+
+.circleDiv {
+    height: 15px;
+    width: 15px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: rgb(255, 165, 0);
+    border-right-color: rgb(255, 165, 0);
+    border-bottom-color: rgb(255, 165, 0);
+    border-left-color: rgb(255, 165, 0);
+    border-radius: 50%;
+}
+
+.circleDiv:nth-of-type(2) {
+    position: absolute;
+    left: 19px;
+}
+
+.circleDiv:nth-of-type(1) {
+    position: absolute;
+    left: 10px;
+    background: rgb(255, 165, 0);
+    border-radius: 50%;
+}
+
+.slick-slider
+.slick-next {
+    background-color: black !important;
+}
+
+.custom-slider .slick-prev,
+.custom-slider .slick-next {
+  background-color: black !important;
+}
