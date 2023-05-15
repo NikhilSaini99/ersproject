@@ -58,16 +58,16 @@ export default function IncomeTax() {
                 {item.heading1}
               </h1>
               {/* <button>button</button> */}
-              <h1 className=" text-3xl font-medium text-mainColor">
+              <h1 className=" text-3xl font-medium text-mainColor mb-4">
                 {item.heading2}
               </h1>
 
-              <div className=" py-5">
-
+              <div className=" py-1">
+            
                 <p className={`text-xl font-medium text-gray-500 ${styles.first_heading}`}>
                   {item.title}
                 </p>
-                <p className="mb-4  mt-8 text-black/80">
+                <p className="mb-4  mt-2 text-black/80">
                   <span className={`tracking-wide `}>{item.description}{" "}</span>
                 </p>
                 <p className={`mb-2  text-black/80 tracking-wide`}>{item.description1} </p>

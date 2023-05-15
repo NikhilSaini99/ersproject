@@ -23,13 +23,13 @@ export default function Contact() {
     {
       title: "MATSAPHA BRANCH",
       description: "Matsamo Shopping Complex <br /> (kaMahhala) <br /> MATSAPHA",
-      contact:'[+268] 2406 4050'
+      contact:'[+268] 2406 4050 <br><br>'
     },
     {
       title: "MBABANE SERVICE CENTRE",
       description:
-        "3rd Floor, Corporate Place, Swazi <br /> Plaza <br /> MBABANE",
-        contact:'[+268] 2406 4050'
+        "3rd Floor, Corporate Place, Swazi  Plaza <br /> MBABANE <br> <br>",
+        contact:'[+268] 2406 4050 <br><br>'
     },
     {
       title: "NHLANGANO BRANCH",
@@ -37,16 +37,16 @@ export default function Contact() {
         "Old Skonkwane Building <br /> Corner of 6th Street and 3rd Avenue <br /> NHLANGANO",
         contact:'[+268] 2406 4050'
     },
-    {
+    { 
       title: "PIGGS PEAK SERVICE CENTRE",
       description:
         "1st Floor, Supreme Building <br /> Evelyn Baring Road <br /> PIGGS PEAK",
-        contact:'[+268] 2406 4050'
+        contact:'[+268] 2406 4050 '
     },
     {
       title: "SITEKI SERVICE CENTRE",
       description: "Mafumbe Building <br /> Jacaranda Road <br /> SITEKI",
-      contact:'[+268] 2406 4050'
+      contact:'[+268] 2406 405'
     },
   ];
 
@@ -142,7 +142,7 @@ export default function Contact() {
               Service Centers and Branches
             </h1>
             <div className="border mr-12 border-yellowish mt-1 w-32"></div>
-            <div className="grid grid-cols-3 gap-x-16 gap-y-10 pt-5 items-end">
+            <div className="grid grid-cols-3 gap-x-16 gap-y-10 pt-5 items-start">
               {CentersData.map((item, key) => (
                 <Centers
                   key={key}

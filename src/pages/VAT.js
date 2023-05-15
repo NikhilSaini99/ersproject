@@ -26,7 +26,7 @@ export default function VAT() {
 
       <section className="mx-40 my-10 p-10">
         <div>
-          <h1 className=" text-[#2F3192]  text-4xl font-semibold">
+          <h1 className=" text-[#000000]  text-4xl font-semibold">
             Guide on the Appointment of a Public Officer
           </h1>
           <div className="border border-bottom border-yellowish mt-1  w-[66%] "></div>
@@ -34,7 +34,7 @@ export default function VAT() {
 
         <div className="mt-10 space-y-8">
           <div>
-            <h2 className="text-3xl text-subColor mb-1">Introduction</h2>
+            <h2 className="text-3xl text-inherit mb-1">Introduction</h2>
             <p>
               {" "}
               The Income Tax Order of 1975 as amended requires that a company
@@ -56,7 +56,7 @@ export default function VAT() {
           </div>
 
           <div>
-            <h2 className="text-3xl text-subColor mb-1">
+            <h2 className="text-3xl text-inherit mb-1">
               Who qualifies to be appointed as Public Officer?
             </h2>
             <p>
@@ -67,7 +67,7 @@ export default function VAT() {
           </div>
 
           <div>
-            <h2 className="text-3xl text-subColor mb-1">
+            <h2 className="text-3xl text-inherit mb-1">
               What is the purpose of appointing a Public Officer?
             </h2>
             <p>
@@ -78,7 +78,7 @@ export default function VAT() {
           </div>
 
           <div>
-            <h2 className="text-3xl text-subColor mb-1">
+            <h2 className="text-3xl text-inherit mb-1">
               Does an artificial person qualify to be appointed as Public
               Officer?
             </h2>
@@ -102,7 +102,7 @@ export default function VAT() {
           </div>
 
           <div>
-            <h2 className="text-3xl text-subColor mb-1">Exclusions</h2>
+            <h2 className="text-3xl text-inherit mb-1">Exclusions</h2>
             <p className=" text-lg">
               The following entities DO NOT qualify to be appointed as Public
               Officers hence the ERS will not approve such appointments:
@@ -119,7 +119,7 @@ export default function VAT() {
           </div>
 
           <div>
-            <h2 className="text-3xl text-subColor mb-1">
+            <h2 className="text-3xl text-inherit mb-1">
               How to apply to be a Public officer?
             </h2>
             <p className=" text-lg">
@@ -150,7 +150,7 @@ export default function VAT() {
           </div>
 
           <div>
-            <h2 className="text-3xl text-subColor mb-1">
+            <h2 className="text-3xl text-inherit mb-1">
               Liabilities of a Public Officer
             </h2>
             <p className=" text-lg">
@@ -174,7 +174,7 @@ export default function VAT() {
           </div>
 
           <div>
-            <h2 className="text-3xl text-subColor mb-1">
+            <h2 className="text-3xl text-inherit mb-1">
               What are the duties of the Public Officer?
             </h2>
 
@@ -217,7 +217,7 @@ export default function VAT() {
           </div>
 
           <div>
-            <h2 className="text-3xl mb-1 text-mainColor">
+            <h2 className="text-3xl mb-1 text-inherit">
               What are the duties of a company?
             </h2>
             <ul className="list-disc">
@@ -234,7 +234,7 @@ export default function VAT() {
           </div>
 
           <div>
-            <h2 className="text-3xl mb-1 text-mainColor">
+            <h2 className="text-3xl mb-1 text-inherit">
               Failure to appoint a Public Officer Failure to appoint a public
               officer by a company shall:
             </h2>

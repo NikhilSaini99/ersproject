@@ -222,7 +222,7 @@ export default function Home() {
         <div className="flex flex-row bg-white text-xl justify-center font-semibold leading-6">
           <button
             onClick={() => toggleVisibility("div1")}
-            className={`py-3 w-60 ${
+            className={`py-3 w-60 rounded-t-xl ${
               isVisible.div1 ? "bg-subColor text-white" : "bg-white text-black"
             }`}
           >
@@ -231,7 +231,7 @@ export default function Home() {
 
           <button
             onClick={() => toggleVisibility("div2")}
-            className={`py-3 w-60 ${
+            className={`py-3 w-60 rounded-t-xl ${
               isVisible.div2 ? "bg-subColor text-white" : "bg-white text-black"
             }`}
           >
@@ -480,14 +480,14 @@ export default function Home() {
               {item.card.map((card, key) => (
                 <div key={key} className={`flex flex-col gap-2 py-5 text-black ${card.id && "border-b border-[#DAD8CC]"}`}>
                   <h1 className="text-lg font-medium leading-6">{card.head}</h1>
-                  <ul className="px-6 text-sm font-normal leading-7">
-                    <li className={`${card.para && "list-disc"}`}>
+                  <ul className=" text-sm font-normal leading-7">
+                    <li className={`${card.para && "before:content-['\\2726']"}`}>
                       {card.para}
                     </li>
-                    <li className={`${card.para2 && "list-disc"}`}>
+                    <li className={`${card.para2 && "before:content-['\\2726']"}`}>
                       {card.para2}
                     </li>
-                    <li className={`${card.para3 && "list-disc"}`}>
+                    <li className={`${card.para3 && "before:content-['\\2726']"}`}>
                       {card.para3}
                     </li>
                   </ul>
@@ -512,30 +512,23 @@ export default function Home() {
                   <h1 className="text-lg font-medium leading-6 text-black">
                     {card.head}
                   </h1>
-                  <ul className="px-6 text-sm font-normal leading-7 text-mainColor">
+                  <ul className=" text-sm font-normal leading-7 text-mainColor">
                     <Link href={""}>
-                      <li
-                        className={`hover:underline ${
-                          card.para && "list-disc"
-                        }`}
-                      >
+                      <li style={{listStyle:'none'}}
+                        className={`hover:underline ${card.para && "before:content-['\\2726']"}`}>
                         {card.para}
                       </li>
                     </Link>
                     <Link href={""}>
                       <li
-                        className={`hover:underline ${
-                          card.para2 && "list-disc"
-                        }`}
+                        className={`hover:underline ${card.para2 && "before:content-['\\2726']"}`}
                       >
                         {card.para2}
                       </li>
                     </Link>
                     <Link href={""}>
                       <li
-                        className={`hover:underline ${
-                          card.para3 && "list-disc"
-                        }`}
+                        className={`hover:underline ${card.para3 && "before:content-['\\2726']"}`}
                       >
                         {card.para3}
                       </li>
