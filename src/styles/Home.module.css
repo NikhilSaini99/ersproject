@@ -1,0 +1,9 @@
+
+.borderLine::after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 3;
+}

@@ -22,6 +22,7 @@ import table from "../assets/icons/table.png";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { FcAbout } from "react-icons/fc";
 import { Paper } from "@mui/material";
+import styles from '@/styles/Home.module.css'
 
 export default function Home() {
   // ----------------------Resources-----------------------
@@ -283,8 +284,11 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-
-            <div className=" inline-block border-l border-gray-400"></div>
+            
+            <div style={{position:'relative'}}>
+            <div className={styles.borderLine}></div>
+            </div>
+          
 
             {/* <!-- Content for second div --> */}
             <div className=" inline-block w-[17.8rem] h-[16.5rem]">
@@ -296,7 +300,9 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className=" inline-block border-l border-gray-400"></div>
+            <div style={{position:'relative'}}>
+            <div className={styles.borderLine}></div>
+            </div>
 
             {/* <!-- Content for third div --> */}
             <div className=" inline-block w-[17.8rem] h-[16.5rem]">
@@ -334,7 +340,9 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className=" inline-block border-l border-gray-400"></div>
+            <div style={{position:'relative'}}>
+            <div className={styles.borderLine}></div>
+            </div>
             {/* <!-- Content for fourth div --> */}
             <div className=" inline-block w-[17.8rem] h-[16.5rem]">
               <p className="text-xl font-normal">Publication</p>
