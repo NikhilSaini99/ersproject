@@ -83,7 +83,7 @@ export default function Customs() {
 
   const BoxWithAnimation = ({ dataArr }) => {
     return (
-      <Grid container gap={3}>
+      <Grid container gap={3} justifyContent="space-between" >
         {dataArr.map((item, index) => (
           <Paper elevation={20} key={item.id} sx={{ width: { xs: '300px', xl: '422px' } }}>
             <Grid item xs={12} md={12} sx={{
@@ -165,19 +165,21 @@ export default function Customs() {
       </section>
 
       {/*-----------------------Customs---------------------*/}
-      <Box sx={{ width: { xs: '96%', md: '98%', lg: '78%', xl: '70%' }, margin: { xs: '0 auto' } }}>
+      <Box sx={{ width: { xs: '96%', md: '98%', lg: '80%', xl: '70%' }, margin: { xs: '0 auto' },}}>
 
         <BoxWithAnimation dataArr={CustomData} />
+
         <Divider sx={{my:{xs:'3rem',lg:'6rem',xl:'8rem'}}}/>
         <BoxWithAnimation dataArr={CustomData2}/>
       </Box>
+
       {/*-----------------------Customs ENDS ---------------------*/}
-      <section className="m-14">
+      <section className="m-14 w-4/5 mx-auto">
         <h1 className="text-2xl text-subColor text-center font-semibold uppercase">
           New! HS2022 Amendments are available.
         </h1>
 
-        <div className="px-3 my-5">
+        <div className=" my-5">
           <h1 className="text-xl text-black font-medium leading-6 mb-3">
             Please click on the links below to access the documentation :-
           </h1>
@@ -218,7 +220,7 @@ export default function Customs() {
           </ul>
         </div>
 
-        <div className="px-3">
+        <div className="">
           <h1 className="text-xl text-black font-medium leading-6 mb-3">
             Please click on the links below to access the WCO documentation :-
           </h1>
@@ -232,7 +234,7 @@ export default function Customs() {
           </ul>
         </div>
 
-        <div className="my-10 flex gap-20 px-8 text-black text-justify text-base leading-7">
+        <div className="my-10 flex gap-20  text-black text-justify text-base leading-7">
           <p>
             All import and export commercial transactions require commodities on
             Customs declarations to be classified according to an appropriate
@@ -251,7 +253,7 @@ export default function Customs() {
           </p>
         </div>
 
-        <div className="px-3 my-5">
+        <div className=" my-5">
           <h1 className="text-xl text-black font-medium leading-6 mb-3">
             The latest version of the full tariff book and schedules to the
             tariff can be downloaded from the links below :-
