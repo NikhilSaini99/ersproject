@@ -389,7 +389,7 @@ export default function about() {
 
       </Box>
 
-      <Box sx={{ position: 'relative',margin:'0 auto'}}>
+      <Box sx={{ position: 'relative', margin: '0 auto' }}>
         <Image
           src={lastSectionImg}
           alt=""
@@ -397,13 +397,14 @@ export default function about() {
           height={"100%"}
           layout="responsive"
           objectFit="cover"
-          style={{position:'absolute',top:'0',left:'0',width:'100%',minHeight:'1080px',zIndex:'-1',opacity:'0.83'}}
+          style={{ position: 'absolute', top: '0', left: '0', width: '100%', minHeight: '1080px', zIndex: '-1', opacity: '0.83' }}
         />
         <Typography variant="h1" sx={{ fontSize: { xs: '1.2rem', lg: '2.8rem', textAlign: 'center' } }}>Taxpayer Charter</Typography>
-        <Stack direction={'column'} sx={{width:'95%',
-          position: 'relative', top: '0',pt: '2rem', margin:'3rem auto'
+        <Stack direction={'column'} sx={{
+          width: '95%',
+          position: 'relative', top: '0', pt: '2rem', margin: '3rem auto'
         }}>
-          <Typography variant="body1" sx={{ fontWeight: '400',}}>
+          <Typography variant="body1" sx={{ fontWeight: '400', }}>
             The Charter sets out the way we will conduct ourselves when dealing with you. It will help you understand:
           </Typography>
           <ul>
@@ -413,18 +414,18 @@ export default function about() {
             <li className="starclass">What you can do if you’re dissatisfied with our decisions, actions or services, or you want to lodge a complaint.</li>
           </ul>
 
-            <Stack direction={'row'} sx={{ display: 'flex', flexDirection: 'row', gap: '1rem', mt:'2rem' }}>
-              {taxpayerCharter.map((item, index) => (
-                <Box key={index} sx={{width:"50%"}}>
-                  <Typography variant="h5" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{item.section}</Typography>
-                    <ul>
-                      {item.content.split('\n').map((bulletPoints, index) => (
-                        index === 0 ? <h4 key={index} style={{ fontWeight: '400' }}>{bulletPoints}</h4> : <li key={index} className='starclass'>{bulletPoints}</li>
-                      ))}
-                    </ul>
-                </Box>
-              ))}
-            </Stack>                      
+          <Stack direction={'row'} sx={{ display: 'flex', flexDirection: 'row', gap: {lg:'4rem'}, mt: '2rem' }}>
+            {taxpayerCharter.map((item, index) => (
+              <Box key={index} sx={{ width: "50%" }}>
+                <Typography variant="h5" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{item.section}</Typography>
+                <ul>
+                  {item.content.split('\n').map((bulletPoints, index) => (
+                    index === 0 ? <h4 key={index} style={{ fontWeight: '400' }}>{bulletPoints}</h4> : <li key={index} className='starclass'>{bulletPoints}</li>
+                  ))}
+                </ul>
+              </Box>
+            ))}
+          </Stack>
         </Stack>
       </Box>
 

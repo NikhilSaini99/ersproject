@@ -74,16 +74,13 @@ function News({ icon, description, img }) {
 function Resources({ icon, title, description }) {
   return (
     <>
-      <div className="flex flex-col gap-2">
+      <Link className="flex flex-col gap-2" href='/Calculator'>
         <div className="flex justify-center items-center bg-[#E3E5FF] border-2 border-[#E3E5FF] hover:border-2 hover:border-[#DAD8CC] rounded-full cursor-pointer container">
           {" "}
           <Image src={icon} alt="" className="fill h-7 w-7 m-4" />
         </div>
         <h1 className="text-center text-sm font-medium">{title}</h1>
-      </div>
-      {/* <div>
-          <p className="">{description}</p>
-        </div> */}
+      </Link>
     </>
   );
 }
@@ -91,30 +88,7 @@ function Resources({ icon, title, description }) {
 function Centers({ title, description, contact }) {
   return (
     <>
-      {/* <div className="">
-        <h1 className="text-[#333333] font-bold text-sm leading-6">{title}</h1>
-        <div className="flex flex-col gap-2">
-          <div className="flex gap-2">
-          <ImHome3 className="text-xl" />
-            <span
-              className="text-[#333333] font-normal text-sm leading-5"
-              dangerouslySetInnerHTML={{ __html: description }}></span>
-            </div>
-          <div className="flex gap-2">
-          <BsTelephoneFill className="text-xl" />
-            <span
-              className="text-[#333333] font-normal text-sm leading-5"
-              dangerouslySetInnerHTML={{ __html: contact }}></span>
-          </div>
-          <div className="">
-          <Button variant="contained" href={'/'} sx={{background:'black',borderRadius:'50px',
-          fontWeight:'light',marginTop:'1rem', p:{xs:'0.5em 0.8rem',xl:'0.5em 1.5rem'},
-          '&:hover':{background:'black'}}}>Get Direction</Button>
-          </div>
-        </div>
-      </div> */}
-
-      <Stack direction={'column'} sx={{justifyContent:'space-between'}} spacing={1}>
+         <Stack direction={'column'} sx={{justifyContent:'space-between'}} spacing={1}>
         <Typography variant="h1" sx={{ fontSize: {xs:'0.8rem',xl:'1rem'}, fontWeight: 'bold' }}>
           {title}
         </Typography>

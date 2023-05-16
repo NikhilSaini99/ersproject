@@ -45,8 +45,8 @@ export default function CustomExcise() {
             {data.description.map((desc) => (
               <li
                 key={desc}
-                style={{ listStyleType: "circle" }}
-                className="mx-4 lightBlack"
+                
+                className="mx-1 lightBlack starclass"
               >
                 {desc}
               </li>
@@ -59,8 +59,8 @@ export default function CustomExcise() {
             {data1.description.map((desc) => (
               <li
                 key={desc}
-                style={{ listStyleType: "circle" }}
-                className="mx-4 mt-1 lightBlack"
+                
+                className="mx-1 mt-1 lightBlack starclass"
               >
                 {desc}
               </li>
@@ -77,8 +77,8 @@ export default function CustomExcise() {
                 {data4.description.map((desc) => (
                   <li
                     key={desc}
-                    style={{ listStyleType: "circle" }}
-                    className="mx-4 lightBlack"
+                   
+                    className="mx-1 lightBlack starclass"
                   >
                     {desc}
                   </li>
@@ -102,7 +102,7 @@ export default function CustomExcise() {
             {data3.description.map((desc) => (
               <li
                 key={desc}
-                style={{ listStyleType: "circle" }}
+                
                 className="mx-4 lightBlack"
               >
                 {desc}

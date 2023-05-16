@@ -11,19 +11,16 @@ import Advance from "../assets/images/asys2.jpg";
 import Browse from "../assets/images/tariff-browse.jpg";
 import Duty from "../assets/images/tariff-duty.jpg";
 import Search from "../assets/images/tariff-search.jpg";
-import Trade from "../assets/images/trade-portal.png"
-import education from '../assets/icons/education.png'
-
+import Trade from "../assets/images/trade-portal.png";
+import education from "../assets/icons/education.png";
 
 import { Box, Divider, Grid, Paper, Stack, Typography } from "@mui/material";
 import { customData } from "@/content/data";
-
 
 export default function Customs() {
   const [isHover, setisHover] = useState(-1);
 
   function handleHoverEffect(index) {
-
     setisHover(index);
   }
 
@@ -33,21 +30,21 @@ export default function Customs() {
 
   const CustomData = [
     {
-      id:1,
+      id: 1,
       img: education,
       title: "Asycuda World",
       description:
         "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
     },
     {
-      id:2,
+      id: 2,
       img: education,
       title: "Advance Rolling",
       description:
         "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
     },
     {
-      id:3,
+      id: 3,
       img: education,
       title: "Tariff",
       description:
@@ -55,79 +52,119 @@ export default function Customs() {
     },
   ];
 
-
   const CustomData2 = [
     {
-      id:4,
+      id: 4,
       img: education,
       title: "Tariff Browse",
       description:
         "The Tariff Browse function is used to easily browse through the Customs Tariff by section and chapter and view all the classification notes.",
     },
     {
-      id:5,
+      id: 5,
       img: education,
       title: "Duty Estimator",
       description:
         "Estimate Customs and Excise Duties using the Duty Estimator. This function removes the need for any manual calculations and allows for more accurate costing.",
     },
     {
-      id:6,
+      id: 6,
       img: education,
       title: "Tariff Search",
       description:
         "The Tariff Search allows for targeted way of searching by tariff code. Tariff classification of goods is one of the more complex issues under the Customs and Excise Act.",
     },
-  ]
-
+  ];
 
   const BoxWithAnimation = ({ dataArr }) => {
     return (
-      <Grid container gap={3} justifyContent="space-between" >
+      <Grid container gap={3} justifyContent="space-between">
         {dataArr.map((item, index) => (
-          <Paper elevation={20} key={item.id} sx={{ width: { xs: '318px', xl: '422px' } }}>
-            <Grid item xs={12} md={12} sx={{
-              position: 'relative', p: '2rem', transition: '0.5s',
-              ...(isHover === item.id && {
-                transition: '0.5s',
-                boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(244, 196, 2) 0px 0px 0px 2px'
-              }),
-            }}
-              onMouseEnter={() => handleHoverEffect(item.id)} onMouseLeave={handleHoverExit}>
-              <Box sx={{
-                position: 'absolute', width: '80px', height: '80px', background: 'grey', transition: '0.5s', opacity: '0.5',
-                top: '0', right: '0', borderRadius: '0px 0px 0px 120%', ...(isHover === item.id && {
-                  transition: '0.5s',
-                  background: '#f4c402',
-                  opacity: 1
-                })
-              }}></Box>
-              <Stack sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', lineHeight: '1.5' }}>
-                <Box >
-                  <Image src={item.img} alt="item.title" width={'100%'} height={'auto'}
-                    style={{ color: 'yellow' }} />
-                </Box>
-                <Typography variant="h1" sx={{
-                  fontSize: '1.5rem', fontWeight: 'bold', color: '#003b49', transition: '0.5s',
+          <Paper
+            elevation={20}
+            key={item.id}
+            sx={{ width: { xs: "318px", xl: "422px" } }}
+          >
+            <Grid
+              item
+              xs={12}
+              md={12}
+              sx={{
+                position: "relative",
+                p: "2rem",
+                transition: "0.5s",
+                ...(isHover === item.id && {
+                  transition: "0.5s",
+                  boxShadow:
+                    "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(244, 196, 2) 0px 0px 0px 2px",
+                }),
+              }}
+              onMouseEnter={() => handleHoverEffect(item.id)}
+              onMouseLeave={handleHoverExit}
+            >
+              <Box
+                sx={{
+                  position: "absolute",
+                  width: "80px",
+                  height: "80px",
+                  background: "grey",
+                  transition: "0.5s",
+                  opacity: "0.5",
+                  top: "0",
+                  right: "0",
+                  borderRadius: "0px 0px 0px 120%",
                   ...(isHover === item.id && {
-                    transition: '0.5s',
-                    color: '#f4c402'
-                  })
-                }}>
+                    transition: "0.5s",
+                    background: "#f4c402",
+                    opacity: 1,
+                  }),
+                }}
+              ></Box>
+              <Stack
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1rem",
+                  lineHeight: "1.5",
+                }}
+              >
+                <Box>
+                  <Image
+                    src={item.img}
+                    alt="item.title"
+                    width={"100%"}
+                    height={"auto"}
+                    style={{ color: "yellow" }}
+                  />
+                </Box>
+                <Typography
+                  variant="h1"
+                  sx={{
+                    fontSize: "1.5rem",
+                    fontWeight: "bold",
+                    color: "#003b49",
+                    transition: "0.5s",
+                    ...(isHover === item.id && {
+                      transition: "0.5s",
+                      color: "#f4c402",
+                    }),
+                  }}
+                >
                   {item.title}
                 </Typography>
-                <Typography variant="body1" sx={{ fontWeight: 'light', color: 'grey' }}>
+                <Typography
+                  variant="body1"
+                  sx={{ fontWeight: "light", color: "grey" }}
+                >
                   {item.description.substring(0, 50)}
                 </Typography>
               </Stack>
             </Grid>
           </Paper>
         ))}
-
       </Grid>
-    )
-  }
-
+    );
+  };
 
   return (
     <>
@@ -143,7 +180,7 @@ export default function Customs() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <section className="mt-5" style={{ marginBottom: '8rem' }}>
+      <section className="mt-5" style={{ marginBottom: "8rem" }}>
         <div>
           <h1 className="text-subColor text-center text-5xl font-bold uppercase">
             e-Customs
@@ -151,26 +188,66 @@ export default function Customs() {
           <div className="border w-[270px] border-yellowish mt-1 mx-auto"></div>
         </div>
 
-        <Box sx={{position: 'relative', mt: '1rem' }}>
-          <Stack sx={{ width: { xs: '80%'}, margin: '0 auto'}}>
-
-            <Image src={Banner} width={'100%'} height={0} alt="" layout="responsive" objectFit="contain" className="bannerSizing"/>
+        <Box sx={{ position: "relative", mt: "1rem" }}>
+          <Stack sx={{ width: { xs: "80%" }, margin: "0 auto" }}>
+            <Image
+              src={Banner}
+              width={"100%"}
+              height={0}
+              alt=""
+              layout="responsive"
+              objectFit="contain"
+              className="bannerSizing"
+            />
           </Stack>
-          <Box sx={{ position: 'absolute', background: 'white', width: '62%', height: { xs: '40%', lg: '20%', xl: '25%' }, bottom: { xs: '-30%', lg: '-15%', xl: '-15%' }, left: '50%', transform: 'translate(-50%, -50%)', borderRadius: '25px', p: '2rem' }}>
-            <Typography variant="h1" sx={{ fontSize: '3rem', fontWeight: 'bold', color: '#2f2483', textAlign: 'center' }}>eCustoms Tariff for Eswatini</Typography>
-            <Typography variant="body1" sx={{ color: 'grey', textAlign: 'center' }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero nostrum, delectus quis in non similique ab doloremque reiciendis incidunt ipsum porro iure, omnis ad provident doloribus sequi. Aperiam, possimus?</Typography>
+          <Box
+            sx={{
+              position: "absolute",
+              background: "white",
+              width: "62%",
+              height: { xs: "40%", lg: "20%", xl: "25%" },
+              bottom: { xs: "-30%", lg: "-15%", xl: "-15%" },
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              borderRadius: "25px",
+              p: "2rem",
+            }}
+          >
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: "3rem",
+                fontWeight: "bold",
+                color: "#2f2483",
+                textAlign: "center",
+              }}
+            >
+              eCustoms Tariff for Eswatini
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: "grey", textAlign: "center" }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
+              libero nostrum, delectus quis in non similique ab doloremque
+              reiciendis incidunt ipsum porro iure, omnis ad provident doloribus
+              sequi. Aperiam, possimus?
+            </Typography>
           </Box>
         </Box>
-
       </section>
 
       {/*-----------------------Customs---------------------*/}
-      <Box sx={{ width: { xs: '96%', md: '98%', lg: '80%', xl: '70%' }, margin: { xs: '0 auto' },}}>
-
+      <Box
+        sx={{
+          width: { xs: "96%", md: "98%", lg: "80%", xl: "70%" },
+          margin: { xs: "0 auto" },
+        }}
+      >
         <BoxWithAnimation dataArr={CustomData} />
 
-        <Divider sx={{my:{xs:'3rem',lg:'6rem',xl:'8rem'}}}/>
-        <BoxWithAnimation dataArr={CustomData2}/>
+        <Divider sx={{ my: { xs: "3rem", lg: "6rem", xl: "8rem" } }} />
+        <BoxWithAnimation dataArr={CustomData2} />
       </Box>
 
       {/*-----------------------Customs ENDS ---------------------*/}
@@ -265,7 +342,8 @@ export default function Customs() {
                 Schedule 1 Part 1 - Chapters 1 to 99 of the ERS Tariff Book
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 1 Part 2 - Specific and Ad V              </li>
+                Schedule 1 Part 2 - Specific and Ad V{" "}
+              </li>
               <li className="hover:underline cursor-pointer starclass">
                 Schedule 1 Part 5 - Fuel and Road Accident Fund Levy
               </li>
@@ -297,7 +375,9 @@ export default function Customs() {
             <div className="mx-auto">
               <Link href={"/FAQ"}>
                 <button className="text-white hover:bg-opacity-75 bg-black tracking-wider border hover:border-black rounded-lg py-2 px-6">
-                  <p className="text-sm leading-4 font-medium">Frequently Asked Questions</p>
+                  <p className="text-sm leading-4 font-medium">
+                    Frequently Asked Questions
+                  </p>
                   <h1 className="text-3xl font-bold">(FAQs)</h1>
                 </button>
               </Link>
@@ -309,7 +389,11 @@ export default function Customs() {
       <section className="mx-14">
         <div className="border-t border-black mx-5 py-8 flex items-center gap-14 text-base font-normal leading-7 text-black">
           <Image src={Trade} alt="..." className="w-96" />
-          <p>The Trade Information Portal provides a single platform to create transparency on Trade laws, Non-tariff measures and procedures for trading in Eswatini.</p>
+          <p>
+            The Trade Information Portal provides a single platform to create
+            transparency on Trade laws, Non-tariff measures and procedures for
+            trading in Eswatini.
+          </p>
         </div>
       </section>
 
