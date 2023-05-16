@@ -85,7 +85,7 @@ export default function Customs() {
     return (
       <Grid container gap={3} justifyContent="space-between" >
         {dataArr.map((item, index) => (
-          <Paper elevation={20} key={item.id} sx={{ width: { xs: '300px', xl: '422px' } }}>
+          <Paper elevation={20} key={item.id} sx={{ width: { xs: '318px', xl: '422px' } }}>
             <Grid item xs={12} md={12} sx={{
               position: 'relative', p: '2rem', transition: '0.5s',
               ...(isHover === item.id && {
