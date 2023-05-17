@@ -71,10 +71,10 @@ function News({ icon, description, img }) {
   );
 }
 
-function Resources({ icon, title, description }) {
+function Resources({ icon, title, description,link }) {
   return (
     <>
-      <Link className="flex flex-col gap-2" href='/Calculator'>
+      <Link className="flex flex-col gap-2" href={link}>
         <div className="flex justify-center items-center bg-[#E3E5FF] border-2 border-[#E3E5FF] hover:border-2 hover:border-[#DAD8CC] rounded-full cursor-pointer container">
           {" "}
           <Image src={icon} alt="" className="fill h-7 w-7 m-4" />

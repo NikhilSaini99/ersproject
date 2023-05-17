@@ -79,11 +79,10 @@ export default function Header() {
                     >
                       <Link href={"/about"}>
                         <h3
-                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor mr-3 ${
-                            router.asPath === "/about"
+                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor mr-3 ${router.asPath === "/about"
                               ? "text-[#2F3192]"
                               : "text-black/80"
-                          }`}
+                            }`}
                         >
                           About Us
                           {/* <span style={{ float: "right" }}>
@@ -111,11 +110,10 @@ export default function Header() {
                       }}
                     >
                       <h3
-                        className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${
-                          services.includes(router.asPath)
+                        className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${services.includes(router.asPath)
                             ? "text-[#2F3192]"
                             : "text-black/80"
-                        }`}
+                          }`}
                       >
                         Services
                         <span style={{ float: "right" }} className="arrow">
@@ -124,9 +122,8 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute z-10 font-normal ${
-                        isServicesOpen ? "block" : "hidden"
-                      }`}
+                      className={`absolute z-10 font-normal ${isServicesOpen ? "block" : "hidden"
+                        }`}
                     >
                       <ul
                         className={`text-sm font-sans text-white ${windowScroll}`}
@@ -138,9 +135,8 @@ export default function Header() {
                         }}
                       >
                         <div
-                          className={`fixed left-10 right-10 font-normal w-[94%] bg-mainColor flex ${
-                            isServicesOpen ? "block" : "hidden"
-                          }`}
+                          className={`fixed left-10 right-10 font-normal w-[94%] bg-mainColor flex ${isServicesOpen ? "block" : "hidden"
+                            }`}
                         >
                           <div className="bg-subColor pt-5 w-[650px]">
                             <h1 className="text-xl font-bold text-yellowish leading-8 px-6 mb-3">
@@ -316,11 +312,10 @@ export default function Header() {
                       }}
                     >
                       <h3
-                        className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${
-                          forms.includes(router.asPath)
+                        className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${forms.includes(router.asPath)
                             ? "text-[#2F3192]"
                             : "text-black/80"
-                        }`}
+                          }`}
                       >
                         Forms
                         <span style={{ float: "right" }} className="arrow">
@@ -329,9 +324,8 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute z-10 font-normal ${
-                        isFormsOpen ? "block" : "hidden"
-                      }`}
+                      className={`absolute z-10 font-normal ${isFormsOpen ? "block" : "hidden"
+                        }`}
                     >
                       <ul
                         className={`text-sm font-sans text-white ${windowScroll}`}
@@ -343,9 +337,8 @@ export default function Header() {
                         }}
                       >
                         <div
-                          className={`fixed left-10 right-10 font-normal w-[94%] bg-mainColor flex ${
-                            isFormsOpen ? "block" : "hidden"
-                          }`}
+                          className={`fixed left-10 right-10 font-normal w-[94%] bg-mainColor flex ${isFormsOpen ? "block" : "hidden"
+                            }`}
                         >
                           <div className="bg-subColor pt-5 w-auto ">
                             <h1 className="text-xl font-bold text-yellowish leading-8 px-6 mb-3">
@@ -462,11 +455,10 @@ export default function Header() {
                       }}
                     >
                       <h3
-                        className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${
-                          media.includes(router.asPath)
+                        className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${media.includes(router.asPath)
                             ? "text-[#2F3192]"
                             : "text-black/80"
-                        }`}
+                          }`}
                       >
                         Media{" "}
                         <span style={{ float: "right" }} className="arrow">
@@ -475,9 +467,8 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute z-10 font-normal w-24 bg-mainColor ${
-                        isMediaOpen ? "block" : "hidden"
-                      }`}
+                      className={`absolute z-10 font-normal w-24 bg-mainColor ${isMediaOpen ? "block" : "hidden"
+                        }`}
                     >
                       <ul
                         className={`text-sm font-sans text-white ${windowScroll}`}
@@ -489,9 +480,8 @@ export default function Header() {
                         }}
                       >
                         <div
-                          className={`fixed left-10 right-10 font-normal w-[94%] bg-mainColor flex ${
-                            isMediaOpen ? "block" : "hidden"
-                          }`}
+                          className={`fixed left-10 right-10 font-normal w-[94%] bg-mainColor flex ${isMediaOpen ? "block" : "hidden"
+                            }`}
                         >
                           <div className="bg-subColor pt-5 w-[515px] ">
                             <h1 className="text-xl font-bold text-yellowish leading-8 px-6 mb-3">
@@ -590,11 +580,10 @@ export default function Header() {
                     >
                       <Link href={"/Contact"}>
                         <h3
-                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${
-                            router.asPath === "/Contact"
+                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${router.asPath === "/Contact"
                               ? "text-[#2F3192]"
                               : "text-black/80"
-                          }`}
+                            }`}
                         >
                           Contact Us
                           {/* <span style={{ float: "right" }}>
@@ -638,14 +627,13 @@ export default function Header() {
                     <Image src={search} alt="search" height={17} width={17} />
                   </div>
                   <h3
-                    className={`text-lg leading-5 font-semibold hover:text-mainColor ${
-                      isOpen ? "text-[#2F3192]" : "text-black/80"
-                    }`}
+                    className={`text-lg leading-5 font-semibold hover:text-mainColor ${isOpen ? "text-[#2F3192]" : "text-black/80"
+                      }`}
                   >
                     Search
                   </h3>
                 </button>
-                <div className="search-input px-5 py-3">
+                <div className={`search-input px-5 py-3 hidden`}>
                   <h1 className="inline-block text-lg font-semibold text-white">
                     SEARCH
                   </h1>

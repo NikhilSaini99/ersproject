@@ -32,48 +32,56 @@ export default function Home() {
       icon: calculator,
       title: "Calculator",
       description: "Some random content ...",
+      link:'/Calculator'
     },
 
     {
       icon: table,
       title: "Tables",
       description: "Some random content ...",
+      link:'/TaxTables'
     },
 
     {
       icon: currency,
       title: "eTax",
       description: "Some random content ...",
+      link:'https://etax.sra.org.sz/'
     },
 
     {
       icon: barcode,
       title: "Codes",
       description: "Some random content ...",
+      link:'/Calulator'
     },
 
     {
       icon: headphone,
       title: "Hotline",
       description: "Some random content ...",
+      link:'/Hotline'
     },
 
     {
       icon: help,
       title: "FAQs",
       description: "Some random content ...",
+      link:'/FAQ'
     },
 
     {
       icon: monitoring,
       title: "Business",
       description: "Some random content ...",
+      link:'http://www.sra.org.sz/documents/1619530285.pdf'
     },
 
     {
       icon: flight,
       title: "Travelling",
       description: "Some random content ...",
+      link:'https://www.ers.org.sz/documents/1493283598.pdf'
     },
   ];
 
@@ -187,6 +195,7 @@ export default function Home() {
                 key={key}
                 icon={item.icon}
                 title={item.title}
+                link={item.link}
               // description={item.description}
               />
             ))}

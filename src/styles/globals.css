@@ -15,6 +15,7 @@ a {
   text-decoration: none;
 }
 
+
 body {
   background-color: #FFFFFF;
 }
@@ -36,7 +37,7 @@ body {
 body {
   overflow-x: hidden;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-} 
+}
 
 .search-container-open {
   left: 0;
@@ -150,8 +151,8 @@ body {
   background-color: #17197C;
 }
 
-.lightBlack{
-  color:#000000CC !important
+.lightBlack {
+  color: #000000CC !important
 }
 
 
@@ -161,34 +162,35 @@ ul li.starclass:before {
   margin-right: 0.5rem;
 }
 
-.bannerSizing{
-  height:550px !important
+.bannerSizing {
+  height: 550px !important
 }
 
-.calculatorFormStyling{
-  padding:3rem;
+.calculatorFormStyling {
+  padding: 3rem;
   display: grid;
-  grid-template-columns: repeat(2,300px);
-  gap:1rem;
-  row-gap:1rem;
+  grid-template-columns: repeat(2, 300px);
+  gap: 1rem;
+  row-gap: 1rem;
   justify-content: center;
 }
 
-@media only screen and (max-width: 992px){
-  .calculatorFormStyling{
-    grid-template-columns: repeat(2,300px);
+
+@media only screen and (max-width: 992px) {
+  .calculatorFormStyling {
+    grid-template-columns: repeat(2, 300px);
   }
 }
 
 
-@media only screen and (max-width: 768px){
-    .calculatorFormStyling{
-      grid-template-columns: repeat(1,400px);
-    }
-}
-@media only screen and (max-width: 600px){
-  .calculatorFormStyling{
-    grid-template-columns: repeat(1,300px);
+@media only screen and (max-width: 768px) {
+  .calculatorFormStyling {
+    grid-template-columns: repeat(1, 400px);
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .calculatorFormStyling {
+    grid-template-columns: repeat(1, 300px);
+  }
+}

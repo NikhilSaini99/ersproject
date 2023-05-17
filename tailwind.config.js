@@ -28,6 +28,9 @@ module.exports = {
         85:'85%',
         95:'95%'
       },
+      screens:{
+        xs:'0px'
+      }
     },
   },
   plugins: [

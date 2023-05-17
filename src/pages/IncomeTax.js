@@ -6,13 +6,9 @@ import Banner from "../assets/images/bg2.jpg";
 import Image from "next/image";
 import { HiDownload } from "react-icons/hi";
 import downloadIcon from "../assets/icons/downloadicon.svg"
-import { Roboto } from 'next/font/google'
+
 import styles from '@/styles/IncomeTax.module.css'
 
-const roboto = Roboto({
-  weight: '100',
-  subsets: ['latin'],
-})
 
 export default function IncomeTax() {
   return (
