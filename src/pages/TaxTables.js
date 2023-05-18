@@ -5,7 +5,9 @@ import Footer from '@/components/Footer'
 import { IncomeTaxData } from "@/content/data";
 import styles from '@/styles/IncomeTax.module.css'
 import downloadIcon from "../assets/icons/downloadicon.svg"
+import Banner from "../assets/images/customs.jpg";
 import Image from 'next/image';
+import { Box } from '@mui/material';
 const TaxTables = () => {
 
     const taxTableData = [
@@ -28,6 +30,11 @@ const TaxTables = () => {
             {/*-----------------------Header---------------------*/}
 
             <Header />
+
+             {/*-----------------------Banner---------------------*/}
+             <Box>
+            <Image src={Banner} alt="..." className="h-96 w-full" />
+            </Box>
 
             <section className="py-8  w-95 my-0 flex flex-row leading-8">
 

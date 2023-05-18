@@ -5,6 +5,8 @@ import Head from 'next/head'
 import React from 'react'
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
+import Banner from "../assets/images/customs.jpg";
+import Image from 'next/image'
 const Hotline = () => {
     const hotLineData = [
         {
@@ -28,6 +30,10 @@ const Hotline = () => {
             {/*-----------------------Header---------------------*/}
 
             <Header />
+             {/*-----------------------Banner---------------------*/}
+             <Box>
+            <Image src={Banner} alt="..." className="h-96 w-full" />
+            </Box>
 
             <Box sx={{ width: '80%', margin: {xs:'2rem auto',lg:'5rem auto'} }}>
                 {hotLineData.map((item, index) => (

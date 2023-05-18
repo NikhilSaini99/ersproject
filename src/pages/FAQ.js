@@ -8,6 +8,7 @@ import { BsQuestionCircle } from "react-icons/bs";
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
+
 export default function FAQ() {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
