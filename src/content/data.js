@@ -429,3 +429,205 @@ export const taxpayerCharter = [
       'In return, we expect you:\n To be honest in all your dealings with us\n To maintain the records required by law\n To be accurate and take reasonable care in preparing all documents you submit to us and in choosing those who act for you\n To register immediately when starting in business and to notify us promptly of relevant changes of circumstances\n To lodge returns or other information by the due date\n To notify us of any mistakes promptly\n To disclose non-privileged documentation\n To cooperate fully with us\n To be aware of your personal responsibility\n To pay your taxes and duties on time\n To be aware of liability for penalties and interest.',
   },
 ];
+
+
+export const taxItemCodesTable = [
+  {
+    rowHeading: ['Tax Type', 'Tax Item', 'Tax Code'],
+    leftHead: 
+
+      [
+         "IncomeTax"
+        // { ['Value Added Tax']: 's' },
+        // { ['Sales Tax']: 'f' },
+        // { ['Customs']: 'f' }
+      
+      ]
+  },
+
+]
+
+export const taxData = [
+  {
+   "TAX TYPE": "INCOME TAX",
+   "TAX ITEM": " Company Tax"
+  },
+  {
+   "TAX ITEM": "   Tax Assessed",
+   "TAX CODE": "CT"
+  },
+  {
+   "TAX ITEM": " Individual Tax"
+  },
+  {
+   "TAX ITEM": "   PAYE submitted by employer",
+   "TAX CODE": "IT"
+  },
+  {
+   "TAX ITEM": "  Individual Tax Assessed",
+   "TAX CODE": "CT"
+  },
+  {
+   "TAX ITEM": "   Penalty",
+   "TAX CODE": "CT"
+  },
+  {
+   "TAX ITEM": " Non Resident Tax"
+  },
+  {
+   "TAX ITEM": "   NRT - Interest",
+   "TAX CODE": "NI"
+  },
+  {
+   "TAX ITEM": "   NRT - Dividends",
+   "TAX CODE": "ND"
+  },
+  {
+   "TAX ITEM": "   NRT - Artists",
+   "TAX CODE": "NA"
+  },
+  {
+   "TAX ITEM": "   NRT - Contractors",
+   "TAX CODE": "NC"
+  },
+  {
+   "TAX ITEM": "   NRT - Management Fees",
+   "TAX CODE": "NM"
+  },
+  {
+   "TAX ITEM": "   NRT - Royalties",
+   "TAX CODE": "NR"
+  },
+  {
+   "TAX ITEM": "   Branch Profit Tax",
+   "TAX CODE": "NB"
+  },
+  {
+   "TAX ITEM": " Provisional Tax"
+  },
+  {
+   "TAX ITEM": "   Provisional Tax - Individuals",
+   "TAX CODE": "PI"
+  },
+  {
+   "TAX ITEM": "   Provisional Tax - Companies",
+   "TAX CODE": "PC"
+  },
+  {
+   "TAX ITEM": " Withholding Tax"
+  },
+  {
+   "TAX ITEM": "   WHT - Interest Income",
+   "TAX CODE": "WI"
+  },
+  {
+   "TAX ITEM": "   WHT - Dividend Income",
+   "TAX CODE": "WD"
+  },
+  {
+   "TAX ITEM": "   WHT - Rental Income",
+   "TAX CODE": "WR"
+  },
+  {
+   "TAX ITEM": "   WHT - Trust Beneficieries",
+   "TAX CODE": "WT"
+  },
+  {
+   "TAX ITEM": "   WHT - Penalties",
+   "TAX CODE": "WP"
+  },
+  {
+   "TAX ITEM": " Other"
+  },
+  {
+   "TAX ITEM": "   Lotteries and Gaming",
+   "TAX CODE": "LG"
+  },
+  {
+   "TAX ITEM": "   Fuel Tax",
+   "TAX CODE": "FT"
+  },
+  {
+   "TAX ITEM": "   Graded Tax - Individuals",
+   "TAX CODE": "GT"
+  },
+  {
+   "TAX ITEM": "   Graded Tax - Employers",
+   "TAX CODE": "IT"
+  },
+  {
+   "TAX ITEM": "   PAYE Reconciliation",
+   "TAX CODE": "PR"
+  },
+  {
+   "TAX ITEM": "   PAYE Reconciliation - Penalty",
+   "TAX CODE": "PR"
+  },
+  null,
+  {
+   "TAX TYPE": "VALUE ADDED TAX    ",
+   "TAX ITEM": "   Import VAT Prepayment",
+   "TAX CODE": "CU"
+  },
+  {
+   "TAX ITEM": "   Import VAT - Deferred",
+   "TAX CODE": "DF"
+  },
+  {
+   "TAX ITEM": "   Domestic VAT - Returns",
+   "TAX CODE": "VT"
+  },
+  {
+   "TAX ITEM": "   Import VAT - Sekulula",
+   "TAX CODE": "VR"
+  },
+  {
+   "TAX ITEM": "   Reverse Charge",
+   "TAX CODE": "RC"
+  },
+  null,
+  {
+   "TAX TYPE": "SALES TAX",
+   "TAX ITEM": "Sales Tax",
+   "TAX CODE": "ST"
+  },
+  null,
+  {
+   "TAX TYPE": "CUSTOMS",
+   "TAX ITEM": "   Import VAT Prepayment - AW",
+   "TAX CODE": "CU"
+  },
+  {
+   "TAX ITEM": "   Import VAT Deferred - AW",
+   "TAX CODE": "DF"
+  },
+  {
+   "TAX ITEM": "   Customs Duties",
+   "TAX CODE": "CD"
+  },
+  {
+   "TAX ITEM": "   Excise",
+   "TAX CODE": "EX"
+  },
+  {
+   "TAX ITEM": "   Motor Vehicles",
+   "TAX CODE": "CU"
+  },
+  {
+   "TAX ITEM": "   Sundry Expenses",
+   "TAX CODE": "SE"
+  },
+  {
+   "TAX ITEM": "   Provisional",
+   "TAX CODE": "CP"
+  },
+  {
+   "TAX ITEM": "   Penalties",
+   "TAX CODE": "PN"
+  },
+  {
+   "TAX ITEM": "   Interest",
+   "TAX CODE": "CI"
+  }
+ ]
+

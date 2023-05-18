@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import React from 'react'
 import { Box, TextField, FormControl, InputLabel, Select, MenuItem, Button, Typography, Paper } from '@mui/material';
-import Image from 'next/image';
-import bgImg from '../assets/images/lastsection.png'
 import Footer from '@/components/Footer';
 import Head from 'next/head';
 import Header from '@/components/Header';
-import Banner from "../assets/images/customs.jpg";
+import feedbackimg from '../assets/images/feedbackbg4.svg'
 const Calculator = () => {
     const [calculationType, setCalculationType] = useState('Individual');
     const [period, setPeriod] = useState('Monthly');
@@ -56,17 +54,18 @@ const Calculator = () => {
             <Header />
 
             {/*-----------------------Banner---------------------*/}
-            <Box>
-            <Image src={Banner} alt="..." className="h-96 w-full" />
-            </Box>
+          
 
-            <Box sx={{ position: 'relative' }}>
-                <Image src={bgImg} width={'100%'} height={'100%'} alt="bg" style={{ position: 'absolute', top: '0', left: '0', width: '100%', objectFit: 'cover', opacity: '0.4', height: '950px' }}
+            <Box sx={{ position: 'relative', backgroundImage: `url(${feedbackimg.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center', py:'5rem' }}>
+          <Typography variant='h1' sx={{ fontSize: '2rem', fontWeight: 'bold', margin: { xs: '0.9rem', md: '1rem', lg: '1.5rem', textAlign: 'center',color:'white' } }}>Tax Calculator</Typography>
+                {/* <Image src={bgImg} width={'100%'} height={'100%'} alt="bg" style={{ position: 'absolute', top: '0', left: '0', width: '100%', objectFit: 'cover', opacity: '0.4', height: '950px' }}
                     sizes='100vw'
-                />
-                <Box sx={{ position: 'relative', maxWidth: { xs: '550px', md: '700px', lg: '800px' }, width: { xs: '95%', md: '70%', lg: '80%', xl: '65%' }, margin: '0 auto' }}>
-
-                    <Typography variant='h1' sx={{ fontSize: '2rem', fontWeight: 'bold', margin: { xs: '1.5rem', md: '1.8rem', lg: '2.2rem', textAlign: 'center' } }}>Tax Calculator</Typography>
+                /> */}
+                <Box sx={{ position: 'relative', maxWidth: { xs: '550px', md: '850px', lg: '800px' }, width: { xs: '95%', md: '70%', lg: '80%', xl: '65%' }, margin: '0 auto' }}>
+                <Paper elevation={20} sx={{ maxWidth: '800px', borderRadius: '5%', margin: '0 auto' }}>
+                  
                     {/* <Paper elevation={10} sx={{opacity:'0.8'}}> */}
                     <form onSubmit={handleSubmit} className='calculatorFormStyling'>
                         <FormControl fullWidth sx={{
@@ -163,9 +162,9 @@ const Calculator = () => {
                             onChange={(e) => setMedicalAidContribution(+e.target.value)}
                             sx={{ marginBottom: '1rem' }}
                         />
-                        <Button type='submit' variant='contained' sx={{ background: '#2f2483 !important', p: '1rem', borderRadius: '5px', gridColumn: '1/-1', placeItems: 'center' }}>Calculate</Button>
+                        <Button type='submit' variant='contained' sx={{ background: '#2f2483 !important', p: '1rem', borderRadius: '5px', gridColumn: '1/-1', placeSelf: 'center',width: '10rem' }}>Calculate</Button>
                     </form>
-                    {/* </Paper> */}
+                    </Paper>
                 </Box>
             </Box>
             {/*-----------------------Footer---------------------*/}

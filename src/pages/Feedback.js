@@ -62,7 +62,7 @@ const Feedback = () => {
                 <InputLabel id="Feedback-type">Feedback Type</InputLabel>
                 <Select
                   labelId='Feedback-type'
-                  id="Feedback-type"w
+                  id="Feedback-type"
                   value={feedbackType}
                   onChange={handleFeedbackType}
                   label="Feedback-type">
@@ -79,8 +79,8 @@ const Feedback = () => {
               <InputLabel htmlFor="full-Name">Email Address</InputLabel>
               <TextField variant='outlined' size='medium' type='text' value={email} onChange={(e) => setEmail(e.target.value)} />
               <InputLabel htmlFor="full-Name">Comments</InputLabel>
-              <TextField variant='outlined' size='medium' type='text' multiline={true} minRows={5} value={comments} onChange={(e) => setComments(e.target.value)} />
-              <Button type="submit" variant='contained' color='primary' sx={{ background: '#f4c203 !important', color: 'black', alignSelf: 'center', width: '10rem', mb: { xs: '2rem', lg: '3rem' } }}>Send</Button>
+              <TextField variant='outlined' size='medium' type='text' multiline={true} minRows={5} value={comments} onChange={(e) => setComments(e.target.value)} sx={{mb:'1rem'}}/>
+              <Button type="submit" variant='contained' color='primary' sx={{ background: '#2f2483 !important', color: 'white', alignSelf: 'center', width: '10rem', mb: { xs: '2rem', lg: '3rem' },p:'0.8rem' }}>Send</Button>
             </Stack>
           </Paper>
         </Box>
