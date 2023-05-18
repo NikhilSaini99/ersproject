@@ -21,7 +21,7 @@ import monitoring from "../assets/icons/monitoring.png";
 import table from "../assets/icons/table.png";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { FcAbout } from "react-icons/fc";
-import { Paper } from "@mui/material";
+import { Button, Paper } from "@mui/material";
 import styles from '@/styles/Home.module.css'
 
 export default function Home() {
@@ -32,56 +32,56 @@ export default function Home() {
       icon: calculator,
       title: "Calculator",
       description: "Some random content ...",
-      link:'/Calculator'
+      link: '/Calculator'
     },
 
     {
       icon: table,
       title: "Tables",
       description: "Some random content ...",
-      link:'/TaxTables'
+      link: '/TaxTables'
     },
 
     {
       icon: currency,
       title: "eTax",
       description: "Some random content ...",
-      link:'https://etax.sra.org.sz/'
+      link: 'https://etax.sra.org.sz/'
     },
 
     {
       icon: barcode,
       title: "Codes",
       description: "Some random content ...",
-      link:'/Calulator'
+      link: '/Calulator'
     },
 
     {
       icon: headphone,
       title: "Hotline",
       description: "Some random content ...",
-      link:'/Hotline'
+      link: '/Hotline'
     },
 
     {
       icon: help,
       title: "FAQs",
       description: "Some random content ...",
-      link:'/FAQ'
+      link: '/FAQ'
     },
 
     {
       icon: monitoring,
       title: "Business",
       description: "Some random content ...",
-      link:'http://www.sra.org.sz/documents/1619530285.pdf'
+      link: 'http://www.sra.org.sz/documents/1619530285.pdf'
     },
 
     {
       icon: flight,
       title: "Travelling",
       description: "Some random content ...",
-      link:'https://www.ers.org.sz/documents/1493283598.pdf'
+      link: 'https://www.ers.org.sz/documents/1493283598.pdf'
     },
   ];
 
@@ -293,11 +293,11 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            
-            <div style={{position:'relative'}}>
-            <div className={styles.borderLine}></div>
+
+            <div style={{ position: 'relative' }}>
+              <div className={styles.borderLine}></div>
             </div>
-          
+
 
             {/* <!-- Content for second div --> */}
             <div className=" inline-block w-[17.8rem] h-[16.5rem]">
@@ -309,8 +309,8 @@ export default function Home() {
               </ul>
             </div>
 
-            <div style={{position:'relative'}}>
-            <div className={styles.borderLine}></div>
+            <div style={{ position: 'relative' }}>
+              <div className={styles.borderLine}></div>
             </div>
 
             {/* <!-- Content for third div --> */}
@@ -349,8 +349,8 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div style={{position:'relative'}}>
-            <div className={styles.borderLine}></div>
+            <div style={{ position: 'relative' }}>
+              <div className={styles.borderLine}></div>
             </div>
             {/* <!-- Content for fourth div --> */}
             <div className=" inline-block w-[17.8rem] h-[16.5rem]">
@@ -415,7 +415,9 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className=" inline-block border-l border-gray-400"></div>
+             <div style={{ position: 'relative' }}>
+              <div className={styles.borderLine}></div>
+            </div>
 
             {/* <!-- Content for second div --> */}
             <div className=" inline-block w-[17.8rem] h-[16.5rem]">
@@ -425,7 +427,9 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className=" inline-block border-l border-gray-400"></div>
+             <div style={{ position: 'relative' }}>
+              <div className={styles.borderLine}></div>
+            </div>
 
             {/* <!-- Content for third div --> */}
             <div className=" inline-block w-[17.8rem] h-[16.5rem]">
@@ -463,7 +467,9 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className=" inline-block border-l border-gray-400"></div>
+            <div style={{ position: 'relative' }}>
+              <div className={styles.borderLine}></div>
+            </div>
             {/* <!-- Content for fourth div --> */}
             <div className=" inline-block w-[17.8rem] h-[16.5rem]">
               <p className="text-xl font-normal">Public Meeting</p>
@@ -593,6 +599,24 @@ export default function Home() {
             <span className="border-b-2 border-yellowish">find an office</span>{" "}
             closest to you.
           </p>
+
+          <div className="flex gap-0">
+            <p className="text-xl font-normal leading-8">Any Feedback for us?</p>
+            <Button href="/Feedback" variant="text" sx={{
+              color: 'white', 
+              textDecoration:'underline',
+              textDecorationColor:'#f4c203',
+              textDecorationThickness:'2px',
+              textTransform:'capitalize',
+              '&:hover': {
+                background: 'transparent',
+                textDecoration:'underline',
+              textDecorationColor:'#f4c203',
+              textDecorationThickness:'2px',
+              }
+            }}>Feedback!</Button>
+          </div>
+
         </div>
       </section>
 
