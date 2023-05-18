@@ -41,12 +41,7 @@ const Feedback = () => {
       {/*-----------------------Header---------------------*/}
 
       <Header />
-      {/*-----------------------Banner---------------------*/}
-      <Box>
-        <Image src={Banner} alt="..." className="h-96 w-full" />
-      </Box>
-
-
+    
       {/* Feedback Form */}
       <Box sx={{
         position: 'relative',
