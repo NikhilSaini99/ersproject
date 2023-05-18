@@ -53,7 +53,7 @@ export default function Home() {
       icon: barcode,
       title: "Codes",
       description: "Some random content ...",
-      link: '/Calulator'
+      link: '/TaxItemTable'
     },
 
     {
