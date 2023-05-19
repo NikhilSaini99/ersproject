@@ -431,158 +431,143 @@ export const taxpayerCharter = [
 ];
 
 
-export const taxItemCodesTable = [
-  {
-    rowHeading: ['Tax Type', 'Tax Item', 'Tax Code'],
-    leftHead: 
-
-      [
-         "IncomeTax"
-        // { ['Value Added Tax']: 's' },
-        // { ['Sales Tax']: 'f' },
-        // { ['Customs']: 'f' }
-      
-      ]
-  },
-
-]
 
 export const taxData = [
   {
    "TAX TYPE": "INCOME TAX",
-   "TAX ITEM": " Company Tax"
+   "TAX ITEM": "Company Tax"
   },
   {
-   "TAX ITEM": "   Tax Assessed",
+   "TAX ITEM": "Tax Assessed",
    "TAX CODE": "CT"
   },
   {
-   "TAX ITEM": " Individual Tax"
+   "TAX ITEM": "Individual Tax"
   },
   {
-   "TAX ITEM": "   PAYE submitted by employer",
+   "TAX ITEM": "PAYE submitted by employer",
    "TAX CODE": "IT"
   },
   {
-   "TAX ITEM": "  Individual Tax Assessed",
+   "TAX ITEM": "Individual Tax Assessed",
    "TAX CODE": "CT"
   },
   {
-   "TAX ITEM": "   Penalty",
+   "TAX ITEM": "Penalty",
    "TAX CODE": "CT"
   },
   {
-   "TAX ITEM": " Non Resident Tax"
+   "TAX ITEM": "Non Resident Tax"
   },
   {
-   "TAX ITEM": "   NRT - Interest",
+   "TAX ITEM": "NRT - Interest",
    "TAX CODE": "NI"
   },
   {
-   "TAX ITEM": "   NRT - Dividends",
+   "TAX ITEM": "NRT - Dividends",
    "TAX CODE": "ND"
   },
   {
-   "TAX ITEM": "   NRT - Artists",
+   "TAX ITEM": "NRT - Artists",
    "TAX CODE": "NA"
   },
   {
-   "TAX ITEM": "   NRT - Contractors",
+   "TAX ITEM": "NRT - Contractors",
    "TAX CODE": "NC"
   },
   {
-   "TAX ITEM": "   NRT - Management Fees",
+   "TAX ITEM": "NRT - Management Fees",
    "TAX CODE": "NM"
   },
   {
-   "TAX ITEM": "   NRT - Royalties",
+   "TAX ITEM": "NRT - Royalties",
    "TAX CODE": "NR"
   },
   {
-   "TAX ITEM": "   Branch Profit Tax",
+   "TAX ITEM": "Branch Profit Tax",
    "TAX CODE": "NB"
   },
   {
-   "TAX ITEM": " Provisional Tax"
+   "TAX ITEM": "Provisional Tax"
   },
   {
-   "TAX ITEM": "   Provisional Tax - Individuals",
+   "TAX ITEM": "Provisional Tax - Individuals",
    "TAX CODE": "PI"
   },
   {
-   "TAX ITEM": "   Provisional Tax - Companies",
+   "TAX ITEM": "Provisional Tax - Companies",
    "TAX CODE": "PC"
   },
   {
-   "TAX ITEM": " Withholding Tax"
+   "TAX ITEM": "Withholding Tax"
   },
   {
-   "TAX ITEM": "   WHT - Interest Income",
+   "TAX ITEM": "WHT - Interest Income",
    "TAX CODE": "WI"
   },
   {
-   "TAX ITEM": "   WHT - Dividend Income",
+   "TAX ITEM": "WHT - Dividend Income",
    "TAX CODE": "WD"
   },
   {
-   "TAX ITEM": "   WHT - Rental Income",
+   "TAX ITEM": "WHT - Rental Income",
    "TAX CODE": "WR"
   },
   {
-   "TAX ITEM": "   WHT - Trust Beneficieries",
+   "TAX ITEM": "WHT - Trust Beneficieries",
    "TAX CODE": "WT"
   },
   {
-   "TAX ITEM": "   WHT - Penalties",
+   "TAX ITEM": "WHT - Penalties",
    "TAX CODE": "WP"
   },
   {
-   "TAX ITEM": " Other"
+   "TAX ITEM": "Other"
   },
   {
-   "TAX ITEM": "   Lotteries and Gaming",
+   "TAX ITEM": "Lotteries and Gaming",
    "TAX CODE": "LG"
   },
   {
-   "TAX ITEM": "   Fuel Tax",
+   "TAX ITEM": "Fuel Tax",
    "TAX CODE": "FT"
   },
   {
-   "TAX ITEM": "   Graded Tax - Individuals",
+   "TAX ITEM": "Graded Tax - Individuals",
    "TAX CODE": "GT"
   },
   {
-   "TAX ITEM": "   Graded Tax - Employers",
+   "TAX ITEM": "Graded Tax - Employers",
    "TAX CODE": "IT"
   },
   {
-   "TAX ITEM": "   PAYE Reconciliation",
+   "TAX ITEM": "PAYE Reconciliation",
    "TAX CODE": "PR"
   },
   {
-   "TAX ITEM": "   PAYE Reconciliation - Penalty",
+   "TAX ITEM": "PAYE Reconciliation - Penalty",
    "TAX CODE": "PR"
   },
   null,
   {
-   "TAX TYPE": "VALUE ADDED TAX    ",
-   "TAX ITEM": "   Import VAT Prepayment",
+   "TAX TYPE": "VALUE ADDED TAX",
+   "TAX ITEM": "Import VAT Prepayment",
    "TAX CODE": "CU"
   },
   {
-   "TAX ITEM": "   Import VAT - Deferred",
+   "TAX ITEM": "Import VAT - Deferred",
    "TAX CODE": "DF"
   },
   {
-   "TAX ITEM": "   Domestic VAT - Returns",
+   "TAX ITEM": "Domestic VAT - Returns",
    "TAX CODE": "VT"
   },
   {
-   "TAX ITEM": "   Import VAT - Sekulula",
+   "TAX ITEM": "Import VAT - Sekulula",
    "TAX CODE": "VR"
   },
   {
-   "TAX ITEM": "   Reverse Charge",
+   "TAX ITEM": "Reverse Charge",
    "TAX CODE": "RC"
   },
   null,
@@ -594,39 +579,39 @@ export const taxData = [
   null,
   {
    "TAX TYPE": "CUSTOMS",
-   "TAX ITEM": "   Import VAT Prepayment - AW",
+   "TAX ITEM": "Import VAT Prepayment - AW",
    "TAX CODE": "CU"
   },
   {
-   "TAX ITEM": "   Import VAT Deferred - AW",
+   "TAX ITEM": "Import VAT Deferred - AW",
    "TAX CODE": "DF"
   },
   {
-   "TAX ITEM": "   Customs Duties",
+   "TAX ITEM": "Customs Duties",
    "TAX CODE": "CD"
   },
   {
-   "TAX ITEM": "   Excise",
+   "TAX ITEM": "Excise",
    "TAX CODE": "EX"
   },
   {
-   "TAX ITEM": "   Motor Vehicles",
+   "TAX ITEM": "Motor Vehicles",
    "TAX CODE": "CU"
   },
   {
-   "TAX ITEM": "   Sundry Expenses",
+   "TAX ITEM": "Sundry Expenses",
    "TAX CODE": "SE"
   },
   {
-   "TAX ITEM": "   Provisional",
+   "TAX ITEM": "Provisional",
    "TAX CODE": "CP"
   },
   {
-   "TAX ITEM": "   Penalties",
+   "TAX ITEM": "Penalties",
    "TAX CODE": "PN"
   },
   {
-   "TAX ITEM": "   Interest",
+   "TAX ITEM": "Interest",
    "TAX CODE": "CI"
   }
  ]

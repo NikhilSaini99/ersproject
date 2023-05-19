@@ -53,9 +53,9 @@ const TaxItemTable = () => {
                                 <TableBody>
                                     {taxData.map((item, index) => (
                                         item && (
-                                            <TableRow key={index} sx={{}}>
+                                            <TableRow key={index}>
                                                 <TableCell align='left' sx={{ fontWeight: 'bold' }}>{item["TAX TYPE"]}</TableCell>
-                                                <TableCell align='left' sx={{ fontWeight: [' Company Tax', ' Individual Tax', ' Non Resident Tax', ' Provisional Tax', ' Withholding Tax', ' Other', '   Provisional', '   Penalties', '   Interest'].includes(item["TAX ITEM"]) ? 'bold' : 'normal' }}>{item["TAX ITEM"]}</TableCell>
+                                                <TableCell align='left' sx={{ fontWeight: ['Company Tax', 'Individual Tax', 'Non Resident Tax', 'Provisional Tax', 'Withholding Tax', 'Other', 'Provisional', 'Penalties', 'Interest'].includes(item["TAX ITEM"]) ? 'bold' : 'normal' }}>{item["TAX ITEM"]}</TableCell>
                                                 <TableCell align='left' sx={{ fontWeight: 'bold' }}>{item["TAX CODE"]}</TableCell>
                                             </TableRow>
                                         )))}

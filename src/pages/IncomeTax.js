@@ -26,7 +26,7 @@ export default function IncomeTax() {
       {/*-----------------------Banner---------------------*/}
 
       <section>
-        <Image src={Banner} alt="..." className="h-512 w-full object-fill" width="100%" height="100%" />
+        <Image src={Banner} alt="..." className="h-512 w-full object-fill" width="100%" height="100%" style={{height:'412px'}}/>
       </section>
 
       <section className="py-8  w-95 my-0 flex flex-row leading-8">

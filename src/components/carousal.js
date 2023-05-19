@@ -5,7 +5,7 @@ import background2 from "../assets/images/bg2.jpg";
 import background3 from "../assets/images/bg3.jpg";
 import background4 from "../assets/images/bg4.jpg";
 
-export default function Carousal () {
+export default function Carousal() {
   const slides = [
     { id: 0, icon: background },
     { id: 1, icon: background2 },
@@ -13,12 +13,12 @@ export default function Carousal () {
     { id: 3, icon: background2 },
     { id: 4, icon: background3 },
   ];
-
+  // border-right:2px;border-left:2px;border-color:mainColor;border-style:solid;
   const titles = [
     "<span style=padding-left:62px;padding-right:62px> ABOUT US </span>",
-    "<span style=border-right:2px;border-left:2px;border-color:mainColor;border-style:solid;padding-left:32px;padding-right:32px;> ASYCUDA WORLD </span>",
+    "<span style=padding-left:32px;padding-right:32px;> ASYCUDA WORLD </span>",
     "<span style=padding-left:78px;padding-right:78px> e-TAX </span>",
-    "<span style=border-right:2px;border-left:2px;border-color:mainColor;border-style:solid;padding-left:32px;padding-right:32px> ASYCUDA WORLD </span>",
+    "<span style=padding-left:32px;padding-right:32px> ASYCUDA WORLD </span>",
     "<span style=padding-left:24px;padding-right:24px> e-CUSTOMS SYSTEM </span>",
   ];
 
@@ -47,6 +47,8 @@ export default function Carousal () {
 
   return (
     <>
+
+
       <section>
         {/* Slider Wrapper */}
         <div className="slideshow">
@@ -61,19 +63,21 @@ export default function Carousal () {
         </div>
 
         {/* Slider Indicators */}
-        <div className="flex justify-center text-subColor bg-[#DAD8CC] w-full font-semibold text-base">
+        <div className="flex xs:flex-col xs:gap-2 md:gap-0 md:flex-row lg:flex-row justify-center text-subColor bg-[#DAD8CC] w-full font-semibold text-base  ">
           {titles.map((title, id) => (
             <button
               key={id}
-              className={`slider-indicator ${id === index ? "active" : ""}`}
+              className={`slider-indicator ${id === index ? "active" : ""}  xs:border-t xs:border-slate-500 xs:border-r-0 md:border-r-2 md:border-slate-500 md:border-t-0`}
               onClick={() => { setIndex(id) }}
               dangerouslySetInnerHTML={{ __html: title }}
             ></button>
           ))}
-        </div>
+        </div>  
+      </section>
 
-        {/* Slider bottom */}
-        {/* <div className="bg-[#2F3192E0] px-14 absolute w-full flex justify-between bottom-0">
+
+      {/* Slider bottom */}
+      {/* <div className="bg-[#2F3192E0] px-14 absolute w-full flex justify-between bottom-0">
         <div className="py-4">
           <h1 className="text-[32px] font-bold text-[#FAE08A]"> e-Tax</h1>
           <p className="text-white">
@@ -88,7 +92,7 @@ export default function Carousal () {
           </div>
         </div>
       </div> */}
-      </section>
+
     </>
   );
 }

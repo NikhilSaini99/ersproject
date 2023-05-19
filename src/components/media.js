@@ -15,8 +15,8 @@ function Media() {
 
   return (
     <>
-      <section>
-        <div className="bg-white px-28 py-10">
+            <section>
+        <div className="bg-white md:px-12 px-28 py-10">
           <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Facebook</h1>
@@ -51,21 +51,7 @@ function Media() {
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Twitter</h1>
               <div className="border w-[70px] border-yellowish mt-1"></div>
-              {/* <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FEswatiniRevenueService&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                width={"344"}
-                height={"450"}
-                style={{
-                  borderWidth: "2px",
-                  borderColor: "#DADAEB",
-                  cursor: "pointer",
-                }}
-                scrolling="yes"
-                frameBorder="0"
-                allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                className="mt-5 mb-10"
-              ></iframe> */}
+             
               <Image
                 src={Twitter}
                 alt=""
@@ -92,21 +78,7 @@ function Media() {
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Instagram</h1>
               <div className="border w-24 border-yellowish mt-1"></div>
-              {/* <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FEswatiniRevenueService&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                width={"344"}
-                height={"450"}
-                style={{
-                  borderWidth: "2px",
-                  borderColor: "#DADAEB",
-                  cursor: "pointer",
-                }}
-                scrolling="no"
-                frameBorder="0"
-                allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                className="mt-5 mb-10"
-              ></iframe> */}
+           
               <Image
                 src={Instagram}
                 alt=""

@@ -21,7 +21,7 @@ import monitoring from "../assets/icons/monitoring.png";
 import table from "../assets/icons/table.png";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { FcAbout } from "react-icons/fc";
-import { Button, Paper } from "@mui/material";
+import { Button, Grid, Paper } from "@mui/material";
 import styles from '@/styles/Home.module.css'
 
 export default function Home() {
@@ -180,47 +180,49 @@ export default function Home() {
 
       {/*------------------Our Resources-------------------*/}
 
-      <section className=" mx-14 my-16">
+      <section className="mx-4 md:mx-14 my-8 md:my-16">
         <div>
-          <div className="flex flex-col">
-            <h1 className="text-subColor text-4xl font-semibold">
+          <div className="flex flex-col items-center md:items-start">
+            <h1 className="text-subColor text-2xl md:text-4xl font-semibold">
               Our Resources
             </h1>
-            <div className="border w-[204px] border-yellowish mt-1"></div>
+            <div className="border w-20 md:w-32 xl:w-14 border-yellowish mt-1"></div>
           </div>
 
-          <div className="flex justify-center gap-20 mt-10">
+          <div className="flex flex-wrap justify-center md:justify-center gap-4 xs:gap-6 md:gap-12 xl:gap-20 2xl:gap-24 mt-6">
             {resourceData.map((item, key) => (
               <Resources
                 key={key}
                 icon={item.icon}
                 title={item.title}
                 link={item.link}
-              // description={item.description}
               />
             ))}
           </div>
         </div>
       </section>
 
+
+
+
+
       {/*------------------News Section-------------------*/}
 
-      <section className="bg-[#F7F7FA] pt-12 pb-16">
-        <div className="px-14">
-          {" "}
-          <h1 className=" text-subColor text-center lg:text-start text-4xl font-semibold">
+
+      <section className="bg-[#F7F7FA] py-8 lg:py-16">
+        <div className="px-4 md:px-14">
+          <h1 className="text-subColor text-center md:text-start text-2xl lg:text-4xl font-semibold">
             Important Links
           </h1>
-          <div className="border w-56 border-yellowish mt-2"></div>
+          <div className="border w-24 md:w-56 border-yellowish mt-2"></div>
         </div>
-        <div className="grid grid-cols-2 gap-32 mt-10 px-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12 mt-6 px-4 md:px-32">
           {NewsData.map((item, key) => (
             <News
               key={key}
               img={item.img}
               icon={item.icon}
               description={item.description}
-
             />
           ))}
         </div>
@@ -232,158 +234,119 @@ export default function Home() {
         <div className="flex flex-row bg-white text-xl justify-center font-semibold leading-6">
           <button
             onClick={() => toggleVisibility("div1")}
-            className={`py-3 w-60 rounded-t-xl ${isVisible.div1 ? "bg-subColor text-white" : "bg-white text-black"
-              }`}
+            className={`py-3 w-60 rounded-t-xl ${isVisible.div1 ? "bg-subColor text-white" : "bg-white text-black"}`}
           >
             Recently Approved
           </button>
 
           <button
             onClick={() => toggleVisibility("div2")}
-            className={`py-3 w-60 rounded-t-xl ${isVisible.div2 ? "bg-subColor text-white" : "bg-white text-black"
-              }`}
+            className={`py-3 w-60 rounded-t-xl ${isVisible.div2 ? "bg-subColor text-white" : "bg-white text-black"}`}
           >
             Notice Board
           </button>
         </div>
 
         {/* Recently Approved */}
-        <div
-          className={`${isVisible.div1 ? "block" : "hidden"
-            } bg-subColor text-white w-full`}
-        >
-          <div className="flex justify-between px-14 py-8 h-[364px]">
-            {/* <!-- Content for first div --> */}
-            <div className="text-[inherit] font-inherit inline-block w-[17.8rem] h-[16.5rem] text-midnightblue-100">
-              <p className="text-xl font-normal">
-                Recently Approved Guidelines
-              </p>
+        <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full`}>
+          <div className="flex flex-col md:flex-row justify-between px-4 md:px-14 py-8 h-auto md:h-[30rem]">
+            {/* Content for first div */}
+            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] h-auto md:h-fit text-midnightblue-100 px-8">
+              <p className="text-xl font-normal">Recently Approved Guidelines</p>
               <ul className="list-disc pl-[1.5rem] text-sm flex flex-col">
                 <li className="my-8">
-                  {/* <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
-                  <a
-                    className="text-[inherit]"
-                    href="https://www.ers.org.sz/administrator/notices/1679299306.pdf"
-                    target="_blank"
-                  >
-                  </a> */}
-                  <span>
-                    SRA-Minstry of Finance Guidelines to Taxpayers- COVID-19
-                  </span>
+                  <span>SRA-Minstry of Finance Guidelines to Taxpayers- COVID-19</span>
                 </li>
                 <li className="">
-                  {/* <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
-                  <a
-                    className="text-[inherit]"
-                    href="https://www.ers.org.sz/administrator/notices/1679299470.pdf"
-                    target="_blank"
-                  >
-                  </a> */}
                   <span>Guideline on Donor Funded Projects</span>
                 </li>
                 <li className="mt-8">
-                  {/* <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
-                  <a
-                    className="text-[inherit]"
-                    href="https://www.ers.org.sz/administrator/notices/1679299603.pdf"
-                    target="_blank"
-                  >
-                  </a> */}
                   <span>Guideline on Domestic Taxes Exemptions</span>
                 </li>
               </ul>
+
+            
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
+                Sell All
+                </button>
+             
+              {/* <div className="w-full flex justify-end">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 ">
+                Sell All
+                </button>
+              </div> */}
+
+             
             </div>
+          
+              <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
 
-            <div style={{ position: 'relative' }}>
-              <div className={styles.borderLine}></div>
-            </div>
-
-
-            {/* <!-- Content for second div --> */}
-            <div className=" inline-block w-[17.8rem] h-[16.5rem]">
-              <p className="text-xl font-normal">Approved Practice Notes</p>
+            {/* Content for second div */}
+            <div className=" flex flex-col w-full md:w-[17.8rem] h-auto  md:h-fit px-8">
+              <p className=" text-xl font-normal">Approved Practice Notes</p>
               <ul className="list-disc pl-[1.5rem] text-sm my-8">
                 <li>
                   Click here to download approved practice notes and guidelines
                 </li>
               </ul>
+              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end ">
+                Sell All
+                </button>
             </div>
 
-            <div style={{ position: 'relative' }}>
-              <div className={styles.borderLine}></div>
-            </div>
+            <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
 
-            {/* <!-- Content for third div --> */}
-            <div className=" inline-block w-[17.8rem] h-[16.5rem]">
+            {/* Content for third div */}
+            <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-fit px-8">
               <p className="text-xl font-normal">Recently Approved Forms</p>
-              <ul className="list-disc pl-[1.36rem] text-sm flex flex-col">
+              <ul className="list-disc pl-[1.5rem] text-sm ">
+
                 <li className="my-8">
-                  {/* <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
-                  <a
-                    className="text-[inherit]"
-                    href="https://www.ers.org.sz/administrator/notices/1679299306.pdf"
-                    target="_blank"
-                  >
-                  </a> */}
                   <span>VAT De-Registration Form</span>
                 </li>
                 <li className="">
-                  {/* <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
-                  <a
-                    className="text-[inherit]"
-                    href="https://www.ers.org.sz/administrator/notices/1679299470.pdf"
-                    target="_blank"
-                  >
-                  </a> */}
                   <span>Public Officer Application Form</span>
                 </li>
                 <li className="my-8">
-                  {/* <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
-                  <a
-                    className="text-[inherit]"
-                    href="https://www.ers.org.sz/administrator/notices/1679299603.pdf"
-                    target="_blank"
-                  >
-                  </a> */}
                   <span>Notice of Objection Form</span>
                 </li>
               </ul>
+              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
+                Sell All
+                </button>
             </div>
-            <div style={{ position: 'relative' }}>
-              <div className={styles.borderLine}></div>
-            </div>
-            {/* <!-- Content for fourth div --> */}
-            <div className=" inline-block w-[17.8rem] h-[16.5rem]">
+            <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
+
+            {/* Content for fourth div */}
+            <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-fit px-8">
               <p className="text-xl font-normal">Publication</p>
-              <ul className="list-disc pl-[1.36rem] text-sm">
+              <ul className="list-disc pl-[1.5rem] text-sm ">
                 <li className="my-8">SRA Strategic Plan 2015-2018</li>
                 <li className="">
-                  {" "}
                   Swaziland Revenue Authority - Strategic Plan 2012/13 - 2014/15
                 </li>
                 <li className="my-8">15% VAT Presentation</li>
                 <li className="">Trade Statistics</li>
               </ul>
+              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
+                Sell All
+                </button>
             </div>
           </div>
         </div>
 
         {/* Notice Board */}
-        <div
-          className={`${isVisible.div2 ? "block" : "hidden"
-            } bg-subColor text-white w-full`}
-        >
-          <div className="px-14 pt-4 text-lg font-medium leading-6">
-            For the latest tenders, Vacancies, Public Notes and Meetings. Click
-            below to check if any are available.
+        <div className={`${isVisible.div2 ? "block" : "hidden"} bg-subColor text-white w-full`}>
+          <div className="px-4 md:px-14 pt-4 text-lg font-medium leading-6">
+            For the latest tenders, Vacancies, Public Notes and Meetings. Click below to check if any are available.
           </div>
-          <div className="flex justify-between px-14 mt-5 pb-10">
-            {/* <!-- Content for first div --> */}
-            <div className="text-[inherit] font-inherit inline-block w-[17.8rem] h-[16.5rem] text-midnightblue-100">
+          <div className="flex flex-col md:flex-row justify-between px-4 md:px-14 mt-5 pb-10">
+            {/* Content for first div */}
+            <div className="flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] h-auto md:h-fit text-midnightblue-100 px-2">
               <p className="text-xl font-normal">Tender</p>
               <ul className="list-disc pl-[1.5rem] text-sm flex flex-col">
                 <li className="my-3">
-                  <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
+                  <span>Download this tender document to apply: </span>
                   <a
                     className="text-[inherit]"
                     href="https://www.ers.org.sz/administrator/notices/1679299306.pdf"
@@ -393,7 +356,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li className="">
-                  <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
+                  <span>Download this tender document to apply: </span>
                   <a
                     className="text-[inherit]"
                     href="https://www.ers.org.sz/administrator/notices/1679299470.pdf"
@@ -402,8 +365,8 @@ export default function Home() {
                     <span>Approved R2.1 RFT003 - HVAC Services</span>
                   </a>
                 </li>
-                <li className="mt-3">
-                  <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
+                <li className="my-3">
+                  <span>Download this tender document to apply: </span>
                   <a
                     className="text-[inherit]"
                     href="https://www.ers.org.sz/administrator/notices/1679299603.pdf"
@@ -413,30 +376,31 @@ export default function Home() {
                   </a>
                 </li>
               </ul>
+              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
+                Sell All
+                </button>
             </div>
 
-             <div style={{ position: 'relative' }}>
-              <div className={styles.borderLine}></div>
-            </div>
+            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
 
-            {/* <!-- Content for second div --> */}
-            <div className=" inline-block w-[17.8rem] h-[16.5rem]">
+            {/* Content for second div */}
+            <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-fit px-2">
               <p className="text-xl font-normal">Vacancies</p>
               <ul className="list-disc pl-[1.5rem] text-sm my-3">
                 <li>There are currently no Vacancies available</li>
               </ul>
+              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
+                Sell All
+                </button>
             </div>
+            <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
 
-             <div style={{ position: 'relative' }}>
-              <div className={styles.borderLine}></div>
-            </div>
-
-            {/* <!-- Content for third div --> */}
-            <div className=" inline-block w-[17.8rem] h-[16.5rem]">
+            {/* Content for third div */}
+            <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-[16.5rem] px-2">
               <p className="text-xl font-normal">Public Notice</p>
               <ul className="list-disc pl-[1.36rem] text-sm flex flex-col">
                 <li className="my-3">
-                  <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
+                  <span>Download this tender document to apply: </span>
                   <a
                     className="text-[inherit]"
                     href="https://www.ers.org.sz/administrator/notices/1679299306.pdf"
@@ -446,7 +410,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li className="">
-                  <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
+                  <span>Download this tender document to apply: </span>
                   <a
                     className="text-[inherit]"
                     href="https://www.ers.org.sz/administrator/notices/1679299470.pdf"
@@ -456,7 +420,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li className="my-3">
-                  <span className="text-whitesmoke">{`Download this tender document to apply: `}</span>
+                  <span>Download this tender document to apply: </span>
                   <a
                     className="text-[inherit]"
                     href="https://www.ers.org.sz/administrator/notices/1679299603.pdf"
@@ -466,25 +430,35 @@ export default function Home() {
                   </a>
                 </li>
               </ul>
+              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
+                Sell All
+                </button>
             </div>
-            <div style={{ position: 'relative' }}>
-              <div className={styles.borderLine}></div>
-            </div>
-            {/* <!-- Content for fourth div --> */}
-            <div className=" inline-block w-[17.8rem] h-[16.5rem]">
+            <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
+
+
+            {/* Content for fourth div */}
+            <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-[16.5rem] px-2">
               <p className="text-xl font-normal">Public Meeting</p>
               <ul className="list-disc pl-[1.36rem] text-sm my-3">
                 <li>There are currently no Public Notices available</li>
               </ul>
+              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
+                Sell All
+                </button>
             </div>
           </div>
         </div>
+
       </section>
+
+
+
 
       {/*---------------------Tax Section----------------------*/}
 
       <section className="my-14 p-14 bg-[#F7F7FA]">
-        <div className="grid grid-cols-2 gap-48">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-48">
           {TaxData.map((item, id) => (
             <div key={id} className="flex flex-col">
               <div className="flex justify-between items-center">
@@ -492,31 +466,21 @@ export default function Home() {
                   <MdOutlineCalendarMonth className="text-5xl" />
                   {item.title}
                 </h1>
-                <button className="text-white hover:bg-opacity-75 bg-black text-base leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5">
+                <button className="text-white hover:bg-opacity-75 bg-black text-base leading-2 tracking-wider font-bold border hover:border-black rounded-lg  xs:py-1 py-3 px-5">
                   See all
                 </button>
               </div>
               {item.card.map((card, key) => (
-                <div key={key} className={`flex flex-col gap-2 py-5 text-black ${card.id && "border-b border-[#DAD8CC]"}`}>
+                <div
+                  key={key}
+                  className={`flex flex-col gap-2 py-5 text-black ${card.id && "border-b border-[#DAD8CC]"
+                    }`}
+                >
                   <h1 className="text-lg font-medium leading-6">{card.head}</h1>
-                  <ul className=" text-sm font-normal leading-7">
-                    <li
-                    // className={`${card.para && "before:content-['\\2726']"}`}
-                    >{card.para && <span className="mr-2">&#10022;</span>}
-                      {card.para}
-                    </li>
-                    <li
-                    // className={`${card.para2 && "before:content-['\\2726']"}`}
-                    >
-                      {card.para2 && <span className="mr-2">&#10022;</span>}
-                      {card.para2}
-                    </li>
-                    <li
-                    // className={`${card.para3 && "<span>&#10022;</span>"}`}
-                    >
-                      {card.para3 && <span className="mr-2">&#10022;</span>}
-                      {card.para3}
-                    </li>
+                  <ul className="text-sm font-normal leading-7">
+                    <li>{card.para && <span className="mr-2">&#10022;</span>}{card.para}</li>
+                    <li>{card.para2 && <span className="mr-2">&#10022;</span>}{card.para2}</li>
+                    <li>{card.para3 && <span className="mr-2">&#10022;</span>}{card.para3}</li>
                   </ul>
                 </div>
               ))}
@@ -530,32 +494,26 @@ export default function Home() {
                   <FcAbout className="text-5xl" />
                   {item.title}
                 </h1>
-                <button className="text-white hover:bg-opacity-75 bg-black text-base leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5">
+                <button className="text-white hover:bg-opacity-75 bg-black text-base leading-2 tracking-wider font-bold border hover:border-black rounded-lg xs:py-1 xs:px-5 py-3 px-5">
                   See all
                 </button>
               </div>
               {item.card.map((card, key) => (
-                <div key={key} className={`flex flex-col gap-2 py-5 ${card.id && "border-b border-[#DAD8CC]"}`}>
-                  <h1 className="text-lg font-medium leading-6 text-black">
-                    {card.head}
-                  </h1>
-                  <ul className=" text-sm font-normal leading-7 text-mainColor">
+                <div
+                  key={key}
+                  className={`flex flex-col gap-2 py-5 ${card.id && "border-b border-[#DAD8CC]"
+                    }`}
+                >
+                  <h1 className="text-lg font-medium leading-6 text-black">{card.head}</h1>
+                  <ul className="text-sm font-normal leading-7 text-mainColor">
                     <Link href={""}>
-                      <li>{card.para && <span className="mr-2">&#10022;</span>}
-                        {card.para}
-                      </li>
+                      <li>{card.para && <span className="mr-2">&#10022;</span>}{card.para}</li>
                     </Link>
                     <Link href={""}>
-                      <li>
-                        {card.para2 && <span className="mr-2">&#10022;</span>}
-                        {card.para2}
-                      </li>
+                      <li>{card.para2 && <span className="mr-2">&#10022;</span>}{card.para2}</li>
                     </Link>
                     <Link href={""}>
-                      <li>
-                        {card.para3 && <span className="mr-2">&#10022;</span>}
-                        {card.para3}
-                      </li>
+                      <li>{card.para3 && <span className="mr-2">&#10022;</span>}{card.para3}</li>
                     </Link>
                   </ul>
                 </div>
@@ -565,20 +523,21 @@ export default function Home() {
         </div>
       </section>
 
+
       {/*----------------Corporate Social Responsibility------------------*/}
 
       <section>
-        <div className="flex justify-between item-center w-full">
-          <div className="basis-1/2">
+        <div className="flex flex-col md:flex-row justify-between items-center w-full">
+          <div className="w-full md:w-1/2">
             <Image src={CSR} alt="..." className="h-[500px]" />
           </div>
-          <div className="basis-1/2 py-10 px-20 bg-[#DAD8CC]">
+          <div className="w-full md:w-1/2 py-10 xs:px-5 md:px-10 px-20 bg-[#DAD8CC]  md:h-[500px] xl:h-[500px]">
             <h1 className="text-5xl font-semibold text-subColor leading-snug">
               Corporate Social Responsibility
             </h1>
             <p className="text-2xl leading-9 font-normal text-black mt-8 mb-12">
-              The ERS{"'"}s definition for Corporate Social Responsibility is
-              the process of how the organization helps the Swazi society.
+              The ERS s definition for Corporate Social Responsibility is the process
+              of how the organization helps the Swazi society.
             </p>
             <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5">
               SEE MORE STORIES
@@ -587,36 +546,41 @@ export default function Home() {
         </div>
 
         <div
-          className="py-16 text-white flex flex-col items-center gap-2 w-full"
+          className="py-16 text-white flex flex-col items-center gap-2 w-full xs:px-5 md:px-10"
           style={{ background: "linear-gradient(90deg, #051C2C, #04308A)" }}
         >
-          <h1 className="text-5xl font-medium leading-tight">
+          <h1 className="xs:text-3xl text-5xl font-medium leading-tight">
             How can we help you?
           </h1>
-          <p className="text-xl font-normal leading-8">
-            <span className="border-b-2 border-yellowish">Get in touch</span>{" "}
-            with us or{" "}
+          <p className="xs:text-base text-xl font-normal leading-8 xs:px-5 md:px-10">
+            <span className="border-b-2 border-yellowish">Get in touch</span> with
+            us or{" "}
             <span className="border-b-2 border-yellowish">find an office</span>{" "}
             closest to you.
           </p>
 
           <div className="flex gap-0">
-            <p className="text-xl font-normal leading-8">Any Feedback for us?</p>
-            <Button href="/Feedback" variant="text" sx={{
-              color: 'white', 
-              textDecoration:'underline',
-              textDecorationColor:'#f4c203',
-              textDecorationThickness:'2px',
-              textTransform:'capitalize',
-              '&:hover': {
-                background: 'transparent',
-                textDecoration:'underline',
-              textDecorationColor:'#f4c203',
-              textDecorationThickness:'2px',
-              }
-            }}>Feedback!</Button>
+            <p className="xs:text-lg text-xl font-normal leading-8">Any Feedback for us?</p>
+            <Button
+              href="/Feedback"
+              variant="text"
+              sx={{
+                color: "white",
+                textDecoration: "underline",
+                textDecorationColor: "#f4c203",
+                textDecorationThickness: "2px",
+                textTransform: "capitalize",
+                "&:hover": {
+                  background: "transparent",
+                  textDecoration: "underline",
+                  textDecorationColor: "#f4c203",
+                  textDecorationThickness: "2px",
+                },
+              }}
+            >
+              Feedback!
+            </Button>
           </div>
-
         </div>
       </section>
 

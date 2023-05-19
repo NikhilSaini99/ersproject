@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill } from "react-icons/bs";
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
+import calculator from "../assets/icons/calculator.png";
 
 
 function News({ icon, description, img }) {
@@ -71,12 +72,11 @@ function News({ icon, description, img }) {
   );
 }
 
-function Resources({ icon, title, description,link }) {
+function Resources({ icon, title,link }) {
   return (
     <>
       <Link className="flex flex-col gap-2" href={link}>
-        <div className="flex justify-center items-center bg-[#E3E5FF] border-2 border-[#E3E5FF] hover:border-2 hover:border-[#DAD8CC] rounded-full cursor-pointer container">
-          {" "}
+        <div className="flex justify-center items-center bg-[#E3E5FF] border-2 border-[#E3E5FF] hover:border-2 hover:border-[#DAD8CC] rounded-full cursor-pointer">
           <Image src={icon} alt="" className="fill h-7 w-7 m-4" />
         </div>
         <h1 className="text-center text-sm font-medium">{title}</h1>
@@ -84,6 +84,10 @@ function Resources({ icon, title, description,link }) {
     </>
   );
 }
+
+
+
+
 
 function Centers({ title, description, contact }) {
   return (
