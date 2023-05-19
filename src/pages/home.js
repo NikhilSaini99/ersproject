@@ -248,10 +248,10 @@ export default function Home() {
         </div>
 
         {/* Recently Approved */}
-        <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full`}>
-          <div className="flex flex-col md:flex-row justify-between px-4 md:px-14 py-8 h-auto md:h-[30rem]">
+        <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full `}>
+          <div className="flex flex-col md:flex-row justify-between px-4 md:px-14 py-10 lg:h-[28.3rem]">
             {/* Content for first div */}
-            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] h-auto md:h-fit text-midnightblue-100 px-8">
+            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] h-full  justify-between text-midnightblue-100 px-4">
               <p className="text-xl font-normal">Recently Approved Guidelines</p>
               <ul className="list-disc pl-[1.5rem] text-sm flex flex-col">
                 <li className="my-8">
@@ -264,40 +264,39 @@ export default function Home() {
                   <span>Guideline on Domestic Taxes Exemptions</span>
                 </li>
               </ul>
-
-            
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
-                Sell All
+              <div className="flex w-full justify-end">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5  mt-12 ">
+                  Sell All
                 </button>
-             
-              {/* <div className="w-full flex justify-end">
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 ">
-                Sell All
-                </button>
-              </div> */}
-
-             
+              </div>
             </div>
-          
-              <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
+
+
+
+            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
 
             {/* Content for second div */}
-            <div className=" flex flex-col w-full md:w-[17.8rem] h-auto  md:h-fit px-8">
+            <div className=" flex flex-col w-full md:w-[17.8rem]  px-4 justify-between ">
+            <div className="">
               <p className=" text-xl font-normal">Approved Practice Notes</p>
               <ul className="list-disc pl-[1.5rem] text-sm my-8">
                 <li>
                   Click here to download approved practice notes and guidelines
                 </li>
               </ul>
-              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end ">
-                Sell All
+              </div>
+              <div className="flex w-full justify-end">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
+                  Sell All
                 </button>
+              </div>
             </div>
 
-            <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
 
             {/* Content for third div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-fit px-8">
+            <div className="flex flex-col w-full md:w-[17.8rem] px-4   justify-between">
+            <div>
               <p className="text-xl font-normal">Recently Approved Forms</p>
               <ul className="list-disc pl-[1.5rem] text-sm ">
 
@@ -311,14 +310,18 @@ export default function Home() {
                   <span>Notice of Objection Form</span>
                 </li>
               </ul>
-              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
-                Sell All
+              </div>
+              <div className="flex w-full justify-end">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
+                  Sell All
                 </button>
+              </div>
             </div>
-            <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
 
             {/* Content for fourth div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-fit px-8">
+            <div className="flex flex-col w-full md:w-[17.8rem]  px-4  justify-between">
+            <div>
               <p className="text-xl font-normal">Publication</p>
               <ul className="list-disc pl-[1.5rem] text-sm ">
                 <li className="my-8">SRA Strategic Plan 2015-2018</li>
@@ -328,21 +331,26 @@ export default function Home() {
                 <li className="my-8">15% VAT Presentation</li>
                 <li className="">Trade Statistics</li>
               </ul>
-              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
-                Sell All
+              </div>
+              <div className="flex w-full justify-end">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
+                  Sell All
                 </button>
+              </div>
             </div>
           </div>
         </div>
-
         {/* Notice Board */}
-        <div className={`${isVisible.div2 ? "block" : "hidden"} bg-subColor text-white w-full`}>
-          <div className="px-4 md:px-14 pt-4 text-lg font-medium leading-6">
+
+        <div className={`${isVisible.div2 ? "block" : "hidden"} bg-subColor text-white w-full `}>
+        <div className="px-4 md:px-14 pt-2 text-lg font-medium leading-6">
             For the latest tenders, Vacancies, Public Notes and Meetings. Click below to check if any are available.
           </div>
-          <div className="flex flex-col md:flex-row justify-between px-4 md:px-14 mt-5 pb-10">
+          <div className="flex flex-col md:flex-row justify-between px-4 md:px-14 py-10 h-5/6">
             {/* Content for first div */}
-            <div className="flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] h-auto md:h-fit text-midnightblue-100 px-2">
+            <div className="flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem]  text-midnightblue-100 px-2 h-full justify-between">
+            
+            <div>
               <p className="text-xl font-normal">Tender</p>
               <ul className="list-disc pl-[1.5rem] text-sm flex flex-col">
                 <li className="my-3">
@@ -376,24 +384,31 @@ export default function Home() {
                   </a>
                 </li>
               </ul>
-              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
-                Sell All
+              </div>
+              <div className="flex w-full justify-end">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
+                  Sell All
                 </button>
+              </div>
             </div>
 
             <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
 
             {/* Content for second div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-fit px-2">
+            <div className="flex flex-col w-full md:w-[17.8rem] px-2  justify-between">
+            <div>
               <p className="text-xl font-normal">Vacancies</p>
               <ul className="list-disc pl-[1.5rem] text-sm my-3">
                 <li>There are currently no Vacancies available</li>
               </ul>
-              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
-                Sell All
+              </div>
+              <div className="flex w-full justify-end">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
+                  Sell All
                 </button>
+              </div>
             </div>
-            <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
 
             {/* Content for third div */}
             <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-[16.5rem] px-2">
@@ -430,22 +445,28 @@ export default function Home() {
                   </a>
                 </li>
               </ul>
-              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
-                Sell All
+              <div className="flex w-full justify-end">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
+                  Sell All
                 </button>
+              </div>
             </div>
-            <div className={`lg:border-r opacity-40 xs:border-t my-4` } ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
 
 
             {/* Content for fourth div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] h-auto md:h-[16.5rem] px-2">
+            <div className="flex flex-col w-full md:w-[17.8rem] px-2  justify-between">
+            <div>
               <p className="text-xl font-normal">Public Meeting</p>
               <ul className="list-disc pl-[1.36rem] text-sm my-3">
                 <li>There are currently no Public Notices available</li>
               </ul>
-              <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 place-self-end  ">
-                Sell All
+              </div>
+              <div className="flex w-full justify-end">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 mt-12 ">
+                  Sell All
                 </button>
+              </div>
             </div>
           </div>
         </div>
@@ -457,7 +478,7 @@ export default function Home() {
 
       {/*---------------------Tax Section----------------------*/}
 
-      <section className="my-14 p-14 bg-[#F7F7FA]">
+      <section className="my-14 p-8 bg-[#F7F7FA]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-48">
           {TaxData.map((item, id) => (
             <div key={id} className="flex flex-col">
@@ -466,7 +487,7 @@ export default function Home() {
                   <MdOutlineCalendarMonth className="text-5xl" />
                   {item.title}
                 </h1>
-                <button className="text-white hover:bg-opacity-75 bg-black text-base leading-2 tracking-wider font-bold border hover:border-black rounded-lg  xs:py-1 py-3 px-5">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 ">
                   See all
                 </button>
               </div>
@@ -494,7 +515,7 @@ export default function Home() {
                   <FcAbout className="text-5xl" />
                   {item.title}
                 </h1>
-                <button className="text-white hover:bg-opacity-75 bg-black text-base leading-2 tracking-wider font-bold border hover:border-black rounded-lg xs:py-1 xs:px-5 py-3 px-5">
+                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5">
                   See all
                 </button>
               </div>
