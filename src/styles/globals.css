@@ -195,3 +195,14 @@ ul li.starclass:before {
     grid-template-columns: repeat(1, 300px);
   }
 }
+
+.SocialsStyling{
+  font-size: 2rem;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+.SocialsStyling:hover{
+  color: grey;
+  transform: scale(1.5);
+  transition: ease 0.3s;
+}

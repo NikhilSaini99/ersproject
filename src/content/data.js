@@ -8,7 +8,32 @@ import Gallaryimg6 from "../assets/images/customs-img.jpg";
 import Gallaryimg7 from "../assets/images/news-banner.jpg";
 import Newses from "../assets/images/news.jpg"
 import quoteIcon from '../assets/icons/quoteicon.png'
-export { IncomeTaxData, NewsData, customData, GalleryData };
+import AppleIcon from '../assets/icons/apple_store.svg'
+import GooglePlayIcon from '../assets/icons/google_play1.svg'
+import HuaweiIcon from '../assets/icons/huawei-icon.svg'
+
+export { IncomeTaxData, NewsData, customData, GalleryData,appIcon };
+
+const appIcon =[
+  {
+    name:'App Store',
+    icon:AppleIcon,
+    text:'Download on the'
+  },
+  {
+    name:'Google Play',
+    icon:GooglePlayIcon,
+    text:'GET IT ON'
+  },
+  
+  {
+    name:'Huawei',
+    icon:HuaweiIcon,
+    text:'EXPLORE IT ON'
+  },
+  
+
+]
 
 const customData = [
   {
@@ -616,3 +641,5 @@ export const taxData = [
   }
  ]
 
+
+ 
