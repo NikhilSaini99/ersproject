@@ -16,7 +16,7 @@ function Media() {
   return (
     <>
             <section>
-        <div className="bg-white md:px-12 px-28 py-10">
+        <div className="bg-zinc-300  bg-opacity-50 md:px-12 px-28 py-10 mt-16 ">
           <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Facebook</h1>
@@ -30,7 +30,8 @@ function Media() {
                   borderColor: "#DADAEB",
                   cursor: "pointer",
                   borderRadius: '12px',
-                  padding: '0.5rem'
+                  padding: '0.5rem',
+                  background:'white',
                 }}
                 scrolling="no"
                 frameBorder="0"
@@ -65,7 +66,8 @@ function Media() {
                   borderRadius: '12px',
                   padding: '0.5rem',
                   minWidth: '344px',
-                  minHeight: '450px'
+                  minHeight: '450px',
+                  background:'white',
                 }}
               />
               <Link href="https://twitter.com/AECOM" target="_blank">
@@ -92,7 +94,8 @@ function Media() {
                   borderRadius: '12px',
                   padding: '0.5rem',
                   minWidth: '344px',
-                  minHeight: '450px'
+                  minHeight: '450px',
+                  background:'white',
                 }}
               />
               <Link href="https://www.instagram.com/aecom" target="_blank">

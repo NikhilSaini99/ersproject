@@ -23,12 +23,12 @@ export default function Footer() {
         <Box sx={{ position: 'relative', }}>
           <Image src={Foot} sizes="100vw" alt="footer_head" style={{
             backgroundSize: 'cover',
-            backgroundPosition: 'center', height: '200px'
+            backgroundPosition: 'center', height: '8rem'
           }} />
           <Stack sx={{
             position: 'absolute', top: '0', left: '0',
             width: '100%',
-            display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, justifyContent: 'space-between', px: { xs: '1.5rem', lg: '3rem' }, pt: '1rem'
+            display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, justifyContent: 'space-between', px: { xs: '1.5rem', lg: '3rem' }, pt: '2rem'
             , gap: { xs: '2rem' }
           }}>
             <Box className="leftSide" sx={{
@@ -36,8 +36,7 @@ export default function Footer() {
               width: { xs: '100%', lg: '60%' }
             }}>
               <Typography variant="h4" sx={{
-                fontSize: { xs: '1.5rem', lg: '1.5rem' }, fontWeight: 'bold',
-                wordSpacing: '0.3rem', letterSpacing: '0.2rem'
+                fontSize: { xs: '1.5rem', lg: '1.5rem' }, fontWeight: 'bold'
               }}>
                 Connect With Us</Typography>
               <Typography variant="h4" sx={{
@@ -46,7 +45,7 @@ export default function Footer() {
                 Stay updated with ERS news, data, publications, projects, events and
                 opportunities.</Typography>
             </Box>
-            <Box className="RightSide" sx={{ display: 'flex', gap: { xs: '0.8rem', lg: '1.5rem' } }}>
+            <Box className="RightSide" sx={{ display: 'flex', gap: { xs: '0.8rem', lg: '1.5rem' },pt:'1rem' }}>
               <RiMailFill className="SocialsStyling" />
               <SiTwitter className="SocialsStyling" />
               <IoLogoYoutube className="SocialsStyling" />
@@ -58,8 +57,8 @@ export default function Footer() {
         </Box>
 
         {/* About ERS */}
-        <Box color='white' bgcolor='#2F3192'>
-          <Stack direction={'row'} bgcolor='#2F3192' sx={{
+        <Box color='white' bgcolor='#04308A'>
+          <Stack direction={'row'} bgcolor='#04308A' sx={{
             position: 'relative',
             top: { xs: '-3.5px', lg: '-2.5px' },
             px: { xs: '1.5rem', lg: '3rem' }, pt: { xs: '0.8rem', lg: '1rem' },
@@ -77,7 +76,7 @@ export default function Footer() {
 
               {/* appstore section */}
 
-              <div className="flex justify-between gap-3 xs:flex-col md:flex-row ">
+              <div className="flex  gap-5 xs:flex-col md:flex-row ">
                 <button className="flex w-[140px] h-11 rounded-md items-center justify-evenly bg-[black] font-bold">
                   <BsApple className="text-4xl" />
                   <div>
