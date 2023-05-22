@@ -115,20 +115,28 @@ export default function Home() {
           id: 1,
           head: "Publications",
           para: "Strategic Plans",
+          link: "/TaxItemTable",
           para2: "Annual Reports",
+          link2: "/TaxItemTable",
           para3: "Customer Perception Survey",
+          link3: "/TaxItemTable",
         },
         {
           id: 2,
           head: "Payments",
           para: "Bank Accounts",
+          link: "/BankAccounts",
           para2: "Tax Item Codes",
+          link2: "/TaxItemTable",
           para3: "Payments",
+          link3: "/PaymentPage",
         },
         {
           head: "Stakeholders",
           para: "Local Stakeholders",
+          link: "/TaxItemTable",
           para2: "International Stakeholders",
+          link2: "/TaxItemTable",
         },
       ],
     },
@@ -525,13 +533,13 @@ export default function Home() {
                 >
                   <h1 className="text-lg font-medium leading-6 text-black">{card.head}</h1>
                   <ul className="text-sm font-normal leading-7 text-mainColor">
-                    <Link href={""}>
+                    <Link href={`${card.link}`}>
                       <li className="hover:underline">{card.para && <span className="mr-2 ">&#10022;</span>}{card.para}</li>
                     </Link>
-                    <Link href={""}>
+                    <Link href={`${card.link2}`}>
                       <li className="hover:underline"> {card.para2 && <span className="mr-2 ">&#10022;</span>}{card.para2}</li>
                     </Link>
-                    <Link href={""}>
+                    <Link href={`${card.link3}`}>
                       <li className="hover:underline">{card.para3 && <span className="mr-2 ">&#10022;</span>}{card.para3}</li>
                     </Link>
                   </ul>

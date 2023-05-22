@@ -168,11 +168,12 @@ ul li.starclass:before {
   content: '\2726';
   margin-right: 0.5rem;
   margin-left: 0.5rem;
+  list-style-type: none;
 }
  
-ol li{
-  list-style: number;
-}
+/* ol li{
+  list-style-type: decimal;
+} */
 
 
 /* .bannerSizing {
