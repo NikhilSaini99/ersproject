@@ -182,9 +182,11 @@ export default function Header() {
                                     Registration
                                   </p>
                                   </Link>
+                                  <Link href={'/ExemptSupplies'}>
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
                                     Exempt Supplies of Goods & <br /> Services
                                   </p>
+                                  </Link>
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
                                     Reverse Charge Concept
                                   </p>

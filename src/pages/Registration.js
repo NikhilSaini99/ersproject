@@ -105,7 +105,7 @@ const Registration = () => {
         <Typography variant="h5" sx={{my:'1.5rem'}} component="h2">
           WHAT IS THE REGISTRATION PROCESS
         </Typography>
-        <ol>
+        <ol style={{marginLeft:'1.5rem',marginBottom:'0.5rem'}}>
           <li>Taxpayers can collect the TIN registration form from the nearest ERS office or download it from here.</li>
           <li>Complete and submit the form with all attachments to any ERS office.</li>
           <li>The ERS will review the application and inform the taxpayer of the outcome within 30 days. In some cases this may include inspection.</li>

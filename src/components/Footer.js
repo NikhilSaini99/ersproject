@@ -65,7 +65,7 @@ export default function Footer() {
             display: 'flex', flexDirection: { xs: 'column', lg: 'row' },
             gap: { xs: '0.8rem', lg: '1.2rem' }
           }}>
-            <Stack direction={'column'} spacing={2} sx={{ width: { xs: '100%', lg: '53.333%' }, }}>
+            <Stack direction={'column'} spacing={2} sx={{ width: { xs: '100%', lg: '45.333%' }, }}>
               <Divider sx={{ borderBottomWidth: 2.5, bgcolor: '#f4c203', my: { xs: '0.3rem', lg: '0.8rem' } }} />
               <Typography variant="h3" sx={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
                 About ERS</Typography>
@@ -131,7 +131,7 @@ export default function Footer() {
 
             <Stack sx={{
               direction: 'flex',
-              flexDirection: 'column', gap: '0.5rem', width: { xs: '100%', lg: '43.333%' },
+              flexDirection: 'column', gap: '0.5rem', width: { xs: '100%', lg: '35.333%' },
             }}>
               <Divider sx={{ borderBottomWidth: 2.5, bgcolor: '#f4c203', my: { xs: '0.3rem', lg: '0.8rem' } }} />
               <Typography variant="h4" sx={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Address</Typography>
@@ -164,7 +164,7 @@ export default function Footer() {
               </Stack>
             </Stack>
 
-            <Stack direction={'column'} spacing={2} sx={{ width: { xs: '100%', lg: '23.333%' }, }}>
+            <Stack direction={'column'} spacing={2} sx={{ width: { xs: '100%', lg: '30.333%' }, }}>
               <Divider sx={{ borderBottomWidth: 2.5, bgcolor: '#f4c203', my: { xs: '0.3rem', lg: '0.8rem' } }} />
               <Typography variant="h3" sx={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
                 Opening Hours</Typography>
