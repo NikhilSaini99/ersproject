@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import { Box, Stack, Typography, List, ListItem, ListItemText } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
-import Banner from "../assets/images/bg2.jpg";
+import Banner from "../assets/images/registration.jpg";
 
 
 const Registration = () => {
@@ -20,8 +20,15 @@ const Registration = () => {
 
       <Header />
       {/*-----------------------Banner---------------------*/}
-      <Box>
-        <Image src={Banner} alt="..." className="h-96 w-full" />
+      <Box sx={{height:{xs:'15rem',lg:'25rem',xs:'30rem'}}}>
+      <Image src={Banner} alt=""
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
       </Box>
 
       <Box sx={{ width: '80%', margin: { xs: '2rem auto', lg: '5rem auto', }}}>

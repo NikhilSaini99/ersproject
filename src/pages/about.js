@@ -8,7 +8,7 @@ import person1 from "../assets/images/Member1.jpg";
 import person2 from "../assets/images/Member2.jpg";
 import person3 from "../assets/images/Member3.jpg";
 import person4 from "../assets/images/Member4.jpg";
-import banner from "../assets/images/contact-bg.png";
+import banner from "../assets/images/about.jpg";
 import hero1 from "../assets/images/herosection1.jpg";
 import hero2 from "../assets/images/herosection2.jpg";
 import hero3 from "../assets/images/herosection3.jpg";
@@ -155,20 +155,21 @@ export default function about() {
       <Header />
 
       {/*----------------------- About Us Banner ------------------*/}
-      <Box sx={{ position: "relative", width: "100%" }}>
+      <Box sx={{ position: "relative", width: "100%",height:'25rem' }}>
         <Image
           src={banner}
           alt="about_us"
           width={0}
           height={0}
-          sizes="100vw"
-          style={{ width: "100%", height: "auto", filter: "blur(2px)" }}
+          // sizes="100vw"
+          style={{ width: "100%", height: "100%", filter: "blur(2px)",
+          objectFit:'cover' }}
         />
         <Typography
           variant="h1"
           sx={{
             fontSize: { xs: "1.2rem", lg: "2.8rem" },
-            color: "black",
+            color: "white",
             fontFamily: "inherit",
             fontWeight: "400",
             position: "absolute",

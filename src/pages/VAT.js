@@ -4,6 +4,7 @@ import Image from "next/image";
 import Banner from "../assets/images/vat.jpg";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import {Box} from '@mui/material'
 
 export default function VAT() {
   return (
@@ -21,9 +22,16 @@ export default function VAT() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <section>
-        <Image src={Banner} alt="..." className="h-96 w-full" />
-      </section>
+      <Box sx={{height:{xs:'15rem',lg:'25rem',xs:'30rem'}}}>
+      <Image src={Banner} alt="vat"
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
+      </Box>
 
       <section className="mx-40 my-10 p-10">
         <div>

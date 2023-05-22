@@ -187,9 +187,11 @@ export default function Header() {
                                     Exempt Supplies of Goods & <br /> Services
                                   </p>
                                   </Link>
+                                  <Link href={'/ReverseCharge'}>
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
                                     Reverse Charge Concept
                                   </p>
+                                  </Link>
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
                                     Zero Rated goods + Services
                                   </p>

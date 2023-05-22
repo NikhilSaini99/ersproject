@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
-import bgimg from "../assets/images/contact-bg.png";
+import bgimg from "../assets/images/contact.jpg";
 import { Centers } from "@/components/homecard";
 import { Media } from "@/components/media";
 import Footer from "@/components/Footer";
@@ -18,35 +18,35 @@ export default function Contact() {
       title: "MANZINI SERVICE CENTRE",
       description:
         "Sivuno Building, Ground floor, adjacent to Estel House, Manzini MANZINI",
-        contact:'[+268] 2406 4050'
+      contact: '[+268] 2406 4050'
     },
     {
       title: "MATSAPHA BRANCH",
       description: "Matsamo Shopping Complex (kaMahhala) MATSAPHA",
-      contact:'[+268] 2406 4050'
+      contact: '[+268] 2406 4050'
     },
     {
       title: "MBABANE SERVICE CENTRE",
       description:
         "3rd Floor, Corporate Place, Swazi  Plaza MBABANE ",
-        contact:'[+268] 2406 4050'
+      contact: '[+268] 2406 4050'
     },
     {
       title: "NHLANGANO BRANCH",
       description:
         "Old Skonkwane Building  Corner of 6th Street and 3rd Avenue NHLANGANO",
-        contact:'[+268] 2406 4050'
+      contact: '[+268] 2406 4050'
     },
-    { 
+    {
       title: "PIGGS PEAK SERVICE CENTRE",
       description:
         "1st Floor, Supreme Building  Evelyn Baring Road  PIGGS PEAK",
-        contact:'[+268] 2406 4050 '
+      contact: '[+268] 2406 4050 '
     },
     {
       title: "SITEKI SERVICE CENTRE",
       description: "Mafumbe Building Jacaranda Road  SITEKI",
-      contact:'[+268] 2406 405'
+      contact: '[+268] 2406 405'
     },
   ];
 
@@ -66,7 +66,16 @@ export default function Contact() {
 
       <section>
         <div className="relative">
-          <Image src={bgimg} alt="" className="w-full" />
+          <div className="h-96">
+            <Image src={bgimg} alt=""
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
+          </div>
           <div className="absolute bottom-0 bg-white/80 w-full pl-10 py-[14px]">
             <h1 className="text-subColor text-3xl font-bold leading-8">
               CONTACT ERS
@@ -148,7 +157,7 @@ export default function Contact() {
                   key={key}
                   title={item.title}
                   description={item.description}
-                  contact = {item.contact}
+                  contact={item.contact}
                 />
               ))}
             </div>
