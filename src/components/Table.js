@@ -8,7 +8,7 @@ import DownloadForOfflineRoundedIcon from '@mui/icons-material/DownloadForOfflin
 export default function FormTable({ title }) {
   const formdata = [
     {
-      num: "1",
+      num: 1,
       name: "Notice of Objection Form_Printable",
       category: "Income Tax",
       size: "383.31 KB",
@@ -16,21 +16,21 @@ export default function FormTable({ title }) {
         "Editable Version. Download and save form before completing.",
     },
     {
-      num: "2",
+      num: 2,
       name: "TIN Registration Form_Company",
       category: "Income Tax",
       size: "2.21 MB",
       description: "",
     },
     {
-      num: "3",
+      num: 3,
       name: "VAT Refunds for Diplomats, Diplomatic and Consular Missions & International Organizations_Printable",
       category: "VAT",
       size: "196.48 KB",
       description: "",
     },
     {
-      num: "4",
+      num: 4,
       name: "Taxpayer Profile Maintenance Form_Individuals",
       category: "Income Tax",
       size: "212.16 KB",
@@ -38,21 +38,21 @@ export default function FormTable({ title }) {
         "Editable Version. Download and save form before completing.",
     },
     {
-      num: "5",
+      num: 5,
       name: "CE 73 Application For Special Attendance",
       category: "Customs and Excise",
       size: "101.77 KB",
       description: "",
     },
     {
-      num: "6",
+      num: 6,
       name: "VAT Deregistration Form",
       category: "VAT",
       size: "215.66 KB",
       description: "",
     },
     {
-      num: "7",
+      num: 7,
       name: "CE 101 Declaration on transfer of residence",
       category: "Customs and Excise",
       size: "227.25 KB",
@@ -60,21 +60,21 @@ export default function FormTable({ title }) {
         "This form is for use to declare non-involvement in any business operation.",
     },
     {
-      num: "8",
+      num: 8,
       name: "Taxpayer Profile Maintenance Form_Company",
       category: "Income Tax",
       size: "248.49 KB",
       description: "",
     },
     {
-      num: "9",
+      num: 9,
       name: "VAT Return_Printable",
       category: "VAT",
       size: "173.43 KB",
       description: "",
     },
     {
-      num: "10",
+      num: 10,
       name: "CE66 Application For Refund",
       category: "Customs and Excise",
       size: "218.15 KB",
@@ -138,8 +138,8 @@ export default function FormTable({ title }) {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {formdata.map((form) => (
-                  <TableRow key={formdata.num} sx={{
+                {formdata.map((form,index) => (
+                  <TableRow key={index} sx={{
                     '&:hover': {
                       background: '#F2F2F2'
                     }

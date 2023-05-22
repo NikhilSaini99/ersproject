@@ -175,10 +175,13 @@ export default function Header() {
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line ">
                                     Eswatini VAT
                                   </p>
+                                  </Link>
                                   <br />
+                                  <Link href={'/Registration'}>
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
                                     Registration
                                   </p>
+                                  </Link>
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
                                     Exempt Supplies of Goods & <br /> Services
                                   </p>
@@ -188,7 +191,7 @@ export default function Header() {
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
                                     Zero Rated goods + Services
                                   </p>
-                                </Link>
+                                
                               </div>
                               <div>
                                 <h1 className="text-xl font-bold leading-8 mt-12 mb-3">

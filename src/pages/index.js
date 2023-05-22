@@ -2,12 +2,10 @@ import React from "react";
 // import { Inter } from 'next/font/google'
 import Head from "next/head";
 import Home from "./home";
-// const inter = Inter({
-//   weight: '100',
-//   subsets: ['latin']
-// });
+
 
 export default function Index() {
+
   return (
     <>
       <Head>
