@@ -13,6 +13,11 @@ export default function FAQ() {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
+  const [isOpen5, setIsOpen5] = useState(false);
+  const [isOpen6, setIsOpen6] = useState(false);
+  const [isOpen7, setIsOpen7] = useState(false);
+  const [isOpen8, setIsOpen8] = useState(false);
 
   const [FaqCategory, setFaqCategory] = React.useState('');
 
@@ -31,7 +36,21 @@ export default function FAQ() {
   const toggleFAQ3 = () => {
     setIsOpen3(!isOpen3);
   };
-
+  const toggleFAQ4 = () => {
+    setIsOpen4(!isOpen4);
+  };
+  const toggleFAQ5 = () => {
+    setIsOpen5(!isOpen5);
+  };
+  const toggleFAQ6 = () => {
+    setIsOpen6(!isOpen6);
+  };
+  const toggleFAQ7 = () => {
+    setIsOpen7(!isOpen7);
+  };
+  const toggleFAQ8 = () => {
+    setIsOpen8(!isOpen8);
+  };
   return (
     <>
       <Head>
@@ -87,25 +106,24 @@ export default function FAQ() {
           </Box>
 
           <div className="mt-12 ">
-            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-4 mb-4">
-              <h1
-                className="flex items-center justify-between gap-4 mx-4 cursor-pointer font-medium"
+          <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
+              <div
+                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
                 onClick={toggleFAQ1}
               >
-                <BsQuestionCircle className="text-3xl text-subColor" />I know
-                that a rate of duty has recently changed, but I want to see what
-                the rate was six months ago. How can I do that?
+                <BsQuestionCircle className="text-2xl text-subColor" />
+                <h1 className="flex-1 text-lg font-medium">
+                What is the alcohol and tobacco levy (ATL)?
+                </h1>
                 {isOpen1 ? (
-                  <FiMinusCircle className="text-2xl" />
+                  <FiMinusCircle className="text-xl" />
                 ) : (
-                  <FiPlusCircle className="text-2xl" />
+                  <FiPlusCircle className="text-xl" />
                 )}
-              </h1>
+              </div>
               {isOpen1 && (
                 <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
-                  Using the Simulation Date field, select the applicable date
-                  and search for the tariff code. The rate of duty that will
-                  display will be as per the simulation date.
+                It is a levy collected on alcoholic beverages and tobacco products. This excludes traditional beer.
                 </div>
               )}
             </div>
@@ -115,14 +133,14 @@ export default function FAQ() {
                 className="flex items-center justify-between gap-4 mx-4 cursor-pointer font-medium"
                 onClick={toggleFAQ2}
               >
-                <BsQuestionCircle className="text-[43px] text-subColor" /> I am
+                <BsQuestionCircle className="text-2xl text-subColor" /> I am
                 not certain of the tariff code I am looking for, but I know the
                 chapter. What is the best way to be able to look through a
                 number of tariff codes to identify the one I want?
                 {isOpen2 ? (
-                  <FiMinusCircle className="text-4xl" />
+                  <FiMinusCircle className="text-xl" />
                 ) : (
-                  <FiPlusCircle className="text-4xl" />
+                  <FiPlusCircle className="text-xl" />
                 )}
               </h1>
               {isOpen2 && (
@@ -160,6 +178,124 @@ export default function FAQ() {
                 </div>
               )}
             </div>
+
+
+            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
+              <div
+                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
+                onClick={toggleFAQ4}
+              >
+                <BsQuestionCircle className="text-2xl text-subColor" />
+                <h1 className="flex-1 text-lg font-medium">
+                Can a registered business claim the import VAT paid at the border?
+                </h1>
+                {isOpen4 ? (
+                  <FiMinusCircle className="text-xl" />
+                ) : (
+                  <FiPlusCircle className="text-xl" />
+                )}
+              </div>
+              {isOpen4 && (
+                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
+                Yes. A taxable person may claim import VAT paid at the border if the goods imported are going to be used in the business of making taxable supplies.
+                </div>
+              )}
+            </div>
+
+
+
+            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
+              <div
+                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
+                onClick={toggleFAQ5}
+              >
+                <BsQuestionCircle className="text-2xl text-subColor" />
+                <h1 className="flex-1 text-lg font-medium">
+                Can businesses making a taxable turnover of less than E500, 000/annum register for VAT?
+                </h1>
+                {isOpen5 ? (
+                  <FiMinusCircle className="text-xl" />
+                ) : (
+                  <FiPlusCircle className="text-xl" />
+                )}
+              </div>
+              {isOpen5 && (
+                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
+                Registration is not mandatory if the taxable turnover is less than E500, 000/annum, but a business may register voluntarily if they comply with the requirements for registration as stated in the VAT Act. E.g. does the business have a fixed place of doing business in Eswatini; is the business able to keep proper books of account; will the business be able to submit accurate returns as and when required by the Act.
+                </div>
+              )}
+            </div>
+
+            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
+              <div
+                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
+                onClick={toggleFAQ6}
+              >
+                <BsQuestionCircle className="text-2xl text-subColor" />
+                <h1 className="flex-1 text-lg font-medium">
+                When is the deadline for submitting VAT returns?
+                </h1>
+                {isOpen6 ? (
+                  <FiMinusCircle className="text-xl" />
+                ) : (
+                  <FiPlusCircle className="text-xl" />
+                )}
+              </div>
+              {isOpen6 && (
+                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
+                The deadline for VAT online filers is the 27th of the following month after the end of the tax period. They must be submitted on E-Tax
+                </div>
+              )}
+            </div>
+
+            
+            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
+              <div
+                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
+                onClick={toggleFAQ7}
+              >
+                <BsQuestionCircle className="text-2xl text-subColor" />
+                <h1 className="flex-1 text-lg font-medium">
+                Is VAT charged on all rental property besides residential accommodation?
+                </h1>
+                {isOpen7 ? (
+                  <FiMinusCircle className="text-xl" />
+                ) : (
+                  <FiPlusCircle className="text-xl" />
+                )}
+              </div>
+              {isOpen7 && (
+                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
+                YES. Rentals of buildings for commercial purposes are taxable at the standard rate of 15%
+                </div>
+              )}
+            </div>
+
+
+            
+            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
+              <div
+                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
+                onClick={toggleFAQ8}
+              >
+                <BsQuestionCircle className="text-2xl text-subColor" />
+                <h1 className="flex-1 text-lg font-medium">
+                Are there any special requirements for hawkers who import goods from South Africa and Mozambique?
+                </h1>
+                {isOpen8 ? (
+                  <FiMinusCircle className="text-xl" />
+                ) : (
+                  <FiPlusCircle className="text-xl" />
+                )}
+              </div>
+              {isOpen8 && (
+                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
+                No there arent any. Currently hawkers are required to declare goods the same as any commercial entity.
+                </div>
+              )}
+            </div>
+
+
           </div>
         </div>
       </section>

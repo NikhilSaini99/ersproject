@@ -580,25 +580,9 @@ export default function Home() {
 
           <div className="flex gap-0">
             <p className="xs:text-lg text-xl font-normal leading-8">Any Feedback for us?</p>
-            <Button
-              href="/Feedback"
-              variant="text"
-              sx={{
-                color: "white",
-                textDecoration: "underline",
-                textDecorationColor: "#f4c203",
-                textDecorationThickness: "2px",
-                textTransform: "capitalize",
-                "&:hover": {
-                  background: "transparent",
-                  textDecoration: "underline",
-                  textDecorationColor: "#f4c203",
-                  textDecorationThickness: "2px",
-                },
-              }}
-            >
-              Feedback!
-            </Button>
+            <Link href="/Feedback">
+           <span  className="border-b-2 border-yellowish cursor-pointer ml-2">Feedback</span>
+           </Link>
           </div>
         </div>
       </section>

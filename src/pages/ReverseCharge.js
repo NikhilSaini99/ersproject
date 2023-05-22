@@ -87,13 +87,13 @@ const ReverseCharge = () => {
                 </Typography>
 
                 {data.map((item) => (
-                    <Typography variant='body1' key={item.id} sx={{fontWeight:'600'}}>{item.content}</Typography>
+                    <Typography variant='body1' key={item.id}>{item.content}</Typography>
                 ))}
 
 
                 <Typography variant='h5' component='h2' sx={{ my: '2rem' }}>
                     DECLARATION AND PAYMENT</Typography>
-                <Typography variant='body1' sx={{ my: '2rem',fontWeight:'600' }}>
+                <Typography variant='body1' sx={{ my: '2rem'}}>
                     The VAT reverse charge declaration form and payment must be submitted to the ERS within 30 days of the invoice date.</Typography>
                 <Typography variant='body1' sx={{ my: '2rem', fontWeight: 'bold' }}>
                     NOTE: The VAT reverse charge system does not apply to registered businesses with a full right to input tax deduction.</Typography>

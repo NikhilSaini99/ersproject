@@ -63,7 +63,7 @@ export default function Footer() {
             top: { xs: '-3.5px', lg: '-2.5px' },
             px: { xs: '1.5rem', lg: '3rem' }, pt: { xs: '0.8rem', lg: '1rem' },
             display: 'flex', flexDirection: { xs: 'column', lg: 'row' },
-            gap: { xs: '0.8rem', lg: '1.2rem' }
+            gap: { xs: '0.8rem', lg: '4rem' }
           }}>
             <Stack direction={'column'} spacing={2} sx={{ width: { xs: '100%', lg: '45.333%' }, }}>
               <Divider sx={{ borderBottomWidth: 2.5, bgcolor: '#f4c203', my: { xs: '0.3rem', lg: '0.8rem' } }} />
