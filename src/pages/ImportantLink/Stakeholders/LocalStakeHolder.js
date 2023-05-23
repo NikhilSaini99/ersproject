@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import { Box, Typography, Stack } from '@mui/material'
 import Image from 'next/image'
-import Banner from "../../../assets/images/images/registration.jpg";
+import Banner from "../../../assets/images/registration.jpg";
 import Link from 'next/link'
 
 export default function LocalStakeHolder() {

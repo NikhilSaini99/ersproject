@@ -201,17 +201,22 @@ export default function Header() {
                                 <h1 className="text-xl font-bold leading-8 mt-12 mb-3">
                                   Legal and Policy
                                 </h1>
+                                <Link href={'/LegalandPolicy/TaxLegislation'}>
                                 <p className="text-sm leading-6 font-normal cursor-pointer  hover:text-yellowish line">
                                   Tax Legislations
                                 </p>
+                                </Link>
                                 <br />
+                                <Link href={'/LegalandPolicy/Taxations'}>
                                 <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
                                   Double Taxation Agreements
                                 </p>
+                                </Link>
                                 <br />
+                                <Link href={'/LegalandPolicy/VatRegulations'}>
                                 <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
                                   VAT Regulations
-                                </p>
+                                </p></Link>
                                 <br />
                                 <p className="text-sm leading-6 font-normal mt-1 cursor-pointer hover:text-yellowish line">
                                   Practice Notes and Guidelines
