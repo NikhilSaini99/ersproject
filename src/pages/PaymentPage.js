@@ -78,13 +78,13 @@ const PaymentPage = () => {
                 </Typography>
                 <Typography variant='body1'>The following modes of payment are available for ERS customers to make tax and/or duties payments:</Typography>
 
-                <ol style={{listStyleType:'decimal'}}>
+                <ol style={{listStyleType:'decimal',marginLeft: "1rem"}}>
                     {dataPaymentpage.map((item) => (
                         <li key={item.id} variant='body1' style={{ fontWeight: 'bold',marginBottom:'1rem' }}>
                             {item.title}
 
                             <ul className='custom-list'
-                                style={{ marginLeft: "1rem", listStyle: 'none' }}>
+                                style={{ marginLeft: "1rem", fontWeight:'normal' }}>
                                 {item.details.map((item, index) => (
                                     <li key={index}>{item}</li>
                                 ))}
