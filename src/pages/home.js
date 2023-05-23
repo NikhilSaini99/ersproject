@@ -150,9 +150,9 @@ export default function Home() {
         {
           head: "Stakeholders",
           para: "Local Stakeholders",
-          link: "/TaxItemTable",
+          link: "ImportantLink/Stakeholders/LocalStakeHolder",
           para2: "International Stakeholders",
-          link2: "/TaxItemTable",
+          link2: "ImportantLink/Stakeholders/InternationalStake",
         },
       ],
     },
