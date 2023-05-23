@@ -186,7 +186,7 @@ const InternationalStake = () => {
                         <Typography variant='body1'>Obtain information to report which involves the following:</Typography>
                     </Box>
                 ))}
-                <ol style={{ listStyleType: 'decimal' }}>
+                <ol style={{ listStyleType: 'decimal',marginLeft:'1rem' }}>
                     <li>A specified US person: Name, address and US taxpayer identification number(TIN).</li>
                     <li>A US owned entity: name address and US TIN of each substantial US owner.</li>
                     <li>Account Numbers.</li>
