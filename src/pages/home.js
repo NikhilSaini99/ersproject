@@ -100,12 +100,25 @@ export default function Home() {
             "3rd payment is due on receipt of Notice of Assessment after having submitted Income Tax returns",
         },
         {
+          id:2,
           head: "Remittance of Paye",
           para: "No later than the 7th every month",
-          para2:'Submission of Salary Reconciliations',
-          para3:'Submission of Income Tax Returns'
+         
 
         },
+        {
+          id:3,
+          head: 'Submission of Salary Reconciliations',
+          para: "No later than the 7th every month",
+        },
+        {
+          id:4,
+          head: 'Submission of Income Tax Returns',
+          para: "All Non-VAT registered entities - 31st October",
+          para2: "Individuals with employment income and Individuals with other income - 30th November",
+          para3: "All VAT registered entities and Special groups - 31st December",
+        }
+
       ],
     },
   ];
@@ -487,7 +500,7 @@ export default function Home() {
 
       {/*---------------------Tax Section----------------------*/}
 
-      <section className="my-14 p-8 px-12 bg-[#F7F7FA]">
+      <section className="my-14 p-8 px-14 bg-[#F7F7FA]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-48">
           {TaxData.map((item, id) => (
             <div key={id} className="flex flex-col">
