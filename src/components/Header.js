@@ -80,8 +80,8 @@ export default function Header() {
                       <Link href={"/about"}>
                         <h3
                           className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor mr-3 ${router.asPath === "/about"
-                              ? "text-[#2F3192]"
-                              : "text-black/80"
+                            ? "text-[#2F3192]"
+                            : "text-black/80"
                             }`}
                         >
                           About Us
@@ -111,8 +111,8 @@ export default function Header() {
                     >
                       <h3
                         className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${services.includes(router.asPath)
-                            ? "text-[#2F3192]"
-                            : "text-black/80"
+                          ? "text-[#2F3192]"
+                          : "text-black/80"
                           }`}
                       >
                         Services
@@ -175,48 +175,48 @@ export default function Header() {
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line ">
                                     Eswatini VAT
                                   </p>
-                                  </Link>
-                                  <br />
-                                  <Link href={'/Registration'}>
+                                </Link>
+                                <br />
+                                <Link href={'/Registration'}>
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
                                     Registration
                                   </p>
-                                  </Link>
-                                  <Link href={'/ExemptSupplies'}>
+                                </Link>
+                                <Link href={'/ExemptSupplies'}>
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
                                     Exempt Supplies of Goods & <br /> Services
                                   </p>
-                                  </Link>
-                                  <Link href={'/ReverseCharge'}>
+                                </Link>
+                                <Link href={'/ReverseCharge'}>
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
                                     Reverse Charge Concept
                                   </p>
-                                  </Link>
-                                  <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
-                                    Zero Rated goods + Services
-                                  </p>
-                                
+                                </Link>
+                                <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
+                                  Zero Rated goods + Services
+                                </p>
+
                               </div>
                               <div>
                                 <h1 className="text-xl font-bold leading-8 mt-12 mb-3">
                                   Legal and Policy
                                 </h1>
                                 <Link href={'/LegalandPolicy/TaxLegislation'}>
-                                <p className="text-sm leading-6 font-normal cursor-pointer  hover:text-yellowish line">
-                                  Tax Legislations
-                                </p>
+                                  <p className="text-sm leading-6 font-normal cursor-pointer  hover:text-yellowish line">
+                                    Tax Legislations
+                                  </p>
                                 </Link>
                                 <br />
                                 <Link href={'/LegalandPolicy/Taxations'}>
-                                <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
-                                  Double Taxation Agreements
-                                </p>
+                                  <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
+                                    Double Taxation Agreements
+                                  </p>
                                 </Link>
                                 <br />
                                 <Link href={'/LegalandPolicy/VatRegulations'}>
-                                <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
-                                  VAT Regulations
-                                </p></Link>
+                                  <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
+                                    VAT Regulations
+                                  </p></Link>
                                 <br />
                                 <p className="text-sm leading-6 font-normal mt-1 cursor-pointer hover:text-yellowish line">
                                   Practice Notes and Guidelines
@@ -231,14 +231,19 @@ export default function Header() {
                                 <p className="text-sm font-normal cursor-pointer  hover:text-yellowish line">
                                   Eswatini Income Tax
                                 </p>
+                                </Link>
                                 <br />
+                                <Link href={'/IncomeTax/RatesandThres'}>
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish line">
                                   Rates and Thresholds
                                 </p>
+                                </Link>
                                 <br />
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
-                                  Withholding Taxes
-                                </p>
+                                <Link href={'IncomeTax/WithholdingTax'}>
+                                  <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
+                                    Withholding Taxes
+                                  </p>
+                                </Link>
                                 <br />
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish line">
                                   Taxation of Benefits
@@ -267,7 +272,7 @@ export default function Header() {
                                   Guide on the Appointment of a <br /> Public
                                   Officer
                                 </p>
-                              </Link>
+                            
                             </div>
                             <div>
                               <h1 className="text-xl font-bold leading-8 mb-3">
@@ -325,8 +330,8 @@ export default function Header() {
                     >
                       <h3
                         className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${forms.includes(router.asPath)
-                            ? "text-[#2F3192]"
-                            : "text-black/80"
+                          ? "text-[#2F3192]"
+                          : "text-black/80"
                           }`}
                       >
                         Forms
@@ -468,8 +473,8 @@ export default function Header() {
                     >
                       <h3
                         className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${media.includes(router.asPath)
-                            ? "text-[#2F3192]"
-                            : "text-black/80"
+                          ? "text-[#2F3192]"
+                          : "text-black/80"
                           }`}
                       >
                         Media{" "}
@@ -593,8 +598,8 @@ export default function Header() {
                       <Link href={"/Contact"}>
                         <h3
                           className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${router.asPath === "/Contact"
-                              ? "text-[#2F3192]"
-                              : "text-black/80"
+                            ? "text-[#2F3192]"
+                            : "text-black/80"
                             }`}
                         >
                           Contact Us
