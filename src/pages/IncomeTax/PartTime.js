@@ -37,7 +37,7 @@ const PartTime = () => {
 
                 <div className="art-article" style={{ textAlign: 'justify', color: '#000000' }}>
                     <strong>DEFINITION OF PART TIME EMPLOYEES</strong><br /><br />
-                    The expression part-time employee, for the purposes of employees tax, is defined to mean a person who is not in an employers full-time employ and who is not remunerated as a full-time employee for any services rendered. The expression "part-time employee" excludes unskilled labourers whose remuneration does not exceed E3 416.67 on a monthly basis.<br /><br />
+                    The expression part-time employee, for the purposes of employees tax, is defined to mean a person who is not in an employers full-time employ and who is not remunerated as a full-time employee for any services rendered. The expression part-time employee excludes unskilled labourers whose remuneration does not exceed E3 416.67 on a monthly basis.<br /><br />
                     Part-time remuneration includes the following:<br /><br />
                     (a) Casual payments for irregular services rendered,<br />
                     (b) Fees paid to part-time lecturers,<br />
@@ -59,9 +59,9 @@ const PartTime = () => {
                         </TableHead>
                         <TableHead>
                             <TableRow>
-                                <TableCell  align="center"><strong>Exceeds</strong></TableCell>
+                                <TableCell align="center"><strong>Exceeds</strong></TableCell>
                                 <TableCell align="center"><strong>Does not exceed</strong></TableCell>
-                                
+
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -88,7 +88,7 @@ const PartTime = () => {
                         </TableBody>
                     </Table>
                 </TableContainer>
-                <Typography variant='body1' sx={{ fontWeight: 'bold',my:'1rem' }}>
+                <Typography variant='body1' sx={{ fontWeight: 'bold', my: '1rem' }}>
                     NOTE
                 </Typography>
                 <Typography variant='body1' sx={{}}>
