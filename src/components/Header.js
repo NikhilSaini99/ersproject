@@ -245,31 +245,42 @@ export default function Header() {
                                   </p>
                                 </Link>
                                 <br />
+                                <Link href={'/IncomeTax/Taxationandbenefit'}>
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish line">
                                   Taxation of Benefits
                                 </p>
+                                </Link>
                                 <br />
+                                <Link href={'/IncomeTax/IncomeTaxReturn'}>
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
                                   Income Tax Returns
                                 </p>
+                                </Link>
                                 <br />
+                                <Link href={'/IncomeTax/Retirement'}>
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish line">
                                   Retirement and Redundancy
                                 </p>
+                                </Link>
                                 <br />
+                                <Link href={'/IncomeTax/SelfAssessment'}>
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
                                   Self Assessment
                                 </p>
+                                </Link>
                                 <br />
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish line">
                                   PAYE - Quick Guide
                                 </p>
                                 <br />
+                                <Link href={'/IncomeTax/PartTime'}>
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
                                   Part Time Employees
                                 </p>
+                                </Link>
+                                <br />
                                 <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish line">
-                                  Guide on the Appointment of a <br /> Public
+                                  Guide on the Appointment of a  Public
                                   Officer
                                 </p>
                             
