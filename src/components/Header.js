@@ -181,16 +181,18 @@ export default function Header() {
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
                                     Registration
                                   </p>
+                                  <br />
                                 </Link>
                                 <Link href={'/ExemptSupplies'}>
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
-                                    Exempt Supplies of Goods & <br /> Services
+                                    Exempt Supplies of Goods & Services
                                   </p>
                                 </Link>
                                 <Link href={'/ReverseCharge'}>
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish line">
                                     Reverse Charge Concept
                                   </p>
+                                  <br />
                                 </Link>
                                 <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
                                   Zero Rated goods + Services
@@ -293,35 +295,46 @@ export default function Header() {
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
                                   Eswatini Customs
                                 </p>
+                                </Link>
                                 <br />
+                                <Link href={'/CustomExcise/GeneralRules'}>
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish line">
                                   General Import & Export Rules
                                 </p>
+                                </Link>
                                 <br />
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
                                   Customs Tariff
                                 </p>
                                 <br />
+                                <Link href={'/CustomExcise/CustomProcedure'}>
                                 <p className="text-sm  font-normal my-2 cursor-pointer hover:text-yellowish line">
                                   Customs Procedure Codes
                                 </p>
+                                </Link>
                                 <br />
+                                <Link href={'/CustomExcise/BondedPage'}>
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
                                   Bonded Warehouses/Rebate Store
                                 </p>
+                                </Link>
                                 <br />
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish line">
                                   Free Trade and Preferential <br /> Agreements
                                 </p>
                                 <br />
+                                <Link href={'/CustomExcise/Excisepage'}>
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
                                   Excise
                                 </p>
+                                </Link>
                                 <br />
+                                <Link href={'/CustomExcise/CustomWorksheet'}>
                                 <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish line">
                                   Customs Worksheet
                                 </p>
-                              </Link>
+                                </Link>
+                             
                             </div>
                           </div>
                         </div>
