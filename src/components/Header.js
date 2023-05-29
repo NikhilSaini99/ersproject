@@ -194,10 +194,11 @@ export default function Header() {
                                   </p>
                                   <br />
                                 </Link>
+                                <Link href={'/VAT/ZeroRated'}>
                                 <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
                                   Zero Rated goods + Services
                                 </p>
-
+                                </Link>
                               </div>
                               <div>
                                 <h1 className="text-xl font-bold leading-8 mt-12 mb-3">
@@ -271,9 +272,11 @@ export default function Header() {
                                 </p>
                                 </Link>
                                 <br />
+                                <Link href={'/IncomeTax/Paye'}>
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish line">
                                   PAYE - Quick Guide
                                 </p>
+                                </Link>
                                 <br />
                                 <Link href={'/IncomeTax/PartTime'}>
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
@@ -281,10 +284,12 @@ export default function Header() {
                                 </p>
                                 </Link>
                                 <br />
+                                <Link href={'/IncomeTax/GuidePublicOfficer'}>
                                 <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish line">
                                   Guide on the Appointment of a  Public
                                   Officer
                                 </p>
+                                </Link>
                             
                             </div>
                             <div>
@@ -303,9 +308,11 @@ export default function Header() {
                                 </p>
                                 </Link>
                                 <br />
+                                <Link href={"/customs"}>
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
                                   Customs Tariff
                                 </p>
+                                </Link>
                                 <br />
                                 <Link href={'/CustomExcise/CustomProcedure'}>
                                 <p className="text-sm  font-normal my-2 cursor-pointer hover:text-yellowish line">
