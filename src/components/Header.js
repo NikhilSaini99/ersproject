@@ -221,9 +221,11 @@ export default function Header() {
                                     VAT Regulations
                                   </p></Link>
                                 <br />
+                                <Link href={'/LegalandPolicy/Notes_Guidelines'}>
                                 <p className="text-sm leading-6 font-normal mt-1 cursor-pointer hover:text-yellowish line">
                                   Practice Notes and Guidelines
                                 </p>
+                                </Link>
                               </div>
                             </div>
                             <div>

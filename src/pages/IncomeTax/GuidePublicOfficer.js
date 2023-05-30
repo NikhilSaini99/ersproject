@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
-import Link from 'next/link';
+
 const GuidePublicOfficer = () => {
     const publicOfficerData = [
         {
