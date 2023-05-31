@@ -84,7 +84,7 @@ const Notes_Guidelines = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' }, lineHeight: '1.8' }}>
+            <Box sx={{ width: { xs: '95%',lg: '90%' }, margin: { xs: '2rem auto', lg: '5rem auto' }, lineHeight: '1.8' }}>
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
                     Practice Notes and Guidelines</Typography>
 
@@ -97,7 +97,7 @@ const Notes_Guidelines = () => {
 
 
                 <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '0 auto' }}>
-                    <TableContainer sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
+                    <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }}>
                         <Table>
                             <TableHead>
                                 <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center !important' } }}>
@@ -108,13 +108,15 @@ const Notes_Guidelines = () => {
                             </TableHead>
                             <TableBody>
                                 {documents.map((item, index) => (
-                                    <TableRow key={index} sx={{ '& ul>li': { lineHeight: '1.8',p:'0.5rem' }, }}>
+                                    <TableRow key={index} sx={{ '& ul>li': {lineHeight: '1.8', p: '0.5rem'}  }}>
                                         <TableCell>{item.name}</TableCell>
+
                                         <TableCell><ul>{item.points.map((subpoints, index) => (
                                             <li key={index}>{subpoints}</li>
                                         ))}</ul></TableCell>
+
                                         <TableCell><ul>{item.points.map((_, index) => (
-                                            <li key={index}><DownloadForOfflineIcon /></li>
+                                            <li key={index}><DownloadForOfflineIcon/></li>
                                         ))}</ul></TableCell>
 
                                     </TableRow>
