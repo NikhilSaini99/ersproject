@@ -516,7 +516,7 @@ export default function Home() {
               {item.card.map((card, key) => (
                 <div
                   key={key}
-                  className={`flex flex-col gap-2 py-5 text-black ${card.id && "border-b border-[#DAD8CC]"
+                  className={`flex flex-col gap-2 py-5 text-black ${card.id && key !== item.card.length - 1 ? "border-b border-[#DAD8CC]" : ""
                     }`}
                 >
                   <h1 className="text-lg font-medium leading-6">{card.head}</h1>

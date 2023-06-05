@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { Box, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
@@ -84,7 +84,7 @@ const Notes_Guidelines = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%',lg: '90%' }, margin: { xs: '2rem auto', lg: '5rem auto' }, lineHeight: '1.8' }}>
+            <Box sx={{ width: { xs: '95%', lg: '90%' }, margin: { xs: '2rem auto', lg: '5rem auto' }, lineHeight: '1.8' }}>
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
                     Practice Notes and Guidelines</Typography>
 
@@ -100,24 +100,46 @@ const Notes_Guidelines = () => {
                     <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }}>
                         <Table>
                             <TableHead>
-                                <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center !important' } }}>
+                                <TableRow sx={{ backgroundColor: '#f4c203', '& th': { fontWeight: 'bold', textAlign: 'center !important' } }}>
                                     <TableCell>Type</TableCell>
                                     <TableCell>Name</TableCell>
-                                    <TableCell>Download</TableCell>
+
+                                    {/* <TableCell>Download</TableCell> */}
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {documents.map((item, index) => (
-                                    <TableRow key={index} sx={{ '& ul>li': {lineHeight: '1.8', p: '0.5rem'}  }}>
-                                        <TableCell>{item.name}</TableCell>
+                                    <TableRow key={index} sx={{ '& ul>li': { lineHeight: '1.8', p: '0.5rem' }, }}>
+                                        <TableCell sx={{ fontWeight: 'bold' }}>{item.name}</TableCell>
 
-                                        <TableCell><ul>{item.points.map((subpoints, index) => (
+                                        {/* <TableCell><ul>{item.points.map((subpoints, index) => (
                                             <li key={index}>{subpoints}</li>
-                                        ))}</ul></TableCell>
+                                        ))}</ul></TableCell> */}
 
-                                        <TableCell><ul>{item.points.map((_, index) => (
-                                            <li key={index}><DownloadForOfflineIcon/></li>
-                                        ))}</ul></TableCell>
+
+                                        <TableCell sx={{px:'0'}}>
+                                            {item.points.map((subpoints, index) => (
+
+                                                <TableRow component='div' key={index} sx={{
+                                                    '& div': { border: 'none', '&:hover': { background: '#F2F2F2' } },
+                                                    display: 'flex', justifyContent: 'space-between', width: '100%',
+                                                    borderBottom: index !== item.points.length - 1 ? '0.1rem solid rgba(0,0,0,0.4)' : 'none',
+                                                }}>
+                                                    <TableCell component='div'>{subpoints}</TableCell>
+                                                    <TableCell component='div'>
+                                                        <IconButton><DownloadForOfflineIcon sx={{ color: 'black' }} />
+                                                        </IconButton></TableCell>
+                                                </TableRow>
+                                            ))}
+                                        </TableCell>
+
+                                        {/* <TableCell>
+                                            {item.points.map((_,index)=>(
+                                                <TableRow key={index} sx={{'& td':{border:'none','&:hover':{background:'#F2F2F2'}},xs:{p:'0'}}}>
+                                                 <TableCell><DownloadForOfflineIcon/></TableCell>
+                                                </TableRow>
+                                            ))}
+                                        </TableCell> */}
 
                                     </TableRow>
                                 ))}
