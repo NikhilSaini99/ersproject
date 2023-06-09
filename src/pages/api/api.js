@@ -26,7 +26,7 @@ export const useFetch = (method, path) => {
             const response = await axios(
                 {
                     method: method,
-                    url: `${API_ENDPOINT}${path}`,
+                    url: `${API_ENDPOINT}${path}/`,
                     data: databody
                 }
             )
