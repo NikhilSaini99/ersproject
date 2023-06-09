@@ -6,28 +6,54 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../assets/images/customs.jpg";
 import feedbackimg from '../assets/images/feedbackbg4.svg'
+import axios from 'axios'
+import { submitFeedback,getFeedback } from './api/api'
 
 const Feedback = () => {
-
-  const [feedbackType, setFeedbackType] = useState('')
-  const [fullName, setFullName] = useState('')
-  const [phoneNo, setPhoneNo] = useState('')
+  const [feedbacktype, setFeedbacktype] = useState('')
+  const [name, setFullName] = useState('')
+  const [phone_number, setPhoneNo] = useState('')
   const [email, setEmail] = useState('')
-  const [comments, setComments] = useState('')
+  const [feedback_description, setfeedback_description] = useState('')
+  // const [checkFed,setCheckFed] = useState()
 
-  function handleSubmit(e) {
+  // const myAPI = process.env.NEXT_PUBLIC_API_ENDPOINT;
+
+  // const check = `${myAPI}/userFeedback`
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log({
-      feedbackType: feedbackType,
-      fullName: fullName,
-      phoneNo: phoneNo,
-      email: email,
-      comments: comments
-    })
+    // try {
+    //   const result = await axios.post(check, {
+    //     name: fullName,
+    //     email: email,
+    //     phone_number: phoneNo,
+    //     feedbacktype: feedbackType,
+    //     feedback_description: comments,
+    //     del_status: Date.now()
+    //   })
+    //   if(result.status===200)
+    //   {
+    //     //clear feild on submmision
+    //     setUserFeedback({})
+    //   }
+    // }
+    // catch (err) {
+    //   console.log(err)
+    // }
+
+    submitFeedback({feedbacktype,name,email,phone_number,feedback_description,del_status: Date.now()}) 
+    getFeedback();
+    alert('Thank you for the Feedback!!')
+    setFeedbacktype('')
+    setFullName('')
+    setPhoneNo('')
+    setEmail('')
+    setfeedback_description('')
   }
 
   function handleFeedbackType(e) {
-    setFeedbackType(e.target.value)
+    setFeedbacktype(e.target.value)
   }
   return (
     <>
@@ -41,7 +67,7 @@ const Feedback = () => {
       {/*-----------------------Header---------------------*/}
 
       <Header />
-    
+
       {/* Feedback Form */}
       <Box sx={{
         position: 'relative',
@@ -50,22 +76,22 @@ const Feedback = () => {
         backgroundPosition: 'center',
         py: '5rem',
       }}>
-        <Typography variant='h1' sx={{ fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', color: 'white',pb:'2rem' }}>Feedback Form</Typography>
+        <Typography variant='h1' sx={{ fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', color: 'white', pb: '2rem' }}>Feedback Form</Typography>
         <Box sx={{ width: { xs: '96%', md: '50%', xl: '65%' }, margin: '0rem auto' }} component='form'
           onSubmit={handleSubmit}>
 
           <Paper elevation={20} sx={{ maxWidth: '750px', borderRadius: '5%', margin: '0 auto' }}>
 
-            <Stack sx={{ maxWidth: '600px', display: 'flex', justifyContent: 'center', margin: '0 auto', gap: {xs:'1rem', md: '1rem', xl: '0.4rem' }, px: { xs: '2rem', lg: '1rem' } }}>
+            <Stack sx={{ maxWidth: '600px', display: 'flex', justifyContent: 'center', margin: '0 auto', gap: { xs: '1rem', md: '1rem', xl: '0.4rem' }, px: { xs: '2rem', lg: '1rem' } }}>
 
               <FormControl sx={{ width: { xs: '60%', md: '65%', xl: '40%', alignSelf: 'center' }, mt: { xs: '2rem', lg: '3rem' } }}>
                 <InputLabel id="Feedback-type">Feedback Type</InputLabel>
                 <Select
                   labelId='Feedback-type'
                   id="Feedback-type"
-                  value={feedbackType}
+                  value={feedbacktype}
                   onChange={handleFeedbackType}
-                  label="Feedback-type">
+                  label="Feedback-type" required>
                   <MenuItem value={'Compliment'}>Compliment</MenuItem>
                   <MenuItem value={'Complaint'}>Complaint</MenuItem>
                   <MenuItem value={'Suggestion'}>Suggestion</MenuItem>
@@ -73,14 +99,14 @@ const Feedback = () => {
               </FormControl>
 
               <InputLabel htmlFor="full-Name">Full Name</InputLabel>
-              <TextField variant='outlined' size='medium' type='text' value={fullName} onChange={(e) => setFullName(e.target.value)} />
+              <TextField variant='outlined' size='medium' type='text' value={name} onChange={(e) => setFullName(e.target.value)} required/>
               <InputLabel htmlFor="full-Name">Phone</InputLabel>
-              <TextField variant='outlined' size='medium' type='number' value={phoneNo} onChange={(e) => setPhoneNo(e.target.value)} />
+              <TextField variant='outlined' size='medium' type='number' value={phone_number} onChange={(e) => setPhoneNo(e.target.value)} required/>
               <InputLabel htmlFor="full-Name">Email Address</InputLabel>
-              <TextField variant='outlined' size='medium' type='text' value={email} onChange={(e) => setEmail(e.target.value)} />
+              <TextField variant='outlined' size='medium' type='text' value={email} onChange={(e) => setEmail(e.target.value)} required/>
               <InputLabel htmlFor="full-Name">Comments</InputLabel>
-              <TextField variant='outlined' size='medium' type='text' multiline={true} minRows={5} value={comments} onChange={(e) => setComments(e.target.value)} sx={{mb:'1rem'}}/>
-              <Button type="submit" variant='contained' color='primary' sx={{ background: '#2f2483 !important', color: 'white', alignSelf: 'center', width: '10rem', mb: { xs: '2rem', lg: '3rem' },p:'0.8rem' }}>Send</Button>
+              <TextField variant='outlined' size='medium' type='text' multiline={true} minRows={5} value={feedback_description} onChange={(e) => setfeedback_description(e.target.value)} sx={{ mb: '1rem' }} required/>
+              <Button type="submit" variant='contained' color='primary' sx={{ background: '#2f2483 !important', color: 'white', alignSelf: 'center', width: '10rem', mb: { xs: '2rem', lg: '3rem' }, p: '0.8rem' }}>Send</Button>
             </Stack>
           </Paper>
         </Box>
