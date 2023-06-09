@@ -8,6 +8,7 @@ import Banner from "../assets/images/customs.jpg";
 import feedbackimg from '../assets/images/feedbackbg4.svg'
 import axios from 'axios'
 import { submitFeedback,getFeedback } from './api/api'
+import { useFetch } from './api/api'
 
 const Feedback = () => {
   const [feedbacktype, setFeedbacktype] = useState('')
@@ -20,6 +21,11 @@ const Feedback = () => {
   // const myAPI = process.env.NEXT_PUBLIC_API_ENDPOINT;
 
   // const check = `${myAPI}/userFeedback`
+
+
+    const {data,fetchAPI} = useFetch('post','/api/userFeedback')
+
+
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -42,8 +48,9 @@ const Feedback = () => {
     //   console.log(err)
     // }
 
-    submitFeedback({feedbacktype,name,email,phone_number,feedback_description,del_status: Date.now()}) 
-    getFeedback();
+    // submitFeedback({feedbacktype,name,email,phone_number,feedback_description,del_status: Date.now()}) 
+    fetchAPI({feedbacktype,name,email,phone_number,feedback_description,del_status: Date.now()})
+    // getFeedback();
     alert('Thank you for the Feedback!!')
     setFeedbacktype('')
     setFullName('')
