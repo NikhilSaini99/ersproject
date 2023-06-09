@@ -1,6 +1,5 @@
 import axios from "axios";
-import { useCallback } from "react";
-import { useReducer } from "react";
+import { useCallback,useReducer,useEffect} from "react";
 
 
 const API_ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT
@@ -18,6 +17,7 @@ function reducerFunc(state, action) {
 }
 
 export const useFetch = (method, path) => {
+
     const [state, dispatch] = useReducer(reducerFunc, {
         data: null
     })
