@@ -16,7 +16,7 @@ function Media() {
   return (
     <>
             <section>
-        <div className="bg-zinc-300  bg-opacity-50 md:px-12 px-28 py-10 mt-16 ">
+        <div className="bg-zinc-300  bg-opacity-50 md:px-12 px-28 py-16  ">
           <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Facebook</h1>
@@ -115,25 +115,7 @@ function NewsCard({ url, img, title, date, description }) {
   const [cardHover, setCardHover] = useState(false)
   return (
     <>
-      {/* OLD CODE  */}
-      {/* <Link href={`${url}`}>
-      <div className="flex flex-col p-6 gap-4 hover:shadow-[0_3px_10px_rgb(0,0,0,0.3)]">
-          <div className="object-cover">
-            <Image src={img} alt="..." className="mx-auto" />
-          </div>
-          <div className="flex flex-col gap-[6px]">
-            <h1 className="inline-flex text-2xl leading-7 font-medium text-black hover:text-subColor hover:underline">
-              {title}
-            </h1>
-            <h3 className="text-[#969fb0] text-base font-normal">{date}</h3>
-            <p className="text-base leading-6 font-normal text-justify">
-              {description}
-            </p>
-          </div>
-      </div>
-        </Link> */}
-
-      {/* NEW ONE BELOW THIS */}
+           {/* NEW ONE BELOW THIS */}
 
       <Paper elevation={12} sx={{ margin: { xs: '0px 5rem 4rem 6rem', md: '0px 5rem 4rem 2rem', lg: '0px 5rem 4rem 6rem', xl: '0px 5rem 4rem 15rem' }, width: { xs: '85%', md: '90%', lg: '78%', xl: '70%' } }}>
         <Stack sx={{ flexDirection: 'column', overflow: 'hidden' }}>

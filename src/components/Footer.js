@@ -14,21 +14,40 @@ import { appIcon } from '../content/data'
 
 
 export default function Footer() {
+  // const footerArrowStyling = {
+  //   width: {md:'60%',lg:'50%'},
+  //   height: '120px',
+  //   background: '#2f2483',
+  //   position: 'relative',
+
+  //   '&:before': {
+  //     content: '""',
+  //     position: 'absolute',
+  //     right: '-60px',
+  //     bottom: '0',
+  //     width: '0',
+  //     height: '0',
+  //     borderLeft: '60px solid #2f2483',
+  //     borderTop: '60px solid transparent',
+  //     borderBottom: '60px solid transparent',
+  //   }
+  // }
   return (
     <>
       <Box className="main" color='white' sx={{
         display: 'flex', gap: '0',
         flexDirection: 'column'
       }}>
-        <Box sx={{ position: 'relative', }}>
+        <Box sx={{ position: 'relative', bgcolor: '#F7C347' }}>
           <Image src={Foot} sizes="100vw" alt="footer_head" style={{
             backgroundSize: 'cover',
             backgroundPosition: 'center', height: '8rem'
           }} />
+          {/* <Box sx={{ ...footerArrowStyling }}></Box> */}
           <Stack sx={{
             position: 'absolute', top: '0', left: '0',
             width: '100%',
-            display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, justifyContent: 'space-between', px: { xs: '1.5rem', lg: '3rem' }, pt: '2rem'
+            display: 'flex', flexDirection: { xs: 'column', md: 'row', lg: 'row' }, justifyContent: 'space-between', px: { xs: '1.5rem', lg: '3rem' }, pt: '2rem'
             , gap: { xs: '2rem' }
           }}>
             <Box className="leftSide" sx={{
@@ -36,16 +55,16 @@ export default function Footer() {
               width: { xs: '100%', lg: '60%' }
             }}>
               <Typography variant="h4" sx={{
-                fontSize: { xs: '1.5rem', lg: '1.5rem' }, fontWeight: 'bold'
+                fontSize: { xs: '1.5rem', md: '1rem', lg: '1.5rem' }, fontWeight: 'bold'
               }}>
                 Connect With Us</Typography>
               <Typography variant="h4" sx={{
-                fontSize: { xs: '1rem', lg: '1rem' },
+                fontSize: { xs: '1rem', md: '0.8rem', lg: '1rem' },
               }}>
                 Stay updated with ERS news, data, publications, projects, events and
                 opportunities.</Typography>
             </Box>
-            <Box className="RightSide" sx={{ display: 'flex', gap: { xs: '0.8rem', lg: '1.5rem' },pt:'1rem' }}>
+            <Box className="RightSide" sx={{ display: 'flex', gap: { xs: '0.8rem', lg: '1.5rem' }, pt: '1rem' }}>
               <RiMailFill className="SocialsStyling" />
               <SiTwitter className="SocialsStyling" />
               <IoLogoYoutube className="SocialsStyling" />
@@ -57,8 +76,8 @@ export default function Footer() {
         </Box>
 
         {/* About ERS */}
-        <Box color='white' bgcolor='#04308A'>
-          <Stack direction={'row'} bgcolor='#04308A' sx={{
+        <Box color='white' bgcolor='#2F3192'>
+          <Stack direction={'row'} bgcolor='#2F3192' sx={{
             position: 'relative',
             top: { xs: '-3.5px', lg: '-2.5px' },
             px: { xs: '1.5rem', lg: '3rem' }, pt: { xs: '0.8rem', lg: '1rem' },

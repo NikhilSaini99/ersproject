@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
@@ -9,6 +9,8 @@ import Newses from "../assets/images/news.jpg"
 import { Grid, Stack, Typography } from "@mui/material";
 import rightSideBackground from '../assets/images/sidebar-bg-image.jpg'
 import {newses} from '../content/data'
+import { useFetch } from "./api/api";
+
 
 export const LatestNewsSection = ()=>{
   return(
@@ -56,6 +58,15 @@ export const LatestNewsSection = ()=>{
 }
 
 export default function News() {
+  const { data: VatData, fetchAPI } = useFetch('get', '/api/news')
+
+  useEffect(() => {
+    fetchAPI()
+  },[])
+
+  console.log(VatData?.data?.data[0]?.description)
+
+  
    
   return (
     <>
