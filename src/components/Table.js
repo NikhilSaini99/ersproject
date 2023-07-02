@@ -128,30 +128,31 @@ export default function FormTable({ title }) {
           <TableContainer sx={{borderRadius:'10px'}}>
             <Table className={''} aria-label="Form Table">
               <TableHead>
-                <TableRow sx={{ backgroundColor: '#2f2483', }}>
-                  <TableCell sx={{ color: 'white', fontWeight: 'bold',fontSize:'1rem' }}>S.No</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold',fontSize:'1rem' }}> Form Name</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold' ,fontSize:'1rem'}}>Category</TableCell>
-                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold',minWidth:'8rem',fontSize:'1rem' }}>Size</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold',fontSize:'1rem' }}>Description</TableCell>
-                  <TableCell align="left" sx={{ color: 'white', fontWeight: 'bold',fontSize:'1rem' }}>Download</TableCell>
+                <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { color: 'white !important', fontWeight: 'bold !important',fontSize:'1rem !important' } }}>
+                  <TableCell >S.No</TableCell>
+                  <TableCell align="left" > Form Name</TableCell>
+                  <TableCell align="left" >Category</TableCell>
+                  <TableCell align="center" >Size</TableCell>
+                  <TableCell align="left" >Description</TableCell>
+                  <TableCell align="left" >Download</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {formdata.map((form,index) => (
                   <TableRow key={index} sx={{
+                    '& > *':{},
                     '&:hover': {
                       background: '#F2F2F2'
                     }
                   }}>
-                    <TableCell component="th" scope="row" align="right" sx={{ fontWeight: 'bold' }}>
+                    <TableCell component="th" scope="row" align="right" >
                       {form.num}
                     </TableCell>
-                    <TableCell align="left" sx={{ fontWeight: 'bold' }}>{form.name}</TableCell>
-                    <TableCell align="left" sx={{ fontWeight: 'bold' }}>{form.category}</TableCell>
-                    <TableCell align="right" sx={{ fontWeight: 'bold' }}>{form.size}</TableCell>
-                    <TableCell align="left" sx={{ fontWeight: 'bold' }}>{form.description}</TableCell>
-                    <TableCell align="center" sx={{ fontWeight: 'bold' }}><DownloadForOfflineRoundedIcon sx={{ fontSize: '2rem' }} /></TableCell>
+                    <TableCell align="left" >{form.name}</TableCell>
+                    <TableCell align="left" >{form.category}</TableCell>
+                    <TableCell align="right" >{form.size}</TableCell>
+                    <TableCell align="left" >{form.description}</TableCell>
+                    <TableCell align="center" ><DownloadForOfflineRoundedIcon sx={{ fontSize: '2rem' }} /></TableCell>
                   </TableRow>
                 ))}
               </TableBody>
