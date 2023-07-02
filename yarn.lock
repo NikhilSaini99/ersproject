@@ -2310,6 +2310,11 @@
   dependencies:
     "yallist" "^4.0.0"
 
+"material-icons@^1.13.8":
+  "integrity" "sha512-vnLGXKa/AwFUxUgkiX39EpYVFttPhDQcKdVylIqmUUqz+Eo/O9A3BkdPCU3/G5cJOTezHi5B/b8sEpKYgUNAwQ=="
+  "resolved" "https://registry.npmjs.org/material-icons/-/material-icons-1.13.8.tgz"
+  "version" "1.13.8"
+
 "merge-stream@^2.0.0":
   "integrity" "sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w=="
   "resolved" "https://registry.npmjs.org/merge-stream/-/merge-stream-2.0.0.tgz"

@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-
+import 'material-icons/iconfont/material-icons.css';
 export default function App({ Component, pageProps }) {
   const theme = createTheme({
     typography: {

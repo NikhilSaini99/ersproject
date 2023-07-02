@@ -2,7 +2,7 @@ import React from "react";
 // import { Inter } from 'next/font/google'
 import Head from "next/head";
 import Home from "./home";
-
+import 'material-icons/iconfont/material-icons.css';
 
 export default function Index() {
 

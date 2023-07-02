@@ -220,3 +220,8 @@ ul li.starclass:before {
   transform: scale(1.5);
   transition: ease 0.3s;
 }
+
+
+.sub_items_text_color  p{
+  color: rgb(148 163 184);
+}
