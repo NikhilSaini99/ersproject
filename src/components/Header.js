@@ -563,29 +563,30 @@ export default function Header() {
                           </div>
 
                           <div className="pt-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
-                            <div className="flex flex-col">
-                            <div>
-                              <h1 className="text-xl font-bold leading-8 mb-3">
-                                News
-                              </h1>
-                              <Link href={"/news"} >
-                                <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
-                                  Authorised Economic
-                                  Operator Accreditation
-                                </p>
-                              </Link>
-                              <Link href={"/news"} >
-                                <p className="text-sm leading-6 font-normal my-3  cursor-pointer hover:text-yellowish line">
-                                  ERS Donates To Ekululameni Center
-                                </p>
-                              </Link>
+                            <div className="flex flex-col sub_items_text_color">
 
-                              <Link href={"/news"} >
-                                <p className="text-sm leading-6 font-normal cursor-pointer  hover:text-yellowish line">
-                                  Pay your Tax on Time
-                                </p>
-                              </Link>
-</div>
+                              <div>
+                                <h1 className="text-xl font-bold leading-8 mb-3">
+                                  News
+                                </h1>
+                                <Link href={"/news"} >
+                                  <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
+                                    Authorised Economic
+                                    Operator Accreditation
+                                  </p>
+                                </Link>
+                                <Link href={"/news"} >
+                                  <p className="text-sm leading-6 font-normal my-3  cursor-pointer hover:text-yellowish line">
+                                    ERS Donates To Ekululameni Center
+                                  </p>
+                                </Link><br />
+                                <Link href={"/news"} >
+                                  <p className="text-sm leading-6 font-normal cursor-pointer  hover:text-yellowish line">
+                                    Pay your Tax on Time
+                                  </p>
+                                </Link>
+                              </div>
+
                             </div>
 
                             <div className="flex flex-col">
@@ -596,37 +597,40 @@ export default function Header() {
                                 <p className="text-sm font-normal cursor-pointer  hover:text-yellowish line">
                                   Income Tax Mobile  Clinic
                                 </p>
-                                </Link>
-                                <Link href={"/gallery"}>
+                              </Link>
+                              <Link href={"/gallery"}>
                                 <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish line">
                                   PM Submits Income Tax  Returns
                                 </p>
-                                </Link>
-                                <Link href={"/gallery"}>
+                              </Link>
+                              <Link href={"/gallery"}>
                                 <p className="text-sm  mt-3 cursor-pointer  hover:text-yellowish line">
                                   Lomahasha Border  Hours Extension
                                 </p>
                               </Link>
                             </div>
+
+
                             <div className="flex flex-col">
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 Videos
                               </h1>
                               <Link href={"/videos"}>
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
-                                  ERS Public 
+                                  ERS Public
                                   Meeting in Ezulmini
                                 </p>
-                                </Link>
-                                <Link href={"/videos"}>
+                              </Link>
+                              <Link href={"/videos"}>
                                 <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish line">
-                                  Pay your Tax 
+                                  Pay your Tax
                                   in Three Steps
                                 </p>
                               </Link>
                             </div>
                           </div>
                         </div>
+
                       </ul>
                     </div>
                   </div>
