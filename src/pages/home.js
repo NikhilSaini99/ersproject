@@ -22,9 +22,11 @@ import table from "../assets/icons/table.png";
 import { MdOutlineCalendarMonth, AiOutlineArrowDown } from "react-icons/md";
 import { FcAbout } from "react-icons/fc";
 import { Button, Grid, IconButton, Paper } from "@mui/material";
-import styles from '@/styles/Home.module.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useRef } from "react";
+import { Icons } from "@/components/homecard";
+
+
 
 
 export default function Home() {
@@ -51,6 +53,8 @@ export default function Home() {
     }
   }
   // ----------------------Resources-----------------------
+
+
 
   const resourceData = [
     {
@@ -238,16 +242,7 @@ export default function Home() {
             <div className="border w-20 md:w-32 xl:w-14 border-yellowish mt-1"></div>
           </div>
 
-          <div className="flex flex-wrap justify-center md:justify-center gap-4 xs:gap-6 md:gap-12 xl:gap-20 2xl:gap-24 mt-6">
-            {resourceData.map((item, key) => (
-              <Resources
-                key={key}
-                icon={item.icon}
-                title={item.title}
-                link={item.link}
-              />
-            ))}
-          </div>
+          <Icons />
         </div>
       </section>
 

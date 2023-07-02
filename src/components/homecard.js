@@ -5,54 +5,94 @@ import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill } from "react-icons/bs";
 import { Button, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
-import calculator from "../assets/icons/calculator.png";
+
+
+import CalculateIcon from '@mui/icons-material/Calculate';
+import TableChartIcon from '@mui/icons-material/TableChart';
+import CurrencyPoundIcon from '@mui/icons-material/CurrencyPound';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import LiveHelpIcon from '@mui/icons-material/LiveHelp';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+
+const Icons = () => {
+  const iconStyling = {
+    transition:'transform 0.5s',
+    fontSize: '2rem', color: '#2F3192', backgroundColor: '#E3E5FF',  width: '80px', height: '80px', p: '18px', '&:hover': {
+      backgroundColor: '#2F3192', color: '#E3E5FF', transform:'scale(1.2)' , transition:'transform 0.5s',
+    },
+    borderRadius: '50% 0 50% 0',
+  }
+  return (
+    <>
+      <div className="flex flex-wrap justify-center md:justify-center gap-4 xs:gap-6 md:gap-12 xl:gap-20 2xl:gap-24 mt-6">
+       
+          <Link href="/Calculator" className="flex flex-col gap-2">
+           <CalculateIcon sx={iconStyling} />
+            <p className="text-center text-sm font-medium">
+              Calculator
+            </p></Link>
+      
+        
+          <Link href="/TaxTables" className="flex flex-col gap-2"> 
+          <TableChartIcon sx={iconStyling} />
+            <p className="text-center text-sm font-medium">
+              Tables
+            </p></Link>
+       
+    
+          <Link href="https://etax.sra.org.sz/" className="flex flex-col gap-2"> 
+          <CurrencyPoundIcon sx={iconStyling} />
+            <p className="text-center text-sm font-medium">
+              Codes
+            </p></Link>
+    
+   
+          <Link href="/TaxItemTable" className="flex flex-col gap-2">
+           <BarChartIcon sx={iconStyling} />
+            <p className="text-center text-sm font-medium">
+              Calculator
+            </p></Link>
+   
+      
+          <Link href="/Hotline" className="flex flex-col gap-2">
+          <ConnectWithoutContactIcon sx={iconStyling} />
+            <p className="text-center text-sm font-medium">
+              Hotline
+            </p></Link>
+  
+    
+          <Link href="/FAQ" className="flex flex-col gap-2">
+          <LiveHelpIcon sx={iconStyling} />
+            <p className="text-center text-sm font-medium">
+              FAQs
+            </p></Link>
+  
+    
+          <Link href="http://www.sra.org.sz/documents/1619530285.pdf" className="flex flex-col gap-2">
+          <TrendingUpIcon sx={iconStyling} />
+            <p className="text-center text-sm font-medium">
+              Business
+            </p></Link>
+     
+     
+          <Link href="https://www.ers.org.sz/documents/1493283598.pdf" className="flex flex-col gap-2">
+          <FlightTakeoffIcon sx={iconStyling} />
+            <p className="text-center text-sm font-medium">
+              Travelling
+            </p></Link>
+     
+      </div>
+    </>
+  )
+}
 
 
 function News({ icon, description, img }) {
   return (
     <>
-      {/* <div className=" flex flex-col justify-between relative border-2 border-solid border-[#F5F5F5] h-[360px] w-[320px] group">
-
-        <Image src={img} alt="" className="mt-3" />
-
-
-        <div className=" flex flex-col group-hover:hidden bg-[#F5F5F5] p-4">
-          <h1 className="text-[24px] font-bold ">{title}</h1>
-          <h2 className="text-[14px] text-[#2F3192] font-semibold mt-2">{description}</h2>
-        </div>
-
-
-        <div className=" absolute flex flex-col p-4 text-white h-[360px] w-[320px] bg-[rgba(23,25,124,0.8)] opacity-0   group-hover:opacity-100 transition-transform duration-100  ">
-          <h1 className="text-[27px] font-bold text-center">{title}</h1>
-          <p className="text-base mt-3 leading-[22px]">{p}</p>
-          <h2 className="text-lg font-semibold mt-4">{description}</h2>
-        </div>
-
-      </div> */}
-
-      {/* <div className="flex main cursor-pointer">
-        <div className="basis-1/2 flex flex-col justify-between pt-10">
-          <h1 className="text-subColor text-center text-3xl font-semibold head ease-in-out duration-500">
-            {title}
-          </h1>
-          <p className="text-xl px-5 text-center font-medium para ease-in-out duration-500">{description}</p>
-          <h3 className="text-white text-base font-medium bg-mainColor py-5 px-10 flex items-center box">
-             Know More
-            <span>
-              <RiArrowDropRightLine className=" ease-in-out duration-500 btn" size={30} />
-            </span>
-          </h3>
-        </div>
-        <div className="basis-1/2 bg-[#DAD8CC]">
-          <Image
-            src={img}
-            alt="..."
-            className="mx-auto h-96 px-5 py-16 item scale-100 ease-in duration-500"
-          />
-        </div>
-      </div> */}
-      {/*  */}
-      <div className=" border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400 ">
+        <div className=" border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400 ">
         <div className="object-cover relative " >
           <Image src={img} alt="..." className="h-48 w-full" />
           <div className="rounded-2xl absolute -bottom-[76px] left-8 px-8 py-4 bg-white ">
@@ -72,18 +112,9 @@ function News({ icon, description, img }) {
   );
 }
 
-function Resources({ icon, title, link }) {
-  return (
-    <>
-      <Link className="flex flex-col gap-2" href={link}>
-        <div className="flex justify-center items-center bg-[#E3E5FF]  hover:invert border-2 border-[#E3E5FF] hover:border-2 hover:border-[#DAD8CC] rounded-full cursor-pointer">
-          <Image src={icon} alt={title} className="fill h-7 w-7 m-4 " />
-        </div>
-        <h1 className="text-center text-sm font-medium">{title}</h1>
-      </Link>
-    </>
-  );
-}
+
+  
+
 
 
 function Centers({ title, description, contact }) {
@@ -115,4 +146,4 @@ function Centers({ title, description, contact }) {
   );
 }
 
-export { News, Resources, Centers };
+export { News, Icons, Centers };
