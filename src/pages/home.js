@@ -534,9 +534,6 @@ export default function Home() {
                   <MdOutlineCalendarMonth className="text-5xl" />
                   {item.title}
                 </h1>
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5 ">
-                  See All
-                </button>
               </div>
               {item.card.map((card, key) => (
                 <div
@@ -566,9 +563,6 @@ export default function Home() {
                   <FcAbout className="text-5xl" />
                   {item.title}
                 </h1>
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5">
-                  See All
-                </button>
               </div>
               {item.card.map((card, key) => (
                 <div
