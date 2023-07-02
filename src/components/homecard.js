@@ -77,16 +77,21 @@ function Resources({ icon, title,link }) {
     <>
       <Link className="flex flex-col gap-2" href={link}>
         <div className="flex justify-center items-center bg-[#E3E5FF] border-2 border-[#E3E5FF] hover:border-2 hover:border-[#DAD8CC] rounded-full cursor-pointer">
-          <Image src={icon} alt="" className="fill h-7 w-7 m-4" />
+          <Image src={icon} alt={title} className="fill h-7 w-7 m-4"/>
         </div>
         <h1 className="text-center text-sm font-medium">{title}</h1>
       </Link>
+      {/* <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-armchair-2 group" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 10v-4a3 3 0 0 1 3 -3h8a3 3 0 0 1 3 3v4" class="group-hover:text-blue-500"></path>
+   <path d="M16 15v-2a3 3 0 1 1 3 3v3h-14v-3a3 3 0 1 1 3 -3v2" class="group-hover:text-blue-500"></path>
+   <path d="M8 12h8" class="group-hover:text-blue-500"></path>
+   <path d="M7 19v2" class="group-hover:fill-blue-500"></path>
+   <path d="M17 19v2" class="group-hover:fill-blue-500"></path>
+</svg> */}
     </>
   );
 }
-
-
-
 
 
 function Centers({ title, description, contact }) {
