@@ -25,6 +25,7 @@ import { Button, Grid, IconButton, Paper } from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useRef } from "react";
 import { Icons } from "@/components/homecard";
+import DatasetLinkedOutlinedIcon from '@mui/icons-material/DatasetLinkedOutlined';
 
 
 
@@ -555,7 +556,7 @@ export default function Home() {
             <div key={id} className="flex flex-col">
               <div className="flex justify-between items-center">
                 <h1 className="flex items-center gap-1 text-subColor text-2xl font-medium leading-8">
-                  <FcAbout className="text-5xl" />
+                  <DatasetLinkedOutlinedIcon className="text-5xl" />
                   {item.title}
                 </h1>
               </div>
