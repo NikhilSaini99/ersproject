@@ -191,7 +191,7 @@ const ExemptSupplies = () => {
                     {exemptServices.map((item) =>
                         item.hasOwnProperty("subServices") ? (
                             <>
-                                <li key={item.id} className="Pointsformatting">
+                                <li key={item.id} className="Pointsformatting" >
                                   <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling}/></span>  {item.service}
                                     <ul
                                         style={{ listStyleType: "lower-roman", marginLeft: "1rem", marginTop: '0.5rem', marginBottom: '0.5rem' }}
