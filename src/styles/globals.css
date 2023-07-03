@@ -163,12 +163,12 @@ ul li.starclass:before {
   margin-right: 0.5rem;
 }
 
-.custom-list>li:before {
+/* .custom-list>li:before {
   content: '\2726';
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   list-style-type: none;
-}
+} */
 
 .calculatorFormStyling {
   padding: 3rem;
@@ -241,3 +241,11 @@ ul li.starclass:before {
   color:#EBF1FC !important
 }
 
+
+/* Exempt Supplies Styling */
+
+.Pointsformatting{
+  font-size: 20px;
+  letter-spacing: 0.025em;
+  line-height: 1.8;
+}

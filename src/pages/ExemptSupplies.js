@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Banner from "../assets/images/bg2.jpg";
 import Footer from "@/components/Footer";
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 
@@ -147,7 +147,16 @@ const ExemptSupplies = () => {
     ];
 
 
+    const body1Styling = {
+        fontSize: '20px',
+        my: '0.5rem'
+    }
 
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight:'0.5rem'
+    }
 
 
     return (
@@ -165,15 +174,15 @@ const ExemptSupplies = () => {
             <Box>
                 <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-            <Box sx={{ width: "80%", margin: { xs: "2rem auto", lg: "5rem auto" } }}>
-                <Typography variant="h4" component="h1" sx={{color:'#2f2483',fontWeight:'bold',my:'3.5rem'}}>
+            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "5rem auto" } }}>
+                <Typography variant="h1" sx={{ my: '3.5rem' }}>
                     Exempt Supplies of Goods & Services
                 </Typography>
-                <Typography variant="h5" component="h2" sx={{ fontWeight: "bold",my:'1rem' }}>
+                <Typography variant="h5" component="h2" sx={{ fontWeight: "bold", my: '1rem' }}>
                     PART A
                 </Typography>
-                <Typography variant="body1">EXEMPT SUPPLY OF SERVICES</Typography>
-                <Typography variant="body1">
+                <Typography variant="body1" sx={body1Styling}>EXEMPT SUPPLY OF SERVICES</Typography>
+                <Typography variant="body1" sx={body1Styling}>
                     The following services shall, subject to the provisions of paragraph
                     2, be specified as exempt supplies for the purposes of section 19 of
                     the VAT Amendment Act -
@@ -181,44 +190,49 @@ const ExemptSupplies = () => {
                 <ul className="custom-list">
                     {exemptServices.map((item) =>
                         item.hasOwnProperty("subServices") ? (
-                            <li key={item.id}>
-                                {item.service}
-                                <ul
-                                    style={{ listStyleType: "lower-roman", marginLeft: "1rem" }}
-                                >
-                                    {item.subServices.map((subitem) => (
-                                        <li key={subitem.id} style={{marginLeft:'2rem'}}>{subitem.service}</li>
-                                    ))}
-                                </ul>
-                            </li>
+                            <>
+                                <li key={item.id} className="Pointsformatting">
+                                  <span><ArrowForwardIosIcon sx={arrowStyling}/></span>  {item.service}
+                                    <ul
+                                        style={{ listStyleType: "lower-roman", marginLeft: "1rem", marginTop: '0.5rem', marginBottom: '0.5rem' }}
+                                    >
+                                        {item.subServices.map((subitem) => (
+                                            <li key={subitem.id} className="Pointsformatting" style={{ marginLeft: '2rem' }}>{subitem.service}</li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            </>
                         ) : (
-                            <li style={{ marginLeft: "0rem" }} key={item.id}>
-                                {item.service}
+                            <>
+                            <li style={{ marginLeft: "0rem" }} className="Pointsformatting" key={item.id}>
+                            <span><ArrowForwardIosIcon sx={arrowStyling}/></span> {item.service}
                             </li>
+                            </>
                         )
                     )}
                 </ul>
 
 
-                <Typography variant="h5" component="h2" sx={{ fontWeight: "bold",my:'1rem' }}>
+                <Typography variant="h5" component="h2" sx={{ fontWeight: "bold", mt: '2.5rem' }}>
                     PART B
                 </Typography>
-                <Typography variant="body1">EXEMPT SUPPLY OF GOODS</Typography>
-                <Typography variant="body1">1.(1) The following goods are specified for purposes of Section 20 of this Act-</Typography>
+                <Typography variant="body1" sx={body1Styling}>EXEMPT SUPPLY OF GOODS</Typography>
+                <Typography variant="body1" sx={body1Styling}>The following goods are specified for purposes of Section 20 of this Act</Typography>
 
                 <ul className="custom-list">
 
                     {exemptGoods.map((item) => (
                         item.hasOwnProperty('subPoints') ?
-                            <li key={item.id} >
-                                {item.point}
-                                <ul style={{ listStyleType: "lower-roman",  marginLeft: "1rem"}}>
+                            <li key={item.id} className="Pointsformatting">
+                            <span><ArrowForwardIosIcon sx={arrowStyling}/></span>   {item.point}
+                                <ul style={{ listStyleType: "lower-roman", marginLeft: "1rem", mb: '1rem', marginTop: '0.5rem', marginBottom: '0.5rem' }}>
                                     {item.subPoints.map((subpoint) => (
-                                        <li key={subpoint.id} style={{marginLeft:'2rem'}}>{subpoint.point}</li>
+                                        <li key={subpoint.id} style={{ marginLeft: '2rem' }} className="Pointsformatting">{subpoint.point}</li>
                                     ))}
                                 </ul>
                             </li>
-                            : <li key={item.id}>{item.point}</li>
+                            : <li key={item.id} className="Pointsformatting">
+                            <span><ArrowForwardIosIcon sx={arrowStyling}/></span>{item.point}</li>
                     ))}
                 </ul>
             </Box>
