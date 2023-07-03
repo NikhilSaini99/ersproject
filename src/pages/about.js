@@ -15,12 +15,12 @@ import hero3 from "../assets/images/herosection3.jpg";
 import hero4 from "../assets/images/herosection4.jpg";
 import hero5 from "../assets/images/herosection5.jpg";
 import cardImg from "../assets/images/card.jpg";
-import lastSectionImg from '../assets/images/lastsection.png'
 import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import styles from "@/styles/about.module.css";
 import Slider from "react-slick";
 import { taxpayerCharter } from '../content/data'
+
 
 export default function about() {
   const memeberData = [
@@ -141,6 +141,7 @@ export default function about() {
     ],
   };
 
+ 
   return (
     <>
       <Head>
@@ -358,8 +359,6 @@ export default function about() {
       </Box>
 
       {/*-------------------------- Council Memeber section End here------------------- */}
-
-
 
       <Box className={`${styles.cardeffect} ${styles.borderLine}`} sx={{ width: '98%', margin: '6rem auto', position: 'relative', textAlign: 'left' }}>
         <Image

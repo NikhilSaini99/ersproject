@@ -381,13 +381,13 @@ export default function Home() {
                 <p className="text-yellowish text-xl font-normal">Tender</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                   <li className="">
-                    <span>Download this tender document to apply: Approved R1.1 RFT002 - Manage Printing Services</span>
+                    <span>Approved R1.1 RFT002 - Manage Printing Services</span>
                   </li>
                   <li className="">
-                    <span>Download this tender document to apply: Approved R2.1 RFT003 - HVAC Services</span>
+                    <span>Approved R2.1 RFT003 - HVAC Services</span>
                   </li>
                   <li className="">
-                    <span>Download this tender document to apply: Approved R3.1 RFT004 - Solar Energy</span>
+                    <span>Approved R3.1 RFT004 - Solar Energy</span>
                   </li>
                 </ul>
               </div>
@@ -420,13 +420,13 @@ export default function Home() {
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
 
                   <li className="">
-                    <span>Download this tender document to apply: Approved R1.1 RFT002 - Manage Printing Services</span>
+                    <span>  Approved R1.1 RFT002 - Manage Printing Services</span>
                   </li>
                   <li className="">
-                    <span>Download this tender document to apply: Approved R2.1 RFT003 - HVAC Services</span>
+                    <span>  Approved R2.1 RFT003 - HVAC Services</span>
                   </li>
                   <li className="">
-                    <span>Download this tender document to apply: Approved R3.1 RFT004 - Solar Energy</span>
+                    <span>  Approved R3.1 RFT004 - Solar Energy</span>
                   </li>
                 </ul>
               </div>
