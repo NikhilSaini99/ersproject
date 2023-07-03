@@ -477,9 +477,10 @@ export default function Header() {
                                 our TOLL  FREE line..
                               </p>
                               <hr className="border-white/30 my-5" />
-                              <p className="px-8 text-sm leading-6 font-normal text-right pb-12">
+                              <p className="px-8 text-sm leading-6 font-normal text-right pb-12 viewMoreColor">
                                 View More
                               </p>
+                              
                             </div>
                           </div>
                           {/* Right Side of Menu */}
@@ -650,7 +651,7 @@ export default function Header() {
                                 our TOLL  FREE line..
                               </p>
                               <hr className="border-white/30 my-5" />
-                              <p className="px-8 text-sm leading-6 font-normal text-right pb-12">
+                              <p className="px-8 text-sm leading-6 font-normal text-right pb-12 viewMoreColor">
                                 View More
                               </p>
                             </div>
