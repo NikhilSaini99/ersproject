@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import { Box, Stack, Typography, List, ListItem, ListItemText } from '@mui/material'
+import { Box, Stack, Typography, List, ListItem, ListItemText, Divider } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../assets/images/registration.jpg";
@@ -28,7 +28,6 @@ const Registration = () => {
   const FaqContainerStyling = {
     maxWidth: '95%',
     margin: '0 auto',
-    backgroundColor: '#F7F7FB',
     borderRadius: '20px',
   }
 
@@ -38,12 +37,11 @@ const Registration = () => {
     margin: '0 auto',
     display: 'flex',
     flexDirection: 'column',
-    gap: '2rem',
+    gap: '1rem',
   }
 
   const insideAccordionStyle = {
-    borderRadius: '14px',
-    border: '2px solid grey',
+   
     background: '#FFFFFF',
     /* Buttons/ Color - Default */
     boxShadow: '0px 6px 16px 0px rgba(74, 58, 255, 0.19)',
@@ -61,8 +59,9 @@ const Registration = () => {
     justifyContent: 'space-between',
     lineHeight: '28px',
     fontWeight: '500',
-    textTransform:'capitalize'
+    textTransform:'capitalize',
   }
+
 
   const questionandanswer = [
     {
@@ -119,25 +118,27 @@ const Registration = () => {
       </Box>
 
       <Box sx={{ width: '80%', margin: { xs: '2rem auto', lg: '5rem auto', } }}>
-        <Typography variant="h1" sx={{ my: '2.5rem', textAlign: 'center' }}>
-          Registration
-        </Typography>
-
 
         <Box sx={FaqContainerStyling}>
+    
           <Stack sx={accordionStyling}>
+          <Typography variant="h1">
+          Registration
+        </Typography>
             {/* question and arrow*/}
             {questionandanswer.map((item, index) => (
               <Stack key={index} sx={insideAccordionStyle}>
                 <Stack sx={questionStyling}>
-                  <Typography variant='h6' sx={{ color: '#14142B', fontSize: '1.3rem',}}>{item.question}</Typography>
+                  <Typography variant='h6' sx={{ color: '#14142B', fontSize: '1.5rem',}}>{item.question}</Typography>
                   <Box sx={{ cursor: 'pointer', background: 'cover' }} onClick={() => handleOpen(index)}>
                       <Image src={rightarrow} width={0} height={0} alt="arrow" />
                   </Box>
                 </Stack>
+                {isOpen===index&&<Divider sx={{borderColor:'rgba(0,0,0,0.5)'}}/>}
                 {/* answer */}
                 <Typography variant='body1' sx={{
-                  lineHeight: '30px', color: '#6F6C90',
+                  fontSize: '1.1rem',
+                  lineHeight: '30px', color: '#6F6C90', pb:'2rem',
                   display: isOpen === index ? 'block' : 'none'
                 }}>{item.answer}</Typography>
               </Stack>

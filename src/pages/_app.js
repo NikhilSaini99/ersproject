@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
       h1: {
         color: '#2F248F',
         fontSize: '2.5rem',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       }
     },
   });

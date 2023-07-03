@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../assets/images/customs.jpg";
 import feedbackimg from '../assets/images/feedbackbg4.svg'
+import patternimg from '../assets/images/pattern-bg.avif'
 import axios from 'axios'
 import { submitFeedback,getFeedback } from './api/api'
 import { useFetch } from './api/api'
@@ -83,7 +84,7 @@ const Feedback = () => {
         backgroundPosition: 'center',
         py: '5rem',
       }}>
-        <Typography variant='h1' sx={{ fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', color: 'white', pb: '2rem' }}>Feedback Form</Typography>
+        <Typography variant='h1' sx={{ textAlign: 'center', pb: '2rem' }}>Feedback Form</Typography>
         <Box sx={{ width: { xs: '96%', md: '50%', xl: '65%' }, margin: '0rem auto' }} component='form'
           onSubmit={handleSubmit}>
 

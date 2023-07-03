@@ -26,6 +26,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useRef } from "react";
 import { Icons } from "@/components/homecard";
 import DatasetLinkedOutlinedIcon from '@mui/icons-material/DatasetLinkedOutlined';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 
@@ -52,6 +53,10 @@ export default function Home() {
     }
   }
 
+  const arrowStyling={
+    color: '#2f2483',
+    fontSize:'1rem'
+  }
 
   // ----------------------Resources-----------------------
 
@@ -478,9 +483,9 @@ export default function Home() {
                   </div>
 
                   <ul className={`text-sm font-normal leading-7  ${isOpen === key ? 'block' : 'hidden'}`} >
-                    <li>{card.para && <span className="mr-2">&#10022;</span>}{card.para}</li>
-                    <li>{card.para2 && <span className="mr-2">&#10022;</span>}{card.para2}</li>
-                    <li>{card.para3 && <span className="mr-2">&#10022;</span>}{card.para3}</li>
+                    <li>{card.para && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para}</li>
+                    <li>{card.para2 && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para2}</li>
+                    <li>{card.para3 && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para3}</li>
                   </ul>
                 </div>
               ))}
@@ -508,13 +513,13 @@ export default function Home() {
 
                   <ul className={`text-sm font-normal leading-7 ${isOpen2 === key + 1 ? 'block' : 'hidden'} `}>
                     <Link href={`${card.link}`}>
-                      <li className="">{card.para && <span className="mr-2 ">&#10022;</span>}{card.para}</li>
+                      <li className="">{card.para && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para}</li>
                     </Link>
                     <Link href={`${card.link2}`}>
-                      <li className=""> {card.para2 && <span className="mr-2 ">&#10022;</span>}{card.para2}</li>
+                      <li className=""> {card.para2 && <span className="mr-2 "><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para2}</li>
                     </Link>
                     <Link href={`${card.link3}`}>
-                      <li className="">{card.para3 && <span className="mr-2 ">&#10022;</span>}{card.para3}</li>
+                      <li className="">{card.para3 && <span className="mr-2 "><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para3}</li>
                     </Link>
                   </ul>
                 </div>
