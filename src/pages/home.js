@@ -45,7 +45,7 @@ export default function Home() {
   }
 
   const handleOpen2 = (index) => {
-    if (isOpen === index) {
+    if (isOpen2 === index) {
       setisOpen2(null);
     }
     else {
