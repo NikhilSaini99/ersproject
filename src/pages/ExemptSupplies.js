@@ -155,7 +155,7 @@ const ExemptSupplies = () => {
     const arrowStyling = {
         color: '#2f2483',
         fontSize: '1rem',
-        marginRight:'0.5rem'
+        marginRight: '0.5rem'
     }
 
 
@@ -174,7 +174,7 @@ const ExemptSupplies = () => {
             <Box>
                 <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "5rem auto" }}}>
+            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "5rem auto" } }}>
                 <Typography variant="h1" sx={{ my: '3.5rem' }}>
                     Exempt Supplies of Goods & Services
                 </Typography>
@@ -191,22 +191,27 @@ const ExemptSupplies = () => {
                     {exemptServices.map((item) =>
                         item.hasOwnProperty("subServices") ? (
                             <>
-                                <li key={item.id} className="Pointsformatting" >
-                                  <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling}/></span>  {item.service}
-                                    <ul
-                                        style={{ listStyleType: "lower-roman", marginLeft: "1rem", marginTop: '0.5rem', marginBottom: '0.5rem' }}
-                                    >
-                                        {item.subServices.map((subitem) => (
-                                            <li key={subitem.id} className="Pointsformatting" style={{ marginLeft: '2rem' }}>{subitem.service}</li>
-                                        ))}
-                                    </ul>
-                                </li>
+                                <div className='flex gap-1 items-start'>
+                                    <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                    <li key={item.id} className="Pointsformatting" >
+                                        {item.service}
+                                        <ul 
+                                            style={{ listStyleType: "lower-roman", marginLeft: "1rem", marginTop: '0.5rem', marginBottom: '0.5rem' }}
+                                        >
+                                            {item.subServices.map((subitem) => (
+                                                <li key={subitem.id} className="Pointsformatting" style={{ marginLeft: '1.3rem' }}>{subitem.service}</li>
+                                            ))}
+                                        </ul>
+                                    </li>
+                                </div>
                             </>
                         ) : (
                             <>
-                            <li style={{ marginLeft: "0rem" }} className="Pointsformatting" key={item.id}>
-                            <span  className="Pointsformatting" ><ArrowForwardIosIcon sx={arrowStyling}/></span> {item.service}
-                            </li>
+                                <div className='flex gap-1 items-start'>
+                                    <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                    <li style={{ marginLeft: "0rem" }} className="Pointsformatting" key={item.id}>{item.service}
+                                    </li>
+                                </div>
                             </>
                         )
                     )}
@@ -223,16 +228,26 @@ const ExemptSupplies = () => {
 
                     {exemptGoods.map((item) => (
                         item.hasOwnProperty('subPoints') ?
-                            <li key={item.id} className="Pointsformatting">
-                            <span><ArrowForwardIosIcon sx={arrowStyling}/></span>   {item.point}
-                                <ul style={{ listStyleType: "lower-roman", marginLeft: "1rem", mb: '1rem', marginTop: '0.5rem', marginBottom: '0.5rem' }}>
-                                    {item.subPoints.map((subpoint) => (
-                                        <li key={subpoint.id} style={{ marginLeft: '2rem' }} className="Pointsformatting">{subpoint.point}</li>
-                                    ))}
-                                </ul>
-                            </li>
-                            : <li key={item.id} className="Pointsformatting">
-                            <span><ArrowForwardIosIcon sx={arrowStyling}/></span>{item.point}</li>
+                            <>
+                                <div className='flex gap-1 items-start'>
+                                    <span className="Pointsformatting" ><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                    <li key={item.id} className="Pointsformatting">
+                                        {item.point}
+                                        <ul style={{ listStyleType: "lower-roman", marginLeft: "1rem", mb: '1rem', marginTop: '0.5rem', marginBottom: '0.5rem' }}>
+                                            {item.subPoints.map((subpoint) => (
+                                                <li key={subpoint.id} style={{ marginLeft: '1.3rem' }} className="Pointsformatting">{subpoint.point}</li>
+                                            ))}
+                                        </ul>
+                                    </li>
+                                </div>
+                            </>
+                            : <>
+                                <div className='flex gap-1 items-start'>
+                                    <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                    <li key={item.id} className="Pointsformatting">
+                                        {item.point}</li>
+                                </div>
+                            </>
                     ))}
                 </ul>
             </Box>
