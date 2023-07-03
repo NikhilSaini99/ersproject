@@ -31,7 +31,10 @@ module.exports = {
       },
       screens:{
         xs:'0px'
-      }
+      },
+      fontFamily: {
+        sans: ['ui-sans-serif', 'system-ui', '-apple-system','Arial Regular', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue',  'Noto Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [

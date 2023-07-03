@@ -254,7 +254,7 @@ export default function Home() {
       {/*------------------News Section-------------------*/}
 
 
-      <section className="bg-[#F7F7FA] py-16 ">
+      <section className="bg-[#F7F7FA] py-16">
         <div className="px-4 md:px-14">
           <h1 className="text-subColor text-center md:text-start text-2xl lg:text-4xl font-semibold">
             Important Links
@@ -521,7 +521,7 @@ export default function Home() {
 
       {/*---------------------Tax Section----------------------*/}
 
-      <section className="py-16 px-14 bg-[#F7F7FA]">
+      <section className="pt-2 pb-16 px-14 bg-[#F7F7FA]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-48">
           {TaxData.map((item, id) => (
             <div key={id} className="flex flex-col">

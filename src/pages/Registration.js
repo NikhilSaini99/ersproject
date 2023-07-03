@@ -5,9 +5,95 @@ import { Box, Stack, Typography, List, ListItem, ListItemText } from '@mui/mater
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../assets/images/registration.jpg";
+import downarrow from '../assets/images/downarrow.svg'
+import rightarrow from '../assets/images/rightarrow.svg'
+import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
+import { useState } from 'react'
+
 
 
 const Registration = () => {
+  const [isOpen, setisOpen] = useState(null)
+
+  const handleOpen = (index) => {
+    console.log(index)
+    console.log(isOpen)
+    if (isOpen === index) {
+      setisOpen(null);
+    }
+    else {
+      setisOpen(index); // Open the clicked FAQ
+    }
+  }
+  const FaqContainerStyling = {
+    maxWidth: '75%',
+    margin: '0 auto',
+    backgroundColor: '#F7F7FB',
+    borderRadius: '20px',
+  }
+
+  const accordionStyling = {
+    py: '3rem',
+    width: '95%',
+    margin: '0 auto',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '2rem',
+  }
+
+  const insideAccordionStyle = {
+    borderRadius: '14px',
+    border: '2px solid #4A3AFF',
+    background: '#FFFFFF',
+    /* Buttons/ Color - Default */
+    boxShadow: '0px 6px 16px 0px rgba(74, 58, 255, 0.19)',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1rem',
+    px: '2rem',
+    py: '0.2rem'
+  }
+
+  const questionStyling = {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    lineHeight: '28px',
+    fontWeight: '500',
+  }
+
+  const questionandanswer = [
+    {
+      question: 'WHO SHOULD REGISTER?',
+      answer: 'The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E500 000.Any business with reasonable expectations to reach this amount should also apply to register.National, regional or public institutions (parastatals and municipalities) which make taxable supplies are required to register for VAT even though they do not meet the above mentioned threshold.Businesses supplying only exempt goods and services are not required to register. However, where a business supplies both exempt and taxable services, that business must register if the total turnover of the taxable supplies meets the annual turnover of E500 000.'
+    },
+    {
+      question: 'VOLUNTARY REGISTRATION?',
+      answer: 'Other businesses whose turnover is below the threshold of E500 000 may apply for registration if they meet the registration requirements and the Commissioner General is satisfied that they are fit and proper to be registered.'
+    },
+    {
+      question: 'WHAT ARE THE REGISTRATION REQUIREMENTS?',
+      answer: 'A Fixed place of doing business in Eswatini\nCapacity to keep proper accounting records\nCapability to submit regular and reliable returns.'
+    },
+    {
+      question: 'WHAT ATTACHMENTS SHOULD BE INCLUDED IN THE TIN REGISTRATION FORM?',
+      answer: 'Taxpayers can collect the TIN registration form from the nearest ERS office or download it from here.\nComplete and submit the form with all attachments to any ERS office.\nThe ERS will review the application and inform the taxpayer of the outcome within 30 days. In some cases this may include inspection.\nOnce registered a taxpayer shall be given a registration certificate with a Taxpayer Identification Number (TIN) to be quoted in all dealings with the ERS.'
+    },
+    {
+      question: 'WHAT IS THE REGISTRATION PROCESS?',
+      answer: 'The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E500 000.'
+    },
+    {
+      question: 'WHAT ARE THE OBLIGATIONS OF A VAT REGISTERED BUSINESS?',
+      answer: 'Display registration certificate in a prominent place on the business premises as proof that the business is authorized to collect VAT\nCharge VAT on their taxable supplies with effect from their registration date\nIssue tax invoices for all their supplies\nMaintain and keep accurate accounting records within the country\nSubmit VAT returns with payments to the ERS periodically (i.e. no later than the due dates)\nUpdate registration information whenever there is a need to do so.'
+    },
+    {
+      question: 'CAN A BUSINESS CANCEL REGISTRATION?',
+      answer: 'A business registered for VAT may apply in writing for the cancellation of registration if that business has ceased making taxable supplies or no longer meets the registration threshold.\nThe Commissioner-General may also cancel the registration of a business if that business:\n\nno longer has a proper and fixed place of business\ndoes not keep proper accounting records\noes not submit regular and reliable tax returns\nis not, in the opinion of the Commissioner-General, a fit and proper person to be registered'
+    },
+  ]
+
   return (
     <>
       <Head>
@@ -20,158 +106,47 @@ const Registration = () => {
 
       <Header />
       {/*-----------------------Banner---------------------*/}
-      <Box sx={{height:{xs:'15rem',lg:'25rem',xs:'30rem'}}}>
-      <Image src={Banner} alt=""
-              width={0}
-              height={0}
-              style={{
-                width: "100%", height: "100%",
-                objectFit: 'cover'
-              }}
-            />
+      <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
+        <Image src={Banner} alt=""
+          width={0}
+          height={0}
+          style={{
+            width: "100%", height: "100%",
+            objectFit: 'cover'
+          }}
+        />
       </Box>
 
-      <Box sx={{ width: '80%', margin: { xs: '2rem auto', lg: '5rem auto', }}}>
-        <Typography variant="h1" sx={{my:'2.5rem'}}>
+      <Box sx={{ width: '80%', margin: { xs: '2rem auto', lg: '5rem auto', } }}>
+        <Typography variant="h1" sx={{ my: '2.5rem', textAlign: 'center' }}>
           Registration
         </Typography>
-        <Typography variant="h5" sx={{my:'1.5rem'}} component="h2">
-          WHO SHOULD REGISTER?
-        </Typography>
-        <Typography>
-          The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E500 000.
-        </Typography>
-        <Typography fontWeight='bold'>
-          Any business with reasonable expectations to reach this amount should also apply to register.
-        </Typography>
-        <Typography>
-          National, regional or public institutions (parastatals and municipalities) which make taxable supplies are required to register for VAT even though they do not meet the above mentioned threshold.
-        </Typography>
-        <Typography>
-          Businesses supplying only exempt goods and services are not required to register. However, where a business supplies both exempt and taxable services, that business must register if the total turnover of the taxable supplies meets the annual turnover of E500 000.
-        </Typography>
-
-        <Typography variant="h5" sx={{my:'1.5rem'}} component="h2">
-          VOLUNTARY REGISTRATION
-        </Typography>
-        <Typography>
-          Other businesses whose turnover is below the threshold of E500 000 may apply for registration if they meet the registration requirements and the Commissioner General is satisfied that they are fit and proper to be registered.
-        </Typography>
-
-        <Typography variant="h5" sx={{my:'1.5rem'}} component="h2">
-          WHAT ARE THE REGISTRATION REQUIREMENTS?
-        </Typography>
-        <ul className="custom-list">
-          <li>
-            A Fixed place of doing business in Eswatini
-          </li>
-          <li>
-            Capacity to keep proper accounting records
-          </li>
-          <li>
-            Capability to submit regular and reliable returns
-          </li>
-        </ul>
-
-        <Typography variant="h5" sx={{my:'1.5rem'}} component="h2">
-          WHAT ATTACHMENTS SHOULD BE INCLUDED IN THE TIN REGISTRATION FORM?
-        </Typography>
-        <Typography variant="h6" >
-        Where applicable the following should be attached:
-        </Typography>
-        <ul className="custom-list">
-          <li>
-            Certified copy of a Certificate of Incorporation (for companies only)
-          </li>
-          <li>
-            Certified copy of Form J (for companies only)
-          </li>
-          <li>
-            Certified copy of Power of Attorney (where applicable)
-          </li>
-          <li>
-            Certified copy of personal identity document (of the Public Officer)
-          </li>
-          <li>
-            Certified copy of partnership deed (if the business is a partnership)
-          </li>
-          <li>
-            Deed of trust (where applicable)
-          </li>
-          <li>
-            Deed of sale (if it is a takeover)
-          </li>
-          <li>
-            Constitution (Only for NGOs and welfare organizations)
-          </li>
-          <li>
-            Certified copy of Trading License
-          </li>
-        </ul>
-
-        <Typography variant="h5" sx={{my:'1.5rem'}} component="h2">
-          WHAT IS THE REGISTRATION PROCESS
-        </Typography>
-        <ol style={{marginLeft:'1.5rem',marginBottom:'0.5rem'}}>
-          <li>Taxpayers can collect the TIN registration form from the nearest ERS office or download it from here.</li>
-          <li>Complete and submit the form with all attachments to any ERS office.</li>
-          <li>The ERS will review the application and inform the taxpayer of the outcome within 30 days. In some cases this may include inspection.</li>
-        </ol>
-        <Typography>Once registered a taxpayer shall be given a registration certificate with a Taxpayer Identification Number (TIN) to be quoted in all dealings with the ERS.</Typography>
 
 
+        <Box sx={FaqContainerStyling}>
+          <Stack sx={accordionStyling}>
+            {/* question and arrow*/}
+            {questionandanswer.map((item, index) => (
+              <Stack key={index} sx={insideAccordionStyle}>
+                <Stack sx={questionStyling}>
+                  <Typography variant='h6' sx={{ color: '#14142B', fontSize: '1.3rem',}}>{item.question}</Typography>
+                  <Box sx={{ cursor: 'pointer', background: 'cover' }} onClick={() => handleOpen(index)}>
+                    {/* {isOpen === index ? <Image src={downarrow} width={0} height={0} alt="arrow" /> :
+                      <Image src={rightarrow} width={0} height={0} alt="arrow" />} */}
+                      <Image src={rightarrow} width={0} height={0} alt="arrow" />
+                  </Box>
+                </Stack>
+                {/* answer */}
+                <Typography variant='body1' sx={{
+                  lineHeight: '30px', color: '#6F6C90',
+                  display: isOpen === index ? 'block' : 'none'
+                }}>{item.answer}</Typography>
+              </Stack>
+            ))}
+            {/* ref={(e)=>myRef.current[index]=e} */}
+          </Stack>
+        </Box>
 
-        <Typography variant="h5" sx={{my:'1.5rem'}} component='h2'>WHAT ARE THE OBLIGATIONS OF A VAT REGISTERED BUSINESS?</Typography>
-        <Typography variant="h6" >
-        Once registered taxpayers are expected to comply with the following:
-        </Typography>
-        <ul className="custom-list">
-          <li>
-            Display registration certificate in a prominent place on the business premises as proof that the business is authorized to collect VAT.
-          </li>
-          <li>
-            Charge VAT on their taxable supplies with effect from their registration date.
-          </li>
-          <li>
-            Issue tax invoices for all their supplies.
-          </li>
-          <li>
-            Maintain and keep accurate accounting records within the country.
-          </li>
-          <li>
-            Submit VAT returns with payments to the ERS periodically (i.e., no later than the due dates).
-          </li>
-          <li>
-            Update registration information whenever there is a need to do so.
-          </li>
-        </ul>
-
-
-
-
-        <Typography variant="h5" sx={{my:'1.5rem'}} component="h2">
-          CAN A BUSINESS CANCEL REGISTRATION?
-        </Typography>
-        <Typography>
-          A business registered for VAT may apply in writing for the cancellation of registration if that business has ceased making taxable supplies or no longer meets the registration threshold.
-        </Typography>
-        <Typography variant="h6" >
-        The Commissioner-General may also cancel the registration of a business if that business:
-        </Typography>
-        <ul className="custom-list">
-          <li>
-            No longer has a proper and fixed place of business.
-          </li>
-          <li>
-            Does not keep proper accounting records.
-          </li>
-          <li>
-            Does not submit regular and reliable tax returns.
-          </li>
-          <li>
-            Is not, in the opinion of the Commissioner-General, a fit and proper person to be registered.
-          </li>
-        </ul>
       </Box>
 
       {/*-----------------------Footer---------------------*/}
