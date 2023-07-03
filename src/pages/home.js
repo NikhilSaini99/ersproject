@@ -554,11 +554,11 @@ export default function Home() {
             How can we help you?
           </h1>
           <p className="xs:text-base text-xl font-normal leading-8 xs:px-5 md:px-10">
-            <Link href=""><span className="border-b-2 border-yellowish">Get in touch</span></Link> with
-            us or{" "}
-            <Link href=""> <span className="border-b-2 border-yellowish">find an office</span></Link>{" "}
+            <Link href="/Contact"><span className="border-b-2 border-yellowish">Get in touch</span></Link> with
+            us or{""}
+            <Link href="/Contact"> <span className="border-b-2 border-yellowish">find an office</span></Link>{" "}
             closest to you.
-          </p>
+          </p>  
 
           <div className="flex gap-0">
             <p className="xs:text-lg text-xl font-normal leading-8">Any Feedback for us?</p>
