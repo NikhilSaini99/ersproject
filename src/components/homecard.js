@@ -103,7 +103,7 @@ function News({ icon, description, img }) {
           <p className="mt-5 mb-8 text-base font-normal">{description}</p>
           <Link href={"/customs"}>
             <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
-              KNOW MORE
+              Know More
             </button>
           </Link>
         </div>

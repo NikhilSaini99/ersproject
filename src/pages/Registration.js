@@ -26,7 +26,7 @@ const Registration = () => {
     }
   }
   const FaqContainerStyling = {
-    maxWidth: '75%',
+    maxWidth: '95%',
     margin: '0 auto',
     backgroundColor: '#F7F7FB',
     borderRadius: '20px',
@@ -43,7 +43,7 @@ const Registration = () => {
 
   const insideAccordionStyle = {
     borderRadius: '14px',
-    border: '2px solid #4A3AFF',
+    border: '2px solid grey',
     background: '#FFFFFF',
     /* Buttons/ Color - Default */
     boxShadow: '0px 6px 16px 0px rgba(74, 58, 255, 0.19)',
@@ -61,35 +61,36 @@ const Registration = () => {
     justifyContent: 'space-between',
     lineHeight: '28px',
     fontWeight: '500',
+    textTransform:'capitalize'
   }
 
   const questionandanswer = [
     {
-      question: 'WHO SHOULD REGISTER?',
+      question: 'Who Should Register?',
       answer: 'The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E500 000.Any business with reasonable expectations to reach this amount should also apply to register.National, regional or public institutions (parastatals and municipalities) which make taxable supplies are required to register for VAT even though they do not meet the above mentioned threshold.Businesses supplying only exempt goods and services are not required to register. However, where a business supplies both exempt and taxable services, that business must register if the total turnover of the taxable supplies meets the annual turnover of E500 000.'
     },
     {
-      question: 'VOLUNTARY REGISTRATION?',
+      question: 'Voluntary Registration?',
       answer: 'Other businesses whose turnover is below the threshold of E500 000 may apply for registration if they meet the registration requirements and the Commissioner General is satisfied that they are fit and proper to be registered.'
     },
     {
-      question: 'WHAT ARE THE REGISTRATION REQUIREMENTS?',
+      question: 'What are the resgistration requirements?',
       answer: 'A Fixed place of doing business in Eswatini\nCapacity to keep proper accounting records\nCapability to submit regular and reliable returns.'
     },
     {
-      question: 'WHAT ATTACHMENTS SHOULD BE INCLUDED IN THE TIN REGISTRATION FORM?',
+      question: 'What attachments should be icluded in the TIN registration form?',
       answer: 'Taxpayers can collect the TIN registration form from the nearest ERS office or download it from here.\nComplete and submit the form with all attachments to any ERS office.\nThe ERS will review the application and inform the taxpayer of the outcome within 30 days. In some cases this may include inspection.\nOnce registered a taxpayer shall be given a registration certificate with a Taxpayer Identification Number (TIN) to be quoted in all dealings with the ERS.'
     },
     {
-      question: 'WHAT IS THE REGISTRATION PROCESS?',
+      question: 'What is the registration process?',
       answer: 'The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E500 000.'
     },
     {
-      question: 'WHAT ARE THE OBLIGATIONS OF A VAT REGISTERED BUSINESS?',
+      question: 'What are the obligations of a VAT registered business?',
       answer: 'Display registration certificate in a prominent place on the business premises as proof that the business is authorized to collect VAT\nCharge VAT on their taxable supplies with effect from their registration date\nIssue tax invoices for all their supplies\nMaintain and keep accurate accounting records within the country\nSubmit VAT returns with payments to the ERS periodically (i.e. no later than the due dates)\nUpdate registration information whenever there is a need to do so.'
     },
     {
-      question: 'CAN A BUSINESS CANCEL REGISTRATION?',
+      question: 'Can a business cancel registration?',
       answer: 'A business registered for VAT may apply in writing for the cancellation of registration if that business has ceased making taxable supplies or no longer meets the registration threshold.\nThe Commissioner-General may also cancel the registration of a business if that business:\n\nno longer has a proper and fixed place of business\ndoes not keep proper accounting records\noes not submit regular and reliable tax returns\nis not, in the opinion of the Commissioner-General, a fit and proper person to be registered'
     },
   ]
@@ -131,8 +132,6 @@ const Registration = () => {
                 <Stack sx={questionStyling}>
                   <Typography variant='h6' sx={{ color: '#14142B', fontSize: '1.3rem',}}>{item.question}</Typography>
                   <Box sx={{ cursor: 'pointer', background: 'cover' }} onClick={() => handleOpen(index)}>
-                    {/* {isOpen === index ? <Image src={downarrow} width={0} height={0} alt="arrow" /> :
-                      <Image src={rightarrow} width={0} height={0} alt="arrow" />} */}
                       <Image src={rightarrow} width={0} height={0} alt="arrow" />
                   </Box>
                 </Stack>

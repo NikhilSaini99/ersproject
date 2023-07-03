@@ -31,28 +31,28 @@ import DatasetLinkedOutlinedIcon from '@mui/icons-material/DatasetLinkedOutlined
 
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(true)
-  const [isOpen2, setIsOpen2] = useState(true)
-  const myRef = useRef([])
-  const myRef2 = useRef([])
+  const [isOpen, setisOpen] = useState(null)
+  const [isOpen2, setisOpen2] = useState(null)
+
   const handleOpen = (index) => {
-    setIsOpen(!isOpen)
-    if (isOpen) {
-      myRef.current[index].style.display = 'block'
+    if (isOpen === index) {
+      setisOpen(null);
     }
     else {
-      myRef.current[index].style.display = 'none'
+      setisOpen(index); // Open the clicked FAQ
     }
   }
+
   const handleOpen2 = (index) => {
-    setIsOpen2(!isOpen2)
-    if (isOpen2) {
-      myRef2.current[index].style.display = 'block'
+    if (isOpen === index) {
+      setisOpen2(null);
     }
     else {
-      myRef2.current[index].style.display = 'none'
+      setisOpen2(index); // Open the clicked FAQ
     }
   }
+
+
   // ----------------------Resources-----------------------
 
 
@@ -279,14 +279,14 @@ export default function Home() {
         <div className="flex flex-row bg-[#F7F7FA] text-xl justify-center font-semibold leading-6">
           <button
             onClick={() => toggleVisibility("div1")}
-            className={`py-3 w-60 rounded-t-xl ${isVisible.div1 ? "bg-subColor text-white" : "bg-white text-black"}`}
+            className={`py-3 w-60 rounded-t-xl ${isVisible.div1 ? "bg-subColor text-white" : "bg-white text-black shadow-2xl"}`}
           >
             Recently Approved
           </button>
 
           <button
             onClick={() => toggleVisibility("div2")}
-            className={`py-3 w-60 rounded-t-xl ${isVisible.div2 ? "bg-subColor text-white" : "bg-white text-black"}`}
+            className={`py-3 w-60 rounded-t-xl ${isVisible.div2 ? "bg-subColor text-white" : "bg-white text-black shadow-2xl"}`}
           >
             Notice Board
           </button>
@@ -294,231 +294,166 @@ export default function Home() {
 
         {/* Recently Approved */}
         <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full `}>
-          <div className="flex flex-col md:flex-row justify-between px-4 md:px-12 py-10 h-5/6">
+          <div className="flex flex-col md:flex-row justify-between px-4 md:px-12 py-10 h-[22rem]">
             {/* Content for first div */}
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100 px-4">
               <div>
                 <p className="text-yellowish text-xl font-normal">Recently Approved Guidelines</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col">
-                  <li className="my-8">
+                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+                  <li className="">
                     <span>SRA-Minstry of Finance Guidelines to Taxpayers- COVID-19</span>
                   </li>
                   <li className="">
                     <span>Guideline on Donor Funded Projects</span>
                   </li>
-                  <li className="mt-8">
+                  <li className="">
                     <span>Guideline on Domestic Taxes Exemptions</span>
                   </li>
                 </ul>
               </div>
-              <div className="flex w-full justify-end">
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
-                  See All
-                </button>
-              </div>
+
             </div>
 
 
 
-            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for second div */}
             <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4 justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Approved Practice Notes</p>
-                <ul className="list-disc pl-[1.5rem] text-sm my-8">
+                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
                   <li>
                     Click here to download approved practice notes and guidelines
                   </li>
                 </ul>
               </div>
-              <div className="flex w-full justify-end">
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
-                  See All
-                </button>
-              </div>
+
             </div>
 
-            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for third div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4   justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Recently Approved Forms</p>
-                <ul className="list-disc pl-[1.5rem] text-sm ">
+                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
 
-                  <li className="my-8">
+                  <li className="">
                     <span>VAT De-Registration Form</span>
                   </li>
                   <li className="">
                     <span>Public Officer Application Form</span>
                   </li>
-                  <li className="my-8">
+                  <li className="">
                     <span>Notice of Objection Form</span>
                   </li>
                 </ul>
               </div>
-              <div className="flex w-full justify-end">
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
-                  See All
-                </button>
-              </div>
+
             </div>
-            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for fourth div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4  justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Publication</p>
-                <ul className="list-disc pl-[1.5rem] text-sm ">
-                  <li className="my-8">SRA Strategic Plan 2015-2018</li>
+                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2 ">
+                  <li className="">SRA Strategic Plan 2015-2018</li>
                   <li className="">
                     Swaziland Revenue Authority - Strategic Plan 2012/13 - 2014/15
                   </li>
-                  <li className="my-8">15% VAT Presentation</li>
+                  <li className="">15% VAT Presentation</li>
                   <li className="">Trade Statistics</li>
                 </ul>
               </div>
-              <div className="flex w-full justify-end">
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
-                  See All
-                </button>
-              </div>
+
             </div>
           </div>
         </div>
         {/* Notice Board */}
 
         <div className={`${isVisible.div2 ? "block" : "hidden"} bg-subColor text-white w-full `}>
-          <div className="flex flex-col md:flex-row justify-between px-4 md:px-14 py-10 h-5/6">
+          <div className="flex flex-col md:flex-row justify-between px-4 md:px-12 py-10 h-[22rem]">
             {/* Content for first div */}
-            <div className="flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem]  text-midnightblue-100 px-4 h-full justify-between">
-
+            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100 px-4">
               <div>
                 <p className="text-yellowish text-xl font-normal">Tender</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col">
-                  <li className="my-3">
-                    <span>Download this tender document to apply: </span>
-                    <a
-                      className="text-[inherit]"
-                      href="https://www.ers.org.sz/administrator/notices/1679299306.pdf"
-                      target="_blank"
-                    >
-                      <span>Approved R1.1 RFT002 - Manage Printing Services</span>
-                    </a>
+                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+                  <li className="">
+                    <span>Download this tender document to apply: Approved R1.1 RFT002 - Manage Printing Services</span>
                   </li>
                   <li className="">
-                    <span>Download this tender document to apply: </span>
-                    <a
-                      className="text-[inherit]"
-                      href="https://www.ers.org.sz/administrator/notices/1679299470.pdf"
-                      target="_blank"
-                    >
-                      <span>Approved R2.1 RFT003 - HVAC Services</span>
-                    </a>
+                    <span>Download this tender document to apply: Approved R2.1 RFT003 - HVAC Services</span>
                   </li>
-                  <li className="my-3">
-                    <span>Download this tender document to apply: </span>
-                    <a
-                      className="text-[inherit]"
-                      href="https://www.ers.org.sz/administrator/notices/1679299603.pdf"
-                      target="_blank"
-                    >
-                      <span>Approved R3.1 RFT004 - Solar Energy</span>
-                    </a>
+                  <li className="">
+                    <span>Download this tender document to apply: Approved R3.1 RFT004 - Solar Energy</span>
                   </li>
                 </ul>
               </div>
-              <div className="flex w-full justify-end">
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
-                  See All
-                </button>
-              </div>
+
             </div>
 
-            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
+
+
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for second div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4  justify-between">
-              <div>
+            <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4 justify-between ">
+              <div className="">
                 <p className=" text-yellowish text-xl font-normal">Vacancies</p>
-                <ul className="list-disc pl-[1.5rem] text-sm my-3">
-                  <li>There are currently no Vacancies available</li>
+                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+                  <li>
+                    There are currently no Vacancies available
+                  </li>
                 </ul>
               </div>
-              <div className="flex w-full justify-end">
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
-                  See All
-                </button>
-              </div>
+
             </div>
-            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
+
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for third div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4  justify-between ">
-              <p className="text-yellowish text-xl font-normal">Public Notice</p>
-              <ul className="list-disc pl-[1.36rem] text-sm flex flex-col">
-                <li className="my-3">
-                  <span>Download this tender document to apply: </span>
-                  <a
-                    className="text-[inherit]"
-                    href="https://www.ers.org.sz/administrator/notices/1679299306.pdf"
-                    target="_blank"
-                  >
-                    <span>Approved R1.1 RFT002 - Manage Printing Services</span>
-                  </a>
-                </li>
-                <li className="">
-                  <span>Download this tender document to apply: </span>
-                  <a
-                    className="text-[inherit]"
-                    href="https://www.ers.org.sz/administrator/notices/1679299470.pdf"
-                    target="_blank"
-                  >
-                    <span>Approved R2.1 RFT003 - HVAC Services</span>
-                  </a>
-                </li>
-                <li className="my-3">
-                  <span>Download this tender document to apply: </span>
-                  <a
-                    className="text-[inherit]"
-                    href="https://www.ers.org.sz/administrator/notices/1679299603.pdf"
-                    target="_blank"
-                  >
-                    <span>Approved R3.1 RFT004 - Solar Energy</span>
-                  </a>
-                </li>
-              </ul>
-              <div className="flex w-full justify-end">
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5 place-self-end mt-12 ">
-                  See All
-                </button>
-              </div>
-            </div>
-            <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
-
-
-            {/* Content for fourth div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4  justify-between">
+            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4   justify-between">
               <div>
-                <p className=" text-yellowish text-xl font-normal">Public Meeting</p>
-                <ul className="list-disc pl-[1.36rem] text-sm my-3">
-                  <li>There are currently no Public Notices available</li>
+                <p className="text-yellowish text-xl font-normal">Public Notice</p>
+                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+
+                  <li className="">
+                    <span>Download this tender document to apply: Approved R1.1 RFT002 - Manage Printing Services</span>
+                  </li>
+                  <li className="">
+                    <span>Download this tender document to apply: Approved R2.1 RFT003 - HVAC Services</span>
+                  </li>
+                  <li className="">
+                    <span>Download this tender document to apply: Approved R3.1 RFT004 - Solar Energy</span>
+                  </li>
                 </ul>
               </div>
-              <div className="flex w-full justify-end">
-                <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5 ">
-                  See All
-                </button>
+            </div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
+
+            {/* Content for fourth div */}
+            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4  justify-between">
+              <div>
+                <p className="text-yellowish text-xl font-normal">Public Meeting</p>
+                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2 ">
+                  <li className="">SRA Strategic Plan 2015-2018</li>
+                  <li className="">
+                    There are currently no Public Notices available
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+
+
       </section>
 
 
 
-
+      {/* display: isOpen === index ? 'block' : 'none' */}
       {/*---------------------Tax Section----------------------*/}
 
       <section className="pt-2 pb-16 px-14 bg-[#F7F7FA]">
@@ -542,7 +477,7 @@ export default function Home() {
                     <IconButton onClick={() => handleOpen(key)}><KeyboardArrowDownIcon /></IconButton>
                   </div>
 
-                  <ul className="text-sm font-normal leading-7 hidden" ref={(e) => myRef.current[key] = e}>
+                  <ul className={`text-sm font-normal leading-7  ${isOpen === key ? 'block' : 'hidden'}`} >
                     <li>{card.para && <span className="mr-2">&#10022;</span>}{card.para}</li>
                     <li>{card.para2 && <span className="mr-2">&#10022;</span>}{card.para2}</li>
                     <li>{card.para3 && <span className="mr-2">&#10022;</span>}{card.para3}</li>
@@ -556,7 +491,7 @@ export default function Home() {
             <div key={id} className="flex flex-col">
               <div className="flex justify-between items-center">
                 <h1 className="flex items-center gap-1 text-subColor text-2xl font-medium leading-8">
-                  <DatasetLinkedOutlinedIcon className="text-5xl" sx={{fontSize:'3rem',lineHeight: 1}}/>
+                  <DatasetLinkedOutlinedIcon className="text-5xl" sx={{ fontSize: '3rem', lineHeight: 1 }} />
                   {item.title}
                 </h1>
               </div>
@@ -568,18 +503,18 @@ export default function Home() {
                 >
                   <div className="flex justify-between">
                     <h1 className="text-lg font-medium leading-6">{card.head}</h1>
-                    <IconButton onClick={() => handleOpen2(key)}><KeyboardArrowDownIcon /></IconButton>
+                    <IconButton onClick={() => handleOpen2(key + 1)}><KeyboardArrowDownIcon /></IconButton>
                   </div>
 
-                  <ul className="text-sm font-normal leading-7 text-mainColor hidden" ref={(e) => myRef2.current[key] = e}>
+                  <ul className={`text-sm font-normal leading-7 ${isOpen2 === key + 1 ? 'block' : 'hidden'} `}>
                     <Link href={`${card.link}`}>
-                      <li className="hover:underline">{card.para && <span className="mr-2 ">&#10022;</span>}{card.para}</li>
+                      <li className="">{card.para && <span className="mr-2 ">&#10022;</span>}{card.para}</li>
                     </Link>
                     <Link href={`${card.link2}`}>
-                      <li className="hover:underline"> {card.para2 && <span className="mr-2 ">&#10022;</span>}{card.para2}</li>
+                      <li className=""> {card.para2 && <span className="mr-2 ">&#10022;</span>}{card.para2}</li>
                     </Link>
                     <Link href={`${card.link3}`}>
-                      <li className="hover:underline">{card.para3 && <span className="mr-2 ">&#10022;</span>}{card.para3}</li>
+                      <li className="">{card.para3 && <span className="mr-2 ">&#10022;</span>}{card.para3}</li>
                     </Link>
                   </ul>
                 </div>
@@ -606,7 +541,7 @@ export default function Home() {
               of how the organization helps the Swazi society.
             </p>
             <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5">
-              SEE MORE STORIES
+              See More Stories
             </button>
           </div>
         </div>
@@ -619,9 +554,9 @@ export default function Home() {
             How can we help you?
           </h1>
           <p className="xs:text-base text-xl font-normal leading-8 xs:px-5 md:px-10">
-            <span className="border-b-2 border-yellowish">Get in touch</span> with
+            <Link href=""><span className="border-b-2 border-yellowish">Get in touch</span></Link> with
             us or{" "}
-            <span className="border-b-2 border-yellowish">find an office</span>{" "}
+            <Link href=""> <span className="border-b-2 border-yellowish">find an office</span></Link>{" "}
             closest to you.
           </p>
 

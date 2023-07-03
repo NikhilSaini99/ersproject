@@ -44,7 +44,7 @@ function Media() {
                 target="_blank"
               >
                 <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
-                  FOLLOW US
+                  Follow Us
                 </button>
               </Link>
             </div>
@@ -72,7 +72,7 @@ function Media() {
               />
               <Link href="https://twitter.com/AECOM" target="_blank">
                 <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
-                  FOLLOW US
+                Follow Us
                 </button>
               </Link>
             </div>
@@ -100,7 +100,7 @@ function Media() {
               />
               <Link href="https://www.instagram.com/aecom" target="_blank">
                 <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
-                  FOLLOW US
+                Follow Us
                 </button>
               </Link>
             </div>
