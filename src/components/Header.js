@@ -159,7 +159,7 @@ export default function Header() {
                             {/* second news */}
                             <div className="flex flex-col">
                               <h3 className="px-8 text-sm leading-6 font-bold">
-                                Click here to see VAT Schedule   
+                                Click here to see VAT Schedule
                               </h3>
                               <p className="px-8 text-sm leading-6 font-normal mb-3 "
                               >
@@ -172,7 +172,7 @@ export default function Header() {
                             {/* third news */}
                             <div className="flex flex-col">
                               <h3 className="px-8 text-sm leading-6 font-bold">
-                                    ERS Merchandise Trade Report
+                                ERS Merchandise Trade Report
                               </h3>
                               <p className="px-8 text-sm leading-6 font-normal ">
                                 The ERS is calling all taxpayers to  “unmask
@@ -198,33 +198,33 @@ export default function Header() {
                                     Eswatini VAT
                                   </p>
                                 </Link>
-                               <br/>
+                                <br />
                                 <Link href={'/Registration'} className="line">
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish ">
                                     Registration
                                   </p>
-                                 
+
                                 </Link>
-                                <br/>
+                                <br />
                                 <Link href={'/ExemptSupplies'} className="line">
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish  ">
                                     Exempt Supplies of Goods & Services
                                   </p>
                                 </Link>
-                                <br/>
+                                <br />
                                 <Link href={'/ReverseCharge'} className="line">
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish ">
                                     Reverse Charge Concept
                                   </p>
-                                
+
                                 </Link>
-                                <br/>
+                                <br />
                                 <Link href={'/VAT/ZeroRated'} className="line">
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish ">
                                     Zero Rated goods & Services
                                   </p>
                                 </Link>
-                                <br/>
+                                <br />
                               </div>
 
                               <div>
@@ -236,27 +236,27 @@ export default function Header() {
                                     Tax Legislations
                                   </p>
                                 </Link>
-                                <br/>
-                              
+                                <br />
+
                                 <Link href={'/LegalandPolicy/Taxations'} className="line">
                                   <p className="text-sm leading-6 font-normal my-1 cursor-pointer hover:text-yellowish ">
                                     Double Taxation Agreements
                                   </p>
                                 </Link>
-                                <br/>
-                              
+                                <br />
+
                                 <Link href={'/LegalandPolicy/VatRegulations'} className="line">
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish ">
                                     VAT Regulations
                                   </p></Link>
-                                  <br/>
-                              
+                                <br />
+
                                 <Link href={'/LegalandPolicy/Notes_Guidelines'} className="line">
                                   <p className="text-sm leading-6 font-normal mt-1 cursor-pointer hover:text-yellowish ">
                                     Practice Notes and Guidelines
                                   </p>
                                 </Link>
-                                <br/>
+                                <br />
                               </div>
                             </div>
                             <div>
@@ -268,70 +268,70 @@ export default function Header() {
                                   Eswatini Income Tax
                                 </p>
                               </Link>
-                              <br/>
-                             
+                              <br />
+
                               <Link href={'/IncomeTax/RatesandThres'} className="line">
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish ">
                                   Rates and Thresholds
                                 </p>
                               </Link>
-                              <br/>
-                            
+                              <br />
+
                               <Link href={'/IncomeTax/WithholdingTax'} className="line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
                                   Withholding Taxes
                                 </p>
                               </Link>
-                              <br/>
-                             
+                              <br />
+
                               <Link href={'/IncomeTax/Taxationandbenefit'} className="line">
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish ">
                                   Taxation of Benefits
                                 </p>
                               </Link>
-                              <br/>
-                             
+                              <br />
+
                               <Link href={'/IncomeTax/IncomeTaxReturn'} className="line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
                                   Income Tax Returns
                                 </p>
                               </Link>
-                              <br/>
-                             
+                              <br />
+
                               <Link href={'/IncomeTax/Retirement'} className="line">
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish ">
                                   Retirement and Redundancy
                                 </p>
                               </Link>
-                              <br/>
-                             
+                              <br />
+
                               <Link href={'/IncomeTax/SelfAssessment'} className="line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
                                   Self Assessment
                                 </p>
                               </Link>
-                              <br/>
+                              <br />
                               <Link href={'/IncomeTax/Paye'} className="line">
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish ">
                                   PAYE - Quick Guide
                                 </p>
                               </Link>
-                              <br/>
-                            
+                              <br />
+
                               <Link href={'/IncomeTax/PartTime'} className="line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
                                   Part Time Employees
                                 </p>
                               </Link>
-                              <br/>
-                            
+                              <br />
+
                               <Link href={'/IncomeTax/GuidePublicOfficer'} className="line">
                                 <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
                                   Guide on the Appointment of a  Public
                                   Officer
                                 </p>
                               </Link>
-                              <br/>
+                              <br />
 
                             </div>
                             <div>
@@ -343,53 +343,53 @@ export default function Header() {
                                   Eswatini Customs
                                 </p>
                               </Link>
-                              <br/>
-                             
+                              <br />
+
                               <Link href={'/CustomExcise/GeneralRules'} className="line">
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish ">
                                   General Import & Export Rules
                                 </p>
                               </Link>
-                              <br/>
-                            
+                              <br />
+
                               <Link href={"/customs"} className="line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
                                   Customs Tariff
                                 </p>
                               </Link>
-                              <br/>
-                             
+                              <br />
+
                               <Link href={'/CustomExcise/CustomProcedure'} className="line">
                                 <p className="text-sm  font-normal my-2 cursor-pointer hover:text-yellowish ">
                                   Customs Procedure Codes
                                 </p>
                               </Link>
-                              <br/>
-                             
+                              <br />
+
                               <Link href={'/CustomExcise/BondedPage'} className="line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
                                   Bonded Warehouses/Rebate Store
                                 </p>
                               </Link>
-                              <br/>
-                             
+                              <br />
+
                               <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish ">
                                 Free Trade and Preferential  Agreements
                               </p>
-                             
+
                               <Link href={'/CustomExcise/Excisepage'} className="line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
                                   Excise
                                 </p>
                               </Link>
-                              <br/>
-                             
-                              <Link href={'/CustomExcise/CustomWorksheet'} className="line"> 
+                              <br />
+
+                              <Link href={'/CustomExcise/CustomWorksheet'} className="line">
                                 <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
                                   Customs Worksheet
                                 </p>
                               </Link>
-                              <br/>
+                              <br />
 
                             </div>
                           </div>
@@ -457,7 +457,7 @@ export default function Header() {
                             {/* second news */}
                             <div className="flex flex-col">
                               <h3 className="px-8 text-sm leading-6 font-bold">
-                                Click here to see VAT Schedule   
+                                Click here to see VAT Schedule
                               </h3>
                               <p className="px-8 text-sm leading-6 font-normal mb-3  ">
                                 The ERS is calling all taxpayers to  “unmask
@@ -469,7 +469,7 @@ export default function Header() {
                             {/* third news */}
                             <div className="flex flex-col">
                               <h3 className="px-8 text-sm leading-6 font-bold">
-                                    ERS Merchandise Trade Report
+                                ERS Merchandise Trade Report
                               </h3>
                               <p className="px-8 text-sm leading-6 font-normal mb-3  ">
                                 The ERS is calling all taxpayers to  “unmask
@@ -488,73 +488,82 @@ export default function Header() {
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 VAT Forms
                               </h1>
-                              <Link href={"/VatForms"} className="lineclamping">
-                                <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line text-slate-400 checking">
-                                  VAT Refunds for Diplomats,  Diplomatic
-                                  and Consular Missions & International
-                                  Organizations Printable
-                                </p>
-                              </Link>
-                              <Link href={"/VatForms"} className="lineclamping">
-                                <p className="text-sm leading-6 font-normal my-3 cursor-pointer hover:text-yellowish line checking">
-                                  VAT Refunds for Diplomats,  Diplomatic
-                                  and Consular  Missions & International{" "}
-                                  Organizations
-                                </p>
-                              </Link>
-                              <Link href={"/VatForms"} className="lineclamping">
-                                <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line checking">
-                                  VAT Return Printable
-                                </p>
+                              <div>
+                                <Link href={"/VatForms"} className="lineclamping line">
+                                  <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish  text-slate-400 checking">
+                                    VAT Refunds for Diplomats,  Diplomatic
+                                    and Consular Missions & International
+                                    Organizations Printable
+                                  </p>
+                                </Link>
+                                <Link href={"/VatForms"} className="lineclamping line">
+                                  <p className="text-sm leading-6 font-normal my-3 cursor-pointer hover:text-yellowish  checking">
+                                    VAT Refunds for Diplomats,  Diplomatic
+                                    and Consular  Missions & International{" "}
+                                    Organizations
+                                  </p>
+                                </Link>
+                                <Link href={"/VatForms"} className="lineclamping line">
+                                  <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish  checking">
+                                    VAT Return Printable
+                                  </p>
+                                </Link>
                                 <h6 className="text-sm leading-6 font-bold mt-3 cursor-pointer">
                                   View More
                                 </h6>
-                              </Link>
+                              </div>
                             </div>
+
                             <div>
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 Income Tax Forms
                               </h1>
-                              <Link href={"/IncomeForms"} className="lineclamping">
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish line checking">
+                              <Link href={"/IncomeForms"} className="lineclamping line">
+                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
                                   Notice of Objection  Form Printable
                                 </p>
-                                
-                                <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish line checking">
+                              </Link>
+                              <Link href={"/IncomeForms"} className="lineclamping line">
+                                <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish  checking">
                                   TIN Registration Form Company
                                 </p>
-                              
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish line checking">
+                              </Link>
+                              <Link href={"/IncomeForms"} className="lineclamping line">
+                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
                                   Taxpayer Profile Maintenance  Form
                                   Individuals
                                 </p>
-                                <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                                  View More
-                                </h6>
                               </Link>
+                              <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
+                                View More
+                              </h6>
+
                             </div>
                             <div>
                               <h1 className="text-xl font-bold leading-8 mb-3 ">
                                 Customs & Excise
                               </h1>
-                              <Link href={"/CustomsForms"} className="lineclamping">
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish line checking">
+                              <Link href={"/CustomsForms"} className="lineclamping line">
+                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
                                   CE 73 Application For Special {" "}
                                   Attendance
                                 </p>
-                              
-                                <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish line checking">
+                              </Link>
+                              <Link href={"/CustomsForms"} className="lineclamping line">
+                                <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish  checking">
                                   CE 101 Declaration on Transfer of {" "}
                                   Residence
                                 </p>
-                              
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish line checking">
+                              </Link>
+                              <Link href={"/CustomsForms"} className="lineclamping line">
+                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
                                   CE66 Application For Refund
                                 </p>
-                                <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                                 View More
-                                </h6>
+
                               </Link>
+                              <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
+                                View More
+                              </h6>
                             </div>
                           </div>
                         </div>
@@ -621,7 +630,7 @@ export default function Header() {
                             {/* second news */}
                             <div className="flex flex-col">
                               <h3 className="px-8 text-sm leading-6 font-bold">
-                                Click here to see VAT Schedule   
+                                Click here to see VAT Schedule
                               </h3>
                               <p className="px-8 text-sm leading-6 font-normal mb-3  ">
                                 The ERS is calling all taxpayers to  “unmask
@@ -633,7 +642,7 @@ export default function Header() {
                             {/* third news */}
                             <div className="flex flex-col">
                               <h3 className="px-8 text-sm leading-6 font-bold">
-                                    ERS Merchandise Trade Report
+                                ERS Merchandise Trade Report
                               </h3>
                               <p className="px-8 text-sm leading-6 font-normal mb-3  ">
                                 The ERS is calling all taxpayers to  “unmask
@@ -654,63 +663,92 @@ export default function Header() {
                                 <h1 className="text-xl font-bold leading-8 mb-3">
                                   News
                                 </h1>
-                                <Link href={"/news"} >
-                                  <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish line">
-                                    Authorised Economic
-                                    Operator Accreditation
-                                  </p>
-                                </Link>
-                                <Link href={"/news"} >
-                                  <p className="text-sm leading-6 font-normal my-3  cursor-pointer hover:text-yellowish line">
-                                    ERS Donates To Ekululameni Center
-                                  </p>
-                                </Link>
-                                <Link href={"/news"} >
-                                  <p className="text-sm leading-6 font-normal cursor-pointer  hover:text-yellowish line">
-                                    Pay your Tax on Time
-                                  </p>
-                                </Link>
+                                <div>
+                                  <div>
+                                    <Link href={"/news"} className="line">
+                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
+                                        Authorised Economic
+                                        Operator Accreditation
+                                      </p>
+                                    </Link>
+                                  </div>
+                                  <div>
+                                    <Link href={"/news"} className="line">
+                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
+                                        ERS Donates To Ekululameni Center
+                                      </p>
+                                    </Link>
+                                  </div>
+                                  <div>
+                                    <Link href={"/news"} className="line">
+                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish">
+                                        Pay your Tax on Time
+                                      </p>
+                                    </Link>
+                                  </div>
+                                </div>
+                                <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
+                                  View More
+                                </h6>
+                              </div>
+                            </div>
+
+                            <div className="flex flex-col">
+                              <div>
+                                <h1 className="text-xl font-bold leading-8 mb-3">
+                                  Gallery
+                                </h1>
+                                <div>
+                                  <Link href={"/gallery"} className="line">
+                                    <p className="text-sm font-normal cursor-pointer  hover:text-yellowish ">
+                                      Income Tax Mobile  Clinic
+                                    </p>
+                                  </Link>
+                                </div>
+                                <div>
+                                  <Link href={"/gallery"} className="line">
+                                    <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
+                                      PM Submits Income Tax  Returns
+                                    </p>
+                                  </Link>
+                                </div>
+                                <div>
+                                  <Link href={"/gallery"} className="line">
+                                    <p className="text-sm  mt-3 cursor-pointer  hover:text-yellowish ">
+                                      Lomahasha Border  Hours Extension
+                                    </p>
+                                  </Link>
+                                </div>
+                                <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
+                                  View More
+                                </h6>
                               </div>
                             </div>
 
                             <div className="flex flex-col">
                               <h1 className="text-xl font-bold leading-8 mb-3">
-                                Gallery
-                              </h1>
-                              <Link href={"/gallery"}>
-                                <p className="text-sm font-normal cursor-pointer  hover:text-yellowish line">
-                                  Income Tax Mobile  Clinic
-                                </p>
-                              </Link>
-                              <Link href={"/gallery"}>
-                                <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish line">
-                                  PM Submits Income Tax  Returns
-                                </p>
-                              </Link>
-                              <Link href={"/gallery"}>
-                                <p className="text-sm  mt-3 cursor-pointer  hover:text-yellowish line">
-                                  Lomahasha Border  Hours Extension
-                                </p>
-                              </Link>
-                            </div>
-
-
-                            <div className="flex flex-col">
-                              <h1 className="text-xl font-bold leading-8 mb-3">
                                 Videos
                               </h1>
-                              <Link href={"/videos"}>
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish line">
-                                  ERS Public
-                                  Meeting in Ezulmini
-                                </p>
-                              </Link>
-                              <Link href={"/videos"}>
-                                <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish line">
-                                  Pay your Tax
-                                  in Three Steps
-                                </p>
-                              </Link>
+                              <div>
+                                <Link href={"/videos"} className="line">
+                                  <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
+                                    ERS Public
+                                    Meeting in Ezulmini
+                                  </p>
+                                </Link>
+                              </div>
+                              <div>
+                                <Link href={"/videos"} className="line">
+                                  <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish ">
+                                    Pay your Tax
+                                    in Three Steps
+                                  </p>
+                                </Link>
+                              </div>
+                              <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
+                                View More
+                              </h6>
+
                             </div>
                           </div>
                         </div>
