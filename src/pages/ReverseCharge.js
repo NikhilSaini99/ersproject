@@ -86,7 +86,7 @@ const ReverseCharge = () => {
             <Box>
                 <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "2rem  auto" },pr:'20rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "2rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' } }}>
 
                 <Typography variant="h1" sx={{ mt: '5rem', mb: '2rem' }}>
                     Reverse Charge Concept
@@ -96,19 +96,19 @@ const ReverseCharge = () => {
                     <>
                         <div className='flex gap-1 items-start'>
                             <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                            <Typography variant='body1' key={item.id} sx={{mb:'1rem'}}
-                             className='Pointsformatting'>
+                            <Typography variant='body1' key={item.id} sx={{ mb: '1rem' }}
+                                className='Pointsformatting'>
                                 {item.content}</Typography>
                         </div>
                     </>
                 ))}
 
 
-                <Typography variant='h5' component='h2' sx={{ mt: '2rem',mb:'1rem',fontWeight:'bold' }} className='Pointsformatting'>
+                <Typography variant='h5' component='h2' sx={{ mt: '2rem', mb: '1rem', fontWeight: 'bold' }} className='Pointsformatting'>
                     DECLARATION AND PAYMENT</Typography>
                 <Typography variant='body1' className='Pointsformatting'>
                     The VAT reverse charge declaration form and payment must be submitted to the ERS within 30 days of the invoice date.</Typography>
-                <Typography variant='body1' sx={{ my: '0.5rem', fontStyle:'italic' }} className='Pointsformatting'>
+                <Typography variant='body1' sx={{ my: '0.5rem', fontStyle: 'italic' }} className='Pointsformatting'>
                     NOTE: The VAT reverse charge system does not apply to registered businesses with a full right to input tax deduction.</Typography>
             </Box>
 
