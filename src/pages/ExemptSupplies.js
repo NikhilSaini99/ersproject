@@ -174,7 +174,7 @@ const ExemptSupplies = () => {
             <Box>
                 <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "5rem auto" } }}>
+            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "5rem auto" },pr:'20rem' }}>
                 <Typography variant="h1" sx={{ my: '3.5rem' }}>
                     Exempt Supplies of Goods & Services
                 </Typography>
@@ -192,7 +192,7 @@ const ExemptSupplies = () => {
                         item.hasOwnProperty("subServices") ? (
                             <>
                                 <li key={item.id} className="Pointsformatting">
-                                  <span><ArrowForwardIosIcon sx={arrowStyling}/></span>  {item.service}
+                                  <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling}/></span>  {item.service}
                                     <ul
                                         style={{ listStyleType: "lower-roman", marginLeft: "1rem", marginTop: '0.5rem', marginBottom: '0.5rem' }}
                                     >
@@ -205,7 +205,7 @@ const ExemptSupplies = () => {
                         ) : (
                             <>
                             <li style={{ marginLeft: "0rem" }} className="Pointsformatting" key={item.id}>
-                            <span><ArrowForwardIosIcon sx={arrowStyling}/></span> {item.service}
+                            <span  className="Pointsformatting" ><ArrowForwardIosIcon sx={arrowStyling}/></span> {item.service}
                             </li>
                             </>
                         )

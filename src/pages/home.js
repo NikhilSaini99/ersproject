@@ -299,7 +299,7 @@ export default function Home() {
 
         {/* Recently Approved */}
         <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full `}>
-          <div className="flex flex-col md:flex-row justify-between   md:px-12 py-10 h-[22rem]">
+          <div className="flex flex-col md:flex-row justify-between  md:px-12 py-10 h-[25rem] gap-4">
             {/* Content for first div */}
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
@@ -323,7 +323,7 @@ export default function Home() {
               
             </div>
 
-            <div className="flex flex-col relative justify-end h-full "> 
+            <div className="flex flex-col relative justify-end h-full"> 
                 <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
                 </div> 
 
@@ -395,7 +395,7 @@ export default function Home() {
         {/* Notice Board */}
 
         <div className={`${isVisible.div2 ? "block" : "hidden"} bg-subColor text-white w-full `}>
-          <div className="flex flex-col md:flex-row justify-between   md:px-12 py-10 h-[22rem]">
+          <div className="flex flex-col md:flex-row justify-between   md:px-12 py-10 h-[25rem] gap-4">
             {/* Content for first div */}
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>

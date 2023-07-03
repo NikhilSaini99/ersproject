@@ -86,7 +86,7 @@ const ReverseCharge = () => {
             <Box>
                 <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-            <Box sx={{ width: "70%", margin: { xs: "2rem auto", lg: "2rem auto" } }}>
+            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "2rem  auto" },pr:'20rem' }}>
 
                 <Typography variant="h1" sx={{ mt: '5rem', mb: '2rem' }}>
                     Reverse Charge Concept
@@ -94,9 +94,9 @@ const ReverseCharge = () => {
 
                 {data.map((item) => (
                     <>
-                        <div className='flex gap-1 items-start relative'>
-                            <span className='absolute top-1 -left-5'><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                            <Typography variant='body1' key={item.id}
+                        <div className='flex gap-1 items-start'>
+                            <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                            <Typography variant='body1' key={item.id} sx={{mb:'1rem'}}
                              className='Pointsformatting'>
                                 {item.content}</Typography>
                         </div>
