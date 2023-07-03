@@ -27,7 +27,7 @@ import { useRef } from "react";
 import { Icons } from "@/components/homecard";
 import DatasetLinkedOutlinedIcon from '@mui/icons-material/DatasetLinkedOutlined';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 
 
@@ -260,13 +260,13 @@ export default function Home() {
 
 
       <section className="bg-[#F7F7FA] py-16">
-        <div className="px-4 md:px-14">
+        <div className="  md:px-14">
           <h1 className="text-subColor text-center md:text-start text-2xl lg:text-4xl font-semibold">
             Important Links
           </h1>
           <div className="border w-24 md:w-56 border-yellowish mt-2"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12 mt-6 px-4 md:px-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12 mt-6   md:px-32">
           {NewsData.map((item, key) => (
             <News
               key={key}
@@ -299,9 +299,9 @@ export default function Home() {
 
         {/* Recently Approved */}
         <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full `}>
-          <div className="flex flex-col md:flex-row justify-between px-4 md:px-12 py-10 h-[22rem]">
+          <div className="flex flex-col md:flex-row justify-between   md:px-12 py-10 h-[22rem]">
             {/* Content for first div */}
-            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100 px-4">
+            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
                 <p className="text-yellowish text-xl font-normal">Recently Approved Guidelines</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -315,16 +315,22 @@ export default function Home() {
                     <span>Guideline on Domestic Taxes Exemptions</span>
                   </li>
                 </ul>
-              </div>
+              
+                <div>
+                </div>
 
+              </div>
+              
             </div>
 
-
+            <div className="flex flex-col relative justify-end h-full "> 
+                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
+                </div> 
 
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for second div */}
-            <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4 justify-between ">
+            <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]    justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Approved Practice Notes</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -336,10 +342,14 @@ export default function Home() {
 
             </div>
 
+           <div className="flex flex-col relative justify-end h-full "> 
+                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
+                </div>
+
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for third div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4   justify-between">
+            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Recently Approved Forms</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -357,10 +367,13 @@ export default function Home() {
               </div>
 
             </div>
+           <div className="flex flex-col relative justify-end h-full "> 
+                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
+                </div>
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for fourth div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4  justify-between">
+            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Publication</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6 ">
@@ -372,16 +385,19 @@ export default function Home() {
                   <li className="">Trade Statistics</li>
                 </ul>
               </div>
-
+                
             </div>
+            <div className="flex flex-col relative justify-end h-full "> 
+                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
+                </div>
           </div>
         </div>
         {/* Notice Board */}
 
         <div className={`${isVisible.div2 ? "block" : "hidden"} bg-subColor text-white w-full `}>
-          <div className="flex flex-col md:flex-row justify-between px-4 md:px-12 py-10 h-[22rem]">
+          <div className="flex flex-col md:flex-row justify-between   md:px-12 py-10 h-[22rem]">
             {/* Content for first div */}
-            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100 px-4">
+            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
                 <p className="text-yellowish text-xl font-normal">Tender</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -399,12 +415,14 @@ export default function Home() {
 
             </div>
 
-
+           <div className="flex flex-col relative justify-end h-full "> 
+                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
+                </div>
 
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for second div */}
-            <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4 justify-between ">
+            <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]    justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Vacancies</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -416,10 +434,14 @@ export default function Home() {
 
             </div>
 
+           <div className="flex flex-col relative justify-end h-full "> 
+                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
+                </div>
+
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for third div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4   justify-between">
+            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Public Notice</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -436,10 +458,15 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+
+           <div className="flex flex-col relative justify-end h-full "> 
+                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
+                </div>
+
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for fourth div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4  justify-between">
+            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Public Meeting</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6 ">
@@ -450,7 +477,11 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+           <div className="flex flex-col relative justify-end h-full "> 
+                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
+                </div>
           </div>
+          
         </div>
 
 
