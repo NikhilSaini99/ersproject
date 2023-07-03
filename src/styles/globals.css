@@ -221,13 +221,13 @@ ul li.starclass:before {
   width:1fr;
 } */
 
-/* .checking{
+.checking{
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;  
   overflow: hidden;
   text-overflow: 'ellipsis',
-} */
+}
 
 .sub_items_text_color p{
   display: -webkit-box;

@@ -299,7 +299,7 @@ export default function Home() {
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100 px-4">
               <div>
                 <p className="text-yellowish text-xl font-normal">Recently Approved Guidelines</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+                <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                   <li className="">
                     <span>SRA-Minstry of Finance Guidelines to Taxpayers- COVID-19</span>
                   </li>
@@ -322,7 +322,7 @@ export default function Home() {
             <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4 justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Approved Practice Notes</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+                <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                   <li>
                     Click here to download approved practice notes and guidelines
                   </li>
@@ -337,7 +337,7 @@ export default function Home() {
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4   justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Recently Approved Forms</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+                <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
 
                   <li className="">
                     <span>VAT De-Registration Form</span>
@@ -358,7 +358,7 @@ export default function Home() {
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4  justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Publication</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2 ">
+                <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6 ">
                   <li className="">SRA Strategic Plan 2015-2018</li>
                   <li className="">
                     Swaziland Revenue Authority - Strategic Plan 2012/13 - 2014/15
@@ -379,7 +379,7 @@ export default function Home() {
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100 px-4">
               <div>
                 <p className="text-yellowish text-xl font-normal">Tender</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+                <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                   <li className="">
                     <span>Download this tender document to apply: Approved R1.1 RFT002 - Manage Printing Services</span>
                   </li>
@@ -402,7 +402,7 @@ export default function Home() {
             <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4 justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Vacancies</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+                <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                   <li>
                     There are currently no Vacancies available
                   </li>
@@ -417,7 +417,7 @@ export default function Home() {
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4   justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Public Notice</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2">
+                <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
 
                   <li className="">
                     <span>Download this tender document to apply: Approved R1.1 RFT002 - Manage Printing Services</span>
@@ -437,7 +437,7 @@ export default function Home() {
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4  justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Public Meeting</p>
-                <ul className="list-disc pl-[1.5rem] text-sm flex flex-col gap-6 pt-2 ">
+                <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6 ">
                   <li className="">SRA Strategic Plan 2015-2018</li>
                   <li className="">
                     There are currently no Public Notices available

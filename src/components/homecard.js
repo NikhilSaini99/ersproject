@@ -99,8 +99,8 @@ function News({ icon, description, img }) {
             <Image src={icon} alt="..." className="w-40" />
           </div>
         </div>
-        <div className="px-8 pt-14 pb-4 gap-5">
-          <p className="mt-5 mb-8 text-base font-normal">{description}</p>
+        <div className="px-8 pt-14 pb-4 gap-5 flex flex-col ">
+          <p className="mt-5 mb-8 text-base font-normal checking">{description}</p>
           <Link href={"/customs"}>
             <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
               Know More
