@@ -122,7 +122,7 @@ const Registration = () => {
         <Box sx={FaqContainerStyling}>
     
           <Stack sx={accordionStyling}>
-          <Typography variant="h1">
+          <Typography variant="h1" sx={{mb:'2rem'}}>
           Registration
         </Typography>
             {/* question and arrow*/}
