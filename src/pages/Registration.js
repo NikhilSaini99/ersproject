@@ -32,7 +32,6 @@ const Registration = () => {
   }
 
   const accordionStyling = {
-    py: '3rem',
     width: '95%',
     margin: '0 auto',
     display: 'flex',
