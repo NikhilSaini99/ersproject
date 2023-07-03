@@ -40,7 +40,7 @@ export default function VAT() {
 
       <section className="mx-40 my-10 p-10">
         <div>
-          <h1 className=" text-[#000000]  text-4xl font-semibold">
+          <h1 className=" text-primaryColor text-4xl font-semibold">
             Guide on the Appointment of a Public Officer
           </h1>
           <div className="border border-bottom border-yellowish mt-1  w-[66%] "></div>

@@ -8,8 +8,8 @@ import Footer from "@/components/Footer";
 import { Resources, News } from "@/components/homecard";
 import ETax from "../assets/images/e-tax.jpg";
 import ECoustoms from "../assets/images/e-customs.jpg";
-import Tax from "../assets/images/tax.png";
-import Customs from "../assets/images/customs.png";
+import Tax from "../assets/images/e-tax_logo.png";
+import Customs from "../assets/images/eCustoms_Tariff_Logo.png";
 import CSR from "../assets/images/CSR.jpg";
 import calculator from "../assets/icons/calculator.png";
 import barcode from "../assets/icons/barcode.png";
@@ -298,7 +298,7 @@ export default function Home() {
             {/* Content for first div */}
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100 px-4">
               <div>
-                <p className="text-xl font-normal">Recently Approved Guidelines</p>
+                <p className="text-yellowish text-xl font-normal">Recently Approved Guidelines</p>
                 <ul className="list-disc pl-[1.5rem] text-sm flex flex-col">
                   <li className="my-8">
                     <span>SRA-Minstry of Finance Guidelines to Taxpayers- COVID-19</span>
@@ -325,7 +325,7 @@ export default function Home() {
             {/* Content for second div */}
             <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4 justify-between ">
               <div className="">
-                <p className=" text-xl font-normal">Approved Practice Notes</p>
+                <p className=" text-yellowish text-xl font-normal">Approved Practice Notes</p>
                 <ul className="list-disc pl-[1.5rem] text-sm my-8">
                   <li>
                     Click here to download approved practice notes and guidelines
@@ -344,7 +344,7 @@ export default function Home() {
             {/* Content for third div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4   justify-between">
               <div>
-                <p className="text-xl font-normal">Recently Approved Forms</p>
+                <p className="text-yellowish text-xl font-normal">Recently Approved Forms</p>
                 <ul className="list-disc pl-[1.5rem] text-sm ">
 
                   <li className="my-8">
@@ -369,7 +369,7 @@ export default function Home() {
             {/* Content for fourth div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]  px-4  justify-between">
               <div>
-                <p className="text-xl font-normal">Publication</p>
+                <p className="text-yellowish text-xl font-normal">Publication</p>
                 <ul className="list-disc pl-[1.5rem] text-sm ">
                   <li className="my-8">SRA Strategic Plan 2015-2018</li>
                   <li className="">
@@ -395,7 +395,7 @@ export default function Home() {
             <div className="flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem]  text-midnightblue-100 px-4 h-full justify-between">
 
               <div>
-                <p className="text-xl font-normal">Tender</p>
+                <p className="text-yellowish text-xl font-normal">Tender</p>
                 <ul className="list-disc pl-[1.5rem] text-sm flex flex-col">
                   <li className="my-3">
                     <span>Download this tender document to apply: </span>
@@ -441,7 +441,7 @@ export default function Home() {
             {/* Content for second div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4  justify-between">
               <div>
-                <p className="text-xl font-normal">Vacancies</p>
+                <p className=" text-yellowish text-xl font-normal">Vacancies</p>
                 <ul className="list-disc pl-[1.5rem] text-sm my-3">
                   <li>There are currently no Vacancies available</li>
                 </ul>
@@ -455,8 +455,8 @@ export default function Home() {
             <div className={`lg:border-r opacity-40 xs:border-t my-4`} ></div>
 
             {/* Content for third div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] h-auto md:h-[16.5rem] px-4">
-              <p className="text-xl font-normal">Public Notice</p>
+            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4  justify-between ">
+              <p className="text-yellowish text-xl font-normal">Public Notice</p>
               <ul className="list-disc pl-[1.36rem] text-sm flex flex-col">
                 <li className="my-3">
                   <span>Download this tender document to apply: </span>
@@ -501,7 +501,7 @@ export default function Home() {
             {/* Content for fourth div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem] px-4  justify-between">
               <div>
-                <p className="text-xl font-normal">Public Meeting</p>
+                <p className=" text-yellowish text-xl font-normal">Public Meeting</p>
                 <ul className="list-disc pl-[1.36rem] text-sm my-3">
                   <li>There are currently no Public Notices available</li>
                 </ul>
@@ -556,7 +556,7 @@ export default function Home() {
             <div key={id} className="flex flex-col">
               <div className="flex justify-between items-center">
                 <h1 className="flex items-center gap-1 text-subColor text-2xl font-medium leading-8">
-                  <DatasetLinkedOutlinedIcon className="text-5xl" />
+                  <DatasetLinkedOutlinedIcon className="text-5xl" sx={{fontSize:'3rem',lineHeight: 1}}/>
                   {item.title}
                 </h1>
               </div>

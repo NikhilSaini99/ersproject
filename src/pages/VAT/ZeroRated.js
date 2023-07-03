@@ -158,7 +158,7 @@ const ZeroRated = () => {
                 lineHeight: '1.8'
             }}>
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
-                    Zero Rated goods + Services</Typography>
+                    Zero Rated goods & Services</Typography>
 
                 {/*------------------- Section 1-------------------------------- */}
                 <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>

@@ -32,7 +32,7 @@ const Registration = () => {
       </Box>
 
       <Box sx={{ width: '80%', margin: { xs: '2rem auto', lg: '5rem auto', }}}>
-        <Typography variant="h4" component="h1" sx={{color:'#2f2483',fontWeight:'bold',my:'3.5rem'}}>
+        <Typography variant="h1" sx={{my:'2.5rem'}}>
           Registration
         </Typography>
         <Typography variant="h5" sx={{my:'1.5rem'}} component="h2">
