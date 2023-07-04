@@ -7,12 +7,13 @@ import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
 import Link from 'next/link'
 import bgimg from  '../../assets/images/pagebackground1.jpg'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const TaxLegislation = () => {
 
     const laws = [
         {
-            head: 'PRIMARY LEGISLATIONS',
+            head: 'Primary Legislations',
             subpoint: [
                 { link: 'http://www.sra.org.sz/documents/1497268165.pdf', text: 'Customs and Excise Act 1971' },
                 { link: "http://www.sra.org.sz/documents/1497268165.pdf", text: 'Income Tax Order 1975' },
@@ -22,13 +23,20 @@ const TaxLegislation = () => {
             ]
         },
         {
-            head: 'AMENDMENTS',
+            head: 'Amendments',
             subpoint: [
-                { link: 'http://www.sra.org.sz/documents/1497268165.pdf', text: 'The Value Added Tax (Amendment) Act 2022_Schedules' },
+                { link: 'http://www.sra.org.sz/documents/1497268165.pdf', text: 'The Value Added Tax (Amendment) Act 2022 Schedules' },
                 { link: 'http://www.sra.org.sz/documents/1497268165.pdf', text: 'The Value Added Tax Amendment Act 2022' }]
         }
     ]
 
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem',
+    }
+
+    
     return (
         <>
             <Head>
@@ -54,21 +62,26 @@ const TaxLegislation = () => {
 
             <Box sx={{backgroundImage:`url(${bgimg.src})`,
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
+        
+            <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
                 <Typography variant="h1"  sx={{ pt: '5rem', mb: '2rem' }}>
                     Tax Legislations</Typography>
 
-                <Typography variant='body1' className='Pointsformatting'>The Eswatini Revenue Service derives its authority to administer various revenue laws from the</Typography>
-                <Link href={'http://www.sra.org.sz/documents/1497268284.pdf'} style={{ color: '#2f2483'}} className='Pointsformatting'>Revenue Authority Act 2008</Link>
+                <Typography variant='body1' className='Pointsformatting'>The Eswatini Revenue Service derives its authority to administer various revenue laws from the
+                <Link href={'http://www.sra.org.sz/documents/1497268284.pdf'} style={{ color: '#2f2483'}} className='Pointsformatting'> Revenue Authority Act 2008</Link></Typography>
+               
 
-                <Typography variant='body1' marginY="0.8rem"  className='Pointsformatting'>The laws administered by the Authority include:</Typography>
+                <Typography variant='body1' marginY="0.8rem"  className='Pointsformatting'>The laws administered by the Authority include</Typography>
                 {laws.map((item, index) => (
                     <Box key={index} sx={{ maxWidth: 'fit-content' }}>
-                        <Typography variant='h6' fontWeight='bold'>{item.head}</Typography>
+                        <Typography variant='h5' component='h2' sx={{ mt: '2rem', fontWeight: 'bold' }}>{item.head}</Typography>
                         <ul>
                             {item.subpoint.map((itemsub, index) => (
-                                <Link key={index} href={`${itemsub.link}`} target='_blank'><li style={{color: '#2f2483', margin: '0.5rem 0', }} 
+                                <div key={index} className='flex gap-1 items-center'>
+                                <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling}  className='Pointsformatting'/></span>
+                                <Link  href={`${itemsub.link}`} target='_blank'  className='Pointsformatting'><li style={{color: '#2f2483', margin: '0.5rem 0', }} 
                                 className='Pointsformatting'>{itemsub.text}</li></Link>
+                                </div>
                             ))}
                         </ul>
                     </Box>

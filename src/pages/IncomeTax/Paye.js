@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
 import Link from 'next/link';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Paye = () => {
     const taxRates = [
@@ -36,10 +37,10 @@ const Paye = () => {
         {
             mainHead: 'Tax Rebate',
             points: ['The tax payable by an individual must be reduced by way of a rebate of an amount not exceeding the sum of eight thousand two hundred emalangeni (E8 200) in any year of assessment, that is, E683.33 on a monthly basis.',
-            'When the tax rebate of E8 200 is combined with the lowest marginal tax rate of 20%, one has an effective tax free threshold of E41 000. But if the period assessed is less than a full year, the tax rebate shall be the same ratio such period bears to twelve months.',
-            'The new rates of tax will be applicable on the amount exceeding E41 000 in any year of assessment.',
-            'The tax rebate does not apply if the tax payable is subject to the concessionary rates of tax prescribed in Part III of the Third Schedule to the Income Tax Order.',
-        ]
+                'When the tax rebate of E8 200 is combined with the lowest marginal tax rate of 20%, one has an effective tax free threshold of E41 000. But if the period assessed is less than a full year, the tax rebate shall be the same ratio such period bears to twelve months.',
+                'The new rates of tax will be applicable on the amount exceeding E41 000 in any year of assessment.',
+                'The tax rebate does not apply if the tax payable is subject to the concessionary rates of tax prescribed in Part III of the Third Schedule to the Income Tax Order.',
+            ]
         },
 
 
@@ -60,7 +61,7 @@ const Paye = () => {
         },
         {
             mainHead: 'Estimated assessments',
-            description: 'The Commissioner General may estimate the amount of employees’ tax:',
+            description: 'The Commissioner General may estimate the amount of employees’ tax',
             points: ['Where the employer fails to submit the PAYE Monthly Deduction Returns on due dates',
                 'Where the employer fails to deduct or withhold the correct amount of employees’ tax;',
                 'Where the employer fails to pay over the employees’ tax deducted on due dates.',]
@@ -72,7 +73,7 @@ const Paye = () => {
         },
         {
             mainHead: 'Making payments',
-            description: 'Payments to the ERS may be made using any of the following means:',
+            description: 'Payments to the ERS may be made using any of the following means',
             points: ['Over the counter payments',
                 'Direct deposits',
                 'Electronic funds transfer (EFT)',
@@ -81,9 +82,9 @@ const Paye = () => {
 
         {
             mainHead: 'Allocation of Payments',
-            description: 'Where any payment is made by an employer in respect of employees’ tax, such payment will be allocated in the following manner:',
-            points: ['In respect of penalty, (where the return or payment was received late);',
-                'In respect of interest, to the extent to which the payment exceeds the amount of penalty;',
+            description: 'Where any payment is made by an employer in respect of employees’ tax, such payment will be allocated in the following manner',
+            points: ['In respect of penalty, (where the return or payment was received late)',
+                'In respect of interest, to the extent to which the payment exceeds the amount of penalty',
                 'In respect of employees’ tax, to the extent to which the payment exceeds the amount of interest.']
         },
 
@@ -117,7 +118,11 @@ const Paye = () => {
     ];
 
 
-
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem',
+    }
 
 
     return (
@@ -143,59 +148,59 @@ const Paye = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' }, lineHeight: '1.8' }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '10rem', lg: '12rem,', xl: '15rem' }, py: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     PAYE - Quick Guide</Typography>
 
-                <Box>
-                    <div>
-                        <Typography variant="body1" >
+                <Box className="Pointsformatting">
+                    <div >
+                        <Typography variant="body1" className="Pointsformatting">
                             The Employers PAYE Guide may be downloaded by{' '}
                             <Link href="http://www.sra.org.sz/documents/1496926135.pdf">clicking here</Link>.
                         </Typography>
                     </div>
 
                     <div>
-                        <Typography variant="body1" >
+                        <Typography variant="body1" className="Pointsformatting">
                             <strong>Calculating PAYE</strong>
                         </Typography>
                     </div>
 
                     <div>
-                        <Typography variant="body1" >
+                        <Typography variant="body1" className="Pointsformatting pt-4">
                             <strong>NOTE: The steps described below are based on the general principles of calculating PAYE; it is always advisable to verify with the ERS when not sure.</strong>
                         </Typography>
                     </div>
 
                     <div>
-                        <Typography variant="body1">
+                        <Typography variant="body1" className="Pointsformatting pt-4">
                             <strong>Step 1</strong> - Determine the employees taxable income
                         </Typography>
                     </div>
 
 
-                    <ul className='custom-list'>
+                    <ul className='custom-list' >
 
-                        <li>Lump all amounts that make up the employees remuneration for that month, i.e. gross salary, benefits in kind, commission, etc.</li>
-                        <li>Deduct allowable deductions, e.g. statutory deductions (SNPF), contributions to pension fund.</li>
+                        <li className="Pointsformatting">Lump all amounts that make up the employees remuneration for that month, i.e. gross salary, benefits in kind, commission, etc.</li>
+                        <li className="Pointsformatting">Deduct allowable deductions, e.g. statutory deductions (SNPF), contributions to pension fund.</li>
 
                     </ul>
 
 
                     <div>
-                        <Typography variant="body1" >
+                        <Typography variant="body1" className="Pointsformatting">
                             <strong>Step 2</strong> - Annualize the taxable income, i.e. multiply by 12
                         </Typography>
 
-                        <Typography variant="body1" >
+                        <Typography variant="body1" className="Pointsformatting">
                             <strong>Step 3</strong> - Determine which bracket it falls under of the 4 brackets provided by law and calculate accordingly. E.g. a total annual taxable income of 80,000 is classified under the 0 - 100,000 tax bracket, and therefore the applicable rate would be 20% of the amount = 16,000. An annual taxable income of 180,000 would be under the 150,000 - 200,000 bracket, and therefore the applicable tax rate would be 32,500 on the first 150,000 PLUS 30% on the balance of 30,000 = 9,000; total tax would, therefore, be 32,500 + 9,000 = 41,500.
                         </Typography>
 
-                        <Typography variant="body1" >
+                        <Typography variant="body1" className="Pointsformatting">
                             <strong>Step 4</strong> - Apply the rebate amount; every ordinary individual is entitled to a rebate (means of reducing tax liability) amount of E8,200 per annum. E.g., if your tax liability is E41,500, the rebate will reduce it to E33,300.
                         </Typography>
 
-                        <Typography variant="body1" >
+                        <Typography variant="body1" className="Pointsformatting">
                             <strong>Step 5</strong> - Convert annual tax liability to a monthly amount by dividing by 12. E.g., the monthly amount on E33,300 is E2,775, which is the tax that will be deducted in that particular month.
                         </Typography>
                     </div>
@@ -206,17 +211,17 @@ const Paye = () => {
 
                 </Box>
 
-                <Typography variant="body1">
+                <Typography variant="body1" className="Pointsformatting">
                     The following are the rates of tax to be levied, in the case of employees, for the year of assessment ending 30th June 2014:
                     <br />
-                    <strong>RATES OF NORMAL TAX FOR INDIVIDUALS FOR 2013/2014</strong>
+                    <strong className="Pointsformatting"> RATES OF NORMAL TAX FOR INDIVIDUALS FOR 2013/2014</strong>
                 </Typography>
 
                 <Paper elevation={20} sx={{ margin: '2rem auto' }}>
                     <TableContainer >
                         <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
                             <TableHead>
-                                <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center !important' } }}>
+                                <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { color: 'white !important', fontWeight: 'bold !important', fontSize: '1rem !important', textAlign: 'center !important' } }}>
                                     <TableCell>Taxable Income Exceeds </TableCell>
                                     <TableCell>But does not exceed </TableCell>
                                     <TableCell>Rates</TableCell>
@@ -224,7 +229,7 @@ const Paye = () => {
                             </TableHead>
                             <TableBody >
                                 {taxRates.map((row, index) => (
-                                    <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' } }}>
+                                    <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' }, '&:hover': { background: '#F2F2F2' } }}>
                                         <TableCell>
                                             <p>{row.taxableIncomeExceeds}</p>
                                         </TableCell>
@@ -241,19 +246,22 @@ const Paye = () => {
                     </TableContainer>
                 </Paper>
 
-                                
-                    {taxRebateData.map((item,index)=>(
-                        <Box key={index}>
-                            <Typography variant='body1' sx={{fontWeight:'bold'}}>{item.mainHead}</Typography>
-                            {item.description?<Typography variant='body1'>{item.description}</Typography>:null}
-                                {item.points?<ul className='custom-list'>
-                                        {item.points.map((subpoint,index)=>(
-                                            <li key={index}>{subpoint}</li>
-                                        ))}
-                                </ul>:null}
-                                {item.note?<Typography variant='body1'>{item.note}</Typography>:null}
-                        </Box>
-                    ))}
+
+                {taxRebateData.map((item, index) => (
+                    <Box key={index}>
+                        <Typography variant='body1' sx={{ fontWeight: 'bold', pb: '0.3rem' }} className='Pointsformatting'>{item.mainHead}</Typography>
+                        {item.description ? <Typography variant='body1' className='Pointsformatting pb-4'>{item.description}</Typography> : null}
+                        {item.points ? <ul className='custom-list pb-4 Pointsformatting'>
+                            {item.points.map((subpoint, index) => (
+                                <div key={index} className='flex gap-1 items-start pb-2'>
+                                    <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
+                                    <li Pointsformatting className='Pointsformatting'>{subpoint}</li>
+                                </div>
+                            ))}
+                        </ul> : null}
+                        {item.note ? <Typography variant='body1' className='Pointsformatting py-4'>{item.note}</Typography> : null}
+                    </Box>
+                ))}
 
 
             </Box>

@@ -135,31 +135,31 @@ const IncomeTaxData = [
   {
     heading: 'Withholding Taxes',
     heading1: 'Non-Resident Withholding Taxes',
-    title: 'Withholding Tax on Interest:',
+    title: 'Withholding Tax on Interest',
 
     description: ' This should be deducted from the payment of interest to any person other than a company not ordinarily resident; a company not registered in Swaziland; or the estate of a deceased person, who at the date of his death was ordinarily resident in Swaziland.',
     description1: 'The debtor in respect of such amount; and who is ordinarily resident or carries on business in Swaziland shall withhold and remit to SRA tax equal to ten per cent of the interest that accrues to or in favour of the non-resident.',
   },
 
   {
-    title: 'Non Resident Shareholders Tax: ',
+    title: 'Non Resident Shareholders Tax ',
 
-    description: 'This is imposed on dividends paid to shareholders who are not residents of the Kingdom of Swaziland. The categories are as follows :',
-    point: '1. Where the shareholder is a natural person, he must not only be a non-resident but should not be carrying on a business in Swaziland.',
-    point1: '2. In the case of a company, it should not be registered and controlled in Swaziland.',
-    point2: '3. In the case of an estate of any deceased person, at the date of death, he should not have been a resident or carrying on business in Swaziland',
-    point3: '4. In the case of a holder of bearer scrip, (irrespective of whether he is resident or not), is liable to shareholders tax and normal tax on the same dividend.',
+    description: 'This is imposed on dividends paid to shareholders who are not residents of the Kingdom of Swaziland. The categories are as follows',
+    point: 'Where the shareholder is a natural person, he must not only be a non-resident but should not be carrying on a business in Swaziland.',
+    point1: 'In the case of a company, it should not be registered and controlled in Swaziland.',
+    point2: 'In the case of an estate of any deceased person, at the date of death, he should not have been a resident or carrying on business in Swaziland',
+    point3: 'In the case of a holder of bearer scrip, (irrespective of whether he is resident or not), is liable to shareholders tax and normal tax on the same dividend.',
     line: 'The non-resident should have been a shareholder at the date of declaration of the dividend or any other specified date of entitlement to the dividend. ',
   },
   {
-    title: 'Sportsmen and Entertainers: ',
+    title: 'Sportsmen and Entertainers',
 
     description: 'This is imposed on any remuneration paid to, or the gross receipts of, public entertainers, sportsman, theatrical, and musical, group of public entertainers from outside Swaziland or not ordinarily resident in Swaziland.',
     description1: "A local agent, promoter or any other person making payment to a non-resident entertainer or sportsperson should deduct non-residents' entertainers tax at the rate of fifteen percent of the gross amount and shall issue a statement to that person showing the gross amount of payment due and the rate and amount of tax deducted.",
 
   },
   {
-    title: 'Withholding Tax on Payments to Non-Resident Contractors: ',
+    title: 'Withholding Tax on Payments to Non-Resident Contractors ',
 
     description: 'This applies to any person who makes payment (as a result of an agreement relating to construction operations), to a person whose principal place of business is outside Swaziland.',
     description1: "A withholding tax of fifteen percent must be withheld from payments made by resident persons to the foreign entity in relation to construction contracts, excluding the amount relating directly to the cost of materials.",
@@ -167,7 +167,7 @@ const IncomeTaxData = [
 
   },
   {
-    title: 'Non Resident Withholding Tax on Royalties and Management Fees: ',
+    title: 'Non Resident Withholding Tax on Royalties and Management Fees ',
 
     description: 'Every person who makes any payment of royalty or management fee or both to a person not ordinarily resident in Swaziland is required to withhold tax. The rate of tax is fifteen percent of the gross amount of any management charge. The tax is final and a certificate should be furnished to the non-resident person.',
 
@@ -175,16 +175,16 @@ const IncomeTaxData = [
   },
 
   {
-    title: 'Withholding Tax on Repatriated Income: ',
+    title: 'Withholding Tax on Repatriated Income ',
 
     description: 'The tax is levied in addition to any normal tax, on deemed repatriated income of the branch of a non-resident company carrying on business in Swaziland for any year of assessment. The calculation formula is A minus Bwhere:',
-    point: '1. A is taxable income of the branch for the year of assessment',
-    point1: '2. B is the Swaziland tax payable on that taxable income of the branch for the year of assessment.',
+    point: 'A is taxable income of the branch for the year of assessment',
+    point1: 'B is the Swaziland tax payable on that taxable income of the branch for the year of assessment.',
 
   },
 
   {
-    title: 'Withholding Tax on Payments to Non Resident Persons: ',
+    title: 'Withholding Tax on Payments to Non Resident Persons ',
 
     description: 'A person who makes payment to any non-resident person is required to withhold tax on the gross amount resulting from a contract which has a Swazi source of income excluding an employment contract. The main purpose of the contract should be the performance of a service. Goods supplied in the performance of the service are included in the calculation of the tax as they are only incidental i.e. a non-resident mechanic who comes with tools and service parts is liable to tax on the labour fees and the service parts. The non-resident person is liable to withholding tax at the rate offifteen percenton the gross amount of any payment derived by the non-resident under a Swaziland source services contract.',
 
@@ -193,22 +193,22 @@ const IncomeTaxData = [
 
   {
     heading2: 'Withholding Taxes for Residents',
-    title: 'On Interest: ',
+    title: 'On Interest ',
 
     description: 'Every financial institution, unit trust company, building society, mutual loan association or co-operative society, which makes a payment of interest or dividend on society shares to any person, other than a company, a person or institution, ordinarily resident in Swaziland should withhold tax at the rate of ten percent of the gross amount of the payment.  The tax withheld is on account of the tax liability to tax of the person ordinarily resident in Swaziland.  ',
   },
   {
-    title: 'On Rental Payments: ',
+    title: 'On Rental Payments ',
 
     description: 'A person, other than a natural person, who makes a payment to a lessor (other than  a company) for the use or occupation or the right of use or occupation of land or buildings; OR collects such rent for or on behalf of the lessor, should withhold tax at the rate of ten per cent of the gross amount. Tax withheld is on account of the tax liability and a certificate should be issued by the withholder.  ',
   },
   {
-    title: 'On Beneficiaries of Trusts : ',
+    title: 'On Beneficiaries of Trusts ',
 
     description: 'Every trustee who makes any payment from trust income to a beneficiary who has vested rights to such income should withhold tax at a rate of thirty-three percent of the gross amount. The tax withheld is on account of the tax liability of such beneficiary on the income derived from the trust.  ',
   },
   {
-    title: 'Dividends Paid to Residents: ',
+    title: 'Dividends Paid to Residents ',
 
     description: 'Tax should be charged, levied and paid in respect of the amount of any dividend if the shareholder to whom the dividend has been paid or is payable is a person (other than a company), who is ordinarily resident or carrying on business in Swaziland. A resident company, which makes any payment of dividend to a person ordinarily resident or carrying on business in Swaziland, should withhold tax at the rate of ten percent of the gross amount of the dividend.  ',
   },

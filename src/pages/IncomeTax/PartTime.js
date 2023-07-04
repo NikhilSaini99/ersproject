@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
@@ -30,68 +30,74 @@ const PartTime = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+            <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' }, py: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
                     Part Time Employees</Typography>
 
 
                 <div className="art-article" style={{ textAlign: 'justify', color: '#000000' }}>
-                    <strong>DEFINITION OF PART TIME EMPLOYEES</strong><br /><br />
-                    The expression part-time employee, for the purposes of employees tax, is defined to mean a person who is not in an employers full-time employ and who is not remunerated as a full-time employee for any services rendered. The expression part-time employee excludes unskilled labourers whose remuneration does not exceed E3 416.67 on a monthly basis.<br /><br />
-                    Part-time remuneration includes the following:<br /><br />
-                    (a) Casual payments for irregular services rendered,<br />
-                    (b) Fees paid to part-time lecturers,<br />
-                    (c) Honoraria paid to office-bearers of bodies, clubs, societies, etc,<br />
-                    (d) Remuneration paid for occasional services rendered, and<br />
-                    (e) Any payment that cannot be regarded as full-time remuneration.<br /><br />
-                    <strong>APPLICABLE RATES FOR PART TIME EMPLOYEES</strong><br /><br />
-                    <Typography variant='body1'>
+                    <Typography variant='h2' sx={{ mt: '2rem', fontWeight: 'bold' }} className='Pointsformatting'>DEFINITION OF PART TIME EMPLOYEES</Typography>
+
+                    <Typography variant='body1' className='Pointsformatting'>
+                        The expression part-time employee, for the purposes of employees tax, is defined to mean a person who is not in an employers full-time employ and who is not remunerated as a full-time employee for any services rendered. The expression part-time employee excludes unskilled labourers whose remuneration does not exceed E3 416.67 on a monthly basis.<br /><br />
+                        Part-time remuneration includes the following:<br />
+                        (a) Casual payments for irregular services rendered,<br />
+                        (b) Fees paid to part-time lecturers,<br />
+                        (c) Honoraria paid to office-bearers of bodies, clubs, societies, etc,<br />
+                        (d) Remuneration paid for occasional services rendered, and<br />
+                        (e) Any payment that cannot be regarded as full-time remuneration.<br /><br />
+                        <Typography variant='h2'  sx={{  fontWeight: 'bold' }} className='Pointsformatting'>APPLICABLE RATES FOR PART TIME EMPLOYEES</Typography>
+                    </Typography>
+
+                    <Typography variant='body1' className='Pointsformatting'>
                         The rates of withholding tax prescribed hereunder shall apply in the determination of employee’s tax to be deducted on any amount payable by way of remuneration to a part-time employee in any year of assessment
                     </Typography>
                 </div>
-                <TableContainer>
-                    <Table>
-                        <TableHead>
-                            <TableRow>
-                                <TableCell colSpan={2} align="center"><strong>REMUNERATION</strong></TableCell>
-                                <TableCell rowSpan={2} align="center"><strong>TAX RATE</strong></TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableHead>
-                            <TableRow>
-                                <TableCell align="center"><strong>Exceeds</strong></TableCell>
-                                <TableCell align="center"><strong>Does not exceed</strong></TableCell>
+                <Paper elevation={20} sx={{ width: '90%', margin: '2rem auto' }}>
+                    <TableContainer>
+                        <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
+                            <TableHead>
+                                <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { color: 'white !important', fontWeight: 'bold !important', fontSize: '1rem !important' } }}>
+                                    <TableCell colSpan={2} align="center"><strong>REMUNERATION</strong></TableCell>
+                                    <TableCell rowSpan={2} align="center"><strong>TAX RATE</strong></TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell align="center"><strong>Exceeds</strong></TableCell>
+                                    <TableCell align="center"><strong>Does not exceed</strong></TableCell>
 
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            <TableRow>
-                                <TableCell align="center">&nbsp;&nbsp;&nbsp;0</TableCell>
-                                <TableCell align="center">&nbsp;&nbsp;&nbsp;8,333</TableCell>
-                                <TableCell align="center">20%</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell align="center">8,333</TableCell>
-                                <TableCell align="center">&nbsp;&nbsp;12,500</TableCell>
-                                <TableCell align="center">25%</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell align="center">12,500</TableCell>
-                                <TableCell align="center">&nbsp;&nbsp;16,666</TableCell>
-                                <TableCell align="center">30%</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell align="center">16,666</TableCell>
-                                <TableCell></TableCell>
-                                <TableCell align="center">33%</TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-                <Typography variant='body1' sx={{ fontWeight: 'bold', my: '1rem' }}>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                <TableRow>
+                                    <TableCell align="center">&nbsp;&nbsp;&nbsp;0</TableCell>
+                                    <TableCell align="center">&nbsp;&nbsp;&nbsp;8,333</TableCell>
+                                    <TableCell align="center">20%</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell align="center">8,333</TableCell>
+                                    <TableCell align="center">&nbsp;&nbsp;12,500</TableCell>
+                                    <TableCell align="center">25%</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell align="center">12,500</TableCell>
+                                    <TableCell align="center">&nbsp;&nbsp;16,666</TableCell>
+                                    <TableCell align="center">30%</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell align="center">16,666</TableCell>
+                                    <TableCell></TableCell>
+                                    <TableCell align="center">33%</TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                </Paper>
+                <Typography variant='body1' sx={{ fontWeight: 'bold', my: '1rem' }} className='Pointsformatting'>
                     NOTE
                 </Typography>
-                <Typography variant='body1' sx={{}}>
+                <Typography variant='body1' sx={{pb:'2rem'}} className='Pointsformatting'>
                     When applying these rates the rebates should not be taken into account. Part-time employees are still required to file returns of income at the end of a year of assessment, the Final Deduction System notwithstanding. Tax rebates will be granted on assessment for these cases. Employees’ tax certificates (PAYE 5) must be issued to such employees within the stipulated period in accordance with the requirements of paragraph 13 of the Second Schedule.
                 </Typography>
 

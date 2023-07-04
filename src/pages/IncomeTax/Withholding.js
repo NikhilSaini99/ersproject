@@ -1,19 +1,24 @@
 import React from "react";
 import Head from "next/head";
 import { IncomeTaxData } from "@/content/data";
-import Header from "@/components/Header";
-import Banner from "../assets/images/bg2.jpg";
+import Header from "@/components/Header"; 
+import Banner from "../../assets/images/bg2.jpg";
 import Image from "next/image";
-import { HiDownload } from "react-icons/hi";
-import downloadIcon from "../assets/icons/downloadicon.svg"
-import bgimg from '../assets/images/pxfuel.jpg'
-
-import styles from '@/styles/IncomeTax.module.css'
-import { Box, Typography } from "@mui/material";
+import bgimg from '../../assets/images/pxfuel.jpg'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Box } from "@mui/material";
 import Footer from "@/components/Footer";
 
 
-export default function IncomeTax() {
+export default function Withholding() {
+
+  const arrowStyling = {
+    color: '#2f2483',
+    fontSize: '1rem',
+    marginRight: '0.5rem',
+}
+
+
   return (
     <>
       <Head>
@@ -38,9 +43,9 @@ export default function IncomeTax() {
       }} >
 
 
-        <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' }, py: '2rem' }}>
+        <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '8rem', lg: '10rem,', xl: '14rem' }, py: '2rem' }}>
 
-          <h1 className="text-4xl pt-14 mb-8 font-bold text-primaryColor">
+          <h1 className="text-4xl pt-14 mb-4 font-bold text-primaryColor">
             Withholding Taxes
           </h1>
           {/* <div className="flex flex-col gap-y-4 float-right clear-right w-20 absolute right-0"
@@ -66,9 +71,9 @@ export default function IncomeTax() {
                 {item.heading2}
               </h1>
 
-              <div className=" py-1">
+              <div className=" ">
 
-                <p className={`text-xl  Pointsformatting font-bold`}>
+                <p className={`text-xl pb-2 Pointsformatting font-bold`}>
                   {item.title}
                 </p>
                 <p className="    Pointsformatting">
@@ -77,12 +82,28 @@ export default function IncomeTax() {
                 <p className={`   tracking-wide Pointsformatting`}>{item.description1} </p>
                 <p className="  tracking-wide Pointsformatting">{item.description2} </p>
 
+                
+                
                 <p className="tracking-wide Pointsformatting">{item.point}</p>
+                
+               {item.point1&&<div className='flex gap-1 items-start'>
+                <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
                 <p className="  tracking-wide Pointsformatting">{item.point1}</p>
-                <p className=" tracking-wide Pointsformatting">{item.point2}</p>
+                </div>}
 
+              {item.point2&&<div className='flex gap-1 items-start'>
+                  <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                  <p className=" tracking-wide Pointsformatting">{item.point2}</p>
+                  </div>}
+
+
+               {item.point3&&<div className='flex gap-1 items-start'>
+                <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
                 <p className="  tracking-wide Pointsformatting">{item.point3} </p>
+                </div>}
+
                 <p className="Pointsformatting">{item.line} </p>
+
               </div>
             </div>
           ))}

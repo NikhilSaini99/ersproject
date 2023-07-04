@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
-import bgimg from '../../assets/images/pxfuel.jpg'
+import bgimg from '../../assets/images/pagebackground1.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const IncomeTaxReturn = () => {

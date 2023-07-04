@@ -124,8 +124,8 @@ export default function FormTable({ title }) {
           </div>
         </div>
 
-        <Paper elevation={20} sx={{borderRadius:'10px',width:'90%',margin:'0 auto'}}>
-          <TableContainer sx={{borderRadius:'10px'}}>
+        <Paper elevation={20} sx={{width:'90%',margin:'0 auto'}}>
+          <TableContainer >
             <Table className={''} aria-label="Form Table">
               <TableHead>
                 <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { color: 'white !important', fontWeight: 'bold !important',fontSize:'1rem !important' } }}>

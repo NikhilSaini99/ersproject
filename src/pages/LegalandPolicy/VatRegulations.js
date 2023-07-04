@@ -43,7 +43,7 @@ const VatRegulations = () => {
                     style={{ color: '#2f2483', fontWeight: 'bold' }}>(click here to download) </Link>
                     give clarity to certain sections of the VAT Act. These must be read with the Act for better understanding of the provisions of the VAT act no. 12 of 2011.</Typography>
 
-                <Typography variant="body1" className='Pointsformatting' sx={{ color: 'grey' }} >VAT (Rate) (Amendment) Regulation 2018</Typography>
+                <Link href=''><Typography variant="body1" className='Pointsformatting' sx={{ color: '#2f2483', }} >VAT (Rate) (Amendment) Regulation 2018</Typography></Link>
                 
             </Box>
             </Box>

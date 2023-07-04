@@ -11,7 +11,7 @@
 }
 
 a {
-  color: inherit;
+  color: #2F248F;
   text-decoration: none;
 }
 
@@ -248,4 +248,10 @@ ul li.starclass:before {
   font-size: 20px !important;
   letter-spacing: 0.025em;
   line-height: 1.8 !important;
+}
+
+.arrow{
+  content: '\276F';
+  color:'#2F248F';
+  list-style-type: none;
 }

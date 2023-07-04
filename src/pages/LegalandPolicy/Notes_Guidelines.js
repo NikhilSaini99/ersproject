@@ -88,8 +88,8 @@ const Notes_Guidelines = () => {
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
            
              
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'15rem', lg: '5rem,', xl: '10rem' },py:'2rem' }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'5rem', lg: '5rem,', xl: '5rem' },py:'2rem' }}>
+                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', mt: '2.5rem',mb:'1rem' }}>
                     Practice Notes and Guidelines</Typography>
 
              
@@ -98,8 +98,8 @@ const Notes_Guidelines = () => {
                 </Typography>
 
 
-                <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '0 auto' }}>
-                    <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' },borderRadius:'10px' }}>
+                <Paper elevation={20} sx={{  width: '90%', margin: '0 auto' }}>
+                    <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }}>
                         <Table>
                             <TableHead>
                                 <TableRow sx={{backgroundColor: '#2f2483', '& th': { fontWeight: 'bold !important', color:'white !important', textAlign: 'center !important' } }}>

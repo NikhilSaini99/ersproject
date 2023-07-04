@@ -13,9 +13,9 @@ const Retirement = () => {
         {
             section: 'Section 12(1)(j)(iv) of the Income Tax Order provides an exemption for any lump sum of up to E60 000 where such amount has been gained or is due as a result of the termination of an employment contract. The exemption is available when the termination of the employee’s service is due to',
             points: [
-                'the employer having ceased carrying on trade in respect of which such employee was employed',
-                'such employee having become redundant in consequence of the employer having effected a general reduction or reduction of a particular class of employees',
-                'the employee having reached the retiring age or the termination of employment of such is due to ill-health or infirmity'
+                'The employer having ceased carrying on trade in respect of which such employee was employed',
+                'Such employee having become redundant in consequence of the employer having effected a general reduction or reduction of a particular class of employees',
+                'The employee having reached the retiring age or the termination of employment of such is due to ill-health or infirmity'
             ]
         },
         {
@@ -24,8 +24,8 @@ const Retirement = () => {
         {
             section: 'The effect of the provision that when the person’s redundancy results from a reduction of employees, 1(b), that reduction must be - n',
             points: [
-                'a general reduction',
-                'a reduction of a particular class of employees.'
+                'A general reduction',
+                'A reduction of a particular class of employees.'
             ]
         },
         {
@@ -95,9 +95,9 @@ const Retirement = () => {
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
            
              
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'10rem', lg: '12rem,', xl: '15rem' },py:'2rem' }}>
 
-                <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     Retirement and Redundancy</Typography>
                 <ol style={{ listStyleType: 'decimal' }}>
                     {data.map((item, index) => (

@@ -193,7 +193,7 @@ export default function Header() {
                                 <h1 className="text-xl font-bold leading-8 mb-3">
                                   VAT
                                 </h1>
-                                <Link href={"/VAT/EstwaniVat"} className="line">
+                                <Link href={"/VAT/Eswatini"} className="line">
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish min-w-fit ">
                                     Eswatini VAT
                                   </p>
@@ -263,7 +263,7 @@ export default function Header() {
                               <h1 className="text-xl font-bold leading-8 mb-3 ">
                                 Income Tax
                               </h1>
-                              <Link href={"/IncomeTax"} className="line">
+                              <Link href={"/IncomeTax/EstwaniIncomeTax"} className="line">
                                 <p className="text-sm font-normal cursor-pointer  hover:text-yellowish ">
                                   Eswatini Income Tax
                                 </p>
@@ -277,7 +277,7 @@ export default function Header() {
                               </Link>
                               <br />
 
-                              <Link href={'/IncomeTax/WithholdingTax'} className="line">
+                              <Link href={'/IncomeTax/Withholding'} className="line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
                                   Withholding Taxes
                                 </p>

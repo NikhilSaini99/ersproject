@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Banner from "../../assets/images/bg2.jpg";
 
-const EstwaniVat = () => {
+const EstwaniIncomeTax = () => {
 
     const arrowStyling = {
         color: '#2f2483',
@@ -114,4 +114,4 @@ const EstwaniVat = () => {
     )
 }
 
-export default EstwaniVat
+export default EstwaniIncomeTax

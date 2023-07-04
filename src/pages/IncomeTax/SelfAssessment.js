@@ -1,32 +1,96 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
+import React,{useState} from 'react';
+import { Box, Divider, Stack, Typography } from '@mui/material';
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
+import rightarrow from '../../assets/images/rightarrow.svg'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const SelfAssessment = () => {
-    const selfAssessmentData = [
+    
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem',
+    }
+
+
+    const [isOpen, setisOpen] = useState(null)
+
+    const handleOpen = (index) => {
+        console.log(index)
+        console.log(isOpen)
+        if (isOpen === index) {
+            setisOpen(null);
+        }
+        else {
+            setisOpen(index); // Open the clicked FAQ
+        }
+    }
+    const FaqContainerStyling = {
+        maxWidth: '95%',
+        borderRadius: '20px',
+        marginBottom:'3rem'
+    }
+
+    const accordionStyling = {
+        width: '95%',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+    }
+
+    const insideAccordionStyle = {
+
+        background: '#FFFFFF',
+        /* Buttons/ Color - Default */
+        boxShadow: '0px 6px 10px 0px rgba(74, 58, 255, 0.19)',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        px: '2rem',
+        py: '0.2rem'
+    }
+
+    const questionStyling = {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        lineHeight: '28px',
+        fontWeight: '500',
+
+    }
+
+
+
+    const questionandanswer = [
         {
-            title: 'WHAT IS SELF-ASSESSMENT?',
-            description: 'This is a simple mechanism by which taxpayers make their own assessment from which they pay due taxes or be refunded overpaid taxes without having to wait for an assessment by ERS. Under self-assessment, the taxpayer is expected to make payment based on their own assessment before the return submission due date.',
+            question: 'What is self-assessment?',
+            answer: 'This is a simple mechanism by which taxpayers make their own assessment from which they pay due taxes or be refunded overpaid taxes without having to wait for an assessment by ERS. Under self-assessment, the taxpayer is expected to make payment based on their own assessment before the return submission due date.',
             note: 'Note: A self-assessed return is subject to an audit, therefore taxpayers should exercise diligence when completing returns in order to avoid any omissions of incorrect statements. When in doubt, taxpayers are encouraged to seek guidance from the ERS.'
         },
         {
-            title: 'HOW IS SELF-ASSESSMENT DIFFERENT FROM THE TRADITIONAL ASSESSMENT?',
-            description: 'With self-assessment, when the taxpayer furnishes their own assessment and submit same to the ERS, that submitted income tax return is deemed to be an assessment by the Commissioner General. Hence, any taxable income that is declared by the taxpayer and any tax payable as indicated in the return submitted is considered due and payable. Therefore, NO notice of assessment confirming tax due will be sent to the taxpayer under self-assessment.Meanwhile, the traditional method of assessment required the taxpayer to submit returns and await a notice of assessment from the Commissioner General informing the taxpayer of their tax liability.'
+            question: 'How is self-assessment different from the traditional assessment?',
+            answer: 'With self-assessment, when the taxpayer furnishes their own assessment and submit same to the ERS, that submitted income tax return is deemed to be an assessment by the Commissioner General. Hence, any taxable income that is declared by the taxpayer and any tax payable as indicated in the return submitted is considered due and payable. Therefore, NO notice of assessment confirming tax due will be sent to the taxpayer under self-assessment.Meanwhile, the traditional method of assessment required the taxpayer to submit returns and await a notice of assessment from the Commissioner General informing the taxpayer of their tax liability.'
         },
         {
-            title: 'WHO IS REQUIRED TO SELF-ASSESS?',
-            description: 'All taxpayers are required to be on self-assessment.'
+            question: 'Who is required to be self-assess?',
+            answer: 'All taxpayers are required to be on self-assessment.'
         },
         {
-            title: 'WHAT ARE THE IMPLICATIONS OF SELF-ASSESSMENT?',
-            points: ['Taxpayers are given the role of assessing themselves to determine their tax liability',
-        'Keeping of business records remains a compliance requirement',
-    'Payment are to be made on or before the return submission due date.']
+            question: 'What are the implications of self-assessment?',
+            answer: 'Taxpayers are given the role of assessing themselves to determine their tax liability  Keeping of business records remains a compliance requirement\nPayment are to be made on or before the return submission due date.',
+
         },
+    ]
+
+
+
+    const selfAssessmentData = [
+
         {
             title: 'ADVANTAGES OF SELF-ASSESSMENT',
             description: 'The self-assessment mechanism has the following advantages',
@@ -78,24 +142,56 @@ const SelfAssessment = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+
+
+
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '10rem', lg: '12rem,', xl: '15rem' }, py: '2rem' }}>
+
+
+                <Box sx={FaqContainerStyling}>
+
+                    <Stack sx={accordionStyling}>
+                    <Typography variant="h1"  sx={{ my: '2.5rem' }}>
                     Self Assessment</Typography>
+                        {/* question and arrow*/}
+                        {questionandanswer.map((item, index) => (
+                            <Stack key={index} sx={insideAccordionStyle}>
+                                <Stack sx={questionStyling}>
+                                    <Typography variant='h6' sx={{ color: '#14142B', fontSize: '1.5rem', textTransform:'capitalize'}}>{item.question}</Typography>
+                                    <Box sx={{ cursor: 'pointer', background: 'cover' }} onClick={() => handleOpen(index)}>
+                                        <Image src={rightarrow} width={0} height={0} alt="arrow" />
+                                    </Box>
+                                </Stack>
+                                {isOpen === index && <Divider sx={{ borderColor: 'rgba(0,0,0,0.5)' }} />}
+                                {/* answer */}
+                                <Typography variant='body1' sx={{
+                                    fontSize: '1.1rem',
+                                    lineHeight: '30px', color: 'rgba(0,0,0,0.8)', pb: '2rem',
+                                    display: isOpen === index ? 'block' : 'none'
+                                }}>{item.answer}</Typography>
+                            </Stack>
+                        ))}
+                    </Stack>
+                </Box>
+
 
                 {selfAssessmentData.map((item, index) => (
                     <Box key={index} my='1rem'>
-                        <Typography variant='body1' sx={{ fontWeight: 'bold', my:'0.3rem' }}>
+                        <Typography variant='body1' sx={{ fontWeight: 'bold', my: '0.3rem' }} className='Pointsformatting'>
                             {item.title}
                         </Typography>
-                        <Typography variant='body1' sx={{  }}>
+                        <Typography variant='body1' className='Pointsformatting'>
                             {item.description}
                         </Typography>
-                        {item.points && <ul className='custom-list'>
+                        {item.points && <ul className='custom-list '>
                             {item.points.map((item, index) => (
-                                <li key={index}>{item}</li>
+                                <div key={index} className='flex gap-1 items-start pb-2'>
+                                <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting'/></span>
+                                <li className='Pointsformatting'>{item}</li>
+                                </div>
                             ))}
                         </ul>}
-                        {item.note && <Typography variant='body1' sx={{fontWeight:'bold',color:'grey',my:'0.8rem'}}>
+                        {item.note && <Typography variant='body1' sx={{ fontWeight: 'bold', my: '1.5rem' }} className='Pointsformatting'>
                             {item.note}
                         </Typography>}
                     </Box>
