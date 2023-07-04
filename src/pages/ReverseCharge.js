@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Footer from '@/components/Footer'
 import Banner from "../assets/images/bg2.jpg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import bgimg from  '../assets/images/pxfuel.jpg'
 
 
 
@@ -86,9 +87,13 @@ const ReverseCharge = () => {
             <Box>
                 <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "2rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' } }}>
+            <Box sx={{backgroundImage:`url(${bgimg.src})`,
+        backgroundSize:'cover',backgroundAttachment:'fixed'}} >
+           
+             
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' } }}>
 
-                <Typography variant="h1" sx={{ mt: '5rem', mb: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
                     Reverse Charge Concept
                 </Typography>
 
@@ -108,10 +113,10 @@ const ReverseCharge = () => {
                     DECLARATION AND PAYMENT</Typography>
                 <Typography variant='body1' className='Pointsformatting'>
                     The VAT reverse charge declaration form and payment must be submitted to the ERS within 30 days of the invoice date.</Typography>
-                <Typography variant='body1' sx={{ my: '0.5rem', fontStyle: 'italic' }} className='Pointsformatting'>
+                <Typography variant='body1' sx={{ fontStyle: 'italic' }} className='Pointsformatting'>
                     NOTE: The VAT reverse charge system does not apply to registered businesses with a full right to input tax deduction.</Typography>
             </Box>
-
+            </Box>
             {/*-----------------------Footer---------------------*/}
             <Footer />
         </>

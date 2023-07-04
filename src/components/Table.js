@@ -129,10 +129,10 @@ export default function FormTable({ title }) {
             <Table className={''} aria-label="Form Table">
               <TableHead>
                 <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { color: 'white !important', fontWeight: 'bold !important',fontSize:'1rem !important' } }}>
-                  <TableCell >S.No</TableCell>
+                  <TableCell >#</TableCell>
                   <TableCell align="left" > Form Name</TableCell>
                   <TableCell align="left" >Category</TableCell>
-                  <TableCell align="center" >Size</TableCell>
+                  <TableCell align="center" sx={{width:{md:'15%',lg:'12%'}}}>Size</TableCell>
                   <TableCell align="left" >Description</TableCell>
                   <TableCell align="left" >Download</TableCell>
                 </TableRow>
@@ -150,7 +150,7 @@ export default function FormTable({ title }) {
                     </TableCell>
                     <TableCell align="left" >{form.name}</TableCell>
                     <TableCell align="left" >{form.category}</TableCell>
-                    <TableCell align="right" >{form.size}</TableCell>
+                    <TableCell align="right" sx={{width:{md:'15%',lg:'12%'}}} >{form.size}</TableCell>
                     <TableCell align="left" >{form.description}</TableCell>
                     <TableCell align="center" ><DownloadForOfflineRoundedIcon sx={{ fontSize: '2rem' }} /></TableCell>
                   </TableRow>

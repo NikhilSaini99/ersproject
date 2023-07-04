@@ -154,7 +154,7 @@ const RatesandThres = () => {
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
                     Rates and Thresholds</Typography>
 
-                <Typography variant='body1' my='1rem'>The rates of Income Tax applicable are as follows</Typography>
+                {/* <Typography variant='body1' my='1rem'>The rates of Income Tax applicable are as follows</Typography> */}
                 <Typography variant='h6' my='1rem' fontWeight='bold'>Rates of normal TAX for individual</Typography>
 
                 <Box >

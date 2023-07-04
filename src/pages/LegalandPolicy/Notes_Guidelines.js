@@ -88,9 +88,7 @@ const Notes_Guidelines = () => {
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
                     Practice Notes and Guidelines</Typography>
 
-                <Typography variant="body1" sx={{ fontWeight: 'bold', mb: '1rem' }}>
-                    PRACTICE NOTES
-                </Typography>
+             
                 <Typography variant="body1" sx={{ mb: '1rem' }}>
                     Practice notes are developed using the applicable legislations and are meant to assist with simplifying the application of the law. They do not replace the legislation but purely provide means for better understanding the principles of the law.
                 </Typography>

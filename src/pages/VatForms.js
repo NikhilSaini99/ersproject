@@ -27,7 +27,7 @@ export default function VatForms() {
 
       {/*-----------------------Table---------------------*/}
 
-      <FormTable title={"Vat Forms"} />
+      <FormTable title={"VAT Forms"} />
 
       {/*-----------------------Footer---------------------*/}
 

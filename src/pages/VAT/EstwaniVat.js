@@ -33,24 +33,24 @@ const EstwaniVat = () => {
 
     const fiveways = [
         {
-            head: 'P.A.Y.E:',
-            text: 'Employers are required to deduct Income Tax from the earnings of their employees (Pay As You Earn-PAYE) and to remit that monthly to the ERS. The due date for these remittances is the 7th day of the  following month',
+            head: 'PAYE:- ',
+            text: 'Employers are required to deduct Income Tax from the earnings of their employees (Pay As You Earn-PAYE) and to remit that monthly to the ERS. The due date for these remittances is the 7th day of the  following month.',
 
         },
         {
-            head: 'Provisional Income Tax:',
+            head: 'Provisional Income Tax:- ',
             text: 'All businesses are required to make provisional tax payments twice annually; these advance payments are due on the 31st December and 30th June for each tax year. A third payment is due when there is a short-fall after the provisional taxpayer has submitted a tax return and has been assessed. A business whose approved tax year is different from that which is legislated is required to make first payment within the first six months of the tax year and the second payment before the end of the tax year. A third payment (where due) must be made on receipt of a notice of assessment which clearly states the actual tax liability.'
         },
         {
-            head: 'Corporate Income Tax:',
+            head: 'Corporate Income Tax:- ',
             text: 'Like all taxpayers, companies are required to make an annual Income tax return by no later than 31st October annually. Tax returns for Companies which have an approved variation from the year ending 30 June are due 120 days after the approved financial year end.Self Employed Individual Income Tax: Individuals, including those who are self-employed are also required to make an annual Income tax return before the 31st October annually.'
         },
         {
-            head: 'Withholding Taxes:',
+            head: 'Withholding Taxes:- ',
             text: 'These are taxes on income imposed at source. A third party is charged with the responsibility of deducting the tax from specified types of payments and remitting the tax to ERS. It may either be a final payment or a payment on account. The categories and rates are shown here.'
         },
         {
-            head: 'Graded Tax:',
+            head: 'Graded Tax:- ',
             text: 'Is an annual levy payable by adults in Swaziland. Unemployed male adults (18 years and over) are expected to pay E4.50 per annum whilst unemployed females are not required to pay anything. Employed adults (both male and female) pay E18 per annum.'
         },
         {
@@ -77,10 +77,10 @@ const EstwaniVat = () => {
             <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "2rem  auto" }, pr: { md: '14rem', lg: '16rem,', xl: '20rem' } }}>
 
                 <Typography variant="h1" sx={{ mt: '5rem', mb: '2rem' }}>
-                    Estwani Vat
+                    Estwani VAT
                 </Typography>
                 <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                    HISTORICAL BACKGROUND</Typography>
+                    Historical Background</Typography>
 
                 {estwaniVatarr.map((item, index) => (
                     <>
@@ -94,7 +94,7 @@ const EstwaniVat = () => {
                 ))}
                 <Typography variant='body1' sx={{ mb: '1rem' }}
                     className='Pointsformatting'>
-                    Income Tax in Swaziland is collected in five main ways:</Typography>
+                    Income Tax in Swaziland is collected in five main ways</Typography>
 
                 {fiveways.map((item, index) => {
                     return (
