@@ -156,7 +156,7 @@ const ZeroRated = () => {
             {/*-----------------------Header---------------------*/}
 
             <Header />
-            <Box sx={{background: 'rgba(0,0,0,0.045)'}}  >      
+            <Box sx={{backgroundImage: `url(${pageBg.src})`}}  >      
             <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
                 <Image src={Banner} alt=""
                     width={0}
