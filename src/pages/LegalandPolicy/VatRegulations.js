@@ -6,6 +6,7 @@ import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
 import Link from 'next/link'
+import bgimg from '../../assets/images/pxfuel.jpg'
 
 const VatRegulations = () => {
     return (
@@ -30,17 +31,21 @@ const VatRegulations = () => {
                     }}
                 />
             </Box>
-
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+            <Box sx={{backgroundImage:`url(${bgimg.src})`,
+        backgroundSize:'cover',backgroundAttachment:'fixed'}} >
+           
+             
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
+                <Typography variant="h1"  sx={{ my: '2.5rem' }}>
                     VAT Regulations</Typography>
 
-                <Typography variant='h6' my='1rem'>The VAT Regulations <Link href={'http://www.sra.org.sz/documents/1496926588.pdf'}
+                <Typography variant='h6' my='1rem' className='Pointsformatting'>The VAT Regulations <Link href={'http://www.sra.org.sz/documents/1496926588.pdf'}
                     style={{ color: '#2f2483', fontWeight: 'bold' }}>(click here to download) </Link>
                     give clarity to certain sections of the VAT Act. These must be read with the Act for better understanding of the provisions of the VAT act no. 12 of 2011.</Typography>
 
-                <Typography variant="body1" sx={{ color: 'grey' }}>VAT (Rate) (Amendment) Regulation 2018</Typography>
+                <Typography variant="body1" className='Pointsformatting' sx={{ color: 'grey' }} >VAT (Rate) (Amendment) Regulation 2018</Typography>
                 
+            </Box>
             </Box>
 
             {/*-----------------------Footer---------------------*/}

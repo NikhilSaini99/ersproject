@@ -7,6 +7,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Banner from "../../assets/images/registration.jpg";
+import bgimg from '../../assets/images/pxfuel.jpg'
 const RatesandThres = () => {
     const normalTaxTable = [
         {
@@ -105,26 +106,26 @@ const RatesandThres = () => {
 
     const residentTableData = [
         {
-          PaymentType: 'Interest',
-          Rate: '10%',
-          DueDate: 'Within 15 days from the end of the month in which interest was paid'
+            PaymentType: 'Interest',
+            Rate: '10%',
+            DueDate: 'Within 15 days from the end of the month in which interest was paid'
         },
         {
-          PaymentType: 'Rental',
-          Rate: '10%',
-          DueDate: 'Within 15 days from the date of payment'
+            PaymentType: 'Rental',
+            Rate: '10%',
+            DueDate: 'Within 15 days from the date of payment'
         },
         {
-          PaymentType: 'Dividends',
-          Rate: '10%',
-          DueDate: 'Within 15 days from the date of payment'
+            PaymentType: 'Dividends',
+            Rate: '10%',
+            DueDate: 'Within 15 days from the date of payment'
         },
         {
-          PaymentType: 'Trusts',
-          Rate: '33%',
-          DueDate: 'Within 15 days from the date of payment'
+            PaymentType: 'Trusts',
+            Rate: '33%',
+            DueDate: 'Within 15 days from the date of payment'
         }
-      ];
+    ];
 
 
     return (
@@ -149,44 +150,135 @@ const RatesandThres = () => {
                     }}
                 />
             </Box>
+            <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
-                    Rates and Thresholds</Typography>
 
-                {/* <Typography variant='body1' my='1rem'>The rates of Income Tax applicable are as follows</Typography> */}
-                <Typography variant='h6' my='1rem' fontWeight='bold'>Rates of normal TAX for individual</Typography>
+                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' }, py: '2rem' }}>
+                    <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
+                        Rates and Thresholds</Typography>
 
-                <Box >
-                    {/*  ---------------------------------table 1--------------------------------- */}
-                    <Paper elevation={20} sx={{ margin: '2rem auto' }}>
-                        <TableContainer >
-                            <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
+                    {/* <Typography variant='body1' my='1rem'>The rates of Income Tax applicable are as follows</Typography> */}
+                    <Typography variant='h6' my='1rem' fontWeight='bold'>Rates of normal TAX for individual</Typography>
+
+                    
+                        {/*  ---------------------------------table 1--------------------------------- */}
+                        <Box>
+                        <Paper elevation={20} sx={{ margin: '2rem auto'}}>
+                            <TableContainer>
+                                <Table sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }} aria-label="Form Table">
+                                    <TableHead>
+                                        <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { fontWeight: 'bold', textAlign: 'center !important', color: 'white !important', fontSize: '1rem !important' } }}>
+                                            <TableCell colSpan={2}>Taxable Income </TableCell>
+                                            <TableCell rowSpan={2} sx={{ borderBottom: 'none' }}>Rates</TableCell>
+                                        </TableRow>
+
+                                    </TableHead>
+                                    <TableHead>
+                                        <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { fontWeight: 'bold', textAlign: 'center !important', color: 'white !important', fontSize: '1rem !important' } }}>
+                                            <TableCell>Exceeds</TableCell>
+                                            <TableCell>Does not exceed</TableCell>
+                                            <TableCell></TableCell>
+                                        </TableRow>
+                                    </TableHead>
+                                    <TableBody >
+                                        {normalTaxTable.map((row, index) => (
+                                            <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' },'&:hover':{
+                                                background:'#F2F2F2'
+                                            } }}>
+                                                <TableCell>
+                                                    <p>{row.exceeds}</p>
+                                                </TableCell>
+                                                <TableCell>
+                                                    <p>{row.doesNotExceed}</p>
+                                                </TableCell>
+                                                <TableCell>
+                                                    <p>{row.rates}</p>
+                                                </TableCell>
+                                            </TableRow>
+                                        ))}
+                                    </TableBody>
+                                </Table>
+                            </TableContainer>
+                        </Paper>
+                        </Box>
+
+                        <Typography variant='bdoy1' className='Pointsformatting'>When applying the above rates, the following should be taken into account:</Typography>
+                        <ul className='custom-list Pointsformatting'>
+                            <li>Tax payable by a natural person will be reduced by a tax rebate amount not exceeding E8 200 per tax year</li>
+                            <li>The rates are applicable on the amount exceeding E41 000</li>
+                            <li>The tax rebate does not apply in the case of redundant or retiring individuals</li>
+                        </ul>
+
+                        <Typography variant='h6' my='1rem' fontWeight='bold'>Concessionary Rates Of Normal TAX In The Case of Redundant Or Retiring Individuals</Typography>
+
+                        {/*  ---------------------------------table 2--------------------------------- */}
+                        <Paper elevation={20} sx={{ margin: '2rem auto',}}>
+                            <TableContainer >
+                            <Table sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }} aria-label="Form Table">
+                                    <TableHead>
+                                    <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { fontWeight: 'bold', textAlign: 'center !important', color: 'white !important', fontSize: '1rem !important' } }}>
+                                            <TableCell colSpan={2}>Taxable Income </TableCell>
+                                            <TableCell rowSpan={2} sx={{ borderBottom: 'none' }}>Rates</TableCell>
+                                        </TableRow>
+
+                                    </TableHead>
+                                    <TableHead>
+                                    <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { fontWeight: 'bold', textAlign: 'center !important', color: 'white !important', fontSize: '1rem !important' } }}>
+                                            <TableCell>Exceeds</TableCell>
+                                            <TableCell>Does not exceed</TableCell>
+                                            <TableCell></TableCell>
+                                        </TableRow>
+                                    </TableHead>
+                                    <TableBody >
+                                        {concessionarytaxTable.map((row, index) => (
+                                            <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' },'&:hover':{
+                                                background:'#F2F2F2'
+                                            } }}>
+                                                <TableCell>
+                                                    <p>{row.exceeds}</p>
+                                                </TableCell>
+                                                <TableCell>
+                                                    <p>{row.doesNotExceed}</p>
+                                                </TableCell>
+                                                <TableCell>
+                                                    <p>{row.rates}</p>
+                                                </TableCell>
+                                            </TableRow>
+                                        ))}
+                                    </TableBody>
+                                </Table>
+                            </TableContainer>
+                        </Paper>
+                        <Typography variant='body1'>Tax rebate in respect of individuals over the age of 60 years is E2 700 in excess of the normal rebate</Typography>
+                    
+
+                    <Typography variant='h6' my='1rem' fontWeight='bold' textAlign='left'>Withholding TAX</Typography>
+
+                    {/* ---------------------------------table 3--------------------------------- */}
+                    <Paper elevation={20} sx={{ margin: '2rem auto',}}>
+                            <TableContainer >
+                            <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' },borderRadius: '10px' }}>
                                 <TableHead>
-                                    <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center !important' } }}>
-                                        <TableCell colSpan={2}>Taxable Income </TableCell>
-                                        <TableCell rowSpan={2} sx={{ borderBottom: 'none' }}>Rates</TableCell>
-                                    </TableRow>
-
-                                </TableHead>
-                                <TableHead>
-                                    <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center !important' } }}>
-                                        <TableCell>Exceeds</TableCell>
-                                        <TableCell>Does not exceed</TableCell>
-                                        <TableCell></TableCell>
+                                <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { fontWeight: 'bold', textAlign: 'center !important', color: 'white !important', fontSize: '1rem !important' } }}>
+                                        <TableCell colSpan={3}>Payments to Non-Residents </TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody >
-                                    {normalTaxTable.map((row, index) => (
-                                        <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' } }}>
+                                    {withholdingTaxTable.map((row, index) => (
+                                        <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' },'&:hover':{
+                                                background:'#F2F2F2'
+                                            } }}>
                                             <TableCell>
-                                                <p>{row.exceeds}</p>
+                                                <p>{row.PaymentType}</p>
                                             </TableCell>
                                             <TableCell>
-                                                <p>{row.doesNotExceed}</p>
+                                                <p>{row.Rate}</p>
                                             </TableCell>
                                             <TableCell>
-                                                <p>{row.rates}</p>
+                                                <p>{row.DueDate}</p>
                                             </TableCell>
                                         </TableRow>
                                     ))}
@@ -194,44 +286,35 @@ const RatesandThres = () => {
                             </Table>
                         </TableContainer>
                     </Paper>
-                    <Typography variant='bdoy1'>When applying the above rates, the following should be taken into account</Typography>
-                    <ul className='custom-list'>
-                        <li>Tax payable by a natural person will be reduced by a tax rebate amount not exceeding E8 200 per tax year</li>
-                        <li>The rates are applicable on the amount exceeding E41 000</li>
-                        <li>The tax rebate does not apply in the case of redundant or retiring individuals</li>
-                    </ul>
 
-                    <Typography variant='h6' my='1rem' fontWeight='bold'>Concessionary Rates Of Normal TAX In The Case of Redundant Or Retiring Individuals</Typography>
+                    <Typography variant="body1" sx={{
+                        color: '#2f2483', fontWeight: 'bold', my: '2rem',
+                        border: '0.5px solid grey'
+                    }}>
+                        NB: The above stated Rates are influenced by Double Tax Agreement applicable</Typography>
 
-                    {/*  ---------------------------------table 2--------------------------------- */}
+                    {/* ---------------------------------table 4--------------------------------- */}
                     <Paper elevation={20} sx={{ margin: '2rem auto' }}>
                         <TableContainer >
                             <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
                                 <TableHead>
-                                    <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center !important' } }}>
-                                        <TableCell colSpan={2}>Taxable Income </TableCell>
-                                        <TableCell rowSpan={2} sx={{ borderBottom: 'none' }}>Rates</TableCell>
-                                    </TableRow>
-
-                                </TableHead>
-                                <TableHead>
-                                    <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center !important' } }}>
-                                        <TableCell>Exceeds</TableCell>
-                                        <TableCell>Does not exceed</TableCell>
-                                        <TableCell></TableCell>
+                                <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { fontWeight: 'bold', textAlign: 'center !important', color: 'white !important', fontSize: '1rem !important' } }}>
+                                        <TableCell colSpan={3}>Payments to Non-Residents </TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody >
-                                    {concessionarytaxTable.map((row, index) => (
-                                        <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' } }}>
+                                    {residentTableData.map((row, index) => (
+                                        <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' } ,'&:hover':{
+                                                background:'#F2F2F2'
+                                            }}}>
                                             <TableCell>
-                                                <p>{row.exceeds}</p>
+                                                <p>{row.PaymentType}</p>
                                             </TableCell>
                                             <TableCell>
-                                                <p>{row.doesNotExceed}</p>
+                                                <p>{row.Rate}</p>
                                             </TableCell>
                                             <TableCell>
-                                                <p>{row.rates}</p>
+                                                <p>{row.DueDate}</p>
                                             </TableCell>
                                         </TableRow>
                                     ))}
@@ -239,73 +322,8 @@ const RatesandThres = () => {
                             </Table>
                         </TableContainer>
                     </Paper>
-                    <Typography variant='body1'>Tax rebate in respect of individuals over the age of 60 years is E2 700 in excess of the normal rebate</Typography>
-                </Box>
-
-                <Typography variant='h6' my='1rem' fontWeight='bold'>Withholding TAX</Typography>
-
-                {/* ---------------------------------table 3--------------------------------- */}
-                <Paper elevation={20} sx={{ margin: '2rem auto' }}>
-                    <TableContainer >
-                        <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
-                            <TableHead>
-                                <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center !important' } }}>
-                                    <TableCell colSpan={3}>Payments to Non-Residents </TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody >
-                                {withholdingTaxTable.map((row, index) => (
-                                    <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' } }}>
-                                        <TableCell>
-                                            <p>{row.PaymentType}</p>
-                                        </TableCell>
-                                        <TableCell>
-                                            <p>{row.Rate}</p>
-                                        </TableCell>
-                                        <TableCell>
-                                            <p>{row.DueDate}</p>
-                                        </TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                </Paper>
-
-                <Typography variant="body1"  sx={{ color: '#2f2483', fontWeight: 'bold', my: '2rem',
-                border:'0.5px solid grey' }}>
-NB: The above stated Rates are influenced by Double Tax Agreement applicable</Typography>
-
- {/* ---------------------------------table 4--------------------------------- */}
- <Paper elevation={20} sx={{ margin: '2rem auto' }}>
-                    <TableContainer >
-                        <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
-                            <TableHead>
-                                <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center !important' } }}>
-                                    <TableCell colSpan={3}>Payments to Non-Residents </TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody >
-                                {residentTableData.map((row, index) => (
-                                    <TableRow key={index} sx={{ '& > *': { textAlign: 'center !important' } }}>
-                                        <TableCell>
-                                            <p>{row.PaymentType}</p>
-                                        </TableCell>
-                                        <TableCell>
-                                            <p>{row.Rate}</p>
-                                        </TableCell>
-                                        <TableCell>
-                                            <p>{row.DueDate}</p>
-                                        </TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                </Paper>
-
             </Box>
-
+</Box>  
             {/*-----------------------Footer---------------------*/}
 
             <Footer />

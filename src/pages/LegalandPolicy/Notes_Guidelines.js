@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
 import Link from 'next/link';
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
+import bgimg from '../../assets/images/pagebackground1.jpg'
 
 const Notes_Guidelines = () => {
     const documents = [
@@ -83,22 +84,26 @@ const Notes_Guidelines = () => {
                     }}
                 />
             </Box>
-
-            <Box sx={{ width: { xs: '95%', lg: '90%' }, margin: { xs: '2rem auto', lg: '5rem auto' }, lineHeight: '1.8' }}>
+            <Box sx={{backgroundImage:`url(${bgimg.src})`,
+        backgroundSize:'cover',backgroundAttachment:'fixed'}} >
+           
+             
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'15rem', lg: '5rem,', xl: '10rem' },py:'2rem' }}>
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
                     Practice Notes and Guidelines</Typography>
 
              
-                <Typography variant="body1" sx={{ mb: '1rem' }}>
+                <Typography variant="body1" sx={{ mb: '1rem' }} className='Pointsformatting'>
                     Practice notes are developed using the applicable legislations and are meant to assist with simplifying the application of the law. They do not replace the legislation but purely provide means for better understanding the principles of the law.
                 </Typography>
 
 
                 <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '0 auto' }}>
-                    <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }}>
+                    <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' },borderRadius:'10px' }}>
                         <Table>
                             <TableHead>
-                                <TableRow sx={{ backgroundColor: '#f4c203', '& th': { fontWeight: 'bold', textAlign: 'center !important' } }}>
+                                <TableRow sx={{backgroundColor: '#2f2483', '& th': { fontWeight: 'bold !important', color:'white !important', textAlign: 'center !important' } }}>
+                                
                                     <TableCell>Type</TableCell>
                                     <TableCell>Name</TableCell>
 
@@ -147,6 +152,7 @@ const Notes_Guidelines = () => {
                 </Paper>
 
 
+            </Box>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

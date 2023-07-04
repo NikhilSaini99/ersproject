@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { Box, Typography, TableContainer, Paper, Table, TableCell, TableRow, TableBody, TableHead } from '@mui/material'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
+import bgimg from '../../assets/images/pxfuel.jpg'
 
 const Taxations = () => {
     const countries = [
@@ -39,49 +40,63 @@ const Taxations = () => {
                     }}
                 />
             </Box>
+            <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
-                    Double Taxation Agreements</Typography>
 
-                <Typography variant='h6' my='1rem'>Status of Double Taxation Avoidance Agreement (DTAA’s) & Tax Information Exchange Agreements (TIEA’s)</Typography>
-                <ol style={{ listStyleType: 'decimal', marginLeft: '1rem' }}>
-                    <li style={{ fontWeight: 'bold' }}>Double Taxation Avoidance Agreement (DTAA)
-                        <ol style={{ listStyleType: 'lower-roman', marginLeft: '1rem' }}>
-                            <li>In force</li>
-                            <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '2rem 0' }}>
-                                <TableContainer sx={{ borderRadius: '10px' }}>
-                                    <Table>
-                                        <TableHead>
-                                            <TableRow sx={{ backgroundColor: '#f4c203', '& > *': { fontWeight: 'bold', textAlign: 'center' } }}>
-                                                <TableCell>Country</TableCell>
-                                                <TableCell>Date of Signature</TableCell>
-                                            </TableRow>
-                                        </TableHead>
-                                        <TableBody>
-                                            {countries.map((item, index) => (
-                                                item && (
-                                                    <TableRow key={index} sx={{ '&>*': { fontWeight: 'bold' } }}>
-                                                        <TableCell align='left' >{item.name}</TableCell>
-                                                        <TableCell align='left'>{item.dateOfSignature}</TableCell>
-                                                    </TableRow>
-                                                )))}
-                                        </TableBody>
-                                    </Table>
-                                </TableContainer>
-                            </Paper>
-                        </ol>
-                    </li>
-                    <li style={{ fontWeight: 'bold' }}>Tax Information Exchange Agreements (TIEA)
-                        <ol style={{ listStyleType: 'lower-roman', marginLeft: '1rem' }}>
-                            <li>In force
-                                <ul className='custom-list'>
-                                    <li>Isle of Man</li>
-                                    <li>States of Guernsey</li>
-                                </ul></li>
-                        </ol>
-                    </li>
-                </ol>
+                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' }, py: '2rem' }}>
+                    <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
+                        Double Taxation Agreements</Typography>
+
+                    <Typography variant='h6' my='1rem'>Status of Double Taxation Avoidance Agreement (DTAA’s) & Tax Information Exchange Agreements (TIEA’s)</Typography>
+                    <ol style={{ listStyleType: 'decimal', marginLeft: '1rem' }}>
+                        <li style={{ fontWeight: 'bold' }}>Double Taxation Avoidance Agreement (DTAA)
+                            <ol style={{ listStyleType: 'lower-roman', marginLeft: '1rem', fontWeight: 'normal' }}>
+                                <li>In force</li>
+                                <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '2rem 0' }}>
+                                    <TableContainer sx={{ borderRadius: '10px' }}>
+                                        <Table aria-label="Double Taxation Table">
+                                            <TableHead>
+                                                <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { color: 'white !important', fontWeight: 'bold !important', fontSize: '1rem !important' } }}>
+                                                    <TableCell>Country</TableCell>
+                                                    <TableCell>Date of Signature</TableCell>
+                                                </TableRow>
+                                            </TableHead>
+                                            <TableBody>
+                                                {countries.map((item, index) => (
+                                                    item && (
+                                                        //to get the grey background hover effect
+                                                        <TableRow key={index} sx={{
+                                                            '&>*': {
+                                                                fontWeight: 'bold',
+                                                            },
+                                                            '&:hover': {
+                                                                background: '#F2F2F2'
+                                                            }
+                                                        }}>
+                                                            <TableCell align='left' >{item.name}</TableCell>
+                                                            <TableCell align='left'>{item.dateOfSignature}</TableCell>
+                                                        </TableRow>
+                                                    )))}
+                                            </TableBody>
+                                        </Table>
+                                    </TableContainer>
+                                </Paper>
+                            </ol>
+                        </li>
+                        <li style={{ fontWeight: 'bold' }}>Tax Information Exchange Agreements (TIEA)
+                            <ol style={{ listStyleType: 'lower-roman', marginLeft: '1rem', fontWeight: 'normal' }}>
+                                <li>In force
+                                    <ul className='custom-list'>
+                                        <li>Isle of Man</li>
+                                        <li>States of Guernsey</li>
+                                    </ul></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </Box>
             </Box>
 
             {/*-----------------------Footer---------------------*/}

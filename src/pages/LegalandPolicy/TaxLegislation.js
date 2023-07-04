@@ -6,6 +6,7 @@ import { Box, Typography, Stack } from '@mui/material'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
 import Link from 'next/link'
+import bgimg from  '../../assets/images/pagebackground1.jpg'
 
 const TaxLegislation = () => {
 
@@ -51,26 +52,29 @@ const TaxLegislation = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
+            <Box sx={{backgroundImage:`url(${bgimg.src})`,
+        backgroundSize:'cover',backgroundAttachment:'fixed'}} >
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
+                <Typography variant="h1"  sx={{ pt: '5rem', mb: '2rem' }}>
                     Tax Legislations</Typography>
 
-                <Typography variant='body1'>The Eswatini Revenue Service derives its authority to administer various revenue laws from the</Typography>
-                <Link href={'http://www.sra.org.sz/documents/1497268284.pdf'} style={{ color: '#2f2483', fontWeight: 'bold' }}>Revenue Authority Act 2008</Link>
+                <Typography variant='body1' className='Pointsformatting'>The Eswatini Revenue Service derives its authority to administer various revenue laws from the</Typography>
+                <Link href={'http://www.sra.org.sz/documents/1497268284.pdf'} style={{ color: '#2f2483'}} className='Pointsformatting'>Revenue Authority Act 2008</Link>
 
-                <Typography variant='body1' marginY="0.8rem">The laws administered by the Authority include:</Typography>
+                <Typography variant='body1' marginY="0.8rem"  className='Pointsformatting'>The laws administered by the Authority include:</Typography>
                 {laws.map((item, index) => (
                     <Box key={index} sx={{ maxWidth: 'fit-content' }}>
                         <Typography variant='h6' fontWeight='bold'>{item.head}</Typography>
                         <ul>
                             {item.subpoint.map((itemsub, index) => (
-                                <Link key={index} href={`${itemsub.link}`} target='_blank'><li style={{ fontWeight: "bold", color: '#2f2483', margin: '0.5rem 0' }}>{itemsub.text}</li></Link>
+                                <Link key={index} href={`${itemsub.link}`} target='_blank'><li style={{color: '#2f2483', margin: '0.5rem 0', }} 
+                                className='Pointsformatting'>{itemsub.text}</li></Link>
                             ))}
                         </ul>
                     </Box>
                 ))}
             </Box>
-
+            </Box>
             {/*-----------------------Footer---------------------*/}
 
             <Footer />

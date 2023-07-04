@@ -5,6 +5,8 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
+import bgimg from '../../assets/images/pxfuel.jpg'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const IncomeTaxReturn = () => {
 
@@ -63,6 +65,11 @@ const IncomeTaxReturn = () => {
     ];
 
 
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem'
+    }
 
     return (
         <>
@@ -87,27 +94,36 @@ const IncomeTaxReturn = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
-                    Income Tax Returns</Typography>
+            <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
+                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' }, py: '2rem' }}>
 
-                <Typography variant='body1' my='1rem' sx={{ fontWeight: 'bold' }}>Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayers finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year; for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
-                    {<br></br>}
-                    Every year the Commisisoner General publishes a notice calling for income tax returns; click HERE to view the current notice.
-                </Typography>
+                    <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
+                        Income Tax Returns</Typography>
+
+                    <Typography variant='body1' my='1rem' className="Pointsformatting">Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayers finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year; for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
+                        {<br></br>}
+                        Every year the Commisisoner General publishes a notice calling for income tax returns; click HERE to view the current notice.
+                    </Typography>
 
 
-                {ITRdata.map((item, index) => (
-                    <Box key={index} sx={{ my: '1rem' }}>
-                        <Typography variant='body1' fontWeight='bold' mb='1rem'>{item.title}</Typography>
-                        {item.note && <Typography variant='body1'>{item.note}</Typography>}
-                        <ul className='custom-list'>
-                            {item.points.map((point, index) => (
-                                <li key={index}>{point}</li>
-                            ))}
-                        </ul>
-                    </Box>
-                ))}
+                    {ITRdata.map((item, index) => (
+                        <Box key={index} sx={{ my: '1rem' }}>
+                            <Typography variant='body1' fontWeight='bold' mb='1rem' className="Pointsformatting">{item.title}</Typography>
+                            {item.note && <Typography variant='body1' className="Pointsformatting">{item.note}</Typography>}
+                            <ul className='custom-list'>
+                                {item.points.map((point, index) => (
+                                    <div key={index} className='flex gap-1 items-start Pointsformatting'>
+                                        <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                        <li >{point}</li>
+                                    </div>
+                                ))}
+                            </ul>
+                        </Box>
+                    ))}
+                </Box>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

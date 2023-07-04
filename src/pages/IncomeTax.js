@@ -6,8 +6,11 @@ import Banner from "../assets/images/bg2.jpg";
 import Image from "next/image";
 import { HiDownload } from "react-icons/hi";
 import downloadIcon from "../assets/icons/downloadicon.svg"
+import bgimg from '../assets/images/pxfuel.jpg'
 
 import styles from '@/styles/IncomeTax.module.css'
+import { Box, Typography } from "@mui/material";
+import Footer from "@/components/Footer";
 
 
 export default function IncomeTax() {
@@ -26,13 +29,21 @@ export default function IncomeTax() {
       {/*-----------------------Banner---------------------*/}
 
       <section>
-        <Image src={Banner} alt="..." className="h-512 w-full object-fill" width="100%" height="100%" style={{height:'412px'}}/>
+        <Image src={Banner} alt="..." className="h-512 w-full object-fill" width="100%" height="100%" style={{ height: '412px' }} />
       </section>
 
-      <section className="py-8  w-95 my-0 flex flex-row leading-8">
+      <Box sx={{
+        backgroundImage: `url(${bgimg.src})`,
+        backgroundSize: 'cover', backgroundAttachment: 'fixed'
+      }} >
 
-        <div className="relative w-3/5 mx-auto my-0 relative">
-        <div className="flex flex-col gap-y-4 float-right clear-right w-20 absolute right-0"
+
+        <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' }, py: '2rem' }}>
+
+          <h1 className="text-4xl pt-14 mb-8 font-bold text-primaryColor">
+            Withholding Taxes
+          </h1>
+          {/* <div className="flex flex-col gap-y-4 float-right clear-right w-20 absolute right-0"
             style={{ marginRight: 'calc((12.5% + 2px)*2*-1)', top: '1.5rem' }}>
             <div className="border-t border-black font-bold"></div>
             <h6 className="font-semibold">DOWNLOADS</h6>
@@ -42,44 +53,43 @@ export default function IncomeTax() {
                 <p className="">Article</p>
               </div>
             </a>
-          </div>
+          </div> */}
 
           {IncomeTaxData.map((item, key) => (
 
             <div key={key}>
-              <h1 className=" text-[38px] font-semibold text-subColor mb-10 mt-6">
-                {item.heading}
-              </h1>
-              <h1 className=" text-2xl font-medium text-mainColor  mb-8">
+              <h1 className=" text-2xl text-mainColor  mb-8 Pointsformatting font-bold">
                 {item.heading1}
               </h1>
               {/* <button>button</button> */}
-              <h1 className=" text-3xl font-medium text-mainColor mb-4">
+              <h1 className=" text-3xl text-mainColor mb-2 Pointsformatting font-bold">
                 {item.heading2}
               </h1>
 
               <div className=" py-1">
-            
-                <p className={`text-xl font-medium text-gray-500 ${styles.first_heading}`}>
+
+                <p className={`text-xl  Pointsformatting font-bold`}>
                   {item.title}
                 </p>
-                <p className="mb-4  mt-2 text-black/80">
-                  <span className={`tracking-wide `}>{item.description}{" "}</span>
+                <p className="    Pointsformatting">
+                  <span className={`tracking-wide Pointsformatting`}>{item.description}{" "}</span>
                 </p>
-                <p className={`mb-2  text-black/80 tracking-wide`}>{item.description1} </p>
-                <p className="mb-2  text-black/80 tracking-wide">{item.description2} </p>
+                <p className={`   tracking-wide Pointsformatting`}>{item.description1} </p>
+                <p className="  tracking-wide Pointsformatting">{item.description2} </p>
 
-                <p className="mb-1 text-black/80 tracking-wide">{item.point}</p>
-                <p className="mb-1 text-black/80 tracking-wide">{item.point1}</p>
-                <p className="mb-1 text-black/80 tracking-wide">{item.point2}</p>
+                <p className="tracking-wide Pointsformatting">{item.point}</p>
+                <p className="  tracking-wide Pointsformatting">{item.point1}</p>
+                <p className=" tracking-wide Pointsformatting">{item.point2}</p>
 
-                <p className="mb-4 text-black/80 tracking-wide">{item.point3} </p>
-                <p>{item.line} </p>
+                <p className="  tracking-wide Pointsformatting">{item.point3} </p>
+                <p className="Pointsformatting">{item.line} </p>
               </div>
             </div>
           ))}
-        </div>
-      </section>
+
+        </Box>
+      </Box>
+      <Footer />
     </>
   );
 }

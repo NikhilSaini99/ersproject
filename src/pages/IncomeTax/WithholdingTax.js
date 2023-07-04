@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import Banner from "../../assets/images/registration.jpg";
+import bgimg from  '../../assets/images/pxfuel.jpg'
 
 const WithholdingTax = () => {
 
@@ -108,9 +109,13 @@ const WithholdingTax = () => {
                     }}
                 />
             </Box>
+            <Box sx={{backgroundImage:`url(${bgimg.src})`,
+        backgroundSize:'cover',backgroundAttachment:'fixed'}} >
+           
+             
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+                <Typography variant="h1"  sx={{ pt: '5rem', mb: '2rem' }}>
                     Withholding taxes</Typography>
 
                 <Typography variant='h6' my='1rem' fontWeight='bold'>Non-Resident Withholding TAXES <Link href={'http://www.sra.org.sz/documents/1496926588.pdf'}
@@ -119,21 +124,21 @@ const WithholdingTax = () => {
                 <Box >
                     {taxWithholdingdata.map((item, index) => (
                         <Box key={index} my='0.5rem'>
-                            <Typography variant='h6' sx={{ fontWeight: 'bold', fontSize: '1rem',fontStyle:'italic' }}>
+                            <Typography variant='h6' sx={{ fontWeight: 'bold', fontSize: '1rem',fontStyle:'italic',pt:'2rem' }} className='Pointsformatting'>
                                 {item.title}
                             </Typography>
-                            <Typography variant='body1' sx={{ fontWeight: 'grey' }}>
+                            <Typography variant='body1' sx={{ fontWeight: 'grey', }} className='Pointsformatting'>
                                 {item.description ?
                                     item.description : null}
                             </Typography>
-                            <Typography variant='body1' sx={{ fontWeight: 'grey' }}>
+                            <Typography variant='body1' sx={{ fontWeight: 'grey' }} className='Pointsformatting'>
                                 {item.description2 ?
                                     item.description2 : null}
                             </Typography>
                             {item.points &&
                                 <ul className='custom-list'>
                                     {item.points.map((descpoints, index) => (
-                                        <li key={index}>{descpoints}</li>
+                                        <li key={index} className='Pointsformatting'>{descpoints}</li>
                                     ))}
                                 </ul>}
                             {item.subcategories &&
@@ -141,14 +146,15 @@ const WithholdingTax = () => {
                                     {item.subcategories.map((subCat, index) => (
                                         <Box key={index} my='0.5rem'>
                                             <Typography variant='body1'
-                                                sx={{ fontWeight: 'bold', fontSize: '0.9rem',fontStyle:'italic' }}>{subCat.title}</Typography>
-                                            <Typography variant='body1'>{subCat.description}</Typography>
+                                                sx={{ fontWeight: 'bold', fontSize: '0.9rem',fontStyle:'italic' }} className='Pointsformatting'>{subCat.title}</Typography>
+                                            <Typography variant='body1' className='Pointsformatting'>{subCat.description}</Typography>
                                         </Box>
                                     ))}
                                 </Box>}
                         </Box>
                     ))}
                 </Box>
+            </Box>
             </Box>
 
             {/*-----------------------Footer---------------------*/}

@@ -6,8 +6,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import pageBg from '../../assets/images/pagebgcheck.jpg'
-import pageBg1 from '../../assets/images/pattern-bg.avif'
+
 
 
 const ZeroRated = () => {
@@ -157,7 +156,7 @@ const ZeroRated = () => {
             {/*-----------------------Header---------------------*/}
 
             <Header />
-            <Box sx={{ backgroundImage: '' }}  >
+            <Box sx={{ backgroundImage: `url(${''})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '100%' }}>
                 <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
                     <Image src={Banner} alt=""
                         width={0}
@@ -180,7 +179,7 @@ const ZeroRated = () => {
 
                     {/*------------------- Section 1-------------------------------- */}
                     <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                       1. PART A </Typography>
+                        1. PART A </Typography>
 
                     <ol style={{ listStyleType: 'decimal' }}>
                         {section1.map((item, index) => (
@@ -193,9 +192,9 @@ const ZeroRated = () => {
                                                 <li key={index} className='Pointsformatting mb-4'>{subitem.text}
                                                     {subitem.list ?
                                                         <ol style={{ listStyleType: "lower-roman", marginLeft: '1rem' }}>
-                                                                {subitem.list.map((check, index) => (
-                                                                    <li key={index} className='Pointsformatting'>{check}</li>
-                                                                ))}
+                                                            {subitem.list.map((check, index) => (
+                                                                <li key={index} className='Pointsformatting'>{check}</li>
+                                                            ))}
                                                         </ol>
                                                         : null}
                                                 </li></div>
@@ -209,8 +208,8 @@ const ZeroRated = () => {
                     {/*------------------- Section 2-------------------------------- */}
                     <Box sx={{ my: '2.5rem' }}>
                         <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                           2. PART B ZERO RATED : Supply Of Good Consisting Of Certain Foodstuffs</Typography>
-                       
+                            2. PART B ZERO RATED : Supply Of Good Consisting Of Certain Foodstuffs</Typography>
+
                         <ol style={{ listStyleType: 'decimal' }}>
                             {section2.map((item, index) => (
                                 <li key={index} className='Pointsformatting mb-4 sm:ml-6 2xl:ml-0'>
@@ -238,9 +237,9 @@ const ZeroRated = () => {
                     {/*------------------- Section 3-------------------------------- */}
                     <Box sx={{ my: '2.5rem' }}>
                         <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                           3. PART C ZERO RATED: Supply Of Other Goods And Services</Typography>
+                            3. PART C ZERO RATED: Supply Of Other Goods And Services</Typography>
                         <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                            </Typography>
+                        </Typography>
 
                         <ol style={{ listStyleType: 'decimal' }}>
                             {section3.map((item, index) => (

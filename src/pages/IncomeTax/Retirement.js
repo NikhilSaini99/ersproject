@@ -5,7 +5,8 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
-
+import bgimg from  '../../assets/images/pxfuel.jpg'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Retirement = () => {
     const data = [
@@ -60,6 +61,13 @@ const Retirement = () => {
         }
     ];
 
+    
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem'
+    }
+
 
     return (
         <>
@@ -83,22 +91,30 @@ const Retirement = () => {
                     }}
                 />
             </Box>
+            <Box sx={{backgroundImage:`url(${bgimg.src})`,
+        backgroundSize:'cover',backgroundAttachment:'fixed'}} >
+           
+             
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+                <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
                     Retirement and Redundancy</Typography>
                 <ol style={{ listStyleType: 'decimal' }}>
                     {data.map((item, index) => (
-                        <li key={index}>{item.section}
+                        <li key={index} className='Pointsformatting mb-2'>{item.section} 
                             {item.points && <ul className='custom-list'>
                                 {item.points.map((item, index) => (
-                                    <li key={index}>{item}</li>
+                                    <div key={index} className='flex gap-1 items-start'>
+                                    <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                    <li className='Pointsformatting'>{item}</li>
+                                    </div>
                                 ))}
                             </ul>}
                         </li>
                     ))}
                 </ol>
 
+            </Box>
             </Box>
             {/*-----------------------Footer---------------------*/}
 
