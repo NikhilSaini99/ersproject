@@ -193,13 +193,13 @@ const ExemptSupplies = () => {
                             <>
                                 <div className='flex gap-1 items-start'>
                                     <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                    <li key={item.id} className="Pointsformatting" >
+                                    <li key={item.id} className="Pointsformatting mb-4" >
                                         {item.service}
                                         <ul 
                                             style={{ listStyleType: "lower-roman", marginLeft: "1rem", marginTop: '0.5rem', marginBottom: '0.5rem' }}
                                         >
                                             {item.subServices.map((subitem) => (
-                                                <li key={subitem.id} className="Pointsformatting" style={{ marginLeft: '1.3rem' }}>{subitem.service}</li>
+                                                <li key={subitem.id} className="Pointsformatting mb-4" style={{ marginLeft: '1.3rem' }}>{subitem.service}</li>
                                             ))}
                                         </ul>
                                     </li>
@@ -209,7 +209,7 @@ const ExemptSupplies = () => {
                             <>
                                 <div className='flex gap-1 items-start'>
                                     <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                    <li style={{ marginLeft: "0rem" }} className="Pointsformatting" key={item.id}>{item.service}
+                                    <li style={{ marginLeft: "0rem" }} className="Pointsformatting mb-4" key={item.id}>{item.service}
                                     </li>
                                 </div>
                             </>
@@ -231,11 +231,11 @@ const ExemptSupplies = () => {
                             <>
                                 <div className='flex gap-1 items-start'>
                                     <span className="Pointsformatting" ><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                    <li key={item.id} className="Pointsformatting">
+                                    <li key={item.id} className="Pointsformatting mb-4">
                                         {item.point}
                                         <ul style={{ listStyleType: "lower-roman", marginLeft: "1rem", mb: '1rem', marginTop: '0.5rem', marginBottom: '0.5rem' }}>
                                             {item.subPoints.map((subpoint) => (
-                                                <li key={subpoint.id} style={{ marginLeft: '1.3rem' }} className="Pointsformatting">{subpoint.point}</li>
+                                                <li key={subpoint.id} style={{ marginLeft: '1.3rem' }} className="Pointsformatting mb-4">{subpoint.point}</li>
                                             ))}
                                         </ul>
                                     </li>
@@ -244,7 +244,7 @@ const ExemptSupplies = () => {
                             : <>
                                 <div className='flex gap-1 items-start'>
                                     <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                    <li key={item.id} className="Pointsformatting">
+                                    <li key={item.id} className="Pointsformatting mb-4">
                                         {item.point}</li>
                                 </div>
                             </>

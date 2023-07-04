@@ -189,11 +189,11 @@ const ZeroRated = () => {
                                     <>
                                     <div className='flex gap-1 items-start'>
                                     <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                    <li key={index} className='Pointsformatting'>{subitem.text} 
+                                    <li key={index} className='Pointsformatting mb-4'>{subitem.text} 
                                         {subitem.list ?
                                             <ol style={{ listStyleType: "lower-roman", marginLeft: '1rem' }}>
                                                 {subitem.list.map((check, index) => (
-                                                    <li key={index} className='Pointsformatting'>{check}</li>
+                                                    <li key={index} className='Pointsformatting mb-4'>{check}</li>
                                                 ))}
                                             </ol>
                                             : null}
@@ -219,8 +219,8 @@ const ZeroRated = () => {
                                 {item.list ? <ul className='custom-list'>
                                     {item.list.map((listpoints, index) => (
                                         <div key={index} className='flex gap-1 items-start'>
-                                        <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                        <li  className='Pointsformatting'>{listpoints}</li></div>
+                                        <span className="Pointsformatting "><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                        <li  className='Pointsformatting mb-4'>{listpoints}</li></div>
                                     ))}
                                 </ul> : null}
                             </li>
@@ -245,13 +245,13 @@ const ZeroRated = () => {
                                 
                     <ol style={{ listStyleType: 'decimal' }}>
                         {section3.map((item, index) => (
-                            <li key={index} className='Pointsformatting'>
+                            <li key={index} className='Pointsformatting mb-4'>
                                 {item.mainHead}
                                 {item.list ? <ul className='custom-list'>
                                     {item.list.map((listpoints, index) => (
                                         <div key={index} className='flex gap-1 items-start'>
                                         <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                        <li key={index} className='Pointsformatting'>{listpoints}</li>
+                                        <li key={index} className='Pointsformatting mb-4'>{listpoints}</li>
                                         </div>))}
                                 </ul> : null}
                             </li>
