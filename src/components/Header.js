@@ -193,7 +193,7 @@ export default function Header() {
                                 <h1 className="text-xl font-bold leading-8 mb-3">
                                   VAT
                                 </h1>
-                                <Link href={"/VAT"} className="line">
+                                <Link href={"/VAT/EstwaniVat"} className="line">
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish min-w-fit ">
                                     Eswatini VAT
                                   </p>

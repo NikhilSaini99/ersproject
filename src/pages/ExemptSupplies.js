@@ -179,7 +179,7 @@ const ExemptSupplies = () => {
                     Exempt Supplies of Goods & Services
                 </Typography>
                 <Typography variant="h5" component="h2" sx={{ fontWeight: "bold", my: '1rem' }}>
-                    PART A
+                   1. PART A
                 </Typography>
                 <Typography variant="body1" sx={body1Styling}>EXEMPT SUPPLY OF SERVICES</Typography>
                 <Typography variant="body1" sx={body1Styling}>
@@ -219,7 +219,7 @@ const ExemptSupplies = () => {
 
 
                 <Typography variant="h5" component="h2" sx={{ fontWeight: "bold", mt: '2.5rem' }}>
-                    PART B
+                   2. PART B
                 </Typography>
                 <Typography variant="body1" sx={body1Styling}>EXEMPT SUPPLY OF GOODS</Typography>
                 <Typography variant="body1" sx={body1Styling}>The following goods are specified for purposes of Section 20 of this Act</Typography>

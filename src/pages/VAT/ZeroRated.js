@@ -180,7 +180,7 @@ const ZeroRated = () => {
 
                     {/*------------------- Section 1-------------------------------- */}
                     <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                       1 PART A </Typography>
+                       1. PART A </Typography>
 
                     <ol style={{ listStyleType: 'decimal' }}>
                         {section1.map((item, index) => (
@@ -209,7 +209,7 @@ const ZeroRated = () => {
                     {/*------------------- Section 2-------------------------------- */}
                     <Box sx={{ my: '2.5rem' }}>
                         <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                           2 PART B ZERO RATED : Supply Of Good Consisting Of Certain Foodstuffs</Typography>
+                           2. PART B ZERO RATED : Supply Of Good Consisting Of Certain Foodstuffs</Typography>
                        
                         <ol style={{ listStyleType: 'decimal' }}>
                             {section2.map((item, index) => (
@@ -238,7 +238,7 @@ const ZeroRated = () => {
                     {/*------------------- Section 3-------------------------------- */}
                     <Box sx={{ my: '2.5rem' }}>
                         <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                           3 PART C ZERO RATED: Supply Of Other Goods And Services</Typography>
+                           3. PART C ZERO RATED: Supply Of Other Goods And Services</Typography>
                         <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
                             </Typography>
 
