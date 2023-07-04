@@ -74,7 +74,7 @@ const EstwaniVat = () => {
             <Box>
                 <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "2rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' } }}>
+            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "2rem  auto" }, pr: { md: '14rem', lg: '16rem,', xl: '20rem' } }}>
 
                 <Typography variant="h1" sx={{ mt: '5rem', mb: '2rem' }}>
                     Estwani Vat
