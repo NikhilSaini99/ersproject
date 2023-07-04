@@ -13,8 +13,8 @@ import pageBg1 from '../../assets/images/pattern-bg.avif'
 const ZeroRated = () => {
 
     const TypoStyle = {
-         fontWeight: 'bold', 
-         my: '1rem'
+        fontWeight: 'bold',
+        my: '1rem'
     }
 
     const arrowStyling = {
@@ -71,9 +71,10 @@ const ZeroRated = () => {
             ]
         },
         {
-            mainHead: 'The provisions of sub-article (I) shall apply only where',
+            mainHead: 'The provisions of sub-article (I)',
             subpoints: [
                 {
+                    text: 'Shall be applicable only below',
                     list: [
                         'A tax invoice in respect of the relevant supply is issued containing such particulars as required by section 29(4) of this Act',
                         'The import, acquisition, disposal, sale or use of the said goods is not prohibited under any law.',
@@ -121,7 +122,7 @@ const ZeroRated = () => {
         },
         {
             mainHead: 'For the purposes of paragraph 3(e), international transport of goods or passengers occurs where the goods or passengers are transported by road, rail or air from a place',
-            list:[
+            list: [
                 'Outside Eswatini to another place outside Eswatini where the transport or partof the transport is across the territory of Eswatini',
                 'Outside Eswatini to a place in Eswatini',
                 'In Eswatini to a place outside Eswatini'
@@ -129,7 +130,7 @@ const ZeroRated = () => {
         },
         {
             mainHead: 'The goods in respect of the supply of which the rate of zero per cent shall apply under the provisions of section 24(4) of this Act shall, subject to the provisions of paragraph_2a, re as follows',
-            list:[
+            list: [
                 'Petrol, diesel and liquid petroleum gas',
                 'Paraffin (kerosene) intended for cooking, illuminating and heating, provided it is not mixed or blended with any other substance for any purpose other than cooking, illuminating or heating',
                 'Supply of exercise books and text books approved by the Ministry responsible for education for the furtherance ofeducation in a qualified educational institution established under public law',
@@ -139,10 +140,10 @@ const ZeroRated = () => {
         },
     ];
 
-        const bgstyling = {
-           backgoundRepeat:'no-repeat',
-           backgroundSize:'cover'
-        }
+    const bgstyling = {
+        backgoundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
+    }
 
 
     return (
@@ -156,113 +157,111 @@ const ZeroRated = () => {
             {/*-----------------------Header---------------------*/}
 
             <Header />
-            <Box sx={{backgroundImage: `url(${pageBg.src})`}}  >      
-            <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
-                <Image src={Banner} alt=""
-                    width={0}
-                    height={0}
-                    style={{
-                        width: "100%", height: "100%",
-                        objectFit: 'cover'
-                    }}
-                />
-            </Box>
-
-                   
-            <Box sx={{
-                width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: '0rem auto', lg: '0rem auto' },
-                lineHeight: '1.8',
-
-            }}>
-                <Typography variant="h1" sx={{ mt: '5rem',mb:'2.5rem' }}>
-                    Zero Rated Goods & Services</Typography>
-
-                {/*------------------- Section 1-------------------------------- */}
-                <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                    PART A </Typography>
-
-                <ol style={{ listStyleType: 'decimal' }}>
-                    {section1.map((item, index) => (
-                        <li key={index} className='Pointsformatting mb-4'>{item.mainHead} 
-                            <ul className='custom-list'>
-                                {item.subpoints.map((subitem, index) => (
-                                    <>
-                                    <div className='flex gap-1 items-start'>
-                                    <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                    <li key={index} className='Pointsformatting mb-4'>{subitem.text} 
-                                        {subitem.list ?
-                                            <ol style={{ listStyleType: "lower-roman", marginLeft: '1rem' }}>
-                                                {subitem.list.map((check, index) => (
-                                                    <li key={index} className='Pointsformatting'>{check}</li>
-                                                ))}
-                                            </ol>
-                                            : null}
-                                    </li></div>
-                                    </>))}
-                            </ul>
-                        </li>
-                    ))}
-                </ol>
-                {/*------------------- Section 1 END-------------------------------- */}
-
-                {/*------------------- Section 2-------------------------------- */}
-                <Box sx={{ my: '2.5rem' }}>
-                    <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                        PART B ZERO RATED</Typography>
-                    <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                        SUPPLY OF GOODS CONSISTING OF CERTAIN FOODSTUFFS</Typography>
-
-                    <ol style={{ listStyleType: 'decimal' }}>
-                        {section2.map((item, index) => (
-                            <li key={index} className='Pointsformatting mb-4'>
-                                {item.mainHead}
-                                {item.list ? <ul className='custom-list'>
-                                    {item.list.map((listpoints, index) => (
-                                        <div key={index} className='flex gap-1 items-start'>
-                                        <span className="Pointsformatting "><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                        <li  className='Pointsformatting mb-4'>{listpoints}</li></div>
-                                    ))}
-                                </ul> : null}
-                            </li>
-
-                        ))}
-                    </ol>
-
+            <Box sx={{ backgroundImage: '' }}  >
+                <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
+                    <Image src={Banner} alt=""
+                        width={0}
+                        height={0}
+                        style={{
+                            width: "100%", height: "100%",
+                            objectFit: 'cover'
+                        }}
+                    />
                 </Box>
 
 
+                <Box sx={{
+                    width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: '0rem auto', lg: '0rem auto' },
+                    lineHeight: '1.8',
 
-                {/*------------------- Section 2 END-------------------------------- */}
+                }}>
+                    <Typography variant="h1" sx={{ mt: '5rem', mb: '2.5rem' }}>
+                        Zero Rated Goods & Services</Typography>
 
-
-
-                {/*------------------- Section 3-------------------------------- */}
-                <Box sx={{ my: '2.5rem' }}>
+                    {/*------------------- Section 1-------------------------------- */}
                     <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                    PART C</Typography>
-                    <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                    ZERO RATED: SUPPLY OF OTHER GOODS AND SERVICES</Typography>
-                                
+                       1 PART A </Typography>
+
                     <ol style={{ listStyleType: 'decimal' }}>
-                        {section3.map((item, index) => (
-                            <li key={index} className='Pointsformatting mb-4'>
-                                {item.mainHead}
-                                {item.list ? <ul className='custom-list'>
-                                    {item.list.map((listpoints, index) => (
-                                        <div key={index} className='flex gap-1 items-start'>
-                                        <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
-                                        <li key={index} className='Pointsformatting mb-4'>{listpoints}</li>
-                                        </div>))}
-                                </ul> : null}
+                        {section1.map((item, index) => (
+                            <li key={index} className='Pointsformatting mb-4 sm:ml-6 2xl:ml-0'>{item.mainHead}
+                                <ul className='custom-list'>
+                                    {item.subpoints.map((subitem, index) => (
+                                        <>
+                                            <div className='flex gap-1 items-start'>
+                                                <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                                <li key={index} className='Pointsformatting mb-4'>{subitem.text}
+                                                    {subitem.list ?
+                                                        <ol style={{ listStyleType: "lower-roman", marginLeft: '1rem' }}>
+                                                                {subitem.list.map((check, index) => (
+                                                                    <li key={index} className='Pointsformatting'>{check}</li>
+                                                                ))}
+                                                        </ol>
+                                                        : null}
+                                                </li></div>
+                                        </>))}
+                                </ul>
                             </li>
                         ))}
                     </ol>
-                        </Box>
-                {/*------------------- Section 3 END-------------------------------- */}
+                    {/*------------------- Section 1 END-------------------------------- */}
+
+                    {/*------------------- Section 2-------------------------------- */}
+                    <Box sx={{ my: '2.5rem' }}>
+                        <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
+                           2 PART B ZERO RATED : Supply Of Good Consisting Of Certain Foodstuffs</Typography>
+                       
+                        <ol style={{ listStyleType: 'decimal' }}>
+                            {section2.map((item, index) => (
+                                <li key={index} className='Pointsformatting mb-4 sm:ml-6 2xl:ml-0'>
+                                    {item.mainHead}
+                                    {item.list ? <ul className='custom-list'>
+                                        {item.list.map((listpoints, index) => (
+                                            <div key={index} className='flex gap-1 items-start'>
+                                                <span className="Pointsformatting "><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                                <li className='Pointsformatting mb-4'>{listpoints}</li></div>
+                                        ))}
+                                    </ul> : null}
+                                </li>
+
+                            ))}
+                        </ol>
+
+                    </Box>
 
 
+
+                    {/*------------------- Section 2 END-------------------------------- */}
+
+
+
+                    {/*------------------- Section 3-------------------------------- */}
+                    <Box sx={{ my: '2.5rem' }}>
+                        <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
+                           3 PART C ZERO RATED: Supply Of Other Goods And Services</Typography>
+                        <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
+                            </Typography>
+
+                        <ol style={{ listStyleType: 'decimal' }}>
+                            {section3.map((item, index) => (
+                                <li key={index} className='Pointsformatting mb-4 sm:ml-6 lg:ml-6 2xl:ml-0'>
+                                    {item.mainHead}
+                                    {item.list ? <ul className='custom-list'>
+                                        {item.list.map((listpoints, index) => (
+                                            <div key={index} className='flex gap-1 items-start'>
+                                                <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                                <li key={index} className='Pointsformatting mb-4'>{listpoints}</li>
+                                            </div>))}
+                                    </ul> : null}
+                                </li>
+                            ))}
+                        </ol>
+                    </Box>
+                    {/*------------------- Section 3 END-------------------------------- */}
+
+
+                </Box>
             </Box>
-            </Box> 
             {/*-----------------------Footer---------------------*/}
 
             <Footer />
