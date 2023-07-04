@@ -65,7 +65,7 @@ const Registration = () => {
   const questionandanswer = [
     {
       question: 'Who Should Register?',
-      answer: 'The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E500 000.Any business with reasonable expectations to reach this amount should also apply to register.National, regional or public institutions (parastatals and municipalities) which make taxable supplies are required to register for VAT even though they do not meet the above mentioned threshold.Businesses supplying only exempt goods and services are not required to register. However, where a business supplies both exempt and taxable services, that business must register if the total turnover of the taxable supplies meets the annual turnover of E500 000.'
+      answer: 'The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E500 000. Any business with reasonable expectations to reach this amount should also apply to register. National, regional or public institutions (parastatals and municipalities) which make taxable supplies are required to register for VAT even though they do not meet the above mentioned threshold. Businesses supplying only exempt goods and services are not required to register. However, where a business supplies both exempt and taxable services, that business must register if the total turnover of the taxable supplies meets the annual turnover of E500 000.'
     },
     {
       question: 'Voluntary Registration?',
@@ -73,7 +73,7 @@ const Registration = () => {
     },
     {
       question: 'What are the resgistration requirements?',
-      answer: 'A Fixed place of doing business in Eswatini\nCapacity to keep proper accounting records\nCapability to submit regular and reliable returns.'
+      answer: 'A fixed place of doing business in Eswatini\nCapacity to keep proper accounting records\ncapability to submit regular and reliable returns.'
     },
     {
       question: 'What attachments should be icluded in the TIN registration form?',
@@ -85,11 +85,11 @@ const Registration = () => {
     },
     {
       question: 'What are the obligations of a VAT registered business?',
-      answer: 'Display registration certificate in a prominent place on the business premises as proof that the business is authorized to collect VAT\nCharge VAT on their taxable supplies with effect from their registration date\nIssue tax invoices for all their supplies\nMaintain and keep accurate accounting records within the country\nSubmit VAT returns with payments to the ERS periodically (i.e. no later than the due dates)\nUpdate registration information whenever there is a need to do so.'
+      answer: 'Display registration certificate in a prominent place on the business premises as proof that the business is authorized to collect VAT\nCharge VAT on their taxable supplies with effect from their registration date\nIssue tax invoices for all their supplies\nmaintain and keep accurate accounting records within the country\nsubmit VAT returns with payments to the ERS periodically (i.e. no later than the due dates)\nupdate registration information whenever there is a need to do so.'
     },
     {
       question: 'Can a business cancel registration?',
-      answer: 'A business registered for VAT may apply in writing for the cancellation of registration if that business has ceased making taxable supplies or no longer meets the registration threshold.\nThe Commissioner-General may also cancel the registration of a business if that business:\n\nno longer has a proper and fixed place of business\ndoes not keep proper accounting records\noes not submit regular and reliable tax returns\nis not, in the opinion of the Commissioner-General, a fit and proper person to be registered'
+      answer: 'A business registered for VAT may apply in writing for the cancellation of registration if that business has ceased making taxable supplies or no longer meets the registration threshold.\nThe Commissioner-General may also cancel the registration of a business if that business\n\nno longer has a proper and fixed place of business\ndoes not keep proper accounting records\noes not submit regular and reliable tax returns\nis not, in the opinion of the Commissioner-General, a fit and proper person to be registered'
     },
   ]
 
