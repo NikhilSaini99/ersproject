@@ -53,9 +53,9 @@ export default function Home() {
     }
   }
 
-  const arrowStyling={
+  const arrowStyling = {
     color: '#2f2483',
-    fontSize:'1rem'
+    fontSize: '1rem'
   }
 
   // ----------------------Resources-----------------------
@@ -315,17 +315,17 @@ export default function Home() {
                     <span>Guideline on Domestic Taxes Exemptions</span>
                   </li>
                 </ul>
-              
+
                 <div>
                 </div>
 
               </div>
-              
+
             </div>
 
-            <div className="flex flex-col relative justify-end h-full"> 
-                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
-                </div> 
+            <div className="flex flex-col relative justify-end h-full">
+              <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
+            </div>
 
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
@@ -342,9 +342,9 @@ export default function Home() {
 
             </div>
 
-           <div className="flex flex-col relative justify-end h-full "> 
-                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
-                </div>
+            <div className="flex flex-col relative justify-end h-full ">
+              <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
+            </div>
 
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
@@ -367,9 +367,9 @@ export default function Home() {
               </div>
 
             </div>
-           <div className="flex flex-col relative justify-end h-full "> 
-                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
-                </div>
+            <div className="flex flex-col relative justify-end h-full ">
+              <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
+            </div>
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
             {/* Content for fourth div */}
@@ -385,11 +385,11 @@ export default function Home() {
                   <li className="">Trade Statistics</li>
                 </ul>
               </div>
-                
+
             </div>
-            <div className="flex flex-col relative justify-end h-full "> 
-                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
-                </div>
+            <div className="flex flex-col relative justify-end h-full ">
+              <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
+            </div>
           </div>
         </div>
         {/* Notice Board */}
@@ -415,9 +415,9 @@ export default function Home() {
 
             </div>
 
-           <div className="flex flex-col relative justify-end h-full "> 
-                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
-                </div>
+            <div className="flex flex-col relative justify-end h-full ">
+              <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
+            </div>
 
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
@@ -434,9 +434,9 @@ export default function Home() {
 
             </div>
 
-           <div className="flex flex-col relative justify-end h-full "> 
-                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
-                </div>
+            <div className="flex flex-col relative justify-end h-full ">
+              <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
+            </div>
 
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
@@ -459,9 +459,9 @@ export default function Home() {
               </div>
             </div>
 
-           <div className="flex flex-col relative justify-end h-full "> 
-                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
-                </div>
+            <div className="flex flex-col relative justify-end h-full ">
+              <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
+            </div>
 
             <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
 
@@ -477,11 +477,11 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-           <div className="flex flex-col relative justify-end h-full "> 
-                <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..."/>
-                </div>
+            <div className="flex flex-col relative justify-end h-full ">
+              <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
+            </div>
           </div>
-          
+
         </div>
 
 
@@ -514,9 +514,30 @@ export default function Home() {
                   </div>
 
                   <ul className={`text-sm font-normal leading-7  ${isOpen === key ? 'block' : 'hidden'}`} >
-                    <li>{card.para && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para}</li>
-                    <li>{card.para2 && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para2}</li>
-                    <li>{card.para3 && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para3}</li>
+
+                    {card.para && <div className='flex gap-1 items-start'>
+                      <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} />
+                      </span>
+                      <li>{card.para}</li>
+                    </div>}
+
+                    {card.para2 && <div className='flex gap-1 items-start'>
+                      <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} />
+                      </span>
+                      <li>{card.para2}</li>
+                    </div>}
+
+                    {card.para3 && <div className='flex gap-1 items-start'>
+                      <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} />
+                      </span>
+                      <li>{card.para3}</li>
+                    </div>}
+
+
+
+
+                    {/* <li>{card.para2 && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para2}</li>
+                    <li>{card.para3 && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para3}</li> */}
                   </ul>
                 </div>
               ))}
@@ -544,13 +565,13 @@ export default function Home() {
 
                   <ul className={`text-sm font-normal leading-7 ${isOpen2 === key + 1 ? 'block' : 'hidden'} `}>
                     <Link href={`${card.link}`}>
-                      <li className="">{card.para && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para}</li>
+                      <li className="">{card.para && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para}</li>
                     </Link>
                     <Link href={`${card.link2}`}>
-                      <li className=""> {card.para2 && <span className="mr-2 "><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para2}</li>
+                      <li className=""> {card.para2 && <span className="mr-2 "><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para2}</li>
                     </Link>
                     <Link href={`${card.link3}`}>
-                      <li className="">{card.para3 && <span className="mr-2 "><ArrowForwardIosIcon sx={arrowStyling}/></span>}{card.para3}</li>
+                      <li className="">{card.para3 && <span className="mr-2 "><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para3}</li>
                     </Link>
                   </ul>
                 </div>
@@ -594,7 +615,7 @@ export default function Home() {
             us or{""}
             <Link href="/Contact"> <span className="border-b-2 border-yellowish">find an office</span></Link>{" "}
             closest to you.
-          </p>  
+          </p>
 
           <div className="flex gap-0">
             <p className="xs:text-lg text-xl font-normal leading-8">Any Feedback for us?</p>
