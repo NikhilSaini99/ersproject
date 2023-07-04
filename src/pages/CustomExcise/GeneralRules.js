@@ -56,7 +56,7 @@ const GeneralRules = () => {
                     <li>Temporary admission</li>
                 </ul>
 
-                <Typography>For customs clearance purposes, the importer should submit the following:</Typography>
+                <Typography>For customs clearance purposes, the importer should submit the following</Typography>
 
                 <ul className='custom-list'>
                     <li>Customs declaration document - Form E for personal declarations worth less than E15 000 and SAD500 for all other declarations.</li>
@@ -121,7 +121,7 @@ const GeneralRules = () => {
                 <Typography color="primary" sx={{...headingSpacing}}><strong>SEARCH</strong></Typography>
                 <Typography>A Customs or Police officer may search any luggage or board any vehicle to conduct a search for the purposes of enforcing this requirement.</Typography>
 
-                <Typography>* Negotiable bearer instruments means a document representing ownership of debts or obligations, including cheques, bills of exchange, promissory notes, or certificates of deposit whether made payable to the bearer or not.</Typography>
+                <Typography>*Negotiable bearer instruments means a document representing ownership of debts or obligations, including cheques, bills of exchange, promissory notes, or certificates of deposit whether made payable to the bearer or not.</Typography>
                 <br />
 
             </Box>

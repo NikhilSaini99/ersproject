@@ -41,23 +41,23 @@ const IncomeTaxReturn = () => {
         {
             title: 'PERSONS NOT REQUIRED TO FURNISH INCOME TAX RETURNS',
             points: [
-                'A person, in continuous employment with a single employer, whose gross income during the year of assessment consisted ONLY of remuneration; save for persons whose income was E1.2 M and above, or:',
-                'The employee’s income tax deducted was payable in terms of the prescribed tax deductions tables and subject to the Final Deduction System (FDS); save for persons whose income was E1.2 M and above, and;',
-                'Such person did not derive any other income, or if the additional income derived, consisted of a dividend, which has been subject to a final withholding tax.'
+                'A person, in continuous employment with a single employer, whose gross income during the year of assessment consisted ONLY of remuneration; save for persons whose income was E1.2 M and above',
+                'The employee’s income tax deducted was payable in terms of the prescribed tax deductions tables and subject to the Final Deduction System (FDS); save for persons whose income was E1.2 M and above',
+                'Such person did not derive any other income, or if the additional income derived, consisted of a dividend, which has been subject to a final withholding tax'
             ]
         },
         {
             title: 'HOW TO SUBMIT A TAX RETURN',
             points: [
-                'Download the form or collect it from your nearest ERS Service Centre or Tax Office.',
-                'Complete the form, sign it and submit it to the ERS, attaching financials and all supporting documents, by the due date as announced by the Eswatini Revenue Service.',
+                'Download the form or collect it from your nearest ERS Service Centre or Tax Office',
+                'Complete the form, sign it and submit it to the ERS, attaching financials and all supporting documents, by the due date as announced by the Eswatini Revenue Service',
                 'Companies may register for e-tax and complete the return online, attaching all required documents'
             ]
         },
         {
             title: 'LATE SUBMISSION',
             points: [
-                'Late return submission attract a penalty of 20% of the tax payable or Twenty Emalangeni (E20) per day in the case of a loss.'
+                'Late return submission attract a penalty of 20% of the tax payable or Twenty Emalangeni (E20) per day in the case of a loss'
             ]
         }
     ];

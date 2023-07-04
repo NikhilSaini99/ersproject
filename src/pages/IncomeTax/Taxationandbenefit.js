@@ -67,7 +67,7 @@ const Taxationandbenefit = () => {
                         <strong>(20% x A x B/C) - D</strong>
                     </Typography>
                     <Typography>
-                        Where:
+                        
                     </Typography>
                     <Box sx={{ '& span': { fontWeight: 'bold', marginRight: '0.5rem' } }}>
                         <Typography>

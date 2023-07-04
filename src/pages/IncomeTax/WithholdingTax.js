@@ -113,7 +113,7 @@ const WithholdingTax = () => {
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
                     Withholding taxes</Typography>
 
-                <Typography variant='h6' my='1rem' fontWeight='bold'>NON-RESIDENT WITHHOLDING TAXES <Link href={'http://www.sra.org.sz/documents/1496926588.pdf'}
+                <Typography variant='h6' my='1rem' fontWeight='bold'>Non-Resident Withholding TAXES <Link href={'http://www.sra.org.sz/documents/1496926588.pdf'}
                     style={{ color: '#2f2483', fontWeight: 'bold' }}>See Rates</Link></Typography>
 
                 <Box >

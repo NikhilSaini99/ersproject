@@ -16,30 +16,30 @@ const BondedPage = () => {
     const data = [
         {
             section: 'Requirements',
-            description: 'An applicant for a bonded warehouse/rebate store license must provide building plans, approved by the local municipality, that reflect the area to be bonded as well as material used in the construction place. Among other requirements, the following are guiding principles for the physical security of the bonded area:',
+            description: 'An applicant for a bonded warehouse & rebate store license must provide building plans, approved by the local municipality, that reflect the area to be bonded as well as material used in the construction place. Among other requirements, the following are guiding principles for the physical security of the bonded area:',
             points: [
-                'The perimeter may be of any material but should not allow any goods to be passed through or thrown over it;',
+                'The perimeter may be of any material but should not allow any goods to be passed through or thrown over it',
                 'Minimum height for the fencing should be two (2) meters.',
-                'The building must be structurally sound and safeguarded against fire and burglary;',
-                'The walls of the building should be of brick, stone or concrete and the roof of slate, tiles or iron;',
-                'Windows, doors, gates and other means of access must be fully secured with adequate locking devices;',
-                'The building must be equipped with electrical security measures to prevent illegal delivery and dispatch of goods;',
-                'The building must comply with health and safety regulations;',
+                'The building must be structurally sound and safeguarded against fire and burglary',
+                'The walls of the building should be of brick, stone or concrete and the roof of slate, tiles or iron',
+                'Windows, doors, gates and other means of access must be fully secured with adequate locking devices',
+                'The building must be equipped with electrical security measures to prevent illegal delivery and dispatch of goods',
+                'The building must comply with health and safety regulations',
                 'The applicant must provide office space and other facilities for ERS Officers as may be specified by the Commissioner General.',
-                'In order to monitor any unauthorized access the applicant must demonstrate that comprehensive security arrangements are provided. The following will assist in determining this:',
-                'The perimeter fencing may be electrified in full or on the top;',
-                'The perimeter must be patrolled by security guards with or without dogs;',
-                'Surveillance cameras (CCTV) may be installed to operate round the clock;',
-                'A management system to monitor perimeter tampering should be provided;',
+                'In order to monitor any unauthorized access the applicant must demonstrate that comprehensive security arrangements are provided. The following will assist in determining this',
+                'The perimeter fencing may be electrified in full or on the top',
+                'The perimeter must be patrolled by security guards with or without dogs',
+                'Surveillance cameras (CCTV) may be installed to operate round the clock',
+                'A management system to monitor perimeter tampering should be provided',
                 'Lighting of the perimeter should be provided throughout the night, and',
                 'The number of security staff per shift, during and after office hours, weekends and public holidays should be specified and maintained.',
-                'The applicant must demonstrate fully the processes to be implemented to:',
-                'Control the movement of persons and vehicles entering and exiting the bonded area;',
-                'Control the movement of goods as per Customs requirements;',
+                'The applicant must demonstrate fully the processes to be implemented to',
+                'Control the movement of persons and vehicles entering and exiting the bonded area',
+                'Control the movement of goods as per Customs requirements',
                 'Record the movements of persons and vehicles entering and exiting the bonded area.',
-                'Maintain a separate area for the safekeeping of goods which have not been released due to detention and seizure must be provided;',
-                'Sufficient space and facilities relevant to conduct examination and necessary staff must be provided to ensure reliable service for the opening, unpacking, and re-packing of goods;',
-                'The building must be independent from other buildings that serve different purposes;',
+                'Maintain a separate area for the safekeeping of goods which have not been released due to detention and seizure must be provided',
+                'Sufficient space and facilities relevant to conduct examination and necessary staff must be provided to ensure reliable service for the opening, unpacking, and re-packing of goods',
+                'The building must be independent from other buildings that serve different purposes',
                 'Entry and exit into and out of the warehouse should not lead to another building apart from the warehouse.',
             ],
         },
@@ -49,7 +49,7 @@ const BondedPage = () => {
         'The Commissioner General,',
         'Eswatini Revenue Service,',
         'P.O. Box 5628, Mbabane',
-        'or delivered to ERS Head Office for the attention of the Commissioner Customs:',
+        'or delivered to ERS Head Office for the attention of the Commissioner Customs',
         'Portion 419 of Farm 50, Along MR103',
         'Ezulwini.'
     ]
@@ -79,7 +79,7 @@ const BondedPage = () => {
 
             <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
-                    Bonded warehouses/rebate store</Typography>
+                    Bonded warehouses & rebate store</Typography>
 
 
                 {data.map((item, index) => (

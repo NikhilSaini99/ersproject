@@ -10,20 +10,20 @@ import Banner from "../../assets/images/registration.jpg";
 const Retirement = () => {
     const data = [
         {
-            section: 'Section 12(1)(j)(iv) of the Income Tax Order provides an exemption for any lump sum of up to E60 000 where such amount has been gained or is due as a result of the termination of an employment contract. The exemption is available when the termination of the employee’s service is due to:',
+            section: 'Section 12(1)(j)(iv) of the Income Tax Order provides an exemption for any lump sum of up to E60 000 where such amount has been gained or is due as a result of the termination of an employment contract. The exemption is available when the termination of the employee’s service is due to',
             points: [
-                'the employer having ceased carrying on trade in respect of which such employee was employed;',
-                'such employee having become redundant in consequence of the employer having effected a general reduction or reduction of a particular class of employees;',
-                'the employee having reached the retiring age or the termination of employment of such is due to ill-health or infirmity.'
+                'the employer having ceased carrying on trade in respect of which such employee was employed',
+                'such employee having become redundant in consequence of the employer having effected a general reduction or reduction of a particular class of employees',
+                'the employee having reached the retiring age or the termination of employment of such is due to ill-health or infirmity'
             ]
         },
         {
-            section: 'The situation in 1(a) may occur as a result of the closing down of the business or its liquidation.',
+            section: 'The situation in 1(a) may occur as a result of the closing down of the business or its liquidation',
         },
         {
             section: 'The effect of the provision that when the person’s redundancy results from a reduction of employees, 1(b), that reduction must be - n',
             points: [
-                'a general reduction;',
+                'a general reduction',
                 'a reduction of a particular class of employees.'
             ]
         },
@@ -31,13 +31,13 @@ const Retirement = () => {
             section: 'In granting the exemption on lump sum payments arising as a result of retrenchment,  the retrenchment must be part of a general reduction of staff or a reduction in the complement of a particular class of employees. Whether a redundancy has been effected or not in terms of the foregoing is a question of fact which can be substantiated by the production of relevant proof to that effect.',
         },
         {
-            section: 'In the case of redundancy coming as a result of an employer ceasing operation or the employer having effected a general reduction or reduction of a particular class of employees, the following information must be provided to the ERS:',
+            section: 'In the case of redundancy coming as a result of an employer ceasing operation or the employer having effected a general reduction or reduction of a particular class of employees, the following information must be provided to the ERS',
             points: [
-                'the number of employees being made redundant;',
-                'the occupations and remunerations of the employees affected;',
-                'the reasons for the redundancies;',
-                'the date when the redundancies would take effect; or',
-                'a copy of the letter of approval submitted to the Labour Commissioner, sanctioning the redundancies where the termination of employment affects five or more employees.'
+                'The number of employees being made redundant',
+                'The occupations and remunerations of the employees affected',
+                'The reasons for the redundancies',
+                'The date when the redundancies would take effect',
+                'A copy of the letter of approval submitted to the Labour Commissioner, sanctioning the redundancies where the termination of employment affects five or more employees.'
             ]
         },
         {

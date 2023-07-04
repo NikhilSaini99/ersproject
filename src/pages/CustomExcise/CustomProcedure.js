@@ -18,7 +18,7 @@ const CustomProcedure = () => {
     const data = [
         {
             section: '1. DEFINITION',
-            content: 'All customs declarations are made by completion of an SAD500 in which all information pertinent for effective processing of that declaration is provided by the importer/declarant. Part of that information is the Customs Procedure Codes (CPCs) which when correctly used inform the ERS on what the goods are being imported as well as the regime under which Customs will treat it.\n\nAdditional codes are denoted by the last 3-digit code in the 7-digit Customs Procedure Codes (CPC). A complete CPC may be 4000 444 where:\n\n4000 is the extended code; and\n444 is the additional code.\n\nWhen selected, the interpretation would be goods imported for home use (Extended Code 4000) where the VAT payable would be deferred (Additional Code 444).',
+            content: 'All customs declarations are made by completion of an SAD500 in which all information pertinent for effective processing of that declaration is provided by the importer/declarant. Part of that information is the Customs Procedure Codes (CPCs) which when correctly used inform the ERS on what the goods are being imported as well as the regime under which Customs will treat it.\n\nAdditional codes are denoted by the last 3-digit code in the 7-digit Customs Procedure Codes (CPC). A complete CPC may be 4000 444 where:\n\n4000 is the extended code and\n444 is the additional code.\n\nWhen selected, the interpretation would be goods imported for home use (Extended Code 4000) where the VAT payable would be deferred (Additional Code 444).',
         },
         {
             section: '2. PURPOSE',

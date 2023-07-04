@@ -23,13 +23,13 @@ const SelfAssessment = () => {
         },
         {
             title: 'WHAT ARE THE IMPLICATIONS OF SELF-ASSESSMENT?',
-            points: ['Taxpayers are given the role of assessing themselves to determine their tax liability;',
-        'Keeping of business records remains a compliance requirement;',
+            points: ['Taxpayers are given the role of assessing themselves to determine their tax liability',
+        'Keeping of business records remains a compliance requirement',
     'Payment are to be made on or before the return submission due date.']
         },
         {
             title: 'ADVANTAGES OF SELF-ASSESSMENT',
-            description: 'The self-assessment mechanism has the following advantages:',
+            description: 'The self-assessment mechanism has the following advantages',
             points: ['Taxpayers will have a better understanding and appreciation of tax computations.',
                 'Provides better control of taxpayers’ tax affairs as they ensure that their assessments are up to date and reflect the true tax position.',
                 ' The direct involvement of the taxpayer in the tax computation leads to better financial planning.',
@@ -41,7 +41,7 @@ const SelfAssessment = () => {
                 'To submit tax returns on or before the due date. If the last day of submitting returns falls on a public holiday or weekend, the return must be submitted on the last working day prior to the public holiday or weekend. Late return submission attracts late submission penalties.',
                 'To pay Provisional Tax on or before the due date. The first payment must be made within six months from the commencement of the year of assessment (July each year) or approved financial year-end date; the second payment must be made not later than the last day of the year of assessment or approved financial year-end date; and the third payment must be paid on or before the due date of the tax return. Interest is imposed on late payments.',
                 'To reference payments correctly.',
-                'To keep full and accurate records of business activity. The records must be sufficient to enable proper return of income; kept in Swaziland; in English or siSwati language; and must be kept for at least 5 years. Failure to keep proper records or failure to keep them for the necessary five years is an offence.'
+                'To keep full and accurate records of business activity. The records must be sufficient to enable proper return of income kept in Swaziland in English or siSwati language and must be kept for at least 5 years. Failure to keep proper records or failure to keep them for the necessary five years is an offence.'
 
             ],
 
@@ -49,12 +49,11 @@ const SelfAssessment = () => {
         },
         {
             title: 'SRA’S RESPONSIBILITIES TOWARDS SUPPORTING SELF-ASSESSMENT INCLUDE:',
-            points: ['Taxpayer Education, Awareness campaigns, mobile support;',
-                'Issuance of pre-transaction rulings; and',
+            points: ['Taxpayer Education, Awareness campaigns, mobile support',
+                'Issuance of pre-transaction rulings and',
                 'Tax audits and investigations.']
         }
     ];
-
 
     return (
         <>

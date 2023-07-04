@@ -21,7 +21,7 @@ const GuidePublicOfficer = () => {
         {
             question: 'Does an artificial person qualify to be appointed as Public Officer?',
             answer:
-                'An artificial person cannot be appointed as a public officer for the following reasons:',
+                'An artificial person cannot be appointed as a public officer for the following reasons',
             subpoints: [
                 'Cannot be held personally liable for actions of another artificial person, company.',
                 'Their appointment presents a challenge when it comes to accepting the liability of the actions of the company that they may be representing.',
@@ -30,7 +30,7 @@ const GuidePublicOfficer = () => {
         {
             question: 'Exclusions',
             answer:
-                'The following entities DO NOT qualify to be appointed as Public Officers hence the ERS will not approve such appointments:',
+                'The following entities DO NOT qualify to be appointed as Public Officers hence the ERS will not approve such appointments',
             subpoints: [
                 'Auditing Firms',
                 'Accounting firms',
@@ -42,7 +42,7 @@ const GuidePublicOfficer = () => {
         {
             question: 'How to apply to be a Public officer?',
             answer:
-                'An application for approval must be made in writing to the Commissioner General, accompanied by the following documents:',
+                'An application for approval must be made in writing to the Commissioner General, accompanied by the following documents',
             subpoints: [
                 'A resolution by the company board of directors wherein the appointment was made.',
                 'An acceptance letter signed by the appointed person.',
@@ -54,7 +54,7 @@ const GuidePublicOfficer = () => {
         {
             question: 'Liabilities of a Public Officer',
             answer:
-                'In terms of Sections 44, 45, 46, 47 and 51(11) of the Income Tax Order, a public Officer shall upon approval of his appointment by the Commissioner General:',
+                'In terms of Sections 44, 45, 46, 47 and 51(11) of the Income Tax Order, a public Officer shall upon approval of his appointment by the Commissioner General',
             subpoints: [
                 'Be answerable for all acts or matters as required to be performed by the company under the Income Tax Order.',
                 'Represent the taxpayer in respect of the income of the company.',
@@ -86,7 +86,7 @@ const GuidePublicOfficer = () => {
         },
 
         {
-            question: 'Failure to appoint a Public Officer Failure to appoint a public officer by a company shall:',
+            question: 'Failure to appoint a Public Officer Failure to appoint a public officer by a company shall',
             subpoints: [
                 'Result in the imposition of a penalty not exceeding sixty Emalangeni (E60) for every day that the default continues (Subject to the Commissioner General\'s review of the penalty).',
                 'Not exonerate any company from the obligation of complying with the Income Tax Order.',
@@ -136,10 +136,10 @@ const GuidePublicOfficer = () => {
                 </Typography>
 
                 <ul className='custom-list'>
-                    <li>the company through the board of directors or</li>
-                    <li>by an agent; or</li>
-                    <li>by an attorne; or</li>
-                    <li>any other body authorized to make such appointment</li>
+                    <li>The company through the board of directors or</li>
+                    <li>By an agent</li>
+                    <li>By an attorne</li>
+                    <li>Any other body authorized to make such appointment</li>
                 </ul>
 
                 {publicOfficerData.map((item, index) => (
