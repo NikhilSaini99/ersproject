@@ -5,11 +5,17 @@ import Image from 'next/image'
 import Head from 'next/head'
 import Footer from '@/components/Footer'
 import Banner from "../assets/images/bg2.jpg";
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 
 const ReverseCharge = () => {
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem',
+    }
+
     const data = [
         {
             id: 1,
@@ -80,22 +86,29 @@ const ReverseCharge = () => {
             <Box>
                 <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-            <Box sx={{ width: "80%", margin: { xs: "2rem auto", lg: "5rem auto" } }}>
+            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "2rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' } }}>
 
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
+                <Typography variant="h1" sx={{ mt: '5rem', mb: '2rem' }}>
                     Reverse Charge Concept
                 </Typography>
 
                 {data.map((item) => (
-                    <Typography variant='body1' key={item.id}>{item.content}</Typography>
+                    <>
+                        <div className='flex gap-1 items-start'>
+                            <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                            <Typography variant='body1' key={item.id} sx={{ mb: '1rem' }}
+                                className='Pointsformatting'>
+                                {item.content}</Typography>
+                        </div>
+                    </>
                 ))}
 
 
-                <Typography variant='h5' component='h2' sx={{ my: '2rem' }}>
+                <Typography variant='h5' component='h2' sx={{ mt: '2rem', mb: '1rem', fontWeight: 'bold' }} className='Pointsformatting'>
                     DECLARATION AND PAYMENT</Typography>
-                <Typography variant='body1' sx={{ my: '2rem'}}>
+                <Typography variant='body1' className='Pointsformatting'>
                     The VAT reverse charge declaration form and payment must be submitted to the ERS within 30 days of the invoice date.</Typography>
-                <Typography variant='body1' sx={{ my: '2rem', fontWeight: 'bold' }}>
+                <Typography variant='body1' sx={{ my: '0.5rem', fontStyle: 'italic' }} className='Pointsformatting'>
                     NOTE: The VAT reverse charge system does not apply to registered businesses with a full right to input tax deduction.</Typography>
             </Box>
 

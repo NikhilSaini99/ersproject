@@ -245,7 +245,7 @@ ul li.starclass:before {
 /* Exempt Supplies Styling */
 
 .Pointsformatting{
-  font-size: 20px;
+  font-size: 20px !important;
   letter-spacing: 0.025em;
-  line-height: 1.8;
+  line-height: 1.8 !important;
 }
