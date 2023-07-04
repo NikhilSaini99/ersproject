@@ -78,8 +78,8 @@ export default function Footer() {
         </Box>
 
         {/* About ERS */}
-        <Box color='white' bgcolor='#2F3192'>
-          <Stack direction={'row'} bgcolor='#2F3192' sx={{
+        <Box color='white' bgcolor='#16163C'>
+          <Stack direction={'row'} bgcolor='#16163C' sx={{
             position: 'relative',
             top: { xs: '-3.5px', lg: '-2.5px' },
             px: { xs: '1.5rem', lg: '3rem' }, pt: { xs: '0.8rem', lg: '1rem' },

@@ -375,7 +375,7 @@ export default function Home() {
             {/* Content for fourth div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
-                <p className="text-yellowish text-xl font-normal">Publication</p>
+                <p className="text-yellowish text-xl font-normal">Publications</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6 ">
                   <li className="">SRA Strategic Plan 2015-2018</li>
                   <li className="">
@@ -399,7 +399,7 @@ export default function Home() {
             {/* Content for first div */}
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
-                <p className="text-yellowish text-xl font-normal">Tender</p>
+                <p className="text-yellowish text-xl font-normal">Latest Tenders</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                   <li className="">
                     <span>Approved R1.1 RFT002 - Manage Printing Services</span>
@@ -424,7 +424,7 @@ export default function Home() {
             {/* Content for second div */}
             <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]    justify-between ">
               <div className="">
-                <p className=" text-yellowish text-xl font-normal">Vacancies</p>
+                <p className=" text-yellowish text-xl font-normal">Current Vacancies</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                   <li>
                     There are currently no Vacancies available
@@ -443,7 +443,7 @@ export default function Home() {
             {/* Content for third div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
-                <p className="text-yellowish text-xl font-normal">Public Notice</p>
+                <p className="text-yellowish text-xl font-normal">Public Notices</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
 
                   <li className="">
@@ -468,7 +468,7 @@ export default function Home() {
             {/* Content for fourth div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
-                <p className="text-yellowish text-xl font-normal">Public Meeting</p>
+                <p className="text-yellowish text-xl font-normal">Public Meetings</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6 ">
                   <li className="">SRA Strategic Plan 2015-2018</li>
                   <li className="">
