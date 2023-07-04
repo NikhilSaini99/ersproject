@@ -6,6 +6,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import pageBg from '../../assets/images/pagebgcheck.jpg'
+import pageBg1 from '../../assets/images/pattern-bg.avif'
 
 
 const ZeroRated = () => {
@@ -137,6 +139,10 @@ const ZeroRated = () => {
         },
     ];
 
+        const bgstyling = {
+           backgoundRepeat:'no-repeat',
+           backgroundSize:'cover'
+        }
 
 
     return (
@@ -150,7 +156,7 @@ const ZeroRated = () => {
             {/*-----------------------Header---------------------*/}
 
             <Header />
-
+            <Box sx={{background: 'rgba(0,0,0,0.045)'}}  >      
             <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
                 <Image src={Banner} alt=""
                     width={0}
@@ -162,11 +168,13 @@ const ZeroRated = () => {
                 />
             </Box>
 
+                   
             <Box sx={{
-                width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: '2rem auto', lg: '5rem auto' },
-                lineHeight: '1.8'
+                width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: '0rem auto', lg: '0rem auto' },
+                lineHeight: '1.8',
+
             }}>
-                <Typography variant="h1" sx={{ my: '2.5rem' }}>
+                <Typography variant="h1" sx={{ mt: '5rem',mb:'2.5rem' }}>
                     Zero Rated Goods & Services</Typography>
 
                 {/*------------------- Section 1-------------------------------- */}
@@ -254,6 +262,7 @@ const ZeroRated = () => {
 
 
             </Box>
+            </Box> 
             {/*-----------------------Footer---------------------*/}
 
             <Footer />
