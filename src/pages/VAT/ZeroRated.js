@@ -183,7 +183,7 @@ const ZeroRated = () => {
 
                 <ol style={{ listStyleType: 'decimal' }}>
                     {section1.map((item, index) => (
-                        <li key={index} className='Pointsformatting'>{item.mainHead} 
+                        <li key={index} className='Pointsformatting mb-4'>{item.mainHead} 
                             <ul className='custom-list'>
                                 {item.subpoints.map((subitem, index) => (
                                     <>
@@ -193,7 +193,7 @@ const ZeroRated = () => {
                                         {subitem.list ?
                                             <ol style={{ listStyleType: "lower-roman", marginLeft: '1rem' }}>
                                                 {subitem.list.map((check, index) => (
-                                                    <li key={index} className='Pointsformatting mb-4'>{check}</li>
+                                                    <li key={index} className='Pointsformatting'>{check}</li>
                                                 ))}
                                             </ol>
                                             : null}
@@ -214,7 +214,7 @@ const ZeroRated = () => {
 
                     <ol style={{ listStyleType: 'decimal' }}>
                         {section2.map((item, index) => (
-                            <li key={index} className='Pointsformatting'>
+                            <li key={index} className='Pointsformatting mb-4'>
                                 {item.mainHead}
                                 {item.list ? <ul className='custom-list'>
                                     {item.list.map((listpoints, index) => (
