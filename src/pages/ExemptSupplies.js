@@ -174,7 +174,7 @@ const ExemptSupplies = () => {
             <Box>
                 <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-            <Box sx={{ width: "75%", margin: { xs: "2rem auto", lg: "5rem auto" } }}>
+            <Box sx={{ width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: "2rem auto", lg: "5rem auto" } }}>
                 <Typography variant="h1" sx={{ my: '3.5rem' }}>
                     Exempt Supplies of Goods & Services
                 </Typography>

@@ -299,11 +299,11 @@ export default function Home() {
 
         {/* Recently Approved */}
         <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full `}>
-          <div className="flex flex-col md:flex-row justify-between  md:px-12 py-10 h-[25rem] gap-4">
+          <div className="flex flex-col md:flex-row justify-between  md:px-8 py-10 h-[25rem] gap-4">
             {/* Content for first div */}
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
-                <p className="text-yellowish text-xl font-normal">Recently Approved Guidelines</p>
+                <p className="text-yellowish text-xl font-normal ">Recently Approved Guidelines</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                   <li className="">
                     <span>SRA-Minstry of Finance Guidelines to Taxpayers- COVID-19</span>
@@ -395,7 +395,7 @@ export default function Home() {
         {/* Notice Board */}
 
         <div className={`${isVisible.div2 ? "block" : "hidden"} bg-subColor text-white w-full `}>
-          <div className="flex flex-col md:flex-row justify-between   md:px-12 py-10 h-[25rem] gap-4">
+          <div className="flex flex-col md:flex-row justify-between   md:px-8 py-10 h-[25rem] gap-4">
             {/* Content for first div */}
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>

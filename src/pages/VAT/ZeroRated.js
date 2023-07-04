@@ -5,20 +5,30 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 const ZeroRated = () => {
 
     const TypoStyle = {
-        color: '#2f2483', fontWeight: 'bold', textAlign: 'center'
+         fontWeight: 'bold', 
+         my: '1rem'
     }
+
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem'
+    }
+
+
 
     const section1 = [
         {
             mainHead: 'The goods in respect of the supply or import of which the rate of zero per cent shall apply under the provisions of section 24(4) of the VAT Amendment Act shall, subject to the provisions of paragraph 2 of this article, be as follows',
             subpoints: [
                 {
-                    text: 'animal feeds consisting of',
+                    text: 'Animal feeds consisting of',
                     list: [
                         'Any substance obtained by a process of crushing, gritting or grinding, or by addition to any substance or the removal therefrom of any ingredient',
                         'Any condimental food, vitamin or mineral substance or other substance which possesses or is alleged to possess nutritive properties',
@@ -153,10 +163,10 @@ const ZeroRated = () => {
             </Box>
 
             <Box sx={{
-                width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' },
+                width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: '2rem auto', lg: '5rem auto' },
                 lineHeight: '1.8'
             }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+                <Typography variant="h1" sx={{ my: '2.5rem' }}>
                     Zero Rated Goods & Services</Typography>
 
                 {/*------------------- Section 1-------------------------------- */}
@@ -165,19 +175,22 @@ const ZeroRated = () => {
 
                 <ol style={{ listStyleType: 'decimal' }}>
                     {section1.map((item, index) => (
-                        <li key={index}>{item.mainHead}
+                        <li key={index} className='Pointsformatting'>{item.mainHead} 
                             <ul className='custom-list'>
                                 {item.subpoints.map((subitem, index) => (
-                                    <li key={index}>{subitem.text}
+                                    <>
+                                    <div className='flex gap-1 items-start'>
+                                    <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                    <li key={index} className='Pointsformatting'>{subitem.text} 
                                         {subitem.list ?
                                             <ol style={{ listStyleType: "lower-roman", marginLeft: '1rem' }}>
                                                 {subitem.list.map((check, index) => (
-                                                    <li key={index}>{check}</li>
+                                                    <li key={index} className='Pointsformatting'>{check}</li>
                                                 ))}
                                             </ol>
                                             : null}
-                                    </li>
-                                ))}
+                                    </li></div>
+                                    </>))}
                             </ul>
                         </li>
                     ))}
@@ -193,14 +206,17 @@ const ZeroRated = () => {
 
                     <ol style={{ listStyleType: 'decimal' }}>
                         {section2.map((item, index) => (
-                            <li key={index}>
+                            <li key={index} className='Pointsformatting'>
                                 {item.mainHead}
                                 {item.list ? <ul className='custom-list'>
                                     {item.list.map((listpoints, index) => (
-                                        <li key={index}>{listpoints}</li>
+                                        <div key={index} className='flex gap-1 items-start'>
+                                        <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                        <li  className='Pointsformatting'>{listpoints}</li></div>
                                     ))}
                                 </ul> : null}
                             </li>
+
                         ))}
                     </ol>
 
@@ -221,12 +237,14 @@ const ZeroRated = () => {
                                 
                     <ol style={{ listStyleType: 'decimal' }}>
                         {section3.map((item, index) => (
-                            <li key={index}>
+                            <li key={index} className='Pointsformatting'>
                                 {item.mainHead}
                                 {item.list ? <ul className='custom-list'>
                                     {item.list.map((listpoints, index) => (
-                                        <li key={index}>{listpoints}</li>
-                                    ))}
+                                        <div key={index} className='flex gap-1 items-start'>
+                                        <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                                        <li key={index} className='Pointsformatting'>{listpoints}</li>
+                                        </div>))}
                                 </ul> : null}
                             </li>
                         ))}
