@@ -24,7 +24,7 @@ const ExemptSupplies = () => {
         {
             id: 4,
             service:
-                "A supply by way of lease or letting of immovable property, other than a-",
+                "A supply by way of lease or letting of immovable property, other than",
             subServices: [
                 { id: 41, service: "Lease or letting of commercial premises" },
                 {
@@ -92,7 +92,7 @@ const ExemptSupplies = () => {
         },
         {
             id: 3,
-            point: "Goods which are forwarded unsolicited and free of charge by a non-resident to a public authority or a local authority or any association not for gain, which satisfies the Commissioner General that such goods shall be used by that association exclusively-",
+            point: "Goods which are forwarded unsolicited and free of charge by a non-resident to a public authority or a local authority or any association not for gain, which satisfies the Commissioner General that such goods shall be used by that association exclusively",
             subPoints: [
                 { id: 31, point: "For education, religious or welfare purposes" },
                 { id: 32, point: "In the furtherance of that association’s objectives directed to the provision of educational, medical or welfare services or scientific research" },
@@ -101,7 +101,7 @@ const ExemptSupplies = () => {
         },
         {
             id: 4,
-            point: "For the purpose of paragraph (c) the recipient of the goods responsible for the distribution shall furnish an undertaking that:",
+            point: "For the purpose of paragraph (c) the recipient of the goods responsible for the distribution shall furnish an undertaking that",
             subPoints: [
                 { id: 41, point: "Such goods are for the exclusive use by the organization or for free distribution" },
                 { id: 42, point: "Such goods shall not be sold, leased, hired or otherwise disposed of for gain" },
@@ -185,7 +185,7 @@ const ExemptSupplies = () => {
                 <Typography variant="body1" sx={body1Styling}>
                     The following services shall, subject to the provisions of paragraph
                     2, be specified as exempt supplies for the purposes of section 19 of
-                    the VAT Amendment Act -
+                    the VAT Amendment Act
                 </Typography>
                 <ul className="custom-list">
                     {exemptServices.map((item) =>

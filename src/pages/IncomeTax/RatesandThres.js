@@ -154,8 +154,8 @@ const RatesandThres = () => {
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
                     Rates and Thresholds</Typography>
 
-                <Typography variant='body1' my='1rem'>The rates of Income Tax applicable are as follows:</Typography>
-                <Typography variant='h6' my='1rem' fontWeight='bold'>RATES OF NORMAL TAX FOR INDIVIDUALS</Typography>
+                <Typography variant='body1' my='1rem'>The rates of Income Tax applicable are as follows</Typography>
+                <Typography variant='h6' my='1rem' fontWeight='bold'>Rates of normal TAX for individual</Typography>
 
                 <Box >
                     {/*  ---------------------------------table 1--------------------------------- */}
@@ -194,14 +194,14 @@ const RatesandThres = () => {
                             </Table>
                         </TableContainer>
                     </Paper>
-                    <Typography variant='bdoy1'>When applying the above rates, the following should be taken into account:</Typography>
+                    <Typography variant='bdoy1'>When applying the above rates, the following should be taken into account</Typography>
                     <ul className='custom-list'>
                         <li>Tax payable by a natural person will be reduced by a tax rebate amount not exceeding E8 200 per tax year</li>
                         <li>The rates are applicable on the amount exceeding E41 000</li>
-                        <li>The tax rebate does not apply in the case of redundant or retiring individuals.</li>
+                        <li>The tax rebate does not apply in the case of redundant or retiring individuals</li>
                     </ul>
 
-                    <Typography variant='h6' my='1rem' fontWeight='bold'>CONCESSIONARY RATES OF NORMAL TAX IN THE CASE OF REDUNDANT OR RETIRING INDIVIDUALS</Typography>
+                    <Typography variant='h6' my='1rem' fontWeight='bold'>Concessionary Rates Of Normal TAX In The Case of Redundant Or Retiring Individuals</Typography>
 
                     {/*  ---------------------------------table 2--------------------------------- */}
                     <Paper elevation={20} sx={{ margin: '2rem auto' }}>
@@ -239,10 +239,10 @@ const RatesandThres = () => {
                             </Table>
                         </TableContainer>
                     </Paper>
-                    <Typography variant='body1'>Tax rebate in respect of individuals over the age of 60 years is E2 700 in excess of the normal rebate.</Typography>
+                    <Typography variant='body1'>Tax rebate in respect of individuals over the age of 60 years is E2 700 in excess of the normal rebate</Typography>
                 </Box>
 
-                <Typography variant='h6' my='1rem' fontWeight='bold'>WITHHOLDING TAX</Typography>
+                <Typography variant='h6' my='1rem' fontWeight='bold'>Withholding TAX</Typography>
 
                 {/* ---------------------------------table 3--------------------------------- */}
                 <Paper elevation={20} sx={{ margin: '2rem auto' }}>
@@ -274,7 +274,7 @@ const RatesandThres = () => {
 
                 <Typography variant="body1"  sx={{ color: '#2f2483', fontWeight: 'bold', my: '2rem',
                 border:'0.5px solid grey' }}>
-NB: The above stated Rates are influenced by Double Tax Agreement applicable.</Typography>
+NB: The above stated Rates are influenced by Double Tax Agreement applicable</Typography>
 
  {/* ---------------------------------table 4--------------------------------- */}
  <Paper elevation={20} sx={{ margin: '2rem auto' }}>

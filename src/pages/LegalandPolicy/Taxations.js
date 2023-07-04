@@ -44,9 +44,9 @@ const Taxations = () => {
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
                     Double Taxation Agreements</Typography>
 
-                <Typography variant='h6' my='1rem'>STATUS OF DOUBLE TAXATION AVOIDANCE AGREEMENT (DTAA’S) AND TAX INFORMATION EXCHANGE AGREEMENTS (TIEA’S)</Typography>
+                <Typography variant='h6' my='1rem'>Status of Double Taxation Avoidance Agreement (DTAA’s) & Tax Information Exchange Agreements (TIEA’s)</Typography>
                 <ol style={{ listStyleType: 'decimal', marginLeft: '1rem' }}>
-                    <li style={{ fontWeight: 'bold' }}>DOUBLE TAXATION AVOIDANCE AGREEMENTS
+                    <li style={{ fontWeight: 'bold' }}>Double Taxation Avoidance Agreement (DTAA)
                         <ol style={{ listStyleType: 'lower-roman', marginLeft: '1rem' }}>
                             <li>In force</li>
                             <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '2rem 0' }}>
@@ -72,7 +72,7 @@ const Taxations = () => {
                             </Paper>
                         </ol>
                     </li>
-                    <li style={{ fontWeight: 'bold' }}>TAX INFORMATION EXCHANGE AGREEMENT
+                    <li style={{ fontWeight: 'bold' }}>Tax Information Exchange Agreements (TIEA)
                         <ol style={{ listStyleType: 'lower-roman', marginLeft: '1rem' }}>
                             <li>In force
                                 <ul className='custom-list'>

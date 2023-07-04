@@ -36,8 +36,8 @@ const VatRegulations = () => {
                     VAT Regulations</Typography>
 
                 <Typography variant='h6' my='1rem'>The VAT Regulations <Link href={'http://www.sra.org.sz/documents/1496926588.pdf'}
-                    style={{ color: '#2f2483', fontWeight: 'bold' }}>(click here to download)</Link>
-                    give clarity to certain sections of the VAT Act. These must be read with the Act for better understanding of the provisions of the VAT Act No. 12 of 2011.</Typography>
+                    style={{ color: '#2f2483', fontWeight: 'bold' }}>(click here to download) </Link>
+                    give clarity to certain sections of the VAT Act. These must be read with the Act for better understanding of the provisions of the VAT act no. 12 of 2011.</Typography>
 
                 <Typography variant="body1" sx={{ color: 'grey' }}>VAT (Rate) (Amendment) Regulation 2018</Typography>
                 
