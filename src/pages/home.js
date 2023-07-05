@@ -31,6 +31,7 @@ import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 
 
+
 export default function Home() {
   const [isOpen, setisOpen] = useState(null)
   const [isOpen2, setisOpen2] = useState(null)
@@ -239,7 +240,7 @@ export default function Home() {
 
       {/*------------------Our Resources-------------------*/}
 
-      <section className="mx-4 md:mx-14 py-16">
+      <section className="mx-4 md:mx-14 py-16" data-aos="fade-left">
         <div>
           <div className="flex flex-col items-center md:items-start">
             <h1 className="text-subColor text-2xl md:text-4xl font-semibold">
@@ -259,7 +260,7 @@ export default function Home() {
       {/*------------------News Section-------------------*/}
 
 
-      <section className="bg-[#F7F7FA] py-16">
+      <section className="bg-[#F7F7FA] py-16" data-aos="fade-right">
         <div className="  md:px-14">
           <h1 className="text-subColor text-center md:text-start text-2xl lg:text-4xl font-semibold">
             Important Links
@@ -280,7 +281,7 @@ export default function Home() {
 
       {/*---------------------Tab Section----------------------*/}
 
-      <section className="py-16  bg-[#F7F7FA]">
+      <section className="py-16  bg-[#F7F7FA]" data-aos="fade-up">
         <div className="flex flex-row bg-[#F7F7FA] text-xl justify-center font-semibold leading-6">
           <button
             onClick={() => toggleVisibility("div1")}
@@ -492,7 +493,7 @@ export default function Home() {
       {/* display: isOpen === index ? 'block' : 'none' */}
       {/*---------------------Tax Section----------------------*/}
 
-      <section className="pt-2 pb-16 px-14 bg-[#F7F7FA]">
+      <section className="pt-2 pb-16 px-14 bg-[#F7F7FA]" data-aos="fade-left">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-48">
           {TaxData.map((item, id) => (
             <div key={id} className="flex flex-col">
@@ -584,7 +585,7 @@ export default function Home() {
 
       {/*----------------Corporate Social Responsibility------------------*/}
 
-      <section className="">
+      <section className="" data-aos="fade-up-right">
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div className="w-full md:w-1/2">
             <Image src={CSR} alt="..." className="h-[500px]" />

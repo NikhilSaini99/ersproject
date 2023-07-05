@@ -45,14 +45,14 @@ const Icons = () => {
           <Link href="https://etax.sra.org.sz/" className="flex flex-col gap-2"> 
           <CurrencyPoundIcon sx={iconStyling} />
             <p className="text-center text-sm font-medium">
-              Codes
+            eTax
             </p></Link>
     
    
           <Link href="/TaxItemTable" className="flex flex-col gap-2">
            <BarChartIcon sx={iconStyling} />
             <p className="text-center text-sm font-medium">
-              Calculator
+            Codes
             </p></Link>
    
       

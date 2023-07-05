@@ -30,10 +30,10 @@ const CustomWorksheet = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     Customs Worksheet</Typography>
-                <Typography variant="body1" sx={{ fontWeight: 'bold', my: '1rem' }}>
+                <Typography variant="body1" className='Pointsformatting' sx={{ fontWeight: 'bold', my: '1rem' }}>
                     Information Coming soon</Typography>
 
             </Box>

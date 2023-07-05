@@ -5,12 +5,14 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/registration.jpg";
+import bgimg from '../../assets/images/pxfuel.jpg'
 
 const BondedPage = () => {
     const headingSpacing = {
-        margin: '1rem 0 0.5rem 0',
-        fontSize: '1.2rem',
-        fontWeight: 'bold'
+       color:'black',
+       fontWeight:'bold',
+       fontSize:'2rem',
+       py:'1rem'
     }
 
     const data = [
@@ -46,13 +48,19 @@ const BondedPage = () => {
     ];
 
     const applicationRedirect = [
-        'The Commissioner General,',
-        'Eswatini Revenue Service,',
+        'The Commissioner General',
+        'Eswatini Revenue Service',
         'P.O. Box 5628, Mbabane',
         'or delivered to ERS Head Office for the attention of the Commissioner Customs',
         'Portion 419 of Farm 50, Along MR103',
-        'Ezulwini.'
+        'Ezulwini'
     ]
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem',
+    }
+
 
     return (
         <>
@@ -77,8 +85,13 @@ const BondedPage = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
+            <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
+
+                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     Bonded warehouses & rebate store</Typography>
 
 
@@ -87,24 +100,31 @@ const BondedPage = () => {
                         <Typography variant='h1' sx={{ ...headingSpacing }}>
                             {item.section}
                         </Typography>
-                        <Typography variant='body1'>{item.description}</Typography>
+                        <Typography variant='body1' className='Pointsformatting mb-4'>{item.description}</Typography>
                         <ul className='custom-list'>
                             {item.points.map((points, index) => (
-                                <li key={index}>{points}</li>
+                                <div key={index} className=' flex gap-2 items-star'>
+                                <span className='Pointsformatting text-primaryColor'>➼</span>
+                                <li className='Pointsformatting pb-2'>{points}</li>
+                                </div>
                             ))}
                         </ul>
                     </Box>
                 ))}
 
-                <Typography variant='body1'>Bonded area operators have to keep the records for a period five (5) years.</Typography>
-                <Typography variant='body1' sx={{my:'0.5rem',fontWeight:'bold'}}>Applications should be directed to:</Typography>
+                <Typography variant='body1' className='Pointsformatting'>Bonded area operators have to keep the records for a period five (5) years.</Typography>
+                <Typography variant='body1' sx={{my:'0.5rem',fontWeight:'bold'}} className='Pointsformatting'>Applications should be directed to:</Typography>
 
                             <ul className='custom-list'>
                                 {applicationRedirect.map((direct,index)=>(
-                                    <li key={index}>{direct}</li>
+                                    <div key={index} className=' flex gap-2 items-star'>
+                                    <span className='Pointsformatting text-primaryColor'>✍︎</span>
+                                    <li className='Pointsformatting'>{direct}</li>
+                                    </div>
                                 ))}
                             </ul>  
 
+            </Box>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

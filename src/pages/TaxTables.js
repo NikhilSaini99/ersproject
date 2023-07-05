@@ -54,13 +54,13 @@ const TaxTables = () => {
                     {taxTableData.map((item, key) => (
 
                         <div key={key}>
-                            <h1 className=" text-[38px] font-semibold text-subColor mb-10 mt-6">
+                            <h1 className=" text-[40px] font-semibold text-subColor mb-10 mt-6 ">
                                 {item.heading}
                             </h1>
-                            <p className="mb-4  mt-2 text-black/80">
+                            <p className="mb-4  mt-2 text-black/80 Pointsformatting">
                                 <span className={`tracking-wide `}>{item.content}{" "}</span>
                             </p>
-                            <p className="mb-4  mt-2 text-black/80 font-bold">
+                            <p className="mb-4  mt-2 text-black/80 font-bold Pointsformatting">
                                 <span className={`tracking-wide `}>{item.note}{" "}</span>
                             </p>
                         </div>

@@ -4,19 +4,27 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Banner from "../assets/images/customs.jpg";
-import Custom from "../assets/images/customs-img.jpg";
-import { customData } from "../content/data";
-import { Paper } from "@mui/material";
+import bgimg from "../assets/images/pxfuel.jpg";
+import { Box, Typography } from "@mui/material";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function CustomExcise() {
-  const data = customData.find((item) => item.id === 1);
-  const data1 = customData.find((item) => item.id === 2);
-  const data2 = customData.find((item) => item.id === 3);
-  const data3 = customData.find((item) => item.id === 4);
-  const data4 = customData.find((item) => item.id === 5);
-  const data5 = customData.find((item) => item.id === 6);
-  const data6 = customData.find((item) => item.id === 7);
-  const data7 = customData.find((item) => item.id === 8);
+
+  const points = [
+    'To collect the revenues due - Enforcement of controls to protect society',
+    'Prohibitions, restrictions and regulatory (for example, narcotics, unlicensed medicines, arms and ammunitions, pornography etc.)',
+    'To identify and interdict illegitimate trade (for example counterfeit or substandard goods; trade in endangered species - CITES obligations)',
+    'Collection of trade statistics',
+    'Trade facilitation'
+  ]
+
+
+  const arrowStyling = {
+    color: '#2f2483',
+    fontSize: '1rem',
+    marginRight: '0.5rem',
+  }
+
   return (
     <>
       <Head>
@@ -34,115 +42,34 @@ export default function CustomExcise() {
         <Image src={Banner} alt="..." className="h-96 w-full" />
       </section>
 
-      <section className="my-12 mx-20 w-[70%] mx-auto">
-        {/* ------------------Importants---------------------------- */}
+      <Box sx={{
+        backgroundImage: `url(${bgimg.src})`,
+        backgroundSize: 'cover', backgroundAttachment: 'fixed'
+      }} >
 
-        <div className=" w-[80%]">
-          <h1 className="text-4xl text-subColor font-bold mt-4">{data.title}</h1>
-          <h1 className="text-3xl font-semibold mt-4">{data.title1}</h1>
-          <h1 className="text-md font-semibold mt-4">{data.title2}</h1>
-          <ul className="mt-2">
-            {data.description.map((desc) => (
-              <li
-                key={desc}
-                
-                className="mx-1 lightBlack starclass"
-              >
-                {desc}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className=" mt-4 w-[80%] ">
-          <h1 className="text-md font-semibold">{data1.title}</h1>
-          <ul className="mt-3">
-            {data1.description.map((desc) => (
-              <li
-                key={desc}
-                
-                className="mx-1 mt-1 lightBlack starclass"
-              >
-                {desc}
-              </li>
-            ))}
-          </ul>
-        </div>
-          <hr className=" border-1 border-gray-400 w-[80%] mt-10"></hr>
-            {/* ----------------------EXPORTATION------------------------ */}
-            <div className=" my-10 w-[80%] ">
-              <h1 className="text-3xl font-semibold">{data4.title1}</h1>
-              <hr className=" border-1 text-zinc-500  w-full my-10"></hr>
-              <h1 className="text-md font-semibold mt-8 ">{data4.title2}</h1>
-              <ul>
-                {data4.description.map((desc) => (
-                  <li
-                    key={desc}
-                   
-                    className="mx-1 lightBlack starclass"
-                  >
-                    {desc}
-                  </li>
-                ))}
-              </ul>
-              <h1 className="text-lg mt-4 text-justify font-semibold ">{data4.title5}<span className="lightBlack font-normal"> {data4.title3}</span></h1>
-              <h1 className="text-lg mt-4 text-justify font-semibold">{data4.title6}<span className="lightBlack font-normal">{data4.title4}</span></h1>
+        <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+          <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+            Eswatini Customs
+          </Typography>
+
+          <Typography variant="body1" className="Pointsformatting pb-2">
+            Eswatini is a member of the oldest Customs Union in the World; established in 1910 the Southern African Customs Union (SACU) consists of what is now Eswatini, Lesotho, Botswana, Namibia and South Africa. Importations between these countries are free of Customs and Excise duty with all importations to the Union being at a Common Customs external tariff. The revenue collected from those duties is pooled and shared under an agreed mechanism. Eswatini is also a member of both SADC and COMESA and goods originating from those countries also enjoy preferential Tariff rates. Full details of preferences and international trade agreements can be found here. Customs in Eswatini is administered by the ERS Customs and Excise Department in accordance with the Customs and Excise Act of 1971. The Department performs key functions for the countrys development including:
+          </Typography>
+
+          {points.map((item, index) => (
+            <div key={index} className="flex gap-1 items-start pb-2">
+              <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
+              <Typography variant="body2" className="Pointsformatting ">{item}</Typography>
             </div>
-        {/* ----------------------Personal Imports------------------------ */}
-        
-        <div className="flex  my-10">
-        <div className="w-[60%]">
-        <div className="  ">
-          <h1 className="text-3xl font-semibold">{data2.title}</h1>
-          <p className="mt-2 text-justify font-semibold">{data2.title1}<span className="lightBlack font-normal">{data2.description}</span></p>
-        </div>
+          ))}
 
-        <div className=" mt-8 ">
-          <h1 className="text-md font-semibold">{data3.title1}</h1>
-          <ul className="mt-2">
-            {data3.description.map((desc) => (
-              <li
-                key={desc}
-                
-                className="mx-4 lightBlack"
-              >
-                {desc}
-              </li>
-            ))}
-          </ul>
-          </div>
-          <h1 className="text-lg mt-4 text-justify font-semibold">{data3.title4}<span className="lightBlack font-normal"> {data3.title2}</span></h1>
-          <h1 className="ttext-lg mt-4 text-justify font-semibold">{data3.title5}<span className="lightBlack font-normal"> {data3.title3}</span></h1>
-          </div>
-          <div className="mt-10 w-[60%] mx-6">
-          <Paper elevation={20} sx={{borderRadius:'25px'}}>
-          <Image src={Custom} alt="..." className="h-[55%] w-full rounded-xl" />
-          </Paper>
-          </div>
-        </div>
-
-        {/* --------------------CROSS BORDER CASH DECLARATION------------------ */}
-
-        <div className=" my-10 w-[80%] ">
-          <h1 className="text-3xl font-semibold">{data5.title1}</h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold">{data5.title4}<span className="lightBlack font-normal"> {data5.title2}</span></h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold">{data5.title5}<span className="lightBlack font-normal">{data5.title3}</span></h1>
-        </div>
-        {/* ------------------------OFFENCE AND CONFISCATION-------------------- */}
-        <div className=" my-10 w-[80%] ">
-          <h1 className="text-3xl font-semibold">{data6.title1}</h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold">{data6.title4}<span className="lightBlack font-normal"> {data6.title2}</span></h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold">{data6.title5}<span className="lightBlack font-normal"> {data6.title3}</span></h1>
-        </div>
-        {/* ------------------------SEARCH-------------------- */}
-
-       <div className=" my-10 w-[80%] ">
-          <h1 className="text-3xl font-semibold">{data7.title1}</h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold">{data7.title4}<span className="lightBlack font-normal"> {data7.title2}</span></h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold">{data7.title5}<span className="lightBlack font-normal"> {data7.title3}</span></h1>
-        </div>
-      </section>
-
+          <Typography variant="body1" className="Pointsformatting py-4">
+          Goods imported into Eswatini from outside of the Southern African Customs Union (SACU) are liable to Customs duty and for some classes of goods also Excise duty. Value Added Tax is also payable on imports both from SACU and elsewhere. Information for businesses importing to, or exporting from, Eswatini can be found here. Travellers entering Eswatini must make a declaration at one of our 14 border posts/points of entry. There also are (rebate) allowances for bona fide personal importations Excise duty is also payable on a small range of domestically produced goods (alcoholic drinks, cigarettes etc.).
+          </Typography>
+        </Box>
+      </Box>
       <Footer />
+
     </>
   );
 }

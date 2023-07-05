@@ -15,7 +15,7 @@ function Media() {
 
   return (
     <>
-            <section>
+            <section data-aos="fade-up-left">
         <div className="bg-zinc-300  bg-opacity-50 md:px-12 px-28 py-16  ">
           <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
             <div>
