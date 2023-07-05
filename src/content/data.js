@@ -137,8 +137,8 @@ const IncomeTaxData = [
     heading1: 'Non-Resident Withholding Taxes',
     title: 'Withholding Tax on Interest',
 
-    description: ' This should be deducted from the payment of interest to any person other than a company not ordinarily resident; a company not registered in Swaziland; or the estate of a deceased person, who at the date of his death was ordinarily resident in Swaziland.',
-    description1: 'The debtor in respect of such amount; and who is ordinarily resident or carries on business in Swaziland shall withhold and remit to SRA tax equal to ten per cent of the interest that accrues to or in favour of the non-resident.',
+    description: ' This should be deducted from the payment of interest to any person other than a company not ordinarily resident; a company not registered in Swaziland or the estate of a deceased person, who at the date of his death was ordinarily resident in Swaziland.',
+    description1: 'The debtor in respect of such amount and who is ordinarily resident or carries on business in Swaziland shall withhold and remit to SRA tax equal to ten per cent of the interest that accrues to or in favour of the non-resident.',
   },
 
   {
@@ -177,7 +177,7 @@ const IncomeTaxData = [
   {
     title: 'Withholding Tax on Repatriated Income ',
 
-    description: 'The tax is levied in addition to any normal tax, on deemed repatriated income of the branch of a non-resident company carrying on business in Swaziland for any year of assessment. The calculation formula is A minus Bwhere:',
+    description: 'The tax is levied in addition to any normal tax, on deemed repatriated income of the branch of a non-resident company carrying on business in Swaziland for any year of assessment. The calculation formula is A minus B where',
     point: 'A is taxable income of the branch for the year of assessment',
     point1: 'B is the Swaziland tax payable on that taxable income of the branch for the year of assessment.',
 
