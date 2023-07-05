@@ -6,7 +6,7 @@ import { Box, Typography } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Banner from "../../assets/images/registration.jpg";
+import Banner from "../../assets/images/Taxation_of_Benefits.jpg";
 
 const Taxationandbenefit = () => {
     return (
@@ -21,17 +21,18 @@ const Taxationandbenefit = () => {
 
             <Header />
 
-            <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
-                <Image src={Banner} alt=""
-                    width={0}
-                    height={0}
-                    style={{
-                        width: "100%", height: "100%",
-                        objectFit: 'cover'
-                    }}
-                />
-            </Box>
-
+            <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+        <Image
+          src={Banner}
+          alt="about_us"
+          width={0}
+          height={0}
+          style={{
+            width: "100%", height: "100%",
+            objectFit: 'cover'
+          }}
+        />
+</Box>
             <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '2.5rem' }}>
                     Taxation of Benefits</Typography>

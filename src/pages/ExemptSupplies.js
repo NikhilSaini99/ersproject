@@ -3,7 +3,7 @@ import { Typography, Box, List, ListItem, ListItemText } from "@mui/material";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Image from "next/image";
-import Banner from "../assets/images/bg2.jpg";
+import Banner from "../assets/images/Exempt_Supplies_of_Goods_&_Services.jpg";
 import Footer from "@/components/Footer";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -171,8 +171,17 @@ const ExemptSupplies = () => {
 
             <Header />
             {/*-----------------------Banner---------------------*/}
-            <Box>
-                <Image src={Banner} alt="..." className="h-96 w-full" />
+            <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+            <Image
+          src={Banner}
+          alt="about_us"
+          width={0}
+          height={0}
+          style={{
+            width: "100%", height: "100%",
+            objectFit: 'cover'
+          }}
+        />
             </Box>
             <Box sx={{ width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: "2rem auto", lg: "5rem auto" } }}>
                 <Typography variant="h1" sx={{ my: '3.5rem' }}>

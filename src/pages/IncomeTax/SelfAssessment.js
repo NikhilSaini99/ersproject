@@ -1,15 +1,15 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Box, Divider, Stack, Typography } from '@mui/material';
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
-import Banner from "../../assets/images/registration.jpg";
+import Banner from "../../assets/images/Self_Assessment.jpg";
 import rightarrow from '../../assets/images/rightarrow.svg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const SelfAssessment = () => {
-    
+
     const arrowStyling = {
         color: '#2f2483',
         fontSize: '1rem',
@@ -32,7 +32,7 @@ const SelfAssessment = () => {
     const FaqContainerStyling = {
         maxWidth: '95%',
         borderRadius: '20px',
-        marginBottom:'3rem'
+        marginBottom: '3rem'
     }
 
     const accordionStyling = {
@@ -131,8 +131,10 @@ const SelfAssessment = () => {
 
             <Header />
 
-            <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
-                <Image src={Banner} alt=""
+            <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+                <Image
+                    src={Banner}
+                    alt="about_us"
                     width={0}
                     height={0}
                     style={{
@@ -151,13 +153,13 @@ const SelfAssessment = () => {
                 <Box sx={FaqContainerStyling}>
 
                     <Stack sx={accordionStyling}>
-                    <Typography variant="h1"  sx={{ my: '2.5rem' }}>
-                    Self Assessment</Typography>
+                        <Typography variant="h1" sx={{ my: '2.5rem' }}>
+                            Self Assessment</Typography>
                         {/* question and arrow*/}
                         {questionandanswer.map((item, index) => (
                             <Stack key={index} sx={insideAccordionStyle}>
                                 <Stack sx={questionStyling}>
-                                    <Typography variant='h6' sx={{ color: '#14142B', fontSize: '1.5rem', textTransform:'capitalize'}}>{item.question}</Typography>
+                                    <Typography variant='h6' sx={{ color: '#14142B', fontSize: '1.5rem', textTransform: 'capitalize' }}>{item.question}</Typography>
                                     <Box sx={{ cursor: 'pointer', background: 'cover' }} onClick={() => handleOpen(index)}>
                                         <Image src={rightarrow} width={0} height={0} alt="arrow" />
                                     </Box>
@@ -186,8 +188,8 @@ const SelfAssessment = () => {
                         {item.points && <ul className='custom-list '>
                             {item.points.map((item, index) => (
                                 <div key={index} className='flex gap-1 items-start pb-2'>
-                                <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting'/></span>
-                                <li className='Pointsformatting'>{item}</li>
+                                    <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
+                                    <li className='Pointsformatting'>{item}</li>
                                 </div>
                             ))}
                         </ul>}

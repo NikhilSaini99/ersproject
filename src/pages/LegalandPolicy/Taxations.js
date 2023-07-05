@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import { Box, Typography, TableContainer, Paper, Table, TableCell, TableRow, TableBody, TableHead } from '@mui/material'
 import Image from 'next/image'
-import Banner from "../../assets/images/registration.jpg";
+import Banner from "../../assets/images/Double_Taxation_Agreements.jpg";
 import bgimg from '../../assets/images/pagebackground1.jpg'
 
 const Taxations = () => {
@@ -30,8 +30,10 @@ const Taxations = () => {
 
             <Header />
 
-            <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
-                <Image src={Banner} alt=""
+            <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+                <Image
+                    src={Banner}
+                    alt="taxation"
                     width={0}
                     height={0}
                     style={{
@@ -50,12 +52,12 @@ const Taxations = () => {
                     <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
                         Double Taxation Agreements</Typography>
 
-                    <Typography variant='h6'  sx={{ mt: '2rem', mb: '1rem',  }}>Status of Double Taxation Avoidance Agreement (DTAA’s) & Tax Information Exchange Agreements (TIEA’s)</Typography>
+                    <Typography variant='h6' sx={{ mt: '2rem', mb: '1rem', }}>Status of Double Taxation Avoidance Agreement (DTAA’s) & Tax Information Exchange Agreements (TIEA’s)</Typography>
                     <ol style={{ listStyleType: 'decimal', marginLeft: '1rem' }}>
-                        <li style={{ fontWeight: 'bold' ,fontSize:'1.35rem'}}>Double Taxation Avoidance Agreement (DTAA)
+                        <li style={{ fontWeight: 'bold', fontSize: '1.35rem' }}>Double Taxation Avoidance Agreement (DTAA)
                             <ol style={{ listStyleType: 'lower-roman', marginLeft: '1rem', fontWeight: 'normal', }}>
                                 <li>In force</li>
-                                <Paper elevation={20} sx={{  width: '90%', margin: '2rem 0' }}>
+                                <Paper elevation={20} sx={{ width: '90%', margin: '2rem 0' }}>
                                     <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }}>
                                         <Table aria-label="Double Taxation Table">
                                             <TableHead>
@@ -86,7 +88,7 @@ const Taxations = () => {
                                 </Paper>
                             </ol>
                         </li>
-                        <li style={{ fontWeight: 'bold',fontSize:'1.35rem' }}>Tax Information Exchange Agreements (TIEA)
+                        <li style={{ fontWeight: 'bold', fontSize: '1.35rem' }}>Tax Information Exchange Agreements (TIEA)
                             <ol style={{ listStyleType: 'lower-roman', marginLeft: '1rem', fontWeight: 'normal' }}>
                                 <li>In force
                                     <ul className='custom-list'>

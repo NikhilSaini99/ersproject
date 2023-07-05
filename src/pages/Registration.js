@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import { Box, Stack, Typography, List, ListItem, ListItemText, Divider } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
-import Banner from "../assets/images/registration.jpg";
+import Banner from "../assets/images/Registration.jpeg";
 import downarrow from '../assets/images/downarrow.svg'
 import rightarrow from '../assets/images/rightarrow.svg'
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
@@ -40,7 +40,7 @@ const Registration = () => {
   }
 
   const insideAccordionStyle = {
-   
+
     background: '#FFFFFF',
     /* Buttons/ Color - Default */
     boxShadow: '0px 6px 16px 0px rgba(74, 58, 255, 0.19)',
@@ -58,7 +58,7 @@ const Registration = () => {
     justifyContent: 'space-between',
     lineHeight: '28px',
     fontWeight: '500',
-    textTransform:'capitalize',
+    textTransform: 'capitalize',
   }
 
 
@@ -105,8 +105,10 @@ const Registration = () => {
 
       <Header />
       {/*-----------------------Banner---------------------*/}
-      <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
-        <Image src={Banner} alt=""
+      <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+        <Image
+          src={Banner}
+          alt="about_us"
           width={0}
           height={0}
           style={{
@@ -114,30 +116,30 @@ const Registration = () => {
             objectFit: 'cover'
           }}
         />
-      </Box>
+</Box>
 
       <Box sx={{ width: '80%', margin: { xs: '2rem auto', lg: '5rem auto', } }}>
 
         <Box sx={FaqContainerStyling}>
-    
+
           <Stack sx={accordionStyling}>
-          <Typography variant="h1" sx={{mb:'2rem'}}>
-          Registration
-        </Typography>
+            <Typography variant="h1" sx={{ mb: '2rem' }}>
+              Registration
+            </Typography>
             {/* question and arrow*/}
             {questionandanswer.map((item, index) => (
               <Stack key={index} sx={insideAccordionStyle}>
                 <Stack sx={questionStyling}>
-                  <Typography variant='h6' sx={{ color: '#14142B', fontSize: '1.5rem',}}>{item.question}</Typography>
+                  <Typography variant='h6' sx={{ color: '#14142B', fontSize: '1.5rem', }}>{item.question}</Typography>
                   <Box sx={{ cursor: 'pointer', background: 'cover' }} onClick={() => handleOpen(index)}>
-                      <Image src={rightarrow} width={0} height={0} alt="arrow" />
+                    <Image src={rightarrow} width={0} height={0} alt="arrow" />
                   </Box>
                 </Stack>
-                {isOpen===index&&<Divider sx={{borderColor:'rgba(0,0,0,0.5)'}}/>}
+                {isOpen === index && <Divider sx={{ borderColor: 'rgba(0,0,0,0.5)' }} />}
                 {/* answer */}
                 <Typography variant='body1' sx={{
                   fontSize: '1.1rem',
-                  lineHeight: '30px', color: 'rgba(0,0,0,0.8)', pb:'2rem',
+                  lineHeight: '30px', color: 'rgba(0,0,0,0.8)', pb: '2rem',
                   display: isOpen === index ? 'block' : 'none'
                 }}>{item.answer}</Typography>
               </Stack>

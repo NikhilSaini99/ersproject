@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { IncomeTaxData } from "@/content/data";
 import Header from "@/components/Header"; 
-import Banner from "../../assets/images/bg2.jpg";
+import Banner from "../../assets/images/Withholding_Taxes.jpg";
 import Image from "next/image";
 import bgimg from '../../assets/images/pxfuel.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -33,9 +33,18 @@ export default function Withholding() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <section>
-        <Image src={Banner} alt="..." className="h-512 w-full object-fill" width="100%" height="100%" style={{ height: '412px' }} />
-      </section>
+      <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+                    <Image
+                        src={Banner}
+                        alt="about_us"
+                        width={0}
+                        height={0}
+                        style={{
+                            width: "100%", height: "100%",
+                            objectFit: 'cover',
+                        }}
+                    />
+                </Box>
 
       <Box sx={{
         backgroundImage: `url(${bgimg.src})`,
