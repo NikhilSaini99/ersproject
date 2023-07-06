@@ -6,9 +6,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import person1 from "../assets/images/Member1.jpg";
 import person2 from "../assets/images/Member2.jpg";
-import person3 from "../assets/images/Member3.jpg";
+import person3 from "../assets/images/Member6.jpg";
 import person4 from "../assets/images/Member4.jpg";
 import banner from "../assets/images/About_us.jpg";
+import estwaniimg from '../assets/images/banner-1.jpg'
 import hero1 from "../assets/images/herosection1.jpg";
 import hero2 from "../assets/images/herosection2.jpg";
 import hero3 from "../assets/images/herosection3.jpg";
@@ -141,7 +142,7 @@ export default function about() {
     ],
   };
 
- 
+
   return (
     <>
       <Head>
@@ -187,6 +188,18 @@ export default function about() {
       {/* -------------------------About Us Banner END HERE --------------------------*/}
 
       {/*------------------------- Hero Section Start-------------------------- */}
+      <Box sx={{ width: '95%', margin: { xs: "3rem auto", lg: "3rem auto" } }}>
+        <Typography variant="h1" sx={{ my: '1.5rem', }}>
+          About Eswatini Revenue Service
+        </Typography>
+        <Stack className={styles.circleContainer}>
+          <div className={styles.circleDiv}></div>
+          <div className={styles.circleDiv}></div>
+          <div className={styles.circleDiv}></div>
+        </Stack>
+      </Box>
+
+
 
       <Stack
         direction={"row"}
@@ -196,15 +209,8 @@ export default function about() {
         sx={{ margin: { xs: "3rem auto", lg: "3rem auto" } }}
       >
         <Stack direction={"column"} spacing={1.5} width={"50%"}>
-          <Typography variant="h1">
-            About Eswatini Revenue Service
-          </Typography>
-          <Stack className={styles.circleContainer}>
-            <div className={styles.circleDiv}></div>
-            <div className={styles.circleDiv}></div>
-            <div className={styles.circleDiv}></div>
-          </Stack>
           <Typography
+            className="Pointsformatting"
             variant="body1"
             sx={{ fontSize: "0.9rem", letterSpacing: "0.1rem" }}
           >
@@ -230,8 +236,9 @@ export default function about() {
         </Stack>
 
         {/*------------------------ Right Side with images ------------------------*/}
-        <Box sx={{ width: "70%" }}>
-          <Box
+        <Box sx={{ width: "60%" }}>
+          <Image src={estwaniimg} width={0} height={0} alt="about estwani vat" />
+          {/* <Box
             sx={{
               display: "grid",
               gridTemplateColumns: {
@@ -289,7 +296,7 @@ export default function about() {
                 objectFit="contain"
               />
             </Paper>
-          </Box>
+          </Box> */}
         </Box>
       </Stack>
 
@@ -297,7 +304,7 @@ export default function about() {
 
       {/* ------------------------Council Memeber section start-------------------------- --*/}
 
-      <Box width={"94%"} sx={{ margin: "0 auto", textAlign: "center" }}>
+      <Box width={"94%"} sx={{ margin: "0 auto", textAlign: "center", }}>
         <Stack direction={"column"} spacing={3} sx={{ mt: "8rem", mb: "5rem" }}>
           <Typography variant="h1" sx={{ fontWeight: "400" }}>
             Meet Council Member
@@ -330,19 +337,18 @@ export default function about() {
 
           {/*-------------------carousel----------------------- */}
 
-          <Box sx={{ maxWidth: "95%"}}>
-            <Slider className='h-5/6' {...settings}>
+          <Box sx={{ maxWidth: "95%", }}>
+            <Slider className='h-fit' {...settings} >
               {memeberData.map((item) => {
                 return (
-                  <Box key={item.id} sx={{ position: "relative"}}>
+                  <Box key={item.id} sx={{ position: "relative" }}>
                     <Image
+                      className='h-96'
                       src={item.img}
                       alt={item.name}
                       width={0}
-                      height='312px'
-                      layout="responsive"
-                      objectFit="contain"
-                      style={{ border: "none",width:'100%',height:'312px !important' }}
+                      height={0}
+                      style={{ border: "none", width: '100%' }}
                     />
                     <Box sx={{ display: 'flex', flexDirection: 'column', border: '1px solid rgba(0, 0, 0, 0.10)', borderTop: 'none !important', overflow: 'hidden', p: '25px 20px 18px', gap: '1.5rem' }}>
                       <Typography variant="body1" fontWeight={'bold'}>{item.name}</Typography>
