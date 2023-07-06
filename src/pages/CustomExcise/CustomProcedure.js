@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
-import Banner from "../../assets/images/Customs Procedure Codes.jpg";
+import Banner from "../../assets/images/Customs_Procedure_Codes.jpg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import bgimg from '../../assets/images/pxfuel.jpg'
 
