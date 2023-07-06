@@ -3129,7 +3129,7 @@
   dependencies:
     "lru-cache" "^6.0.0"
 
-"sharp@^0.32.0":
+"sharp@^0.32.1":
   "integrity" "sha512-kQTFtj7ldpUqSe8kDxoGLZc1rnMFU0AO2pqbX6pLy3b7Oj8ivJIdoKNwxHVQG2HN6XpHPJqCSM2nsma2gOXvOg=="
   "resolved" "https://registry.npmjs.org/sharp/-/sharp-0.32.1.tgz"
   "version" "0.32.1"
