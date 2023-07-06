@@ -11,13 +11,8 @@ import person4 from "../assets/images/Member4.jpg";
 import banner from "../assets/images/About_us.jpg";
 import estwaniimg from '../assets/images/aboutusbanner.jpg'
 import taxpayersection1 from '../assets/images/taxpayersection.png'
-import hero1 from "../assets/images/herosection1.jpg";
-import hero2 from "../assets/images/herosection2.jpg";
-import hero3 from "../assets/images/herosection3.jpg";
-import hero4 from "../assets/images/herosection4.jpg";
-import hero5 from "../assets/images/herosection5.jpg";
 import cardImg from "../assets/images/card.jpg";
-import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import styles from "@/styles/about.module.css";
 import Slider from "react-slick";
@@ -374,7 +369,7 @@ export default function about() {
 
       {/*-------------------------- Council Memeber section End here------------------- */}
 
-      <Box className={`${styles.cardeffect} ${styles.borderLine}`} sx={{ width: '98%', margin: '6rem auto', position: 'relative', textAlign: 'left' }}>
+      <Box className={`${styles.cardeffect} ${styles.borderLine}`} sx={{ width: '98%', margin: '4rem auto', position: 'relative', textAlign: 'left' }}>
         <Image
           src={cardImg}
           alt=''
@@ -408,7 +403,7 @@ export default function about() {
       <Box sx={{ position: 'relative', margin: '0 auto' }}>
         <Typography variant="h1" sx={{ fontSize: { xs: '1.2rem', lg: '2.8rem', textAlign: 'center', fontWeight: '400' } }}>Taxpayer Charter</Typography>
         <Stack direction={'column'} sx={{
-          position: 'relative', top: '0', pt: '2rem', margin: '3rem auto',
+          position: 'relative', top: '0',  margin: '3rem auto',
         }}>
           <Box sx={{ background: '#fbfbfb', px: '10rem', py: '5rem' }} className="Pointsformatting1">
             <Typography variant="body1" sx={{ fontWeight: '400', }} className="Pointsformatting1">
@@ -426,7 +421,7 @@ export default function about() {
           <Stack data-aos="slide-left" direction={'row'} sx={{ display: 'flex', flexDirection: 'row', gap: { lg: '4rem' }, mt: '2rem', px: '10rem' }}>
             {taxpayerCharter.map((item, index) => (
               <Box key={index} sx={{ width: "50%" }}>
-                <Typography variant="h5" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }} className="Pointsformatting1">{item.section}</Typography>
+                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{item.section}</Typography>
                 <ul>
                   {item.content.split('\n').map((bulletPoints, index) => (
                     index === 0 ? <h4 key={index} style={{ fontWeight: '400' }} className="Pointsformatting1"> {bulletPoints}</h4> :
@@ -447,7 +442,7 @@ export default function about() {
             <Image src={taxpayersection1} alt="taxpayersection1" className="w-6/12" />
             {taxpayerCharter2.map((item, index) => (
               <Box key={index} sx={{ width: "50%" }}>
-                <Typography variant="h5" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }} className="Pointsformatting">{item.section}</Typography>
+                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold' }} >{item.section}</Typography>
                 <ul>
                   {item.content.split('\n').map((bulletPoints, index) => (
                     index === 0 ? <h4 key={index} style={{ fontWeight: '400' }} className="Pointsformatting1"> {bulletPoints}</h4> :
