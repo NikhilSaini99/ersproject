@@ -40,7 +40,7 @@ function Media() {
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 className="my-10"
               ></iframe> */}
-              <Image
+              {/* <Image
                 src={facebbook}
                 alt=""
                 className="my-10"
@@ -56,7 +56,7 @@ function Media() {
                   minHeight: '450px',
                   background:'white',
                 }}
-              />
+              /> */}
               <Link
                 href="https://www.facebook.com/EswatiniRevenueService"
                 target="_blank"
