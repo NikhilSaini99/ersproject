@@ -4,7 +4,7 @@ import { Box, TextField, FormControl, InputLabel, Select, MenuItem, Button, Typo
 import Footer from '@/components/Footer';
 import Head from 'next/head';
 import Header from '@/components/Header';
-import feedbackimg from '../assets/images/calculator.jpg'
+import feedbackimg from '../assets/images/pinkbg.png'
 const Calculator = () => {
     const [calculationType, setCalculationType] = useState('Individual');
     const [period, setPeriod] = useState('Monthly');
@@ -59,7 +59,7 @@ const Calculator = () => {
             <Box sx={{ position: 'relative', backgroundImage: `url(${feedbackimg.src})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center', py:'5rem' }}>
-          <Typography variant='h1' sx={{ fontSize: '2rem', fontWeight: 'bold', margin: { xs: '0.9rem', md: '1rem', lg: '1.5rem', textAlign: 'center',color:'white' } }}>Tax Calculator</Typography>
+          <Typography variant='h1' sx={{ fontSize: '2rem', fontWeight: 'bold', margin: { xs: '0.9rem', md: '1rem', lg: '1.5rem', textAlign: 'center', } }}>Tax Calculator</Typography>
                 {/* <Image src={bgImg} width={'100%'} height={'100%'} alt="bg" style={{ position: 'absolute', top: '0', left: '0', width: '100%', objectFit: 'cover', opacity: '0.4', height: '950px' }}
                     sizes='100vw'
                 /> */}

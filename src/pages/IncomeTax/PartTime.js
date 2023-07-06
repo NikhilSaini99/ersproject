@@ -65,29 +65,39 @@ const PartTime = () => {
                                 </TableRow>
                             </TableHead>
                             <TableHead>
-                                <TableRow>
+                                <TableRow sx={{'&:hover': {
+                      background: '#F2F2F2'
+                    }}}>
                                     <TableCell align="center"><strong>Exceeds</strong></TableCell>
                                     <TableCell align="center"><strong>Does not exceed</strong></TableCell>
 
                                 </TableRow>
-                            </TableHead>
+                            </TableHead> 
                             <TableBody>
-                                <TableRow>
+                                <TableRow sx={{'&:hover': {
+                      background: '#F2F2F2'
+                    }}}>
                                     <TableCell align="center">&nbsp;&nbsp;&nbsp;0</TableCell>
                                     <TableCell align="center">&nbsp;&nbsp;&nbsp;8,333</TableCell>
                                     <TableCell align="center">20%</TableCell>
                                 </TableRow>
-                                <TableRow>
+                                <TableRow  sx={{'&:hover': {
+                      background: '#F2F2F2'
+                    }}}>
                                     <TableCell align="center">8,333</TableCell>
                                     <TableCell align="center">&nbsp;&nbsp;12,500</TableCell>
                                     <TableCell align="center">25%</TableCell>
                                 </TableRow>
-                                <TableRow>
+                                <TableRow  sx={{'&:hover': {
+                      background: '#F2F2F2'
+                    }}}>
                                     <TableCell align="center">12,500</TableCell>
                                     <TableCell align="center">&nbsp;&nbsp;16,666</TableCell>
                                     <TableCell align="center">30%</TableCell>
                                 </TableRow>
-                                <TableRow>
+                                <TableRow  sx={{'&:hover': {
+                      background: '#F2F2F2'
+                    }}}>
                                     <TableCell align="center">16,666</TableCell>
                                     <TableCell></TableCell>
                                     <TableCell align="center">33%</TableCell>

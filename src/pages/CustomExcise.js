@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Banner from "../assets/images/Eswatini Customs.png";
+import Banner from "../assets/images/Eswatini_Customs.png";
 import bgimg from "../assets/images/pxfuel.jpg";
 import { Box, Typography } from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';

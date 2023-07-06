@@ -330,19 +330,19 @@ export default function about() {
 
           {/*-------------------carousel----------------------- */}
 
-          <Box sx={{ maxWidth: "95%" }}>
-            <Slider className={""} {...settings}>
+          <Box sx={{ maxWidth: "95%"}}>
+            <Slider className='h-5/6' {...settings}>
               {memeberData.map((item) => {
                 return (
-                  <Box key={item.id} sx={{ position: "relative" }}>
+                  <Box key={item.id} sx={{ position: "relative"}}>
                     <Image
                       src={item.img}
                       alt={item.name}
-                      width={"100%"}
-                      height={0}
+                      width={0}
+                      height='312px'
                       layout="responsive"
                       objectFit="contain"
-                      style={{ border: "none" }}
+                      style={{ border: "none",width:'100%',height:'312px !important' }}
                     />
                     <Box sx={{ display: 'flex', flexDirection: 'column', border: '1px solid rgba(0, 0, 0, 0.10)', borderTop: 'none !important', overflow: 'hidden', p: '25px 20px 18px', gap: '1.5rem' }}>
                       <Typography variant="body1" fontWeight={'bold'}>{item.name}</Typography>

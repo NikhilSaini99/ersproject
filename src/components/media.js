@@ -22,7 +22,7 @@ function Media() {
               <h1 className="text-3xl font-medium text-mainColor">Facebook</h1>
               <div className=" border w-24 border-yellowish mt-1"></div>
               <iframe
-                src="https://www.facebook.com/computronicseswatini/?ref=embed_page"
+                src="https://www.facebook.com/photo.php?fbid=652502226924329&set=a.361976332643588&type=3&ref=embed_page"
                 width={"344"}
                 height={"450"}
                 style={{

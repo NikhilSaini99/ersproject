@@ -31,14 +31,14 @@ const Icons = () => {
           <Link href="/Calculator" className="flex flex-col gap-2">
            <CalculateIcon sx={iconStyling} />
             <p className="text-center text-sm font-medium">
-              Calculator
+              Tax Calculator
             </p></Link>
       
         
           <Link href="/TaxTables" className="flex flex-col gap-2"> 
           <TableChartIcon sx={iconStyling} />
             <p className="text-center text-sm font-medium">
-              Tables
+              Tax Tables
             </p></Link>
        
     
@@ -52,7 +52,7 @@ const Icons = () => {
           <Link href="/TaxItemTable" className="flex flex-col gap-2">
            <BarChartIcon sx={iconStyling} />
             <p className="text-center text-sm font-medium">
-            Codes
+              Item Codes
             </p></Link>
    
       

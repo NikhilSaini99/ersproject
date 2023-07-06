@@ -35,7 +35,7 @@ const CustomWorksheet = () => {
      </Box> */}
 
             <div className="w-full h-[30rem]">
-          <Image src={Banner} alt="..." className="h-[30rem] w-full object-cover"  />
+          <Image src={Banner} alt="..." className="h-[30rem] w-full"  />
           </div>
 
 

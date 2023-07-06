@@ -6,14 +6,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/Bonded_warehouses_&_rebate_store.jpg";
 import bgimg from '../../assets/images/pxfuel.jpg'
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const BondedPage = () => {
     const headingSpacing = {
        color:'black',
        fontWeight:'bold',
        fontSize:'2rem',
        py:'1rem'
+
     }
+    
 
     const data = [
         {
@@ -109,7 +111,7 @@ const BondedPage = () => {
                         <ul className='custom-list'>
                             {item.points.map((points, index) => (
                                 <div key={index} className=' flex gap-2 items-star'>
-                                <span className='Pointsformatting text-primaryColor'>➼</span>
+                                <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
                                 <li className='Pointsformatting pb-2'>{points}</li>
                                 </div>
                             ))}
@@ -123,7 +125,7 @@ const BondedPage = () => {
                             <ul className='custom-list'>
                                 {applicationRedirect.map((direct,index)=>(
                                     <div key={index} className=' flex gap-2 items-star'>
-                                    <span className='Pointsformatting text-primaryColor'>✍︎</span>
+                                    {/* <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span> */}
                                     <li className='Pointsformatting'>{direct}</li>
                                     </div>
                                 ))}

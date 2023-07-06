@@ -5,7 +5,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { NewsCard } from "@/components/media";
-import Banner from "../assets/images/eCustoms Tariff.jpg";
+import Banner from "../assets/images/eCustoms_Tariff.jpg";
 import Asycuda from "../assets/images/asys.jpg";
 import Advance from "../assets/images/asys2.jpg";
 import Browse from "../assets/images/tariff-browse.jpg";
