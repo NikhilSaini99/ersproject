@@ -4,7 +4,7 @@ import { Box, TextField, FormControl, InputLabel, Select, MenuItem, Button, Typo
 import Footer from '@/components/Footer';
 import Head from 'next/head';
 import Header from '@/components/Header';
-import feedbackimg from '../assets/images/feedbackbg4.svg'
+import feedbackimg from '../assets/images/calculator.jpg'
 const Calculator = () => {
     const [calculationType, setCalculationType] = useState('Individual');
     const [period, setPeriod] = useState('Monthly');

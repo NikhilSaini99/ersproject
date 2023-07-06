@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
-import Banner from "../../assets/images/registration.jpg";
+import Banner from "../../assets/images/Part_Time_Employees.webp";
 
 const PartTime = () => {
     return (
@@ -19,16 +19,18 @@ const PartTime = () => {
 
             <Header />
 
-            <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
-                <Image src={Banner} alt=""
-                    width={0}
-                    height={0}
-                    style={{
-                        width: "100%", height: "100%",
-                        objectFit: 'cover'
-                    }}
-                />
-            </Box>
+            <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+                    <Image
+                        src={Banner}
+                        alt="Part_Time_Employees"
+                        width={0}
+                        height={0}
+                        style={{
+                            width: "100%", height: "100%",
+                            objectFit: 'cover'
+                        }}
+                    />
+                </Box>
 
             <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' }, py: '2rem' }}>
                 <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>

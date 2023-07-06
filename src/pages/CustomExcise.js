@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Banner from "../assets/images/customs.jpg";
+import Banner from "../assets/images/Eswatini Customs.png";
 import bgimg from "../assets/images/pxfuel.jpg";
 import { Box, Typography } from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -38,9 +38,21 @@ export default function CustomExcise() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <section>
-        <Image src={Banner} alt="..." className="h-96 w-full" />
-      </section>
+      <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+         
+         <Image
+             src={Banner}
+             alt="about_us"
+             width={0}
+             height={0}
+             style={{
+                 width: "100%", height: "100%",
+                 objectFit: 'cover'
+             }}
+         />
+       
+     </Box>
+
 
       <Box sx={{
         backgroundImage: `url(${bgimg.src})`,

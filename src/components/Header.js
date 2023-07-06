@@ -19,7 +19,7 @@ export default function Header() {
   const [isServicesOpen, setServicesOpen] = useState(false);
   const [isFormsOpen, setFormsOpen] = useState(false);
   const [isMediaOpen, setMediaOpen] = useState(false);
-  // const [isContactOpen, setContactOpen] = useState(false);
+  const [isContactOpen, setContactOpen] = useState(false);
 
   const [isOpen, setSearchOpen] = useState(false);
   function toggleSearch() {
@@ -782,7 +782,7 @@ export default function Header() {
                         </h3>
                       </Link>
                     </button>
-                    {/* <div
+                    <div
                       className={`absolute z-10 font-normal ${
                         isContactOpen ? "block" : "hidden"
                       }`}
@@ -802,7 +802,7 @@ export default function Header() {
                           }`}
                         ></div>
                       </ul>
-                    </div> */}
+                    </div>
                   </div>
                 </li>
               </ul>

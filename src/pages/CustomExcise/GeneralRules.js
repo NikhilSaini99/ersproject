@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Banner from "../../assets/images/customs.jpg";
-import Custom from "../../assets/images/customs-img.jpg";
+import Banner from "../../assets/images/General-Import-&-Export-Rul.jpg";
+import Custom from "../../assets/images/Eswatini Customs-2.jpg";
 import { customData } from "../../content/data";
 import { Box, Paper } from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -39,9 +39,18 @@ export default function GeneralRules() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <section>
-        <Image src={Banner} alt="..." className="h-96 w-full" />
-      </section>
+      <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+                    <Image
+                        src={Banner}
+                        alt="about_us"
+                        width={0}
+                        height={0}
+                        style={{
+                            width: "100%", height: "100%",
+                            objectFit: 'cover'
+                        }}
+                    />
+                </Box>
     
       <Box sx={{
                 backgroundImage: `url(${bgimg.src})`,

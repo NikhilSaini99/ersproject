@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
-import Banner from "../../assets/images/registration.jpg";
+import Banner from "../../assets/images/Bonded_warehouses_&_rebate_store.jpg";
 import bgimg from '../../assets/images/pxfuel.jpg'
 
 const BondedPage = () => {
@@ -74,16 +74,21 @@ const BondedPage = () => {
 
             <Header />
 
-            <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
-                <Image src={Banner} alt=""
-                    width={0}
-                    height={0}
-                    style={{
-                        width: "100%", height: "100%",
-                        objectFit: 'cover'
-                    }}
-                />
-            </Box>
+            <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+         
+         <Image
+             src={Banner}
+             alt="about_us"
+             width={0}
+             height={0}
+             style={{
+                 width: "100%", height: "100%",
+                 objectFit: 'cover'
+             }}
+         />
+       
+     </Box>
+
 
             <Box sx={{
                 backgroundImage: `url(${bgimg.src})`,

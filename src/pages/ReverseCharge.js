@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '@/components/Header'
-import { Box, Typography } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import Head from 'next/head'
 import Footer from '@/components/Footer'
-import Banner from "../assets/images/bg2.jpg";
+import Banner from "../assets/images/Reverse_Charge_Concept.png";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import bgimg from  '../assets/images/pxfuel.jpg'
 
@@ -84,9 +84,21 @@ const ReverseCharge = () => {
             <Header />
             {/*-----------------------Banner---------------------*/}
 
-            <Box>
-                <Image src={Banner} alt="..." className="h-96 w-full" />
-            </Box>
+            <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+         
+                    <Image
+                        src={Banner}
+                        alt="about_us"
+                        width={0}
+                        height={0}
+                        style={{
+                            width: "100%", height: "100%",
+                            objectFit: 'cover'
+                        }}
+                    />
+                  
+                </Box>
+
             <Box sx={{backgroundImage:`url(${bgimg.src})`,
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
            
