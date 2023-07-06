@@ -6,10 +6,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import person1 from "../assets/images/Member1.jpg";
 import person2 from "../assets/images/Member2.jpg";
-import person3 from "../assets/images/Member6.jpg";
+import person3 from "../assets/images/Member3.jpg";
 import person4 from "../assets/images/Member4.jpg";
 import banner from "../assets/images/About_us.jpg";
-import estwaniimg from '../assets/images/banner-1.jpg'
+import estwaniimg from '../assets/images/aboutusbanner.jpg'
+import taxpayersection1 from '../assets/images/taxpayersection.png'
 import hero1 from "../assets/images/herosection1.jpg";
 import hero2 from "../assets/images/herosection2.jpg";
 import hero3 from "../assets/images/herosection3.jpg";
@@ -20,10 +21,21 @@ import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import styles from "@/styles/about.module.css";
 import Slider from "react-slick";
-import { taxpayerCharter } from '../content/data'
+import { taxpayerCharter, taxpayerCharter2 } from '../content/data'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Link from "next/link";
 
 
 export default function about() {
+
+  const arrowStyling = {
+    color: '#2f2483',
+    fontSize: '1rem',
+    marginRight: '0.5rem',
+  }
+
+
+
   const memeberData = [
     {
       id: 1,
@@ -143,6 +155,7 @@ export default function about() {
   };
 
 
+
   return (
     <>
       <Head>
@@ -157,7 +170,7 @@ export default function about() {
       <Header />
 
       {/*----------------------- About Us Banner ------------------*/}
-      <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
+      <Box sx={{ position: "relative", width: "100%", height: '30rem' }} >
         <Image
           src={banner}
           alt="about_us"
@@ -168,38 +181,24 @@ export default function about() {
             objectFit: 'cover'
           }}
         />
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: { xs: "1.2rem", lg: "2.8rem" },
-            color: "white",
-            fontFamily: "inherit",
-            fontWeight: "400",
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-          }}
-        >
-          About Us
-        </Typography>
+        <Box className={styles.box_animation}>
+          <Typography
+            variant="h1"
+            sx={{
+              fontSize: { xs: "1.2rem", lg: "2.8rem" },
+              color: "white",
+              fontFamily: "inherit",
+              fontWeight: "400",
+            }}
+          >
+            About Us
+          </Typography>
+        </Box>
       </Box>
 
       {/* -------------------------About Us Banner END HERE --------------------------*/}
 
       {/*------------------------- Hero Section Start-------------------------- */}
-      <Box sx={{ width: '95%', margin: { xs: "3rem auto", lg: "3rem auto" } }}>
-        <Typography variant="h1" sx={{ my: '1.5rem', }}>
-          About Eswatini Revenue Service
-        </Typography>
-        <Stack className={styles.circleContainer}>
-          <div className={styles.circleDiv}></div>
-          <div className={styles.circleDiv}></div>
-          <div className={styles.circleDiv}></div>
-        </Stack>
-      </Box>
-
-
 
       <Stack
         direction={"row"}
@@ -208,7 +207,15 @@ export default function about() {
         width={"95%"}
         sx={{ margin: { xs: "3rem auto", lg: "3rem auto" } }}
       >
-        <Stack direction={"column"} spacing={1.5} width={"50%"}>
+        <Stack direction={"column"} spacing={1.5} width={"50%"} data-aos="fade-up-right">
+          <Typography variant="h1">
+            About Eswatini Revenue Service
+          </Typography>
+          <Stack className={styles.circleContainer}>
+            <div className={styles.circleDiv}></div>
+            <div className={styles.circleDiv}></div>
+            <div className={styles.circleDiv}></div>
+          </Stack>
           <Typography
             className="Pointsformatting"
             variant="body1"
@@ -236,7 +243,7 @@ export default function about() {
         </Stack>
 
         {/*------------------------ Right Side with images ------------------------*/}
-        <Box sx={{ width: "60%" }}>
+        <Box sx={{ width: "60%", boxShadow: 'rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px' }} data-aos="fade-up-left">
           <Image src={estwaniimg} width={0} height={0} alt="about estwani vat" />
           {/* <Box
             sx={{
@@ -329,6 +336,7 @@ export default function about() {
               maxWidth: "500px",
               margin: "0 auto",
               placeSelf: "center",
+              pb:'1rem'
             }}
           >
             Denounce with righteous indignation and dislike men who are so
@@ -337,18 +345,18 @@ export default function about() {
 
           {/*-------------------carousel----------------------- */}
 
-          <Box sx={{ maxWidth: "95%", }}>
+          <Box className="image-slider">
             <Slider className='h-fit' {...settings} >
               {memeberData.map((item) => {
                 return (
                   <Box key={item.id} sx={{ position: "relative" }}>
                     <Image
-                      className='h-96'
+
                       src={item.img}
                       alt={item.name}
                       width={0}
                       height={0}
-                      style={{ border: "none", width: '100%' }}
+                      style={{ border: "none", width: '100%', aspectRatio: '4/4' }}
                     />
                     <Box sx={{ display: 'flex', flexDirection: 'column', border: '1px solid rgba(0, 0, 0, 0.10)', borderTop: 'none !important', overflow: 'hidden', p: '25px 20px 18px', gap: '1.5rem' }}>
                       <Typography variant="body1" fontWeight={'bold'}>{item.name}</Typography>
@@ -379,7 +387,7 @@ export default function about() {
             backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'
           }}
         />
-        <Grid container rowGap={2}
+        <Grid container rowGap={2} data-aos="fade-up"
           sx={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', p: { xs: '1.5rem', md: '2.2rem', lg: '5rem' } }}>
           {strategicSection.map((item) => (
             <Grid item key={item.id} xs={12} md={6} lg={6} sx={{ px: '3.125rem' }}>
@@ -400,32 +408,86 @@ export default function about() {
       <Box sx={{ position: 'relative', margin: '0 auto' }}>
         <Typography variant="h1" sx={{ fontSize: { xs: '1.2rem', lg: '2.8rem', textAlign: 'center', fontWeight: '400' } }}>Taxpayer Charter</Typography>
         <Stack direction={'column'} sx={{
-          width: '95%',
-          position: 'relative', top: '0', pt: '2rem', margin: '3rem auto'
+          position: 'relative', top: '0', pt: '2rem', margin: '3rem auto',
         }}>
-          <Typography variant="body1" sx={{ fontWeight: '400', }}>
-            The Charter sets out the way we will conduct ourselves when dealing with you. It will help you understand:
-          </Typography>
-          <ul>
-            <li className="starclass">Your rights as a taxpayer</li>
-            <li className="starclass">Your important tax obligations</li>
-            <li className="starclass">The service and other standards you can expect from us, and</li>
-            <li className="starclass">What you can do if you’re dissatisfied with our decisions, actions or services, or you want to lodge a complaint.</li>
-          </ul>
+          <Box sx={{ background: '#fbfbfb', px: '10rem', py: '5rem' }} className="Pointsformatting1">
+            <Typography variant="body1" sx={{ fontWeight: '400', }} className="Pointsformatting1">
+              The Charter sets out the way we will conduct ourselves when dealing with you. It will help you understand:
+            </Typography>
+            <ul>
+              <li className="starclass">Your rights as a taxpayer</li>
+              <li className="starclass">Your important tax obligations</li>
+              <li className="starclass">The service and other standards you can expect from us, and</li>
+              <li className="starclass">What you can do if you’re dissatisfied with our decisions, actions or services, or you want to lodge a complaint.</li>
+            </ul>
+          </Box>
 
-          <Stack direction={'row'} sx={{ display: 'flex', flexDirection: 'row', gap: { lg: '4rem' }, mt: '2rem' }}>
+          {/* left side */}
+          <Stack data-aos="slide-left" direction={'row'} sx={{ display: 'flex', flexDirection: 'row', gap: { lg: '4rem' }, mt: '2rem', px: '10rem' }}>
             {taxpayerCharter.map((item, index) => (
               <Box key={index} sx={{ width: "50%" }}>
-                <Typography variant="h5" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{item.section}</Typography>
+                <Typography variant="h5" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }} className="Pointsformatting1">{item.section}</Typography>
                 <ul>
                   {item.content.split('\n').map((bulletPoints, index) => (
-                    index === 0 ? <h4 key={index} style={{ fontWeight: '400' }}>{bulletPoints}</h4> : <li key={index} className='starclass'>{bulletPoints}</li>
+                    index === 0 ? <h4 key={index} style={{ fontWeight: '400' }} className="Pointsformatting1"> {bulletPoints}</h4> :
+                      <div key={index} className='flex gap-1 items-start'>
+                        <span className='Pointsformatting1'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting1' /></span>
+                        <li className='Pointsformatting1' >{bulletPoints}</li>
+                      </div>
+                  ))}
+                </ul>
+              </Box>
+            ))}
+            <Image src={taxpayersection1} alt="taxpayersection1" className="w-6/12" />
+          </Stack>
+          {/* left side end */}
+
+          {/* right side start */}
+          <Stack data-aos="slide-right" direction={'row'} sx={{ display: 'flex', flexDirection: 'row', gap: { lg: '4rem' }, mt: '2rem', px: '10rem' }}>
+            <Image src={taxpayersection1} alt="taxpayersection1" className="w-6/12" />
+            {taxpayerCharter2.map((item, index) => (
+              <Box key={index} sx={{ width: "50%" }}>
+                <Typography variant="h5" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }} className="Pointsformatting">{item.section}</Typography>
+                <ul>
+                  {item.content.split('\n').map((bulletPoints, index) => (
+                    index === 0 ? <h4 key={index} style={{ fontWeight: '400' }} className="Pointsformatting1"> {bulletPoints}</h4> :
+                      <div key={index} className='flex gap-1 items-start'>
+                        <span className='Pointsformatting1'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting1' /></span>
+                        <li className='Pointsformatting1' >{bulletPoints}</li>
+                      </div>
                   ))}
                 </ul>
               </Box>
             ))}
           </Stack>
+          {/* right side end */}
         </Stack>
+
+        <Box sx={{
+          display: 'flex', flexDirection: 'column', gap: '1.5rem', py: '4rem', px: '10rem',
+
+          background: '#F9F9FA'
+        }}>
+          <Box>
+            <Typography variant="h5" sx={{ color: '#2F248F' }}>ERS Customer Service Standards</Typography>
+            <Typography variant="body1" className="Pointsformatting">
+              Customer service standards are a set of rules that are derived from the ERS’s Vision; they aim to give direction to the ERSs strategic and business activities as well as its conduct in order to realise the Vision.
+            </Typography>
+          </Box>
+          <Box>
+            <Typography variant="h5" sx={{ color: '#2F248F' }}>What Are Services Standards</Typography>
+            <Typography variant="body1" className="Pointsformatting">
+              Service standards are a set of guidelines that govern the conduct of all staff towards ensuring quality service delivery by the Authority. Effective customer service standards are defined in very specific terms to ensure that employees understand what they are required to deliver. These standards will also be the tool used to measure the ERSs performance in relation to customer service.
+              <br />
+              <Link href=""> ERS Customer Standards</Link>
+            </Typography>
+          </Box>
+
+
+        </Box>
+
+
+
       </Box>
 
       {/*-----------------------Footer---------------------*/}

@@ -448,12 +448,16 @@ export const taxpayerCharter = [
     content:
       'You have the right:\n To be presumed honest and compliant\n To be treated fairly with your legal rights and freedoms fully respected\n To have access to professional services and assistance from us and for us to give you information that you can rely on\n To expect us to explain to you the decisions we make about your tax affairs\n To appeal or seek a review\n To be represented and advised\n To entitlements, deductions, allowances, and refunds\n To minimize your tax liability within the bounds of the law\n To have overpayments of tax or duties refunded to you within 45 days\n To request a payment plan\n To have access to your information\n To preserve privileged communications from disclosure\n To have privacy, confidentiality and for trade secrets to be safeguarded\n To complain and to expect that your views will be heard and addressed\n To expect us to administer taxes and duties in ways that minimize compliance costs.',
   },
+  
+];
+
+export const taxpayerCharter2=[
   {
     section: 'Your taxation obligations',
     content:
       'In return, we expect you:\n To be honest in all your dealings with us\n To maintain the records required by law\n To be accurate and take reasonable care in preparing all documents you submit to us and in choosing those who act for you\n To register immediately when starting in business and to notify us promptly of relevant changes of circumstances\n To lodge returns or other information by the due date\n To notify us of any mistakes promptly\n To disclose non-privileged documentation\n To cooperate fully with us\n To be aware of your personal responsibility\n To pay your taxes and duties on time\n To be aware of liability for penalties and interest.',
   },
-];
+]
 
 
 
