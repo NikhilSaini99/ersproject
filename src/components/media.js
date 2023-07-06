@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import facebbook from "../assets/images/adhar.PNG";
+// import facebbook from "../assets/images/adhar.PNG";
 import Twitter from "../assets/images/twitter-page.jpg";
 import Instagram from "../assets/images/insta-page.jpg";
 import ShareIcon from '@mui/icons-material/Share';
@@ -22,7 +22,7 @@ function Media() {
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Facebook</h1>
               <div className=" border w-24 border-yellowish mt-1"></div>
-              {/* <iframe
+              <iframe
                 src="https://www.facebook.com/photo.php?fbid=652502226924329&set=a.361976332643588&type=3&ref=embed_page"
                 width={"344"}
                 height={"450"}
@@ -39,7 +39,7 @@ function Media() {
                 allowFullScreen=""
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 className="my-10"
-              ></iframe> */}
+              ></iframe>
               {/* <Image
                 src={facebbook}
                 alt=""
