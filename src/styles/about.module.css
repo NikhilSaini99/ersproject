@@ -1,81 +1,98 @@
 .circleContainer {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
+  margin: 1rem 0;
 }
 
 .circleDiv {
-    height: 15px;
-    width: 15px;
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-top-color: rgb(255, 165, 0);
-    border-right-color: rgb(255, 165, 0);
-    border-bottom-color: rgb(255, 165, 0);
-    border-left-color: rgb(255, 165, 0);
-    border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgb(255, 165, 0);
+  border-right-color: rgb(255, 165, 0);
+  border-bottom-color: rgb(255, 165, 0);
+  border-left-color: rgb(255, 165, 0);
+  border-radius: 50%;
 }
 
 .circleDiv:nth-of-type(2) {
-    position: absolute;
-    left: 19px;
+  position: absolute;
+  left: 19px;
 }
 
 .circleDiv:nth-of-type(1) {
-    position: absolute;
-    left: 10px;
-    background: rgb(255, 165, 0);
-    border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  background: rgb(255, 165, 0);
+  border-radius: 50%;
 }
 
-.cardeffect::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #f4c402;
-    opacity: 0.93;
+.cardeffect::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f4c402;
+  opacity: 0.93;
 }
 
-.borderLine::after{
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 100px;
-    bottom: 100px;
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    z-index: 3;
+.borderLine::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  bottom: 100px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 3;
 }
 
 
 .box_animation {
-    position: relative;
-    animation-name: bounce-box;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
+  position: relative;
+  animation-name: bounce-box;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+@keyframes bounce-box {
+  0% {
+    transform: translateY(0);
   }
-  
-  @keyframes bounce-box {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+
+  50% {
+    transform: translateY(-20px);
   }
-  
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.about_img {
+  margin: 0 0 0 2rem;
+  width: 650px;
+  float: right;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px
+}
+
+@media only screen and (max-width:1024px) {
+  .about_img {
+    width: 450px;
+    margin: 0 0 0 0.1;
+  }
+}

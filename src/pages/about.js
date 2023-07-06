@@ -202,11 +202,11 @@ export default function about() {
         width={"95%"}
         sx={{ margin: { xs: "3rem auto", lg: "3rem auto" } }}
       >
-        <Stack direction={"column"} spacing={1.5} width={"50%"} data-aos="fade-up-right">
+        <Stack width="100%" data-aos="fade-up-right">
           <Typography variant="h1">
             About Eswatini Revenue Service
           </Typography>
-          <Stack className={styles.circleContainer}>
+          <Stack className={styles.circleContainer} >
             <div className={styles.circleDiv}></div>
             <div className={styles.circleDiv}></div>
             <div className={styles.circleDiv}></div>
@@ -214,8 +214,9 @@ export default function about() {
           <Typography
             className="Pointsformatting"
             variant="body1"
-            sx={{ fontSize: "0.9rem", letterSpacing: "0.1rem" }}
+            sx={{ fontSize: { md: "0.9rem !important" }, letterSpacing: "0.1rem" }}
           >
+            <Image src={estwaniimg} width={0} height={0} alt="about estwani vat" className={styles.about_img} />
             The Eswatini Revenue Service (ERS) is a semi-autonomous revenue
             administration agency, established through the Revenue Authority Act
             No. 1 of 2008. It operates within the broad framework of Government
@@ -238,9 +239,9 @@ export default function about() {
         </Stack>
 
         {/*------------------------ Right Side with images ------------------------*/}
-        <Box sx={{ width: "60%", boxShadow: 'rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px' }} data-aos="fade-up-left">
-          <Image src={estwaniimg} width={0} height={0} alt="about estwani vat" />
-          {/* <Box
+        {/* <Box sx={{ width: "60%",  }} data-aos="fade-up-left">
+          <Image src={estwaniimg} width={'100%'} height={'100%'} alt="about estwani vat" style={{boxShadow: 'rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px'}}/>
+          <Box
             sx={{
               display: "grid",
               gridTemplateColumns: {
@@ -258,7 +259,7 @@ export default function about() {
               <Image src={hero2} alt="" width={"100%"} height={0} />
             </Paper>
           </Box>
-          <Box
+          <Boxs
             sx={{
               display: "grid",
               gridTemplateColumns: {
@@ -298,8 +299,8 @@ export default function about() {
                 objectFit="contain"
               />
             </Paper>
-          </Box> */}
-        </Box>
+          </Boxs>
+        </Box> */}
       </Stack>
 
       {/* --------------------------Hero Section End------------------------- */}
@@ -331,7 +332,7 @@ export default function about() {
               maxWidth: "500px",
               margin: "0 auto",
               placeSelf: "center",
-              pb:'1rem'
+              pb: '1rem'
             }}
           >
             Denounce with righteous indignation and dislike men who are so
@@ -403,7 +404,7 @@ export default function about() {
       <Box sx={{ position: 'relative', margin: '0 auto' }}>
         <Typography variant="h1" sx={{ fontSize: { xs: '1.2rem', lg: '2.8rem', textAlign: 'center', fontWeight: '400' } }}>Taxpayer Charter</Typography>
         <Stack direction={'column'} sx={{
-          position: 'relative', top: '0',  margin: '3rem auto',
+          position: 'relative', top: '0', margin: '3rem auto',
         }}>
           <Box sx={{ background: '#fbfbfb', px: '10rem', py: '5rem' }} className="Pointsformatting1">
             <Typography variant="body1" sx={{ fontWeight: '400', }} className="Pointsformatting1">
@@ -421,7 +422,7 @@ export default function about() {
           <Stack data-aos="slide-left" direction={'row'} sx={{ display: 'flex', flexDirection: 'row', gap: { lg: '4rem' }, mt: '2rem', px: '10rem' }}>
             {taxpayerCharter.map((item, index) => (
               <Box key={index} sx={{ width: "50%" }}>
-                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold' ,color:'#2F248F'}}>{item.section}</Typography>
+                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2F248F' }}>{item.section}</Typography>
                 <ul>
                   {item.content.split('\n').map((bulletPoints, index) => (
                     index === 0 ? <h4 key={index} style={{ fontWeight: '400' }} className="Pointsformatting1"> {bulletPoints}</h4> :
@@ -442,7 +443,7 @@ export default function about() {
             <Image src={taxpayersection1} alt="taxpayersection1" className="w-6/12" />
             {taxpayerCharter2.map((item, index) => (
               <Box key={index} sx={{ width: "50%" }}>
-                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold',color:'#2F248F' }} >{item.section}</Typography>
+                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2F248F' }} >{item.section}</Typography>
                 <ul>
                   {item.content.split('\n').map((bulletPoints, index) => (
                     index === 0 ? <h4 key={index} style={{ fontWeight: '400' }} className="Pointsformatting1"> {bulletPoints}</h4> :
