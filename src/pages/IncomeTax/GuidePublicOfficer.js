@@ -118,8 +118,8 @@ const GuidePublicOfficer = () => {
         border: '0.5px solid grey',
         p: '1rem',
         color: '#2f248f',
-        boxShadow: 'blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px'
-        // boxShadow: 'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset'
+        // boxShadow: 'blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px'
+        boxShadow: 'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset'
     }
 
 
@@ -164,7 +164,7 @@ const GuidePublicOfficer = () => {
                     <Typography variant="body1" className='Pointsformatting'>
                         The Income Tax Order of 1975 as amended requires that a company carrying on business in Swaziland appoints a Public Officer to represent the company in all their tax obligations.
                     </Typography>
-                    <Typography variant="body1" className='Pointsformatting pb-2'>
+                    <Typography variant="body1" className='Pointsformatting '>
                         In terms of Section 51(2) of the Order, a public officer shall be appointed by:
                     </Typography>
 

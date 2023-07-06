@@ -4,7 +4,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Banner from "../../assets/images/General-Import-&-Export-Rul.jpg";
-import Custom from "../../assets/images/Eswatini Customs-2.jpg";
+import Custom from "../../assets/images/Eswatini_Customs-2.jpg";
 import { customData } from "../../content/data";
 import { Box, Paper } from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -19,12 +19,12 @@ export default function GeneralRules() {
   const data5 = customData.find((item) => item.id === 6);
   const data6 = customData.find((item) => item.id === 7);
   const data7 = customData.find((item) => item.id === 8);
-  
-    const arrowStyling = {
-        color: '#2f2483',
-        fontSize: '1rem',
-        marginRight: '0.5rem',
-    }
+
+  const arrowStyling = {
+    color: '#2f2483',
+    fontSize: '1rem',
+    marginRight: '0.5rem',
+  }
 
   return (
     <>
@@ -40,130 +40,137 @@ export default function GeneralRules() {
       {/*-----------------------Banner---------------------*/}
 
       <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
-                    <Image
-                        src={Banner}
-                        alt="about_us"
-                        width={0}
-                        height={0}
-                        style={{
-                            width: "100%", height: "100%",
-                            objectFit: 'cover'
-                        }}
-                    />
-                </Box>
-    
+        <Image
+          src={Banner}
+          alt="about_us"
+          width={0}
+          height={0}
+          style={{
+            width: "100%", height: "100%",
+            objectFit: 'cover'
+          }}
+        />
+      </Box>
+
       <Box sx={{
-                backgroundImage: `url(${bgimg.src})`,
-                backgroundSize: 'cover', backgroundAttachment: 'fixed'
-            }} >
+        backgroundImage: `url(${bgimg.src})`,
+        backgroundSize: 'cover', backgroundAttachment: 'fixed'
+      }} >
 
-      <section className="py-12  w-[75%] mx-auto Pointsformatting pr-20 ">
-        {/* ------------------Importants---------------------------- */}
+        <section className="py-12  w-[75%] mx-auto Pointsformatting pr-20 ">
+          {/* ------------------Importants---------------------------- */}
 
-        <div className=" w-[80%]">
-          <h1 className="text-4xl text-primaryColor font-bold pt-2 mb-8">{data.title}</h1>
-          <h1 className="text-3xl font-semibold mt-4">{data.title1}</h1>
-          <h1 className="text-md font-semibold mt-4">{data.title2}</h1>
-          <ul className="mt-2">
-            {data.description.map((desc) => (
-              <li
-                key={desc}
-                
-                className="mx-1 lightBlack starclass"
-              >
-                {desc}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className=" mt-4 w-[80%] ">
-          <h1 className="text-md font-semibold">{data1.title}</h1>
-          <ul className="mt-3">
-            {data1.description.map((desc) => (
-              <li
-                key={desc}
-                
-                className="mx-1 mt-1 lightBlack starclass"
-              >
-                {desc}
-              </li>
-            ))}
-          </ul>
-        </div>
+          <div className=" w-[80%]">
+            <h1 className="text-4xl text-primaryColor font-bold pt-2 mb-8">{data.title}</h1>
+            <h1 className="text-3xl font-semibold mt-4">{data.title1}</h1>
+            <h1 className="text-md font-semibold mt-4">{data.title2}</h1>
+            <ul className="mt-2">
+              {data.description.map((desc) => (
+                <li
+                  key={desc}
+
+                  className="mx-1 lightBlack starclass"
+                >
+                  {desc}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className=" mt-4 w-[80%] ">
+            <h1 className="text-md font-semibold">{data1.title}</h1>
+            <ul className="mt-3">
+              {data1.description.map((desc) => (
+                <li
+                  key={desc}
+
+                  className="mx-1 mt-1 lightBlack starclass"
+                >
+                  {desc}
+                </li>
+              ))}
+            </ul>
+          </div>
           <hr className=" border-1 border-gray-400 w-[80%] mt-10"></hr>
-            {/* ----------------------EXPORTATION------------------------ */}
-            <div className=" my-10 w-[80%] ">
-              <h1 className="text-2xl font-semibold">{data4.title1}</h1>
-              <hr className=" border-1 text-zinc-500  w-full my-10"></hr>
-              <h1 className="text-md font-semibold mt-8 ">{data4.title2}</h1>
-              <ul>
-                {data4.description.map((desc) => (
-                  <li
-                    key={desc}
-                   
-                    className="mx-1 lightBlack starclass"
-                  >
-                    {desc}
-                  </li>
-                ))}
-              </ul>
-              <h1 className="text-lg mt-4 text-justify font-semibold ">{data4.title5}<span className="lightBlack font-normal"> {data4.title3}</span></h1>
-              <h1 className="text-lg mt-4 text-justify font-semibold">{data4.title6}<span className="lightBlack font-normal">{data4.title4}</span></h1>
-            </div>
-        {/* ----------------------Personal Imports------------------------ */}
-        
-        <div className="flex  my-10">
-        <div className="w-[60%]">
-        <div className="  ">
-          <h1 className="text-2xl font-semibold">{data2.title}</h1>
-          <p className="mt-2 text-justify font-semibold">{data2.title1}<span className="lightBlack font-normal">{data2.description}</span></p>
-        </div>
+          {/* ----------------------EXPORTATION------------------------ */}
+          <div className=" my-10 w-[80%] ">
+            <h1 className="text-2xl font-semibold">{data4.title1}</h1>
+            <hr className=" border-1 text-zinc-500  w-full my-10"></hr>
+            <h1 className="text-md font-semibold mt-8 ">{data4.title2}</h1>
+            <ul>
+              {data4.description.map((desc) => (
+                <li
+                  key={desc}
 
-        <div className=" mt-8 ">
-          <h1 className="text-md font-semibold">{data3.title1}</h1>
-          <ul className="mt-2">
-            {data3.description.map((desc,index) => (
-                <div  key={index} className='flex gap-1 items-start pb-2'>
-                <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
-              <li
-                className="lightBlack"
-              >{desc}
-              </li>
+                  className="mx-1 lightBlack starclass"
+                >
+                  {desc}
+                </li>
+              ))}
+            </ul>
+            <h1 className="text-lg mt-4 text-justify font-semibold ">{data4.title5}<span className="lightBlack font-normal"> {data4.title3}</span></h1>
+            <h1 className="text-lg mt-4 text-justify font-semibold">{data4.title6}<span className="lightBlack font-normal">{data4.title4}</span></h1>
+          </div>
+          {/* ----------------------Personal Imports------------------------ */}
+
+          <div className="flex  my-10">
+            <div className="w-[60%]">
+              <div className="  ">
+                <h1 className="text-2xl font-semibold">{data2.title}</h1>
+                <p className="mt-2 text-justify font-semibold">{data2.title1}<span className="lightBlack font-normal">{data2.description}</span></p>
               </div>
-            ))}
-          </ul>
+            </div>
+            <div className="mt-10 w-[60%] mx-6">
+              <Paper elevation={20} sx={{ borderRadius: '25px', float: 'right' }} >
+                <Image src={Custom} alt="..." className="h-[55%] w-full rounded-xl" />
+              </Paper>
+            </div>
           </div>
-          <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data3.title4}<span className="lightBlack font-normal"> {data3.title2}</span></h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data3.title5}<span className="lightBlack font-normal"> {data3.title3}</span></h1>
+
+          <div className=" mt-8 ">
+            <h1 className="text-md font-semibold">{data3.title1}</h1>
+            <ul className="mt-2">
+              {data3.description.map((desc, index) => (
+                <div key={index} className='flex gap-1 items-start pb-2'>
+                  <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
+                  <li
+                    className="lightBlack"
+                  >{desc}
+                  </li>
+                </div>
+              ))}
+            </ul>
           </div>
-          <div className="mt-10 w-[60%] mx-6">
-          <Paper elevation={20} sx={{borderRadius:'25px',float:'right'}} >
-          <Image src={Custom} alt="..." className="h-[55%] w-full rounded-xl"  />
-          </Paper>
+          <div className="w-[80%]">
+            <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data3.title4}<span className="lightBlack font-normal"> {data3.title2}</span></h1>
+            <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data3.title5}<span className="lightBlack font-normal"> {data3.title3}</span></h1>
           </div>
-        </div>
 
-        {/* --------------------CROSS BORDER CASH DECLARATION------------------ */}
 
-        <div className=" my-10 w-[80%] ">
-          <h1 className="text-2xl font-semibold ">{data5.title1}</h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting ">{data5.title4}<span className="lightBlack font-normal Pointsformatting"> {data5.title2}</span></h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data5.title5}<span className="lightBlack font-normal Pointsformatting">{data5.title3}</span></h1>
-        </div>
-        {/* ------------------------OFFENCE AND CONFISCATION-------------------- */}
-        <div className=" my-10 w-[80%] ">
-          <h1 className="text-2xl font-semibold">{data6.title1}</h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data6.title4}<span className="lightBlack font-normal Pointsformatting"> {data6.title2}</span></h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data6.title5}<span className="lightBlack font-normal Pointsformatting"> {data6.title3}</span></h1>
-        </div>
-        {/* ------------------------SEARCH-------------------- */}
 
-       <div className=" my-10 w-[80%] ">
-          <h1 className="text-2xl font-semibold">{data7.title1}</h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data7.title4}<span className="lightBlack font-normal Pointsformatting"> {data7.title2}</span></h1>
-          <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data7.title5}<span className="lightBlack font-normal Pointsformatting"> {data7.title3}</span></h1>
-        </div>
-      </section>
+
+
+
+          {/* --------------------CROSS BORDER CASH DECLARATION------------------ */}
+
+          <div className=" my-10 w-[80%] ">
+            <h1 className="text-2xl font-semibold ">{data5.title1}</h1>
+            <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting ">{data5.title4}<span className="lightBlack font-normal Pointsformatting"> {data5.title2}</span></h1>
+            <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data5.title5}<span className="lightBlack font-normal Pointsformatting">{data5.title3}</span></h1>
+          </div>
+          {/* ------------------------OFFENCE AND CONFISCATION-------------------- */}
+          <div className=" my-10 w-[80%] ">
+            <h1 className="text-2xl font-semibold">{data6.title1}</h1>
+            <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data6.title4}<span className="lightBlack font-normal Pointsformatting"> {data6.title2}</span></h1>
+            <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data6.title5}<span className="lightBlack font-normal Pointsformatting"> {data6.title3}</span></h1>
+          </div>
+          {/* ------------------------SEARCH-------------------- */}
+
+          <div className=" my-10 w-[80%] ">
+            <h1 className="text-2xl font-semibold">{data7.title1}</h1>
+            <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data7.title4}<span className="lightBlack font-normal Pointsformatting"> {data7.title2}</span></h1>
+            <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data7.title5}<span className="lightBlack font-normal Pointsformatting"> {data7.title3}</span></h1>
+          </div>
+        </section>
 
       </Box>
 

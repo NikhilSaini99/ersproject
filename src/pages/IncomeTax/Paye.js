@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
-import Banner from "../../assets/images/PAYE-QuickGuide.png";
+import Banner from "../../assets/images/PAYE-QuickGuide.jpg";
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -213,11 +213,10 @@ const Paye = () => {
 
                 </Box>
 
-                <Typography variant="body1" className="Pointsformatting">
-                    The following are the rates of tax to be levied, in the case of employees, for the year of assessment ending 30th June 2014:
-                    <br />
-                    <strong className="Pointsformatting"> RATES OF NORMAL TAX FOR INDIVIDUALS FOR 2013/2014</strong>
+                <Typography variant="body1" className="Pointsformatting mb-4">
+                    The following are the rates of tax to be levied, in the case of employees, for the year of assessment ending 30th June 2014
                 </Typography>
+                <p className="Pointsformatting font-bold mt-4"> RATES OF NORMAL TAX FOR INDIVIDUALS FOR 2013/2014</p>
 
                 <Paper elevation={20} sx={{ margin: '2rem auto' }}>
                     <TableContainer >
