@@ -421,7 +421,7 @@ export default function about() {
           <Stack data-aos="slide-left" direction={'row'} sx={{ display: 'flex', flexDirection: 'row', gap: { lg: '4rem' }, mt: '2rem', px: '10rem' }}>
             {taxpayerCharter.map((item, index) => (
               <Box key={index} sx={{ width: "50%" }}>
-                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{item.section}</Typography>
+                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold' ,color:'#2F248F'}}>{item.section}</Typography>
                 <ul>
                   {item.content.split('\n').map((bulletPoints, index) => (
                     index === 0 ? <h4 key={index} style={{ fontWeight: '400' }} className="Pointsformatting1"> {bulletPoints}</h4> :
@@ -442,7 +442,7 @@ export default function about() {
             <Image src={taxpayersection1} alt="taxpayersection1" className="w-6/12" />
             {taxpayerCharter2.map((item, index) => (
               <Box key={index} sx={{ width: "50%" }}>
-                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold' }} >{item.section}</Typography>
+                <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold',color:'#2F248F' }} >{item.section}</Typography>
                 <ul>
                   {item.content.split('\n').map((bulletPoints, index) => (
                     index === 0 ? <h4 key={index} style={{ fontWeight: '400' }} className="Pointsformatting1"> {bulletPoints}</h4> :
