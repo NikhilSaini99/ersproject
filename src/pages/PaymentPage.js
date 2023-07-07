@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Header from '@/components/Header';
 import { Box, Typography } from '@mui/material';
 import Footer from '@/components/Footer';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const PaymentPage = () => {
     const dataPaymentpage = [
@@ -49,6 +50,12 @@ const PaymentPage = () => {
         },
     ];
 
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem',
+    }
+
     return (
         <>
             <Head>
@@ -71,25 +78,28 @@ const PaymentPage = () => {
                     }}
                 />
             </Box>
-
-            <Box sx={{ width: '80%', margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     Payments
                 </Typography>
-                <Typography variant='body1'>The following modes of payment are available for ERS customers to make tax and/or duties payments:</Typography>
+                <Typography variant='body1' className='Pointsformatting mb-2'>The following modes of payment are available for ERS customers to make tax and/or duties payments:</Typography>
 
-                <ol style={{listStyleType:'decimal',marginLeft: "1rem"}}>
+                <ol style={{ listStyleType: 'decimal', marginLeft: "1rem" }}>
                     {dataPaymentpage.map((item) => (
-                        <li key={item.id} variant='body1' style={{ fontWeight: 'bold',marginBottom:'1rem' }}>
-                            {item.title}
 
+                        <li key={item.id} variant='body1' className='Pointsformatting '>
+                            {item.title}
                             <ul className='custom-list'
-                                style={{ marginLeft: "1rem", fontWeight:'normal' }}>
+                                style={{ marginLeft: "1rem", fontWeight: 'normal' }}>
                                 {item.details.map((item, index) => (
-                                    <li key={index}>{item}</li>
+                                    <div key={item.id} className='flex gap-1 items-start pb-2'>
+                                        <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
+                                        <li key={index}>{item}</li>
+                                    </div>
                                 ))}
                             </ul>
                         </li>
+
                     ))}
                 </ol>
 

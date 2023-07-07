@@ -4,7 +4,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Banner from "../assets/images/Eswatini_Customs.png";
-import bgimg from "../assets/images/pxfuel.jpg";
+import bgimg from "../assets/images/bg-1.png";
 import { Box, Typography } from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 

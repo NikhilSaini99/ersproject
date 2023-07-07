@@ -8,6 +8,7 @@ import downloadIcon from "../assets/icons/downloadicon.svg"
 import Banner from "../assets/images/customs.jpg";
 import Image from 'next/image';
 import { Box } from '@mui/material';
+import bgimg from '../assets/images/bg-2.png'
 const TaxTables = () => {
 
     const taxTableData = [
@@ -35,7 +36,10 @@ const TaxTables = () => {
              <Box>
             <Image src={Banner} alt="..." className="h-96 w-full" />
             </Box>
-
+            <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
             <section className="py-8  w-95 my-0 flex flex-row leading-8">
 
                 <div className="relative w-3/5 mx-auto my-0 relative">
@@ -67,7 +71,7 @@ const TaxTables = () => {
                     ))}
                 </div>
             </section>
-
+</Box>
             {/*-----------------------Footer---------------------*/}
             <Footer />
         </>

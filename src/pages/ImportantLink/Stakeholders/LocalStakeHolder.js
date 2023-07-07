@@ -60,19 +60,19 @@ export default function LocalStakeHolder() {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     Resources
                 </Typography>
                 {organizations.map((item, index) => (
                     <Box key={index} sx={{ mb: '1.5rem' }}>
                         <Stack sx={{ display: 'flex', gap: '0.8rem', flexDirection: 'row' }}>
-                            <Typography variant='h2' component='h5' sx={{ fontSize: '1.2rem', fontWeight: "bold" }}>
+                            <Typography variant='h2' component='h5' sx={{ fontSize: '1.3rem', fontWeight: "bold" }}>
                                 {item.name}
                             </Typography>
-                            <Link href={`${item.link}`} style={{textDecoration:'underline',color:'#2f2483',fontWeight:'bold'}}>{item.website}</Link>
+                            <Link href={`${item.link}`} style={{textDecoration:'underline',color:'#2f2483',fontWeight:'bold',fontSize: '1.3rem',}}>{item.website}</Link>
                             </Stack>
-                        <Typography variant='body1' >
+                        <Typography variant='body1' className='Pointsformatting'>
                             {item.description}
                         </Typography>
                     </Box>

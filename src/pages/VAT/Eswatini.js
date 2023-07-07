@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/Eswatini_VAT.png";
+import bgimg from "../../assets/images/bg-2.png";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
@@ -162,27 +163,27 @@ const Eswatini = () => {
             {/*-----------------------Header---------------------*/}
 
             <Header />
-            <Box sx={{ backgroundImage: `url(${''})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '100%' }}>
+
+
             <Box sx={{ position: "relative", width: "100%", height: '30rem' }}>
-                    <Image
-                        src={Banner}
-                        alt="about_us"
-                        width={0}
-                        height={0}
-                        style={{
-                            width: "100%", height: "100%",
-                            objectFit: 'cover'
-                        }}
-                    />
-                </Box>
+                <Image
+                    src={Banner}
+                    alt="about_us"
+                    width={0}
+                    height={0}
+                    style={{
+                        width: "100%", height: "100%",
+                        objectFit: 'cover'
+                    }}
+                />
+            </Box>
 
-
-                <Box sx={{
-                    width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: '0rem auto', lg: '0rem auto' }, pb:'4rem',
-                    lineHeight: '1.8',
-
-                }}>
-                    <Typography variant="h1" sx={{ mt: '5rem', mb: '2.5rem' }}>
+            <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
+                 <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                         Eswatini VAT</Typography>
 
                     {/*------------------- Section 1-------------------------------- */}

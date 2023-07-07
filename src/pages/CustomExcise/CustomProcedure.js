@@ -6,7 +6,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/Customs_Procedure_Codes.jpg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import bgimg from '../../assets/images/pxfuel.jpg'
+import bgimg from '../../assets/images/bg-2.png'
 
 const CustomProcedure = () => {
 

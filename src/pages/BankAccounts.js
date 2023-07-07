@@ -69,43 +69,47 @@ const BankAccounts = () => {
                     }}
                 />
             </Box>
-            <Typography variant='h1' sx={{ fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', color: 'white', pb: '2rem' }}>Bank Accounts</Typography>
-            <Typography variant='body1' sx={{
-                fontSize: '1rem', textAlign: 'center', pb: '2rem',
-                width: { xs: '96%', md: '95%', xl: '70%' }, margin: '0rem auto'
-            }}>The ERS has two (2) accounts in each of the five banks in
-                Eswatini
-                . Taxpayers are advised to use the accounts in the same bank as their own when making EFT payments; the payment will clear into the ERS account faster and therefore the ERS may timeously receipt such payment. Cross banking and use of the wrong account may cause delays in receipting of payments and therefore result in possible inconveniences for taxpayers
-            </Typography>
-            <Typography variant='body1' sx={{ textAlign: 'center', width: { xs: '96%', md: '95%', xl: '70%' }, margin: '0rem auto' }}>Below are the ERS transaction accounts:</Typography>
-            <Box sx={{ width: { xs: '96%', md: '95%', xl: '70%' }, margin: '3rem auto' }}>
-                <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '0 auto' }}>
-                    <TableContainer sx={{ borderRadius: '10px' }}>
-                        <Table>
-                            <TableHead>
-                                <TableRow sx={{ backgroundColor: '#f4c203', '&> *': { fontWeight: 'bold', } }}>
-                                    <TableCell>Financial Institution</TableCell>
-                                    <TableCell>Account name:{<br />}ERS Domestic Taxes</TableCell>
-                                    <TableCell>Account name:{<br />}ERS Customs & Excise</TableCell>
-                                    <TableCell>Branch code</TableCell>
-                                    <TableCell>SWIFT code</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {tableData.map((item, index) => (
-                                    item && (
-                                        <TableRow key={index} sx={{ '&>*': { fontWeight: '600' } }}>
-                                            <TableCell align='left'>{item.financialInstitution}</TableCell>
-                                            <TableCell align='left' >{item.ERSDomesticTaxes}</TableCell>
-                                            <TableCell align='left' >{item.ERSCustomsExcise}</TableCell>
-                                            <TableCell align='left' >{item.branchCode}</TableCell>
-                                            <TableCell align='left' >{item.swiftCode}</TableCell>
-                                        </TableRow>
-                                    )))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                </Paper>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                    Bank Accounts</Typography>
+                <Typography variant='body1' className='Pointsformatting'>The ERS has two (2) accounts in each of the five banks in
+                    Eswatini
+                    . Taxpayers are advised to use the accounts in the same bank as their own when making EFT payments; the payment will clear into the ERS account faster and therefore the ERS may timeously receipt such payment. Cross banking and use of the wrong account may cause delays in receipting of payments and therefore result in possible inconveniences for taxpayers
+                </Typography>
+                <Typography variant='body1' className='Pointsformatting my-4' >Below are the ERS transaction accounts:</Typography>
+                <Box >
+                    <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '0 auto' }}>
+                        <TableContainer sx={{ borderRadius: '10px' }}>
+                            <Table>
+                                <TableHead>
+                                    <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { color: 'white !important', fontWeight: 'bold !important', fontSize: '1rem !important' } }}>
+                                        <TableCell>Financial Institution</TableCell>
+                                        <TableCell>Account name:{<br />}ERS Domestic Taxes</TableCell>
+                                        <TableCell>Account name:{<br />}ERS Customs & Excise</TableCell>
+                                        <TableCell>Branch code</TableCell>
+                                        <TableCell>SWIFT code</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {tableData.map((item, index) => (
+                                        item && (
+                                            <TableRow key={index} sx={{
+                                                '&:hover': {
+                                                    background: '#F2F2F2'
+                                                }
+                                            }}>
+                                                <TableCell align='left'>{item.financialInstitution}</TableCell>
+                                                <TableCell align='left' >{item.ERSDomesticTaxes}</TableCell>
+                                                <TableCell align='left' >{item.ERSCustomsExcise}</TableCell>
+                                                <TableCell align='left' >{item.branchCode}</TableCell>
+                                                <TableCell align='left' >{item.swiftCode}</TableCell>
+                                            </TableRow>
+                                        )))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Paper>
+                </Box>
             </Box>
 
             {/*-----------------------Footer---------------------*/}
