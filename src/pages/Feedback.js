@@ -5,10 +5,10 @@ import { Box, Button, FormControl, InputLabel, MenuItem, Paper, Select, Stack, T
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../assets/images/customs.jpg";
-import feedbackimg from '../assets/images/feedbackbg4.svg'
+import feedbackimg from '../assets/images/bg-1.png'
 import patternimg from '../assets/images/pattern-bg.avif'
 import axios from 'axios'
-import { submitFeedback,getFeedback } from './api/api'
+import { submitFeedback, getFeedback } from './api/api'
 import { useFetch } from './api/api'
 
 const Feedback = () => {
@@ -24,7 +24,7 @@ const Feedback = () => {
   // const check = `${myAPI}/userFeedback`
 
 
-    const {data,fetchAPI} = useFetch('post','/api/userFeedback')
+  const { data, fetchAPI } = useFetch('post', '/api/userFeedback')
 
 
 
@@ -50,7 +50,7 @@ const Feedback = () => {
     // }
 
     // submitFeedback({feedbacktype,name,email,phone_number,feedback_description,del_status: Date.now()}) 
-    fetchAPI({feedbacktype,name,email,phone_number,feedback_description,del_status: Date.now()})
+    fetchAPI({ feedbacktype, name, email, phone_number, feedback_description, del_status: Date.now() })
     // getFeedback();
     alert('Thank you for the Feedback!!')
     setFeedbacktype('')
@@ -107,13 +107,13 @@ const Feedback = () => {
               </FormControl>
 
               <InputLabel htmlFor="full-Name">Full Name</InputLabel>
-              <TextField variant='outlined' size='medium' type='text' value={name} onChange={(e) => setFullName(e.target.value)} required/>
+              <TextField variant='outlined' size='medium' type='text' value={name} onChange={(e) => setFullName(e.target.value)} required />
               <InputLabel htmlFor="full-Name">Phone</InputLabel>
-              <TextField variant='outlined' size='medium' type='number' value={phone_number} onChange={(e) => setPhoneNo(e.target.value)} required/>
+              <TextField variant='outlined' size='medium' type='number' value={phone_number} onChange={(e) => setPhoneNo(e.target.value)} required />
               <InputLabel htmlFor="full-Name">Email Address</InputLabel>
-              <TextField variant='outlined' size='medium' type='text' value={email} onChange={(e) => setEmail(e.target.value)} required/>
+              <TextField variant='outlined' size='medium' type='text' value={email} onChange={(e) => setEmail(e.target.value)} required />
               <InputLabel htmlFor="full-Name">Comments</InputLabel>
-              <TextField variant='outlined' size='medium' type='text' multiline={true} minRows={5} value={feedback_description} onChange={(e) => setfeedback_description(e.target.value)} sx={{ mb: '1rem' }} required/>
+              <TextField variant='outlined' size='medium' type='text' multiline={true} minRows={5} value={feedback_description} onChange={(e) => setfeedback_description(e.target.value)} sx={{ mb: '1rem' }} required />
               <Button type="submit" variant='contained' color='primary' sx={{ background: '#2f2483 !important', color: 'white', alignSelf: 'center', width: '10rem', mb: { xs: '2rem', lg: '3rem' }, p: '0.8rem' }}>Send</Button>
             </Stack>
           </Paper>

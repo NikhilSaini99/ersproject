@@ -10,7 +10,8 @@ import person3 from "../assets/images/Member3.jpg";
 import person4 from "../assets/images/Member4.jpg";
 import banner from "../assets/images/About_us.jpg";
 import estwaniimg from '../assets/images/aboutusbanner.jpg'
-import taxpayersection1 from '../assets/images/taxpayersection.png'
+import taxpayersection1 from '../assets/images/taxpayersection1.png'
+import taxpayersection2 from '../assets/images/taxpayersection2.png'
 import cardImg from "../assets/images/card.jpg";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
@@ -440,7 +441,7 @@ export default function about() {
 
           {/* right side start */}
           <Stack data-aos="slide-right" direction={'row'} sx={{ display: 'flex', flexDirection: 'row', gap: { lg: '4rem' }, mt: '2rem', px: '10rem' }}>
-            <Image src={taxpayersection1} alt="taxpayersection1" className="w-6/12" />
+            <Image src={taxpayersection2} alt="taxpayersection1" className="w-6/12" />
             {taxpayerCharter2.map((item, index) => (
               <Box key={index} sx={{ width: "50%" }}>
                 <Typography variant="h5" sx={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2F248F' }} >{item.section}</Typography>
