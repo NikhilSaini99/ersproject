@@ -42,7 +42,6 @@ const Registration = () => {
   const insideAccordionStyle = {
 
     background: '#FFFFFF',
-    /* Buttons/ Color - Default */
     boxShadow: '0px 6px 16px 0px rgba(74, 58, 255, 0.19)',
     display: 'flex',
     flexDirection: 'column',
@@ -144,7 +143,6 @@ const Registration = () => {
                 }}>{item.answer}</Typography>
               </Stack>
             ))}
-            {/* ref={(e)=>myRef.current[index]=e} */}
           </Stack>
         </Box>
 

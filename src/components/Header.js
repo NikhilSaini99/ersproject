@@ -333,6 +333,21 @@ export default function Header() {
                               </Link>
                               <br />
 
+
+                              <Link href={'/IncomeTax/TaxationDiplomats'} className="line">
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                Taxation of Diplomats and Consults
+                                </p>
+                              </Link>
+                              <br />
+                              <Link href={'/IncomeTax/Guidenewbusiness'} className="line">
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                Step-By Step Guide for New Businesses
+                                </p>
+                              </Link>
+                              <br />
+
+
                             </div>
                             <div>
                               <h1 className="text-xl font-bold leading-8 mb-3">
@@ -387,6 +402,30 @@ export default function Header() {
                               <Link href={'/CustomExcise/CustomWorksheet'} className="line">
                                 <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
                                   Customs Worksheet
+                                </p>
+                              </Link>
+                              <br />
+                              <Link href={'/CustomExcise/CustomAgents'} className="line">
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                Customs Clearing Agents
+                                </p>
+                              </Link>
+                              <br />
+                              <Link href={'/CustomExcise/TraderPrograme'} className="line">
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                Preferred Trader Programme
+                                </p>
+                              </Link>
+                              <br />
+                              <Link href={'/CustomExcise/OfficeandOperating'} className="line">
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                Offices and Operating Hours
+                                </p>
+                              </Link>
+                              <br />
+                              <Link href={'/CustomExcise/RebateConcession'} className="line">
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                Rebate Concessions for New/Returning Residents
                                 </p>
                               </Link>
                               <br />
