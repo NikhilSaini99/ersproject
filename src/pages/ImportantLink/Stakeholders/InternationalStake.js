@@ -5,9 +5,19 @@ import Head from 'next/head'
 import { Box, Typography, Stack } from '@mui/material'
 import Image from 'next/image'
 import Banner from "../../../assets/images/images/registration.jpg";
+import bgimg from '../../../assets/images/pxfuel.jpg'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Link from 'next/link'
 
 const InternationalStake = () => {
+
+    const arrowStyling = {
+        color: '#2f2483',
+        fontSize: '1rem',
+        marginRight: '0.5rem',
+    }
+
+
 
     const firstSection = [
         {
@@ -143,94 +153,114 @@ const InternationalStake = () => {
                     }}
                 />
             </Box>
+            <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
-                    Links
-                </Typography>
-                <Typography variant="h6" component="h2" sx={{ fontWeight: 'bold', my: '1.2rem' }}>
-                    INTERNATIONAL ORGANISATIONS AND AGREEMENTS
-                </Typography>
-                <Link href={'https://www.irs.gov/Businesses/Corporations/Foreign-Account-Tax-Compliance-Act-FATCA'}
-                    style={{ textDecoration: 'underline', color: '#2f2483', fontWeight: 'bold' }}>
-                    Foreign Account Tax Compliance Act (FATCA)
-                </Link>
-                <Typography variant="body1">
-                    Foreign Account Tax Compliance Act was enacted in 2010 subsequent to the 2007 economic recession in the United States of America (USA).
-                    It compels financial institutions to disclose annually to the Internal Revenue Service(IRS) financial information in respect of USA Citizens’ offshore income.
-                </Typography>
+                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                        Links
+                    </Typography>
+                    <Typography variant="h2" sx={{ fontSize: '1.25rem', fontWeight: 'bold', my: '1.2rem' }}>
+                        INTERNATIONAL ORGANISATIONS AND AGREEMENTS
+                    </Typography>
+                    <Typography variant="h2" sx={{ fontSize: '1.25rem', fontWeight: 'bold', my: '1.2rem' }}>
+                        <Link href={'https://www.irs.gov/Businesses/Corporations/Foreign-Account-Tax-Compliance-Act-FATCA'}
+                            style={{ textDecoration: 'underline', color: '#2f2483', fontWeight: 'bold' }}>
+                            Foreign Account Tax Compliance Act (FATCA)
+                        </Link></Typography>
 
-                {firstSection.map((item, index) => (
-                    <Box key={index}>
-                        <Typography variant='h6' sx={{ fontWeight: 'bold', my: '0.3rem' }}>{item.head}</Typography>
+                    <Typography variant="body1" className='Pointsformatting'>
+                        Foreign Account Tax Compliance Act was enacted in 2010 subsequent to the 2007 economic recession in the United States of America (USA).
+                        It compels financial institutions to disclose annually to the Internal Revenue Service(IRS) financial information in respect of USA Citizens’ offshore income.
+                    </Typography>
 
-                        {Array.isArray(item.description) ? item.description.map((itemdesc, index) => (
-                            <Box key={index}>
-                                <Typography variant='body1'>{itemdesc.desc1}</Typography>
+                    {firstSection.map((item, index) => (
+                        <Box key={index}>
+                            <Typography variant='h2' sx={{ fontSize: '1.25rem', fontWeight: 'bold', my: '0.3rem' }}>{item.head}</Typography>
 
-                                {Array.isArray(itemdesc.explain) ?
-                                    itemdesc.explain.map((itemexp, index) => {
-                                        <Box key={index}>
-                                            {/* <div>{itemexp.mainpoints?itemexp.mainpoints.map((itemmain,index)=>(
+                            {Array.isArray(item.description) ? item.description.map((itemdesc, index) => (
+                                <Box key={index}>
+                                        <Typography variant='body1' className='Pointsformatting'>{itemdesc.desc1}</Typography>
+                                    {Array.isArray(itemdesc.explain) ?
+                                        itemdesc.explain.map((itemexp, index) => {
+                                            <Box key={index}>
+                                                {/* <div>{itemexp.mainpoints?itemexp.mainpoints.map((itemmain,index)=>(
                                        <li key={index}>{itemmain}</li>
                                     )):itemexp.subpoints?itemexp.subpoints.map((itemsub,index)=>(
                                         <li key={index}>{itemsub}</li>
                                     )):null}</div> */}
-                                        </Box>
-                                    })
-                                    : <Typography variant='body1'>{itemdesc.explain}</Typography>}
-                            </Box>
-                        ))
-                            :
-                            <Typography variant='body1'>{item.description}</Typography>}
-                        <Typography variant='body1'>Obtain information to report which involves the following:</Typography>
-                    </Box>
-                ))}
-                <ol style={{ listStyleType: 'decimal',marginLeft:'1rem' }}>
-                    <li>A specified US person: Name, address and US taxpayer identification number(TIN).</li>
-                    <li>A US owned entity: name address and US TIN of each substantial US owner.</li>
-                    <li>Account Numbers.</li>
-                    <li>Account Balances or value as of the end of the relevant calendar year</li>
-                    <ul className='custom-list'>
-                        <li>Depository-gross amount of interest paid or credited.</li>
-                        <li>Custodial-gross amount of interest ,dividends and other income generated with respect to the assets held in the account and total proceeds of the sale or redemption of property and</li>
-                        <li>All other accounts: gross amount paid or credited to the account holder.</li>
+                                            </Box>
+                                        })
+                                        : <Typography variant='body1' className='Pointsformatting'>{itemdesc.explain}</Typography>}
+                                </Box>
+                            ))
+                                :
 
-                    </ul>
-                </ol>
+                                <Typography variant='body1' className='Pointsformatting'>{item.description}</Typography>
+
+                            }
+                            <Typography variant='body1' className='Pointsformatting'>Obtain information to report which involves the following:</Typography>
+                        </Box>
+                    ))}
+                    <ol style={{ listStyleType: 'decimal', marginLeft: '1rem' }} className='Pointsformatting'>
+                        <li>A specified US person: Name, address and US taxpayer identification number(TIN).</li>
+                        <li>A US owned entity: name address and US TIN of each substantial US owner.</li>
+                        <li>Account Numbers.</li>
+                        <li>Account Balances or value as of the end of the relevant calendar year</li>
+                        <ul className='custom-list'>
+                            <li>Depository-gross amount of interest paid or credited.</li>
+                            <li>Custodial-gross amount of interest ,dividends and other income generated with respect to the assets held in the account and total proceeds of the sale or redemption of property and</li>
+                            <li>All other accounts: gross amount paid or credited to the account holder.</li>
+
+                        </ul>
+                    </ol>
 
 
-                {organizations.map((item, index) => (
-                    <Box key={index}>
-                        <Typography variant='h6' sx={{
-                            color: 'gray',
-                            fontWeight: 'bold', my: '0.3rem'
-                        }}>{item.name}</Typography>
-                        <Typography variant='body1' component='div'>{item.description}
-                            {item.objectives &&
-                                <ul className='custom-list'>
-                                    {item.objectives.map((itemobj, index) => (
-                                        <li key={index}>{itemobj}</li>
-                                    ))}
-                                </ul>}
-                        </Typography>
+                    {organizations.map((item, index) => (
+                        <Box key={index}>
+                            <Typography variant='h6' sx={{
+                                fontWeight: 'bold', my: '0.3rem'
+                            }} className='Pointsformatting'>{item.name}</Typography>
+                            <div className='flex gap-1 items-start pb-2'>
+                                <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
+                                <Typography variant='body1' component='div' className='Pointsformatting' >{item.description}
+                                    {item.objectives &&
 
-                    </Box>
+                                        <ul>
+                                            {item.objectives.map((itemobj, index) => (
+                                                <div key={index} className='flex gap-1 items-start pb-2'>
+                                                    <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
+                                                    <li >{itemobj}</li>
+                                                </div>
+                                            ))}
+                                        </ul>
+                                    }
 
-                ))}
+                                </Typography>
+                            </div>
 
-                <Typography variant='h6' sx={{ fontWeight: 'bold', my: '0.3rem' }}>NATIONAL STAKEHOLDERS </Typography>
 
-                {nationalStakeholders.map((item, index) => (
-                    <Box key={index}>
-                        <Typography variant='h6' sx={{
-                            color: 'gray',
-                            fontWeight: 'bold', my: '0.3rem'
-                        }}>
-                            <Link href={`${item.link}`}>{item.name}</Link></Typography>
-                        <Typography variant='body1' component='div'>{item.description}</Typography>
-                    </Box>
-                ))}
+                        </Box>
+
+                    ))}
+
+                    <Typography variant='h6' sx={{ fontWeight: 'bold', my: '0.3rem' }}>NATIONAL STAKEHOLDERS </Typography>
+
+                    {nationalStakeholders.map((item, index) => (
+                        <Box key={index}>
+                            <Typography variant='h6' sx={{
+                                fontWeight: 'bold', my: '0.3rem'
+                            }}>
+                                <Typography variant="h2" sx={{ fontSize: '1.25rem', fontWeight: 'bold', my: '1rem' }}>
+                                    <Link href={`${item.link}`}>{item.name}</Link>
+                                </Typography>
+                            </Typography>
+                            <Typography variant='body1' component='div' className='Pointsformatting'>{item.description}</Typography>
+                        </Box>
+                    ))}
+                </Box>
             </Box>
 
             {/*-----------------------Footer---------------------*/}

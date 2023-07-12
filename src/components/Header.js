@@ -429,6 +429,12 @@ export default function Header() {
                                 </p>
                               </Link>
                               <br />
+                              <Link href={'/CustomExcise/SekululaVat'} className="line">
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                Sekulula VAT
+                                </p>
+                              </Link>
+                              <br />
 
                             </div>
                           </div>

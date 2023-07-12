@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from '../../assets/images/pxfuel.jpg'
+import Footer from '@/components/Footer'
 
 const TraderPrograme = () => {
   return (
@@ -44,6 +45,7 @@ const TraderPrograme = () => {
             <Link href="http://www.sra.org.sz/documents/1567671955.pdf" className='Pointsformatting text-normalBlue'>ERS - Preferred Trader Programme External Guide and Procedure-Vsn1_ 2019</Link>
         </Box>
     </Box>
+    <Footer/>
 </>
   )
 }

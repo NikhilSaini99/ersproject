@@ -6,6 +6,7 @@ import React from 'react'
 import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from '../../assets/images/pxfuel.jpg'
 import Link from 'next/link'
+import Footer from '@/components/Footer'
 
 const Guidenewbusiness = () => {
     return (
@@ -44,6 +45,7 @@ const Guidenewbusiness = () => {
                     <Link href="http://www.ers.org.sz/documents/1674047725.pdf" className='Pointsformatting text-normalBlue'>http://www.ers.org.sz/documents/1674047725.pdf</Link>
                 </Box>
             </Box>
+            <Footer/>
         </>
     )
 }
