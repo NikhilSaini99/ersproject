@@ -435,6 +435,12 @@ export default function Header() {
                                 </p>
                               </Link>
                               <br />
+                              <Link href={'/CustomExcise/EuRegistered'} className="line">
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                EU Registered Exporter System
+                                </p>
+                              </Link>
+                              <br />
 
                             </div>
                           </div>

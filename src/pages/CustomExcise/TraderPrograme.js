@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
-import bgimg from '../../assets/images/pxfuel.jpg'
+import bgimg from '../../assets/images/bg-1.png'
 import Footer from '@/components/Footer'
 
 const TraderPrograme = () => {
