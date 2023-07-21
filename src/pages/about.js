@@ -237,7 +237,7 @@ export default function about() {
       {/* ------------------------Council Memeber section start-------------------------- --*/}
 
       <Box width={"94%"} sx={{ margin: "0 auto", textAlign: "center" }}>
-        <Stack direction={"column"} spacing={3} sx={{ mt: "8rem", mb: "5rem" }}>
+        <Stack direction={"column"} spacing={3} sx={{ mt: "5rem", mb: "5rem" }}>
           <Typography variant="h1" sx={{ fontWeight: "400" }}>
             Meet Council Member
           </Typography>
