@@ -199,20 +199,10 @@ export default function about() {
         sx={{ margin: { xs: "3rem auto", lg: "3rem auto" } }}
       >
         <Stack width="100%" data-aos="fade-up-right">
-          <Typography variant="h1">About Eswatini Revenue Service</Typography>
-          <Stack className={styles.circleContainer}>
-            <div className={styles.circleDiv}></div>
-            <div className={styles.circleDiv}></div>
-            <div className={styles.circleDiv}></div>
-          </Stack>
-          <Typography
-            className="Pointsformatting"
-            variant="body1"
-            sx={{
-              fontSize: { md: "0.9rem !important" },
-              letterSpacing: "0.1rem",
-            }}
-          >
+          <Typography variant="h1" my=".5rem">
+            About Eswatini Revenue Service
+          </Typography>
+          <Typography className="Pointsformatting" variant="body1">
             <Image
               src={estwaniimg}
               width={0}
@@ -251,19 +241,6 @@ export default function about() {
           <Typography variant="h1" sx={{ fontWeight: "400" }}>
             Meet Council Member
           </Typography>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Stack className={styles.circleContainer}>
-              <div className={styles.circleDiv}></div>
-              <div className={styles.circleDiv}></div>
-              <div className={styles.circleDiv}></div>
-            </Stack>
-          </div>
           <Typography
             variant="body1"
             sx={{
@@ -423,26 +400,58 @@ export default function about() {
         >
           <Box
             sx={{ background: "#fbfbfb", px: "10rem", py: "5rem" }}
-            className="Pointsformatting1"
+            className="Pointsformatting"
           >
             <Typography
               variant="body1"
               sx={{ fontWeight: "400" }}
-              className="Pointsformatting1"
+              className="Pointsformatting"
             >
               The Charter sets out the way we will conduct ourselves when
               dealing with you. It will help you understand:
             </Typography>
-            <ul>
-              <li className="starclass">Your rights as a taxpayer</li>
-              <li className="starclass">Your important tax obligations</li>
-              <li className="starclass">
+          <ul>
+            <div className="flex gap-1 items-start">
+              <span className="Pointsformatting">
+                <ArrowForwardIosIcon
+                  sx={arrowStyling}
+                  className="Pointsformatting"
+                />
+              </span>
+              <li>Your rights as a taxpayer</li>
+            </div>
+            <div className="flex gap-1 items-start">
+              <span className="Pointsformatting">
+                <ArrowForwardIosIcon
+                  sx={arrowStyling}
+                  className="Pointsformatting"
+                />
+              </span>
+              <li>Your important tax obligations</li>
+            </div>
+            <div className="flex gap-1 items-start">
+              <span className="Pointsformatting">
+                <ArrowForwardIosIcon
+                  sx={arrowStyling}
+                  className="Pointsformatting"
+                />
+              </span>
+              <li>
                 The service and other standards you can expect from us, and
               </li>
-              <li className="starclass">
+            </div>
+            <div className="flex gap-1 items-start">
+              <span className="Pointsformatting">
+                <ArrowForwardIosIcon
+                  sx={arrowStyling}
+                  className="Pointsformatting"
+                />
+              </span>
+              <li>
                 What you can do if you’re dissatisfied with our decisions,
                 actions or services, or you want to lodge a complaint.
               </li>
+            </div>
             </ul>
           </Box>
 
@@ -466,6 +475,7 @@ export default function about() {
                     fontSize: "1.5rem",
                     fontWeight: "bold",
                     color: "#2F248F",
+                    marginY:'1rem'
                   }}
                 >
                   {item.section}
@@ -476,20 +486,20 @@ export default function about() {
                       <h4
                         key={index}
                         style={{ fontWeight: "400" }}
-                        className="Pointsformatting1"
+                        className="Pointsformatting"
                       >
                         {" "}
                         {bulletPoints}
                       </h4>
                     ) : (
                       <div key={index} className="flex gap-1 items-start">
-                        <span className="Pointsformatting1">
+                        <span className="Pointsformatting">
                           <ArrowForwardIosIcon
                             sx={arrowStyling}
-                            className="Pointsformatting1"
+                            className="Pointsformatting"
                           />
                         </span>
-                        <li className="Pointsformatting1">{bulletPoints}</li>
+                        <li className="Pointsformatting">{bulletPoints}</li>
                       </div>
                     )
                   )}
@@ -529,6 +539,7 @@ export default function about() {
                     fontSize: "1.5rem",
                     fontWeight: "bold",
                     color: "#2F248F",
+                    marginY:'1rem'
                   }}
                 >
                   {item.section}
@@ -539,20 +550,20 @@ export default function about() {
                       <h4
                         key={index}
                         style={{ fontWeight: "400" }}
-                        className="Pointsformatting1"
+                        className="Pointsformatting"
                       >
                         {" "}
                         {bulletPoints}
                       </h4>
                     ) : (
                       <div key={index} className="flex gap-1 items-start">
-                        <span className="Pointsformatting1">
+                        <span className="Pointsformatting">
                           <ArrowForwardIosIcon
                             sx={arrowStyling}
-                            className="Pointsformatting1"
+                            className="Pointsformatting"
                           />
                         </span>
-                        <li className="Pointsformatting1">{bulletPoints}</li>
+                        <li className="Pointsformatting">{bulletPoints}</li>
                       </div>
                     )
                   )}
