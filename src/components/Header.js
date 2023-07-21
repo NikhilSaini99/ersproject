@@ -187,7 +187,7 @@ export default function Header() {
                           </div>
                           {/* </div> */}
                           {/* Right side of Menu */}
-                          <div className="pt-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
+                          <div className="py-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
                             <div className="flex flex-col" >
                               <div >
                                 <h1 className="text-xl font-bold leading-8 mb-3">
@@ -535,7 +535,7 @@ export default function Header() {
                             </div>
                           </div>
                           {/* Right Side of Menu */}
-                          <div className="pt-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
+                          <div className="py-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
                             <div className="flex flex-col sub_items_text_color">
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 VAT Forms
@@ -708,7 +708,7 @@ export default function Header() {
                             </div>
                           </div>
                           {/* Right Side of menu */}
-                          <div className="pt-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
+                          <div className="py-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
                             <div className="flex flex-col sub_items_text_color">
 
                               <div>

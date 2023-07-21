@@ -21,30 +21,14 @@ function Media() {
           <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Facebook</h1>
-              <div className=" border w-24 border-yellowish mt-1"></div>
-              {/* <iframe
-                src="https://www.facebook.com/photo.php?fbid=652502226924329&set=a.361976332643588&type=3&ref=embed_page"
-                width={"344"}
-                height={"450"}
-                style={{
-                  borderWidth: "2px",
-                  borderColor: "#DADAEB",
-                  cursor: "pointer",
-                  borderRadius: '12px',
-                  padding: '0.5rem',
-                  background:'white',
-                }}
-                scrolling="no"
-                frameBorder="0"
-                allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                className="my-10"
-              ></iframe> */}
+              <div className=" border w-[70px] border-yellowish mt-1"></div>
+
+              <div className="flex flex-col justify-between">
               <Image
                 src={facebbook}
                 alt=""
                 className="my-10"
-                width={"344"}
+                width={"344px"}
                 height={"450px"}
                 style={{
                   borderWidth: "2px",
@@ -54,28 +38,28 @@ function Media() {
                   padding: '0.5rem',
                   minWidth: '344px',
                   minHeight: '450px',
+                  maxHeight:'450px',
                   background:'white',
                 }}
               />
-              <Link
-                href="https://www.facebook.com/EswatiniRevenueService"
-                target="_blank"
-              >
+                <Link href="https://www.facebook.com/EswatiniRevenueService" target="_blank">
                 <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
-                  Follow Us
+                Follow Us
                 </button>
               </Link>
+              </div>
+             
             </div>
 
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Twitter</h1>
               <div className="border w-[70px] border-yellowish mt-1"></div>
-             
+              <div className="flex flex-col justify-between">
               <Image
                 src={Twitter}
                 alt=""
                 className="my-10"
-                width={"344"}
+                width={"344px"}
                 height={"450px"}
                 style={{
                   borderWidth: "2px",
@@ -85,6 +69,7 @@ function Media() {
                   padding: '0.5rem',
                   minWidth: '344px',
                   minHeight: '450px',
+                  maxHeight:'450px',
                   background:'white',
                 }}
               />
@@ -93,17 +78,18 @@ function Media() {
                 Follow Us
                 </button>
               </Link>
+              </div>
             </div>
 
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Instagram</h1>
               <div className="border w-24 border-yellowish mt-1"></div>
-           
+              <div className="flex flex-col justify-between">
               <Image
                 src={Instagram}
                 alt=""
                 className="my-10"
-                width={"344"}
+                width={"344px"}
                 height={"450px"}
                 style={{
                   borderWidth: "2px",
@@ -113,6 +99,7 @@ function Media() {
                   padding: '0.5rem',
                   minWidth: '344px',
                   minHeight: '450px',
+                  maxHeight:'450px',
                   background:'white',
                 }}
               />
@@ -121,6 +108,7 @@ function Media() {
                 Follow Us
                 </button>
               </Link>
+              </div>
             </div>
           </div>
         </div>
