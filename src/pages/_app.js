@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
         color: '#2F248F',
         fontSize: '2.5rem',
         fontWeight: 'bold',
-      }
+      },
     },
   });
 

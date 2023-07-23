@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import background from "../assets/images/banner-1.jpg";
+import background from "../assets/images/banner-HIRES.png";
 import background2 from "../assets/images/Home_Page_2.jpg";
 import background3 from "../assets/images/bg3.jpg";
 import background4 from "../assets/images/banner-3.jpg";

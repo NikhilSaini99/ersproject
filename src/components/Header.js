@@ -29,7 +29,7 @@ export default function Header() {
   const [windowScroll, setwindowScroll] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      const yOffset = window.pageYOffset;
+      const yOffset = window.scrollY;
       const threshold = 0;
       setwindowScroll(
         yOffset > threshold && yOffset - 0 > threshold ? "hidden" : "block"
@@ -77,7 +77,7 @@ export default function Header() {
                     //   setAboutOpen(false);
                     // }}
                     >
-                      <Link href={"/about"}>
+                      <Link href={"/About"}>
                         <h3
                           className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor mr-3 ${router.asPath === "/about"
                             ? "text-[#2F3192]"

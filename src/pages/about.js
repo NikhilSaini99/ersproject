@@ -21,12 +21,46 @@ import Slider from "react-slick";
 import { taxpayerCharter, taxpayerCharter2 } from "../content/data";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Link from "next/link";
+import { BorderRight } from "@mui/icons-material";
 
-export default function about() {
+export default function About() {
   const arrowStyling = {
     color: "#2f2483",
     fontSize: "1rem",
     marginRight: "0.5rem",
+  };
+
+  const h2Styling = {
+    fontWeight: "400",
+    textAlign: "center",
+    pt: "3rem",
+    position: "relative",
+    fontSize: "2rem",
+    color: "#2F248F",
+  };
+
+  const ourMissionBoxStyle = {
+    width: { xs: "100%", lg: "50%" },
+    background: "#2F248F",
+    mt: "2rem",
+    padding: "2rem",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+    borderBottom: "25px solid transparent",
+    borderTop: "25px solid transparent",
+    borderRight: "25px solid #f4c402",
+    borderLeft: "25px solid #f4c402",
+    borderRadius: "25px 0px 25px 0px",
+    transition: "background 0.5s",
+    color: "white",
+    "&:hover": {
+      background: "#f4c402",
+      color: "black",
+      borderBottom: "25px solid transparent",
+      borderTop: "25px solid transparent",
+      borderRight: "25px solid #2F248F",
+      borderLeft: "25px solid #2F248F",
+      transition: "background 0.5s",
+    },
   };
 
   const memeberData = [
@@ -196,7 +230,7 @@ export default function about() {
         lineHeight={"1.6em"}
         spacing={5}
         width={"95%"}
-        sx={{ margin: { xs: "3rem auto", lg: "3rem auto" } }}
+        sx={{ margin: { xs: "3rem auto", lg: "3rem auto 0" } }}
       >
         <Stack width="100%" data-aos="fade-up-right">
           <Typography variant="h1" my=".5rem">
@@ -210,25 +244,105 @@ export default function about() {
               alt="about estwani vat"
               className={styles.about_img}
             />
-            The Eswatini Revenue Service (ERS) is a semi-autonomous revenue
-            administration agency, established through the Revenue Authority Act
-            No. 1 of 2008. It operates within the broad framework of Government
-            but outside of the civil service. The ERS is structured as a
-            corporate entity and strives for operational excellence and
-            efficiency. It is headed by a Commissioner General, Mr Dumsani E.
-            Masilela and is organised on functional lines – this link provides
-            more details. The ERS has a Governing Board which is appointed by
-            the Honorable Minister of Finance in accordance with the Eswatini
-            Public Enterprise Act, and read with the founding Act. In
-            furtherance of our mandate, as well as in working towards adopting
-            best practice, the ERS is a member of various international
-            organisations, such as the World Customs Organization (WCO); the
-            Commonwealth Association of Tax Administrators (CATA) and the
-            African Tax Administration Forum (ATAF). Alliances with established
-            revenue agencies such as the South African Revenue Service (SARS),
-            the Lesotho Revenue Authority (LRA) and the Zambia Revenue Authority
-            (ZRA) have also been pursued to this end.
+            {heroSectionData.description}
           </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", lg: "row" },
+              gap: "1rem",
+            }}
+          >
+            <Box sx={ourMissionBoxStyle}>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", marginBottom: "0.5rem" }}
+              >
+                OUR MISSION
+              </Typography>
+              <Typography variant="body1" sx={{ marginBottom: "0.5rem" }}>
+                To provide an effective and efficient revenue and Customs
+                administration, driven by a high performance culture that
+                promotes compliance through fair, transparent and equitable
+                application of the law.
+              </Typography>
+            </Box>
+
+            <Box sx={ourMissionBoxStyle}>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", marginBottom: "0.rem" }}
+              >
+                OUR VISION
+              </Typography>
+              <Typography variant="body1">
+                100% Voluntary Compliance for a better Kingdom of Eswatini
+              </Typography>
+            </Box>
+          </Box>
+
+          <Typography variant="h2" sx={h2Styling}>
+            Our Values
+          </Typography>
+
+          <Box
+            sx={{ textAlign: "center", width:'80%',margin:'2rem auto 0' }}
+            className={styles.custom_effect_container}
+          >
+            {/* Performance Excellence */}
+            <div className={styles.custom_effect}>
+              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                Performance Excellence
+              </Typography>
+              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
+                Strive for professionalism and continuous improvement.
+              </Typography>
+            </div>
+
+            {/* Relationships */}
+            <div className={styles.custom_effect}>
+              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                Relationships
+              </Typography>
+              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
+                Focus efforts on delivering high-level customer service and
+                recognizing the impact of actions on internal and external
+                stakeholders.
+              </Typography>
+            </div>
+
+            {/* Innovative */}
+            <div className={styles.custom_effect}>
+              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                Innovative
+              </Typography>
+              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
+                Continuously implement new ideas that re-engineer service
+                offering and the way in which ERS operates.
+              </Typography>
+            </div>
+
+            {/* Integrity */}
+            <div className={styles.custom_effect}>
+              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                Integrity
+              </Typography>
+              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
+                Promote honesty, trust, and openness in conducting business.
+              </Typography>
+            </div>
+
+            {/* Transparency and Accountability */}
+            <div className={styles.custom_effect}>
+              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                Transparency and Accountability
+              </Typography>
+              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
+                Open in operations and communication whilst being responsible
+                for actions and decisions.
+              </Typography>
+            </div>
+          </Box>
         </Stack>
       </Stack>
 
@@ -236,9 +350,9 @@ export default function about() {
 
       {/* ------------------------Council Memeber section start-------------------------- --*/}
 
-      <Box width={"94%"} sx={{ margin: "0 auto", textAlign: "center" }}>
-        <Stack direction={"column"} spacing={3} sx={{ mt: "5rem", mb: "5rem" }}>
-          <Typography variant="h1" sx={{ fontWeight: "400" }}>
+      <Box sx={{ margin: "0 auto", textAlign: "center" }}>
+        <Stack direction={"column"} spacing={3} sx={{ mt: "3rem", mb: "3rem" }}>
+          <Typography variant="h2" sx={h2Styling}>
             Meet Council Member
           </Typography>
           <Typography
@@ -288,6 +402,8 @@ export default function about() {
                         overflow: "hidden",
                         p: "25px 20px 18px",
                         gap: "1.5rem",
+                        minHeight: "135px",
+                        maxHeight: "135px",
                       }}
                     >
                       <Typography variant="body1" fontWeight={"bold"}>
@@ -308,42 +424,32 @@ export default function about() {
       </Box>
 
       {/*-------------------------- Council Memeber section End here------------------- */}
+      <Typography variant="h2" sx={h2Styling}>
+        Strategic Themes
+      </Typography>
 
       <Box
         className={`${styles.cardeffect} ${styles.borderLine}`}
         sx={{
           width: "98%",
-          margin: "4rem auto",
+          margin: "3rem auto",
           position: "relative",
           textAlign: "left",
+          minHeight: "fit-content",
+          maxHeight: "fit-content",
         }}
       >
-        <Image
-          src={cardImg}
-          alt=""
-          width={"100%"}
-          height={0}
-          layout="responsive"
-          objectFit="contain"
-          style={{
-            border: "none",
-            opacity: "1",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center center",
-          }}
-        />
         <Grid
           container
-          rowGap={2}
+          rowGap={4}
           data-aos="fade-up"
           sx={{
-            position: "absolute",
+            position: "relative",
             top: "0",
             left: "0",
             width: "100%",
             height: "100%",
-            p: { xs: "1.5rem", md: "2.2rem", lg: "5rem" },
+            p: { xs: "1rem", md: "2.2rem", lg: "5rem" },
           }}
         >
           {strategicSection.map((item) => (
@@ -353,20 +459,22 @@ export default function about() {
               xs={12}
               md={6}
               lg={6}
-              sx={{ px: "3.125rem" }}
+              sx={{ px: { xs: "0.5rem", sm: "1.5rem" } }} // Adjust padding for responsiveness
             >
               <Stack direction={"column"} sx={{ display: "flex", gap: "1rem" }}>
                 <Typography
+                  className="Pointsformatting"
                   variant="h4"
                   fontWeight={"bold"}
-                  sx={{ fontSize: "1.1rem" }}
+                  sx={{ fontSize: { xs: "1rem", sm: "1.1rem" } }} // Adjust font size for responsiveness
                 >
                   {item.title}
                 </Typography>
                 <Typography
+                  className="Pointsformatting"
                   variant="body1"
                   fontWeight={"400"}
-                  sx={{ fontSize: "0.95rem" }}
+                  sx={{ fontSize: { xs: "0.9rem", sm: "0.95rem" } }} // Adjust font size for responsiveness
                 >
                   {item.description}
                 </Typography>
@@ -377,17 +485,7 @@ export default function about() {
       </Box>
 
       <Box sx={{ position: "relative", margin: "0 auto" }}>
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: {
-              xs: "1.2rem",
-              lg: "2.8rem",
-              textAlign: "center",
-              fontWeight: "400",
-            },
-          }}
-        >
+        <Typography variant="h2" sx={h2Styling}>
           Taxpayer Charter
         </Typography>
         <Stack
@@ -399,7 +497,11 @@ export default function about() {
           }}
         >
           <Box
-            sx={{ background: "#fbfbfb", px: "10rem", py: "5rem" }}
+            sx={{
+              background: "#fbfbfb",
+              pl: { xs: "0.5rem", lg: "5rem" },
+              py: "5rem",
+            }}
             className="Pointsformatting"
           >
             <Typography
@@ -410,48 +512,48 @@ export default function about() {
               The Charter sets out the way we will conduct ourselves when
               dealing with you. It will help you understand:
             </Typography>
-          <ul>
-            <div className="flex gap-1 items-start">
-              <span className="Pointsformatting">
-                <ArrowForwardIosIcon
-                  sx={arrowStyling}
-                  className="Pointsformatting"
-                />
-              </span>
-              <li>Your rights as a taxpayer</li>
-            </div>
-            <div className="flex gap-1 items-start">
-              <span className="Pointsformatting">
-                <ArrowForwardIosIcon
-                  sx={arrowStyling}
-                  className="Pointsformatting"
-                />
-              </span>
-              <li>Your important tax obligations</li>
-            </div>
-            <div className="flex gap-1 items-start">
-              <span className="Pointsformatting">
-                <ArrowForwardIosIcon
-                  sx={arrowStyling}
-                  className="Pointsformatting"
-                />
-              </span>
-              <li>
-                The service and other standards you can expect from us, and
-              </li>
-            </div>
-            <div className="flex gap-1 items-start">
-              <span className="Pointsformatting">
-                <ArrowForwardIosIcon
-                  sx={arrowStyling}
-                  className="Pointsformatting"
-                />
-              </span>
-              <li>
-                What you can do if you’re dissatisfied with our decisions,
-                actions or services, or you want to lodge a complaint.
-              </li>
-            </div>
+            <ul>
+              <div className="flex gap-1 items-start">
+                <span className="Pointsformatting">
+                  <ArrowForwardIosIcon
+                    sx={arrowStyling}
+                    className="Pointsformatting"
+                  />
+                </span>
+                <li>Your rights as a taxpayer</li>
+              </div>
+              <div className="flex gap-1 items-start">
+                <span className="Pointsformatting">
+                  <ArrowForwardIosIcon
+                    sx={arrowStyling}
+                    className="Pointsformatting"
+                  />
+                </span>
+                <li>Your important tax obligations</li>
+              </div>
+              <div className="flex gap-1 items-start">
+                <span className="Pointsformatting">
+                  <ArrowForwardIosIcon
+                    sx={arrowStyling}
+                    className="Pointsformatting"
+                  />
+                </span>
+                <li>
+                  The service and other standards you can expect from us, and
+                </li>
+              </div>
+              <div className="flex gap-1 items-start">
+                <span className="Pointsformatting">
+                  <ArrowForwardIosIcon
+                    sx={arrowStyling}
+                    className="Pointsformatting"
+                  />
+                </span>
+                <li>
+                  What you can do if you’re dissatisfied with our decisions,
+                  actions or services, or you want to lodge a complaint.
+                </li>
+              </div>
             </ul>
           </Box>
 
@@ -461,21 +563,21 @@ export default function about() {
             direction={"row"}
             sx={{
               display: "flex",
-              flexDirection: "row",
-              gap: { lg: "4rem" },
+              flexDirection: { xs: "column", lg: "row" },
+              gap: { lg: "1rem" },
               mt: "2rem",
-              px: "10rem",
+              pl: { xs: "0.5rem", lg: "5rem" },
             }}
           >
             {taxpayerCharter.map((item, index) => (
-              <Box key={index} sx={{ width: "50%" }}>
+              <Box key={index}>
                 <Typography
                   variant="h5"
                   sx={{
                     fontSize: "1.5rem",
                     fontWeight: "bold",
                     color: "#2F248F",
-                    marginY:'1rem'
+                    marginY: "1rem",
                   }}
                 >
                   {item.section}
@@ -509,7 +611,7 @@ export default function about() {
             <Image
               src={taxpayersection1}
               alt="taxpayersection1"
-              className="w-6/12"
+              className="w-5/12"
             />
           </Stack>
           {/* left side end */}
@@ -517,29 +619,27 @@ export default function about() {
           {/* right side start */}
           <Stack
             data-aos="slide-right"
-            direction={"row"}
             sx={{
               display: "flex",
-              flexDirection: "row",
-              gap: { lg: "4rem" },
+              flexDirection: { xs: "column", lg: "row" },
+              gap: { lg: "1rem" },
               mt: "2rem",
-              px: "10rem",
             }}
           >
             <Image
               src={taxpayersection2}
               alt="taxpayersection1"
-              className="w-6/12"
+              className="w-5/12"
             />
             {taxpayerCharter2.map((item, index) => (
-              <Box key={index} sx={{ width: "50%" }}>
+              <Box key={index} sx={{ pr: { xs: "0.5rem", lg: "5rem" } }}>
                 <Typography
                   variant="h5"
                   sx={{
                     fontSize: "1.5rem",
                     fontWeight: "bold",
                     color: "#2F248F",
-                    marginY:'1rem'
+                    marginY: "1rem",
                   }}
                 >
                   {item.section}
@@ -574,21 +674,22 @@ export default function about() {
           {/* right side end */}
         </Stack>
 
+        <Typography variant="h2" sx={h2Styling}>
+          ERS Customer Service Standards
+        </Typography>
+
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             gap: "1.5rem",
-            py: "4rem",
-            px: "10rem",
-
+            py: "3rem",
+            px: { xs: "0.5rem", lg: "5rem" },
+            mt: "3rem",
             background: "#F9F9FA",
           }}
         >
           <Box>
-            <Typography variant="h5" sx={{ color: "#2F248F" }}>
-              ERS Customer Service Standards
-            </Typography>
             <Typography variant="body1" className="Pointsformatting">
               Customer service standards are a set of rules that are derived
               from the ERS’s Vision; they aim to give direction to the ERSs
