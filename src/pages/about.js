@@ -237,7 +237,7 @@ export default function About() {
               </div>
             </ul>
 
-            <Typography variant="body1" className={styles.board_subheading}>
+            <Typography variant="body1" className="Pointsformatting">
               Each report to the Board at their quarterly meetings.
             </Typography>
           </Grid>
