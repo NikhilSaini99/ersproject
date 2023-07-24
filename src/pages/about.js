@@ -1,27 +1,19 @@
 import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import person1 from "../assets/images/Member1.jpg";
-import person2 from "../assets/images/Member2.jpg";
-import person3 from "../assets/images/Member3.jpg";
-import person4 from "../assets/images/Member4.jpg";
 import banner from "../assets/images/About_us.jpg";
-import profilVector from "../assets/images/profilevector.svg";
 import estwaniimg from "../assets/images/aboutusbanner.jpg";
-import taxpayersection1 from "../assets/images/taxpayersection1.png";
-import taxpayersection2 from "../assets/images/taxpayersection2.png";
-import cardImg from "../assets/images/card.jpg";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import styles from "@/styles/about.module.css";
-import Slider from "react-slick";
-import { taxpayerCharter, taxpayerCharter2 } from "../content/data";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Link from "next/link";
-import { BorderRight } from "@mui/icons-material";
+import OurMission from "./AboutPages/OurMission/OurMission";
+import Mandate from "./AboutPages/Mandate/Mandate";
+import CouncilMember from "./AboutPages/CouncilMember/CouncilMember";
+import StrategicTheme from "./AboutPages/Strategic/StrategicTheme";
+import TaxPayer from "./AboutPages/TaxPayer/TaxPayer";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function About() {
   const arrowStyling = {
@@ -31,7 +23,7 @@ export default function About() {
   };
 
   const h2Styling = {
-    fontWeight: "400",
+    fontWeight: "700",
     textAlign: "center",
     pt: "3rem",
     position: "relative",
@@ -39,144 +31,23 @@ export default function About() {
     color: "#2F248F",
   };
 
-  const ourMissionBoxStyle = {
-    width: { xs: "100%", lg: "50%" },
-    background: "#2F248F",
-    mt: "2rem",
-    padding: "2rem",
-    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-    borderBottom: "25px solid transparent",
-    borderTop: "25px solid transparent",
-    borderRight: "25px solid #f4c402",
-    borderLeft: "25px solid #f4c402",
-    borderRadius: "25px 0px 25px 0px",
-    transition: "background 0.5s",
-    color: "white",
-    "&:hover": {
-      background: "#f4c402",
-      color: "black",
-      borderBottom: "25px solid transparent",
-      borderTop: "25px solid transparent",
-      borderRight: "25px solid #2F248F",
-      borderLeft: "25px solid #2F248F",
-      transition: "background 0.5s",
-    },
-  };
-
-  const memeberData = [
-    {
-      id: 1,
-      img: profilVector,
-      name: "David Dlamini",
-      role: "Chairman",
-    },
-    {
-      id: 2,
-      img: profilVector,
-      name: "Brightwell Nkambule (CG)",
-      role: "Board Memeber",
-    },
-    {
-      id: 3,
-      img: profilVector,
-      name: "Carol Muir",
-      role: "Director",
-    },
-    {
-      id: 4,
-      img: profilVector,
-      name: "Phil Mnisi",
-      role: "CEO",
-    },
-    {
-      id: 5,
-      img: profilVector,
-      name: "David Dlamini",
-      role: "Chairman",
-    },
-    {
-      id: 6,
-      img: profilVector,
-      name: "Brightwell Nkambule (CG)",
-      role: "Board Memeber",
-    },
-    {
-      id: 7,
-      img: profilVector,
-      name: "Carol Muir",
-      role: "Director",
-    },
-    {
-      id: 8,
-      img: profilVector,
-      name: "Phil Mnisi",
-      role: "CEO",
-    },
-  ];
-
-  const strategicSection = [
-    {
-      id: 1,
-      title: "COST EFFICIENCIES",
-      description:
-        "To collect the required revenue effectively and efficiently, manage cost of doing business whilst building a financially sustainable organisation.",
-    },
-    {
-      id: 2,
-      title: "MODERNISATION",
-      description:
-        "Develop an effective institutional framework that promotes correct, uniform and consistent administration of revenue laws/legislation and ease of doing business with and within ERS.",
-    },
-    {
-      id: 3,
-      title: "HUMAN CAPITAL",
-      description:
-        "To attract, retain and build capacity of our staff to meet our revenue, operational and strategic objectives.",
-    },
-    {
-      id: 4,
-      title: "CUSTOMER AND STAKEHOLDER CENTRICITY",
-      description: "To deliver customer and stakeholder centricity.",
-    },
-  ];
-
   const heroSectionData = {
     title: "About Eswatini Revenue Service",
     description:
       "The Eswatini Revenue Service (ERS) is a semi-autonomous revenue administration agency, established through the Revenue Authority Act No. 1 of 2008. It operates within the broad framework of Government but outside of the civil service.The ERS is structured as a corporate entity and strives for operational excellence and efficiency. It is headed by a Commissioner General, Mr Dumsani E. Masilela and is organised on functional lines – this link provides more details. The ERS has a Governing Board which is appointed by the Honorable Minister of Finance in accordance with the Eswatini Public Enterprise Act, and read with the founding Act.In furtherance of our mandate, as well as in working towards adopting best practice, the ERS is a member of various international organisations, such as the World Customs Organization (WCO); the Commonwealth Association of Tax Administrators (CATA) and the African Tax Administration Forum (ATAF). Alliances with established revenue agencies such as the South African Revenue Service (SARS), the Lesotho Revenue Authority (LRA) and the Zambia Revenue Authority (ZRA) have also been pursued to this end.",
   };
 
-  //settings for carousel
-  const settings = {
-    autoplay: true,
-    autoplaySpeed: 3000,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 1280, // screens between 1280px and 960px
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 960, // screens between 960px and 600px
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600, // screens below 600px
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
+  const boardMembers = {
+    ministerialAppoints: "David Dlamini – Chairman",
+
+    otherBoardMembers: [
+      "Brightwell Nkambule (CG)",
+      "Phil Mnisi",
+      "Carol Muir",
+      "Prince Lindani",
+      "Vusie E. Dlamini",
+      "Ms Chazile Magongo",
+      "Lusekwane Dlamini",
     ],
   };
 
@@ -246,271 +117,96 @@ export default function About() {
             />
             {heroSectionData.description}
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", lg: "row" },
-              gap: "1rem",
-            }}
-          >
-            <Box sx={ourMissionBoxStyle}>
-              <Typography
-                variant="h5"
-                sx={{ fontWeight: "bold", marginBottom: "0.5rem" }}
-              >
-                OUR MISSION
-              </Typography>
-              <Typography variant="body1" sx={{ marginBottom: "0.5rem" }}>
-                To provide an effective and efficient revenue and Customs
-                administration, driven by a high performance culture that
-                promotes compliance through fair, transparent and equitable
-                application of the law.
-              </Typography>
-            </Box>
 
-            <Box sx={ourMissionBoxStyle}>
-              <Typography
-                variant="h5"
-                sx={{ fontWeight: "bold", marginBottom: "0.rem" }}
-              >
-                OUR VISION
-              </Typography>
-              <Typography variant="body1">
-                100% Voluntary Compliance for a better Kingdom of Eswatini
-              </Typography>
-            </Box>
-          </Box>
-
-          <Typography variant="h2" sx={h2Styling}>
-            Our Values
-          </Typography>
-
-          <Box
-            sx={{ textAlign: "center", width:'80%',margin:'2rem auto 0' }}
-            className={styles.custom_effect_container}
-          >
-            {/* Performance Excellence */}
-            <div className={styles.custom_effect}>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                Performance Excellence
-              </Typography>
-              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
-                Strive for professionalism and continuous improvement.
-              </Typography>
-            </div>
-
-            {/* Relationships */}
-            <div className={styles.custom_effect}>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                Relationships
-              </Typography>
-              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
-                Focus efforts on delivering high-level customer service and
-                recognizing the impact of actions on internal and external
-                stakeholders.
-              </Typography>
-            </div>
-
-            {/* Innovative */}
-            <div className={styles.custom_effect}>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                Innovative
-              </Typography>
-              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
-                Continuously implement new ideas that re-engineer service
-                offering and the way in which ERS operates.
-              </Typography>
-            </div>
-
-            {/* Integrity */}
-            <div className={styles.custom_effect}>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                Integrity
-              </Typography>
-              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
-                Promote honesty, trust, and openness in conducting business.
-              </Typography>
-            </div>
-
-            {/* Transparency and Accountability */}
-            <div className={styles.custom_effect}>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                Transparency and Accountability
-              </Typography>
-              <Typography variant="body1" sx={{ marginTop: "1rem" }}>
-                Open in operations and communication whilst being responsible
-                for actions and decisions.
-              </Typography>
-            </div>
-          </Box>
+          {/* Our Mission Component */}
+          <OurMission h2Styling={h2Styling} />
         </Stack>
       </Stack>
 
-      {/* --------------------------Hero Section End------------------------- */}
+      {/*   Mandate section */}
+      <Mandate h2Styling={h2Styling} />
 
-      {/* ------------------------Council Memeber section start-------------------------- --*/}
+      {/* Board and Corporate Governance section start */}
 
-      <Box sx={{ margin: "0 auto", textAlign: "center" }}>
-        <Stack direction={"column"} spacing={3} sx={{ mt: "3rem", mb: "3rem" }}>
-          <Typography variant="h2" sx={h2Styling}>
-            Meet Council Member
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              color: "grey",
-              maxWidth: "500px",
-              margin: "0 auto",
-              placeSelf: "center",
-              pb: "1rem",
-            }}
-          >
-            Denounce with righteous indignation and dislike men who are so
-            beguiled & demoralized our power of choice.
-          </Typography>
-
-          {/*-------------------carousel----------------------- */}
-
-          <Box className="image-slider">
-            <Slider className="h-fit" {...settings}>
-              {memeberData.map((item) => {
-                return (
-                  <Box
-                    key={item.id}
-                    sx={{
-                      position: "relative",
-                      pl: { lg: "0.7rem", xl: "1rem" },
-                    }}
-                  >
-                    <Image
-                      src={item.img}
-                      alt={item.name}
-                      width={0}
-                      height={0}
-                      style={{
-                        border: "none",
-                        width: "100%",
-                        aspectRatio: "4/4",
-                      }}
-                    />
-                    <Box
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        border: "1px solid rgba(0, 0, 0, 0.10)",
-                        borderTop: "none !important",
-                        overflow: "hidden",
-                        p: "25px 20px 18px",
-                        gap: "1.5rem",
-                        minHeight: "135px",
-                        maxHeight: "135px",
-                      }}
-                    >
-                      <Typography variant="body1" fontWeight={"bold"}>
-                        {item.name}
-                      </Typography>
-                      <Typography variant="body2" sx={{ color: "#f4c402" }}>
-                        {item.role}
-                      </Typography>
-                    </Box>
-                  </Box>
-                );
-              })}
-            </Slider>
-          </Box>
-
-          {/* ---------Card section----- */}
-        </Stack>
-      </Box>
-
-      {/*-------------------------- Council Memeber section End here------------------- */}
-      <Typography variant="h2" sx={h2Styling}>
-        Strategic Themes
+      <Typography variant="h2" sx={{ ...h2Styling, mb: "2rem" }}>
+        Board and Corporate Governance
       </Typography>
 
       <Box
-        className={`${styles.cardeffect} ${styles.borderLine}`}
-        sx={{
-          width: "98%",
-          margin: "3rem auto",
-          position: "relative",
-          textAlign: "left",
-          minHeight: "fit-content",
-          maxHeight: "fit-content",
-        }}
+        className={`${styles.board_container}`}
+        width={"95%"}
+        sx={{ margin: { xs: "3rem auto", lg: "3rem auto 0" } }}
       >
-        <Grid
-          container
-          rowGap={4}
-          data-aos="fade-up"
-          sx={{
-            position: "relative",
-            top: "0",
-            left: "0",
-            width: "100%",
-            height: "100%",
-            p: { xs: "1rem", md: "2.2rem", lg: "5rem" },
-          }}
-        >
-          {strategicSection.map((item) => (
-            <Grid
-              item
-              key={item.id}
-              xs={12}
-              md={6}
-              lg={6}
-              sx={{ px: { xs: "0.5rem", sm: "1.5rem" } }} // Adjust padding for responsiveness
-            >
-              <Stack direction={"column"} sx={{ display: "flex", gap: "1rem" }}>
-                <Typography
-                  className="Pointsformatting"
-                  variant="h4"
-                  fontWeight={"bold"}
-                  sx={{ fontSize: { xs: "1rem", sm: "1.1rem" } }} // Adjust font size for responsiveness
-                >
-                  {item.title}
-                </Typography>
-                <Typography
-                  className="Pointsformatting"
-                  variant="body1"
-                  fontWeight={"400"}
-                  sx={{ fontSize: { xs: "0.9rem", sm: "0.95rem" } }} // Adjust font size for responsiveness
-                >
-                  {item.description}
-                </Typography>
-              </Stack>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-
-      <Box sx={{ position: "relative", margin: "0 auto" }}>
-        <Typography variant="h2" sx={h2Styling}>
-          Taxpayer Charter
+        <Typography variant="body1" className={styles.board_subheading}>
+          The Board has 8 members.
         </Typography>
-        <Stack
-          direction={"column"}
-          sx={{
-            position: "relative",
-            top: "0",
-            margin: "3rem auto",
-          }}
-        >
-          <Box
-            sx={{
-              background: "#fbfbfb",
-              pl: { xs: "0.5rem", lg: "5rem" },
-              py: "5rem",
-            }}
-            className="Pointsformatting"
-          >
+
+        <ul>
+          <li>
             <Typography
               variant="body1"
-              sx={{ fontWeight: "400" }}
+              gutterBottom
               className="Pointsformatting"
             >
-              The Charter sets out the way we will conduct ourselves when
-              dealing with you. It will help you understand:
+              4 are appointed by the Minister of Finance and 4 are ex officials.
+            </Typography>
+          </li>
+        </ul>
+
+        <Typography variant="h6" className={styles.board_subheading}>
+          Ministerial appointments
+        </Typography>
+        <ul>
+          <div className="flex gap-1 items-start">
+            <span className="Pointsformatting">
+              <ArrowForwardIosIcon
+                sx={arrowStyling}
+                className="Pointsformatting"
+              />
+            </span>
+
+            <Typography
+              component="li"
+              variant="body1"
+              gutterBottom
+              className="Pointsformatting"
+            >
+              {boardMembers.ministerialAppoints}
+            </Typography>
+          </div>
+        </ul>
+
+        <Typography variant="h6" className={styles.board_subheading}>
+          Other Board Members
+        </Typography>
+
+        <ul className="flex gap-2">
+          {boardMembers.otherBoardMembers.map((item, index) => (
+            <div key={index} className="flex gap-1 items-start">
+              <span className="Pointsformatting">
+                <ArrowForwardIosIcon
+                  sx={arrowStyling}
+                  className="Pointsformatting"
+                />
+              </span>
+
+              <Typography
+                component="li"
+                variant="body1"
+                gutterBottom
+                className="Pointsformatting"
+              >
+                {item}
+              </Typography>
+            </div>
+          ))}
+        </ul>
+
+        <Grid container spacing={2} className={styles.board_grid}>
+          <Grid item xs={12} md={6}>
+            <Typography variant="h6" className={styles.board_subheading}>
+              The Board has established three sub committees (each with their
+              own charter) covering:
             </Typography>
             <ul>
               <div className="flex gap-1 items-start">
@@ -520,199 +216,174 @@ export default function About() {
                     className="Pointsformatting"
                   />
                 </span>
-                <li>Your rights as a taxpayer</li>
-              </div>
-              <div className="flex gap-1 items-start">
-                <span className="Pointsformatting">
-                  <ArrowForwardIosIcon
-                    sx={arrowStyling}
-                    className="Pointsformatting"
-                  />
-                </span>
-                <li>Your important tax obligations</li>
-              </div>
-              <div className="flex gap-1 items-start">
-                <span className="Pointsformatting">
-                  <ArrowForwardIosIcon
-                    sx={arrowStyling}
-                    className="Pointsformatting"
-                  />
-                </span>
-                <li>
-                  The service and other standards you can expect from us, and
-                </li>
-              </div>
-              <div className="flex gap-1 items-start">
-                <span className="Pointsformatting">
-                  <ArrowForwardIosIcon
-                    sx={arrowStyling}
-                    className="Pointsformatting"
-                  />
-                </span>
-                <li>
-                  What you can do if you’re dissatisfied with our decisions,
-                  actions or services, or you want to lodge a complaint.
-                </li>
+
+                <Typography
+                  component="li"
+                  variant="body1"
+                  gutterBottom
+                  className="Pointsformatting"
+                >
+                  HR and Ethics
+                </Typography>
+
+                <Typography
+                  component="li"
+                  variant="body1"
+                  gutterBottom
+                  className="Pointsformatting"
+                >
+                  Audit and Risk Committee
+                </Typography>
               </div>
             </ul>
-          </Box>
 
-          {/* left side */}
-          <Stack
-            data-aos="slide-left"
-            direction={"row"}
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", lg: "row" },
-              gap: { lg: "1rem" },
-              mt: "2rem",
-              pl: { xs: "0.5rem", lg: "5rem" },
-            }}
-          >
-            {taxpayerCharter.map((item, index) => (
-              <Box key={index}>
+            <Typography variant="body1" className={styles.board_subheading}>
+              Each report to the Board at their quarterly meetings.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Typography variant="h6" className={styles.board_subheading}>
+              The ERS Management have also put in place a committee structure
+              with the two most senior Committees being:
+            </Typography>
+            <ul>
+              <div className="flex gap-1 items-start">
+                <span className="Pointsformatting">
+                  <ArrowForwardIosIcon
+                    sx={arrowStyling}
+                    className="Pointsformatting"
+                  />
+                </span>
                 <Typography
-                  variant="h5"
-                  sx={{
-                    fontSize: "1.5rem",
-                    fontWeight: "bold",
-                    color: "#2F248F",
-                    marginY: "1rem",
-                  }}
+                  component="li"
+                  variant="body1"
+                  gutterBottom
+                  className="Pointsformatting"
                 >
-                  {item.section}
+                  EXCOM – the Executive Committee which meets monthly to provide
+                  overall senior management strategic direction
                 </Typography>
-                <ul>
-                  {item.content.split("\n").map((bulletPoints, index) =>
-                    index === 0 ? (
-                      <h4
-                        key={index}
-                        style={{ fontWeight: "400" }}
-                        className="Pointsformatting"
-                      >
-                        {" "}
-                        {bulletPoints}
-                      </h4>
-                    ) : (
-                      <div key={index} className="flex gap-1 items-start">
-                        <span className="Pointsformatting">
-                          <ArrowForwardIosIcon
-                            sx={arrowStyling}
-                            className="Pointsformatting"
-                          />
-                        </span>
-                        <li className="Pointsformatting">{bulletPoints}</li>
-                      </div>
-                    )
-                  )}
-                </ul>
-              </Box>
-            ))}
-            <Image
-              src={taxpayersection1}
-              alt="taxpayersection1"
-              className="w-5/12"
-            />
-          </Stack>
-          {/* left side end */}
-
-          {/* right side start */}
-          <Stack
-            data-aos="slide-right"
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", lg: "row" },
-              gap: { lg: "1rem" },
-              mt: "2rem",
-            }}
-          >
-            <Image
-              src={taxpayersection2}
-              alt="taxpayersection1"
-              className="w-5/12"
-            />
-            {taxpayerCharter2.map((item, index) => (
-              <Box key={index} sx={{ pr: { xs: "0.5rem", lg: "5rem" } }}>
+              </div>
+              <div className="flex gap-1 items-start">
+                <span className="Pointsformatting">
+                  <ArrowForwardIosIcon
+                    sx={arrowStyling}
+                    className="Pointsformatting"
+                  />
+                </span>
                 <Typography
-                  variant="h5"
-                  sx={{
-                    fontSize: "1.5rem",
-                    fontWeight: "bold",
-                    color: "#2F248F",
-                    marginY: "1rem",
-                  }}
+                  component="li"
+                  variant="body1"
+                  gutterBottom
+                  className="Pointsformatting"
                 >
-                  {item.section}
+                  OPCOM – the Operations Committee which meets weekly to deal
+                  with matters concerning Tax and Customs operations.
                 </Typography>
-                <ul>
-                  {item.content.split("\n").map((bulletPoints, index) =>
-                    index === 0 ? (
-                      <h4
-                        key={index}
-                        style={{ fontWeight: "400" }}
-                        className="Pointsformatting"
-                      >
-                        {" "}
-                        {bulletPoints}
-                      </h4>
-                    ) : (
-                      <div key={index} className="flex gap-1 items-start">
-                        <span className="Pointsformatting">
-                          <ArrowForwardIosIcon
-                            sx={arrowStyling}
-                            className="Pointsformatting"
-                          />
-                        </span>
-                        <li className="Pointsformatting">{bulletPoints}</li>
-                      </div>
-                    )
-                  )}
-                </ul>
-              </Box>
-            ))}
-          </Stack>
-          {/* right side end */}
-        </Stack>
+              </div>
+            </ul>
+            <Typography variant="body1" className={styles.board_subheading}>
+              Each has a number of subcommittees that consider specific
+              responsibility areas.
+            </Typography>
+          </Grid>
+        </Grid>
 
-        <Typography variant="h2" sx={h2Styling}>
-          ERS Customer Service Standards
+        <Typography variant="h6" className={styles.board_subheading}>
+          The ERS has an Internal Audit Division who conduct risk-based systems
+          audits against an agreed audit plan and ERS also has an external audit
+          by
         </Typography>
+        <ul>
+          <div className="flex gap-1 items-start">
+            <span className="Pointsformatting">
+              <ArrowForwardIosIcon
+                sx={arrowStyling}
+                className="Pointsformatting"
+              />
+            </span>
 
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.5rem",
-            py: "3rem",
-            px: { xs: "0.5rem", lg: "5rem" },
-            mt: "3rem",
-            background: "#F9F9FA",
-          }}
-        >
-          <Box>
-            <Typography variant="body1" className="Pointsformatting">
-              Customer service standards are a set of rules that are derived
-              from the ERS’s Vision; they aim to give direction to the ERSs
-              strategic and business activities as well as its conduct in order
-              to realise the Vision.
+            <Typography
+              component="li"
+              variant="body1"
+              gutterBottom
+              className="Pointsformatting"
+            >
+              The Auditor General for tax etc. revenues collected by the ERS
             </Typography>
-          </Box>
-          <Box>
-            <Typography variant="h5" sx={{ color: "#2F248F" }}>
-              What Are Services Standards
+          </div>
+          <div className="flex gap-1 items-start">
+            <span className="Pointsformatting">
+              <ArrowForwardIosIcon
+                sx={arrowStyling}
+                className="Pointsformatting"
+              />
+            </span>
+
+            <Typography
+              component="li"
+              variant="body1"
+              gutterBottom
+              className="Pointsformatting"
+            >
+              An external audit company for ERS expenditures
             </Typography>
-            <Typography variant="body1" className="Pointsformatting">
-              Service standards are a set of guidelines that govern the conduct
-              of all staff towards ensuring quality service delivery by the
-              Authority. Effective customer service standards are defined in
-              very specific terms to ensure that employees understand what they
-              are required to deliver. These standards will also be the tool
-              used to measure the ERSs performance in relation to customer
-              service.
-              <br />
-              <Link href=""> ERS Customer Standards</Link>
-            </Typography>
-          </Box>
+          </div>
+        </ul>
+      </Box>
+      {/* Board and Corporate Governance section end */}
+
+      {/* --------------------------Hero Section End------------------------- */}
+
+      {/*Council Memeber section start*/}
+
+      <CouncilMember h2Styling={h2Styling} />
+
+      {/*Council Memeber section End here*/}
+
+      <StrategicTheme h2Styling={h2Styling} />
+
+      <TaxPayer h2Styling={h2Styling} arrowStyling={arrowStyling} />
+
+      <Typography variant="h2" sx={h2Styling}>
+        ERS Customer Service Standards
+      </Typography>
+
+      <Box
+        width={"95%"}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1.5rem",
+          py: "2rem",
+          px: { xs: "0.5rem", lg: "2rem" },
+          background: "#F9F9FA",
+          margin: { xs: "3rem auto", lg: "3rem auto" },
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <Box>
+          <Typography variant="body1" className="Pointsformatting">
+            Customer service standards are a set of rules that are derived from
+            the ERS’s Vision; they aim to give direction to the ERSs strategic
+            and business activities as well as its conduct in order to realise
+            the Vision.
+          </Typography>
+        </Box>
+        <Box>
+          <Typography variant="h5" sx={{ color: "#2F248F" }}>
+            What Are Services Standards
+          </Typography>
+          <Typography variant="body1" className="Pointsformatting">
+            Service standards are a set of guidelines that govern the conduct of
+            all staff towards ensuring quality service delivery by the
+            Authority. Effective customer service standards are defined in very
+            specific terms to ensure that employees understand what they are
+            required to deliver. These standards will also be the tool used to
+            measure the ERSs performance in relation to customer service.
+            <br />
+            <Link href=""> ERS Customer Standards</Link>
+          </Typography>
         </Box>
       </Box>
 

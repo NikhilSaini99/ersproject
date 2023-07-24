@@ -1,31 +1,4 @@
 
-.cardeffect::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #f4c402;
-  opacity: 0.93;
-}
-
-.borderLine::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50px; /* Adjust top position for spacing on mobile */
-  bottom: 50px; /* Adjust bottom position for spacing on mobile */
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  z-index: 3;
-}
-
-@media (max-width: 900px) {
-  /* Styles for mobile screens */
-  .borderLine::after {
-    display: none;
-  }
-}
 
 .box_animation {
   position: absolute;
@@ -51,71 +24,30 @@
 }
 
 
-
-/* UniqueStyling.css */
-
-/* Custom effect styles */
-.custom_effect_container{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-gap: 1rem;
-}
-.custom_effect {
-  border: 1px solid #ccc;
+/* BoardCorporateGovernance.css */
+.board_container {
+  padding: 2rem;
   border-radius: 8px;
-  padding: 1.5rem;
-  background-color: #f4c402;
-  color: black;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  /* text-align: center; */
 }
 
 
-.custom_effect:hover {
-  transform: translateY(-10px);
-  background-color: #2F248F;
-  color: white;
+.board_subheading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.025em;
+  line-height: 1.8 !important;
 }
 
-/* Animation for different values */
-.custom_effect:nth-child(1) {
-  animation: slideFromLeft 1s ease-in-out;
+
+
+.board_grid {
+  margin-top: 2rem;
 }
 
-.custom_effect:nth-child(2) {
-  animation: slideFromRight 1s ease-in-out;
-}
-
-.custom_effect:nth-child(3) {
-  animation: slideFromLeft 1s ease-in-out;
-}
-
-.custom_effect:nth-child(4) {
-  animation: slideFromRight 1s ease-in-out;
-}
-
-.custom_effect:nth-child(5) {
-  animation: slideFromLeft 1s ease-in-out;
-}
-
-@keyframes slideFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.board_list {
+  padding: 0;
+  margin: 0;
 }
