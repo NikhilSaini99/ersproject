@@ -1,16 +1,15 @@
-import { Box, Stack, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Stack, Typography } from "@mui/material";
+import React from "react";
 import { taxpayerCharter, taxpayerCharter2 } from "@/content/data";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import taxpayersection1 from "@/assets/images/taxpayersection1.png";
 import taxpayersection2 from "@/assets/images/taxpayersection2.png";
-import Image from 'next/image';
+import Image from "next/image";
 
-const TaxPayer = ({h2Styling,arrowStyling}) => {
+const TaxPayer = ({ h2Styling, arrowStyling }) => {
   return (
     <>
-    
-    <Box sx={{ position: "relative", margin: "0 auto" }}>
+      <Box sx={{ position: "relative", margin: "0 auto" }}>
         <Typography variant="h2" sx={h2Styling}>
           Taxpayer Charter
         </Typography>
@@ -23,11 +22,11 @@ const TaxPayer = ({h2Styling,arrowStyling}) => {
           }}
         >
           <Box
-           width={"95%"}
+            width={"95%"}
             sx={{
               background: "#fbfbfb",
               pl: { xs: "0.5rem", lg: "2rem" },
-              margin: { xs: "3rem auto", lg: "3rem auto 0" },
+              margin: { xs: "0.5rem auto", lg: "1rem auto 0" },
               py: "5rem",
             }}
             className="Pointsformatting"
@@ -87,6 +86,7 @@ const TaxPayer = ({h2Styling,arrowStyling}) => {
 
           {/* left side */}
           <Stack
+            width={"95%"}
             data-aos="slide-left"
             direction={"row"}
             sx={{
@@ -94,7 +94,7 @@ const TaxPayer = ({h2Styling,arrowStyling}) => {
               flexDirection: { xs: "column", lg: "row" },
               gap: { lg: "1rem" },
               mt: "2rem",
-              pl: { xs: "0.5rem", lg: "5rem" },
+              pl: { xs: "2rem", lg: "3rem" },
             }}
           >
             {taxpayerCharter.map((item, index) => (
@@ -146,6 +146,7 @@ const TaxPayer = ({h2Styling,arrowStyling}) => {
 
           {/* right side start */}
           <Stack
+           width={"95%"}
             data-aos="slide-right"
             sx={{
               display: "flex",
@@ -168,6 +169,7 @@ const TaxPayer = ({h2Styling,arrowStyling}) => {
                     fontWeight: "bold",
                     color: "#2F248F",
                     marginY: "1rem",
+                    pr: { xs: "2rem", lg: "3rem" },
                   }}
                 >
                   {item.section}
@@ -201,9 +203,9 @@ const TaxPayer = ({h2Styling,arrowStyling}) => {
           </Stack>
           {/* right side end */}
         </Stack>
-        </Box>
+      </Box>
     </>
-  )
-}
+  );
+};
 
-export default TaxPayer
+export default TaxPayer;

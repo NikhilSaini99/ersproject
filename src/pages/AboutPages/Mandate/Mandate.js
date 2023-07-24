@@ -25,18 +25,18 @@ const Mandate = ({ h2Styling, arrowStyling }) => {
           backgroundColor: "#f4f4f4",
           borderRadius: "8px",
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-          margin: { xs: "3rem auto", lg: "3rem auto 0" },
+          margin: { xs: "3rem auto 0", lg: "3rem auto 0" },
         }}
       >
         <Typography
           variant="h6"
           gutterBottom
-          sx={{ paddingLeft: "1.5rem", fontWeight: "bold" }}
+          sx={{  fontWeight: "bold" }}
           className="Pointsformatting"
         >
           Our Mandate as stated in the Revenue Authority Act, 2008 includes:
         </Typography>
-        <ul style={{ paddingLeft: "1.5rem" }}>
+        <ul style={{ }}>
           {mandateDatalist.map((item, index) => (
             <div key={index} className="flex gap-1 items-start pb-2">
               <span className="Pointsformatting">

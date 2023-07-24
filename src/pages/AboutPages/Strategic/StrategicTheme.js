@@ -39,7 +39,7 @@ const StrategicTheme = ({ h2Styling }) => {
         className={`${styles.cardeffect} ${styles.borderLine}`}
         sx={{
           width: "98%",
-          margin: "3rem auto",
+          margin: "3rem auto 0",
           position: "relative",
           textAlign: "left",
           minHeight: "fit-content",

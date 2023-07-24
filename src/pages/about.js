@@ -14,6 +14,9 @@ import CouncilMember from "./AboutPages/CouncilMember/CouncilMember";
 import StrategicTheme from "./AboutPages/Strategic/StrategicTheme";
 import TaxPayer from "./AboutPages/TaxPayer/TaxPayer";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import BusinessCommitte from "./AboutPages/BsCommitte/BusinessCommitte";
+import CodeOfEthicsConduct from "./AboutPages/EthicsandConduct/CodeOfEthicsConduct";
+import ErsInternalAffairs from "./AboutPages/InterAffairs/ErsInternalAffairs";
 
 export default function About() {
   const arrowStyling = {
@@ -112,8 +115,7 @@ export default function About() {
       {/*   Mandate section */}
       <Mandate h2Styling={h2Styling} />
 
-      
-      {/* --------------------------Hero Section End------------------------- */}
+      {/* -------Hero Section End-------- */}
 
       {/*Council Memeber section start*/}
 
@@ -125,6 +127,8 @@ export default function About() {
 
       <TaxPayer h2Styling={h2Styling} arrowStyling={arrowStyling} />
 
+      <BusinessCommitte h2Styling={h2Styling} arrowStyling={arrowStyling}/>
+
       <Typography variant="h2" sx={h2Styling}>
         ERS Customer Service Standards
       </Typography>
@@ -135,10 +139,9 @@ export default function About() {
           display: "flex",
           flexDirection: "column",
           gap: "1.5rem",
-          py: "2rem",
-          px: { xs: "0.5rem", lg: "2rem" },
+          p: "2rem",
           background: "#F9F9FA",
-          margin: { xs: "3rem auto", lg: "3rem auto" },
+          margin: { xs: "3rem auto 0", lg: "3rem auto 0" },
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
         }}
       >
@@ -151,7 +154,14 @@ export default function About() {
           </Typography>
         </Box>
         <Box>
-          <Typography variant="h5" sx={{ color: "#2F248F" }}>
+          <Typography
+            variant="h5"
+            sx={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              color: "#2F248F",
+            }}
+          >
             What Are Services Standards
           </Typography>
           <Typography variant="body1" className="Pointsformatting">
@@ -166,6 +176,10 @@ export default function About() {
           </Typography>
         </Box>
       </Box>
+
+      <CodeOfEthicsConduct h2Styling={h2Styling} arrowStyling={arrowStyling}/>
+
+      <ErsInternalAffairs h2Styling={h2Styling} arrowStyling={arrowStyling}/>
 
       {/*-----------------------Footer---------------------*/}
 

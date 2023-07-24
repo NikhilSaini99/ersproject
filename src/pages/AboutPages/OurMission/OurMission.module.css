@@ -18,9 +18,13 @@
     .custom_effect:hover {
       transform: translateY(-10px);
       background-color: #2F248F;
-      color: white;
+      color: white !important;
     }
     
+    .custom_effect:hover>h5 {
+      color: white !important;
+    }
+
     /* Animation for different values */
     .custom_effect:nth-child(1) {
       animation: slideFromLeft 1s ease-in-out;

@@ -156,7 +156,7 @@ export default function Customs() {
                   variant="body1"
                   sx={{ fontWeight: "light", color: "grey" }}
                 >
-                  {item.description.substring(0, 50)}
+                  {item.description.substring(0, 70)}
                 </Typography>
               </Stack>
             </Grid>
