@@ -282,7 +282,7 @@ export default function About() {
                 </Typography>
               </div>
             </ul>
-            <Typography variant="body1" className={styles.board_subheading}>
+            <Typography variant="body1"  className="Pointsformatting">
               Each has a number of subcommittees that consider specific
               responsibility areas.
             </Typography>
