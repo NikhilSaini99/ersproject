@@ -22,7 +22,9 @@ export default function Header() {
   const [isContactOpen, setContactOpen] = useState(false);
 
   const [isOpen, setSearchOpen] = useState(false);
+
   function toggleSearch() {
+    console.log("h")
     setSearchOpen(!isOpen);
   }
 
@@ -868,13 +870,14 @@ export default function Header() {
                     <Image src={search} alt="search" height={17} width={17} />
                   </div>
                   <h3
-                    className={`text-lg leading-5 font-semibold hover:text-mainColor ${isOpen ? "text-[#2F3192]" : "text-black/80"
-                      }`}
+                    className={`text-lg leading-5 font-semibold hover:text-mainColor ${
+                      isOpen ? "text-[#2F3192]" : "text-black/80"
+                    }`}
                   >
                     Search
                   </h3>
                 </button>
-                <div className={`search-input px-5 py-3 hidden`}>
+                <div className="search-input px-5 py-3 flex items-center">
                   <h1 className="inline-block text-lg font-semibold text-white">
                     SEARCH
                   </h1>
