@@ -97,7 +97,7 @@ const CouncilMember = ({ h2Styling }) => {
       <Box sx={{ margin: "0 auto", textAlign: "center" }}>
         <Stack direction={"column"} spacing={3} sx={{ mt: "3rem", mb: "3rem" }}>
           <Typography variant="h2" sx={h2Styling}>
-            Meet Council Member
+          Board and Corporate Governance
           </Typography>
           <Typography
             variant="body1"
