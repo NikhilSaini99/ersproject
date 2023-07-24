@@ -42,7 +42,7 @@ const CodeOfEthicsConduct = ({ h2Styling, arrowStyling }) => {
                 <Grid
                   item
                   key={index}
-                  sx={{ zIndex: "99", px: { xs: "0.5rem", sm: "6rem" } }}
+                  sx={{ zIndex: "99", px: { xs: "0.5rem", xs:'4rem', xl: "6rem" } }}
                   xs={12}
                   md={6}
                   lg={6}
