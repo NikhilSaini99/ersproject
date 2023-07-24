@@ -10,7 +10,6 @@ export default function Carousal() {
     { id: 0, icon: background },
     { id: 1, icon: background2 },
     { id: 2, icon: background4 },
-    { id: 3, icon: background2 },
     { id: 4, icon: background3 },
   ];
   // border-right:2px;border-left:2px;border-color:mainColor;border-style:solid;
@@ -18,7 +17,6 @@ export default function Carousal() {
     "<span style=padding-left:62px;padding-right:62px> ABOUT US </span>",
     "<span style=padding-left:32px;padding-right:32px;> ASYCUDA WORLD </span>",
     "<span style=padding-left:78px;padding-right:78px> e-TAX </span>",
-    "<span style=padding-left:32px;padding-right:32px> ASYCUDA WORLD </span>",
     "<span style=padding-left:24px;padding-right:24px> e-CUSTOMS SYSTEM </span>",
   ];
 

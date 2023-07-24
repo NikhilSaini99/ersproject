@@ -3,7 +3,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../assets/icons/favicon.png";
+import logo from "../assets/icons/ERS_Logo.png";
 import call from "../assets/icons/call.png";
 import mail from "../assets/icons/mail.png";
 import search from "../assets/icons/search.png";
@@ -45,7 +45,7 @@ export default function Header() {
     <>
       <nav className="w-full bg-white">
         <div className="flex justify-between px-10">
-          <div className="pt-[6px]">
+          <div className="py-[6px]">
             <Link href={"/"}>
               <Image src={logo} alt="ERS" width={120} />
             </Link>

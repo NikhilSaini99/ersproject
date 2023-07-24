@@ -171,7 +171,7 @@ export default function Home() {
           para2: "Annual Reports",
           link2: "/AnnualReports",
           para3: "Customer Perception Survey",
-          link3: "/TaxItemTable",
+          link3: "",
         },
         {
           id: 2,

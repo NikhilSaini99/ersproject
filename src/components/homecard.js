@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill } from "react-icons/bs";
-import { Button, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 
 
 import CalculateIcon from '@mui/icons-material/Calculate';
 import TableChartIcon from '@mui/icons-material/TableChart';
-import CurrencyPoundIcon from '@mui/icons-material/CurrencyPound';
+import PaymentsOutlinedIcon from '@mui/icons-material/PaymentsOutlined';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
@@ -43,7 +43,7 @@ const Icons = () => {
        
     
           <Link href="https://etax.sra.org.sz/" className="flex flex-col gap-2"> 
-          <CurrencyPoundIcon sx={iconStyling} />
+          <PaymentsOutlinedIcon sx={iconStyling} />
             <p className="text-center text-sm font-medium">
             eTax
             </p></Link>

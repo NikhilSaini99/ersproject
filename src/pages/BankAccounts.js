@@ -78,7 +78,7 @@ const BankAccounts = () => {
                 </Typography>
                 <Typography variant='body1' className='Pointsformatting my-4' >Below are the ERS transaction accounts:</Typography>
                 <Box >
-                    <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '0 auto' }}>
+                    <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '2rem auto' }}>
                         <TableContainer sx={{ borderRadius: '10px' }}>
                             <Table>
                                 <TableHead>

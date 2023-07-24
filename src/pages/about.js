@@ -127,7 +127,9 @@ export default function About() {
 
       <TaxPayer h2Styling={h2Styling} arrowStyling={arrowStyling} />
 
-      <BusinessCommitte h2Styling={h2Styling} arrowStyling={arrowStyling}/>
+      <BusinessCommitte h2Styling={h2Styling} arrowStyling={arrowStyling} />
+
+      <CodeOfEthicsConduct h2Styling={h2Styling} arrowStyling={arrowStyling} />
 
       <Typography variant="h2" sx={h2Styling}>
         ERS Customer Service Standards
@@ -177,9 +179,7 @@ export default function About() {
         </Box>
       </Box>
 
-      <CodeOfEthicsConduct h2Styling={h2Styling} arrowStyling={arrowStyling}/>
-
-      <ErsInternalAffairs h2Styling={h2Styling} arrowStyling={arrowStyling}/>
+      <ErsInternalAffairs h2Styling={h2Styling} arrowStyling={arrowStyling} />
 
       {/*-----------------------Footer---------------------*/}
 

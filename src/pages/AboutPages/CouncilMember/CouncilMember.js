@@ -133,13 +133,13 @@ const CouncilMember = ({ h2Styling }) => {
                       height={0}
                       style={{
                         border: "none",
-                        width: "80%",
+                        width: "100%",
                         aspectRatio: "1/1",
                       }}
                     />
                     <Box
                       sx={{
-                        width:"80%",
+                        width:"100%",
                         display: "flex",
                         flexDirection: "column",
                         border: "1px solid rgba(0, 0, 0, 0.10)",

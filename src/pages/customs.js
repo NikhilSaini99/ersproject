@@ -6,11 +6,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { NewsCard } from "@/components/media";
 import Banner from "../assets/images/eCustoms_Tariff.jpg";
-import Asycuda from "../assets/images/asys.jpg";
-import Advance from "../assets/images/asys2.jpg";
-import Browse from "../assets/images/tariff-browse.jpg";
-import Duty from "../assets/images/tariff-duty.jpg";
-import Search from "../assets/images/tariff-search.jpg";
+import Asycuda from "../assets/images/ASYCUDA_LOGO.png";
+import Advance from "../assets/images/Advance_Ruling_Logo.png";
+import Browse from "../assets/images/TariffBrowseIcon.jpg";
+import Duty from "../assets/images/TariffDutyEstimatorIcon.jpg";
+import Search from "../assets/images/TariffSearchIcon.jpg";
 import Trade from "../assets/images/trade-portal.png";
 import education from "../assets/icons/education.png";
 
@@ -31,14 +31,14 @@ export default function Customs() {
   const CustomData = [
     {
       id: 1,
-      img: education,
+      img: Asycuda,
       title: "Asycuda World",
       description:
         "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
     },
     {
       id: 2,
-      img: education,
+      img: Advance,
       title: "Advance Rolling",
       description:
         "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
@@ -55,21 +55,21 @@ export default function Customs() {
   const CustomData2 = [
     {
       id: 4,
-      img: education,
+      img: Browse,
       title: "Tariff Browse",
       description:
         "The Tariff Browse function is used to easily browse through the Customs Tariff by section and chapter and view all the classification notes.",
     },
     {
       id: 5,
-      img: education,
+      img: Duty,
       title: "Duty Estimator",
       description:
         "Estimate Customs and Excise Duties using the Duty Estimator. This function removes the need for any manual calculations and allows for more accurate costing.",
     },
     {
       id: 6,
-      img: education,
+      img: Search,
       title: "Tariff Search",
       description:
         "The Tariff Search allows for targeted way of searching by tariff code. Tariff classification of goods is one of the more complex issues under the Customs and Excise Act.",
@@ -128,7 +128,7 @@ export default function Customs() {
                   lineHeight: "1.5",
                 }}
               >
-                <Box>
+                <Box sx={{width:'115px'}}>
                   <Image
                     src={item.img}
                     alt="item.title"

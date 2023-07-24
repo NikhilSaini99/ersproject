@@ -38,7 +38,7 @@ const StrategicTheme = ({ h2Styling }) => {
       <Box
         className={`${styles.cardeffect} ${styles.borderLine}`}
         sx={{
-          width: "98%",
+          width: "95%",
           margin: "3rem auto 0",
           position: "relative",
           textAlign: "left",
