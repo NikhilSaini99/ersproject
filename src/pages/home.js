@@ -400,7 +400,7 @@ export default function Home() {
             {/* Content for first div */}
             <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
-                <p className="text-yellowish text-xl font-normal">Latest Tenders</p>
+               <Link href={"/Tender"}> <p className="text-yellowish text-xl font-normal">Latest Tenders</p></Link>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                   <li className="">
                     <span>Approved R1.1 RFT002 - Manage Printing Services</span>

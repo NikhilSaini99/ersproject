@@ -877,7 +877,7 @@ export default function Header() {
                     Search
                   </h3>
                 </button>
-                <div className="search-input px-5 py-3 flex items-center">
+                <div className="search-input px-5 py-3 flex items-center  ">
                   <h1 className="inline-block text-lg font-semibold text-white">
                     SEARCH
                   </h1>

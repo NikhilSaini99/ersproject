@@ -13,7 +13,6 @@ import Mandate from "./AboutPages/Mandate/Mandate";
 import CouncilMember from "./AboutPages/CouncilMember/CouncilMember";
 import StrategicTheme from "./AboutPages/Strategic/StrategicTheme";
 import TaxPayer from "./AboutPages/TaxPayer/TaxPayer";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import BusinessCommitte from "./AboutPages/BsCommitte/BusinessCommitte";
 import CodeOfEthicsConduct from "./AboutPages/EthicsandConduct/CodeOfEthicsConduct";
 import ErsInternalAffairs from "./AboutPages/InterAffairs/ErsInternalAffairs";
