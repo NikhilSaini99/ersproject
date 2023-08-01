@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/Zero_Rated_Goods_&_Services.png";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import bgimg from "../../assets/images/bg-2.png";
 
 
 
@@ -169,12 +170,16 @@ const ZeroRated = () => {
                         }}
                     />
                 </Box>
-                <Box sx={{
-                    width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: '0rem auto', lg: '0rem auto' },
-                    lineHeight: '1.8',
 
+            <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
+                <Box sx={{
+                    width: { xs: '80%', md: '80%', lg: '75%' }, margin: { xs: '0rem auto', lg: '0rem auto' },pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem',
+                    lineHeight: '1.8',
                 }}>
-                    <Typography variant="h1" sx={{ mt: '5rem', mb: '2.5rem' }}>
+                    <Typography variant="h1" sx={{ mt: '0rem', mb: '2.5rem' }}>
                         Zero Rated Goods & Services</Typography>
 
                     {/*------------------- Section 1-------------------------------- */}
@@ -260,6 +265,7 @@ const ZeroRated = () => {
 
 
                 </Box>
+            </Box>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

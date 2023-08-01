@@ -8,6 +8,7 @@ import Banner from "../assets/images/Registration.jpeg";
 import downarrow from '../assets/images/downarrow.svg'
 import rightarrow from '../assets/images/rightarrow.svg'
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
+import bgimg from "../assets/images/bg-2.png";
 import { useState } from 'react'
 
 
@@ -117,12 +118,17 @@ const Registration = () => {
         />
 </Box>
 
-      <Box sx={{ width: '80%', margin: { xs: '2rem auto', lg: '5rem auto', } }}>
+    <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} > 
 
+            {/* question and arrow*/}
+         <Box sx={{ width: "85%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
         <Box sx={FaqContainerStyling}>
 
           <Stack sx={accordionStyling}>
-            <Typography variant="h1" sx={{ mb: '2rem' }}>
+            <Typography variant="h1" sx={{ mb: '2rem'}}>
               Registration
             </Typography>
             {/* question and arrow*/}
@@ -146,6 +152,7 @@ const Registration = () => {
           </Stack>
         </Box>
 
+      </Box>
       </Box>
 
       {/*-----------------------Footer---------------------*/}

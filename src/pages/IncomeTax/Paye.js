@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Banner from "../../assets/images/PAYE-QuickGuide.jpg";
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import bgimg from "../../assets/images/bg-2.png";
 
 const Paye = () => {
     const taxRates = [
@@ -150,7 +151,11 @@ const Paye = () => {
                     />
                 </Box>
 
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '10rem', lg: '12rem,', xl: '15rem' }, py: '2rem' }}>
+        <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '8rem,', xl: '10rem' }, py: '2rem' }}>
                 <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     PAYE - Quick Guide</Typography>
 
@@ -267,7 +272,7 @@ const Paye = () => {
 
             </Box>
 
-
+            </Box>
             {/*-----------------------Footer---------------------*/}
 
             <Footer />

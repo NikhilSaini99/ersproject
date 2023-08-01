@@ -48,16 +48,16 @@ const Taxations = () => {
             }} >
 
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' }, py: '2rem' }}>
+                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '6rem', lg: '8rem,', xl: '0rem' }, py: '2rem' }}>
                     <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
                         Double Taxation Agreements</Typography>
 
                     <Typography variant='h6' sx={{ mt: '2rem', mb: '1rem', }}>Status of Double Taxation Avoidance Agreement (DTAA’s) & Tax Information Exchange Agreements (TIEA’s)</Typography>
-                    <ol style={{ listStyleType: 'decimal', marginLeft: '1rem' }}>
+                    <ol style={{ listStyleType: 'decimal', marginLeft: '0rem' }}>
                         <li style={{ fontWeight: 'bold', fontSize: '1.35rem' }}>Double Taxation Avoidance Agreement (DTAA)
-                            <ol style={{ listStyleType: 'lower-roman', marginLeft: '1rem', fontWeight: 'normal', }}>
+                            <ol style={{ listStyleType: 'lower-roman', marginLeft: '0rem', fontWeight: 'normal', }}>
                                 <li>In force</li>
-                                <Paper elevation={20} sx={{ width: '90%', margin: '2rem 0' }}>
+                                <Paper elevation={20} sx={{ width: '100%', margin: '1.5rem 0' }}>
                                     <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }}>
                                         <Table aria-label="Double Taxation Table">
                                             <TableHead>

@@ -147,13 +147,13 @@ const SelfAssessment = () => {
 
 
 
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '10rem', lg: '12rem,', xl: '15rem' }, py: '2rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '1rem', lg: '5rem,', xl: '10rem' }, py: '2rem' }}>
 
 
                 <Box sx={FaqContainerStyling}>
 
                     <Stack sx={accordionStyling}>
-                        <Typography variant="h1" sx={{ my: '2.5rem' }}>
+                        <Typography variant="h1" sx={{ my: '1.5rem' }}>
                             Self Assessment</Typography>
                         {/* question and arrow*/}
                         {questionandanswer.map((item, index) => (
