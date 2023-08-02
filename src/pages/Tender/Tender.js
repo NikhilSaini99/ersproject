@@ -71,12 +71,7 @@ const Tender = () => {
       reference: "LRPS 9184053",
     },
   ];
-  console.log(
-    Object.keys(dummyData[0]).map((item, index) => {
-      if (item === "title") console.log("hello");
-      else console.log("undefined");
-    })
-  );
+
   return (
     <>
       <Head>

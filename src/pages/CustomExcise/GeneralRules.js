@@ -60,7 +60,7 @@ export default function GeneralRules() {
         <section className="py-12  w-[75%] mx-auto Pointsformatting pr-20 ">
           {/* ------------------Importants---------------------------- */}
 
-          <div className=" w-[80%]">
+          <div className=" ">
             <h1 className="text-4xl text-primaryColor font-bold pt-2 mb-8">{data.title}</h1>
             <h1 className="text-3xl font-semibold mt-4">{data.title1}</h1>
             <h1 className="text-md font-semibold mt-4">{data.title2}</h1>
@@ -76,7 +76,7 @@ export default function GeneralRules() {
               ))}
             </ul>
           </div>
-          <div className=" mt-4 w-[80%] ">
+          <div className=" mt-4 ">
             <h1 className="text-md font-semibold">{data1.title}</h1>
             <ul className="mt-3">
               {data1.description.map((desc) => (
@@ -90,9 +90,9 @@ export default function GeneralRules() {
               ))}
             </ul>
           </div>
-          <hr className=" border-1 border-gray-400 w-[80%] mt-10"></hr>
+          <hr className=" border-1 border-gray-400 mt-10"></hr>
           {/* ----------------------EXPORTATION------------------------ */}
-          <div className=" my-10 w-[80%] ">
+          <div className=" my-10 ">
             <h1 className="text-2xl font-semibold">{data4.title1}</h1>
             <hr className=" border-1 text-zinc-500  w-full my-10"></hr>
             <h1 className="text-md font-semibold mt-8 ">{data4.title2}</h1>
@@ -113,17 +113,17 @@ export default function GeneralRules() {
           {/* ----------------------Personal Imports------------------------ */}
 
           <div className="flex  my-10">
-            <div className="w-[60%]">
+            <div>
               <div className="  ">
                 <h1 className="text-2xl font-semibold">{data2.title}</h1>
                 <p className="mt-2 text-justify font-semibold">{data2.title1}<span className="lightBlack font-normal">{data2.description}</span></p>
               </div>
             </div>
-            <div className="mt-10 w-[60%] mx-6">
+            {/* <div className="mt-10 w-[60%] mx-6">
               <Paper elevation={20} sx={{ borderRadius: '25px', float: 'right' }} >
                 <Image src={Custom} alt="..." className="h-[55%] w-full rounded-xl" />
               </Paper>
-            </div>
+            </div> */}
           </div>
 
           <div className=" mt-8 ">
@@ -140,7 +140,7 @@ export default function GeneralRules() {
               ))}
             </ul>
           </div>
-          <div className="w-[80%]">
+          <div className="">
             <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data3.title4}<span className="lightBlack font-normal"> {data3.title2}</span></h1>
             <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data3.title5}<span className="lightBlack font-normal"> {data3.title3}</span></h1>
           </div>
@@ -152,20 +152,20 @@ export default function GeneralRules() {
 
           {/* --------------------CROSS BORDER CASH DECLARATION------------------ */}
 
-          <div className=" my-10 w-[80%] ">
+          <div className=" my-10  ">
             <h1 className="text-2xl font-semibold ">{data5.title1}</h1>
             <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting ">{data5.title4}<span className="lightBlack font-normal Pointsformatting"> {data5.title2}</span></h1>
             <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data5.title5}<span className="lightBlack font-normal Pointsformatting">{data5.title3}</span></h1>
           </div>
           {/* ------------------------OFFENCE AND CONFISCATION-------------------- */}
-          <div className=" my-10 w-[80%] ">
+          <div className=" my-10 ">
             <h1 className="text-2xl font-semibold">{data6.title1}</h1>
             <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data6.title4}<span className="lightBlack font-normal Pointsformatting"> {data6.title2}</span></h1>
             <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data6.title5}<span className="lightBlack font-normal Pointsformatting"> {data6.title3}</span></h1>
           </div>
           {/* ------------------------SEARCH-------------------- */}
 
-          <div className=" my-10 w-[80%] ">
+          <div className=" my-10  ">
             <h1 className="text-2xl font-semibold">{data7.title1}</h1>
             <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data7.title4}<span className="lightBlack font-normal Pointsformatting"> {data7.title2}</span></h1>
             <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">{data7.title5}<span className="lightBlack font-normal Pointsformatting"> {data7.title3}</span></h1>

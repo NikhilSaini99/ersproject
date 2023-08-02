@@ -180,13 +180,13 @@ const Paye = () => {
                     </div>
 
                     <div>
-                        <Typography variant="body1" className="Pointsformatting pt-4">
+                        <Typography variant="body1" className="Pointsformatting pt-4 ">
                             <strong>Step 1</strong> - Determine the employees taxable income
                         </Typography>
                     </div>
 
 
-                    <ul className='custom-list' >
+                    <ul className='custom-list pb-2' >
 
                         <li className="Pointsformatting">Lump all amounts that make up the employees remuneration for that month, i.e. gross salary, benefits in kind, commission, etc.</li>
                         <li className="Pointsformatting">Deduct allowable deductions, e.g. statutory deductions (SNPF), contributions to pension fund.</li>
@@ -195,19 +195,19 @@ const Paye = () => {
 
 
                     <div>
-                        <Typography variant="body1" className="Pointsformatting">
+                        <Typography variant="body1" className="Pointsformatting pb-2">
                             <strong>Step 2</strong> - Annualize the taxable income, i.e. multiply by 12
                         </Typography>
 
-                        <Typography variant="body1" className="Pointsformatting">
+                        <Typography variant="body1" className="Pointsformatting pb-2">
                             <strong>Step 3</strong> - Determine which bracket it falls under of the 4 brackets provided by law and calculate accordingly. E.g. a total annual taxable income of 80,000 is classified under the 0 - 100,000 tax bracket, and therefore the applicable rate would be 20% of the amount = 16,000. An annual taxable income of 180,000 would be under the 150,000 - 200,000 bracket, and therefore the applicable tax rate would be 32,500 on the first 150,000 PLUS 30% on the balance of 30,000 = 9,000; total tax would, therefore, be 32,500 + 9,000 = 41,500.
                         </Typography>
 
-                        <Typography variant="body1" className="Pointsformatting">
+                        <Typography variant="body1" className="Pointsformatting pb-2">
                             <strong>Step 4</strong> - Apply the rebate amount; every ordinary individual is entitled to a rebate (means of reducing tax liability) amount of E8,200 per annum. E.g., if your tax liability is E41,500, the rebate will reduce it to E33,300.
                         </Typography>
 
-                        <Typography variant="body1" className="Pointsformatting">
+                        <Typography variant="body1" className="Pointsformatting pb-2">
                             <strong>Step 5</strong> - Convert annual tax liability to a monthly amount by dividing by 12. E.g., the monthly amount on E33,300 is E2,775, which is the tax that will be deducted in that particular month.
                         </Typography>
                     </div>

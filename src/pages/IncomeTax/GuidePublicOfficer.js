@@ -168,15 +168,15 @@ const GuidePublicOfficer = () => {
                         In terms of Section 51(2) of the Order, a public officer shall be appointed by:
                     </Typography>
 
-                    <Box sx={{ display: 'flex', gap: {md:'4rem',lg:'4rem',xl:'2rem'}, pt: '3rem', pb: '1.5rem',flexWrap:'wrap', }}>
+                    
                         {boardList.map((item, index) => (
-                            <Box key={index}>
-                                <Box sx={boardlistStyling}>
-                                    <Typography variant='body1' sx={{ fontWeight: 'bold', textAlign: 'center' }} >{item}</Typography>
-                                </Box>
-                            </Box>
+                           <div key={index} className='flex gap-1 items-start pb-2'>
+                           <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
+                           <ul>
+                           <li Pointsformatting className='Pointsformatting'>{item}</li></ul>
+                       </div>
                         ))}
-                    </Box>
+                    
 
                     {publicOfficerData.map((item, index) => (
                         <Box key={index} sx={{ my: '0.5rem' }}>

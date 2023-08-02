@@ -81,7 +81,7 @@ export default function Header() {
                     >
                       <Link href={"/About"}>
                         <h3
-                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor mr-3 ${router.asPath === "/about"
+                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor mr-3 ${router.asPath === "/About"
                             ? "text-[#2F3192]"
                             : "text-black/80"
                             }`}
@@ -338,7 +338,7 @@ export default function Header() {
 
                               <Link href={'/IncomeTax/TaxationDiplomats'} className="line">
                                 <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
-                                Taxation of Diplomats and Consults
+                                Taxation of Diplomats and Consul
                                 </p>
                               </Link>
                               <br />

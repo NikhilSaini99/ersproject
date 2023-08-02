@@ -114,7 +114,7 @@ const Notes_Guidelines = () => {
                             </TableHead>
                             <TableBody>
                                 {documents.map((item, index) => (
-                                    <TableRow key={index} sx={{ '& ul>li': { lineHeight: '1.8', p: '0.5rem' }, }}>
+                                    <TableRow key={index}>
                                         <TableCell sx={{ fontWeight: 'bold' }}>{item.name}</TableCell>
 
                                         {/* <TableCell><ul>{item.points.map((subpoints, index) => (
@@ -125,27 +125,18 @@ const Notes_Guidelines = () => {
                                         <TableCell sx={{px:'0'}}>
                                             {item.points.map((subpoints, index) => (
 
-                                                <TableRow component='div' key={index} sx={{
+                                                <TableRow component='div' key={index} sx={{ py:'none !important',
                                                     '& div': { border: 'none', '&:hover': { background: '#F2F2F2' } },
                                                     display: 'flex', justifyContent: 'space-between', width: '100%',
                                                     borderBottom: index !== item.points.length - 1 ? '0.1rem solid rgba(0,0,0,0.4)' : 'none',
                                                 }}>
                                                     <TableCell component='div'>{subpoints}</TableCell>
-                                                    <TableCell component='div'>
+                                                    <TableCell component='div' sx={{padding:"5px"}}>
                                                         <IconButton><DownloadForOfflineIcon sx={{ color: 'black' }} />
                                                         </IconButton></TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableCell>
-
-                                        {/* <TableCell>
-                                            {item.points.map((_,index)=>(
-                                                <TableRow key={index} sx={{'& td':{border:'none','&:hover':{background:'#F2F2F2'}},xs:{p:'0'}}}>
-                                                 <TableCell><DownloadForOfflineIcon/></TableCell>
-                                                </TableRow>
-                                            ))}
-                                        </TableCell> */}
-
                                     </TableRow>
                                 ))}
                             </TableBody>

@@ -107,7 +107,7 @@ const Retirement = () => {
                         <li key={index} className='Pointsformatting mb-2'>{item.section} 
                             {item.points && <ul className='custom-list'>
                                 {item.points.map((item, index) => (
-                                    <div key={index} className='flex gap-1 items-start'>
+                                    <div key={index} className='flex gap-1 items-start pb-2'>
                                     <span className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} /></span>
                                     <li className='Pointsformatting'>{item}</li>
                                     </div>
