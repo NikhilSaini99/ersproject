@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import { Box, Stack, Typography, List, ListItem, ListItemText, Divider } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
-import Banner from "../assets/images/Registration.jpeg";
+import Banner from "../assets/images/Registration.jpeg"
 import downarrow from '../assets/images/downarrow.svg'
 import rightarrow from '../assets/images/rightarrow.svg'
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';

@@ -97,7 +97,7 @@ const Taxationandbenefit = () => {
         sx={{
           width: "75%",
           margin: { xs: "0rem auto", lg: "0rem  auto" },
-          pr: { md: "5rem", lg: "10rem,", xl: "15rem" },
+          pr: { md: "3rem", lg: "10rem,", xl: "15rem" },
           py: "2rem",
         }}>
         <Typography variant="h1" sx={{ pt: "1rem", mb: "1rem" }}>
@@ -111,7 +111,7 @@ const Taxationandbenefit = () => {
             1. FREE AND SUBSIDISED ACCOMMODATION OR HOUSING
           </Typography>
 
-          <ul className="custom-list pb-4">
+          <Box component="ul" className="custom-list" sx={{pb:'1rem'}}>
             <li>
               The value of the benefit is equal to the open market rent of the
               accommodation less any payment made by the employee for the
@@ -130,14 +130,14 @@ const Taxationandbenefit = () => {
               </a>
               ) which is in accordance with size and location.
             </li>
-          </ul>
+          </Box>
 
           <Typography fontWeight="bold" variant="subtitle1">
             2. MOTOR VEHICLE BENEFITS
           </Typography>
           <Typography>The benefits are as follows:</Typography>
-          <ol style={{ listStyleType: "lower-roman" }}>
-            <li>
+          <Box component='ol' style={{ listStyleType: "lower-roman" }} sx= {{"& > li ": {marginLeft:{xs:'1.3rem', xl:'0'}}, "& > p":{mb:'1rem'}}}>
+            <li> 
               <Typography fontWeight="bold" variant="subtitle2">
                 Private Use of Motor Vehicle (including aircraft)
               </Typography>
@@ -385,7 +385,7 @@ const Taxationandbenefit = () => {
               the employer the rental paid in respect of the arrangement are
               deemed to be a taxable benefit to the employee
             </Typography>
-          </ol>
+          </Box>
 
           <Box>
             <Typography fontWeight="bold" variant="subtitle1">
