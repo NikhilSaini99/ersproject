@@ -103,7 +103,7 @@ const Taxationandbenefit = () => {
             1. FREE AND SUBSIDISED ACCOMMODATION OR HOUSING
           </Typography>
 
-          <ul className="custom-list">
+          <ul className="custom-list pb-4">
             <li>
               The value of the benefit is equal to the open market rent of the
               accommodation less any payment made by the employee for the
@@ -394,8 +394,8 @@ const Taxationandbenefit = () => {
               for the regulation of wages).
             </Typography>
           </Box>
-          <Box>
-            <Typography fontWeight="bold" variant="subtitle1">
+          <Box pb="1rem">
+            <Typography fontWeight="bold" variant="subtitle1" >
             4. UTILITIES (ELECTRICITY, WATER, COAL, GAS)
             </Typography>
             <Typography variant="body1">
@@ -403,7 +403,7 @@ const Taxationandbenefit = () => {
             </Typography>
 
           </Box>
-          <Box>
+          <Box pb="1rem">
             <Typography fontWeight="bold" variant="subtitle1">
             5. CHILDREN S EDUCATIONAL ASSISTANCE BENEFIT
             </Typography>
@@ -411,7 +411,7 @@ const Taxationandbenefit = () => {
             The value of the benefit is the cost to the employer for providing such educational assistance. If the educational assistance is provided through an approved bursary scheme, only 50% of the total amount paid by the employer during each year of assessment shall be taxable. 
             </Typography>
           </Box>
-          <Box>
+          <Box pb="1rem">
             <Typography fontWeight="bold" variant="subtitle1">
             6. SOFT LOANS
             </Typography>
@@ -419,7 +419,7 @@ const Taxationandbenefit = () => {
             If a loan is granted interest free or less than the official rate to an employee, either by the employer or a lending institution, the taxable benefit is the whole amount of interest or the difference between the official rate and the subsidized rate. 
             </Typography>
           </Box>
-          <Box>
+          <Box pb="1rem">
             <Typography fontWeight="bold" variant="subtitle1">
             7. MEALS, REFRESHMENTS AND ENTERTAINMENT
             </Typography>
@@ -427,7 +427,7 @@ const Taxationandbenefit = () => {
             The value of the benefit is the cost to the employer of providing the meal, refreshment or entertainment.
             </Typography>
           </Box>
-          <Box>
+          <Box pb="1rem"    >
             <Typography fontWeight="bold">
             8. DE MINIMUS RULE
             </Typography>

@@ -100,7 +100,7 @@ const Notes_Guidelines = () => {
                 </Typography>
 
 
-                <Paper elevation={20} sx={{  width: '90%', margin: '0 auto' }}>
+                <Paper elevation={20}>
                     <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }}>
                         <Table>
                             <TableHead>
