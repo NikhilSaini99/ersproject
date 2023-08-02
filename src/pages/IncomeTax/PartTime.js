@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/Part_Time_Employees.webp";
+import bgimg from "../../assets/images/bg-2.png";
 
 const PartTime = () => {
     return (
@@ -32,8 +33,12 @@ const PartTime = () => {
                     />
                 </Box>
 
-            <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '16rem', lg: '18rem,', xl: '20rem' }, py: '2rem' }}>
-                <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
+         <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
+            <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '6rem', lg: '8rem,', xl: '10rem' }, py: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     Part Time Employees</Typography>
 
 
@@ -55,7 +60,7 @@ const PartTime = () => {
                         The rates of withholding tax prescribed hereunder shall apply in the determination of employee’s tax to be deducted on any amount payable by way of remuneration to a part-time employee in any year of assessment
                     </Typography>
                 </div>
-                <Paper elevation={20} sx={{ width: '90%', margin: '2rem auto' }}>
+                <Paper elevation={20} sx={{ width: '100%', margin: '2rem auto' }}>
                     <TableContainer>
                         <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
                             <TableHead>
@@ -114,6 +119,7 @@ const PartTime = () => {
                 </Typography>
 
 
+            </Box>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

@@ -103,9 +103,9 @@ const ReverseCharge = () => {
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
            
              
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
+           <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
 
-                <Typography variant="h1" sx={{ pt: '5rem', mb: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     Reverse Charge Concept
                 </Typography>
 

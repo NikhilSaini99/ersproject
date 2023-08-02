@@ -6,8 +6,7 @@ import Image from "next/image";
 import Banner from "../assets/images/Exempt_Supplies_of_Goods_&_Services.jpg";
 import Footer from "@/components/Footer";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
-
+import bgimg from "../assets/images/bg-2.png";
 
 
 
@@ -183,8 +182,13 @@ const ExemptSupplies = () => {
           }}
         />
             </Box>
-            <Box sx={{ width: { xs: '80%', md: '75%', lg: '70%' }, margin: { xs: "2rem auto", lg: "5rem auto" } }}>
-                <Typography variant="h1" sx={{ my: '3.5rem' }}>
+
+            <Box sx={{
+                backgroundImage: `url(${bgimg.src})`,
+                backgroundSize: 'cover', backgroundAttachment: 'fixed'
+            }} >
+             <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                     Exempt Supplies of Goods & Services
                 </Typography>
                 <Typography variant="h5" component="h2" sx={{ fontWeight: "bold", my: '1rem' }}>
@@ -260,7 +264,7 @@ const ExemptSupplies = () => {
                     ))}
                 </ul>
             </Box>
-
+            </Box>
             {/*-----------------------Footer---------------------*/}
             <Footer />
 

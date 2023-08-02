@@ -52,7 +52,7 @@ export default function Withholding() {
       }} >
 
 
-        <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '8rem', lg: '10rem,', xl: '14rem' }, py: '2rem' }}>
+        <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
 
           <h1 className="text-4xl pt-14 mb-4 font-bold text-primaryColor">
             Withholding Taxes

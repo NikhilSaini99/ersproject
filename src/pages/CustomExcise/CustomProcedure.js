@@ -40,9 +40,6 @@ const CustomProcedure = () => {
     ];
 
 
-  
-
-
     return (
         <>
             <Head>

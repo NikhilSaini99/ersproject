@@ -66,7 +66,7 @@ const OfficeandOperating = () => {
                     </Typography>
 
                     {/* First table start */}
-                    <Paper elevation={20} sx={{ width: '90%', margin: '0 auto', my: '2rem' }}>
+                    <Paper elevation={20} sx={{ width: '100%', margin: '0 auto', my: '2rem' }}>
                         <TableContainer >
                             <Table className={''} aria-label="Form Table">
                                 <TableHead>
@@ -98,7 +98,7 @@ const OfficeandOperating = () => {
                     Inland stations (except Saturdays, Sundays and  Public Holidays
                     </Typography>
                       {/* Second table Start */} 
-                      <Paper elevation={20} sx={{ width: '90%', margin: '0 auto', my: '2rem' }}>
+                      <Paper elevation={20} sx={{ width: '100%', margin: '0 auto', my: '2rem' }}>
                         <TableContainer >
                             <Table className={''} aria-label="Form Table">
                                 <TableHead>

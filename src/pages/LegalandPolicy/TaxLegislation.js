@@ -65,8 +65,8 @@ const TaxLegislation = () => {
             <Box sx={{backgroundImage:`url(${bgimg.src})`,
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
         
-            <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
-                <Typography variant="h1"  sx={{ pt: '5rem', mb: '2rem' }}>
+            <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'4rem', lg: '8rem,', xl: '10rem' },py:'2rem' }}>
+                <Typography variant="h1"  sx={{ pt: '2rem', mb: '2rem' }}>
                     Tax Legislations</Typography>
 
                 <Typography variant='body1' className='Pointsformatting'>The Eswatini Revenue Service derives its authority to administer various revenue laws from the

@@ -200,7 +200,7 @@ const CustomAgents = () => {
                     {/* section 3 */}
 
                     {/* first table */}
-                    <Paper elevation={20} sx={{ width: '90%', margin: '0 auto' }}>
+                    <Paper elevation={20} sx={{ width: '100%', margin: '0 auto' }}>
                         <TableContainer >
                             <Table className={''} aria-label="Form Table">
                                 <TableHead>
@@ -231,11 +231,12 @@ const CustomAgents = () => {
                     </Paper>
                     {/* first table end*/}
 
-                    <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 'bold', my: '3rem', textAlign: 'center' }}>
+                    <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 'bold', my: '3rem', 
+                    textAlign: 'center' }}>
                         ACTIVE TRANSIT BOND HOLDERS
                     </Typography>
                     {/* Second table */}
-                    <Paper elevation={20} sx={{ width: '90%', margin: '0 auto', my: '2rem' }}>
+                    <Paper elevation={20} sx={{ width: '100%', margin: '0 auto', my: '2rem' }}>
                         <TableContainer >
                             <Table className={''} aria-label="Form Table">
                                 <TableHead>

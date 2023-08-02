@@ -37,7 +37,7 @@ const VatRegulations = () => {
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
            
              
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'16rem', lg: '18rem,', xl: '20rem' },py:'2rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'6rem', lg: '8rem,', xl: '0rem' },py:'2rem' }}>
                 <Typography variant="h1"  sx={{ my: '2.5rem' }}>
                     VAT Regulations</Typography>
 

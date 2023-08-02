@@ -97,10 +97,11 @@ const Retirement = () => {
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
            
              
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'10rem', lg: '12rem,', xl: '15rem' },py:'2rem' }}>
+            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'5rem', lg: '10rem,', xl: '15rem' },py:'2rem' }}>
 
-                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
-                    Retirement and Redundancy</Typography>
+                <Typography variant="h1" sx={{ pt: '1rem', mb: '2rem' }}>
+                    Retirement and Redundancy </Typography>
+                    
                 <ol style={{ listStyleType: 'decimal' }}>
                     {data.map((item, index) => (
                         <li key={index} className='Pointsformatting mb-2'>{item.section} 
