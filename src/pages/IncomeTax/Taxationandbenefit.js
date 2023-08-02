@@ -136,8 +136,8 @@ const Taxationandbenefit = () => {
             2. MOTOR VEHICLE BENEFITS
           </Typography>
           <Typography>The benefits are as follows:</Typography>
-          <Box component='ol' style={{ listStyleType: "lower-roman" }} sx= {{"& > li ": {marginLeft:{xs:'1.3rem', xl:'0'}}}}>
-            <li>
+          <Box component='ol' style={{ listStyleType: "lower-roman" }} sx= {{"& > li ": {marginLeft:{xs:'1.3rem', xl:'0'}}, "& > p":{mb:'1rem'}}}>
+            <li> 
               <Typography fontWeight="bold" variant="subtitle2">
                 Private Use of Motor Vehicle (including aircraft)
               </Typography>
