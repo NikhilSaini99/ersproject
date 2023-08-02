@@ -27,7 +27,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
               background: "#fbfbfb",
               pl: { xs: "0.5rem", lg: "2rem" },
               margin: { xs: "0.5rem auto", lg: "1rem auto 0" },
-              py: "5rem",
+              py: "3rem",
             }}
             className="Pointsformatting"
           >

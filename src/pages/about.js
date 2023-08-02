@@ -16,6 +16,7 @@ import TaxPayer from "./AboutPages/TaxPayer/TaxPayer";
 import BusinessCommitte from "./AboutPages/BsCommitte/BusinessCommitte";
 import CodeOfEthicsConduct from "./AboutPages/EthicsandConduct/CodeOfEthicsConduct";
 import ErsInternalAffairs from "./AboutPages/InterAffairs/ErsInternalAffairs";
+import Alliances from "./AboutPages/Alliances/Alliances";
 
 export default function About() {
   const arrowStyling = {
@@ -122,6 +123,11 @@ export default function About() {
       <CouncilMember h2Styling={h2Styling} arrowStyling={arrowStyling} />
 
       {/*Council Memeber section End here*/}
+
+
+      {/* Alliance section */}
+      <Alliances h2Styling={h2Styling} arrowStyling={arrowStyling}/>
+      {/* Alliance section end */}
 
       <StrategicTheme h2Styling={h2Styling} />
 
