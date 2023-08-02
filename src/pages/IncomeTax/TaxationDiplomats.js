@@ -157,7 +157,7 @@ const TaxationDiplomats = () => {
 
                 <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
                     <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
-                        Taxation of Diplomats and Consults
+                        Taxation of Diplomats and Consul
                     </Typography>
 
                     {/* question and answers */}
