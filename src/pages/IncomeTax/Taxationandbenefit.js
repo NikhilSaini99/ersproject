@@ -19,6 +19,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Banner from "../../assets/images/Taxation_of_Benefits.jpg";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import bgimg from '../../assets/images/pxfuel.jpg'
+
 
 const Taxationandbenefit = () => {
   const commonStyling = {
@@ -84,15 +86,21 @@ const Taxationandbenefit = () => {
           }}
         />
       </Box>
+
+
+      <Box sx={{
+        backgroundImage: `url(${bgimg.src})`,
+        backgroundSize: 'cover', backgroundAttachment: 'fixed'
+      }} >
+
       <Box
         sx={{
           width: "75%",
           margin: { xs: "0rem auto", lg: "0rem  auto" },
           pr: { md: "5rem", lg: "10rem,", xl: "15rem" },
           py: "2rem",
-        }}
-      >
-        <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
+        }}>
+        <Typography variant="h1" sx={{ pt: "1rem", mb: "1rem" }}>
           Taxation of Benefits
         </Typography>
         <Box sx={{ ...commonStyling }}>
@@ -254,7 +262,7 @@ const Taxationandbenefit = () => {
                 each year
               </Typography>
 
-              <Paper elevation={20} sx={{ width: "90%", margin: "2rem auto" }}>
+              <Paper elevation={20} sx={{ width: "100%", margin: "2rem auto" }}>
                 <TableContainer>
                   <Table aria-label="Running Cost Table">
                     <TableBody>
@@ -438,7 +446,7 @@ const Taxationandbenefit = () => {
           
         </Box>
       </Box>
-
+      </Box>
       {/*-----------------------Footer---------------------*/}
 
       <Footer />
