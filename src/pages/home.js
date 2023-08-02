@@ -444,7 +444,7 @@ export default function Home() {
             {/* Content for third div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
-                <p className="text-yellowish text-xl font-normal">Public Notices</p>
+              <Link href={"/PublicNotices/PublicNotices"}> <p  className="text-yellowish text-xl font-normal">Public Notices</p></Link> 
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
 
                   <li className="">
