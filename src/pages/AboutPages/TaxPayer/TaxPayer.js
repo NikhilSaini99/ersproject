@@ -137,7 +137,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
               </Box>
             ))}
             <Image
-              src={taxpayersection1}
+              src={taxpayersection2}
               alt="taxpayersection1"
               className="w-5/12"
             />

@@ -101,7 +101,7 @@ const Retirement = () => {
 
                 <Typography variant="h1" sx={{ pt: '1rem', mb: '2rem' }}>
                     Retirement and Redundancy </Typography>
-                    
+                    <Box sx={{pl:{xs:'1.3rem', xl:'0'}}}>
                 <ol style={{ listStyleType: 'decimal' }}>
                     {data.map((item, index) => (
                         <li key={index} className='Pointsformatting mb-2'>{item.section} 
@@ -116,7 +116,7 @@ const Retirement = () => {
                         </li>
                     ))}
                 </ol>
-
+                </Box>
             </Box>
             </Box>
             {/*-----------------------Footer---------------------*/}
