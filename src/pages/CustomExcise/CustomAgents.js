@@ -188,7 +188,7 @@ const CustomAgents = () => {
                             </Box>
                         ))}
                     </Box>
-                    <Box sx={{ py: '1.5rem' }}>
+                    <Box sx={{ py: '0rem' }}>
                         <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 'bold', }}>
                             IMPORTANT NOTE
                         </Typography>
@@ -231,8 +231,8 @@ const CustomAgents = () => {
                     </Paper>
                     {/* first table end*/}
 
-                    <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 'bold', my: '3rem', 
-                    textAlign: 'center' }}>
+                    <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 'bold', my: '2.5rem', 
+                    textAlign: 'left' }}>
                         ACTIVE TRANSIT BOND HOLDERS
                     </Typography>
                     {/* Second table */}

@@ -124,7 +124,7 @@ const EuRegistered = () => {
                                 <Typography variant='body1' className='Pointsformatting '>{section.desc}</Typography>
                                 {section.subdata && section.subdata.map((subitem, index) => (
                                     <Box key={index}>
-                                        <Typography variant="h2" sx={{ fontWeight: 'bold', fontSize: '1.25rem', pt: '2rem', mb: '1rem' }}>
+                                        <Typography variant="h2" sx={{ fontWeight: 'bold', fontSize: '1.25rem', pt: '1rem', mb: '1rem' }}>
                                             {subitem.subhead}
                                         </Typography>
                                         <div className='flex gap-1 items-start '>
