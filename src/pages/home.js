@@ -426,10 +426,10 @@ export default function Home() {
             <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]    justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Current Vacancies</p>
+                
+                <p className="list-disc pl-[0rem] text-base flex flex-col gap-3 pt-6"> Click here to visit our job portal for vacancy announcements as they become available from ERS.
+                </p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
-                  <li>
-                    There are currently no Vacancies available
-                  </li>
                 </ul>
               </div>
 
@@ -469,7 +469,7 @@ export default function Home() {
             {/* Content for fourth div */}
             <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
-                <p className="text-yellowish text-xl font-normal">Public Meetings</p>
+              <Link href={"/PublicMeeting/PublicMeetingList"}>  <p  className="text-yellowish text-xl font-normal">Public Meetings</p></Link>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6 ">
                   <li className="">SRA Strategic Plan 2015-2018</li>
                   <li className="">

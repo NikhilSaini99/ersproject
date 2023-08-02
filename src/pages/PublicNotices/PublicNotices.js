@@ -99,8 +99,7 @@ const PublicNotices = () => {
           backgroundImage: `url(${bgimg.src})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
-        }}
-      >
+        }}>
         <Box
           sx={{
             width: "90%",

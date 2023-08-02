@@ -11,8 +11,10 @@ import quoteIcon from '../assets/icons/quoteicon.png'
 import AppleIcon from '../assets/icons/apple_store.svg'
 import GooglePlayIcon from '../assets/icons/google_play1.svg'
 import HuaweiIcon from '../assets/icons/huawei-icon.svg'
+import PublicMeetingImg from '../assets/Images/Registration.jpeg'
 
-export { IncomeTaxData, NewsData, customData, GalleryData,appIcon };
+
+export { IncomeTaxData, NewsData, customData, GalleryData,appIcon, PublicMeetingData };
 
 const appIcon =[
   {
@@ -229,6 +231,22 @@ const NewsData = [
   },
 ];
 
+
+const PublicMeetingData = [
+  {
+    quote: 'The Eswatini Revenue Service (ERS) is a semi-autonomous revenue administration agency, established through the Revenue Authority Act No. 1 of 2008.',
+    quoteicon: quoteIcon,
+    title: "Family Safari Vacations",
+    head: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate ad velit perspiciatis ipsa! Nostrum voluptate ex at laborum esse culpa modi, molestiae eveniet numquam tenetur expedita quis aspernatur doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate ad velit perspiciatis ipsa! Nostrum voluptate ex.",
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate ad velit perspiciatis ipsa! Nostrum voluptate ex at laborum esse culpa modi, molestiae eveniet numquam tenetur expedita quis aspernatur doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate ad velit perspiciatis ipsa! Nostrum voluptate ex at laborum esse culpa modi, molestiae eveniet numquam tenetur expedita quis aspernatur doloribus.",
+    img: PublicMeetingImg,
+    para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate ad velit perspiciatis ipsa! Nostrum voluptate ex at laborum esse culpa modi, molestiae eveniet numquam tenetur expedita quis aspernatur doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate ad velit perspiciatis ipsa! Nostrum voluptate ex.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate ad velit perspiciatis ipsa! Nostrum voluptate ex at laborum esse culpa modi, molestiae eveniet numquam tenetur expedita quis aspernatur doloribus.",
+  },
+];
+
 const GalleryData = {
   group1: [
     {
@@ -411,6 +429,38 @@ const GalleryData = {
 };
 
 
+export const pumbicMeetings = [
+  {
+    img: PublicMeetingImg,
+    url: "/PublicMeeting/PublicMeetingDetails",
+    title: "TAX Calculation Public Meeting",
+    date: "April 21, 2023",
+    description: "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply...",
+  },
+  {
+    img: PublicMeetingImg,
+    url: "/PublicMeeting/PublicMeetingDetails",
+    title: "TAX Calculation Public Meeting 2022",
+    date: "April 22, 2023",
+    description: "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply...",
+  },
+  {
+    img: PublicMeetingImg,
+    url: "/PublicMeeting/PublicMeetingDetails",
+    title: "TAX Calculation Public Meeting 2022",
+    date: "April 23, 2023",
+    description: "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply...",
+  },
+  {
+    img: PublicMeetingImg,
+    url: "/PublicMeeting/PublicMeetingDetails",
+    title: "TAX Calculation Public Meeting 2023",
+    date: "April 24, 2023",
+    description: "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply...",
+  }
+]
+
+
 export const newses = [
   {
     img: Newses,
@@ -441,6 +491,7 @@ export const newses = [
     description: "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply...",
   }
 ]
+
 
 export const taxpayerCharter = [
   {
