@@ -123,10 +123,6 @@ const TaxationDiplomats = () => {
     ];
 
 
-
-
-
-
     return (
         <>
             <Head>
@@ -156,7 +152,7 @@ const TaxationDiplomats = () => {
             }} >
 
                 <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                    <Typography variant="h1" sx={{ pt: '1rem', mb: '1rem' }}>
                         Taxation of Diplomats and Consul
                     </Typography>
 
@@ -197,7 +193,7 @@ const TaxationDiplomats = () => {
                             {item.subpoints.map((item, index) => (
                                 <div key={index} className='flex gap-1 items-start pb-2'>
                                     <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
-                                    <Typography variant="body1" sx={{ pb: '1rem' }} className='Pointsformatting'>
+                                    <Typography variant="body1" sx={{ pb: '0rem' }} className='Pointsformatting'>
                                         {item}
                                     </Typography>
                                 </div>

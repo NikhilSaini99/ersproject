@@ -99,7 +99,7 @@ const Retirement = () => {
              
             <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'5rem', lg: '10rem,', xl: '15rem' },py:'2rem' }}>
 
-                <Typography variant="h1" sx={{ pt: '1rem', mb: '2rem' }}>
+                <Typography variant="h1" sx={{ pt: '1rem', mb: '2rem', ml:"-1.5rem"}}>
                     Retirement and Redundancy </Typography>
                     
                 <ol style={{ listStyleType: 'decimal' }}>
