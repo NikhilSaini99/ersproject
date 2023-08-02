@@ -389,10 +389,10 @@ export default function Header() {
                                 </p>
                               </Link>
                               <br />
-
+                              <Link href={'/CustomExcise/FreeTrade'}>
                               <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish ">
                                 Free Trade and Preferential  Agreements
-                              </p>
+                              </p></Link>
 
                               <Link href={'/CustomExcise/Excisepage'} className="line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">

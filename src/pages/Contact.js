@@ -18,35 +18,41 @@ export default function Contact() {
       title: "MANZINI SERVICE CENTRE",
       description:
         "Sivuno Building, Ground floor, adjacent to Estel House, Manzini MANZINI",
-      contact: '[+268] 2406 4050'
+      contact: '[+268] 2406 4050',
+      timing : '08:00 - 17:00',
     },
     {
       title: "MATSAPHA BRANCH",
       description: "Matsamo Shopping Complex (kaMahhala) MATSAPHA",
-      contact: '[+268] 2406 4050'
+      contact: '[+268] 2406 4050',
+      timing : '08:00 - 17:00',
     },
     {
       title: "MBABANE SERVICE CENTRE",
       description:
         "3rd Floor, Corporate Place, Swazi  Plaza MBABANE ",
-      contact: '[+268] 2406 4050'
+      contact: '[+268] 2406 4050',
+      timing : '08:00 - 17:00',
     },
     {
       title: "NHLANGANO BRANCH",
       description:
         "Old Skonkwane Building  Corner of 6th Street and 3rd Avenue NHLANGANO",
-      contact: '[+268] 2406 4050'
+      contact: '[+268] 2406 4050',
+      timing : '08:00 - 17:00',
     },
     {
       title: "PIGGS PEAK SERVICE CENTRE",
       description:
         "1st Floor, Supreme Building  Evelyn Baring Road  PIGGS PEAK",
-      contact: '[+268] 2406 4050 '
+      contact: '[+268] 2406 4050 ',
+      timing : '08:00 - 17:00',
     },
     {
       title: "SITEKI SERVICE CENTRE",
       description: "Mafumbe Building Jacaranda Road  SITEKI",
-      contact: '[+268] 2406 405'
+      contact: '[+268] 2406 405',
+      timing : '08:00 - 17:00',
     },
   ];
 
@@ -158,6 +164,7 @@ export default function Contact() {
                   title={item.title}
                   description={item.description}
                   contact={item.contact}
+                  timing={item.timing}
                 />
               ))}
             </div>

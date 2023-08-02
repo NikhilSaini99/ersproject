@@ -109,8 +109,7 @@ const CouncilMember = ({ h2Styling }) => {
               pb: "1rem",
             }}
           >
-            Denounce with righteous indignation and dislike men who are so
-            beguiled & demoralized our power of choice.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
           </Typography>
 
           {/*-------------------carousel----------------------- */}
