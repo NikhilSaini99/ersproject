@@ -11,7 +11,7 @@ import quoteIcon from '../assets/icons/quoteicon.png'
 import AppleIcon from '../assets/icons/apple_store.svg'
 import GooglePlayIcon from '../assets/icons/google_play1.svg'
 import HuaweiIcon from '../assets/icons/huawei-icon.svg'
-import PublicMeetingImg from '../assets/Images/Registration.jpeg'
+import PublicMeetingImg from '../assets/images/Registration.jpeg'
 
 
 export { IncomeTaxData, NewsData, customData, GalleryData,appIcon, PublicMeetingData };
