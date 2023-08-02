@@ -74,7 +74,7 @@ const Taxations = () => {
             py: "2rem",
           }}
         >
-          <Typography variant="h1" sx={{ pt: "5rem", mb: "2rem" }}>
+          <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
             Double Taxation Agreements
           </Typography>
 
@@ -110,8 +110,8 @@ const Taxations = () => {
                       },
                     }}
                   >
-                    <TableCell>Country</TableCell>
-                    <TableCell>Date of Signature</TableCell>
+                    <TableCell align="center">Country</TableCell>
+                    <TableCell align="center">Date of Signature</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -130,8 +130,8 @@ const Taxations = () => {
                             },
                           }}
                         >
-                          <TableCell align="left">{item.name}</TableCell>
-                          <TableCell align="left">
+                          <TableCell align="center">{item.name}</TableCell>
+                          <TableCell align="center">
                             {item.dateOfSignature}
                           </TableCell>
                         </TableRow>
@@ -143,11 +143,10 @@ const Taxations = () => {
           </Paper>
           <Box sx={{ marginLeft: { sm: "1.3rem", xl: "none" } }}>
             <ol style={{ listStyleType: "decimal", fontWeight: "normal" }}>
-              <li style={{ fontWeight: "bold", fontSize: "1.35rem" }}>
+              <li style={{ fontWeight: "bold", fontSize: "1.30rem" }}>
                 Tax Information Exchange Agreements (TIEA)
                 <ol
-                  style={{ listStyleType: "lower-roman", fontWeight: "normal" }}
-                >
+                  style={{ listStyleType: "lower-roman", fontWeight: "normal" }}>
                   <li>
                     In force
                     <ul className="custom-list">

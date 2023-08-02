@@ -94,7 +94,7 @@ const OfficeandOperating = () => {
 
                     {/* First table End */}
 
-                    <Typography variant="body1" className='Pointsformatting text-center'>
+                    <Typography variant="body1" className='Pointsformatting text-left'>
                     Inland stations (except Saturdays, Sundays and  Public Holidays
                     </Typography>
                       {/* Second table Start */} 
