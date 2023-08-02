@@ -19,56 +19,49 @@ import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../../assets/images/pxfuel.jpg";
 import Footer from "@/components/Footer";
 
-const Tender = () => {
+const PublicNotices = () => {
   const dummyData = [
     {
-      title:
-        " LRPS 9184053-QIP Rehabilation of sewer network in area-Khanfer district in Abyan governate",
-      deadline: "1-Aug-2023",
-      published: "22-July-2023",
-      reference: "LRPS 9184053",
+      title: "Public meeting on how to save TAX",
+      description: "This is a description of the public meeting how to save TAX",
+      date : "22-July-2023",
+      notice: "This is notice bord for spacial information in the meeting",
     },
     {
-      title:
-        " LRPS 9184053-QIP Rehabilation of sewer network in area-Khanfer district in Abyan governate",
-      deadline: "1-Aug-2023",
-      published: "22-July-2023",
-      reference: "LRPS 9184053",
+      title: "Public meeting on how to save TAX",
+      description: "This is a description of the public meeting how to save TAX",
+      date : "22-July-2023",
+      notice: "This is notice bord for spacial information in the meeting",
     },
     {
-      title:
-        " LRPS 9184053-QIP Rehabilation of sewer network in area-Khanfer district in Abyan governate",
-      deadline: "1-Aug-2023",
-      published: "22-July-2023",
-      reference: "LRPS 9184053",
+      title: "Public meeting on how to save TAX",
+      description: "This is a description of the public meeting how to save TAX",
+      date : "22-July-2023",
+      notice: "This is notice bord for spacial information in the meeting",
     },
     {
-      title:
-        " LRPS 9184053-QIP Rehabilation of sewer network in area-Khanfer district in Abyan governate",
-      deadline: "1-Aug-2023",
-      published: "22-July-2023",
-      reference: "LRPS 9184053",
+      title: "Public meeting on how to save TAX",
+      description: "This is a description of the public meeting how to save TAX",
+      date : "22-July-2023",
+      notice: "This is notice bord for spacial information in the meeting",
     },
     {
-      title:
-        " LRPS 9184053-QIP Rehabilation of sewer network in area-Khanfer district in Abyan governate",
-      deadline: "1-Aug-2023",
-      published: "22-July-2023",
-      reference: "LRPS 9184053",
+      title: "Public meeting on how to save TAX",
+      description: "This is a description of the public meeting how to save TAX",
+      date : "22-July-2023",
+      notice: "This is notice bord for spacial information in the meeting",
     },
     {
-      title:
-        " LRPS 9184053-QIP Rehabilation of sewer network in area-Khanfer district in Abyan governate",
-      deadline: "1-Aug-2023",
-      published: "22-July-2023",
-      reference: "LRPS 9184053",
+      title: "Public meeting on how to save TAX",
+      description: "This is a description of the public meeting how to save TAX",
+      date : "22-July-2023",
+      notice: "This is notice bord for spacial information in the meeting",
     },
     {
-      title:
-        " LRPS 9184053-QIP Rehabilation of sewer network in area-Khanfer district in Abyan governate",
-      deadline: "1-Aug-2023",
-      published: "22-July-2023",
-      reference: "LRPS 9184053",
+      title: "Public meeting on how to save TAX",
+      description: "This is a description of the public meeting how to save TAX",
+      date : "22-July-2023",
+      notice: "This is notice bord for spacial information in the meeting",
     },
   ];
   console.log(
@@ -117,7 +110,7 @@ const Tender = () => {
           }}
         >
           <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
-            Tender
+            Public Notice
           </Typography>
 
           <TableContainer
@@ -136,10 +129,10 @@ const Tender = () => {
                     },
                   }}
                 >
-                  <TableCell width="30%">Title</TableCell>
-                  <TableCell>Deadline</TableCell>
-                  <TableCell>Published</TableCell>
-                  <TableCell>Reference</TableCell>
+                  <TableCell>Title</TableCell>
+                  <TableCell>Description</TableCell>
+                  <TableCell>Date & Time</TableCell>
+                  <TableCell>Notice</TableCell>
                   <TableCell>
                     <CloudDownloadOutlinedIcon />
                   </TableCell>
@@ -159,9 +152,9 @@ const Tender = () => {
                     }}
                   >
                     <TableCell>{item.title}</TableCell>
-                    <TableCell>{item.deadline}</TableCell>
-                    <TableCell>{item.published}</TableCell>
-                    <TableCell>{item.reference}</TableCell>
+                    <TableCell>{item.description}</TableCell>
+                    <TableCell width="12%">{item.date}</TableCell>
+                    <TableCell>{item.notice}</TableCell>
                     <TableCell>
                       <Button
                         variant="contained"
@@ -184,4 +177,4 @@ const Tender = () => {
   );
 };
 
-export default Tender;
+export default PublicNotices;
