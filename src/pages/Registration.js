@@ -73,23 +73,23 @@ const Registration = () => {
     },
     {
       question: 'What are the resgistration requirements?',
-      answer: 'A fixed place of doing business in Eswatini\nCapacity to keep proper accounting records\ncapability to submit regular and reliable returns.'
+      answer: 'A fixed place of doing business in Eswatini. \n Capacity to keep proper accounting records. \n Capability to submit regular and reliable returns.'
     },
     {
       question: 'What attachments should be icluded in the TIN registration form?',
-      answer: 'Taxpayers can collect the TIN registration form from the nearest ERS office or download it from here.\nComplete and submit the form with all attachments to any ERS office.\nThe ERS will review the application and inform the taxpayer of the outcome within 30 days. In some cases this may include inspection.\nOnce registered a taxpayer shall be given a registration certificate with a Taxpayer Identification Number (TIN) to be quoted in all dealings with the ERS.'
+      answer: 'Certified copy of a Certificate of Incorporation (for companies only). Certified copy of Form J (for companies only). Certified copy of Power of Attorney (where applicable). Certified copy of personal identity document (of the Public Officer). Certified copy of partnership deed (if the business is a partnership). Deed of trust (where applicable). Deed of sale (if it is a takeover). Constitution (Only for NGOs and welfare organizations). Certified copy of Trading License'
     },
     {
       question: 'What is the registration process?',
-      answer: 'The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E500 000.'
+      answer: 'Taxpayers can collect the TIN registration form from the nearest ERS office or download it from here. Complete and submit the form with all attachments to any ERS office. The ERS will review the application and inform the taxpayer of the outcome within 30 days. In some cases this may include inspection. Once registered a taxpayer shall be given a registration certificate with a Taxpayer Identification Number (TIN) to be quoted in all dealings with the ERS.'
     },
     {
       question: 'What are the obligations of a VAT registered business?',
-      answer: 'Display registration certificate in a prominent place on the business premises as proof that the business is authorized to collect VAT\nCharge VAT on their taxable supplies with effect from their registration date\nIssue tax invoices for all their supplies\nmaintain and keep accurate accounting records within the country\nsubmit VAT returns with payments to the ERS periodically (i.e. no later than the due dates)\nupdate registration information whenever there is a need to do so.'
+      answer: 'Display registration certificate in a prominent place on the business premises as proof that the business is authorized to collect VAT. \nCharge VAT on their taxable supplies with effect from their registration date. \nIssue tax invoices for all their supplies. \nMaintain and keep accurate accounting records within the country. \nSubmit VAT returns with payments to the ERS periodically (i.e. no later than the due dates). \nUpdate registration information whenever there is a need to do so.'
     },
     {
       question: 'Can a business cancel registration?',
-      answer: 'A business registered for VAT may apply in writing for the cancellation of registration if that business has ceased making taxable supplies or no longer meets the registration threshold.\nThe Commissioner-General may also cancel the registration of a business if that business\n\nno longer has a proper and fixed place of business\ndoes not keep proper accounting records\noes not submit regular and reliable tax returns\nis not, in the opinion of the Commissioner-General, a fit and proper person to be registered'
+      answer: 'A business registered for VAT may apply in writing for the cancellation of registration if that business has ceased making taxable supplies or no longer meets the registration threshold. \nThe Commissioner-General may also cancel the registration of a business if that business. \nNo longer has a proper and fixed place of business \ndoes not keep proper accounting records\ndoes not submit regular and reliable tax returns\nis not, in the opinion of the Commissioner-General, a fit and proper person to be registered'
     },
   ]
 

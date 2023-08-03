@@ -29,7 +29,7 @@ export default function Contact() {
     { name: "Nsalitje", time: "08:00 - 18:00" },
     { name: "King Mswati III International Airport", time: "06:00 - 18:00" },
     {
-      name: "Inland Container Depo-ICD (Matsapha-Eswatini Railways)",
+      name: "Inland Container Depo-ICD",
       time: "08:00 - 17:00",
     },
   ];
@@ -206,7 +206,8 @@ export default function Contact() {
           </div>
         </div>
 
-        <Box sx={{ my: "2rem" }} className="px-10">
+        <Box sx={{ my: "2rem",  pb:"2rem", pt:"1rem"}} className="px-10 bg-[#F5F5F5]">
+           
           <Typography
             variant="h5"
             sx={{
@@ -214,39 +215,36 @@ export default function Contact() {
               fontWeight: "bold",
               color: "#2F248F",
               marginY: "1rem",
-            }}
-          >
+            }}>
             Border Operations
+            <div className="border mr-12 border-yellowish mt-1 w-14 "></div>
           </Typography>
 
           <Box
             sx={{
               display: "flex",
-              gap: "1rem",
+              gap: "2rem",
               flexWrap: "wrap",
               flex: "1 1 0",
-            }}
-          >
+            }}>
             {locations.map((item, index) => (
               <Box
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "0.5rem",
+                  gap: "1rem",
                   p: "1rem",
-                  mt: "2rem",
-                  border: "2px solid",
+                  mt: "1rem",
+                  border: "1px solid #E8E8E8",
                   flexWrap: "wrap",
-                  width: "350px",
+                  width: "420px",
                 }}
-                key={index}
-              >
+                key={index}>
                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                   <Typography
                     variant="body1"
                     fontWeight="bold"
-                    sx={{ flexGrow: "1" }}
-                  >
+                    sx={{ flexGrow: "1" }}>
                     Post Name:
                   </Typography>
                   <Typography variant="body1">{item.name}</Typography>

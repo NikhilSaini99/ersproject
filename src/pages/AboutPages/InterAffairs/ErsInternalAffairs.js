@@ -12,7 +12,7 @@ const ErsInternalAffairs = ({ h2Styling, arrowStyling }) => {
         subPoints: [
           "Detecting and Investigating issues of integrity and unethical behavior including allegations of fraud, corruption and all acts of dishonesty & misconduct occurring and involving personnel of the Eswatini Revenue Service",
           "Undertaking staff and public awareness or educational initiatives on issues of cus fraud, corruption and any unethical behavior relating to ERS activities",
-          "Carrying out oversight tasks. These are good governance principles furthering the culture of transparency and accountability. Towards these, the division enforces and monitors the staff gifts declaration, background checks or vetting exercises and declaration of assets, liabilities and income by staff.",
+          "Carrying out preventative oversight tasks: These are good governance principles furthering the culture of transparency and accountability which includes management of staff gifts, benefits, and hospitality; management of conflict of interests, enforce and monitors staff declaration of income, assets, and liabilities. ",
         ],
       },
     },
@@ -27,8 +27,17 @@ const ErsInternalAffairs = ({ h2Styling, arrowStyling }) => {
       section: "Procedures for reporting to the Internal Affairs Division",
       content: {
         subhead:
-          "Anyone reporting a matter to the unit may choose to remain anonymous; all information received will be handled in utmost confidence. Where possible, feedback on information received will be given.",
+          "Reporting maybe done in the following methods",
+          subPoints: [
+            "Whistleblowing toll free line:  800 8000 The toll-free line was set up so that the public and ERS staff be able to report issues of fraud, corruption, misconduct, and anything detrimental to the mandate of the ERS. Leave a message after the beep with full details of a concern raised, where possible information such as giving names, dates, and places. If you desire to give more details or are in possession of documents relevant to the matter, kindly leave your contact details.",
+            "Surface mail reporting: Director Internal Affairs, Eswatini Revenue Service, P. O. Box 5628 Mbabane, Eswatini",
+            "Electronic mail (email):  internalaffairs@ers.org.sz",
+            "Cell Phone: +268 7606 3107",
+            "ERS Website: Complaint Reporting Form",
+            "Walk-in / In person reporting: First floor, Ingcamu Building, Mhlambanyatsi Road, Mbabane, Eswatini",             "Anyone reporting a matter may choose to remain anonymous. All information received will be handled in utmost confidence. Where possible, feedback on information received will be given.",
+          ],
       },
+      
     },
   ];
   return (
