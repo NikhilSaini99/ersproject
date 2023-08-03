@@ -16,6 +16,7 @@ import TaxPayer from "./AboutPages/TaxPayer/TaxPayer";
 import BusinessCommitte from "./AboutPages/BsCommitte/BusinessCommitte";
 import CodeOfEthicsConduct from "./AboutPages/EthicsandConduct/CodeOfEthicsConduct";
 import ErsInternalAffairs from "./AboutPages/InterAffairs/ErsInternalAffairs";
+import Alliances from "./AboutPages/Alliances/Alliances";
 
 export default function About() {
   const arrowStyling = {
@@ -36,7 +37,7 @@ export default function About() {
   const heroSectionData = {
     title: "About Eswatini Revenue Service",
     description:
-      "The Eswatini Revenue Service (ERS) is a semi-autonomous revenue administration agency, established through the Revenue Authority Act No. 1 of 2008. It operates within the broad framework of Government but outside of the civil service.The ERS is structured as a corporate entity and strives for operational excellence and efficiency. It is headed by a Commissioner General, Mr Dumsani E. Masilela and is organised on functional lines – this link provides more details. The ERS has a Governing Board which is appointed by the Honorable Minister of Finance in accordance with the Eswatini Public Enterprise Act, and read with the founding Act.In furtherance of our mandate, as well as in working towards adopting best practice, the ERS is a member of various international organisations, such as the World Customs Organization (WCO); the Commonwealth Association of Tax Administrators (CATA) and the African Tax Administration Forum (ATAF). Alliances with established revenue agencies such as the South African Revenue Service (SARS), the Lesotho Revenue Authority (LRA) and the Zambia Revenue Authority (ZRA) have also been pursued to this end.",
+      "The Eswatini Revenue Service (ERS) is a semi-autonomous revenue administration agency. It was set up through the Eswatini Revenue Authority Act, 2008 (as amended). The ERS works within the broad framework of Government but outside of the civil service.The ERS is structured as a corporate entity and strives for operational excellence and efficiency. The organization is headed by a Commissioner General – Mr Brightwell Nkambule since 2022. ERS has a Governing Board appointed by the Honourable Minister of Finance.",
   };
 
   return (
@@ -92,9 +93,7 @@ export default function About() {
         sx={{ margin: { xs: "3rem auto", lg: "3rem auto 0" } }}
       >
         <Stack width="100%" data-aos="fade-up-right">
-          <Typography variant="h1" my=".5rem">
-            About Eswatini Revenue Service
-          </Typography>
+          
           <Typography className="Pointsformatting" variant="body1">
             <Image
               src={estwaniimg}
@@ -103,6 +102,9 @@ export default function About() {
               alt="about estwani vat"
               className={styles.about_img}
             />
+            <Typography variant="h1" my=".5rem">
+            About Eswatini Revenue Service
+          </Typography>
             {heroSectionData.description}
           </Typography>
 
@@ -121,6 +123,11 @@ export default function About() {
       <CouncilMember h2Styling={h2Styling} arrowStyling={arrowStyling} />
 
       {/*Council Memeber section End here*/}
+
+
+      {/* Alliance section */}
+      <Alliances h2Styling={h2Styling} arrowStyling={arrowStyling}/>
+      {/* Alliance section end */}
 
       <StrategicTheme h2Styling={h2Styling} />
 

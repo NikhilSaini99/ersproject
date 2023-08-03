@@ -34,7 +34,7 @@ const Mandate = ({ h2Styling, arrowStyling }) => {
           sx={{  fontWeight: "bold" }}
           className="Pointsformatting"
         >
-          Our Mandate as stated in the Revenue Authority Act, 2008 includes:
+          We get our mandate from the Eswatini Revenue Authority Act, 2008 (as amended). The ERS mandate includes the following:
         </Typography>
         <ul style={{ }}>
           {mandateDatalist.map((item, index) => (

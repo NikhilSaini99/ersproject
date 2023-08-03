@@ -9,44 +9,70 @@ import Footer from "@/components/Footer";
 import { RiMailFill } from "react-icons/ri";
 import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill } from "react-icons/bs";
-import { IoLogoWhatsapp } from 'react-icons/io'
+import { IoLogoWhatsapp } from "react-icons/io";
 import Link from "next/link";
+import { Box, Paper, Typography } from "@mui/material";
 export default function Contact() {
+  const locations = [
+    { name: "Ngwenya", time: "24/7" },
+    { name: "Lavumisa", time: "07:00 - 22:00" },
+    { name: "Mahamba", time: "07:00 - 22:00" },
+    { name: "Sandlane", time: "08:00 - 18:00" },
+    { name: "Lomahasha", time: "07:00 - 12 Midnight" },
+    { name: "Mhlumeni", time: "06:00 - 12 Midnight" },
+    { name: "Mananga", time: "07:00 - 18:00" },
+    { name: "Matsamo", time: "07:00 - 20:00" },
+    { name: "Bulembu", time: "08:00 - 16:00" },
+    { name: "Lundzi", time: "08:00 - 16:00" },
+    { name: "Gege", time: "08:00 - 16:00" },
+    { name: "Sicunusa", time: "08:00 - 18:00" },
+    { name: "Nsalitje", time: "08:00 - 18:00" },
+    { name: "King Mswati III International Airport", time: "06:00 - 18:00" },
+    {
+      name: "Inland Container Depo-ICD (Matsapha-Eswatini Railways)",
+      time: "08:00 - 17:00",
+    },
+  ];
 
   const CentersData = [
     {
       title: "MANZINI SERVICE CENTRE",
       description:
         "Sivuno Building, Ground floor, adjacent to Estel House, Manzini MANZINI",
-      contact: '[+268] 2406 4050'
+      contact: "[+268] 2406 4050",
+      timing: "08:00 - 17:00",
     },
     {
       title: "MATSAPHA BRANCH",
       description: "Matsamo Shopping Complex (kaMahhala) MATSAPHA",
-      contact: '[+268] 2406 4050'
+      contact: "[+268] 2406 4050",
+      timing: "08:00 - 17:00",
     },
     {
       title: "MBABANE SERVICE CENTRE",
-      description:
-        "3rd Floor, Corporate Place, Swazi  Plaza MBABANE ",
-      contact: '[+268] 2406 4050'
+      description: "3rd Floor, Corporate Place, Swazi  Plaza MBABANE ",
+      contact: "[+268] 2406 4050",
+      timing: "08:00 - 17:00",
     },
     {
       title: "NHLANGANO BRANCH",
       description:
         "Old Skonkwane Building  Corner of 6th Street and 3rd Avenue NHLANGANO",
-      contact: '[+268] 2406 4050'
+      contact: "[+268] 2406 4050",
+      timing: "08:00 - 17:00",
     },
     {
       title: "PIGGS PEAK SERVICE CENTRE",
       description:
         "1st Floor, Supreme Building  Evelyn Baring Road  PIGGS PEAK",
-      contact: '[+268] 2406 4050 '
+      contact: "[+268] 2406 4050 ",
+      timing: "08:00 - 17:00",
     },
     {
       title: "SITEKI SERVICE CENTRE",
       description: "Mafumbe Building Jacaranda Road  SITEKI",
-      contact: '[+268] 2406 405'
+      contact: "[+268] 2406 405",
+      timing: "08:00 - 17:00",
     },
   ];
 
@@ -67,12 +93,15 @@ export default function Contact() {
       <section>
         <div className="relative">
           <div className="h-96">
-            <Image src={bgimg} alt=""
+            <Image
+              src={bgimg}
+              alt=""
               width={0}
               height={0}
               style={{
-                width: "100%", height: "100%",
-                objectFit: 'cover'
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
               }}
             />
           </div>
@@ -89,10 +118,8 @@ export default function Contact() {
 
       <section>
         <div className="px-10 flex">
-
           <div className="flex flex-col gap-8 bg-subColor text-[#f5f5f5] pl-10 pr-12 pt-9 pb-16 w-[32%]">
             <div className="flex flex-col gap-2">
-
               <h1 className="text-xl font-bold leading-6 mb-1">
                 Head Quarters
               </h1>
@@ -106,7 +133,9 @@ export default function Contact() {
               <p className="flex  gap-1">
                 <BsTelephoneFill className="text-xl" />
 
-                <span className="text-sm leading-6 font-normal">[+268] 2406 4000</span>
+                <span className="text-sm leading-6 font-normal">
+                  [+268] 2406 4000
+                </span>
               </p>
             </div>
             <div className="flex flex-col justify-start gap-2 pr-6">
@@ -122,29 +151,41 @@ export default function Contact() {
               <p className="flex  gap-1">
                 <BsTelephoneFill className="text-xl" />
 
-                <span className="text-sm leading-6 font-normal">[+268] 2406 4000</span>
+                <span className="text-sm leading-6 font-normal">
+                  [+268] 2406 4000
+                </span>
               </p>
               <p className="flex  gap-1">
                 <BsTelephoneFill className="text-xl" />
 
-                <span className="text-sm leading-6 font-normal">[+268] 2406 4000</span>
+                <span className="text-sm leading-6 font-normal">
+                  [+268] 2406 4000
+                </span>
               </p>
               <p className="flex  gap-1">
                 <IoLogoWhatsapp className="text-xl" />
-                <span className="text-sm leading-6 font-normal">WhatsApp-7606 3735</span>
+                <span className="text-sm leading-6 font-normal">
+                  WhatsApp-7606 3735
+                </span>
               </p>
 
               <p className="flex  gap-1">
                 <RiMailFill className="text-xl" />
 
-                <span className="text-sm leading-6 font-normal">info@ers.org.sz</span>
+                <span className="text-sm leading-6 font-normal">
+                  info@ers.org.sz
+                </span>
               </p>
-              <Link href={' '}>
-                <button type="button" className="rounded-full bg-[#f4c402] w-[10rem] p-2 text-black text-bold">Get Directions</button>
+              <Link href={" "}>
+                <button
+                  type="button"
+                  className="rounded-full bg-[#f4c402] w-[10rem] p-2 text-black text-bold"
+                >
+                  Get Directions
+                </button>
               </Link>
             </div>
           </div>
-
 
           <div className="px-[40px] pt-9 bg-[#F5F5F5] w-[68%]">
             <h1 className="text-xl text-mainColor font-bold leading-8">
@@ -158,11 +199,68 @@ export default function Contact() {
                   title={item.title}
                   description={item.description}
                   contact={item.contact}
+                  timing={item.timing}
                 />
               ))}
             </div>
           </div>
         </div>
+
+        <Box sx={{ my: "2rem" }} className="px-10">
+          <Typography
+            variant="h5"
+            sx={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              color: "#2F248F",
+              marginY: "1rem",
+            }}
+          >
+            Border Operations
+          </Typography>
+
+          <Box
+            sx={{
+              display: "flex",
+              gap: "1rem",
+              flexWrap: "wrap",
+              flex: "1 1 0",
+            }}
+          >
+            {locations.map((item, index) => (
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                  p: "1rem",
+                  mt: "2rem",
+                  border: "2px solid",
+                  flexWrap: "wrap",
+                  width: "350px",
+                }}
+                key={index}
+              >
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                  <Typography
+                    variant="body1"
+                    fontWeight="bold"
+                    sx={{ flexGrow: "1" }}
+                  >
+                    Post Name:
+                  </Typography>
+                  <Typography variant="body1">{item.name}</Typography>
+                </Box>
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                  <Typography variant="body1" fontWeight="bold">
+                    Operational Hours:
+                  </Typography>
+                  <Typography variant="body1">{item.time}</Typography>
+                </Box>
+              </Box>
+            ))}
+          </Box>
+        </Box>
         {/* Map */}
 
         <div className="px-10 py-8">
@@ -176,8 +274,6 @@ export default function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-
-
       </section>
 
       {/*------------------Social Media-------------------*/}

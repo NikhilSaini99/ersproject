@@ -1,12 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill } from "react-icons/bs";
 import { Button, Stack, Typography } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
-
-
 import CalculateIcon from '@mui/icons-material/Calculate';
 import TableChartIcon from '@mui/icons-material/TableChart';
 import PaymentsOutlinedIcon from '@mui/icons-material/PaymentsOutlined';
@@ -15,6 +12,7 @@ import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import WatchLaterIcon from '@mui/icons-material/WatchLater';
 
 const Icons = () => {
   const iconStyling = {
@@ -117,7 +115,7 @@ function News({ icon, description, img }) {
 
 
 
-function Centers({ title, description, contact }) {
+function Centers({ title, description, contact,timing }) {
   return (
     <>
       <Stack direction={'column'} sx={{ justifyContent: 'space-between' }} spacing={1}>
@@ -127,6 +125,10 @@ function Centers({ title, description, contact }) {
         <Stack direction={'row'} spacing={1}>
           <HomeIcon sx={{ fontSize: { xs: '1.2rem', lg: '1.65rem' } }} />
           <Typography variant="subtitle2" sx={{ fontSize: { xs: '0.7rem', lg: '0.8rem' } }}>{description}</Typography>
+        </Stack>
+        <Stack direction={'row'} spacing={2}>
+          <WatchLaterIcon className="sm:text-1xl xl:text-xl" />
+          <Typography variant="subtitle2" sx={{ fontSize: { xs: '0.7rem', lg: '0.8rem' } }}>{timing}</Typography>
         </Stack>
         <Stack direction={'row'} spacing={2}>
           <BsTelephoneFill className="sm:text-1xl xl:text-xl" />
