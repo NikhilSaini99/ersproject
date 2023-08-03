@@ -82,7 +82,7 @@ const SelfAssessment = () => {
         },
         {
             question: 'What are the implications of self-assessment?',
-            answer: 'Taxpayers are given the role of assessing themselves to determine their tax liability  Keeping of business records remains a compliance requirement\nPayment are to be made on or before the return submission due date.',
+            answer: 'Taxpayers are given the role of assessing themselves to determine their tax liability. Keeping of business records remains a compliance requirement. \nPayment are to be made on or before the return submission due date.',
 
         },
     ]
@@ -101,7 +101,7 @@ const SelfAssessment = () => {
         },
         {
             title: 'TAXPAYER’S OBLIGATIONS UNDER SELF-ASSESSMENT',
-            points: ['To be honest when computing their tax liability; penalty is charged for fraudulent declarations.',
+            points: ['To be honest when computing their tax liability penalty is charged for fraudulent declarations.',
                 'To submit tax returns on or before the due date. If the last day of submitting returns falls on a public holiday or weekend, the return must be submitted on the last working day prior to the public holiday or weekend. Late return submission attracts late submission penalties.',
                 'To pay Provisional Tax on or before the due date. The first payment must be made within six months from the commencement of the year of assessment (July each year) or approved financial year-end date; the second payment must be made not later than the last day of the year of assessment or approved financial year-end date; and the third payment must be paid on or before the due date of the tax return. Interest is imposed on late payments.',
                 'To reference payments correctly.',

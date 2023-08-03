@@ -71,7 +71,7 @@ const ZeroRated = () => {
             ]
         },
         {
-            mainHead: 'The provisions of sub-article (I)',
+            mainHead: 'The provisions of sub-article (I) ',
             subpoints: [
                 {
                     text: 'Shall be applicable only below',

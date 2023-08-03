@@ -105,15 +105,15 @@ const IncomeTaxReturn = () => {
                     <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
                         Income Tax Returns</Typography>
 
-                    <Typography variant='body1' my='1rem' className="Pointsformatting">Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayers finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year; for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
+                    <Typography variant='body1' my='1rem' className="Pointsformatting">Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayers finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
                         {<br></br>}
                         Every year the Commisisoner General publishes a notice calling for income tax returns; click HERE to view the current notice.
                     </Typography>
 
 
                     {ITRdata.map((item, index) => (
-                        <Box key={index} sx={{ my: '1rem' }}>
-                            <Typography variant='body1' fontWeight='bold' mb='1rem' className="Pointsformatting">{item.title}</Typography>
+                        <Box key={index} sx={{ mt: '1.5rem', mb:'0.5rem' }}>
+                            <Typography variant='body1' fontWeight='bold' mb='0.5rem' className="Pointsformatting">{item.title}</Typography>
                             {item.note && <Typography variant='body1' className="Pointsformatting">{item.note}</Typography>}
                             <ul className='custom-list'>
                                 {item.points.map((point, index) => (

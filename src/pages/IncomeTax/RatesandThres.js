@@ -43,11 +43,7 @@ const RatesandThres = () => {
     ];
 
     const concessionarytaxTable = [
-        {
-            exceeds: "Exceeds",
-            doesNotExceed: "Does not exceed",
-            rates: "Rates"
-        },
+    
         {
             exceeds: "E0",
             doesNotExceed: "E200 000",
@@ -173,12 +169,12 @@ const RatesandThres = () => {
                         Rates and Thresholds</Typography>
 
                     {/* <Typography variant='body1' my='1rem'>The rates of Income Tax applicable are as follows</Typography> */}
-                    <Typography variant='h6' my='1rem' fontWeight='bold'>Rates of normal TAX for individual</Typography>
+                    <Typography variant='h6' mt='1rem' fontWeight='bold'>Rates of normal TAX for individual</Typography>
 
 
                     {/*  ---------------------------------table 1--------------------------------- */}
                     <Box>
-                        <Paper elevation={20} sx={{ margin: '2rem auto' }}>
+                        <Paper elevation={20} sx={{ margin: '1rem auto' }}>
                             <TableContainer>
                                 <Table sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }} aria-label="Form Table">
                                     <TableHead>
@@ -239,16 +235,16 @@ const RatesandThres = () => {
 
                     </ul>
 
-                    <Typography variant='h6' my='1rem' fontWeight='bold' >Concessionary Rates Of Normal TAX In The Case of Redundant Or Retiring Individuals</Typography>
+                    <Typography variant='h6' mt='1.5rem' fontWeight='bold' >Concessionary Rates Of Normal TAX In The Case of Redundant Or Retiring Individuals</Typography>
 
                     {/*  ---------------------------------table 2--------------------------------- */}
-                    <Paper elevation={20} sx={{ margin: '2rem auto', }}>
+                    <Paper elevation={20} sx={{ margin: '1rem auto', }}>
                         <TableContainer >
                             <Table sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }} aria-label="Form Table">
                                 <TableHead>
                                     <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { fontWeight: 'bold !important', textAlign: 'center !important', color: 'white !important', fontSize: '1rem !important' } }}>
                                         <TableCell colSpan={2}>Taxable Income </TableCell>
-                                        <TableCell rowSpan={2} sx={{ borderBottom: 'none' }}>Rates</TableCell>
+                                        <TableCell rowSpan={2} sx={{ borderBottom: 'none' }}></TableCell>
                                     </TableRow>
 
                                 </TableHead>
@@ -256,7 +252,7 @@ const RatesandThres = () => {
                                     <TableRow sx={{ backgroundColor: '#2f2483', '& > *': { fontWeight: 'bold !important', textAlign: 'center !important', color: 'white !important', fontSize: '1rem !important' } }}>
                                         <TableCell>Exceeds</TableCell>
                                         <TableCell>Does not exceed</TableCell>
-                                        <TableCell></TableCell>
+                                        <TableCell>Rates</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody >
@@ -283,11 +279,17 @@ const RatesandThres = () => {
                     </Paper>
                     <Typography variant='body1'  className='Pointsformatting'>Tax rebate in respect of individuals over the age of 60 years is E2 700 in excess of the normal rebate</Typography>
 
+                    <Typography variant='h6' mt='1.5rem' mb="0.5rem" fontWeight='bold' textAlign='left'>BENEFITS</Typography>
+                    <Typography variant='body1'  className='Pointsformatting'><Link href={"/IncomeTax/Taxationandbenefit"}> Click here </Link> for information on the taxation of benefits.</Typography>
+                    
+                    <Typography variant='h6' mt='1.5rem' mb="0.5rem" fontWeight='bold' textAlign='left'>TAX RATE FOR COMPANIES</Typography>
+                    <Typography variant='body1'  className='Pointsformatting'>The effective tax rate for companies (since the 1st July 2013) is 27.5% of taxable income.</Typography>
 
-                    <Typography variant='h6' my='1rem' fontWeight='bold' textAlign='left'>Withholding TAX</Typography>
+                    
+                    <Typography variant='h6' mt='1.5rem' fontWeight='bold' textAlign='left'>Withholding TAX</Typography>
 
                     {/* ---------------------------------table 3--------------------------------- */}
-                    <Paper elevation={20} sx={{ margin: '2rem auto', }}>
+                    <Paper elevation={20} sx={{ margin: '1rem auto', }}>
                         <TableContainer >
                             <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' }, borderRadius: '10px' }}>
                                 <TableHead>
@@ -319,13 +321,12 @@ const RatesandThres = () => {
                     </Paper>
 
                     <Typography variant="body1" sx={{
-                        color: '#2f2483', fontWeight: 'bold', my: '2rem',
-                        border: '0.5px solid grey'
-                    }} className='Pointsformatting'>
+                        fontWeight: 'bold', mt: '3rem',
+                       }} className='Pointsformatting'>
                         NB: The above stated Rates are influenced by Double Tax Agreement applicable</Typography>
 
                     {/* ---------------------------------table 4--------------------------------- */}
-                    <Paper elevation={20} sx={{ margin: '2rem auto' }}>
+                    <Paper elevation={20} sx={{ margin: '1rem auto' }}>
                         <TableContainer >
                             <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
                                 <TableHead>

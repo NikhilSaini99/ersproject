@@ -165,7 +165,7 @@ const GuidePublicOfficer = () => {
                         The Income Tax Order of 1975 as amended requires that a company carrying on business in Swaziland appoints a Public Officer to represent the company in all their tax obligations.
                     </Typography>
                     <Typography variant="body1" className='Pointsformatting '>
-                        In terms of Section 51(2) of the Order, a public officer shall be appointed by:
+                        In terms of Section 51(2) of the Order, a public officer shall be appointed by
                     </Typography>
 
                     

@@ -65,7 +65,8 @@ const Paye = () => {
             description: 'The Commissioner General may estimate the amount of employees’ tax',
             points: ['Where the employer fails to submit the PAYE Monthly Deduction Returns on due dates',
                 'Where the employer fails to deduct or withhold the correct amount of employees’ tax;',
-                'Where the employer fails to pay over the employees’ tax deducted on due dates.',]
+                'Where the employer fails to pay over the employees’ tax deducted on due dates.',],
+            note: 'NB. Any estimate of the amount of employees’ tax is subject to objection and appeal.'
         },
 
         {
@@ -86,7 +87,9 @@ const Paye = () => {
             description: 'Where any payment is made by an employer in respect of employees’ tax, such payment will be allocated in the following manner',
             points: ['In respect of penalty, (where the return or payment was received late)',
                 'In respect of interest, to the extent to which the payment exceeds the amount of penalty',
-                'In respect of employees’ tax, to the extent to which the payment exceeds the amount of interest.']
+                'In respect of employees’ tax, to the extent to which the payment exceeds the amount of interest.'],
+            note: 'Where there is a shortfall after the allocation of penalties and interest and the outstanding tax has not been covered in full, interest will continue to accrue on the outstanding tax.'
+
         },
 
         {
@@ -221,9 +224,9 @@ const Paye = () => {
                 <Typography variant="body1" className="Pointsformatting mb-4">
                     The following are the rates of tax to be levied, in the case of employees, for the year of assessment ending 30th June 2014
                 </Typography>
-                <p className="Pointsformatting font-bold mt-4"> RATES OF NORMAL TAX FOR INDIVIDUALS FOR 2013/2014</p>
+                <p className="Pointsformatting font-bold mt-6"> RATES OF NORMAL TAX FOR INDIVIDUALS FOR 2013/2014</p>
 
-                <Paper elevation={20} sx={{ margin: '2rem auto' }}>
+                <Paper elevation={20} sx={{ margin: '1rem auto' }}>
                     <TableContainer >
                         <Table sx={{ border: '0.5px solid grey', '& th, & td': { border: '0.5px solid grey' } }}>
                             <TableHead>
@@ -257,7 +260,7 @@ const Paye = () => {
                     <Box key={index}>
                         <Typography variant='body1' sx={{ fontWeight: 'bold', pb: '0.3rem' }} className='Pointsformatting'>{item.mainHead}</Typography>
                         {item.description ? <Typography variant='body1' className='Pointsformatting pb-4'>{item.description}</Typography> : null}
-                        {item.points ? <ul className='custom-list pb-4 Pointsformatting'>
+                        {item.points ? <ul className='custom-list pb-0 Pointsformatting'>
                             {item.points.map((subpoint, index) => (
                                 <div key={index} className='flex gap-1 items-start pb-2'>
                                     <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
@@ -265,7 +268,7 @@ const Paye = () => {
                                 </div>
                             ))}
                         </ul> : null}
-                        {item.note ? <Typography variant='body1' className='Pointsformatting py-4'>{item.note}</Typography> : null}
+                        {item.note ? <Typography variant='body1' className='Pointsformatting pb-4'>{item.note}</Typography> : null}
                     </Box>
                 ))}
 

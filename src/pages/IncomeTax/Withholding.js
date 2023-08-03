@@ -92,8 +92,11 @@ export default function Withholding() {
                 <p className="  tracking-wide Pointsformatting">{item.description2} </p>
 
                 
-                
-                <p className="tracking-wide Pointsformatting">{item.point}</p>
+                {/* <p className="tracking-wide Pointsformatting">{item.point}</p> */}
+                {item.point1&&<div className='flex gap-1 items-start'>
+                <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                <p className="  tracking-wide Pointsformatting">{item.point}</p>
+                </div>}
                 
                {item.point1&&<div className='flex gap-1 items-start'>
                 <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>

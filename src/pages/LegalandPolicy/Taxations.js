@@ -16,6 +16,14 @@ import {
 import Image from "next/image";
 import Banner from "../../assets/images/Double_Taxation_Agreements.jpg";
 import bgimg from "../../assets/images/pagebackground1.jpg";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+
+const arrowStyling = {
+  color: '#2f2483',
+  fontSize: '1rem',
+  marginRight: '0.5rem'
+}
 
 const Taxations = () => {
   const countries = [
@@ -150,8 +158,10 @@ const Taxations = () => {
                   <li>
                     In force
                     <ul className="custom-list">
-                      <li>Isle of Man</li>
-                      <li>States of Guernsey</li>
+                    <li className="Pointsformatting"> <ArrowForwardIosIcon sx={arrowStyling} />
+                     Isle of Man</li>
+                      <li className="Pointsformatting"><ArrowForwardIosIcon sx={arrowStyling} />
+                      States of Guernsey</li>
                     </ul>
                   </li>
                 </ol>

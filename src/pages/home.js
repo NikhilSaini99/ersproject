@@ -338,8 +338,10 @@ export default function Home() {
             <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]    justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Approved Practice Notes</p>
-                <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
-                Click to view approved practice notes to assist with simplifying the application of law.
+                <ul className="list-disc pl-[0rem] text-base flex flex-col gap-0 pt-0">
+                <Typography className="list-disc pl-[0rem] text-base flex-col gap-0 pt-6 "><Link href={"/LegalandPolicy/Notes_Guidelines"}> Click to view </Link> approved practice notes to assist with simplifying the application of law.
+                </Typography>
+                {/* <Link href={"/LegalandPolicy/Notes_Guidelines"}> Click to view </Link> approved practice notes to assist with simplifying the application of law. */}
                 </ul>
               </div>
 
