@@ -93,7 +93,6 @@ export default function About() {
         sx={{ margin: { xs: "3rem auto", lg: "3rem auto 0" } }}
       >
         <Stack width="100%" data-aos="fade-up-right">
-          
           <Typography className="Pointsformatting" variant="body1">
             <Image
               src={estwaniimg}
@@ -103,8 +102,8 @@ export default function About() {
               className={styles.about_img}
             />
             <Typography variant="h1" my=".5rem">
-            About Eswatini Revenue Service
-          </Typography>
+              About Eswatini Revenue Service
+            </Typography>
             {heroSectionData.description}
           </Typography>
 
@@ -124,9 +123,8 @@ export default function About() {
 
       {/*Council Memeber section End here*/}
 
-
       {/* Alliance section */}
-      <Alliances h2Styling={h2Styling} arrowStyling={arrowStyling}/>
+      <Alliances h2Styling={h2Styling} arrowStyling={arrowStyling} />
       {/* Alliance section end */}
 
       <StrategicTheme h2Styling={h2Styling} />
@@ -186,6 +184,28 @@ export default function About() {
       </Box>
 
       <ErsInternalAffairs h2Styling={h2Styling} arrowStyling={arrowStyling} />
+
+      {/* PO Terms and condition */}
+      <Box
+        width={"95%"}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1.5rem",
+          p: "1.5rem",
+          background: "#F9F9FA",
+          margin: { xs: "3rem auto 1rem", lg: "3rem auto 3rem" },
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <Typography variant="body1" className="Pointsformatting">
+          <Link href="http://www.sra.org.sz/documents/1606378935.pdf">
+            <b style={{color:"#2F248F"}}>Click here</b>{" "}
+          </Link>
+          to download the Standard Terms and Conditions of Supply of Goods and
+          Services.
+        </Typography>
+      </Box>
 
       {/*-----------------------Footer---------------------*/}
 
