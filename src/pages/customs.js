@@ -34,22 +34,22 @@ export default function Customs() {
       img: Asycuda,
       title: "Asycuda World",
       description:
-        "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
+        "ASYCUDA is a computerized customs management system which covers most foreign trade procedures.",
     },
     {
       id: 2,
       img: Advance,
       title: "Advance Rolling",
       description:
-        "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
+        "ERS has implemented Advance Rulings in terms of the WTO Agreement on Trade Facilitation (TFA). Advance Rulings allow trade to apply for an official written descision by ERS prior to import or export on Tariff Classification, Origin or Valuation.",
     },
-    {
-      id: 3,
-      img: education,
-      title: "Tariff",
-      description:
-        "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
-    },
+    // {
+    //   id: 3,
+    //   img: education,
+    //   title: "Tariff",
+    //   description:
+    //     "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
+    // },
   ];
 
   const CustomData2 = [
@@ -58,21 +58,21 @@ export default function Customs() {
       img: Browse,
       title: "Tariff Browse",
       description:
-        "The Tariff Browse function is used to easily browse through the Customs Tariff by section and chapter and view all the classification notes.",
+        "The Tariff Browse function is used to easily browse through the Customs Tariff by section and chapter and view all the classification notes. If you have an idea of the section and chapter but are not sure of the actual tariff code, the Tariff Browse function will be most useful. It is kept up to date in real-time and removes the requirement to update a paper-based version of a Tariff book and the associated costs.",
     },
     {
       id: 5,
       img: Duty,
       title: "Duty Estimator",
       description:
-        "Estimate Customs and Excise Duties using the Duty Estimator. This function removes the need for any manual calculations and allows for more accurate costing.",
+        "Estimate Customs and Excise Duties using the Duty Estimator. This function removes the need for any manual calculations and allows for more accurate costing. Enter the relevant tariff code, select the country of origin (manufacture) and the system will generate the estimated duties based on the date you select. It also allows you to look at future dates when tariff code amendments come into effect and calculates the estimated duties which will be applicable.",
     },
     {
       id: 6,
       img: Search,
       title: "Tariff Search",
       description:
-        "The Tariff Search allows for targeted way of searching by tariff code. Tariff classification of goods is one of the more complex issues under the Customs and Excise Act.",
+        "The Tariff Search allows for a more targeted way of searching by keyword or tariff code. You can search by specific tariff codes or keywords and can access the relevant information at the click of a button.",
     },
   ];
 
@@ -240,14 +240,22 @@ export default function Customs() {
       </section>
 
       {/*-----------------------Customs---------------------*/}
+
       <Box
         sx={{
-          width: { xs: "96%", md: "98%", lg: "80%", xl: "70%" },
+          width: { xs: "100%", md: "98%", lg: "50%", xl: "60%" },
           margin: { xs: "0 auto" },
         }}
       >
         <BoxWithAnimation dataArr={CustomData} />
+      </Box>
 
+      <Box
+        sx={{
+          width: { xs: "100%", md: "98%", lg: "80%", xl: "70%" },
+          margin: { xs: "0 auto" },
+        }}>
+    
         <Divider sx={{ my: { xs: "3rem", lg: "6rem", xl: "8rem" } }} />
         <BoxWithAnimation dataArr={CustomData2} />
       </Box>

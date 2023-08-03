@@ -4,7 +4,8 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Table from "@/components/Table";
-import Banner from "../assets/images/e-customs.jpg"
+import Banner from "../assets/images/tax.jpg"
+import {Box} from '@mui/material'
 
 export default function CustomsForms() {
   return (
@@ -21,10 +22,16 @@ export default function CustomsForms() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <section>
-        <Image src={Banner} alt="..." className="h-96 w-full" />
-      </section>
-
+      <Box sx={{height:{xs:'15rem',lg:'25rem',xs:'30rem'}}}>
+      <Image src={Banner} alt="etax"
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
+      </Box>
       {/*-----------------------Table---------------------*/}
 
       <Table title={"Customs & Excise Forms"}/>

@@ -10,6 +10,7 @@ import ETax from "../assets/images/e-tax.jpg";
 import ECoustoms from "../assets/images/e-customs.jpg";
 import Tax from "../assets/images/e-tax_logo.png";
 import Customs from "../assets/images/eCustoms_Tariff_Logo.png";
+import TCC from "../assets/images/tcc.png";
 import CSR from "../assets/images/CSR.jpg";
 import calculator from "../assets/icons/calculator.png";
 import barcode from "../assets/icons/barcode.png";
@@ -28,7 +29,7 @@ import { Icons } from "@/components/homecard";
 import DatasetLinkedOutlinedIcon from '@mui/icons-material/DatasetLinkedOutlined';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
-
+import { Box, Typography } from '@mui/material'
 
 
 
@@ -170,8 +171,6 @@ export default function Home() {
           link: "/StrategicPlans",
           para2: "Annual Reports",
           link2: "/AnnualReports",
-          para3: "Customer Perception Survey",
-          link3: "",
         },
         {
           id: 2,
@@ -203,7 +202,12 @@ export default function Home() {
       description:
         '"e-Tax is an electronic platform through which taxpayers are required to submit VAT, PAYE, Income Tax and Provisional Tax returns."',
     },
-
+    {
+      img: ECoustoms,
+      icon: TCC,
+      description:
+        '"Click on this tab to access your Instant TCC platform. If you don’t qualify, please visit the nearest ERS Service Centre to resolve possible outstanding issues."',
+    },
     {
       img: ECoustoms,
       icon: Customs,
@@ -267,7 +271,7 @@ export default function Home() {
           </h1>
           <div className="border w-24 md:w-56 border-yellowish mt-2"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12 mt-6   md:px-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12 mt-6 md:px-32">
           {NewsData.map((item, key) => (
             <News
               key={key}
@@ -335,9 +339,7 @@ export default function Home() {
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Approved Practice Notes</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
-                  <li>
-                    Click here to download approved practice notes and guidelines
-                  </li>
+                Click to view approved practice notes to assist with simplifying the application of law.
                 </ul>
               </div>
 
@@ -426,9 +428,8 @@ export default function Home() {
             <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]    justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Current Vacancies</p>
-                
-                <p className="list-disc pl-[0rem] text-base flex flex-col gap-3 pt-6"> Click here to visit our job portal for vacancy announcements as they become available from ERS.
-                </p>
+                <Typography className="list-disc pl-[0rem] text-base flex-col gap-3 pt-6 "><Link href={"https://ers.mcidirecthire.com/external/currentopportunities"}> Click here </Link> to visit our job portal for vacancy announcements as they become available from ERS.
+                </Typography>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
                 </ul>
               </div>

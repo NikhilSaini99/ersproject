@@ -545,16 +545,22 @@ export default function Header() {
                               <div>
                                 <Link href={"/VatForms"} className="lineclamping line">
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish  text-slate-400 checking">
-                                    VAT Refunds for Diplomats,  Diplomatic
-                                    and Consular Missions & International
-                                    Organizations Printable
+                                  VAT Refunds for Diplomats, Diplomatic and Consular Missions & International Organizations Printable
                                   </p>
                                 </Link>
                                 <Link href={"/VatForms"} className="lineclamping line">
-                                  <p className="text-sm leading-6 font-normal my-3 cursor-pointer hover:text-yellowish  checking">
-                                    VAT Refunds for Diplomats,  Diplomatic
-                                    and Consular  Missions & International{" "}
-                                    Organizations
+                                  <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
+                                    VAT Refunds for Diplomats,  Diplomatic and Consular  Missions & International Organizations
+                                  </p>
+                                </Link>
+                                <Link href={"/VatForms"} className="lineclamping line">
+                                  <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
+                                  VAT Return
+                                  </p>
+                                </Link>
+                                <Link href={"/VatForms"} className="lineclamping line">
+                                  <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
+                                  VAT Deregistration Form
                                   </p>
                                 </Link>
                                 <Link href={"/VatForms"} className="lineclamping line">
@@ -574,18 +580,28 @@ export default function Header() {
                               </h1>
                               <Link href={"/IncomeForms"} className="lineclamping line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
-                                  Notice of Objection  Form Printable
+                                  Notice of Objection Form Printable
                                 </p>
                               </Link>
                               <Link href={"/IncomeForms"} className="lineclamping line">
-                                <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish  checking">
+                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
+                                  Taxpayer Profile Maintenance Form
+                                  Individuals
+                                </p>
+                              </Link>
+                              <Link href={"/IncomeForms"} className="lineclamping line">
+                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
                                   TIN Registration Form Company
                                 </p>
                               </Link>
                               <Link href={"/IncomeForms"} className="lineclamping line">
+                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
+                                Taxpayer Profile Maintenance Form Company
+                                </p>
+                              </Link>
+                              <Link href={"/IncomeForms"} className="lineclamping line">
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
-                                  Taxpayer Profile Maintenance  Form
-                                  Individuals
+                                Non-Active Entity Declaration Form
                                 </p>
                               </Link>
                               <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
@@ -604,9 +620,19 @@ export default function Header() {
                                 </p>
                               </Link>
                               <Link href={"/CustomsForms"} className="lineclamping line">
-                                <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish  checking">
+                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
                                   CE 101 Declaration on Transfer of {" "}
                                   Residence
+                                </p>
+                              </Link>
+                              <Link href={"/CustomsForms"} className="lineclamping line">
+                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
+                                Certificate A
+                                </p>
+                              </Link>
+                              <Link href={"/CustomsForms"} className="lineclamping line">
+                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
+                                Baggage Declaration Form E VRA
                                 </p>
                               </Link>
                               <Link href={"/CustomsForms"} className="lineclamping line">
@@ -714,7 +740,7 @@ export default function Header() {
                             <div className="flex flex-col sub_items_text_color">
 
                               <div>
-                                <h1 className="text-xl font-bold leading-8 mb-3">
+                                <h1 className="text-xl font-bold leading-8 mb-0">
                                   News
                                 </h1>
                                 <div>
@@ -723,6 +749,20 @@ export default function Header() {
                                       <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
                                         Authorised Economic
                                         Operator Accreditation
+                                      </p>
+                                    </Link>
+                                  </div>
+                                  <div>
+                                    <Link href={"/news"} className="line">
+                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
+                                        ERS Donates To Ekululameni Center
+                                      </p>
+                                    </Link>
+                                  </div>
+                                  <div>
+                                    <Link href={"/news"} className="line">
+                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
+                                        ERS Add TCC System
                                       </p>
                                     </Link>
                                   </div>
@@ -755,7 +795,21 @@ export default function Header() {
                                 <div>
                                   <Link href={"/gallery"} className="line">
                                     <p className="text-sm font-normal cursor-pointer  hover:text-yellowish ">
-                                      Income Tax Mobile  Clinic
+                                      Lomahasha Border  Hours Extension
+                                    </p>
+                                  </Link>
+                                </div>
+                                <div>
+                                  <Link href={"/gallery"} className="line">
+                                    <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
+                                      PM Submits Income Tax  Returns
+                                    </p>
+                                  </Link>
+                                </div>
+                                <div>
+                                  <Link href={"/gallery"} className="line">
+                                    <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
+                                    Income Tax Mobile Clinic
                                     </p>
                                   </Link>
                                 </div>
@@ -769,7 +823,7 @@ export default function Header() {
                                 <div>
                                   <Link href={"/gallery"} className="line">
                                     <p className="text-sm  mt-3 cursor-pointer  hover:text-yellowish ">
-                                      Lomahasha Border  Hours Extension
+                                    Income Tax Mobile  Clinic
                                     </p>
                                   </Link>
                                 </div>
@@ -786,6 +840,30 @@ export default function Header() {
                               <div>
                                 <Link href={"/videos"} className="line">
                                   <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
+                                    ERS Public
+                                    Meeting in Ezulmini Center
+                                  </p>
+                                </Link>
+                              </div>
+                              <div>
+                                <Link href={"/videos"} className="line">
+                                  <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
+                                    ERS Public
+                                    Meeting in Ezulmini
+                                  </p>
+                                </Link>
+                              </div>
+                              <div>
+                                <Link href={"/videos"} className="line">
+                                  <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
+                                  Pay your Tax
+                                    in Three Steps
+                                  </p>
+                                </Link>
+                              </div>
+                              <div>
+                                <Link href={"/videos"} className="line">
+                                  <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
                                     ERS Public
                                     Meeting in Ezulmini
                                   </p>
