@@ -36,6 +36,12 @@ module.exports = {
         sans: ['ui-sans-serif', 'system-ui', '-apple-system','Arial Regular', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue',  'Noto Sans', 'sans-serif'],
       },
     },
+    gridAutoColumns:{
+      auto: 'auto-fit',
+      min: 'min-content',
+      max: 'max-content',
+      fr: '1fr',
+    }
   },
   plugins: [
     require('tailwindcss-textshadow'),

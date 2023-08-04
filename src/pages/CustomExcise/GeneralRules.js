@@ -65,28 +65,33 @@ export default function GeneralRules() {
             <h1 className="text-3xl font-semibold mt-4">{data.title1}</h1>
             <h1 className="text-md font-semibold mt-4">{data.title2}</h1>
             <ul className="mt-2">
-              {data.description.map((desc) => (
+              {data.description.map((desc,index) => (
+                 <div key={index} className='flex gap-1 items-start pb-2'>
+                 <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
                 <li
-                  key={desc}
 
-                  className="mx-1 lightBlack starclass"
+                  className="mx-1 lightBlack"
                 >
                   {desc}
                 </li>
+                </div>
               ))}
             </ul>
           </div>
+
           <div className=" mt-4 ">
             <h1 className="text-md font-semibold">{data1.title}</h1>
-            <ul className="mt-3">
-              {data1.description.map((desc) => (
+            <ul className="mt-2">
+              {data1.description.map((desc,index) => (
+                 <div key={index} className='flex gap-1 items-start pb-2'>
+                 <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
                 <li
-                  key={desc}
 
-                  className="mx-1 mt-1 lightBlack starclass"
+                  className="mx-1  lightBlack "
                 >
                   {desc}
                 </li>
+                </div>
               ))}
             </ul>
           </div>
@@ -97,14 +102,16 @@ export default function GeneralRules() {
             <hr className=" border-1 text-zinc-500  w-full my-10"></hr>
             <h1 className="text-md font-semibold mt-8 ">{data4.title2}</h1>
             <ul>
-              {data4.description.map((desc) => (
+              {data4.description.map((desc,index) => (
+                 <div key={index} className='flex gap-1 items-start pb-2'>
+                 <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
                 <li
-                  key={desc}
 
-                  className="mx-1 lightBlack starclass"
+                  className="mx-1 lightBlack"
                 >
                   {desc}
                 </li>
+                </div>
               ))}
             </ul>
             <h1 className="text-lg mt-4 text-justify font-semibold ">{data4.title5}<span className="lightBlack font-normal"> {data4.title3}</span></h1>
@@ -119,11 +126,6 @@ export default function GeneralRules() {
                 <p className="mt-2 text-justify font-semibold">{data2.title1}<span className="lightBlack font-normal">{data2.description}</span></p>
               </div>
             </div>
-            {/* <div className="mt-10 w-[60%] mx-6">
-              <Paper elevation={20} sx={{ borderRadius: '25px', float: 'right' }} >
-                <Image src={Custom} alt="..." className="h-[55%] w-full rounded-xl" />
-              </Paper>
-            </div> */}
           </div>
 
           <div className=" mt-8 ">

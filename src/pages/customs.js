@@ -99,8 +99,6 @@ export default function Customs() {
                     "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(244, 196, 2) 0px 0px 0px 2px",
                 }),
               }}
-              onMouseEnter={() => handleHoverEffect(item.id)}
-              onMouseLeave={handleHoverExit}
             >
               <Box
                 sx={{
@@ -156,7 +154,7 @@ export default function Customs() {
                   variant="body1"
                   sx={{ fontWeight: "light", color: "grey" }}
                 >
-                  {item.description.substring(0, 70)}
+                  {item.description}
                 </Typography>
               </Stack>
             </Grid>
