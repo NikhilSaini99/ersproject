@@ -268,3 +268,8 @@ ul li.starclass:before {
   margin: 0 auto !important;
 }
 
+.check div:last-child {
+  width: 100%;
+  grid-column: 12;
+}
+

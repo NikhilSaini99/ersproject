@@ -76,91 +76,57 @@ export default function Customs() {
     },
   ];
 
-  const BoxWithAnimation = ({ dataArr }) => {
+  const BoxWithAnimation = ({ dataArr, span }) => {
     return (
-      <Grid container gap={3} justifyContent="space-between">
+      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
         {dataArr.map((item, index) => (
-          <Paper
+          <Box
+            key={index}
+            gridColumn={`span ${span}`}
+            component={Paper}
             elevation={20}
-            key={item.id}
-            sx={{ width: { xs: "318px", xl: "422px" } }}
+            p={4}
+            sx={{ position: "relative" }}
           >
-            <Grid
-              item
-              xs={12}
-              md={12}
+            <Box
               sx={{
-                position: "relative",
-                p: "2rem",
+                position: "absolute",
+                width: "80px",
+                height: "80px",
+                background: "grey",
                 transition: "0.5s",
-                ...(isHover === item.id && {
-                  transition: "0.5s",
-                  boxShadow:
-                    "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(244, 196, 2) 0px 0px 0px 2px",
-                }),
+                opacity: "0.5",
+                top: "0",
+                right: "0",
+                borderRadius: "0px 0px 0px 120%",
               }}
+            ></Box>
+            <Stack
+              sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}
             >
-              <Box
+              <Box>
+                <Image src={item.img} alt={item.alt} width={100} height={100} />
+              </Box>
+              <Typography
+                variant="h1"
                 sx={{
-                  position: "absolute",
-                  width: "80px",
-                  height: "80px",
-                  background: "grey",
-                  transition: "0.5s",
-                  opacity: "0.5",
-                  top: "0",
-                  right: "0",
-                  borderRadius: "0px 0px 0px 120%",
-                  ...(isHover === item.id && {
-                    transition: "0.5s",
-                    background: "#f4c402",
-                    opacity: 1,
-                  }),
-                }}
-              ></Box>
-              <Stack
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "1rem",
-                  lineHeight: "1.5",
+                  fontSize: "1.5rem",
+                  fontWeight: "bold",
+                  color: "#003b49",
                 }}
               >
-                <Box sx={{width:'115px'}}>
-                  <Image
-                    src={item.img}
-                    alt="item.title"
-                    width={"100%"}
-                    height={"auto"}
-                    style={{ color: "yellow" }}
-                  />
-                </Box>
-                <Typography
-                  variant="h1"
-                  sx={{
-                    fontSize: "1.5rem",
-                    fontWeight: "bold",
-                    color: "#003b49",
-                    transition: "0.5s",
-                    ...(isHover === item.id && {
-                      transition: "0.5s",
-                      color: "#f4c402",
-                    }),
-                  }}
-                >
-                  {item.title}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{ fontWeight: "light", color: "grey" }}
-                >
-                  {item.description}
-                </Typography>
-              </Stack>
-            </Grid>
-          </Paper>
+                {item.title}
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{ fontWeight: "light", color: "grey" }}
+              >
+                {item.description}
+              </Typography>
+            </Stack>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     );
   };
 
@@ -187,15 +153,22 @@ export default function Customs() {
           <div className="border w-[270px] border-yellowish mt-1 mx-auto"></div>
         </div>
 
-        <Box sx={{ position: "relative", mt: "1rem"}}>
-          <Stack sx={{ width: { xs: "80%" }, height:{xs:'25rem',lg:'30rem'}, margin: "0 auto" }}>
+        <Box sx={{ position: "relative", mt: "1rem" }}>
+          <Stack
+            sx={{
+              width: { xs: "80%" },
+              height: { xs: "25rem", lg: "30rem" },
+              margin: "0 auto",
+            }}
+          >
             <Image
               src={Banner}
               width={0}
               height={0}
               style={{
-                width: "100%", height: "100%",
-                objectFit: 'cover'
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
               }}
               alt=""
             />
@@ -241,21 +214,21 @@ export default function Customs() {
 
       <Box
         sx={{
-          width: { xs: "100%", md: "98%", lg: "50%", xl: "60%" },
+          width: { xs: "100%", md: "98%", lg: "80%", xl: "70%" },
           margin: { xs: "0 auto" },
         }}
       >
-        <BoxWithAnimation dataArr={CustomData} />
+        <BoxWithAnimation dataArr={CustomData} span={6}/>
       </Box>
 
       <Box
         sx={{
           width: { xs: "100%", md: "98%", lg: "80%", xl: "70%" },
           margin: { xs: "0 auto" },
-        }}>
-    
+        }}
+      >
         <Divider sx={{ my: { xs: "3rem", lg: "6rem", xl: "8rem" } }} />
-        <BoxWithAnimation dataArr={CustomData2} />
+        <BoxWithAnimation dataArr={CustomData2} span={4}/>
       </Box>
 
       {/*-----------------------Customs ENDS ---------------------*/}
