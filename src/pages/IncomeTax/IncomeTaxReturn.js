@@ -37,7 +37,8 @@ const IncomeTaxReturn = () => {
                 'A person who receives interest or dividends from funds invested in Commercial Banks, Building Societies, and Investment houses',
                 'Any person whose income is E1.2 Million Emalangeni and above',
                 'Any other person who may be required by the Commissioner General in writing to render a return of income in respect of the current year of assessment',
-            ]
+            ],
+            important:"Businesses registered for tax but not yet operational or that have not been operating in the year of assessment  are also required to submit a return and further notify the Commissioner General in writing, giving reasons why business is not operating"
         },
 
         {
@@ -123,6 +124,10 @@ const IncomeTaxReturn = () => {
                                     </div>
                                 ))}
                             </ul>
+                            <div className='Pointsformatting flex gap-2 flex-row my-2'>
+                                <b>Important:</b>
+                            <p>{item.important}</p>
+                            </div>
                         </Box>
                     ))}
                 </Box>
