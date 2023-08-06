@@ -11,26 +11,47 @@ import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Link from "next/link";
-import { Box, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
 export default function Contact() {
   const locations = [
-    { name: "Ngwenya", time: "24/7" },
-    { name: "Lavumisa", time: "07:00 - 22:00" },
-    { name: "Mahamba", time: "07:00 - 22:00" },
-    { name: "Sandlane", time: "08:00 - 18:00" },
-    { name: "Lomahasha", time: "07:00 - 12 Midnight" },
-    { name: "Mhlumeni", time: "06:00 - 12 Midnight" },
-    { name: "Mananga", time: "07:00 - 18:00" },
-    { name: "Matsamo", time: "07:00 - 20:00" },
-    { name: "Bulembu", time: "08:00 - 16:00" },
-    { name: "Lundzi", time: "08:00 - 16:00" },
-    { name: "Gege", time: "08:00 - 16:00" },
-    { name: "Sicunusa", time: "08:00 - 18:00" },
-    { name: "Nsalitje", time: "08:00 - 18:00" },
-    { name: "King Mswati III International Airport", time: "06:00 - 18:00" },
     {
-      name: "Inland Container Depo-ICD",
-      time: "08:00 - 17:00",
+      data: [
+        { name: "Ngwenya", time: "24/7" },
+        { name: "Lavumisa", time: "07:00 - 22:00" },
+        { name: "Mahamba", time: "07:00 - 22:00" },
+        { name: "Sandlane", time: "08:00 - 18:00" },
+        { name: "Lomahasha", time: "07:00 - 12 Midnight" },
+        { name: "Mhlumeni", time: "06:00 - 12 Midnight" },
+        { name: "Mananga", time: "07:00 - 18:00" },
+        { name: "Matsamo", time: "07:00 - 20:00" },
+      ],
+    },
+    {
+      data: [
+        { name: "Bulembu", time: "08:00 - 16:00" },
+        { name: "Lundzi", time: "08:00 - 16:00" },
+        { name: "Gege", time: "08:00 - 16:00" },
+        { name: "Sicunusa", time: "08:00 - 18:00" },
+        { name: "Nsalitje", time: "08:00 - 18:00" },
+        {
+          name: "King Mswati III International Airport",
+          time: "06:00 - 18:00",
+        },
+        {
+          name: "Inland Container Depo-ICD",
+          time: "08:00 - 17:00",
+        },
+      ],
     },
   ];
 
@@ -206,8 +227,10 @@ export default function Contact() {
           </div>
         </div>
 
-        <Box sx={{ my: "2rem",  pb:"2rem", pt:"1rem"}} className="px-10 bg-[#F5F5F5]">
-           
+        <Box
+          sx={{ my: "2rem", pb: "2rem", pt: "1rem" }}
+          className="px-10 bg-[#F5F5F5]"
+        >
           <Typography
             variant="h5"
             sx={{
@@ -215,7 +238,8 @@ export default function Contact() {
               fontWeight: "bold",
               color: "#2F248F",
               marginY: "1rem",
-            }}>
+            }}
+          >
             Border Operations
             <div className="border mr-12 border-yellowish mt-1 w-14 "></div>
           </Typography>
@@ -223,39 +247,64 @@ export default function Contact() {
           <Box
             sx={{
               display: "flex",
-              gap: "2rem",
+              flexDirection:{xs:"column",md:"row"},
+              gap: {xs:"2rem", md: "2rem", lg: "2rem" },
               flexWrap: "wrap",
+              justifyContent: "space-between",
               flex: "1 1 0",
-            }}>
+            }}
+          >
             {locations.map((item, index) => (
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "1rem",
-                  p: "1rem",
-                  mt: "1rem",
-                  border: "1px solid #E8E8E8",
-                  flexWrap: "wrap",
-                  width: "420px",
-                }}
-                key={index}>
-                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                  <Typography
-                    variant="body1"
-                    fontWeight="bold"
-                    sx={{ flexGrow: "1" }}>
-                    Post Name:
-                  </Typography>
-                  <Typography variant="body1">{item.name}</Typography>
-                </Box>
-                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                  <Typography variant="body1" fontWeight="bold">
-                    Operational Hours:
-                  </Typography>
-                  <Typography variant="body1">{item.time}</Typography>
-                </Box>
-              </Box>
+              <Paper
+                elevation={20}
+                sx={{ width: {xs:"100%", md: "45%", lg: "45%" } }}
+                key={index}
+              >
+                <TableContainer
+                  sx={{
+                    "& th, & td": { border: "0.1rem solid rgba(0,0,0,0.4)" },
+                  }}
+                >
+                  <Table aria-label="Double Taxation Table">
+                    <TableHead>
+                      <TableRow
+                        sx={{
+                          backgroundColor: "#2f2483",
+                          "& > *": {
+                            color: "white !important",
+                            fontWeight: "bold !important",
+                            fontSize: "1rem !important",
+                          },
+                        }}
+                      >
+                        <TableCell align="center">Post Name</TableCell>
+                        <TableCell align="center">Operational Hours</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {item.data.map(
+                        (item, index) =>
+                          item && (
+                            <TableRow
+                              key={index}
+                              sx={{
+                                "&>*": {
+                                  fontWeight: "bold",
+                                },
+                                "&:hover": {
+                                  background: "#F2F2F2",
+                                },
+                              }}
+                            >
+                              <TableCell align="center">{item.name}</TableCell>
+                              <TableCell align="center">{item.time}</TableCell>
+                            </TableRow>
+                          )
+                      )}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </Paper>
             ))}
           </Box>
         </Box>
