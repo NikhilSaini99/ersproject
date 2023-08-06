@@ -17,7 +17,7 @@ export default function Footer() {
 
   const footerArrowStyling = {
     width: {md:'60%',lg:'50%'},
-    height: '120px',
+    height: '117px',
     background: '#2f2483',
     position: 'relative',
 
@@ -28,9 +28,9 @@ export default function Footer() {
       bottom: '0',
       width: '0',
       height: '0',
-      borderLeft: '61px solid #2f2483',
-      borderTop: '60px solid transparent',
-      borderBottom: '60px solid transparent',
+      borderLeft: '62px solid #2f2483',
+      borderTop: '59px solid transparent',
+      borderBottom: '59px solid transparent',
     }
   }
 
