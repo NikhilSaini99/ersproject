@@ -34,6 +34,7 @@ const OurMission = ({h2Styling}) => {
           flexDirection: { xs: "column", lg: "row" },
           gap: "1rem",
         }}
+        data-aos="fade-up-left"
       >
         <Box sx={ourMissionBoxStyle}>
           <Typography
@@ -73,6 +74,7 @@ const OurMission = ({h2Styling}) => {
       <Box
         sx={{ textAlign: "center" }}
         className={styles.custom_effect_container}
+        data-aos="zoom-in"
       >
         {/* Performance Excellence */}
         <div className={styles.custom_effect}>

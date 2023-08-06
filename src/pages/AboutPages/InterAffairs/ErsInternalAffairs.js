@@ -54,6 +54,7 @@ const ErsInternalAffairs = ({ h2Styling, arrowStyling }) => {
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           margin: { xs: "3rem auto 3rem", lg: "3rem auto 3rem" },
         }}
+        data-aos="zoom-in-up"
       >
         {data.map((item, index) => (
           <Box key={index} sx={{mb:"2rem"}}>

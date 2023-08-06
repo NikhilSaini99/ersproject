@@ -27,6 +27,7 @@ const Mandate = ({ h2Styling, arrowStyling }) => {
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           margin: { xs: "3rem auto 0", lg: "3rem auto 0" },
         }}
+        data-aos="fade-down"
       >
         <Typography
           variant="h6"

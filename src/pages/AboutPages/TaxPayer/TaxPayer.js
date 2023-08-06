@@ -30,6 +30,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
               py: "3rem",
             }}
             className="Pointsformatting"
+            data-aos="fade-right"
           >
             <Typography
               variant="body1"

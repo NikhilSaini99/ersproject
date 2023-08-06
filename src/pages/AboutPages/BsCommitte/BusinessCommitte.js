@@ -88,6 +88,7 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           margin: { xs: "3rem auto", lg: "3rem auto 0" },
         }}
+        data-aos="fade-left"
       >
         <Box className={styles.container}>
           {data.map((item) => (
