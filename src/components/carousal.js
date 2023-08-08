@@ -47,7 +47,7 @@ export default function Carousal() {
     <>
 
 
-      <section>
+      <section className="relative">
         {/* Slider Wrapper */}
         <div className="slideshow">
           <div

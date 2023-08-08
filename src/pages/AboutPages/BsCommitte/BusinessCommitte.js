@@ -22,8 +22,9 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
           "Awareness of the concerns of business",
           "Formulation and review of the tax planning on an ongoing basis.",
         ],
+        head2: "2. The BCC will consider cross-cutting tax and customs issues, and provide a forum for discussion on strategic issues, focusing on administration and operational policy.",
       },
-      head: "2. The BCC will consider cross-cutting tax and customs issues, and provide a forum for discussion on strategic issues, focusing on administration and operational policy.",
+      
     },
     {
       section: "Framework / Membership",
@@ -87,13 +88,21 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           margin: { xs: "3rem auto", lg: "3rem auto 0" },
         }}
+        data-aos="fade-left"
       >
         <Box className={styles.container}>
           {data.map((item) => (
             <Box key={item.section} className={styles.section}>
-              <Typography variant="h5" sx={{ fontSize: "1.5rem",
-        fontWeight: "bold",
-        color: "#2F248F"}}>{item.section}</Typography>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: "1.5rem",
+                  fontWeight: "bold",
+                  color: "#2F248F",
+                }}
+              >
+                {item.section}
+              </Typography>
               {typeof item.content === "string" ? (
                 <Typography variant="body1" className="Pointsformatting">
                   {item.content}
@@ -143,6 +152,9 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
                         </div>
                       ))}
                   </List>
+                  <Typography variant="body1" className="Pointsformatting">
+                    {item.content.head2}
+                  </Typography>
                 </>
               )}
             </Box>

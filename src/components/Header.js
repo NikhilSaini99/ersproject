@@ -24,17 +24,21 @@ export default function Header() {
   const [isOpen, setSearchOpen] = useState(false);
 
   function toggleSearch() {
-    console.log("h")
     setSearchOpen(!isOpen);
   }
 
-  const [windowScroll, setwindowScroll] = useState(false);
+
+  const [menuOpen, setMenuOpen] = useState("false")
+
+  
+
+  const [windowScroll, setwindowScroll] = useState("hidden");
   useEffect(() => {
     const handleScroll = () => {
       const yOffset = window.scrollY;
       const threshold = 0;
       setwindowScroll(
-        yOffset > threshold && yOffset - 0 > threshold ? "hidden" : "block"
+        yOffset > threshold ? "hidden" : "block"
       );
     };
     window.addEventListener("scroll", handleScroll);
@@ -45,7 +49,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className="w-full bg-white">
+      <nav className="w-full bg-white sticky top-0 z-50 shadow-xl">
         <div className="flex justify-between px-10">
           <div className="py-[6px]">
             <Link href={"/"}>
@@ -128,7 +132,7 @@ export default function Header() {
                         }`}
                     >
                       <ul
-                        className={`text-sm font-sans text-white ${windowScroll}`}
+                        className={`text-sm font-sans text-white `}
                         onMouseOver={() => {
                           setServicesOpen(true);
                         }}
@@ -347,6 +351,11 @@ export default function Header() {
                                 Step-By Step Guide for New Businesses
                                 </p>
                               </Link>
+                              <Link href={'/IncomeTax/ITRNotice'} className="line">
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                Income Tax Return Submission Notice 2022
+                                </p>
+                              </Link>
                               <br />
 
 
@@ -478,7 +487,7 @@ export default function Header() {
                         }`}
                     >
                       <ul
-                        className={`text-sm font-sans text-white ${windowScroll}`}
+                        className={`text-sm font-sans text-white `}
                         onMouseOver={() => {
                           setFormsOpen(true);
                         }}
@@ -652,7 +661,7 @@ export default function Header() {
                   </div>
                 </li>
                 <li className="relative main">
-                  <div className="items-center">
+                  <div className="items-center relative">
                     <button
                       onMouseOver={() => {
                         setMediaOpen(true);
@@ -674,11 +683,11 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute z-10 font-normal w-24 bg-mainColor ${isMediaOpen ? "block" : "hidden"
+                      className={`absolute  z-10 font-normal w-24 bg-mainColor ${isMediaOpen ? "block" : "hidden"
                         }`}
                     >
                       <ul
-                        className={`text-sm font-sans text-white ${windowScroll}`}
+                        className={`text-sm font-sans text-white `}
                         onMouseOver={() => {
                           setMediaOpen(true);
                         }}
@@ -939,7 +948,7 @@ export default function Header() {
               </ul>
               <div className="border-r-2 border-[#999999] h-5 mb-4"></div>
 
-              <div className={`${isOpen ? "search-container-open" : ""}`}>
+              <div className={`${isOpen ? "search-container-open" : ""}` }>
                 <button
                   className="flex gap-3 items-center search-toggle mb-4"
                   onClick={toggleSearch}

@@ -17,20 +17,20 @@ export default function Footer() {
 
   const footerArrowStyling = {
     width: {md:'60%',lg:'50%'},
-    height: '120px',
+    height: '117px',
     background: '#2f2483',
     position: 'relative',
 
     '&:before': {
       content: '""',
       position: 'absolute',
-      right: '-60px',
+      display: {xs:"none", md:"block" , lg:"block", right: '-60px'}, 
       bottom: '0',
       width: '0',
       height: '0',
-      borderLeft: '60px solid #2f2483',
-      borderTop: '60px solid transparent',
-      borderBottom: '60px solid transparent',
+      borderLeft: '62px solid #2f2483',
+      borderTop: '59px solid transparent',
+      borderBottom: '59px solid transparent',
     }
   }
 
@@ -41,11 +41,7 @@ export default function Footer() {
         flexDirection: 'column'
       }}>
         <Box sx={{ position: 'relative', bgcolor: '#F7C347' }}>
-          {/* <Image src={Foot} sizes="100vw" alt="footer_head" style={{
-            backgroundSize: 'cover',
-            backgroundPosition: 'center', height: '8rem'
-          }} /> */}
-          <Box sx={{ ...footerArrowStyling }}></Box>
+          <Box sx={{ ...footerArrowStyling   }}></Box>
           <Stack sx={{
             position: 'absolute', top: '0', left: '0',
             width: '100%',

@@ -271,7 +271,7 @@ export default function Home() {
           </h1>
           <div className="border w-24 md:w-56 border-yellowish mt-2"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12 mt-6 md:px-32">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 md:gap-8 lg:gap-2 mt-6 md:px-16 lg:px-16">
           {NewsData.map((item, key) => (
             <News
               key={key}

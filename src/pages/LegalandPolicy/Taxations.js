@@ -17,6 +17,7 @@ import Image from "next/image";
 import Banner from "../../assets/images/Double_Taxation_Agreements.jpg";
 import bgimg from "../../assets/images/pagebackground1.jpg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Link from "next/link";
 
 
 const arrowStyling = {
@@ -30,16 +31,18 @@ const Taxations = () => {
     {
       name: "South Africa",
       dateOfSignature: "November 2004, replacing DTA signed in 1973",
+      link:"http://www.sra.org.sz/documents/1497275199.pdf"
     },
-    { name: "Mauritius", dateOfSignature: "1995" },
+    { name: "Mauritius", dateOfSignature: "1995" ,link:"http://www.sra.org.sz/documents/1497275422.pdf"},
     {
       name: "United Kingdom",
       dateOfSignature: "December 1968, replacing DTA signed in 1949",
+      link:"http://www.sra.org.sz/documents/1497275572.pdf"
     },
-    { name: "Seychelles", dateOfSignature: "2015" },
-    { name: "Republic of China on Taiwan", dateOfSignature: "2019" },
-    { name: "Botswana", dateOfSignature: "2019" },
-    { name: "Lesotho", dateOfSignature: "29 September 2020" },
+    { name: "Seychelles", dateOfSignature: "2015",link:"http://www.sra.org.sz/documents/1497275706.pdf" },
+    { name: "Republic of China on Taiwan", dateOfSignature: "2019",link:"http://www.sra.org.sz/documents/1562159490.pdf" },
+    { name: "Botswana", dateOfSignature: "2019",link:"http://www.sra.org.sz/documents/BOTSWANA%20DTA.pdf" },
+    { name: "Lesotho", dateOfSignature: "29 September 2020",link:"http://www.sra.org.sz/documents/1605082062.pdf" },
   ];
 
   return (
@@ -138,9 +141,11 @@ const Taxations = () => {
                             },
                           }}
                         >
-                          <TableCell align="center">{item.name}</TableCell>
                           <TableCell align="center">
-                            {item.dateOfSignature}
+                            <Link href={item.link}><u>{item.name}</u></Link>
+                            </TableCell>
+                          <TableCell align="center">
+                           {item.dateOfSignature}
                           </TableCell>
                         </TableRow>
                       )

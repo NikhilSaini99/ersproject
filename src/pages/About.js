@@ -150,6 +150,7 @@ export default function About() {
           margin: { xs: "3rem auto 0", lg: "3rem auto 0" },
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
         }}
+        data-aos="fade-up-left"
       >
         <Box>
           <Typography variant="body1" className="Pointsformatting">
