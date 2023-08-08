@@ -40,6 +40,8 @@ const Calculator = () => {
         return value > 0;
     };
 
+   
+
     return (
         <>
             <Head>
@@ -54,7 +56,7 @@ const Calculator = () => {
             <Header />
 
             {/*-----------------------Banner---------------------*/}
-          
+           {taxCalculaterLogic("Day",300,100,80,60,20,15,30)}
 
             <Box sx={{ position: 'relative', backgroundImage: `url(${feedbackimg.src})`,
         backgroundSize: 'cover',
@@ -169,8 +171,98 @@ const Calculator = () => {
             </Box>
             {/*-----------------------Footer---------------------*/}
             <Footer />
+      
         </>
     )
+        {/* This section is use for tax calculater logic */}
+    function taxCalculaterLogic(periods, basicSalary, overtime,bonuses,benefits,allowances,ENPF,deductions)
+    { 
+        let totalIncome = parseInt(basicSalary+overtime+bonuses+benefits+allowances);
+        let texBeforDeductions;
+        let texAmount;
+        let texpercentage;
+        let finalTexAmount;
+
+        console.log("totalIncome",totalIncome);
+
+        if(periods === "Day")
+        { 
+            //console.log("inside Day");
+            if(0 <= totalIncome && totalIncome <= 273.97)
+            {
+                console.log("inside 1");
+                totalIncome = parseFloat(totalIncome);
+                texBeforDeductions =  (totalIncome * 20) / 100;
+            }
+            else if(273.97 <= totalIncome && totalIncome <= 410.96)
+            {
+                //console.log("inside 2")
+                texAmount = totalIncome - 273.97;
+                //console.log("texAmount", texAmount)
+                texpercentage = (texAmount * 25) / 100;
+                //console.log("texpercentage", texpercentage)
+                texBeforDeductions = texpercentage + 54.97;
+            }
+            else if(410.96 <= totalIncome && totalIncome <= 547.95)
+            {
+                console.log("indised 3");
+                texAmount = totalIncome - 410.96;
+                texpercentage = (texAmount * 30) / 100;
+                texBeforDeductions = texpercentage + 89.04;
+            }
+            else if(547.95 < totalIncome)
+            {
+                console.log("indised 4");
+                texAmount = totalIncome - 547.95;
+                texpercentage = (texAmount * 33) / 100;
+                texBeforDeductions = texpercentage + 130.14;
+            }
+        }
+        
+
+        if(periods === "Month")
+        { 
+            //console.log("inside Day");
+            if(0 <= totalIncome && totalIncome <= 8333.33)
+            {
+                console.log("inside 1");
+                totalIncome = parseFloat(totalIncome);
+                texBeforDeductions =  (totalIncome * 20) / 100;
+            }
+            else if(8333.33 <= totalIncome && totalIncome <= 12500)
+            {
+                //console.log("inside 2")
+                texAmount = totalIncome - 8333.33;
+                //console.log("texAmount", texAmount)
+                texpercentage = (texAmount * 25) / 100;
+                //console.log("texpercentage", texpercentage)
+                texBeforDeductions = texpercentage + 1666.67;
+            }
+            else if(12500 <= totalIncome && totalIncome <= 16666.67)
+            {
+                console.log("indised 3");
+                texAmount = totalIncome - 12500;
+                texpercentage = (texAmount * 30) / 100;
+                texBeforDeductions = texpercentage + 2708.33;
+            }
+            else if(16666.67 < totalIncome)
+            {
+                console.log("indised 4");
+                texAmount = totalIncome - 16666.67;
+                texpercentage = (texAmount * 33) / 100;
+                texBeforDeductions = texpercentage + 3958.33;
+            }
+        }
+
+
+
+        console.log("texBeforDeductions ",texBeforDeductions);
+        console.log("Deduction Amount ", ENPF + deductions );
+
+        finalTexAmount = texBeforDeductions - ENPF - deductions;
+        console.log("final Tex Amount is ", finalTexAmount);
+
+    }
 }
 
 export default Calculator

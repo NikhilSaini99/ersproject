@@ -187,7 +187,7 @@ export default function Header() {
                               </p>
                               <hr className="border-white/30 my-5" />
                               <p className="px-8 text-sm leading-6 font-normal text-right pb-12 viewMoreColor">
-                                View More
+                              <Link href={"/WhtssNew"}> View More</Link>
                               </p>
                             </div>
                           </div>
