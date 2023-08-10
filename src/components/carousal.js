@@ -2,8 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import background from "../assets/images/banner-HIRES.png";
 import background2 from "../assets/images/Home_Page_2.jpg";
-import background3 from "../assets/images/bg3.jpg";
-import background4 from "../assets/images/banner-3.jpg";
+import background3 from "../assets/images/Advance_Ruling.png";
+import background4 from "../assets/images/Etax_registration.jpg";
+import background5 from "../assets/images/VAT_Returns.jpg";
+
 
 export default function Carousal() {
   const slides = [
@@ -11,13 +13,16 @@ export default function Carousal() {
     { id: 1, icon: background2 },
     { id: 2, icon: background4 },
     { id: 4, icon: background3 },
+    { id: 5, icon: background5 },
+
   ];
   // border-right:2px;border-left:2px;border-color:mainColor;border-style:solid;
   const titles = [
     "<span style=padding-left:62px;padding-right:62px> ABOUT US </span>",
     "<span style=padding-left:32px;padding-right:32px;> ASYCUDA WORLD </span>",
     "<span style=padding-left:78px;padding-right:78px> e-TAX </span>",
-    "<span style=padding-left:24px;padding-right:24px> e-CUSTOMS SYSTEM </span>",
+    "<span style=padding-left:24px;padding-right:24px> Advance Ruling </span>",
+    "<span style=padding-left:24px;padding-right:24px> VAT Ragistration </span>",
   ];
 
   const [index, setIndex] = useState(0);
