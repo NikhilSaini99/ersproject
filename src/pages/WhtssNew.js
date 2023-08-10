@@ -112,7 +112,7 @@ const Tender = () => {
           }}
         >
           <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
-            What's New
+            What s New
           </Typography>
 
           <TableContainer

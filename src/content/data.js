@@ -92,7 +92,7 @@ const customData = [
       "EXPORTATION",
     title2: "Goods exported from Eswatini may be exported under one of the following customs procedures:",
     title3: "declaration document, supporting documents (invoice, F178, permits and any other document that may be required for verification purposes).",
-    title4: " \through the ASYCUDA System; These pages will help you with the Customs Tariff ; Exchange rates; codes required on the import/export documents and a guide of how to complete the SAD500 form.",
+    title4: " through the ASYCUDA System. These pages will help you with the Customs Tariff, Exchange rates, codes required on the import/export documents and a guide of how to complete the SAD500 form.",
     title5: "For customs clearance purposes, the exporter should submit a customs",
     title6: "Customs declarations are made",
     description: [
