@@ -176,7 +176,7 @@ const CustomAgents = () => {
                         {section1.map((item, index) => (
                             <Box key={index} sx={{ my: '1rem' }}>
                                 <Typography variant='body1' sx={{ fontWeight: 'bold', fontSize: '1.25rem' }}>{item.head}</Typography>
-                                <Typography variant='body1' className='Pointsformatting'>{item.description}</Typography>
+                                <Typography variant='body1' className='Pointsformatting' sx={{mt:"1rem"}}>{item.description}</Typography>
                                 {item.subpoints && item.subpoints.map((points, index) => (
                                     <div key={index} className='flex gap-1 items-start pb-2'>
                                         <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
@@ -192,7 +192,7 @@ const CustomAgents = () => {
                         <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 'bold', }}>
                             IMPORTANT NOTE
                         </Typography>
-                        <Typography variant='body1' className='Pointsformatting'>
+                        <Typography variant='body1' className='Pointsformatting' sx={{my:"1rem"}}>
                             For purposes of determining the liability of traders for the acts and omissions of their agents, the law does not require Customs to verify if a person transacting Customs business on behalf of a trader is formally appointed or authorised by the trader to act as such. Thus any person, including the driver or person in charge of the means of transport on which the goods are imported or exported, who makes a declaration of the goods on board is considered in law as an agent of the trader.
                         </Typography>
                     </Box>
@@ -264,8 +264,8 @@ const CustomAgents = () => {
                     {/* Second table end*/}
 
                     <Divider sx={{ my: '2rem' }} />
-                    <Link href="http://www.sra.org.sz/documents/1621257351.pdf" className='text-normalBlue block'>2021 ACTIVE CLEARING AGENTS AS AT 150421</Link>
-                    <Link href="http://www.sra.org.sz/documents/1621257296.pdf" className='text-normalBlue block'>2021 ACTIVE TRANSIT BOND HOLDERS AS AT 250221</Link>
+                    <Link href="http://www.sra.org.sz/documents/1621257351.pdf" className='text-normalBlue block Pointsformatting'>2021 ACTIVE CLEARING AGENTS AS AT 150421</Link>
+                    <Link href="http://www.sra.org.sz/documents/1621257296.pdf" className='text-normalBlue block Pointsformatting'>2021 ACTIVE TRANSIT BOND HOLDERS AS AT 250221</Link>
                 </Box>
             </Box>
             <Footer/>

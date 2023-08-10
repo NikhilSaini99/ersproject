@@ -41,6 +41,7 @@ const pageData = [
     title: "SACU-MERCOSUR PREFERENTIAL TRADE AGREEMENT",
     content:
       "The Southern African Customs Union (SACU), which Eswatini is a member of with South Africa, Botswana, Namibia and Lesotho has in place a Preferential Trade Agreement with MERCOSUR, which comprises of Brazil, Argentina, Uruguay & Paraguay. In conjunction with the agreement, they issued an understanding on the conclusion of their preferential trade agreement, in which they expressed satisfaction at completing this agreement and reaffirmed their commitment to pursue further negotiations and enhance bilateral cooperation aimed at facilitating the implementation of the agreement. The MERCOSUR-SACU PTA came into force on the 01st April 2016 which gave way for the two parties (MERCOSUR and SACU) having to put in place processes and measures to enable the implementation of the Agreement. Examples of this would be amendment of Customs legislations as well as developing processes for issuance of certificates of origin.",
+      content2: "The productive sectors of MERCOSUR which will benefit from tariff preferences include chemical, textile, steel, plastic, automotive, electronics and capital goods, in addition to agricultural products.",
     chapter: {
       chapterHead:
         "Click here to download the MERCOSUR-SACU Agreement; it is structured as follows:",
@@ -160,13 +161,18 @@ const FreeTrade = () => {
           {pageData.map((item, index) => (
             <Box key={index}>
               {item.title && (
-                <Typography variant="h3" sx={{ ...h2Styling }}>
+                <Typography variant="h3" sx={{ ...h2Styling, color:'black' }}>
                   {item.title}
                 </Typography>
               )}
               {item.content && (
-                <Typography variant="body1" className="Pointsformatting">
+                <Typography variant="body1" className="Pointsformatting" sx={{mt:"1rem"}}>
                   {item.content}
+                </Typography>
+              )}
+              {item.content2 && (
+                <Typography variant="body1" className="Pointsformatting" sx={{mt:"1rem"}}>
+                  {item.content2}
                 </Typography>
               )}
               <Box mt="0.5rem">
