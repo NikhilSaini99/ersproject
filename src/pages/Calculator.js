@@ -220,7 +220,7 @@ const Calculator = () => {
         }
         
 
-        if(periods === "Month")
+        if(periods === "Monthly")
         { 
             //console.log("inside Day");
             if(0 <= totalIncome && totalIncome <= 8333.33)
@@ -254,6 +254,40 @@ const Calculator = () => {
             }
         }
 
+
+        if(periods === "yearly")
+        { 
+            //console.log("inside Day");
+            if(0 <= totalIncome && totalIncome <= 8333.33)
+            {
+                console.log("inside 1");
+                totalIncome = parseFloat(totalIncome);
+                texBeforDeductions =  (totalIncome * 20) / 100;
+            }
+            else if(8333.33 <= totalIncome && totalIncome <= 12500)
+            {
+                //console.log("inside 2")
+                texAmount = totalIncome - 8333.33;
+                //console.log("texAmount", texAmount)
+                texpercentage = (texAmount * 25) / 100;
+                //console.log("texpercentage", texpercentage)
+                texBeforDeductions = texpercentage + 1666.67;
+            }
+            else if(12500 <= totalIncome && totalIncome <= 16666.67)
+            {
+                console.log("indised 3");
+                texAmount = totalIncome - 12500;
+                texpercentage = (texAmount * 30) / 100;
+                texBeforDeductions = texpercentage + 2708.33;
+            }
+            else if(16666.67 < totalIncome)
+            {
+                console.log("indised 4");
+                texAmount = totalIncome - 16666.67;
+                texpercentage = (texAmount * 33) / 100;
+                texBeforDeductions = texpercentage + 3958.33;
+            }
+        }
 
 
         console.log("texBeforDeductions ",texBeforDeductions);
