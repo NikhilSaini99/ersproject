@@ -22,7 +22,7 @@ export default function Carousal() {
     "<span style=padding-left:32px;padding-right:32px;> ASYCUDA WORLD </span>",
     "<span style=padding-left:78px;padding-right:78px> e-TAX </span>",
     "<span style=padding-left:24px;padding-right:24px> Advance Ruling </span>",
-    "<span style=padding-left:24px;padding-right:24px> VAT Ragistration </span>",
+    "<span style=padding-left:24px;padding-right:24px> VAT Registration </span>",
   ];
 
   const [index, setIndex] = useState(0);

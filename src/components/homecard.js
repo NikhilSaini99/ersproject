@@ -87,7 +87,7 @@ const Icons = () => {
 }
 
 
-function News({ icon, description, img }) {
+function News({ icon, description, img,link }) {
   return (
     <>
         <div className=" border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400 ">
@@ -99,7 +99,7 @@ function News({ icon, description, img }) {
         </div>
         <div className="px-8 pt-14 pb-4 gap-5 flex flex-col ">
           <p className="mt-5 mb-8 text-base font-normal checking">{description}</p>
-          <Link href={"/customs"}>
+          <Link href={link}>
             <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
               Know More
             </button>
