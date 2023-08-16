@@ -343,24 +343,25 @@ const Calculator = () => {
     }
 
     if (periods === "yearly") {
-      if (0 <= totalIncome && totalIncome <= 8333.33) {
+      if (0 <= totalIncome && totalIncome <= 100000) {
         console.log("inside 1");
         totalIncome = parseFloat(totalIncome);
         texBeforDeductions = (totalIncome * 20) / 100;
-      } else if (8333.33 <= totalIncome && totalIncome <= 12500) {
-        texAmount = totalIncome - 8333.33;
-
+      } 
+      else if (100000 <= totalIncome && totalIncome <= 150000) {
+        texAmount = totalIncome - 100000;
         texpercentage = (texAmount * 25) / 100;
-
-        texBeforDeductions = texpercentage + 1666.67;
-      } else if (12500 <= totalIncome && totalIncome <= 16666.67) {
-        texAmount = totalIncome - 12500;
+        texBeforDeductions = texpercentage + 20000;
+      }
+       else if (150000 <= totalIncome && totalIncome <= 200000) {
+        texAmount = totalIncome - 150000;
         texpercentage = (texAmount * 30) / 100;
-        texBeforDeductions = texpercentage + 2708.33;
-      } else if (16666.67 < totalIncome) {
-        texAmount = totalIncome - 16666.67;
+        texBeforDeductions = texpercentage + 32500;
+      }
+       else if (200000 < totalIncome) {
+        texAmount = totalIncome - 200000;
         texpercentage = (texAmount * 33) / 100;
-        texBeforDeductions = texpercentage + 3958.33;
+        texBeforDeductions = texpercentage + 47500;
       }
     }
     console.log("ENPF",ENPF);
