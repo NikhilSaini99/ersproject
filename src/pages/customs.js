@@ -39,7 +39,7 @@ export default function Customs() {
     {
       id: 2,
       img: Advance,
-      title: "Advance Rolling",
+      title: "Advance Ruling",
       description:
         "ERS has implemented Advance Rulings in terms of the WTO Agreement on Trade Facilitation (TFA). Advance Rulings allow trade to apply for an official written descision by ERS prior to import or export on Tariff Classification, Origin or Valuation.",
     },
