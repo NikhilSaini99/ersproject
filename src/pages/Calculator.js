@@ -24,7 +24,6 @@ const Calculator = () => {
   const [allowances, setAllowances] = useState("");
   const [deductions, setDeductions] = useState("");
   const [ENPF, setENPF] = useState("");
-  const [medicalAidContribution, setMedicalAidContribution] = useState("");
   const [finalTax, setFinalTax] = useState(null);
 
   const handleSubmit = (e) => {
@@ -43,7 +42,6 @@ const Calculator = () => {
       allowances,
       ENPF,
       deductions,
-      medicalAidContribution
     );
 
     setFinalTax(finaltax.toFixed(2));
@@ -61,11 +59,11 @@ const Calculator = () => {
   function handlePeriodChange(e) {
     setPeriod(e.target.value);
     if (e.target.value === "Day") {
-      setENPF(100);
-    } else if (e.target.value) {
-      setENPF(200);
-    } else if (e.target.value) {
-      setENPF(300);
+      setENPF(11.67);
+    } else if (e.target.value==="Monthly") {
+      setENPF(350);
+    } else if (e.target.value==="yearly") {
+      setENPF(4200);
     } else {
       alert("No correct value selected");
     }
@@ -249,21 +247,6 @@ const Calculator = () => {
                 disabled
                 sx={{ marginBottom: "1rem" }}
               />
-              <TextField
-                fullWidth
-                label="Medical Aid % Contribution"
-                type="number"
-                value={medicalAidContribution}
-                onChange={(e) => {
-                    const newValue = +e.target.value;
-                    setMedicalAidContribution(newValue < 0 ? 0 : newValue);
-                    if (medicalAidContribution === 0) {
-                        setMedicalAidContribution("");
-                    }
-                  }}
-                sx={{ marginBottom: "1rem" }}
-                required
-              />
                 <Box sx={{display:"flex", alignItems:"center" , gap:"0.5rem"}}>
                 <Typography variant="h5">Total Tax:</Typography>
                 <Typography variant="h5">{finalTax && finalTax}</Typography>
@@ -380,7 +363,10 @@ const Calculator = () => {
         texBeforDeductions = texpercentage + 3958.33;
       }
     }
-
+    console.log("ENPF",ENPF);
+    console.log("texBeforDeductions",texBeforDeductions);
+    console.log("deductions",deductions);
+    console.log("totalIncome",totalIncome);
     finalTexAmount = texBeforDeductions - ENPF - deductions;
     return finalTexAmount;
   }
