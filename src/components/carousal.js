@@ -7,15 +7,21 @@ import background4 from "../assets/images/Etax_registration.jpg";
 import background5 from "../assets/images/VAT_Returns.jpg";
 
 
-export default function Carousal() {
-  const slides = [
-    { id: 0, icon: background },
-    { id: 1, icon: background2 },
-    { id: 2, icon: background4 },
-    { id: 4, icon: background3 },
-    { id: 5, icon: background5 },
+const slides = [
+  { id: 0, icon: background },
+  { id: 1, icon: background2 },
+  { id: 2, icon: background4 },
+  { id: 4, icon: background3 },
+  { id: 5, icon: background5 },
+];
 
-  ];
+export default function Carousal({ bannerData }) {
+
+  const mySlides = bannerData?.map(({ id, imageurl }) => ({
+    id,
+    imageurl,
+  }));
+
   // border-right:2px;border-left:2px;border-color:mainColor;border-style:solid;
   const titles = [
     "<span style=padding-left:62px;padding-right:62px> ABOUT US </span>",
@@ -48,10 +54,9 @@ export default function Carousal() {
     };
   }, [index]);
 
+
   return (
     <>
-
-
       <section className="relative">
         {/* Slider Wrapper */}
         <div className="slideshow">
@@ -59,8 +64,8 @@ export default function Carousal() {
             className="slideshowSlider"
             style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
           >
-            {slides.map((slide, index) => (
-              <Image className="slide" key={index} src={slide.icon} alt="..." />
+            {slides?.map((slide, index) => (
+              <Image className="slide" key={index} src={slide.icon} alt="..."/>
             ))}
           </div>
         </div>
@@ -70,14 +75,17 @@ export default function Carousal() {
           {titles.map((title, id) => (
             <button
               key={id}
-              className={`slider-indicator ${id === index ? "active" : ""}  xs:border-t xs:border-slate-500 xs:border-r-0 md:border-r-2 md:border-slate-500 md:border-t-0`}
-              onClick={() => { setIndex(id) }}
+              className={`slider-indicator ${
+                id === index ? "active" : ""
+              }  xs:border-t xs:border-slate-500 xs:border-r-0 md:border-r-2 md:border-slate-500 md:border-t-0`}
+              onClick={() => {
+                setIndex(id);
+              }}
               dangerouslySetInnerHTML={{ __html: title }}
             ></button>
           ))}
-        </div>  
+        </div>
       </section>
-
 
       {/* Slider bottom */}
       {/* <div className="bg-[#2F3192E0] px-14 absolute w-full flex justify-between bottom-0">
@@ -95,7 +103,6 @@ export default function Carousal() {
           </div>
         </div>
       </div> */}
-
     </>
   );
 }

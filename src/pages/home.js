@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -30,10 +30,12 @@ import DatasetLinkedOutlinedIcon from '@mui/icons-material/DatasetLinkedOutlined
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import { Box, Typography } from '@mui/material'
+import { useFetch } from "./api/api";
 
 
 
 export default function Home() {
+  const { data, fetchAPI } = useFetch('GET', '/api/banner-images')
   const [isOpen, setisOpen] = useState(null)
   const [isOpen2, setisOpen2] = useState(null)
 
@@ -45,6 +47,8 @@ export default function Home() {
       setisOpen(index); // Open the clicked FAQ
     }
   }
+
+
 
   const handleOpen2 = (index) => {
     if (isOpen2 === index) {
@@ -59,6 +63,13 @@ export default function Home() {
     color: '#2f2483',
     fontSize: '1rem'
   }
+
+  useEffect(()=>{
+    fetchAPI();
+
+}, [data?.success])
+
+
 
   // ----------------------Resources-----------------------
 
@@ -232,6 +243,8 @@ export default function Home() {
     });
   }
 
+
+
   return (
     <>
       {/*---------------------Header-------------------*/}
@@ -240,7 +253,7 @@ export default function Home() {
 
       {/*------------------Carousal-------------------*/}
 
-      <Carousal />
+      <Carousal bannerData={data?.data}/>
 
       {/*------------------Our Resources-------------------*/}
 
@@ -306,7 +319,7 @@ export default function Home() {
         <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full `}>
           <div className="flex flex-col md:flex-row justify-between  md:px-8 py-10 h-[25rem] gap-4">
             {/* Content for first div */}
-            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
+            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
                 <p className="text-yellowish text-xl font-normal ">Recently Approved Guidelines</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -402,7 +415,7 @@ export default function Home() {
         <div className={`${isVisible.div2 ? "block" : "hidden"} bg-subColor text-white w-full `}>
           <div className="flex flex-col md:flex-row justify-between   md:px-8 py-10 h-[25rem] gap-4">
             {/* Content for first div */}
-            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
+            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
                <Link href={"/Tender/Tender"}> <p className="text-yellowish text-xl font-normal">Latest Tenders</p></Link>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">

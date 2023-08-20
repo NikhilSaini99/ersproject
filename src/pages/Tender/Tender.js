@@ -13,13 +13,22 @@ import {
 } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../../assets/images/pxfuel.jpg";
 import Footer from "@/components/Footer";
+import { useFetch } from "../api/api";
 
 const Tender = () => {
+  const {data, fetchAPI} = useFetch("get","/api/tender");
+
+  useEffect(()=>{
+      fetchAPI();
+  },[fetchAPI])
+
+  console.log(data?.data[0].tenderName)
+
   const dummyData = [
     {
       title:
@@ -141,7 +150,7 @@ const Tender = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dummyData.map((item, index) => (
+                {data?.data?.map((item, index) => (
                   <TableRow
                     key={index}
                     sx={{
@@ -153,10 +162,10 @@ const Tender = () => {
                       },
                     }}
                   >
-                    <TableCell>{item.title}</TableCell>
-                    <TableCell>{item.deadline}</TableCell>
-                    <TableCell>{item.published}</TableCell>
-                    <TableCell>{item.reference}</TableCell>
+                    <TableCell>{data?.data?.tenderName}</TableCell>
+                    <TableCell>{data?.data?.deadline}</TableCell>
+                    <TableCell>{data?.data?.publishedDate}</TableCell>
+                    <TableCell>{data?.data?.reference}</TableCell>
                     <TableCell>
                       <Button
                         variant="contained"

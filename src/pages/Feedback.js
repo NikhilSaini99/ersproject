@@ -58,6 +58,7 @@ const Feedback = () => {
     setPhoneNo('')
     setEmail('')
     setfeedback_description('')
+    console.log(data)
   }
 
   function handleFeedbackType(e) {

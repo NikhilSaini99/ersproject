@@ -40,7 +40,7 @@ export const useFetch = (method, path) => {
 
     }, [method, path])
 
-    return { data: state.data, fetchAPI }
+    return { data: state?.data?.data, fetchAPI }
 }
 
 
