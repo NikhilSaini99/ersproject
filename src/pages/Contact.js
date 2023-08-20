@@ -161,7 +161,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-col justify-start gap-2 pr-6">
               <h1 className="text-xl font-bold leading-6 mb-1">
-                ERS Contact Centre -
+                ERS Contact Centre
               </h1>
               <p className="text-sm leading-6 font-normal">
                 For all your tax related enquiries call or email

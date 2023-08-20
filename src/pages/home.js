@@ -212,19 +212,23 @@ export default function Home() {
       icon: Tax,
       description:
         '"e-Tax is an electronic platform through which taxpayers are required to submit VAT, PAYE, Income Tax and Provisional Tax returns."',
+        link:"https://etax.sra.org.sz/"
     },
     {
       img: ECoustoms,
       icon: TCC,
       description:
         '"Click on this tab to access your Instant TCC platform. If you don’t qualify, please visit the nearest ERS Service Centre to resolve possible outstanding issues."',
+        link :"https://srasp.sra.org.sz/tcc/"
     },
     {
       img: ECoustoms,
       icon: Customs,
       description:
         '"All import and export commercial transactions require commodities on Customs declarations to be classified according to an appropriate tariff heading."',
+        link:"/customs",
     },
+  
   ];
 
   // ----------------------Tabs-----------------------
@@ -291,6 +295,7 @@ export default function Home() {
               img={item.img}
               icon={item.icon}
               description={item.description}
+              link={item.link}
             />
           ))}
         </div>
