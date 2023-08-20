@@ -13,6 +13,7 @@ import bgimg from "../../assets/images/pxfuel.jpg";
 import {
     Box
 }from "@mui/material";
+import Loader from "@/components/Loader";
 
 export const LatestNewsSection = ()=>{
   return(
@@ -60,13 +61,11 @@ export const LatestNewsSection = ()=>{
 }
 
 export default function News() {
-  const { data: VatData, fetchAPI } = useFetch('get', '/api/news')
+  const { data, fetchAPI, isLoading } = useFetch('get', '/api/publicMeeting')
 
   useEffect(() => {
     fetchAPI()
-  },[])
-
-  console.log(VatData?.data?.data[0]?.description)
+  },[fetchAPI])
 
   
    
@@ -109,20 +108,34 @@ export default function News() {
           }}
         ></Box> */}
         
+        <Box
+					sx={{
+            width:"95%",
+						margin: { xs: '0 auto', lg: '0  auto' },
+						py: '2rem'
+					}}
+				>
+  <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem", width:"90%", margin:"0 auto" }}>
+            Public Meetings
+          </Typography>
+        </Box>
+      
+
         <Grid container>
           {/* Left Side */}
-          <Grid item xs={10} sx={{ marginTop: '5rem' }}>
-            {pumbicMeetings.map((item, key) => (
+          {isLoading? <Loader/> : <Grid item xs={10} sx={{ marginTop: '5rem' }}>
+            {data?.data.map((item, key) => (
               <NewsCard
                 key={key}
-                img={item.img}
+                img={item.url}
                 url={item.url}
-                title={item.title}
-                date={item.date}
+                title={item.publicMeetingName}
+                date={item.uploadDate}
                 description={item.description}
               />
             ))}
-          </Grid>
+          </Grid>}
+         
 
           {/* Left Side End */}
 

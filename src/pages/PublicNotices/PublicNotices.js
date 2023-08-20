@@ -13,63 +13,78 @@ import {
 } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../../assets/images/pxfuel.jpg";
 import Footer from "@/components/Footer";
+import dayjs from "dayjs";
+import { useFetch } from "../api/api";
+import Loader from "@/components/Loader";
 
 const PublicNotices = () => {
+  const { data, fetchAPI, isLoading } = useFetch("get", "/api/noticeBoard");
+
+  useEffect(() => {
+    fetchAPI();
+  }, []);
+
+  const handlePDFDownload = (url) => {
+    window.open(url, "_blank");
+  };
+
   const dummyData = [
     {
       title: "Public meeting on how to save TAX",
-      description: "This is a description of the public meeting how to save TAX",
-      date : "22-July-2023",
+      description:
+        "This is a description of the public meeting how to save TAX",
+      date: "22-July-2023",
       notice: "This is notice bord for spacial information in the meeting",
     },
     {
       title: "Public meeting on how to save TAX",
-      description: "This is a description of the public meeting how to save TAX",
-      date : "22-July-2023",
+      description:
+        "This is a description of the public meeting how to save TAX",
+      date: "22-July-2023",
       notice: "This is notice bord for spacial information in the meeting",
     },
     {
       title: "Public meeting on how to save TAX",
-      description: "This is a description of the public meeting how to save TAX",
-      date : "22-July-2023",
+      description:
+        "This is a description of the public meeting how to save TAX",
+      date: "22-July-2023",
       notice: "This is notice bord for spacial information in the meeting",
     },
     {
       title: "Public meeting on how to save TAX",
-      description: "This is a description of the public meeting how to save TAX",
-      date : "22-July-2023",
+      description:
+        "This is a description of the public meeting how to save TAX",
+      date: "22-July-2023",
       notice: "This is notice bord for spacial information in the meeting",
     },
     {
       title: "Public meeting on how to save TAX",
-      description: "This is a description of the public meeting how to save TAX",
-      date : "22-July-2023",
+      description:
+        "This is a description of the public meeting how to save TAX",
+      date: "22-July-2023",
       notice: "This is notice bord for spacial information in the meeting",
     },
     {
       title: "Public meeting on how to save TAX",
-      description: "This is a description of the public meeting how to save TAX",
-      date : "22-July-2023",
+      description:
+        "This is a description of the public meeting how to save TAX",
+      date: "22-July-2023",
       notice: "This is notice bord for spacial information in the meeting",
     },
     {
       title: "Public meeting on how to save TAX",
-      description: "This is a description of the public meeting how to save TAX",
-      date : "22-July-2023",
+      description:
+        "This is a description of the public meeting how to save TAX",
+      date: "22-July-2023",
       notice: "This is notice bord for spacial information in the meeting",
     },
   ];
-  console.log(
-    Object.keys(dummyData[0]).map((item, index) => {
-      if (item === "title") console.log("hello");
-      else console.log("undefined");
-    })
-  );
+
   return (
     <>
       <Head>
@@ -99,7 +114,8 @@ const PublicNotices = () => {
           backgroundImage: `url(${bgimg.src})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
-        }}>
+        }}
+      >
         <Box
           sx={{
             width: "90%",
@@ -112,62 +128,69 @@ const PublicNotices = () => {
             Public Notice
           </Typography>
 
-          <TableContainer
-            component={Paper}
-            sx={{ "& th, & td": { border: "0.1rem solid rgba(0,0,0,0.1)" } }}
-          >
-            <Table aria-label="Tender-Table">
-              <TableHead>
-                <TableRow
-                  sx={{
-                    backgroundColor: "#DFDFDF",
-                    "& > *": {
-                      fontWeight: "bold !important",
-                      fontSize: "1rem !important",
-                      textAlign: "center !important",
-                    },
-                  }}
-                >
-                  <TableCell>Title</TableCell>
-                  <TableCell>Description</TableCell>
-                  <TableCell>Date & Time</TableCell>
-                  <TableCell>Notice</TableCell>
-                  <TableCell>
-                    <CloudDownloadOutlinedIcon />
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {dummyData.map((item, index) => (
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <TableContainer
+              component={Paper}
+              sx={{ "& th, & td": { border: "0.1rem solid rgba(0,0,0,0.1)" } }}
+            >
+              <Table aria-label="Tender-Table">
+                <TableHead>
                   <TableRow
-                    key={index}
                     sx={{
+                      backgroundColor: "#DFDFDF",
                       "& > *": {
+                        fontWeight: "bold !important",
+                        fontSize: "1rem !important",
                         textAlign: "center !important",
-                      },
-                      "&:hover": {
-                        background: "#F2F2F2",
                       },
                     }}
                   >
-                    <TableCell>{item.title}</TableCell>
-                    <TableCell>{item.description}</TableCell>
-                    <TableCell width="12%">{item.date}</TableCell>
-                    <TableCell>{item.notice}</TableCell>
+                    <TableCell>Title</TableCell>
+                    <TableCell>Description</TableCell>
+                    <TableCell>Date & Time</TableCell>
+                    <TableCell>Notice</TableCell>
                     <TableCell>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        sx={{ backgroundColor: "#2F2483 !important" }}
-                      >
-                        Downlaod
-                      </Button>
+                      <CloudDownloadOutlinedIcon />
                     </TableCell>
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
+                </TableHead>
+                <TableBody>
+                  {data?.data.map((item, index) => (
+                    <TableRow
+                      key={index}
+                      sx={{
+                        "& > *": {
+                          textAlign: "center !important",
+                        },
+                        "&:hover": {
+                          background: "#F2F2F2",
+                        },
+                      }}
+                    >
+                      <TableCell>{item.name}</TableCell>
+                      <TableCell>{item.description}</TableCell>
+                      <TableCell width="12%">
+                        {dayjs(item.date).format("DD-MM-YYYY")}
+                      </TableCell>
+                      <TableCell>{item.notice}</TableCell>
+                      <TableCell>
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          sx={{ backgroundColor: "#2F2483 !important" }}
+                          onClick={() => handlePDFDownload(item.documentUrl)}
+                        >
+                          Downlaod
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          )}
         </Box>
       </Box>
 

@@ -1,15 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Box, Paper, Stack, Typography } from '@mui/material'
 import Banner from "../assets/images/registration.jpg";
 import Head from 'next/head'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import pdfimg1 from '../assets/images/pdfimages/SpPdf1.jpg'
 import pdfimg2 from '../assets/images/pdfimages/SpPdf2.jpg'
 import pdfimg3 from '../assets/images/pdfimages/SpPdf3.jpg'
 import pdfimg4 from '../assets/images/pdfimages/SpPdf4.jpg'
 import Link from 'next/link';
+import { useFetch } from './api/api';
+import { useEffect } from 'react';
+import Loader from '@/components/Loader';
 
 // import pdf1 from '../assets/Pdf/SpPdf1.pdf'
 // import pdf2 from '../assets/Pdf/SpPdf2.pdf'
@@ -17,29 +21,25 @@ import Link from 'next/link';
 // import pdf4 from '../assets/Pdf/SpPdf4.pdf'
 
 const StrategicPlans = () => {
+        const {data,fetchAPI, isLoading} =useFetch("get","/api/publication");
+        const [StrategicPlans, setStrategicplans] = useState();
 
-    const startegicPlanPdf = [
-        {
-            imgs: pdfimg1,
-            link: 'https://www.ers.org.sz/documents/1616518535.pdf',
-            year: '2021-24'
-        },
-        {
-            imgs: pdfimg2,
-            link: 'https://www.ers.org.sz/documents/1582541042.pdf',
-            year: '2018-21'
-        },
-        {
-            imgs: pdfimg3,
-            link: 'https://www.ers.org.sz/documents/1536136982.pdf',
-            year: '2015-18'
-        },
-        {
-            imgs: pdfimg4,
-            link: 'https://www.ers.org.sz/documents/1536136837.pdf',
-            year: '2012-15'
-        },
-    ]
+        useEffect(()=>{
+                fetchAPI();
+        },[]);
+
+        useEffect(()=>{
+            const Strategic_plan_arr= data?.data?.filter((item)=>item.type==="Strategic Plans");
+            setStrategicplans(Strategic_plan_arr)
+        },[data]);
+        
+
+    const handlePDFDownload=(url)=>{
+            window.open(url,"_blank");
+    }
+    
+
+   
 
     return (
         <>
@@ -54,9 +54,7 @@ const StrategicPlans = () => {
             <Header />
 
             <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
-                <Image src={Banner} alt=""
-                    width={0}
-                    height={0}
+                <img src={Banner.src} alt=""
                     style={{
                         width: "100%", height: "100%",
                         objectFit: 'cover'
@@ -68,29 +66,34 @@ const StrategicPlans = () => {
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
                     Strategic Plans
                 </Typography>
-                <Stack sx={{
+                {isLoading ? <Loader/> : <Stack sx={{
                     display: 'flex', flexDirection: { xs: 'column', md: 'row', lg: 'row' },
-                    gap: '0.5rem', justifyContent: 'center', alignItems: 'center'
+                    gap: '0.5rem', justifyContent: 'center', alignItems: 'center', maxWidth:"85%", margin:"0 auto"
                 }}>
-                    {startegicPlanPdf.map((item, index) => (
-                        <Paper elevation={20} key={index} sx={{ maxWidth: { xs: 'inherit',md:'180px', lg: '220px' },cursor:'pointer'}}
+                    
+                    {StrategicPlans.map((item, index) => (
+                        <Paper elevation={20} key={index} sx={{ maxWidth: { xs: 'inherit',md:'65%', lg: '95%' },cursor:'pointer'}}
                          component='div'>
-                         <Stack sx={{direction:'column',gap:'0.5rem'}}>
-                         <Link href={`${item.link}`} target='_blank'>
-                            <Image src={item.imgs} alt="img"
-                                width={0}
-                                height={0}
+                            <Stack sx={{direction:'column',gap:'0.5rem'}}>
+                         <Link href={`${item.documentUrl}`} target='_blank'>
+                            <Box sx={{width:"350px", height:"350px"}}>
+                            <img src={item.coverPhoto} alt={index}
+                             loading='lazy'
                                 style={{
                                     width: "100%", height: "100%",
+                                    objectFit:"cover"
                                 }}
                             />
+                            </Box>
                             </Link>
                             <Typography variant='body1' sx={{textAlign:'center',fontWeight:'bold',color:'#323491'}}>
-                            {item.year}</Typography>
+                            {item.documentName}</Typography>
                             </Stack>
+                        
                         </Paper>
                     ))}
-                </Stack>
+                </Stack> }
+                
             </Box>
 
             {/*-----------------------Footer---------------------*/}
