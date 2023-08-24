@@ -71,7 +71,7 @@ const StrategicPlans = () => {
                     gap: '0.5rem', justifyContent: 'center', alignItems: 'center', maxWidth:"85%", margin:"0 auto"
                 }}>
                     
-                    {StrategicPlans.map((item, index) => (
+                    {StrategicPlans?.map((item, index) => (
                         <Paper elevation={20} key={index} sx={{ maxWidth: { xs: 'inherit',md:'65%', lg: '95%' },cursor:'pointer'}}
                          component='div'>
                             <Stack sx={{direction:'column',gap:'0.5rem'}}>
