@@ -35,7 +35,7 @@ export default function IncomeForms() {
       
       {/*-----------------------Table---------------------*/}
 
-      <Table title={"Income Tax Forms"}/>
+      <Table title={"Income Tax Forms"} defaultValue={"Income Tax"}/>
 
       {/*-----------------------Footer---------------------*/}
 

@@ -4,53 +4,56 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Banner from "../assets/images/bg4.jpg";
-import { BsQuestionCircle } from "react-icons/bs";
-import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
-import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-
+import HelpOutlineTwoToneIcon from "@mui/icons-material/HelpOutlineTwoTone";
+import AddCircleOutlineTwoToneIcon from "@mui/icons-material/AddCircleOutlineTwoTone";
+import RemoveCircleOutlineTwoToneIcon from "@mui/icons-material/RemoveCircleOutlineTwoTone";
+import {
+  Box,
+  FormControl,
+  IconButton,
+  InputLabel,
+  MenuItem,
+  Select,
+  Typography,
+} from "@mui/material";
+import { useFetch } from "./api/api";
+import { useEffect } from "react";
+import Loader from "@/components/Loader";
 
 export default function FAQ() {
-  const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [isOpen3, setIsOpen3] = useState(false);
-  const [isOpen4, setIsOpen4] = useState(false);
-  const [isOpen5, setIsOpen5] = useState(false);
-  const [isOpen6, setIsOpen6] = useState(false);
-  const [isOpen7, setIsOpen7] = useState(false);
-  const [isOpen8, setIsOpen8] = useState(false);
+  const [faqOpen, setFaqOpen] = useState(null);
 
-  const [FaqCategory, setFaqCategory] = React.useState('');
+  const [faqCategory, setFaqCategory] = useState();
+  const [faqvalue, setFaqValue] = useState("")
 
-  const handleChange = (event) => {
-    setFaqCategory(event.target.value);
+  const { fetchAPI, data, isLoading } = useFetch("get", "/api/faq");
+
+  useEffect(() => {
+    fetchAPI();
+  }, [fetchAPI]);
+ 
+  const handleChange = (e) => {
+    setFaqValue(e.target.value)
+    if(e.target.value==="All FAQ"){
+      setFaqCategory(data?.data || []);
+    }
+    else {
+      const selectedArr = data?.data?.filter((item)=>item.question_cat===e.target.value);
+      setFaqCategory(selectedArr);
+    }
+   
   };
 
-  const toggleFAQ1 = () => {
-    setIsOpen1(!isOpen1);
+  const handleFaqOpen = (index) => {
+    if (faqOpen === index) {
+      setFaqOpen(null);
+    } else {
+      setFaqOpen(index); // Open the clicked FAQ
+    }
   };
 
-  const toggleFAQ2 = () => {
-    setIsOpen2(!isOpen2);
-  };
+ 
 
-  const toggleFAQ3 = () => {
-    setIsOpen3(!isOpen3);
-  };
-  const toggleFAQ4 = () => {
-    setIsOpen4(!isOpen4);
-  };
-  const toggleFAQ5 = () => {
-    setIsOpen5(!isOpen5);
-  };
-  const toggleFAQ6 = () => {
-    setIsOpen6(!isOpen6);
-  };
-  const toggleFAQ7 = () => {
-    setIsOpen7(!isOpen7);
-  };
-  const toggleFAQ8 = () => {
-    setIsOpen8(!isOpen8);
-  };
   return (
     <>
       <Head>
@@ -59,9 +62,8 @@ export default function FAQ() {
         <link rel="icon" href="/favicon.png" />
 
         {/* Always add this else you will get unstructured width on mobile devices */}
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       {/*-----------------------Header---------------------*/}
@@ -82,222 +84,117 @@ export default function FAQ() {
             Harmonised System on which it is based. The WCO FAQ on the
             Harmonised System can be accessed here.
           </p>
-          <Box sx={{ my: '2rem', display: 'flex', justifyContent: 'flex-end',
-          mx:{xs:'1rem'} }}>
-            <FormControl sx={{ width: {xs:'60%',md:'50%',lg:'40%'}, }}>
+          <Box
+            sx={{
+              my: "2rem",
+              display: "flex",
+              justifyContent: "flex-end",
+              mx: { xs: "1rem" },
+            }}
+          >
+            <FormControl sx={{ width: { xs: "60%", md: "50%", lg: "40%" } }}>
               <InputLabel id="FAQ-Search">Search FAQ by category</InputLabel>
               <Select
                 labelId="FAQ-Search"
                 id="FAQ-Search"
-                value={FaqCategory}
+                value={faqvalue}
                 label="Search FAQ by category"
                 onChange={handleChange}
               >
-                <MenuItem value={'Corporate'}>Corporate</MenuItem>
-                <MenuItem value={'VAT'}>VAT</MenuItem>
-                <MenuItem value={'Income Tax'}>Income Tax</MenuItem>
-                <MenuItem value={'Custom and Excise'}>Custom and Excise</MenuItem>
-                <MenuItem value={'e-Tax'}>e-Tax</MenuItem>
-                <MenuItem value={'Ayscuda World'}>Ayscuda World</MenuItem>
-                <MenuItem value={'Sekulula VAT Easy'}>Sekulula VAT Easy</MenuItem>
-                <MenuItem value={'Alcohol and Tabaco Levy'}>Alcohol and Tabaco Levy</MenuItem>
+                 <MenuItem value={"All FAQ"}>All FAQ</MenuItem>
+                <MenuItem value={"Corporate"}>Corporate</MenuItem>
+                <MenuItem value={"VAT"}>VAT</MenuItem>
+                <MenuItem value={"Income Tax"}>Income Tax</MenuItem>
+                <MenuItem value={"Custom and Excise"}>
+                  Custom and Excise
+                </MenuItem>
+                <MenuItem value={"e-Tax"}>e-Tax</MenuItem>
+                <MenuItem value={"Ayscuda World"}>Ayscuda World</MenuItem>
+                <MenuItem value={"Sekulula VAT Easy"}>
+                  Sekulula VAT Easy
+                </MenuItem>
+                <MenuItem value={"Alcohol and Tabaco Levy"}>
+                  Alcohol and Tabaco Levy
+                </MenuItem>
               </Select>
             </FormControl>
           </Box>
-
-          <div className="mt-12 ">
-          <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
-              <div
-                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
-                onClick={toggleFAQ1}
-              >
-                <BsQuestionCircle className="text-2xl text-subColor" />
-                <h1 className="flex-1 text-lg font-medium">
-                What is the alcohol and tobacco levy (ATL)?
-                </h1>
-                {isOpen1 ? (
-                  <FiMinusCircle className="text-xl" />
-                ) : (
-                  <FiPlusCircle className="text-xl" />
-                )}
-              </div>
-              {isOpen1 && (
-                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
-                It is a levy collected on alcoholic beverages and tobacco products. This excludes traditional beer.
-                </div>
-              )}
-            </div>
-
-            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-4 mb-4">
-              <h1
-                className="flex items-center justify-between gap-4 mx-4 cursor-pointer font-medium"
-                onClick={toggleFAQ2}
-              >
-                <BsQuestionCircle className="text-2xl text-subColor" /> I am
-                not certain of the tariff code I am looking for, but I know the
-                chapter. What is the best way to be able to look through a
-                number of tariff codes to identify the one I want?
-                {isOpen2 ? (
-                  <FiMinusCircle className="text-xl" />
-                ) : (
-                  <FiPlusCircle className="text-xl" />
-                )}
-              </h1>
-              {isOpen2 && (
-                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
-                  Using the Tariff Browse functionality, go to the relevant
-                  Section and Chapter. Click on the chapter to display all
-                  tariff codes falling under that chapter. Alternatively, simply
-                  enter the chapter number in the Tariff Search to display all
-                  tariff codes for that chapter.
-                </div>
-              )}
-            </div>
-            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
-              <div
-                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
-                onClick={toggleFAQ3}
-              >
-                <BsQuestionCircle className="text-2xl text-subColor" />
-                <h1 className="flex-1 text-lg font-medium">
-                  I would like to find the rate of duty for a product.
-                </h1>
-                {isOpen3 ? (
-                  <FiMinusCircle className="text-xl" />
-                ) : (
-                  <FiPlusCircle className="text-xl" />
-                )}
-              </div>
-              {isOpen3 && (
-                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
-                  Using the Tariff Search or Tariff Browse functionality, find
-                  the appropriate tariff code for the product. Click on the view
-                  icon to display the current rates of duty. Alternatively, make
-                  use of the Duty Estimator to estimate the rate of duty based
-                  on the product’s country of origin and customs value.
-                </div>
-              )}
-            </div>
-
-
-            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
-              <div
-                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
-                onClick={toggleFAQ4}
-              >
-                <BsQuestionCircle className="text-2xl text-subColor" />
-                <h1 className="flex-1 text-lg font-medium">
-                Can a registered business claim the import VAT paid at the border?
-                </h1>
-                {isOpen4 ? (
-                  <FiMinusCircle className="text-xl" />
-                ) : (
-                  <FiPlusCircle className="text-xl" />
-                )}
-              </div>
-              {isOpen4 && (
-                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
-                Yes. A taxable person may claim import VAT paid at the border if the goods imported are going to be used in the business of making taxable supplies.
-                </div>
-              )}
-            </div>
-
-
-
-            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
-              <div
-                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
-                onClick={toggleFAQ5}
-              >
-                <BsQuestionCircle className="text-2xl text-subColor" />
-                <h1 className="flex-1 text-lg font-medium">
-                Can businesses making a taxable turnover of less than E500, 000/annum register for VAT?
-                </h1>
-                {isOpen5 ? (
-                  <FiMinusCircle className="text-xl" />
-                ) : (
-                  <FiPlusCircle className="text-xl" />
-                )}
-              </div>
-              {isOpen5 && (
-                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
-                Registration is not mandatory if the taxable turnover is less than E500, 000/annum, but a business may register voluntarily if they comply with the requirements for registration as stated in the VAT Act. E.g. does the business have a fixed place of doing business in Eswatini; is the business able to keep proper books of account; will the business be able to submit accurate returns as and when required by the Act.
-                </div>
-              )}
-            </div>
-
-            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
-              <div
-                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
-                onClick={toggleFAQ6}
-              >
-                <BsQuestionCircle className="text-2xl text-subColor" />
-                <h1 className="flex-1 text-lg font-medium">
-                When is the deadline for submitting VAT returns?
-                </h1>
-                {isOpen6 ? (
-                  <FiMinusCircle className="text-xl" />
-                ) : (
-                  <FiPlusCircle className="text-xl" />
-                )}
-              </div>
-              {isOpen6 && (
-                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
-                The deadline for VAT online filers is the 27th of the following month after the end of the tax period. They must be submitted on E-Tax
-                </div>
-              )}
-            </div>
-
-            
-            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
-              <div
-                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
-                onClick={toggleFAQ7}
-              >
-                <BsQuestionCircle className="text-2xl text-subColor" />
-                <h1 className="flex-1 text-lg font-medium">
-                Is VAT charged on all rental property besides residential accommodation?
-                </h1>
-                {isOpen7 ? (
-                  <FiMinusCircle className="text-xl" />
-                ) : (
-                  <FiPlusCircle className="text-xl" />
-                )}
-              </div>
-              {isOpen7 && (
-                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
-                YES. Rentals of buildings for commercial purposes are taxable at the standard rate of 15%
-                </div>
-              )}
-            </div>
-
-
-            
-            <div className="border-1 solid bg-[#F4F3F6] rounded-lg py-6 mb-4">
-              <div
-                className="flex items-center justify-between gap-4 mx-4 cursor-pointer"
-                onClick={toggleFAQ8}
-              >
-                <BsQuestionCircle className="text-2xl text-subColor" />
-                <h1 className="flex-1 text-lg font-medium">
-                Are there any special requirements for hawkers who import goods from South Africa and Mozambique?
-                </h1>
-                {isOpen8 ? (
-                  <FiMinusCircle className="text-xl" />
-                ) : (
-                  <FiPlusCircle className="text-xl" />
-                )}
-              </div>
-              {isOpen8 && (
-                <div className="mx-14 mt-4 text-gray-500 leading-normal font-normal text-sm text-justify">
-                No there arent any. Currently hawkers are required to declare goods the same as any commercial entity.
-                </div>
-              )}
-            </div>
-
-
-          </div>
         </div>
+
+        <Box sx={{ mt: "4rem" }}>
+          {isLoading ? (
+            <Loader />
+          ) : (
+            faqCategory?.map((item, index) => (
+              <Box
+                key={index}
+                sx={{
+                  background: "#F4F3F6",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  borderRadius: "10px",
+                  p: "1rem",
+                  mb: "2rem",
+                }}
+              >
+              
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: "0.5rem",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        gap: "1rem",
+                        alignItems: "center",
+                      }}
+                    >
+                      <HelpOutlineTwoToneIcon sx={{ color: "#33348B", fontSize:"2rem" }} />
+                      <Typography
+                        variant="h6"
+                        sx={{ fontWeight: "400" }}
+                      >
+                        {item?.question}?
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        my: "0.5rem",
+                        color: "grey",
+                        ...(faqOpen === item.id
+                          ? {
+                              display: "block",
+                            }
+                          : {
+                              display: "none",
+                            }),
+                      }}
+                    >
+                      {item?.answer}?
+                    </Typography>
+                  </Box>
+                  
+                <Box>
+                  <IconButton onClick={() => handleFaqOpen(item.id)}>
+                    {faqOpen === item.id ? (
+                      <RemoveCircleOutlineTwoToneIcon
+                        sx={{ color: "#33348B" }}
+                      />
+                    ) : (
+                      <AddCircleOutlineTwoToneIcon sx={{ color: "#33348B" }} />
+                    )}
+                  </IconButton>
+                  
+                </Box>
+                
+              </Box>
+            ))
+          )}
+        </Box>
       </section>
       <Footer />
     </>

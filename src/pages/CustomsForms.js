@@ -34,7 +34,7 @@ export default function CustomsForms() {
       </Box>
       {/*-----------------------Table---------------------*/}
 
-      <Table title={"Customs & Excise Forms"}/>
+      <Table title={"Customs & Excise Forms"} defaultValue={"Customs & Excise"}/>
 
       {/*-----------------------Footer---------------------*/}
 

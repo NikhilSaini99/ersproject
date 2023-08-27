@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,6 +12,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Avatar, Box, Button, Divider, Grid, IconButton, Modal, Paper, SpeedDial, SpeedDialAction, Stack, Typography } from "@mui/material";
+import dayjs from "dayjs";
+
 
 function Media() {
 
@@ -137,7 +140,7 @@ function NewsCard({ url, img, title, date, description }) {
 
             }} onMouseOver={() => setCardHover(true)}
               onMouseOut={() => setCardHover(false)}>
-              <Image src={img} alt={title} style={{ width: '100%', height: '100%', display: 'block', }} />
+              <img src={img} alt={title} style={{ width: '100%', height: '100%', display: 'block', }} />
             </Box>
             <Button variant="contained" style={{ background: '#f4c402', color: 'black' }} sx={{
               textTransform: 'capitalize',
@@ -160,7 +163,7 @@ function NewsCard({ url, img, title, date, description }) {
               <Link href={`${url}`}>{title}</Link>
             </Typography>
             <Typography variant="subtitle2" sx={{ color: 'grey' }}>
-              {date}
+              {dayjs(date).format("DD-MM-YYYY")}
             </Typography>
             <Typography variant="body1" sx={{ color: 'grey' }}>
               {description}

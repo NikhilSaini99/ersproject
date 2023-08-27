@@ -58,13 +58,13 @@ export const LatestNewsSection = ()=>{
 }
 
 export default function News() {
-  const { data: VatData, fetchAPI } = useFetch('get', '/api/news')
+  const { data, fetchAPI, isLoading } = useFetch('get', '/api/news')
 
   useEffect(() => {
     fetchAPI()
-  },[])
+  },[fetchAPI])
 
-  console.log(VatData?.data?.data[0]?.description)
+
 
   
    

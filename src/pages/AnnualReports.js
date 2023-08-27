@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Box, Grid, Paper, Stack, Typography } from '@mui/material'
@@ -19,71 +20,26 @@ import pdfimg11 from '../assets/images/pdfimages/annualReports/2012annual report
 import pdfimg12 from '../assets/images/pdfimages/annualReports/annual-report.jpg'
 
 import Link from 'next/link';
+import Loader from '@/components/Loader';
+import { useFetch } from './api/api';
+import { useState,useEffect } from 'react';
 
 const AnnualReports = () => {
 
-    const annualPlanPdf = [
-        {
-            imgs: pdfimg1,
-            link: 'https://www.ers.org.sz/documents/ERS%20Annual%20Report%202022.pdf',
-            year: '2021-24'
-        },
-        {
-            imgs: pdfimg2,
-            link: 'https://www.ers.org.sz/documents/1645523251.pdf',
-            year: 'ERS Annual Report 2022'
-        },
-        {
-            imgs: pdfimg3,
-            link: 'https://www.ers.org.sz/documents/1616518279.pdf',
-            year: '2021 Annual Report'
-        },
-        {
-            imgs: pdfimg4,
-            link: 'https://www.ers.org.sz/documents/2019%20SRA%20Integrated%20Annual%20Report.pdf',
-            year: '2020 Annual Report'
-        },
-        {
-            imgs: pdfimg5,
-            link: 'https://www.ers.org.sz/documents/SRA%20Integrated%20Annual%20Report%202017-18.pdf',
-            year: '2019 SRA Integrated Annual Report'
-        },
-        {
-            imgs: pdfimg6,
-            link: 'https://www.ers.org.sz/documents/1520250934.pdf',
-            year: 'Annual Report 2017'
-        },
-        {
-            imgs: pdfimg7,
-            link: 'https://www.ers.org.sz/documents/ANNUAL%20REPORT%202016.pdf',
-            year: 'Annual Report 2016'
-        },
-        {
-            imgs: pdfimg8,
-            link: 'https://www.ers.org.sz/documents/ANNUAL%20REPORT%202015.pdf',
-            year: 'Annual Report 2015'
-        },
-        {
-            imgs: pdfimg9,
-            link: 'https://www.ers.org.sz/documents/Annual%20Report%202014.pdf',
-            year: 'Annual Report 2014'
-        },
-        {
-            imgs: pdfimg10,
-            link: 'https://www.ers.org.sz/documents/ANNUALREPORT2013(final).pdf',
-            year: 'Annual Report 2013'
-        },
-        {
-            imgs: pdfimg11,
-            link: 'https://www.ers.org.sz/documents/1497517613.pdf',
-            year: 'Annual Report 2012'
-        },
-        {
-            imgs: pdfimg12,
-            link: 'https://www.ers.org.sz/documents/1497517409.pdf',
-            year: 'Annual Report 2011'
-        },
-    ]
+    const {data,fetchAPI, isLoading} =useFetch("get","/api/publication");
+    const [AnnualReport, setAnnualReport] = useState();
+
+    useEffect(()=>{
+        fetchAPI();
+},[fetchAPI]);
+
+useEffect(()=>{
+    const AnnualReport_arr= data?.data?.filter((item)=>item.type==="Annual Reports");
+    setAnnualReport(AnnualReport_arr)
+},[data?.data]);
+
+
+
 
 
     return (
@@ -109,23 +65,22 @@ const AnnualReports = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
+                        <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
                     Annual Reports
                 </Typography>
+                {isLoading? <Loader/>:
                 <Grid container spacing={2}
                     sx={{ '& > .MuiGrid-item': { marginBottom: '2rem' } }}>
-                    {annualPlanPdf.map((item, index) => (
+                    {AnnualReport?.map((item, index) => (
                         <Grid item xs={12} md={6} lg={4} key={index}>
                             <Paper elevation={20} component="div" sx={{ cursor: 'pointer', height: '250px' }}>
                                 <Stack sx={{ direction: 'column', gap: '0.5rem', }}>
-                                    <Link href={item.link} target="_blank">
+                                    <Link href={item.documentUrl} target="_blank">
                                         <Box sx={{ height: '250px', }}>
-                                            <Image
-                                                src={item.imgs}
+                                            <img
+                                                src={item.coverPhoto}
                                                 alt="PDF Image"
-                                                width={0}
-                                                height={0}
                                                 style={{
                                                     width: "100%", height: "100%",
                                                     objectFit: 'cover',
@@ -135,14 +90,15 @@ const AnnualReports = () => {
                                     </Link>
 
                                     <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 'bold', color: '#323491' }}>
-                                        {item.year}
+                                        {item.documentName}
                                     </Typography>
                                 </Stack>
                             </Paper>
                         </Grid>
                     ))}
-                </Grid>
+                </Grid>}
             </Box>
+           
 
             {/*-----------------------Footer---------------------*/}
 
