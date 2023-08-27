@@ -1,135 +1,127 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import Header from "@/components/Header";
-import Carousal from "@/components/carousal";
-import { Media } from "@/components/media";
-import Footer from "@/components/Footer";
-import { Resources, News } from "@/components/homecard";
-import ETax from "../assets/images/e-tax.jpg";
-import ECoustoms from "../assets/images/e-customs.jpg";
-import Tax from "../assets/images/e-tax_logo.png";
-import Customs from "../assets/images/eCustoms_Tariff_Logo.png";
-import TCC from "../assets/images/tcc.png";
+import { AiOutlineArrowDown, MdOutlineCalendarMonth } from "react-icons/md";
+import { Box, Typography } from "@mui/material";
+import { Button, Grid, IconButton, Paper } from "@mui/material";
+import { News, Resources } from "@/components/homecard";
+import React, { useEffect, useState } from "react";
+
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CSR from "../assets/images/CSR.jpg";
-import calculator from "../assets/icons/calculator.png";
+import Carousal from "@/components/carousal";
+import Customs from "../assets/images/eCustoms_Tariff_Logo.png";
+import DatasetLinkedOutlinedIcon from "@mui/icons-material/DatasetLinkedOutlined";
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import ECoustoms from "../assets/images/e-customs.jpg";
+import ETax from "../assets/images/e-tax.jpg";
+import { FcAbout } from "react-icons/fc";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import { Icons } from "@/components/homecard";
+import Image from "next/image";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import Link from "next/link";
+import { Media } from "@/components/media";
+import TCC from "../assets/images/tcc.png";
+import Tax from "../assets/images/e-tax_logo.png";
 import barcode from "../assets/icons/barcode.png";
+import calculator from "../assets/icons/calculator.png";
 import currency from "../assets/icons/currency.png";
 import flight from "../assets/icons/flight.png";
 import headphone from "../assets/icons/headphone.png";
 import help from "../assets/icons/help.png";
 import monitoring from "../assets/icons/monitoring.png";
+import notice_board from "../assets/images/Notice_Board.png";
+import recentlyApproved from "../assets/images/Recently_Approved.png";
 import table from "../assets/icons/table.png";
-import { MdOutlineCalendarMonth, AiOutlineArrowDown } from "react-icons/md";
-import { FcAbout } from "react-icons/fc";
-import { Button, Grid, IconButton, Paper } from "@mui/material";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useRef } from "react";
-import { Icons } from "@/components/homecard";
-import DatasetLinkedOutlinedIcon from '@mui/icons-material/DatasetLinkedOutlined';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
-import { Box, Typography } from '@mui/material'
 import { useFetch } from "./api/api";
-
-
+import { useRef } from "react";
 
 export default function Home() {
-  const { data, fetchAPI } = useFetch('GET', '/api/banner-images')
-  const [isOpen, setisOpen] = useState(null)
-  const [isOpen2, setisOpen2] = useState(null)
+  const { data, fetchAPI } = useFetch("GET", "/api/banner-images");
+  const [isOpen, setisOpen] = useState(null);
+  const [isOpen2, setisOpen2] = useState(null);
 
   const handleOpen = (index) => {
     if (isOpen === index) {
       setisOpen(null);
-    }
-    else {
+    } else {
       setisOpen(index); // Open the clicked FAQ
     }
-  }
-
-
+  };
 
   const handleOpen2 = (index) => {
     if (isOpen2 === index) {
       setisOpen2(null);
-    }
-    else {
+    } else {
       setisOpen2(index); // Open the clicked FAQ
     }
-  }
+  };
 
   const arrowStyling = {
-    color: '#2f2483',
-    fontSize: '1rem'
-  }
+    color: "#2f2483",
+    fontSize: "1rem",
+  };
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchAPI();
-
-}, [data?.success])
-
-
+  }, [data?.success]);
 
   // ----------------------Resources-----------------------
-
-
 
   const resourceData = [
     {
       icon: calculator,
       title: "Calculator",
       description: "Some random content ...",
-      link: '/Calculator'
+      link: "/Calculator",
     },
 
     {
       icon: table,
       title: "Tables",
       description: "Some random content ...",
-      link: '/TaxTables'
+      link: "/TaxTables",
     },
 
     {
       icon: currency,
       title: "eTax",
       description: "Some random content ...",
-      link: 'https://etax.sra.org.sz/'
+      link: "https://etax.sra.org.sz/",
     },
 
     {
       icon: barcode,
       title: "Codes",
       description: "Some random content ...",
-      link: '/TaxItemTable'
+      link: "/TaxItemTable",
     },
 
     {
       icon: headphone,
       title: "Hotline",
       description: "Some random content ...",
-      link: '/Hotline'
+      link: "/Hotline",
     },
 
     {
       icon: help,
       title: "FAQs",
       description: "Some random content ...",
-      link: '/FAQ'
+      link: "/FAQ",
     },
 
     {
       icon: monitoring,
       title: "Business",
       description: "Some random content ...",
-      link: 'http://www.sra.org.sz/documents/1619530285.pdf'
+      link: "http://www.sra.org.sz/documents/1619530285.pdf",
     },
 
     {
       icon: flight,
       title: "Travelling",
       description: "Some random content ...",
-      link: 'https://www.ers.org.sz/documents/1493283598.pdf'
+      link: "https://www.ers.org.sz/documents/1493283598.pdf",
     },
   ];
 
@@ -151,22 +143,21 @@ export default function Home() {
           id: 2,
           head: "Remittance of Paye",
           para: "No later than the 7th every month",
-
-
         },
         {
           id: 3,
-          head: 'Submission of Salary Reconciliations',
+          head: "Submission of Salary Reconciliations",
           para: "No later than the 7th every month",
         },
         {
           id: 4,
-          head: 'Submission of Income Tax Returns',
+          head: "Submission of Income Tax Returns",
           para: "All Non-VAT registered entities - 31st October",
-          para2: "Individuals with employment income and Individuals with other income - 30th November",
-          para3: "All VAT registered entities and Special groups - 31st December",
-        }
-
+          para2:
+            "Individuals with employment income and Individuals with other income - 30th November",
+          para3:
+            "All VAT registered entities and Special groups - 31st December",
+        },
       ],
     },
   ];
@@ -212,23 +203,22 @@ export default function Home() {
       icon: Tax,
       description:
         '"e-Tax is an electronic platform through which taxpayers are required to submit VAT, PAYE, Income Tax and Provisional Tax returns."',
-        link:"https://etax.sra.org.sz/"
+      link: "https://etax.sra.org.sz/",
     },
     {
       img: ECoustoms,
       icon: TCC,
       description:
         '"Click on this tab to access your Instant TCC platform. If you don’t qualify, please visit the nearest ERS Service Centre to resolve possible outstanding issues."',
-        link :"https://srasp.sra.org.sz/tcc/"
+      link: "https://srasp.sra.org.sz/tcc/",
     },
     {
       img: ECoustoms,
       icon: Customs,
       description:
         '"All import and export commercial transactions require commodities on Customs declarations to be classified according to an appropriate tariff heading."',
-        link:"/customs",
+      link: "/customs",
     },
-  
   ];
 
   // ----------------------Tabs-----------------------
@@ -247,8 +237,6 @@ export default function Home() {
     });
   }
 
-
-
   return (
     <>
       {/*---------------------Header-------------------*/}
@@ -257,7 +245,7 @@ export default function Home() {
 
       {/*------------------Carousal-------------------*/}
 
-      <Carousal bannerData={data?.data}/>
+      <Carousal bannerData={data?.data} />
 
       {/*------------------Our Resources-------------------*/}
 
@@ -274,12 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-
-
-
-
       {/*------------------News Section-------------------*/}
-
 
       <section className="bg-[#F7F7FA] py-16" data-aos="fade-right">
         <div className="  md:px-14">
@@ -303,7 +286,60 @@ export default function Home() {
 
       {/*---------------------Tab Section----------------------*/}
 
-      <section className="py-16  bg-[#F7F7FA]" data-aos="fade-up">
+      <section className=" bg-transparent relative h-full my-16" data-aos="fade-up">
+        <div className="absolute -z-50 h-[84%] w-full bg-primaryColor bottom-0"></div>
+        <div className="flex flex-col  min-h-[400px] w-4/5 mx-auto ">
+          <div className="flex gap-0 sm:flex-col md:flex-col lg:flex-row  justify-between bg-yellowish  font-bold text-white p-4">
+            <div className="flex justify-end w-2/4 ">
+              <h3 className="text-2xl">Recently Approved</h3>
+            </div>
+            <div className="flex justify-end w-2/4 pl-4 ">
+              <p className="text-2xl"> Notice Board</p>
+            </div>
+          </div>
+          <div className="flex gap-3  sm:flex-col sm:gap-16 md:gap-16 md:flex-col 
+            lg:flex-row
+          pl-4 justify-between pb-4 bg-white  shadow-2xl relative">
+            <div className="flex bg-cover w-[50%] sm:w-full md:w-full">
+              <div className="w-[50%] h-[200px]">
+                <Image
+                  className="object-cover relative -top-11"
+                  src={recentlyApproved}
+                  alt="Recently_approve"
+                  style={{ width: "100%", height: "250px" }}
+                />
+              </div>
+              <div className="flex flex-col gap-2 items-start pl-2 pt-8  flex-grow">
+                <p className="border-b w-full pl-6">
+                  Recently Approved Guidelines
+                </p>
+                <p className="border-b w-full  pl-6">Approved Practice Notes</p>
+                <p className="border-b w-full pl-6">Recently Approved Forms</p>
+                <p className="border-b w-full pl-6">Publications</p>
+              </div>
+            </div>
+
+            <div className="flex bg-cover w-[50%] sm:w-full md:w-full">
+              <div className="w-[50%] h-[200px]">
+                <Image
+                  className="object-cover relative -top-11"
+                  src={notice_board}
+                  alt="Recently_approve"
+                  style={{ width: "100%", height: "250px" }}
+                />
+              </div>
+              <div className="flex flex-col gap-2 items-start pl-2 pt-8 flex-grow ">
+                <p className="border-b w-full pl-6">Latest Tenders</p>
+                <p className="border-b w-full pl-6">Current Vaccines</p>
+                <p className="border-b w-full pl-6">Public Notices</p>
+                <p className="border-b w-full pl-6">Public Meetings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="py-16  bg-[#F7F7FA]" data-aos="fade-up">
         <div className="flex flex-row bg-[#F7F7FA] text-xl justify-center font-semibold leading-6">
           <button
             onClick={() => toggleVisibility("div1")}
@@ -318,13 +354,13 @@ export default function Home() {
           >
             Notice Board
           </button>
-        </div>
+        </div> */}
 
-        {/* Recently Approved */}
-        <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full `}>
+      {/* Recently Approved */}
+      {/* <div className={`${isVisible.div1 ? "block" : "hidden"} bg-subColor text-white w-full `}>
           <div className="flex flex-col md:flex-row justify-between  md:px-8 py-10 h-[25rem] gap-4">
             {/* Content for first div */}
-            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
+      {/* <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
                 <p className="text-yellowish text-xl font-normal ">Recently Approved Guidelines</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -350,17 +386,17 @@ export default function Home() {
               <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
             </div>
 
-            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div> */}
 
-            {/* Content for second div */}
-            <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]    justify-between ">
+      {/* Content for second div */}
+      {/* <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]    justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Approved Practice Notes</p>
                 <ul className="list-disc pl-[0rem] text-base flex flex-col gap-0 pt-0">
                 <Typography className="list-disc pl-[0rem] text-base flex-col gap-0 pt-6 "><Link href={"/LegalandPolicy/Notes_Guidelines"}> Click to view </Link> approved practice notes to assist with simplifying the application of law.
                 </Typography>
-                {/* <Link href={"/LegalandPolicy/Notes_Guidelines"}> Click to view </Link> approved practice notes to assist with simplifying the application of law. */}
-                </ul>
+                </ul> */}
+      {/* 
               </div>
 
             </div>
@@ -369,10 +405,10 @@ export default function Home() {
               <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
             </div>
 
-            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div> */}
 
-            {/* Content for third div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
+      {/* Content for third div */}
+      {/* <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Recently Approved Forms</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -393,10 +429,10 @@ export default function Home() {
             <div className="flex flex-col relative justify-end h-full ">
               <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
             </div>
-            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div> */}
 
-            {/* Content for fourth div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
+      {/* Content for fourth div */}
+      {/* <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
                 <p className="text-yellowish text-xl font-normal">Publications</p>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6 ">
@@ -414,13 +450,13 @@ export default function Home() {
               <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
             </div>
           </div>
-        </div>
-        {/* Notice Board */}
+        </div> */}
+      {/* Notice Board
 
         <div className={`${isVisible.div2 ? "block" : "hidden"} bg-subColor text-white w-full `}>
           <div className="flex flex-col md:flex-row justify-between   md:px-8 py-10 h-[25rem] gap-4">
             {/* Content for first div */}
-            <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
+      {/* <div className=" flex flex-col text-[inherit] font-inherit w-full md:w-[17.8rem] xl:w-[19.5rem]  justify-between text-midnightblue-100  ">
               <div>
                <Link href={"/Tender/Tender"}> <p className="text-yellowish text-xl font-normal">Latest Tenders</p></Link>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -442,9 +478,9 @@ export default function Home() {
               <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
             </div>
 
-            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>  */}
 
-            {/* Content for second div */}
+      {/* Content for second div
             <div className=" flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]    justify-between ">
               <div className="">
                 <p className=" text-yellowish text-xl font-normal">Current Vacancies</p>
@@ -460,10 +496,10 @@ export default function Home() {
               <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
             </div>
 
-            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div> */}
 
-            {/* Content for third div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
+      {/* Content for third div */}
+      {/* <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
               <Link href={"/PublicNotices/PublicNotices"}> <p  className="text-yellowish text-xl font-normal">Public Notices</p></Link> 
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6">
@@ -485,10 +521,10 @@ export default function Home() {
               <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
             </div>
 
-            <div className={`lg:border-r opacity-40 xs:border-t`} ></div>
+            <div className={`lg:border-r opacity-40 xs:border-t`} ></div> */}
 
-            {/* Content for fourth div */}
-            <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
+      {/* Content for fourth div */}
+      {/* <div className="flex flex-col w-full md:w-[17.8rem] xl:w-[19.5rem]     justify-between">
               <div>
               <Link href={"/PublicMeeting/PublicMeetingList"}>  <p  className="text-yellowish text-xl font-normal">Public Meetings</p></Link>
                 <ul className="list-disc pl-[1.5rem] text-base flex flex-col gap-3 pt-6 ">
@@ -502,14 +538,10 @@ export default function Home() {
             <div className="flex flex-col relative justify-end h-full ">
               <DoubleArrowIcon className="cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ..." />
             </div>
-          </div>
-
-        </div>
-
-
-      </section>
-
-
+          </div> 
+            </div>
+             </section> 
+          */}
 
       {/* display: isOpen === index ? 'block' : 'none' */}
       {/*---------------------Tax Section----------------------*/}
@@ -527,36 +559,52 @@ export default function Home() {
               {item.card.map((card, key) => (
                 <div
                   key={key}
-                  className={`flex flex-col gap-2 py-5 text-black ${card.id && key !== item.card.length - 1 ? "border-b border-[#DAD8CC]" : ""
-                    }`}
+                  className={`flex flex-col gap-2 py-5 text-black ${
+                    card.id && key !== item.card.length - 1
+                      ? "border-b border-[#DAD8CC]"
+                      : ""
+                  }`}
                 >
                   <div className="flex justify-between">
-                    <h1 className="text-lg font-medium leading-6">{card.head}</h1>
-                    <IconButton onClick={() => handleOpen(key)}><KeyboardArrowDownIcon /></IconButton>
+                    <h1 className="text-lg font-medium leading-6">
+                      {card.head}
+                    </h1>
+                    <IconButton onClick={() => handleOpen(key)}>
+                      <KeyboardArrowDownIcon />
+                    </IconButton>
                   </div>
 
-                  <ul className={`text-sm font-normal leading-7  ${isOpen === key ? 'block' : 'hidden'}`} >
+                  <ul
+                    className={`text-sm font-normal leading-7  ${
+                      isOpen === key ? "block" : "hidden"
+                    }`}
+                  >
+                    {card.para && (
+                      <div className="flex gap-1 items-start">
+                        <span className="mr-2">
+                          <ArrowForwardIosIcon sx={arrowStyling} />
+                        </span>
+                        <li>{card.para}</li>
+                      </div>
+                    )}
 
-                    {card.para && <div className='flex gap-1 items-start'>
-                      <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} />
-                      </span>
-                      <li>{card.para}</li>
-                    </div>}
+                    {card.para2 && (
+                      <div className="flex gap-1 items-start">
+                        <span className="mr-2">
+                          <ArrowForwardIosIcon sx={arrowStyling} />
+                        </span>
+                        <li>{card.para2}</li>
+                      </div>
+                    )}
 
-                    {card.para2 && <div className='flex gap-1 items-start'>
-                      <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} />
-                      </span>
-                      <li>{card.para2}</li>
-                    </div>}
-
-                    {card.para3 && <div className='flex gap-1 items-start'>
-                      <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} />
-                      </span>
-                      <li>{card.para3}</li>
-                    </div>}
-
-
-
+                    {card.para3 && (
+                      <div className="flex gap-1 items-start">
+                        <span className="mr-2">
+                          <ArrowForwardIosIcon sx={arrowStyling} />
+                        </span>
+                        <li>{card.para3}</li>
+                      </div>
+                    )}
 
                     {/* <li>{card.para2 && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para2}</li>
                     <li>{card.para3 && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para3}</li> */}
@@ -570,30 +618,64 @@ export default function Home() {
             <div key={id} className="flex flex-col">
               <div className="flex justify-between items-center">
                 <h1 className="flex items-center gap-1 text-subColor text-2xl font-medium leading-8">
-                  <DatasetLinkedOutlinedIcon className="text-5xl" sx={{ fontSize: '3rem', lineHeight: 1 }} />
+                  <DatasetLinkedOutlinedIcon
+                    className="text-5xl"
+                    sx={{ fontSize: "3rem", lineHeight: 1 }}
+                  />
                   {item.title}
                 </h1>
               </div>
               {item.card.map((card, key) => (
                 <div
                   key={key}
-                  className={`flex flex-col gap-2 py-5 ${card.id && "border-b border-[#DAD8CC]"
-                    }`}
+                  className={`flex flex-col gap-2 py-5 ${
+                    card.id && "border-b border-[#DAD8CC]"
+                  }`}
                 >
                   <div className="flex justify-between">
-                    <h1 className="text-lg font-medium leading-6">{card.head}</h1>
-                    <IconButton onClick={() => handleOpen2(key + 1)}><KeyboardArrowDownIcon /></IconButton>
+                    <h1 className="text-lg font-medium leading-6">
+                      {card.head}
+                    </h1>
+                    <IconButton onClick={() => handleOpen2(key + 1)}>
+                      <KeyboardArrowDownIcon />
+                    </IconButton>
                   </div>
 
-                  <ul className={`text-sm font-normal leading-7 ${isOpen2 === key + 1 ? 'block' : 'hidden'} `}>
+                  <ul
+                    className={`text-sm font-normal leading-7 ${
+                      isOpen2 === key + 1 ? "block" : "hidden"
+                    } `}
+                  >
                     <Link href={`${card.link}`}>
-                      <li className="">{card.para && <span className="mr-2"><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para}</li>
+                      <li className="">
+                        {card.para && (
+                          <span className="mr-2">
+                            <ArrowForwardIosIcon sx={arrowStyling} />
+                          </span>
+                        )}
+                        {card.para}
+                      </li>
                     </Link>
                     <Link href={`${card.link2}`}>
-                      <li className=""> {card.para2 && <span className="mr-2 "><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para2}</li>
+                      <li className="">
+                        {" "}
+                        {card.para2 && (
+                          <span className="mr-2 ">
+                            <ArrowForwardIosIcon sx={arrowStyling} />
+                          </span>
+                        )}
+                        {card.para2}
+                      </li>
                     </Link>
                     <Link href={`${card.link3}`}>
-                      <li className="">{card.para3 && <span className="mr-2 "><ArrowForwardIosIcon sx={arrowStyling} /></span>}{card.para3}</li>
+                      <li className="">
+                        {card.para3 && (
+                          <span className="mr-2 ">
+                            <ArrowForwardIosIcon sx={arrowStyling} />
+                          </span>
+                        )}
+                        {card.para3}
+                      </li>
                     </Link>
                   </ul>
                 </div>
@@ -602,7 +684,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
 
       {/*----------------Corporate Social Responsibility------------------*/}
 
@@ -616,8 +697,8 @@ export default function Home() {
               Corporate Social Responsibility
             </h1>
             <p className="text-2xl leading-9 font-normal text-black mt-8 mb-12">
-              The ERS s definition for Corporate Social Responsibility is the process
-              of how the organization helps the Swazi society.
+              The ERS s definition for Corporate Social Responsibility is the
+              process of how the organization helps the Swazi society.
             </p>
             <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5">
               See More Stories
@@ -633,16 +714,27 @@ export default function Home() {
             How can we help you?
           </h1>
           <p className="xs:text-base text-xl font-normal leading-8 xs:px-5 md:px-10">
-            <Link href="/Contact"><span className="border-b-2 border-yellowish">Get in touch</span></Link> with
-            us or{""}
-            <Link href="/Contact"> <span className="border-b-2 border-yellowish">find an office</span></Link>{" "}
+            <Link href="/Contact">
+              <span className="border-b-2 border-yellowish">Get in touch</span>
+            </Link>{" "}
+            with us or{""}
+            <Link href="/Contact">
+              {" "}
+              <span className="border-b-2 border-yellowish">
+                find an office
+              </span>
+            </Link>{" "}
             closest to you.
           </p>
 
           <div className="flex gap-0">
-            <p className="xs:text-lg text-xl font-normal leading-8">Any Feedback for us?</p>
+            <p className="xs:text-lg text-xl font-normal leading-8">
+              Any Feedback for us?
+            </p>
             <Link href="/Feedback">
-              <span className="border-b-2 border-yellowish cursor-pointer ml-2">Feedback</span>
+              <span className="border-b-2 border-yellowish cursor-pointer ml-2">
+                Feedback
+              </span>
             </Link>
           </div>
         </div>
