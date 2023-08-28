@@ -2,7 +2,7 @@ import { AiOutlineArrowDown, MdOutlineCalendarMonth } from "react-icons/md";
 import { Box, Typography } from "@mui/material";
 import { Button, Grid, IconButton, Paper } from "@mui/material";
 import { News, Resources } from "@/components/homecard";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CSR from "../assets/images/CSR.jpg";
@@ -30,6 +30,8 @@ import headphone from "../assets/icons/headphone.png";
 import help from "../assets/icons/help.png";
 import monitoring from "../assets/icons/monitoring.png";
 import notice_board from "../assets/images/Notice_Board.png";
+import validation from "../assets/images/validation.png";
+import notes from "../assets/images/notes.png";
 import recentlyApproved from "../assets/images/Recently_Approved.png";
 import table from "../assets/icons/table.png";
 import { useFetch } from "./api/api";
@@ -237,6 +239,54 @@ export default function Home() {
     });
   }
 
+  const tabSection = useMemo(
+    () => [
+      {
+        type: "Recently Approved",
+        items: [
+          {
+            link: "",
+            text: "Recently Approved GuideLines",
+          },
+          {
+            link: "",
+            text: "Approved Practice Notes",
+          },
+          {
+            link: "",
+            text: "Recently Approved Forms",
+          },
+          {
+            link: "",
+            text: "Publications",
+          },
+        ],
+      },
+      {
+        type: "Notice Board",
+        items: [
+          {
+            link: "",
+            text: "Latest Tenders",
+          },
+          {
+            link: "",
+            text: "Current Vaccines",
+          },
+          {
+            link: "",
+            text: "Public Notices",
+          },
+          {
+            link: "",
+            text: "Public Meetings",
+          },
+        ],
+      },
+    ],
+    []
+  );
+
   return (
     <>
       {/*---------------------Header-------------------*/}
@@ -286,7 +336,74 @@ export default function Home() {
 
       {/*---------------------Tab Section----------------------*/}
 
-      <section className=" bg-transparent relative h-full my-16" data-aos="fade-up">
+      <section className="relative h-[380px] my-10" data-aos="fade-up">
+        <div className="absolute -z-50 h-[80%] w-full bg-primaryColor bottom-0"></div>
+        <div className="w-[80%] flex gap-0 mx-auto bg-gray-200 shadow-2xl">
+
+          <div className="w-[50%] flex flex-col gap-4 pt-4 md:px-8 2xl:px-20 pb-8 flex-grow bg-gray-200">
+            <h3 className="px-6 pt-2 pb-2 font-bold text-2xl border-b border-white">
+              Recently Approved
+            </h3>
+            <div className="flex md:gap-6 xl:gap-10 2xl:gap-14 p-2">
+              <div className="bg-cover">
+                <Image
+                  src={validation}
+                  width={150}
+                  height={150}
+                  alt="recentlyApproved"
+                  style={{}}
+                />
+              </div>
+              <div className="flex flex-col gap-4 font-semibold">
+
+              {tabSection[0]?.items?.map((point, index) => (
+              <div key={index} className="flex gap-1 items-start pb-2 font-semibold">
+                <span >
+                  <ArrowForwardIosIcon className="mr-2"
+                    sx={{ ...arrowStyling, }}
+                  />
+                </span>
+                <p>{point.text}</p>
+              </div>
+            ))}
+              </div>
+            </div>
+          </div>
+
+          <div className=" w-[50%] flex flex-col gap-4 pt-4  md:px-8 2xl:px-20 pb-8 flex-grow bg-gray-100">
+            <p className="px-6 pt-2 pb-2 font-bold text-2xl border-b border-white">
+              Notice Boards
+            </p>
+            <div className="flex md:gap-6 xl:gap-10 2xl:gap-14 p-2">
+              <div className="bg-cover">
+                <Image
+                  src={notes}
+                  width={150}
+                  height={150}
+                  sizes="fill"
+                  alt="recentlyApproved"
+                  style={{}}
+                />
+              </div>
+              <div className="flex flex-col gap-4 font-semibold">
+              {tabSection[1]?.items?.map((point, index) => (
+              <div key={index} className="flex gap-1 items-start pb-2 font-semibold">
+                <span >
+                  <ArrowForwardIosIcon className="mr-2"
+                    sx={{ ...arrowStyling }}
+                  />
+                </span>
+                <p>{point.text}</p>
+              </div>
+            ))}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* <section className=" bg-transparent relative h-full my-16" data-aos="fade-up">
         <div className="absolute -z-50 h-[84%] w-full bg-primaryColor bottom-0"></div>
         <div className="flex flex-col  min-h-[400px] w-4/5 mx-auto ">
           <div className="flex gap-0 sm:flex-col md:flex-col lg:flex-row  justify-between bg-yellowish  font-bold text-white p-4">
@@ -337,7 +454,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="py-16  bg-[#F7F7FA]" data-aos="fade-up">
         <div className="flex flex-row bg-[#F7F7FA] text-xl justify-center font-semibold leading-6">

@@ -49,37 +49,3 @@ export const useFetch = (method, path) => {
 
     return { data: state?.data?.data,isLoading: state.isLoading, fetchAPI }
 }
-
-
-
-
-// const API_KEY = process.env.API_KEY;
-/* const axiosInstance = axios.create({
-    baseURL: API_ENDPOINT,
-    headers: {
-        //   Authorization: `Bearer ${API_KEY}`,
-        "Content-Type": 'application/json'
-    },
-});
-
-export const getFeedback = async () => {
-    try {
-        const response = await axiosInstance.get('/api/userFeedback');
-        // console.log(response.data)
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
-};
-
-const submitFeedback = async (feedbackData) => {
-    try {
-        const response = await axiosInstance.post('/api/userFeedback', feedbackData);
-        // console.log(response)
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
-    
-}; */
-

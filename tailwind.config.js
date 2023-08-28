@@ -15,7 +15,8 @@ module.exports = {
         mainColor: "#2F3192",
         subColor: "#17197C",
         yellowish: "#FFC43A",
-        normalBlue: '#2251FF'
+        normalBlue: '#2251FF',
+        white : "#FFF"
       },
       height:{
         512:'512px'
