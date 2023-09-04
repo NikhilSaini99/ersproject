@@ -21,8 +21,32 @@ import {
   TableHead,
   TableRow,
   Typography,
+  styled
 } from "@mui/material";
+import { useEffect } from "react";
+import { useFetch } from "./api/api";
+
+const MyDiv = styled("div")({
+    display:'grid',
+    gridTemplateColumns: "repeat(auto-fill , minmax(350px, 1fr))",
+    justifyContent:"space-between",
+    gap:'2.5rem',
+    margin:'1.5rem 0',
+})
+
+
 export default function Contact() {
+
+  const { data, fetchAPI, isLoading } = useFetch("get", "/api/contact");
+
+  useEffect(()=>{
+    fetchAPI()
+  },[fetchAPI])
+  console.log(data)
+
+  const headQuarter = data?.data?.filter((item)=>item?.isHeadQuater)
+  const serviceCenter = data?.data?.filter((item)=>item?.isHeadQuater===false)
+  
   const locations = [
     {
       data: [
@@ -55,47 +79,8 @@ export default function Contact() {
     },
   ];
 
-  const CentersData = [
-    {
-      title: "MANZINI SERVICE CENTRE",
-      description:
-        "Sivuno Building, Ground floor, adjacent to Estel House, Manzini MANZINI",
-      contact: "[+268] 2406 4050",
-      timing: "08:00 - 17:00",
-    },
-    {
-      title: "MATSAPHA BRANCH",
-      description: "Matsamo Shopping Complex (kaMahhala) MATSAPHA",
-      contact: "[+268] 2406 4050",
-      timing: "08:00 - 17:00",
-    },
-    {
-      title: "MBABANE SERVICE CENTRE",
-      description: "3rd Floor, Corporate Place, Swazi  Plaza MBABANE ",
-      contact: "[+268] 2406 4050",
-      timing: "08:00 - 17:00",
-    },
-    {
-      title: "NHLANGANO BRANCH",
-      description:
-        "Old Skonkwane Building  Corner of 6th Street and 3rd Avenue NHLANGANO",
-      contact: "[+268] 2406 4050",
-      timing: "08:00 - 17:00",
-    },
-    {
-      title: "PIGGS PEAK SERVICE CENTRE",
-      description:
-        "1st Floor, Supreme Building  Evelyn Baring Road  PIGGS PEAK",
-      contact: "[+268] 2406 4050 ",
-      timing: "08:00 - 17:00",
-    },
-    {
-      title: "SITEKI SERVICE CENTRE",
-      description: "Mafumbe Building Jacaranda Road  SITEKI",
-      contact: "[+268] 2406 405",
-      timing: "08:00 - 17:00",
-    },
-  ];
+  
+  
 
   return (
     <>
@@ -140,25 +125,29 @@ export default function Contact() {
       <section>
         <div className="px-10 flex">
           <div className="flex flex-col gap-8 bg-subColor text-[#f5f5f5] pl-10 pr-12 pt-9 pb-16 w-[32%]">
-            <div className="flex flex-col gap-2">
-              <h1 className="text-xl font-bold leading-6 mb-1">
-                Head Quarters
+           
+           {headQuarter && headQuarter.map((item,index)=>(
+            <div className="flex flex-col gap-2" key={index}>
+             <h1 className="text-xl font-bold leading-6 mb-1">
+                {item?.branchName}
               </h1>
-              <p className="flex  gap-1">
-                <ImHome3 className="text-xl" />
+              <p className="flex  gap-2  item">
+                <ImHome3 className="text-2xl" />
 
                 <span className="text-sm leading-6 font-normal">
-                  Portion 419 of Farm 50, Along MR103, Ezulwini
+                {item?.branchLocation},{item?.branchCity}, {item?.branchState}
                 </span>
               </p>
-              <p className="flex  gap-1">
-                <BsTelephoneFill className="text-xl" />
+              <p className="flex  gap-2">
+                <BsTelephoneFill className="text-2xl" />
 
                 <span className="text-sm leading-6 font-normal">
-                  [+268] 2406 4000
+                  {item?.contactNo}
                 </span>
               </p>
             </div>
+           )) } 
+           
             <div className="flex flex-col justify-start gap-2 pr-6">
               <h1 className="text-xl font-bold leading-6 mb-1">
                 ERS Contact Centre
@@ -213,17 +202,19 @@ export default function Contact() {
               Service Centers and Branches
             </h1>
             <div className="border mr-12 border-yellowish mt-1 w-32"></div>
-            <div className="grid grid-cols-3 gap-x-16 gap-y-10 pt-5">
-              {CentersData.map((item, key) => (
+            <MyDiv >
+              {data && serviceCenter?.map((item, key) => (
                 <Centers
                   key={key}
-                  title={item.title}
-                  description={item.description}
-                  contact={item.contact}
-                  timing={item.timing}
+                  branchName={item?.branchName}
+                  branchLocation={item?.branchLocation}
+                  contact={item?.contactNo}
+                  timing={item?.timing}
+                  branchCity={item?.branchCity}
+                  branchState={item?.branchState}
                 />
               ))}
-            </div>
+            </MyDiv>
           </div>
         </div>
 

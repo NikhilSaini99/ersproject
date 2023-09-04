@@ -14,7 +14,7 @@ import { useFetch } from "./api/api";
 
 export const LatestNewsSection = ()=>{
   return(
-    <Grid xs={4} sx={{ position: 'relative' }}>
+    <Grid item xs={4} sx={{ position: 'relative' }}>
     <Image src={rightSideBackground} alt="rightSideBackground"
       style={{
         position: 'absolute',
@@ -64,7 +64,7 @@ export default function News() {
     fetchAPI()
   },[fetchAPI])
 
-
+  console.log(data?.data)
 
   
    
@@ -93,14 +93,14 @@ export default function News() {
         <Grid container>
           {/* Left Side */}
           <Grid item xs={8} sx={{ marginTop: '8rem' }}>
-            {newses.map((item, key) => (
+            {data && data?.data?.map((item, key) => (
               <NewsCard
                 key={key}
-                img={item.img}
+                img={item?.url}
                 url={item.url}
-                title={item.title}
-                date={item.date}
-                description={item.description}
+                title={item?.newsName}
+                date={item?.uploadDate}
+                description={item?.description}
               />
             ))}
           </Grid>

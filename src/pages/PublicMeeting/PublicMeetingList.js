@@ -45,7 +45,7 @@ export const LatestNewsSection = ()=>{
       <Stack sx={{ flexDirection: 'column', gap: '0.5rem', p: '1rem 0.1rem' }}>
         {pumbicMeetings.map((item, index) => (
           <Stack key={index} sx={{ flexDirection: 'column', gap: '0.6rem', p: '1.5rem' }}>
-            <Image src={item.img} alt={item.title} />
+            <Image src={item.img} alt={item.title}/>
             <Typography variant="subtitle2" sx={{ color: 'grey' }}>
               {item.date}
             </Typography>

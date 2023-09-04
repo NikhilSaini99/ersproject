@@ -266,7 +266,7 @@ export default function Home() {
         type: "Notice Board",
         items: [
           {
-            link: "",
+            link: "/Tender/Tender",
             text: "Latest Tenders",
           },
           {
@@ -274,11 +274,11 @@ export default function Home() {
             text: "Current Vaccines",
           },
           {
-            link: "",
+            link: "/PublicNotices/PublicNotices",
             text: "Public Notices",
           },
           {
-            link: "",
+            link: "/PublicMeeting/PublicMeetingList",
             text: "Public Meetings",
           },
         ],
@@ -363,7 +363,7 @@ export default function Home() {
                     sx={{ ...arrowStyling, }}
                   />
                 </span>
-                <p>{point.text}</p>
+                <Link href={point.link}>  <p>{point.text}</p></Link>
               </div>
             ))}
               </div>
@@ -393,7 +393,7 @@ export default function Home() {
                     sx={{ ...arrowStyling }}
                   />
                 </span>
-                <p>{point.text}</p>
+                <Link href={point.link}>  <p>{point.text}</p></Link>
               </div>
             ))}
               </div>

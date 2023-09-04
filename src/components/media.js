@@ -137,10 +137,11 @@ function NewsCard({ url, img, title, date, description }) {
                 transition: '0.5s',
                 filter: 'brightness(60%)'
               }),
-
+                height:'450px',
+                backgroundSize:"cover"
             }} onMouseOver={() => setCardHover(true)}
               onMouseOut={() => setCardHover(false)}>
-              <img src={img} alt={title} style={{ width: '100%', height: '100%', display: 'block', }} />
+              <img src={img} alt={title} style={{ width: '100%', height: '100%', display: 'block', objectFit:'cover' }} />
             </Box>
             <Button variant="contained" style={{ background: '#f4c402', color: 'black' }} sx={{
               textTransform: 'capitalize',
