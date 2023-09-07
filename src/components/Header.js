@@ -40,8 +40,6 @@ export default function Header() {
     data;
   }, [data]);
 
-  console.log(data)
-
   const [menuOpen, setMenuOpen] = useState("false");
 
   const [windowScroll, setwindowScroll] = useState("hidden");

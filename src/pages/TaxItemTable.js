@@ -2,14 +2,43 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Box, Paper, Typography } from '@mui/material'
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
 import bgimg from '../assets/images/bg-1.png'
 import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material'
 import { taxData } from '../content/data'
 import Image from 'next/image'
 import Banner from "../assets/images/customs.jpg";
+import { useFetch } from './api/api'
 let myKeys;
 const TaxItemTable = () => {
+    const { data, fetchAPI, isLoading } = useFetch("get", "/api/textIteamCode");
+
+    useEffect(()=>{
+      fetchAPI()
+    },[fetchAPI])
+    
+    const tax_type = data?.data?.map((item)=>item.text_type_two)
+    const taxItem_name = data?.data?.map((item)=>item.item_name)
+    const check = {}
+
+    // const tax_type_and_name = data?.data?.map((item)=>{
+    //     {
+    //         new_taxt_type = item.text_type_two
+    //     }
+    // })
+
+  
+
+    const newarr = [];
+
+    for(let i=0;i<tax_type?.length&&i<taxItem_name?.length;i++){
+        const subarr = [];
+        subarr.push({new_tax_type : tax_type[i]});
+        subarr.push({new_tax_Name :  taxItem_name[i]});
+        newarr.push(subarr)
+    }
+
+        console.log(newarr)
 
     return (
         <>
@@ -56,16 +85,22 @@ const TaxItemTable = () => {
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
-                                        {taxData.map((item, index) => (
+                                        {data && data?.data?.map((item, index) => (
                                             item && (
                                                 <TableRow key={index} sx={{
                                                     '&:hover': {
                                                         background: '#F2F2F2'
                                                     }
                                                 }}>
-                                                    <TableCell align='left' sx={{ fontWeight: 'bold' }}>{item["TAX TYPE"]}</TableCell>
-                                                    <TableCell align='left' sx={{ fontWeight: ['Company Tax', 'Individual Tax', 'Non Resident Tax', 'Provisional Tax', 'Withholding Tax', 'Other', 'Provisional', 'Penalties', 'Interest'].includes(item["TAX ITEM"]) ? 'bold' : 'normal' }}>{item["TAX ITEM"]}</TableCell>
-                                                    <TableCell align='left' sx={{ fontWeight: 'bold' }}>{item["TAX CODE"]}</TableCell>
+                                                    <TableCell align='left' sx={{ fontWeight: 'bold' }}>{item["text_type"]}</TableCell> 
+                                                    {newarr?.map((item,i)=>(
+                                                        <TableHead key={i}>
+                                                            <TableCell>{item[0].new_tax_type}</TableCell>
+                                                            <TableCell>{item[1].new_tax_Name}</TableCell>
+                                                        </TableHead>
+                                                    ))}
+                                                    {/* <TableCell align='left' sx={{ fontWeight: tax_type.includes(item["text_type_two"]) ? 'bold' : 'normal' }}>{item["text_type_two"]}</TableCell> */}
+                                                    <TableCell align='left' sx={{ fontWeight: 'bold' }}>{item["item_code"]}</TableCell>
                                                 </TableRow>
                                             )))}
                                     </TableBody>

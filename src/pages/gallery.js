@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
@@ -6,12 +6,35 @@ import Footer from "@/components/Footer";
 import Banner from "../assets/images/gallery.jpg";
 import { GallaryCard } from "@/components/media";
 import { GalleryData } from "@/content/data";
-
-
+import { useFetch } from "./api/api";
+import { useEffect } from "react";
+import { useMemo } from "react";
 
 export default function Gallery() {
- 
-    
+  const { data, fetchAPI, isLoading } = useFetch("get", "/api/gallery-images");
+
+  useEffect(() => {
+    fetchAPI();
+  }, [fetchAPI]);
+
+  // console.log(data?.data[0]?.url);
+
+  const imgagesURLs = data?.data?.map((item)=>item.url.split(","));
+  // console.log(imgagesURLs);
+
+  const GroupTitle = data?.data?.map((item)=>item?.groupName);
+  // console.log(GroupTitle);
+
+    const galleryNewData = {}
+
+      if(data?.data){
+      for(const key of data?.data){
+        galleryNewData[key?.groupName] = [key];
+      }
+    }
+
+      
+   console.log(galleryNewData);
 
   const [isVisible, setIsVisible] = useState({
     group1: true,
@@ -21,17 +44,15 @@ export default function Gallery() {
     group5: false,
   });
 
+  
+
   function toggleVisibility(groupName) {
-    setIsVisible(() => {
-      const newState = {
-        [groupName]: [groupName],
-      };
-      return newState;
-    });
+    setIsVisible((prevState) => ({
+      [groupName]: !prevState[groupName],
+    }));
   }
 
   const ImageTitle = ["Works", "Campagn", "Event", "Speech", "Vote"];
-
 
   return (
     <>
@@ -55,22 +76,30 @@ export default function Gallery() {
 
       <section className="bg-white px-6 py-16">
         <div>
-          <h1 className=" text-[#2F3192] text-4xl font-semibold w-80" style={{marginLeft:'2rem'}}>
+          <h1
+            className=" text-[#2F3192] text-4xl font-semibold w-80"
+            style={{ marginLeft: "2rem" }}
+          >
             ERS Image Gallery
           </h1>
-          <div className="border w-[264px] border-yellowish mt-2" style={{marginLeft:'2rem'}}></div>
+          <div
+            className="border w-[264px] border-yellowish mt-2"
+            style={{ marginLeft: "2rem" }}
+          ></div>
         </div>
 
         {/* Group Indicator */}
         <div className="flex justify-center items-center gap-5 my-10">
-          {ImageTitle.map((title, id) => (
+          {GroupTitle?.map((title, id) => (
             <button
               key={id}
               onClick={() => toggleVisibility(`group${id + 1}`)}
               className={`text-base text-black/80 bg-[#F7F7FA] text-center leading-6 font-semibold uppercase border border-[#ECECEC] rounded-full px-7 py-1
-               hover:text-white hover:bg-mainColor hover:ease-in hover:duration-300 ${isVisible[`group${id + 1}`]
-                  ? "bg-mainColor text-white"
-                  : "bg-[#F7F7FA] text-black/80"}`}
+               hover:text-white hover:bg-mainColor hover:ease-in hover:duration-300 ${
+                 isVisible[`group${id + 1}`]
+                   ? "bg-mainColor text-white"
+                   : "bg-[#F7F7FA] text-black/80"
+               }`}
             >
               {title}
             </button>
@@ -79,13 +108,14 @@ export default function Gallery() {
 
         {/* Content First Group */}
         <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group1 ? "block" : "hidden"
-            }`}
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
+            isVisible.group1 ? "block" : "hidden"
+          }`}
         >
           {GalleryData.group1.map((item, key) => (
             <GallaryCard
-            item={key}
-              checking = {GalleryData.group1}
+              item={key}
+              checking={GalleryData.group1}
               key={key}
               img={item.img}
               group={item.group}
@@ -97,13 +127,14 @@ export default function Gallery() {
 
         {/* Content Second Group */}
         <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group2 ? "block" : "hidden"
-            }`}
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
+            isVisible.group2 ? "block" : "hidden"
+          }`}
         >
           {GalleryData.group2.map((item, key) => (
             <GallaryCard
-             item={key}
-             checking = {GalleryData.group2}
+              item={key}
+              checking={GalleryData.group2}
               key={key}
               img={item.img}
               group={item.group}
@@ -115,13 +146,14 @@ export default function Gallery() {
 
         {/* Content Third Group */}
         <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group3 ? "block" : "hidden"
-            }`}
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
+            isVisible.group3 ? "block" : "hidden"
+          }`}
         >
           {GalleryData.group3.map((item, key) => (
             <GallaryCard
-           item={key}
-             checking = {GalleryData.group3}
+              item={key}
+              checking={GalleryData.group3}
               key={key}
               img={item.img}
               group={item.group}
@@ -133,13 +165,14 @@ export default function Gallery() {
 
         {/* Content Fourth Group */}
         <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group4 ? "block" : "hidden"
-            }`}
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
+            isVisible.group4 ? "block" : "hidden"
+          }`}
         >
           {GalleryData.group4.map((item, key) => (
             <GallaryCard
-             item={key}
-             checking = {GalleryData.group4}
+              item={key}
+              checking={GalleryData.group4}
               key={key}
               img={item.img}
               group={item.group}
@@ -151,13 +184,14 @@ export default function Gallery() {
 
         {/* Content Fifth Group */}
         <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${isVisible.group5 ? "block" : "hidden"
-            }`}
+          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
+            isVisible.group5 ? "block" : "hidden"
+          }`}
         >
           {GalleryData.group5.map((item, key) => (
             <GallaryCard
-             item={key}
-             checking = {GalleryData.group5}
+              item={key}
+              checking={GalleryData.group5}
               key={key}
               img={item.img}
               group={item.group}

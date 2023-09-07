@@ -7,6 +7,8 @@ import { GrPlayFill } from "react-icons/gr";
 import { Box, Divider, Typography } from "@mui/material";
 import Banner from "../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../assets/images/pxfuel.jpg";
+import dayjs from "dayjs";
+import { useFetch } from "./api/api";
 
 export default function Videos() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,6 +34,13 @@ export default function Videos() {
   //     slider();
   //   };
   // }, [currentSlide]);
+
+  const { data, fetchAPI, isLoading } = useFetch("get", "/api/videos");
+
+  useEffect(() => {
+    fetchAPI();
+  }, [fetchAPI]);
+
 
   const videoSlider = [
     {
@@ -137,7 +146,7 @@ export default function Videos() {
           </Typography>
 
           <Box className="slideshow">
-            {videoSlider.map((item, id) => (
+            {data&& data?.data?.map((item, id) => (
               <Box key={id} sx={{my:'2rem'}} >
                 <Box sx={{display:'flex', justifyContent:'space-between', alignItems:'center', mb:'1rem'}}>
                   <Divider/>
@@ -149,22 +158,21 @@ export default function Videos() {
                       color: "#2F248F",
                     }}
                   >
-                    {item.year}
+                    {dayjs(item.uploadDate).format("YYYY")}
                   </Typography>
                   <Divider></Divider>
                 </Box>
                 <div
-                  className="slideshowSlider flex gap-10"
+                  className="slideshowSlider grid-cols-2 "
                   style={{
                     transform: `translate3d(${-currentSlide * 10}%, 0, 0)`,
                   }}
                 >
-                  {item.video.map((video, id) => (
                     <div key={id} className="flex flex-col gap-3 mb-3">
                       <iframe
                         width="375"
                         height="225"
-                        src={video.url}
+                        src={item?.url}
                         title="YouTube video player"
                         allowFullScreen=""
                         frameBorder="0"
@@ -172,12 +180,11 @@ export default function Videos() {
                       ></iframe>
                       <h1 className="flex items-center gap-5 text-base font-medium">
                         <GrPlayFill className="text-sm" />
-                        {video.head}
+                        {item?.name}
                       </h1>
                     </div>
-                  ))}
                 </div>
-                <div className="slideshowDots">
+                {/* <div className="slideshowDots">
                   {item.video.map((_, id) => (
                     <div
                       key={id}
@@ -189,7 +196,7 @@ export default function Videos() {
                       }}
                     ></div>
                   ))}
-                </div>
+                </div> */}
               </Box>
             ))}
           </Box>
