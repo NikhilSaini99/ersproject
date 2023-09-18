@@ -18,59 +18,24 @@ import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined
 import Banner from "../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../assets/images/pxfuel.jpg";
 import Footer from "@/components/Footer";
+import { useFetch } from "./api/api";
+import { useEffect } from "react";
+import dayjs from "dayjs";
+const WhatsNewsDetail = () => {
 
-const Tender = () => {
-  const dummyData = [
-    {
-      title:
-        "UNMASK TAX CORRUPTION",
-      description: "The ERS is calling all taxpayers to “unmask tax corruption” by reporting such cases via our system",
-      UploadedDate: "22-July-2023",
-      Link: "https://erstesting.netlify.app/VAT/Eswatini",
-    },
-    {
-        title:
-        "UNMASK TAX CORRUPTION",
-      description: "The ERS is calling all taxpayers to “unmask tax corruption” by reporting such cases via our system",
-      UploadedDate: "22-July-2023",
-      Link: "https://erstesting.netlify.app/VAT/Eswatini",
-    },
-    {
-        title:
-        "UNMASK TAX CORRUPTION",
-      description: "The ERS is calling all taxpayers to “unmask tax corruption” by reporting such cases via our system",
-      UploadedDate: "22-July-2023",
-      Link: "https://erstesting.netlify.app/VAT/Eswatini",
-    },
-    {
-        title:
-        "UNMASK TAX CORRUPTION",
-      description: "The ERS is calling all taxpayers to “unmask tax corruption” by reporting such cases via our system",
-      UploadedDate: "22-July-2023",
-      Link: "https://erstesting.netlify.app/VAT/Eswatini",
-    },
-    {
-        title:
-        "UNMASK TAX CORRUPTION",
-      description: "The ERS is calling all taxpayers to “unmask tax corruption” by reporting such cases via our system",
-      UploadedDate: "22-July-2023",
-      Link: "https://erstesting.netlify.app/VAT/Eswatini",
-    },
-    {
-        title:
-        "UNMASK TAX CORRUPTION",
-      description: "The ERS is calling all taxpayers to “unmask tax corruption” by reporting such cases via our system",
-      UploadedDate: "22-July-2023",
-      Link: "https://erstesting.netlify.app/VAT/Eswatini",
-    },
-    {
-    title:
-        "UNMASK TAX CORRUPTION",
-      description: "The ERS is calling all taxpayers to “unmask tax corruption” by reporting such cases via our system",
-      UploadedDate: "22-July-2023",
-      Link: "https://erstesting.netlify.app/VAT/Eswatini",
-    },
-  ];
+  const {data,fetchAPI} = useFetch("get","/api/whateNew");
+    
+  useEffect(()=>{
+      fetchAPI();
+}, [fetchAPI]);
+
+if(data){
+  console.log(data)
+}
+
+  const handlePDFDownload  = (url) =>{
+      window.open(url)
+  }
 
   return (
     <>
@@ -132,16 +97,15 @@ const Tender = () => {
                   }}
                 >
                   <TableCell width="25%">Title</TableCell>
-                  <TableCell>Description</TableCell>
-                  <TableCell>Uploded Date</TableCell>
-                  <TableCell >Link</TableCell>
-                  {/* <TableCell>
+                  <TableCell width="50%">Description</TableCell>
+                  <TableCell  width="20%">Uploded Date</TableCell>
+                  <TableCell>
                     <CloudDownloadOutlinedIcon />
-                  </TableCell> */}
+                  </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dummyData.map((item, index) => (
+                {data?.data && data?.data.map((item, index) => (
                   <TableRow
                     key={index}
                     sx={{
@@ -153,19 +117,19 @@ const Tender = () => {
                       },
                     }}
                   >
-                    <TableCell>{item.title}</TableCell>
+                    <TableCell>{item.name}</TableCell>
                     <TableCell>{item.description}</TableCell>
-                    <TableCell>{item.UploadedDate}</TableCell>
-                    <TableCell>{item.Link}</TableCell>
-                    {/* <TableCell>
+                    <TableCell>{dayjs(item.createdAt).format("DD-MM-YYYY")}</TableCell>
+                    <TableCell>
                       <Button
                         variant="contained"
                         color="primary"
                         sx={{ backgroundColor: "#2F2483 !important" }}
+                        onClick={()=>handlePDFDownload(item.documentUrl)}
                       >
                         Downlaod
                       </Button>
-                    </TableCell> */}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -179,4 +143,4 @@ const Tender = () => {
   );
 };
 
-export default Tender;
+export default WhatsNewsDetail;

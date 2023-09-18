@@ -65,7 +65,7 @@ export default function Home() {
 
   useEffect(() => {
     fetchAPI();
-  }, [data?.success]);
+  }, [fetchAPI]);
 
   // ----------------------Resources-----------------------
 
@@ -363,7 +363,7 @@ export default function Home() {
                     sx={{ ...arrowStyling, }}
                   />
                 </span>
-                <Link href={point.link}>  <p>{point.text}</p></Link>
+                <Link href={point.link} className="hover:underline hover:text-primaryColor">  <p>{point.text}</p></Link>
               </div>
             ))}
               </div>
@@ -393,7 +393,7 @@ export default function Home() {
                     sx={{ ...arrowStyling }}
                   />
                 </span>
-                <Link href={point.link}>  <p>{point.text}</p></Link>
+                <Link href={point.link}  className="hover:underline hover:text-primaryColor">  <p>{point.text}</p></Link>
               </div>
             ))}
               </div>
@@ -818,7 +818,7 @@ export default function Home() {
               process of how the organization helps the Swazi society.
             </p>
             <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5">
-              See More Stories
+              <Link href="/CSR/CSR_Detail">See More Stories</Link>
             </button>
           </div>
         </div>

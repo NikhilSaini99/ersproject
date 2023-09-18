@@ -273,3 +273,9 @@ ul li.starclass:before {
   grid-column: 12;
 }
 
+.videoList{
+ display: flex;
+ flex-direction: column;
+ gap: 5rem;
+ margin: 2rem 0;
+}

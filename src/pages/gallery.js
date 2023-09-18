@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
@@ -9,50 +10,44 @@ import { GalleryData } from "@/content/data";
 import { useFetch } from "./api/api";
 import { useEffect } from "react";
 import { useMemo } from "react";
+import { Box, IconButton, Modal } from "@mui/material";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 export default function Gallery() {
-  const { data, fetchAPI, isLoading } = useFetch("get", "/api/gallery-images");
+  const [visibleGroup, setVisibleGroup] = useState(0);
+  const { data, fetchAPI, isLoading } = useFetch(
+    "get",
+    "/api/gallery-images/web"
+  );
 
+  
   useEffect(() => {
     fetchAPI();
   }, [fetchAPI]);
 
-  // console.log(data?.data[0]?.url);
 
-  const imgagesURLs = data?.data?.map((item)=>item.url.split(","));
-  // console.log(imgagesURLs);
-
-  const GroupTitle = data?.data?.map((item)=>item?.groupName);
-  // console.log(GroupTitle);
-
-    const galleryNewData = {}
-
-      if(data?.data){
-      for(const key of data?.data){
-        galleryNewData[key?.groupName] = [key];
-      }
-    }
-
-      
-   console.log(galleryNewData);
-
-  const [isVisible, setIsVisible] = useState({
-    group1: true,
-    group2: false,
-    group3: false,
-    group4: false,
-    group5: false,
-  });
-
-  
-
-  function toggleVisibility(groupName) {
-    setIsVisible((prevState) => ({
-      [groupName]: !prevState[groupName],
-    }));
+  const GroupImgArr = [];
+  let newgalleryData;
+  if (data?.success) {
+    newgalleryData = data?.data;
   }
 
-  const ImageTitle = ["Works", "Campagn", "Event", "Speech", "Vote"];
+  const GroupTitles = newgalleryData && Object.keys(newgalleryData);
+  const GroupImages = newgalleryData && Object.values(newgalleryData);
+
+  if (GroupImages)
+    for (const item of GroupImages) {
+      const eachGroupImages = item[0].url.split(",");
+      GroupImgArr.push(eachGroupImages);
+    }
+
+  console.log(GroupImgArr);
+
+  const handleVisiblity = (i) => {
+    setVisibleGroup(i);
+  };
+
 
   return (
     <>
@@ -90,13 +85,13 @@ export default function Gallery() {
 
         {/* Group Indicator */}
         <div className="flex justify-center items-center gap-5 my-10">
-          {GroupTitle?.map((title, id) => (
+          {GroupTitles?.map((title, id) => (
             <button
               key={id}
-              onClick={() => toggleVisibility(`group${id + 1}`)}
+              onClick={() => handleVisiblity(id)}
               className={`text-base text-black/80 bg-[#F7F7FA] text-center leading-6 font-semibold uppercase border border-[#ECECEC] rounded-full px-7 py-1
                hover:text-white hover:bg-mainColor hover:ease-in hover:duration-300 ${
-                 isVisible[`group${id + 1}`]
+                 visibleGroup === id
                    ? "bg-mainColor text-white"
                    : "bg-[#F7F7FA] text-black/80"
                }`}
@@ -106,99 +101,47 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Content First Group */}
-        <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
-            isVisible.group1 ? "block" : "hidden"
-          }`}
-        >
-          {GalleryData.group1.map((item, key) => (
-            <GallaryCard
-              item={key}
-              checking={GalleryData.group1}
-              key={key}
-              img={item.img}
-              group={item.group}
-              date={item.date}
-              description={item.description}
-            />
-          ))}
-        </div>
-
-        {/* Content Second Group */}
-        <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
-            isVisible.group2 ? "block" : "hidden"
-          }`}
-        >
-          {GalleryData.group2.map((item, key) => (
-            <GallaryCard
-              item={key}
-              checking={GalleryData.group2}
-              key={key}
-              img={item.img}
-              group={item.group}
-              date={item.date}
-              description={item.description}
-            />
-          ))}
-        </div>
-
-        {/* Content Third Group */}
-        <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
-            isVisible.group3 ? "block" : "hidden"
-          }`}
-        >
-          {GalleryData.group3.map((item, key) => (
-            <GallaryCard
-              item={key}
-              checking={GalleryData.group3}
-              key={key}
-              img={item.img}
-              group={item.group}
-              date={item.date}
-              description={item.description}
-            />
-          ))}
-        </div>
-
-        {/* Content Fourth Group */}
-        <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
-            isVisible.group4 ? "block" : "hidden"
-          }`}
-        >
-          {GalleryData.group4.map((item, key) => (
-            <GallaryCard
-              item={key}
-              checking={GalleryData.group4}
-              key={key}
-              img={item.img}
-              group={item.group}
-              date={item.date}
-              description={item.description}
-            />
-          ))}
-        </div>
-
-        {/* Content Fifth Group */}
-        <div
-          className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto ${
-            isVisible.group5 ? "block" : "hidden"
-          }`}
-        >
-          {GalleryData.group5.map((item, key) => (
-            <GallaryCard
-              item={key}
-              checking={GalleryData.group5}
-              key={key}
-              img={item.img}
-              group={item.group}
-              date={item.date}
-              description={item.description}
-            />
-          ))}
+        <div className="">
+          {GroupImgArr &&
+            GroupImgArr.map((item, index) => (
+              <div
+                key={index}
+                className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto gap-4 overflow-hidden ${
+                  index === visibleGroup ? "block" : "hidden"
+                } `}
+              >
+                {item.map((item, i) => {
+                  return (
+                    <div
+                      key={i}
+                      className="flex  max-w-[450px]  h-[400px] flex-col justify-between  group relative "
+                    >
+                      <div className="   overflow-hidden cursor-pointer ">
+                        <img
+                          src={item}
+                          className="object-cover  group-hover:scale-110  ease-in-out duration-500  group-hover:brightness-50"
+                          alt="group-images"
+                          style={{ width: "100%", height: "100%" }}
+                        />
+                      </div>
+                      <div className="absolute opacity-0 group-hover:opacity-100 ease-in duration-500  bottom-0 text-center w-full">
+                        <h3 className="text-lg text-white font-medium mx-4">
+                          Image Date
+                        </h3>
+                        <div className="flex flex-col gap-2 px-6 pt-10 pb-4 text-white bg-mainColor">
+                          <h1 className="text-[17px] leading-[22px] tracking-wide font-bold">
+                           Image Name
+                          </h1>
+                          <h2 className="text-sm leading-5 tracking-normal font-normal text-center">
+                           Image description
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
         </div>
       </section>
 

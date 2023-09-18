@@ -118,6 +118,8 @@ export default function News() {
                   title={item?.newsName}
                   date={item?.uploadDate}
                   description={item?.description}
+                  id={item.id}
+                  apiURl={"/api/news"}
                 />
               ))}
           </Grid>

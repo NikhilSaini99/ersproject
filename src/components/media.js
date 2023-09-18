@@ -26,6 +26,7 @@ import {
   Typography,
 } from "@mui/material";
 import dayjs from "dayjs";
+import Script from "next/script";
 
 function Media() {
   return (
@@ -37,25 +38,17 @@ function Media() {
               <h1 className="text-3xl font-medium text-mainColor">Facebook</h1>
               <div className=" border w-[70px] border-yellowish mt-1"></div>
 
-              <div className="flex flex-col justify-between">
-                <Image
-                  src={facebbook}
-                  alt=""
-                  className="my-10"
-                  width={"344px"}
-                  height={"450px"}
-                  style={{
-                    borderWidth: "2px",
-                    borderColor: "#DADAEB",
-                    cursor: "pointer",
-                    borderRadius: "12px",
-                    padding: "0.5rem",
-                    minWidth: "344px",
-                    minHeight: "450px",
-                    maxHeight: "450px",
-                    background: "white",
-                  }}
-                />
+              <div className="flex flex-col justify-between gap-3 my-3">
+                <iframe
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcomputronicsswaziland&tabs=timeline&width=340&height=187&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                  width="340"
+                  height="500"
+                  style={{ border: "none", overflow: "hidden" }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen="true"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                ></iframe>
                 <Link
                   href="https://www.facebook.com/EswatiniRevenueService"
                   target="_blank"
@@ -70,25 +63,33 @@ function Media() {
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Twitter</h1>
               <div className="border w-[70px] border-yellowish mt-1"></div>
-              <div className="flex flex-col justify-between">
-                <Image
-                  src={Twitter}
-                  alt=""
-                  className="my-10"
-                  width={"344px"}
-                  height={"450px"}
-                  style={{
-                    borderWidth: "2px",
-                    borderColor: "#DADAEB",
-                    cursor: "pointer",
-                    borderRadius: "12px",
-                    padding: "0.5rem",
-                    minWidth: "344px",
-                    minHeight: "450px",
-                    maxHeight: "450px",
-                    background: "white",
-                  }}
-                />
+              <div className="flex flex-col justify-between gap-3 my-3">
+                <div style={{ minHeight: "500px", overflow: "auto" }}>
+                  <a
+                    className="twitter-timeline"
+                    href="https://twitter.com/computronics_sd?ref_src=twsrc%5Etfw"
+                    scrolling="no"
+                    frameBorder="0"
+                    allowTransparency="true"
+                    allowFullScreen="true"
+                    style={{
+                      position: "static",
+                      visibility: "visible",
+                      width: " 360px",
+                      height: "500px",
+                      display: "block",
+                      flexGrow: "1",
+                    }}
+                  >
+                    Tweets by SpaceX
+                  </a>
+                </div>
+                <Script
+                  strategy="lazyOnload"
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charset="utf-8"
+                ></Script>
                 <Link href="https://twitter.com/AECOM" target="_blank">
                   <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
                     Follow Us
@@ -100,25 +101,14 @@ function Media() {
             <div>
               <h1 className="text-3xl font-medium text-mainColor">Instagram</h1>
               <div className="border w-24 border-yellowish mt-1"></div>
-              <div className="flex flex-col justify-between">
-                <Image
-                  src={Instagram}
-                  alt=""
-                  className="my-10"
-                  width={"344px"}
-                  height={"450px"}
-                  style={{
-                    borderWidth: "2px",
-                    borderColor: "#DADAEB",
-                    cursor: "pointer",
-                    borderRadius: "12px",
-                    padding: "0.5rem",
-                    minWidth: "344px",
-                    minHeight: "450px",
-                    maxHeight: "450px",
-                    background: "white",
-                  }}
-                />
+              <div className="flex flex-col justify-between gap-3 my-3">
+                <iframe
+                  width="320"
+                  height="500"
+                  src="https://www.instagram.com/p/BdJRABkDbXU/embed/"
+                  frameBorder="0"
+                ></iframe>
+
                 <Link href="https://www.instagram.com/aecom" target="_blank">
                   <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
                     Follow Us
@@ -133,7 +123,7 @@ function Media() {
   );
 }
 
-function NewsCard({ url, img, title, date, description }) {
+function NewsCard({ url, img, title, date, description, id, apiURl }) {
   const [cardHover, setCardHover] = useState(false);
   return (
     <>
@@ -218,7 +208,9 @@ function NewsCard({ url, img, title, date, description }) {
                 },
               }}
             >
-              <Link href={`${url}`}>{title}</Link>
+              <Link href={{ pathname: "/NewsDetails", query: { id, apiURl } }}>
+                {title}
+              </Link>
             </Typography>
             <Typography variant="subtitle2" sx={{ color: "grey" }}>
               {dayjs(date).format("DD-MM-YYYY")}

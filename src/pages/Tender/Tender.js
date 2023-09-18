@@ -27,7 +27,7 @@ const Tender = () => {
 
   useEffect(() => {
     fetchAPI();
-  }, []);
+  }, [fetchAPI]);
 
 
   const handlePDFDownload = (url) => {

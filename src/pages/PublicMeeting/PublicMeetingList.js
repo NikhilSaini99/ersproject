@@ -132,6 +132,8 @@ export default function News() {
                 title={item.publicMeetingName}
                 date={item.uploadDate}
                 description={item.description}
+                id={item.id}
+                apiURl={"/api/publicMeeting"}
               />
             ))}
           </Grid>}

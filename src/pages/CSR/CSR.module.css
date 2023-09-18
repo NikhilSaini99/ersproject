@@ -1,0 +1,12 @@
+.CSR_CARD h5::after  {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: width 0.4s ease-in;
+}
+.CSR_CARD:hover h5::after{
+    width: 100%;
+}
+
