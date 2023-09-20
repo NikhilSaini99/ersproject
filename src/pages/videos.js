@@ -18,7 +18,7 @@ export default function Videos() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 1,
   };
 
@@ -52,19 +52,19 @@ export default function Videos() {
     fetchAPI();
   }, [fetchAPI]);
 
-  const videoList = [];
-  const YearList = [];
-  if (data) {
-    console.log(data?.data);
-    for (const key in data?.data) {
-      videoList.push(data?.data[key]);
-      YearList.push(key);
-    }
-  }
-  const checkObj ={};
-  // console.log("sssss",  videoList?.map((url)=>url.map((vid)=>vid.url).map((s)=>s)));
-  checkObj["video"] = videoList?.map((url)=> url.map((vid)=>vid.url))
-  console.log(checkObj);
+  // const videoList = [];
+  // const YearList = [];
+  // if (data) {
+  //   console.log(data?.data);
+  //   for (const key in data?.data) {
+  //     videoList.push(data?.data[key]);
+  //     YearList.push(key);
+  //   }
+  // }
+  // const checkObj ={};
+  // // console.log("sssss",  videoList?.map((url)=>url.map((vid)=>vid.url).map((s)=>s)));
+  // checkObj["video"] = videoList?.map((url)=> url.map((vid)=>vid.url))
+  // console.log(checkObj);
 
   const videoSlider = [
     {
@@ -127,6 +127,9 @@ export default function Videos() {
     },
   ];
 
+  console.log(data?.data.yearwisearray?.[0]?.video?.[0]);
+  console.log(data?.data.yearwisearray);
+
   return (
     <>
       <Head>
@@ -139,48 +142,59 @@ export default function Videos() {
 
       <Header />
       <Box sx={{ position: "relative", width: "100%", height: "30rem" }}>
-        <Image src={Banner} alt="about_us" width={0} height={0} style={{width: "100%", height: "100%", objectFit: "cover",
-          }}
+        <Image
+          src={Banner}
+          alt="about_us"
+          width={0}
+          height={0}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </Box>
       <Box
-        sx={{backgroundImage: `url(${bgimg.src})`, backgroundSize: "cover", backgroundAttachment: "fixed",
+        sx={{
+          backgroundImage: `url(${bgimg.src})`,
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
         }}
       >
         <Box
-          sx={{ width: "90%", margin: { xs: "0 auto", lg: "0  auto" }, py: "2rem",
+          sx={{
+            width: "90%",
+            margin: { xs: "0 auto", lg: "0  auto" },
+            py: "2rem",
           }}
         >
           <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
             Things to see
           </Typography>
 
-         
-          <Slider {...settings} className="videoList" >
-                {videoList &&
-                  videoList?.map((url)=>url.map((vid)=>vid.url).map(((item, index) => (
-                    <Box
-                      key={index+2}
-                      sx={{
-                        gap: "2rem",
-                        my: "2rem",
-                      }}
-                    >
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+            {data &&
+              data?.data?.yearwisearray?.map((item) => {
+                return (
+                  <Slider {...settings} key={item?.year}>
+                    {item?.video?.map((video) => {
+                      return (
+                        <div key={video?.id}>
                           <iframe
-                            width="415"
-                            height="315"
-                            src={item.slice(
-                              item.indexOf("https"),
-                              item.indexOf("title") - 2
+                            width="700"
+                            height="355"
+                            src={video?.url?.slice(
+                              video?.url?.indexOf("https"),
+                              video?.url?.indexOf("title") - 2
                             )}
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                           ></iframe>
-                    </Box>
-                  ))))}
+                        </div>
+                      );
+                    })}
                   </Slider>
+                );
+              })}
+          </Box>
         </Box>
       </Box>
 

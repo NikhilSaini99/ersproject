@@ -56,7 +56,7 @@ const CSR_Detail = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-              <Box variant="h1" sx={{ mt: '0rem', py: '4rem', px:'1rem', bgcolor:"#2F248F", maxWidth:'75%', position:"relative", width:"100%",
+              <Box variant="h1" sx={{ mt: '0rem', py: '4rem', px:'1rem', bgcolor:"#2F248F", width:'75%', position:"relative", 
                 transform: "translate(-50% ,-50%)", top:"50%", left:"50%",
             }}>
               <Typography  variant="h1" sx={{ mt: '0rem', mb: '1rem', maxWidth:"80%", mx:"auto", color:'#FFFFFF !important', fontWeight:'bold' }}> Corporate Social Responsibility</Typography>
@@ -64,7 +64,7 @@ const CSR_Detail = () => {
 
                 
                 {isLoading ? <Loader/> : (
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '0rem' }, pb: '2rem', }}>
+                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pb: '2rem', }}>
 
                     <Box sx={{display:'flex', flexDirection:'column', gap:'1rem', justifyContent:"center"}}>
                   {data?.data && data?.data?.map((item,index) =>(
@@ -80,8 +80,8 @@ const CSR_Detail = () => {
                             <img src={item.url} alt={item.id} style={{width:"100%", height:'100%',  objectFit:'cover'}}/>
                             </Box>
                             
-                              <Box sx={{display:'flex', flexDirection:'column', gap:'0.5rem', alignItems:'start', p:'2rem 1rem', background:"#FFC43A",
-                                maxWidth:{xs:"100%",lg:"60%"}, minWidth:"80%"}}>
+                              <Box sx={{display:'flex', flexDirection:'column', gap:'0.5rem', alignItems:'start', p:'2rem 1rem', background:"#E8E9EB",
+                                maxWidth:{xs:"100%",lg:"60%"}, minWidth:"75%"}}>
                                 <Typography  variant="h5" sx={{ mt: '0rem', mb: '1rem', fontWeight:"600" }}>{item.name}</Typography>
                                 <Typography  variant="body1" sx={{ mt: '0rem', mb: '1rem', lineHeight:'2rem' }}>{item.description}</Typography>
                                 </Box>
