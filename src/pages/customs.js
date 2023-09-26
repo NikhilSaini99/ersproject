@@ -14,6 +14,7 @@ import Search from "../assets/images/TariffSearchIcon.jpg";
 import Trade from "../assets/images/trade-portal.png";
 import education from "../assets/icons/education.png";
 
+
 import { Box, Divider, Grid, Paper, Stack, Typography } from "@mui/material";
 import { customData } from "@/content/data";
 
@@ -35,6 +36,7 @@ export default function Customs() {
       title: "Asycuda World",
       description:
         "ASYCUDA is a computerized customs management system which covers most foreign trade procedures.",
+        path: 'http://asyw.sra.org.sz/'
     },
     {
       id: 2,
@@ -43,13 +45,7 @@ export default function Customs() {
       description:
         "ERS has implemented Advance Rulings in terms of the WTO Agreement on Trade Facilitation (TFA). Advance Rulings allow trade to apply for an official written descision by ERS prior to import or export on Tariff Classification, Origin or Valuation.",
     },
-    // {
-    //   id: 3,
-    //   img: education,
-    //   title: "Tariff",
-    //   description:
-    //     "Outgoing Eswatini Electricity Company (EEC) Board Chairman Dr Phil Mnisi has urged his successor P to prioritise ensuring that Eswatini has sufficient power supply.",
-    // },
+
   ];
 
   const CustomData2 = [
@@ -59,13 +55,15 @@ export default function Customs() {
       title: "Tariff Browse",
       description:
         "The Tariff Browse function is used to easily browse through the Customs Tariff by section and chapter and view all the classification notes. If you have an idea of the section and chapter but are not sure of the actual tariff code, the Tariff Browse function will be most useful. It is kept up to date in real-time and removes the requirement to update a paper-based version of a Tariff book and the associated costs.",
+        path:'./eCustoms/TarrifBrowse'
     },
     {
       id: 5,
       img: Duty,
       title: "Duty Estimator",
       description:
-        "Estimate Customs and Excise Duties using the Duty Estimator. This function removes the need for any manual calculations and allows for more accurate costing. Enter the relevant tariff code, select the country of origin (manufacture) and the system will generate the estimated duties based on the date you select. It also allows you to look at future dates when tariff code amendments come into effect and calculates the estimated duties which will be applicable.",
+        "Estimate Cusoms and Excise Duties using the Duty Estimator. This function removes the need for any manual calculations and allows for more accurate costing. Enter the relevant tariff code, select the country of origin (manufacture) and the system will generate the estimated duties based on the date you select. It also allows you to look at future dates when tariff code amendments come into effect and calculates the estimated duties which will be applicable.",
+         path:'./eCustoms/DutyCalculator'
     },
     {
       id: 6,
@@ -73,6 +71,7 @@ export default function Customs() {
       title: "Tariff Search",
       description:
         "The Tariff Search allows for a more targeted way of searching by keyword or tariff code. You can search by specific tariff codes or keywords and can access the relevant information at the click of a button.",
+        path:'./eCustoms/TarrifSearch'
     },
   ];
 
@@ -111,11 +110,11 @@ export default function Customs() {
                 variant="h1"
                 sx={{
                   fontSize: "1.5rem",
-                  fontWeight: "bold",
+                  fontWeight: "bold", 
                   color: "#003b49",
                 }}
               >
-                {item.title}
+               <Link href={`${item.path}`}>{item.title}</Link>
               </Typography>
               <Typography
                 variant="body1"
@@ -170,7 +169,7 @@ export default function Customs() {
                 height: "100%",
                 objectFit: "cover",
               }}
-              alt=""
+              alt="images"
             />
           </Stack>
           <Box

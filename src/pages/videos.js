@@ -3,48 +3,56 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { GrPlayFill } from "react-icons/gr";
 import { Box, Divider, Typography } from "@mui/material";
 import Banner from "../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../assets/images/pxfuel.jpg";
-import dayjs from "dayjs";
 import { useFetch } from "./api/api";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Videos() {
+  // var settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  // };
+
   var settings = {
-    dots: true,
+    dots:true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-  };
+    responsive: [
+        {
+            breakpoint: 1280, // screens between 1280px and 960px
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 960, // screens between 960px and 600px
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 600, // screens below 600px
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+}
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const boxRef = useRef(null);
 
-  function slider() {
-    if (boxRef.current) {
-      clearTimeout(boxRef.current);
-    }
-  }
-
-  // useEffect(() => {
-  //   slider();
-  //   boxRef.current = setTimeout(
-  //     () =>
-  //       setCurrentSlide((prevSlide) =>
-  //         prevSlide === videoSlider.length - 1 ? 0 : prevSlide + 1
-  //       ),
-  //     5000
-  //   );
-
-  //   return () => {
-  //     slider();
-  //   };
-  // }, [currentSlide]);
+  
 
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/videos/web");
 
@@ -52,80 +60,7 @@ export default function Videos() {
     fetchAPI();
   }, [fetchAPI]);
 
-  // const videoList = [];
-  // const YearList = [];
-  // if (data) {
-  //   console.log(data?.data);
-  //   for (const key in data?.data) {
-  //     videoList.push(data?.data[key]);
-  //     YearList.push(key);
-  //   }
-  // }
-  // const checkObj ={};
-  // // console.log("sssss",  videoList?.map((url)=>url.map((vid)=>vid.url).map((s)=>s)));
-  // checkObj["video"] = videoList?.map((url)=> url.map((vid)=>vid.url))
-  // console.log(checkObj);
 
-  const videoSlider = [
-    {
-      year: "2023",
-      video: [
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-      ],
-    },
-    {
-      year: "2022",
-      video: [
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-        {
-          url: "https://www.youtube.com/embed/mk3qDuYCrZs",
-          head: "SRA e-Tax Platform",
-        },
-      ],
-    },
-  ];
 
   console.log(data?.data.yearwisearray?.[0]?.video?.[0]);
   console.log(data?.data.yearwisearray);
@@ -171,15 +106,18 @@ export default function Videos() {
           <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
             {data &&
               data?.data?.yearwisearray?.map((item) => {
-                return (
-                  <Slider {...settings} key={item?.year}>
+                return (  
+                  <div key={item?.yearofupload}>
+               <Typography variant="h4" sx={{ mb: "2rem", textAlign:"center" ,color:"#2F248F" }}>{item?.yearofupload}</Typography>
+                  <Slider {...settings} key={item?.yearofupload}>
+                     
                     {item?.video?.map((video) => {
                       return (
-                        <div key={video?.id}>
+                        <div key={video?.id} className="w-32 p-5">
                           <iframe
-                            width="700"
-                            height="355"
-                            src={video?.url?.slice(
+                              style={{width:"inherit"}}
+                              height="355"
+                              src={video?.url?.slice(
                               video?.url?.indexOf("https"),
                               video?.url?.indexOf("title") - 2
                             )}
@@ -189,9 +127,12 @@ export default function Videos() {
                             allowFullScreen
                           ></iframe>
                         </div>
+                        
                       );
                     })}
                   </Slider>
+                  </div>
+                 
                 );
               })}
           </Box>

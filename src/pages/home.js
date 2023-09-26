@@ -37,6 +37,7 @@ import table from "../assets/icons/table.png";
 import { useFetch } from "./api/api";
 import { useRef } from "react";
 
+
 export default function Home() {
   const { data, fetchAPI } = useFetch("GET", "/api/banner-images");
   const [isOpen, setisOpen] = useState(null);
@@ -245,19 +246,19 @@ export default function Home() {
         type: "Recently Approved",
         items: [
           {
-            link: "",
+            link: "/RecentlyApproved/ApprovedGuidelines",
             text: "Recently Approved GuideLines",
           },
           {
-            link: "",
+            link: "/legalandpolicy/notes_guidelines",
             text: "Approved Practice Notes",
           },
           {
-            link: "",
+            link: "/RecentlyApproved/ApprovedForms",
             text: "Recently Approved Forms",
           },
           {
-            link: "",
+            link: "/RecentlyApproved/Publications",
             text: "Publications",
           },
         ],
@@ -270,7 +271,7 @@ export default function Home() {
             text: "Latest Tenders",
           },
           {
-            link: "",
+            link: "https://ers.mcidirecthire.com/external/currentopportunities",
             text: "Current Vaccines",
           },
           {

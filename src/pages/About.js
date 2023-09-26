@@ -17,8 +17,18 @@ import BusinessCommitte from "./AboutPages/BsCommitte/BusinessCommitte";
 import CodeOfEthicsConduct from "./AboutPages/EthicsandConduct/CodeOfEthicsConduct";
 import ErsInternalAffairs from "./AboutPages/InterAffairs/ErsInternalAffairs";
 import Alliances from "./AboutPages/Alliances/Alliances";
+import { useFetch } from "./api/api";
+import { useEffect } from "react";
 
 export default function About() {
+  const { data, fetchAPI, isLoading } = useFetch("get", "/api/aboutus");
+
+  useEffect(() => {
+    fetchAPI();
+  }, [fetchAPI]);
+
+ 
+
   const arrowStyling = {
     color: "#2f2483",
     fontSize: "1rem",
@@ -119,7 +129,7 @@ export default function About() {
 
       {/*Council Memeber section start*/}
 
-      <CouncilMember h2Styling={h2Styling} arrowStyling={arrowStyling} />
+      <CouncilMember h2Styling={h2Styling} arrowStyling={arrowStyling} data={data?.data}/>
 
       {/*Council Memeber section End here*/}
 
