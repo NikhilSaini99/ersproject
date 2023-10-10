@@ -36,6 +36,7 @@ import recentlyApproved from "../assets/images/Recently_Approved.png";
 import table from "../assets/icons/table.png";
 import { useFetch } from "./api/api";
 import { useRef } from "react";
+import ChatboxMock from "@/components/Chatbox/ChatboxMock";
 
 
 export default function Home() {
@@ -861,6 +862,7 @@ export default function Home() {
       {/*------------------Social Media-------------------*/}
 
       <Media />
+      <ChatboxMock/>
 
       {/*------------------Footer-------------------*/}
 

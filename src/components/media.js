@@ -46,7 +46,7 @@ function Media() {
                   style={{ border: "none", overflow: "hidden" }}
                   scrolling="no"
                   frameBorder="0"
-                  allowFullScreen="true"
+                  allowFullScreen={true}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 ></iframe>
                 <Link
@@ -70,8 +70,8 @@ function Media() {
                     href="https://twitter.com/computronics_sd?ref_src=twsrc%5Etfw"
                     scrolling="no"
                     frameBorder="0"
-                    allowTransparency="true"
-                    allowFullScreen="true"
+                    allowTransparency={true}
+                    allowFullScreen={true}
                     style={{
                       position: "static",
                       visibility: "visible",
