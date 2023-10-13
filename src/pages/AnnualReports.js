@@ -6,18 +6,7 @@ import Banner from "../assets/images/registration.jpg";
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
-import pdfimg1 from '../assets/images/pdfimages/annualReports/Cover - Annual Report 2022.png'
-import pdfimg2 from '../assets/images/pdfimages/annualReports/20211645541799.jpg'
-import pdfimg3 from '../assets/images/pdfimages/annualReports/2020rep.jpg'
-import pdfimg4 from '../assets/images/pdfimages/annualReports/2019Front cover.jpg'
-import pdfimg5 from '../assets/images/pdfimages/annualReports/2018 Cover (front).jpg'
-import pdfimg6 from '../assets/images/pdfimages/annualReports/2017-annual-report.png'
-import pdfimg7 from '../assets/images/pdfimages/annualReports/2016 - Annual Report COVER.jpg'
-import pdfimg8 from '../assets/images/pdfimages/annualReports/2015 Annual Report Cover.jpg'
-import pdfimg9 from '../assets/images/pdfimages/annualReports/2014-Annual-Report-Cover.png'
-import pdfimg10 from '../assets/images/pdfimages/annualReports/2013-Annual-Report-final111.png'
-import pdfimg11 from '../assets/images/pdfimages/annualReports/2012annual report 2012.jpg'
-import pdfimg12 from '../assets/images/pdfimages/annualReports/annual-report.jpg'
+
 
 import Link from 'next/link';
 import Loader from '@/components/Loader';
