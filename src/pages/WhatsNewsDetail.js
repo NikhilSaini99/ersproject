@@ -21,6 +21,7 @@ import Footer from "@/components/Footer";
 import { useFetch } from "./api/api";
 import { useEffect } from "react";
 import dayjs from "dayjs";
+import TableComponent from "@/components/TableComponent/TableComponent";
 const WhatsNewsDetail = () => {
 
   const {data,fetchAPI} = useFetch("get","/api/whateNew");
@@ -36,6 +37,30 @@ if(data){
   const handlePDFDownload  = (url) =>{
       window.open(url)
   }
+
+  const tableHeaders = [
+    "Title",
+    "Description",
+    "Upload Date",
+    "Download",
+  ]
+
+  const excluseProperties = [
+    "id",
+    "updatedAt",
+    "deletedAt",
+    "documentName",
+    "documentUrl",
+  ];
+
+
+  const includeProperties =[
+    "name",
+    "description",
+    "notice",
+    "createdAt",
+    "documentUrl"
+  ]
 
   return (
     <>
@@ -79,62 +104,12 @@ if(data){
           <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
             Whats New
           </Typography>
-
-          <TableContainer
-            component={Paper}
-            sx={{ "& th, & td": { border: "0.1rem solid rgba(0,0,0,0.1)" } }}
-          >
-            <Table aria-label="Tender-Table">
-              <TableHead>
-                <TableRow
-                  sx={{
-                    backgroundColor: "#DFDFDF",
-                    "& > *": {
-                      fontWeight: "bold !important",
-                      fontSize: "1rem !important",
-                      textAlign: "center !important",
-                    },
-                  }}
-                >
-                  <TableCell width="25%">Title</TableCell>
-                  <TableCell width="50%">Description</TableCell>
-                  <TableCell  width="20%">Uploded Date</TableCell>
-                  <TableCell>
-                    <CloudDownloadOutlinedIcon />
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {data?.data && data?.data.map((item, index) => (
-                  <TableRow
-                    key={index}
-                    sx={{
-                      "& > *": {
-                        textAlign: "center !important",
-                      },
-                      "&:hover": {
-                        background: "#F2F2F2",
-                      },
-                    }}
-                  >
-                    <TableCell>{item.name}</TableCell>
-                    <TableCell>{item.description}</TableCell>
-                    <TableCell>{dayjs(item.createdAt).format("DD-MM-YYYY")}</TableCell>
-                    <TableCell>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        sx={{ backgroundColor: "#2F2483 !important" }}
-                        onClick={()=>handlePDFDownload(item.documentUrl)}
-                      >
-                        Downlaod
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
+          {data?.data ? <TableComponent
+                        tableData={data?.data}
+                        tableHeaders={tableHeaders}
+                        excluseProperties={excluseProperties}
+                        includeProperties={includeProperties}
+          /> : <h1>Loading....</h1>}
         </Box>
       </Box>
 

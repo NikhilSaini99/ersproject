@@ -21,6 +21,7 @@ import Footer from "@/components/Footer";
 import dayjs from "dayjs";
 import { useFetch } from "../api/api";
 import Loader from "@/components/Loader";
+import TableComponent from "@/components/TableComponent/TableComponent";
 
 const PublicNotices = () => {
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/noticeBoard");
@@ -33,56 +34,26 @@ const PublicNotices = () => {
     window.open(url, "_blank");
   };
 
-  const dummyData = [
-    {
-      title: "Public meeting on how to save TAX",
-      description:
-        "This is a description of the public meeting how to save TAX",
-      date: "22-July-2023",
-      notice: "This is notice bord for spacial information in the meeting",
-    },
-    {
-      title: "Public meeting on how to save TAX",
-      description:
-        "This is a description of the public meeting how to save TAX",
-      date: "22-July-2023",
-      notice: "This is notice bord for spacial information in the meeting",
-    },
-    {
-      title: "Public meeting on how to save TAX",
-      description:
-        "This is a description of the public meeting how to save TAX",
-      date: "22-July-2023",
-      notice: "This is notice bord for spacial information in the meeting",
-    },
-    {
-      title: "Public meeting on how to save TAX",
-      description:
-        "This is a description of the public meeting how to save TAX",
-      date: "22-July-2023",
-      notice: "This is notice bord for spacial information in the meeting",
-    },
-    {
-      title: "Public meeting on how to save TAX",
-      description:
-        "This is a description of the public meeting how to save TAX",
-      date: "22-July-2023",
-      notice: "This is notice bord for spacial information in the meeting",
-    },
-    {
-      title: "Public meeting on how to save TAX",
-      description:
-        "This is a description of the public meeting how to save TAX",
-      date: "22-July-2023",
-      notice: "This is notice bord for spacial information in the meeting",
-    },
-    {
-      title: "Public meeting on how to save TAX",
-      description:
-        "This is a description of the public meeting how to save TAX",
-      date: "22-July-2023",
-      notice: "This is notice bord for spacial information in the meeting",
-    },
+  const tableHeaders = [
+    "Title",
+    "Description",
+    "Notice",
+    "Date",
+    "Download",
+  ]
+  const includeProperties =[
+    "name",
+    "description",
+    "notice",
+    "date",
+    "documentUrl"
+  ]
+  const excluseProperties = [
+    "id",
+    "updatedAt",
+    "deletedAt",
+    "documentName",
+    "documentUrl",
   ];
 
   return (
@@ -128,9 +99,18 @@ const PublicNotices = () => {
             Public Notice
           </Typography>
 
-          {isLoading ? (
+          {data?.data ? <TableComponent
+                        tableData={data?.data}
+                        tableHeaders={tableHeaders}
+                        excluseProperties={excluseProperties}
+                        includeProperties={includeProperties}
+          /> : <Loader />}
+
+
+          {/* {isLoading  ? (
             <Loader />
           ) : (
+            
             <TableContainer
               component={Paper}
               sx={{ "& th, & td": { border: "0.1rem solid rgba(0,0,0,0.1)" } }}
@@ -190,7 +170,7 @@ const PublicNotices = () => {
                 </TableBody>
               </Table>
             </TableContainer>
-          )}
+          )} */}
         </Box>
       </Box>
 

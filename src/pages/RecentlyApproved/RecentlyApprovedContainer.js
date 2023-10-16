@@ -20,6 +20,7 @@ import bgimg from "../../assets/images/pxfuel.jpg";
 import Footer from "@/components/Footer";
 import { useFetch } from "../api/api";
 import Loader from "@/components/Loader";
+import TableComponent from "@/components/TableComponent/TableComponent";
 
 const RecentlyApprovedContainer = (props) => {
     const {title , array} = props
@@ -34,6 +35,10 @@ const RecentlyApprovedContainer = (props) => {
     const handlePDFDownload = (url) => {
     window.open(url, "_blank");
   };
+  const tableHeaders = ["Name","Description", "Document Name", "Upload Date","Download",]
+  const includeProperties =["name","description","documentName","createdAt","documentUrl"]
+
+  const excluseProperties = ["id","updatedAt","deletedAt","documentName","type"];
 
   return (
     <>
@@ -64,7 +69,13 @@ const RecentlyApprovedContainer = (props) => {
           <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
             {title}
           </Typography>
-          {isLoading ? <Loader /> : 
+          {data?.data ? <TableComponent
+                        tableData={approvedArryGuidelines}
+                        tableHeaders={tableHeaders}
+                        excluseProperties={excluseProperties}
+                        includeProperties={includeProperties}
+          /> : <h1>Loading....</h1>}
+          {/* {isLoading ? <Loader /> : 
           <TableContainer
             component={Paper}
             sx={{ "& th, & td": { border: "0.1rem solid rgba(0,0,0,0.1)" } }}
@@ -103,7 +114,7 @@ const RecentlyApprovedContainer = (props) => {
                 ))}
               </TableBody>
             </Table>
-          </TableContainer>}
+          </TableContainer>} */}
         </Box>
       </Box>
 

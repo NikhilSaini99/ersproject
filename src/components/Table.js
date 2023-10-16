@@ -16,6 +16,7 @@ import { useFetch } from "@/pages/api/api";
 import { useEffect } from "react";
 import Loader from "./Loader";
 import { useState } from "react";
+import TableComponent from "./TableComponent/TableComponent";
 
 export default function FormTable({ title, defaultValue }) {
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/form");
@@ -46,6 +47,11 @@ export default function FormTable({ title, defaultValue }) {
     
   };
   console.log(selectedCategory);
+  const tableHeaders = ["#","Form Name","Category", "Size", "Description","Download",]
+  const includeProperties =["id","formName","category","fileSize","description","fileUrl"]
+
+  const excluseProperties = ["updatedAt","deletedAt","createdAt","fileType"];
+  
 
   return (
     <>
@@ -93,7 +99,13 @@ export default function FormTable({ title, defaultValue }) {
             </div>
           </div>
         </div>
-        {isLoading ? (
+        {data?.data ? <TableComponent
+                        tableData={selectedCategory}
+                        tableHeaders={tableHeaders}
+                        excluseProperties={excluseProperties}
+                        includeProperties={includeProperties}
+          /> : <Loader />}
+        {/* {isLoading ? (
           <Loader />
         ) : (
           <Paper elevation={20} sx={{ width: "90%", margin: "0 auto" }}>
@@ -166,7 +178,7 @@ export default function FormTable({ title, defaultValue }) {
               </Table>
             </TableContainer>
           </Paper>
-        )}
+        )} */}
       </section>
     </>
   );

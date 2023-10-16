@@ -2,13 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import facebbook from "../assets/images/facebookimg.png";
-import Twitter from "../assets/images/twitter-page.jpg";
-import Instagram from "../assets/images/insta-page.jpg";
-import ShareIcon from "@mui/icons-material/Share";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import {
@@ -16,12 +9,9 @@ import {
   Box,
   Button,
   Divider,
-  Grid,
   IconButton,
   Modal,
   Paper,
-  SpeedDial,
-  SpeedDialAction,
   Stack,
   Typography,
 } from "@mui/material";
@@ -234,49 +224,6 @@ function NewsCard({ url, img, title, date, description, id, apiURl }) {
                 >
                   BY ADMIN
                 </Typography>
-              </Box>
-              <Box
-                sx={{ display: "flex", gap: "0.5rem", alignItems: "center" }}
-              >
-                {/* <Divider orientation="vertical" flexItem /> */}
-
-                <SpeedDial
-                  ariaLabel="Share_Speed_dial"
-                  direction="left"
-                  sx={{
-                    "&:hover": {
-                      "& .MuiButtonBase-root": {
-                        backgroundColor: "white",
-                      },
-                    },
-                    "& .MuiButtonBase-root": {
-                      backgroundColor: "white",
-                    },
-                  }}
-                  icon={
-                    <ShareIcon
-                      sx={{
-                        color: "grey",
-                        "& .MuiButtonBase-root": {
-                          backgroundColor: "white",
-                        },
-                      }}
-                    />
-                  }
-                >
-                  <SpeedDialAction
-                    icon={<FacebookIcon />}
-                    tooltipTitle="Facebook"
-                  ></SpeedDialAction>
-                  <SpeedDialAction
-                    icon={<TwitterIcon />}
-                    tooltipTitle="Twitter"
-                  ></SpeedDialAction>
-                  <SpeedDialAction
-                    icon={<LinkedInIcon />}
-                    tooltipTitle="Linkedin"
-                  ></SpeedDialAction>
-                </SpeedDial>
               </Box>
             </Stack>
           </Stack>
