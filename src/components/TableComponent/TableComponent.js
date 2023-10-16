@@ -145,7 +145,7 @@ console.log("rearrangedata",rearrangedData)
         <TablePagination
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
-          count={tableData.length || 0}
+          count={tableData?.length || 0}
           rowsPerPage={rowsPerPage}
           page={page}
           onPageChange={handleChangePage}
