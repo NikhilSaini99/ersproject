@@ -43,7 +43,7 @@ const TableComponent = (props) => {
   const endIndex = startIndex + rowsPerPage;
 
   // Get the current page's data from the 'tender' array
-  const currentPageData = tableData.slice(startIndex, endIndex) || [];
+  const currentPageData = tableData?.slice(startIndex, endIndex) || [];
 
   const handlePDFDownload = (url) => {
     window.open(url);
@@ -124,7 +124,7 @@ console.log("rearrangedata",rearrangedData)
                 <TableRow
                   key={key}
                   sx={{"& > *": { textAlign: "center !important" },"&:hover": { background: "#F2F2F2" }}}>
-                  {Object.keys(item).map((rowItem) => {
+                  {Object.keys(item)?.map((rowItem) => {
                     const cellData =  rowItem.includes("documentUrl") || rowItem.includes("fileUrl") ? download: item[rowItem];
                     // Check if cellData is empty (undefined, null, or empty string)
                     const isEmptyCell =
