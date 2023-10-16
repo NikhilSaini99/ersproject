@@ -3,10 +3,10 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Box, Button, FormControl, InputLabel, MenuItem, Paper, Select, Stack, TextField, Typography } from '@mui/material'
 import Head from 'next/head'
-import Image from 'next/image'
-import Banner from "../assets/images/customs.jpg";
+//import Image from 'next/image'
+//import Banner from "../assets/images/customs.jpg";
 import feedbackimg from '../assets/images/bg-1.png'
-import patternimg from '../assets/images/pattern-bg.avif'
+//import patternimg from '../assets/images/pattern-bg.avif'
 import axios from 'axios'
 import { submitFeedback, getFeedback } from './api/api'
 import { useFetch } from './api/api'
