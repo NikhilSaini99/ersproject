@@ -46,6 +46,7 @@ const TableComponent = (props) => {
   const currentPageData = tableData?.slice(startIndex, endIndex) || [];
 
   const handlePDFDownload = (url) => {
+    console.log('Downloading', url);
     window.open(url);
   };
 
@@ -71,7 +72,7 @@ const TableComponent = (props) => {
         if (property === "date" || property === "createdAt" || property === "publishedDate" || property === "deadline") {
             rearrangedItem[property] = isoToFullDate( (item.date) || (item.createdAt));
         } else if (property === "documentUrl" || property === "fileUrl") {
-            rearrangedItem[property] = item.documentUrl;
+            rearrangedItem[property] = item.documentUrl || item.fileUrl;
         } else {
             rearrangedItem[property] = item[property];
         }
@@ -81,6 +82,10 @@ const TableComponent = (props) => {
 });
 
 console.log("rearrangedata",rearrangedData)
+
+// const handlePDFDownload = ()=>{
+
+// }
 
   return (
     <div>
@@ -114,7 +119,7 @@ console.log("rearrangedata",rearrangedData)
                   variant="contained"
                   color="primary"
                   sx={{ backgroundColor: "#2F2483 !important" }}
-                  onClick={() => handlePDFDownload(item.documentUrl)}
+                  onClick={() => {console.log("executing download"); handlePDFDownload(item.documentUrl ?  item.documentUrl : item.fileUrl)}}
                 >
                   Downlaod
                 </Button>
@@ -125,7 +130,7 @@ console.log("rearrangedata",rearrangedData)
                   key={key}
                   sx={{"& > *": { textAlign: "center !important" },"&:hover": { background: "#F2F2F2" }}}>
                   {Object.keys(item)?.map((rowItem) => {
-                    const cellData =  rowItem.includes("documentUrl") || rowItem.includes("fileUrl") ? download: item[rowItem];
+                    const cellData =  rowItem.includes("fileUrl") || rowItem.includes("documentUrl")   ? download: item[rowItem];
                     // Check if cellData is empty (undefined, null, or empty string)
                     const isEmptyCell =
                       cellData === undefined ||
