@@ -12,7 +12,9 @@ import searchIcon from "../assets/icons/search-icon.png";
 import { useFetch } from "@/pages/api/api";
 import { useMemo } from "react";
 import WhatnewComponent from "./shared/WhatnewComponent";
-
+import { styled, alpha } from '@mui/material/styles';
+import SearchIcon from '@mui/icons-material/Search';
+import InputBase from '@mui/material/InputBase';
 export default function Header() {
   const router = useRouter();
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/whateNew");
@@ -54,6 +56,53 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
+  const Search = styled('div')(({ theme }) => ({
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: 'white',
+    '&:hover': {
+      backgroundColor: 'white',
+    },
+    display:'flex',
+    alignItems:"center",
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(1),
+      width: 'auto',
+    },
+  }));
+
+  const SearchIconWrapper = styled('div')(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }));
+
+  const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: 'inherit',
+    '& .MuiInputBase-input': {
+      padding: theme.spacing(1, 1, 1, 0),
+      backgroundColor: '#5D5D5D0A',
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        width: '12ch',
+        '&:focus': {
+          width: '20ch',
+        },
+      },
+    },
+  }));
+
 
   return (
     <>
@@ -962,7 +1011,18 @@ export default function Header() {
               </ul>
               <div className="border-r-2 border-[#999999] h-5 mb-4"></div>
 
-              <div className={`${isOpen ? "search-container-open" : ""}`}>
+              <Search className="pb-4">
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
+
+
+              {/* <div className={`${isOpen ? "search-container-open" : ""}`}>
                 <button
                   className="flex gap-3 items-center search-toggle mb-4"
                   onClick={toggleSearch}
@@ -997,7 +1057,7 @@ export default function Header() {
                     />
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

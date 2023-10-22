@@ -114,9 +114,9 @@ export default function Gallery() {
                   return (
                     <div
                       key={i}
-                      className="flex  max-w-[450px]  h-[400px] flex-col justify-between  group relative "
+                      className="flex  max-w-[450px] h-[400px] flex-col justify-between  group relative "
                     >
-                      <div className="   overflow-hidden cursor-pointer ">
+                      <div className="  h-full overflow-hidden cursor-pointer ">
                         <img
                           src={item}
                           className="object-cover  group-hover:scale-110  ease-in-out duration-500  group-hover:brightness-50"
