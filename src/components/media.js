@@ -114,6 +114,9 @@ function Media() {
 }
 
 function NewsCard({ url, img, title, date, description, id, apiURl }) {
+  const truncate  = (str)=>{
+    return str.substring(0, 200)+"..."
+  }
   const [cardHover, setCardHover] = useState(false);
   return (
     <>
@@ -159,6 +162,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl }) {
                 }}
               />
             </Box>
+            <Link href={{ pathname: "/NewsDetails", query: { id, apiURl } }}>
             <Button
               variant="contained"
               style={{ background: "#f4c402", color: "black" }}
@@ -178,6 +182,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl }) {
             >
               Read More
             </Button>
+            </Link>
           </Box>
           <Stack
             sx={{
@@ -208,7 +213,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl }) {
             <Typography
               variant="body1"
               sx={{ color: "grey" }}
-              dangerouslySetInnerHTML={{ __html: description }}
+              dangerouslySetInnerHTML={{ __html: truncate(description) }}
             ></Typography>
             <Divider />
 

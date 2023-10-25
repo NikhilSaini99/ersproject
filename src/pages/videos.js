@@ -19,50 +19,65 @@ export default function Videos() {
   //   slidesToShow: 2,
   //   slidesToScroll: 1,
   // };
-
-  var settings = {
-    dots:true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1280, // screens between 1280px and 960px
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 960, // screens between 960px and 600px
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 600, // screens below 600px
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-}
-
-
-  
-
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/videos/web");
 
   useEffect(() => {
     fetchAPI();
   }, [fetchAPI]);
 
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 2048, // screens greater than or equal to 2048px (2k)
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1600, // screens between 1600px and 2047px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1366, // screens between 1366px and 1599px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1280, // screens between 1280px and 960px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 960, // screens between 960px and 600px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600, // screens below 600px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
-
-  console.log(data?.data.yearwisearray?.[0]?.video?.[0]);
+  console.log(data?.data.yearwisearray?.[0]?.video?.length);
   console.log(data?.data.yearwisearray);
 
   return (
@@ -106,33 +121,52 @@ export default function Videos() {
           <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
             {data &&
               data?.data?.yearwisearray?.map((item) => {
-                return (  
+                return (
                   <div key={item?.yearofupload}>
-               <Typography variant="h4" sx={{ mb: "2rem", textAlign:"center" ,color:"#2F248F" }}>{item?.yearofupload}</Typography>
-                  <Slider {...settings} key={item?.yearofupload}>
-                     
-                    {item?.video?.map((video) => {
-                      return (
-                        <div key={video?.id} className="w-32 p-5">
-                          <iframe
-                              style={{width:"inherit"}}
-                              height="355"
-                              src={video?.url?.slice(
-                              video?.url?.indexOf("https"),
-                              video?.url?.indexOf("title") - 2
-                            )}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                          ></iframe>
-                        </div>
-                        
-                      );
-                    })}
-                  </Slider>
+                    <Typography
+                      variant="h4"
+                      sx={{ mb: "2rem", textAlign: "center", color: "#2F248F" }}
+                    >
+                      {item?.yearofupload}
+                    </Typography>
+                    {item?.video?.length === 1 ? (
+          <div className="w-32 p-5">
+            <iframe
+              style={{ width: "100%" }}
+              height="355"
+              src={item?.video[0]?.url?.slice(
+                item?.video[0]?.url?.indexOf("https"),
+                item?.video[0]?.url?.indexOf("title") - 2
+              )}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        ) : (
+          <Slider {...settings} key={item?.yearofupload}>
+            {item?.video?.map((video) => {
+              return (
+                <div key={video?.id} className="w-32 p-5">
+                  <iframe
+                    style={{ width: "100%" }}
+                    height="355"
+                    src={video?.url?.slice(
+                      video?.url?.indexOf("https"),
+                      video?.url?.indexOf("title") - 2
+                    )}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              );
+            })}
+          </Slider>
+        )}
                   </div>
-                 
                 );
               })}
           </Box>

@@ -12,6 +12,7 @@ import { useFetch } from "./api/api";
 import { useRouter } from "next/router";
 import quoteIcon from "../assets/icons/quoteicon.png";
 import Loader from "@/components/Loader";
+import dayjs from "dayjs";
 
 export default function NewsDetails() {
   const router = useRouter();
@@ -31,10 +32,11 @@ export default function NewsDetails() {
 
   const News = {};
   if (data?.data) {
-    const { description, newsName, url, publicMeetingName } = data?.data;
+    const { description, newsName, url, publicMeetingName, uploadDate } = data?.data;
     News.description = description;
     News.newsName = newsName || publicMeetingName;
     News.url = url;
+    News.uploadDate = uploadDate
   }
 
   return (
@@ -90,7 +92,7 @@ export default function NewsDetails() {
                     />
                   </Box>
                   <Typography variant="body1" sx={{ color: "grey" }}>
-                    {News.newsName}
+                    {dayjs(News.uploadDate).format("DD-MM-YYYY")}
                   </Typography>
                   <Stack sx={{ flexDirection: "column", gap: "1.5rem" }}>
                     <Typography
@@ -99,60 +101,6 @@ export default function NewsDetails() {
                     >
                       {News.newsName}
                     </Typography>
-                    <Typography variant="subtitle1" sx={{ color: "grey" }}>
-                      {News.newsName}
-                    </Typography>
-                    <Typography variant="subtitle1" sx={{ color: "grey" }}>
-                      {News.newsName}
-                    </Typography>
-
-                    <Stack
-                      sx={{
-                        background: "#F9F6F0",
-                        wordSpacing: "0.2rem",
-                        fontWeight: "600",
-                        p: "2rem 1rem",
-                        position: "relative",
-                        height: "130px",
-                        textAlign: "center",
-                      }}
-                    >
-                      <Image
-                        src={quoteIcon}
-                        style={{
-                          width: "50px",
-                          height: "50px",
-                          position: "absolute",
-                          top: "5px",
-                          left: "0",
-                          display: "block",
-                        }}
-                        alt="quote_icon"
-                      />
-                      <Stack
-                        sx={{ flexDirection: "column", alignItems: "start" }}
-                      >
-                        <Typography
-                          variant="inherit"
-                          sx={{ textIndent: "3rem" }}
-                        >
-                          The Eswatini Revenue Service (ERS) is a
-                          semi-autonomous revenue administration agency,
-                          established through the Revenue Authority Act No. 1 of
-                          2008.
-                        </Typography>
-                        <Typography
-                          variant="subtitle1"
-                          sx={{
-                            textIndent: "4.8rem",
-                            textTransform: "uppercase",
-                            color: "#f4c402",
-                          }}
-                        >
-                          - ERS
-                        </Typography>
-                      </Stack>
-                    </Stack>
                     <Typography
                       variant="body1"
                       sx={{ color: "grey" }}
