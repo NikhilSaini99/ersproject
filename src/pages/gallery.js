@@ -13,9 +13,12 @@ import { useMemo } from "react";
 import { Box, IconButton, Modal } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import CloseIcon from "@mui/icons-material/Close"
 
 export default function Gallery() {
   const [visibleGroup, setVisibleGroup] = useState(0);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isImageViewerOpen, setImageViewerOpen] = useState(false);
   const { data, fetchAPI, isLoading } = useFetch(
     "get",
     "/api/gallery-images/web"
@@ -26,13 +29,23 @@ export default function Gallery() {
     fetchAPI();
   }, [fetchAPI]);
 
+  const openImageViewer = (index) => {
+    if (GroupImgArr[visibleGroup]) {
+      setSelectedImageIndex(index);
+      setImageViewerOpen(true);
+    }
+  };
+
+  const closeImageViewer = () => {
+    setImageViewerOpen(false);
+  };
 
   const GroupImgArr = [];
   let newgalleryData;
   if (data?.success) {
     newgalleryData = data?.data;
   }
-
+console.log("XXXXX", newgalleryData);
   const GroupTitles = newgalleryData && Object.keys(newgalleryData);
   const GroupImages = newgalleryData && Object.values(newgalleryData);
 
@@ -47,8 +60,9 @@ export default function Gallery() {
   const handleVisiblity = (i) => {
     setVisibleGroup(i);
   };
-
-
+if(GroupImgArr){
+  console.log("===========", GroupImgArr?.[visibleGroup]?.[selectedImageIndex])
+}
   return (
     <>
       <Head>
@@ -68,7 +82,7 @@ export default function Gallery() {
       </section>
 
       {/*-----------------------Gallery---------------------*/}
-
+    
       <section className="bg-white px-6 py-16">
         <div>
           <h1
@@ -116,7 +130,7 @@ export default function Gallery() {
                       key={i}
                       className="flex  max-w-[450px] h-[400px] flex-col justify-between  group relative "
                     >
-                      <div className="  h-full overflow-hidden cursor-pointer ">
+                      <div className="  h-full overflow-hidden cursor-pointer " onClick={()=>openImageViewer(i)}>
                         <img
                           src={item}
                           className="object-cover  group-hover:scale-110  ease-in-out duration-500  group-hover:brightness-50"
@@ -140,6 +154,61 @@ export default function Gallery() {
                     </div>
                   );
                 })}
+                 <Modal
+        open={isImageViewerOpen}
+        onClose={closeImageViewer}
+        aria-labelledby="image-viewer"
+        aria-describedby="image-viewer"
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "80vw",
+            height: "80vh",
+            bgcolor: "background.paper",
+            border: "2px solid #000",
+            borderRadius: "8px",
+            p: 2,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <IconButton onClick={closeImageViewer} style={{ position: "absolute", top: 10, right: 10 }}>
+            <CloseIcon />
+          </IconButton>
+          <img
+            src={GroupImgArr?.[visibleGroup]?.[selectedImageIndex]}
+            alt="Selected Image"
+            style={{width:"100%", minHeight:"95%"}}
+            layout="responsive"
+          />
+          <div style={{ marginTop: "1rem" }}>
+            <IconButton
+              onClick={() =>
+                setSelectedImageIndex((prevIndex) =>
+                  prevIndex === 0 ? GroupImgArr[visibleGroup].length - 1 : prevIndex - 1
+                )
+              }
+            >
+              <ArrowBackIosIcon />
+            </IconButton>
+            <IconButton
+              onClick={() =>
+                setSelectedImageIndex((prevIndex) =>
+                  prevIndex === GroupImgArr[visibleGroup].length - 1 ? 0 : prevIndex + 1
+                )
+              }
+            >
+              <ArrowForwardIosIcon />
+            </IconButton>
+          </div>
+        </Box>
+      </Modal>
+
               </div>
             ))}
         </div>
