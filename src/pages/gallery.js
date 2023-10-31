@@ -45,24 +45,24 @@ export default function Gallery() {
   if (data?.success) {
     newgalleryData = data?.data;
   }
-console.log("XXXXX", newgalleryData);
+// console.log("XXXXX", newgalleryData);
   const GroupTitles = newgalleryData && Object.keys(newgalleryData);
   const GroupImages = newgalleryData && Object.values(newgalleryData);
 
   if (GroupImages)
     for (const item of GroupImages) {
-      const eachGroupImages = item[0].url.split(",");
+      const eachGroupImages = item.url.split(" ");
       GroupImgArr.push(eachGroupImages);
     }
 
-  console.log(GroupImgArr);
+  // console.log(GroupImgArr);
 
   const handleVisiblity = (i) => {
     setVisibleGroup(i);
   };
-if(GroupImgArr){
-  console.log("===========", GroupImgArr?.[visibleGroup]?.[selectedImageIndex])
-}
+// if(GroupImgArr){
+//   console.log("===========", GroupImgArr?.[visibleGroup]?.[selectedImageIndex])
+// }
   return (
     <>
       <Head>
