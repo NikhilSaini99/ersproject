@@ -115,8 +115,7 @@ const CouncilMember = ({ h2Styling, data }) => {
               pb: "1rem",
             }}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum.
+            At the helm of ERS, an experienced team provides oversight and monitors each function of the organisation.
           </Typography>
 
           {/*-------------------carousel----------------------- */}
