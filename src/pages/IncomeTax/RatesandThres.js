@@ -9,6 +9,7 @@ import Link from 'next/link'
 import Banner from "../../assets/images/Zero_Rated_Goods_&_Services.png";
 import bgimg from '../../assets/images/pxfuel.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ContentDiv } from '@/styles/globalStyle';
 const RatesandThres = () => {
 
     const arrowStyling = {
@@ -164,12 +165,12 @@ const RatesandThres = () => {
             }} >
 
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '6rem', lg: '8rem,', xl: '10rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1">
                         Rates and Thresholds</Typography>
 
                     {/* <Typography variant='body1' my='1rem'>The rates of Income Tax applicable are as follows</Typography> */}
-                    <Typography variant='h6' mt='1rem' fontWeight='bold'>Rates of normal TAX for individual</Typography>
+                    <Typography variant='h2'>Rates of normal TAX for individual</Typography>
 
 
                     {/*  ---------------------------------table 1--------------------------------- */}
@@ -356,7 +357,7 @@ const RatesandThres = () => {
                             </Table>
                         </TableContainer>
                     </Paper>
-                </Box>
+                </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

@@ -8,6 +8,7 @@ import Banner from "../../assets/images/Practice_Notes_and_Guidelines.jpg";
 import Link from 'next/link';
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 import bgimg from '../../assets/images/pagebackground1.jpg'
+import { ContentDiv } from '@/styles/globalStyle';
 
 const Notes_Guidelines = () => {
     const documents = [
@@ -90,8 +91,8 @@ const Notes_Guidelines = () => {
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
            
              
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'5rem', lg: '5rem,', xl: '5rem' },py:'2rem' }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', mt: '2.5rem',mb:'1rem' }}>
+            <ContentDiv>
+                <Typography variant="h1" >
                     Practice Notes and Guidelines</Typography>
 
              
@@ -145,7 +146,7 @@ const Notes_Guidelines = () => {
                 </Paper>
 
 
-            </Box>
+            </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

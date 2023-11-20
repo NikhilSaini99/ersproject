@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Banner from "../../assets/images/Self_Assessment.jpg";
 import rightarrow from '../../assets/images/rightarrow.svg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ContentDiv } from '@/styles/globalStyle';
 
 const SelfAssessment = () => {
 
@@ -147,13 +148,13 @@ const SelfAssessment = () => {
 
 
 
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '1rem', lg: '5rem,', xl: '10rem' }, py: '2rem' }}>
+            <ContentDiv>
 
 
                 <Box sx={FaqContainerStyling}>
 
                     <Stack sx={accordionStyling}>
-                        <Typography variant="h1" sx={{ my: '1.5rem' }}>
+                        <Typography variant="h1" >
                             Self Assessment</Typography>
                         {/* question and arrow*/}
                         {questionandanswer.map((item, index) => (
@@ -184,10 +185,10 @@ const SelfAssessment = () => {
 
                 {selfAssessmentData.map((item, index) => (
                     <Box key={index} my='1rem'>
-                        <Typography variant='body1' sx={{ fontWeight: 'bold', my: '0.3rem' }} className='Pointsformatting'>
+                        <Typography variant='h2' sx={{ my: '0.3rem' }} >
                             {item.title}
                         </Typography>
-                        <Typography variant='body1' className='Pointsformatting'>
+                        <Typography variant='body1' >
                             {item.description}
                         </Typography>
                         {item.points && <ul className='custom-list '>
@@ -204,7 +205,7 @@ const SelfAssessment = () => {
                     </Box>
                 ))}
 
-            </Box>
+            </ContentDiv>
             {/*-----------------------Footer---------------------*/}
 
             <Footer />

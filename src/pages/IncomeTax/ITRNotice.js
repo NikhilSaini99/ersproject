@@ -7,6 +7,7 @@ import React from "react";
 import Banner from "../../assets/images/General-Import-&-Export-Rul.jpg"
 import bgimg from "../../assets/images/bg-1.png";
 import Footer from "@/components/Footer";
+import { ContentDiv } from "@/styles/globalStyle";
 
 const ITRNotice = () => {
   return (
@@ -38,14 +39,14 @@ const ITRNotice = () => {
                 backgroundImage: `url(${bgimg.src})`,
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
-            <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '6rem', lg: '8rem,', xl: '10rem' }, py: '2rem' }}>
-                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+            <ContentDiv>
+                <Typography variant="h1">
                 Income Tax Return Submission Notice 2022
                 </Typography>
         <Link href="http://www.ers.org.sz/documents/1674048256.pdf">
-          <Typography variant="h5" className="Pointsformatting">Download Notice</Typography>
+          <Typography variant="h2" sx={{"&:hover":{textDecoration:"underline"}}} >Download Notice</Typography>
         </Link>
-      </Box>
+      </ContentDiv>
       </Box>
       <Footer/>
     </>

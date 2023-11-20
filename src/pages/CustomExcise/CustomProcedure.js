@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Banner from "../../assets/images/Customs_Procedure_Codes.jpg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import bgimg from '../../assets/images/bg-2.png'
+import { ContentDiv } from '@/styles/globalStyle';
 
 const CustomProcedure = () => {
 
@@ -72,27 +73,27 @@ const CustomProcedure = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1">
                     Customs Procedure Codes</Typography>
 
 
                 {data.map((item, index) => (
-                    <Box key={index}>
-                        <Typography variant='h1' sx={{ ...headingSpacing }} >
+                    <Box key={index} sx={{mb:"0.5rem"}}>
+                        <Typography variant='h2'  >
                             {item.section}
                         </Typography>
                         {item.content.split('\n').map((content, index) => (
                             <div key={index} className='flex gap-1 items-start'>
                             <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
-                            <Typography key={index} variant='body1' className='Pointsformatting pb-2'>{content}</Typography>
+                            <Typography key={index} variant='body1' className='pb-2'>{content}</Typography>
                             </div>
                         ))}
                     </Box>
                 ))}
-                <Typography className='Pointsformatting pb-2'>Click here to download the full Customs Procedures Codes Explanatory notes</Typography>
+                <Typography variant='body1'  className=' pb-2'>Click here to download the full Customs Procedures Codes Explanatory notes</Typography>
                 
-            </Box>
+            </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

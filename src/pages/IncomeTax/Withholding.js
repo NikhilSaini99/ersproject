@@ -6,8 +6,10 @@ import Banner from "../../assets/images/Withholding_Taxes.jpg";
 import Image from "next/image";
 import bgimg from '../../assets/images/pxfuel.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Footer from "@/components/Footer";
+import { ContentDiv } from "@/styles/globalStyle";
+import { defaultTheme } from "../muiTheme";
 
 
 export default function Withholding() {
@@ -52,39 +54,28 @@ export default function Withholding() {
       }} >
 
 
-        <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+        <ContentDiv>
 
-          <h1 className="text-4xl pt-14 mb-4 font-bold text-primaryColor">
+          <Typography variant="h1">
             Withholding Taxes
-          </h1>
-          {/* <div className="flex flex-col gap-y-4 float-right clear-right w-20 absolute right-0"
-            style={{ marginRight: 'calc((12.5% + 2px)*2*-1)', top: '1.5rem' }}>
-            <div className="border-t border-black font-bold"></div>
-            <h6 className="font-semibold">DOWNLOADS</h6>
-            <a href="_target" className="w-5 text-normalBlue hover:underline">
-              <div className="flex flex-row gap-x-2" style={{ width: '75%' }}>
-                <Image src={downloadIcon} className="fill-current" alt="downloadIcon" width="100%" height="100%" />
-                <p className="">Article</p>
-              </div>
-            </a>
-          </div> */}
-
+          </Typography>
+          
           {IncomeTaxData.map((item, key) => (
 
             <div key={key}>
-              <h1 className=" text-2xl text-mainColor  mb-8 Pointsformatting font-bold">
+               <Typography variant="h2" sx={{ color: defaultTheme.palette.primary.main}}>
                 {item.heading1}
-              </h1>
+                </Typography>
               {/* <button>button</button> */}
-              <h1 className=" text-3xl text-mainColor mb-2 Pointsformatting font-bold">
+              {item.heading2 && <Typography variant="h2" sx={{ color: defaultTheme.palette.primary.main, mt: "1rem"}}>
                 {item.heading2}
-              </h1>
+                </Typography>}
 
               <div className=" ">
 
-                <p className={`text-xl pb-2 Pointsformatting font-bold`}>
+                <Typography variant="h2" >
                   {item.title}
-                </p>
+                </Typography>
                 <p className="    Pointsformatting">
                   <span className={`tracking-wide Pointsformatting`}>{item.description}{" "}</span>
                 </p>
@@ -120,7 +111,7 @@ export default function Withholding() {
             </div>
           ))}
 
-        </Box>
+        </ContentDiv>
       </Box>
       <Footer />
     </>

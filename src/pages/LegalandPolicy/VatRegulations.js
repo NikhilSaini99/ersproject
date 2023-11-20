@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Banner from "../../assets/images/VAT_Regulations.jpg";
 import Link from 'next/link'
 import bgimg from '../../assets/images/pxfuel.jpg'
+import { ContentDiv } from '@/styles/globalStyle'
 
 const VatRegulations = () => {
     return (
@@ -37,17 +38,17 @@ const VatRegulations = () => {
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
            
              
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'6rem', lg: '8rem,', xl: '0rem' },py:'2rem' }}>
-                <Typography variant="h1"  sx={{ my: '2.5rem' }}>
+            <ContentDiv>
+                <Typography variant="h1"  >
                     VAT Regulations</Typography>
 
-                <Typography variant='h6' my='1rem' className='Pointsformatting'>The VAT Regulations <Link href={'http://www.sra.org.sz/documents/1496926588.pdf'}
+                <Typography variant='h6' className='Pointsformatting'>The VAT Regulations <Link href={'http://www.sra.org.sz/documents/1496926588.pdf'}
                     style={{ color: '#2f2483', fontWeight: 'bold' }}>(click here to download) </Link>
                     give clarity to certain sections of the VAT Act. These must be read with the Act for better understanding of the provisions of the VAT act no. 12 of 2011.</Typography>
 
                 <Link href=''><Typography variant="body1" className='Pointsformatting' sx={{ color: '#2f2483', }} >VAT (Rate) (Amendment) Regulation 2018</Typography></Link>
                 
-            </Box>
+            </ContentDiv>
             </Box>
 
             {/*-----------------------Footer---------------------*/}

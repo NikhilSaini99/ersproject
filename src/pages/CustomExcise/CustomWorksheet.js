@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/Customs_Worksheet.jpg";
+import { ContentDiv } from '@/styles/globalStyle';
 
 const CustomWorksheet = () => {
     return (
@@ -39,14 +40,14 @@ const CustomWorksheet = () => {
           </div>
 
 
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+            <ContentDiv>
+                    <Typography variant="h1">
                     Customs Worksheet</Typography>
                     
-                <Typography variant="body1" className='Pointsformatting' sx={{ fontWeight: 'bold', my: '1rem' }}>
+                <Typography variant="h2" >
                     Information Coming soon</Typography>
 
-            </Box>
+            </ContentDiv>
             {/*-----------------------Footer---------------------*/}
 
             <Footer />

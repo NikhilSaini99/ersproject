@@ -66,7 +66,7 @@ const RecentlyApprovedContainer = (props) => {
           sx={{  width: "90%", margin: { xs: "0 auto", lg: "0  auto" },  px: { md: "5rem", lg: "5rem,", xl: "10rem" }, py: "2rem",
           }}
         >
-          <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
+          <Typography variant="h1" >
             {title}
           </Typography>
           {data?.data ? <TableComponent

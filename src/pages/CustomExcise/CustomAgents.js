@@ -8,6 +8,7 @@ import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from '../../assets/images/pxfuel.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Footer from '@/components/Footer'
+import { ContentDiv } from '@/styles/globalStyle'
 
 const CustomAgents = () => {
 
@@ -164,18 +165,18 @@ const CustomAgents = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1">
                         Customs Clearing Agents
                     </Typography>
 
-                    <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 'bold', }}>
+                    <Typography variant="h2">
                         GUIDE FOR LICENSING CLEARING AGENTS
                     </Typography>
-                    <Box sx={{ py: '1.5rem' }}>
+                    <Box sx={{ py: '1rem' }}>
                         {section1.map((item, index) => (
-                            <Box key={index} sx={{ my: '1rem' }}>
-                                <Typography variant='body1' sx={{ fontWeight: 'bold', fontSize: '1.25rem' }}>{item.head}</Typography>
+                            <Box key={index} sx={{ mb: '1rem' }}>
+                                <Typography variant='body1' sx={{ fontWeight: 'bold' }}>{item.head}</Typography>
                                 <Typography variant='body1' className='Pointsformatting' sx={{mt:"1rem"}}>{item.description}</Typography>
                                 {item.subpoints && item.subpoints.map((points, index) => (
                                     <div key={index} className='flex gap-1 items-start pb-2'>
@@ -266,7 +267,7 @@ const CustomAgents = () => {
                     <Divider sx={{ my: '2rem' }} />
                     <Link href="http://www.sra.org.sz/documents/1621257351.pdf" className='text-normalBlue block Pointsformatting'>2021 ACTIVE CLEARING AGENTS AS AT 150421</Link>
                     <Link href="http://www.sra.org.sz/documents/1621257296.pdf" className='text-normalBlue block Pointsformatting'>2021 ACTIVE TRANSIT BOND HOLDERS AS AT 250221</Link>
-                </Box>
+                </ContentDiv>
             </Box>
             <Footer/>
         </>

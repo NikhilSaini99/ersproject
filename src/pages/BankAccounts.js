@@ -8,6 +8,7 @@ import {
 import Image from 'next/image'
 import Banner from "../assets/images/registration.jpg";
 import Footer from '@/components/Footer'
+import { ContentDiv } from '@/styles/globalStyle'
 
 const BankAccounts = () => {
     const tableData = [
@@ -69,8 +70,8 @@ const BankAccounts = () => {
                     }}
                 />
             </Box>
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+            <ContentDiv>
+                <Typography variant="h1">
                     Bank Accounts</Typography>
                 <Typography variant='body1' className='Pointsformatting'>The ERS has two (2) accounts in each of the five banks in
                     Eswatini
@@ -110,7 +111,7 @@ const BankAccounts = () => {
                         </TableContainer>
                     </Paper>
                 </Box>
-            </Box>
+            </ContentDiv>
 
             {/*-----------------------Footer---------------------*/}
 

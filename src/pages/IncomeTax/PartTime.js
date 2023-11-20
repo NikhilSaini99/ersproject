@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../../assets/images/Part_Time_Employees.webp";
 import bgimg from "../../assets/images/bg-2.png";
+import { ContentDiv } from '@/styles/globalStyle';
 
 const PartTime = () => {
     return (
@@ -37,13 +38,13 @@ const PartTime = () => {
                 backgroundImage: `url(${bgimg.src})`,
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
-            <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '6rem', lg: '8rem,', xl: '10rem' }, py: '2rem' }}>
-                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+            <ContentDiv>
+                <Typography variant="h1">
                     Part Time Employees</Typography>
 
 
                 <div className="art-article" style={{ textAlign: 'justify', color: '#000000' }}>
-                    <Typography variant='h2' sx={{ mt: '2rem', fontWeight: 'bold' }} className='Pointsformatting'>DEFINITION OF PART TIME EMPLOYEES</Typography>
+                    <Typography variant='h2' >DEFINITION OF PART TIME EMPLOYEES</Typography>
 
                     <Typography variant='body1' className='Pointsformatting'>
                         The expression part-time employee, for the purposes of employees tax, is defined to mean a person who is not in an employers full-time employ and who is not remunerated as a full-time employee for any services rendered. The expression part-time employee excludes unskilled labourers whose remuneration does not exceed E3 416.67 on a monthly basis.<br /><br />
@@ -53,7 +54,7 @@ const PartTime = () => {
                         (c) Honoraria paid to office-bearers of bodies, clubs, societies, etc,<br />
                         (d) Remuneration paid for occasional services rendered, and<br />
                         (e) Any payment that cannot be regarded as full-time remuneration.<br /><br />
-                        <Typography variant='h2'  sx={{  fontWeight: 'bold' }} className='Pointsformatting'>APPLICABLE RATES FOR PART TIME EMPLOYEES</Typography>
+                        <Typography variant='h2' >APPLICABLE RATES FOR PART TIME EMPLOYEES</Typography>
                     </Typography>
 
                     <Typography variant='body1' className='Pointsformatting'>
@@ -119,7 +120,7 @@ const PartTime = () => {
                 </Typography>
 
 
-            </Box>
+            </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

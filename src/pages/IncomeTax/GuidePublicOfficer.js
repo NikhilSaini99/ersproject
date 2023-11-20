@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import bgimg from '../../assets/images/pxfuel.jpg'
+import { ContentDiv } from '@/styles/globalStyle';
 
 const GuidePublicOfficer = () => {
     const publicOfficerData = [
@@ -152,19 +153,19 @@ const GuidePublicOfficer = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1">
                         Guide on the Appointment of a Public Officer
                     </Typography>
 
-                    <Typography variant="h2" sx={{ fontSize: '2rem', fontWeight: 'bold', pb: '1rem' }}>
+                    <Typography variant="h2" sx={{ pb: '1rem' }}>
                         Introduction
                     </Typography>
 
-                    <Typography variant="body1" className='Pointsformatting'>
+                    <Typography variant="body1">
                         The Income Tax Order of 1975 as amended requires that a company carrying on business in Swaziland appoints a Public Officer to represent the company in all their tax obligations.
                     </Typography>
-                    <Typography variant="body1" className='Pointsformatting '>
+                    <Typography variant="body1" >
                         In terms of Section 51(2) of the Order, a public officer shall be appointed by
                     </Typography>
 
@@ -195,7 +196,7 @@ const GuidePublicOfficer = () => {
 
 
 
-                </Box>
+                </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

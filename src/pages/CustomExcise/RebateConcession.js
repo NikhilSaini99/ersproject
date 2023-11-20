@@ -8,6 +8,7 @@ import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from '../../assets/images/bg-1.png'
 import Footer from '@/components/Footer'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ContentDiv } from '@/styles/globalStyle'
 
 const RebateConcession = () => {
 
@@ -124,14 +125,14 @@ const RebateConcession = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '1rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1" >
                         Rebate Concessions for New/Returning Residents
                     </Typography>
-                    <Typography variant="h2" sx={{ fontWeight: 'bold', fontSize: '1.25rem', pt: '2rem', mb: '1rem' }}>
+                    <Typography variant="h2">
                         REBATE CONCESSION FOR NEW/RETURNING RESIDENTS (Click here for the full  guideline)
                     </Typography>
-                    <Typography variant="body1" className='Pointsformatting' sx={{ my: '1rem' }} >
+                    <Typography variant="body1" sx={{ my: '1rem' }} >
                         Goods imported by qualifying individuals/natural persons (not companies) can qualify for a rebate of duty and import in Eswatini
                         <br />
                         Qualifying individuals are:
@@ -139,21 +140,24 @@ const RebateConcession = () => {
                     <Box sx={{ my: '1.2rem' }}>
                         {data.map((item, index) => (
                             <Box key={index}>
-                                <Typography variant='h2' sx={{ fontWeight: 'bold', mb: '1rem', fontSize: '1.25rem' }}>{item.title}</Typography>
-                                {item.desc && <Typography variant='body1' className='Pointsformatting mb-4'>{item.desc}</Typography>}
+                                <Typography variant='h2' >{item.title}</Typography>
+                                {item.desc && <Typography variant='body1' className='mb-4'>{item.desc}</Typography>}
                                 {item.subData && item.subData.map((subData, index) => (
                                     <Box key={index}>
-                                        <Typography variant='h2' sx={{ fontWeight: 'bold', mb: '1rem', fontSize: '1.25rem' }}>{subData.subTitle}</Typography>
-                                        {subData.subDesc && <Typography variant='body1' className='Pointsformatting mb-4'>{subData.subDesc}</Typography>}
+                                        <Typography variant='h2'>{subData.subTitle}</Typography>
+                                        {subData.subDesc && <Typography variant='body1' className=' mb-4'>{subData.subDesc}</Typography>}
+                                        <div className=' mb-4'>
                                         {subData.subpoints && subData.subpoints.map((subitem, index) => (
                                             <div key={index} className='flex gap-1 items-start pb-2'>
                                                 <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
-                                                <Typography variant='body1' className='Pointsformatting'>{subitem}</Typography>
+                                                <Typography variant='body1' className=''>{subitem}</Typography>
                                             </div>
                                         ))
-                                        }
+                                    }
+                                    </div>
                                     </Box>
                                 ))}
+                                 <div className=' mb-4'>
                                 {item.points && item.points.map((mainPoints, index) => (
                                     <div key={index} className='flex gap-1 items-start pb-2'>
                                         <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
@@ -162,11 +166,12 @@ const RebateConcession = () => {
                                         </ul>
                                     </div>
                                 ))}
-                                {item.note && <Typography variant='body1' className='Pointsformatting font-bold'>{item.note}</Typography>}
+                                </div>
+                                {item.note && <Typography variant='body1' className='font-bold'>{item.note}</Typography>}
                             </Box>
                         ))}
                     </Box>
-                </Box>
+                </ContentDiv>
             </Box>
             <Footer />
         </>

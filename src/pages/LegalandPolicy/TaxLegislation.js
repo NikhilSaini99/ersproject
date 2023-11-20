@@ -8,6 +8,7 @@ import Banner from "../../assets/images/Tax_Legislations.jpg";
 import Link from 'next/link'
 import bgimg from  '../../assets/images/pagebackground1.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ContentDiv } from '@/styles/globalStyle'
 
 const TaxLegislation = () => {
 
@@ -65,8 +66,8 @@ const TaxLegislation = () => {
             <Box sx={{backgroundImage:`url(${bgimg.src})`,
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
         
-            <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'4rem', lg: '8rem,', xl: '10rem' },py:'2rem' }}>
-                <Typography variant="h1"  sx={{ pt: '2rem', mb: '2rem' }}>
+            <ContentDiv>
+                <Typography variant="h1">
                     Tax Legislations</Typography>
 
                 <Typography variant='body1' className='Pointsformatting'>The Eswatini Revenue Service derives its authority to administer various revenue laws from the
@@ -88,7 +89,7 @@ const TaxLegislation = () => {
                         </ul>
                     </Box>
                 ))}
-            </Box>
+            </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

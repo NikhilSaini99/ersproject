@@ -8,6 +8,7 @@ import Banner from "../../assets/images/PAYE-QuickGuide.jpg";
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import bgimg from "../../assets/images/bg-2.png";
+import { ContentDiv } from '@/styles/globalStyle';
 
 const Paye = () => {
     const taxRates = [
@@ -158,8 +159,8 @@ const Paye = () => {
                 backgroundImage: `url(${bgimg.src})`,
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '8rem,', xl: '10rem' }, py: '2rem' }}>
-                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+            <ContentDiv >
+                <Typography variant="h1">
                     PAYE - Quick Guide</Typography>
 
                 <Box className="Pointsformatting">
@@ -171,19 +172,19 @@ const Paye = () => {
                     </div>
 
                     <div>
-                        <Typography variant="body1" className="Pointsformatting">
+                        <Typography variant="body1" >
                             <strong>Calculating PAYE</strong>
                         </Typography>
                     </div>
 
                     <div>
-                        <Typography variant="body1" className="Pointsformatting pt-4">
+                        <Typography variant="body1">
                             <strong>NOTE: The steps described below are based on the general principles of calculating PAYE; it is always advisable to verify with the ERS when not sure.</strong>
                         </Typography>
                     </div>
 
                     <div>
-                        <Typography variant="body1" className="Pointsformatting pt-4 ">
+                        <Typography variant="body1" className="pt-4 ">
                             <strong>Step 1</strong> - Determine the employees taxable income
                         </Typography>
                     </div>
@@ -273,7 +274,7 @@ const Paye = () => {
                 ))}
 
 
-            </Box>
+            </ContentDiv>
 
             </Box>
             {/*-----------------------Footer---------------------*/}

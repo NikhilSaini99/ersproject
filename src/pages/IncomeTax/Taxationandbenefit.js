@@ -20,6 +20,7 @@ import Link from "next/link";
 import Banner from "../../assets/images/Taxation_of_Benefits.jpg";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import bgimg from '../../assets/images/pxfuel.jpg'
+import { ContentDiv } from "@/styles/globalStyle";
 
 
 const Taxationandbenefit = () => {
@@ -27,7 +28,7 @@ const Taxationandbenefit = () => {
     " &  *": {
       fontSize: "20px !important",
       letterSpacing: "0.025em",
-      lineHeight: "1.8 !important",
+         lineHeight: "1.8 !important",
     },
   };
   const arrowStyling = {
@@ -93,18 +94,12 @@ const Taxationandbenefit = () => {
         backgroundSize: 'cover', backgroundAttachment: 'fixed'
       }} >
 
-      <Box
-        sx={{
-          width: "75%",
-          margin: { xs: "0rem auto", lg: "0rem  auto" },
-          pr: { md: "3rem", lg: "10rem,", xl: "15rem" },
-          py: "2rem",
-        }}>
-        <Typography variant="h1" sx={{ pt: "1rem", mb: "1rem" }}>
+      <ContentDiv>
+        <Typography variant="h1" >
           Taxation of Benefits
         </Typography>
         <Box sx={{ ...commonStyling }}>
-          <Typography variant="body1" my="1rem">
+          <Typography variant="body1" >
             The following benefits are taxable to the extent shown below:
           </Typography>
           <Typography fontWeight="bold" variant="subtitle1">
@@ -445,7 +440,7 @@ const Taxationandbenefit = () => {
           </Box>
           
         </Box>
-      </Box>
+      </ContentDiv>
       </Box>
       {/*-----------------------Footer---------------------*/}
 

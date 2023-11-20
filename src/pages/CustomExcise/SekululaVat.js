@@ -8,6 +8,7 @@ import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../../assets/images/bg-2.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Footer from "@/components/Footer";
+import { ContentDiv } from "@/styles/globalStyle";
 
 const SekululaVat = () => {
   const arrowStyling = {
@@ -164,11 +165,11 @@ const SekululaVat = () => {
         "Submit claim documents to ERS within 75 calendar days from date of invoice",
         "Be registered with SARS and nominate a SARS registered agent (information on the registration process available on SARS website) where the claim is in respect of registrable items and the following documents must be included",
       ],
-      usefulPoints:[
+      usefulPoints: [
         "Proof of payment",
         "Proof that vehicle has been registered in Eswatini and",
         "Customs Clearance Certificate",
-      ]
+      ],
     },
     {
       note: "Attach the goods proof of payment to the supplier confirming that the goods have been paid for in full for all goods bought on credit (regardless of the value)",
@@ -216,23 +217,10 @@ const SekululaVat = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <Box
-          sx={{
-            width: "75%",
-            margin: { xs: "0rem auto", lg: "0rem  auto" },
-            pr: { md: "5rem", lg: "10rem,", xl: "15rem" },
-            py: "2rem",
-          }}
-        >
-          <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
-            Sekulula VAT
-          </Typography>
+        <ContentDiv>
+          <Typography variant="h1">Sekulula VAT</Typography>
 
-          <Typography
-            variant="body1"
-            className="Pointsformatting"
-            sx={{ my: "1rem" }}
-          >
+          <Typography variant="body1">
             The Sekulula VAT Easy system enables importers to settle the VAT
             liability for goods imported into Eswatini by using qualifying
             invoices where such goods were purchased from South African VAT
@@ -242,17 +230,16 @@ const SekululaVat = () => {
           <Box sx={{ my: "1rem" }}>
             {section1Data.map((item, index) => (
               <Box key={index}>
-                <Typography
-                  variant="h2"
-                  className="Pointsformatting"
-                  sx={{ fontWeight: "bold" }}
-                >
-                  {item.title}
-                </Typography>
-                {item.subhead && (
-                  <Typography variant="body1" className="Pointsformatting">
-                    {item.subhead}
+                {item.title && (
+                  <Typography
+                    variant="h2"
+                    sx={{ fontWeight: "bold", my: "1rem" }}
+                  >
+                    {item.title}
                   </Typography>
+                )}
+                {item.subhead && (
+                  <Typography variant="body1">{item.subhead}</Typography>
                 )}
                 {item.points &&
                   item.points?.map((points, index) => (
@@ -267,7 +254,12 @@ const SekululaVat = () => {
                         {" "}
                         <li className="Pointsformatting">
                           {points}
-                          <ol style={{ listStyleType: 'decimal', marginLeft: "1rem" }}>
+                          <ol
+                            style={{
+                              listStyleType: "decimal",
+                              marginLeft: "1rem",
+                            }}
+                          >
                             {index === 2
                               ? item.usefulPoints
                                 ? item.usefulPoints.map((subitem, index) => (
@@ -275,7 +267,6 @@ const SekululaVat = () => {
                                   ))
                                 : null
                               : null}
-                              
                           </ol>
                         </li>
                       </ul>
@@ -284,13 +275,7 @@ const SekululaVat = () => {
                 {item.data &&
                   item.data.map((item, index) => (
                     <Box key={index}>
-                      <Typography
-                        variant="h2"
-                        className="Pointsformatting"
-                        sx={{ fontWeight: "bold" }}
-                      >
-                        {item.heading}
-                      </Typography>
+                      <Typography variant="h2">{item.heading}</Typography>
                       {item.subpoints &&
                         item.subpoints.map((subpoint, index) => (
                           <div
@@ -324,25 +309,22 @@ const SekululaVat = () => {
                 {item.note && (
                   <Typography
                     variant="body1"
-                    className="Pointsformatting"
-                    sx={{ fontWeight: "bold", my:"1rem" }}
+                    sx={{ fontWeight: "bold", my: "1rem" }}
                   >
                     {item.note}
                   </Typography>
                 )}
                 {item.subnote && (
-                  <Typography variant="body1" className="Pointsformatting">
-                    {item.subnote}
-                  </Typography>
+                  <Typography variant="body1">{item.subnote}</Typography>
                 )}
               </Box>
             ))}
-            <Typography variant="body1" className="Pointsformatting">
+            <Typography variant="body1">
               For more information please contact our Contact Centre on
               info@ers.org.sz or call +268 2406 4050
             </Typography>
           </Box>
-        </Box>
+        </ContentDiv>
       </Box>
       <Footer />
     </>

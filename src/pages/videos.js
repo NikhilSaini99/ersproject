@@ -114,7 +114,7 @@ export default function Videos() {
             py: "2rem",
           }}
         >
-          <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
+          <Typography variant="h1">
             Things to see
           </Typography>
 

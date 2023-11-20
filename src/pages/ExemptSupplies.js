@@ -7,6 +7,7 @@ import Banner from "../assets/images/Exempt_Supplies_of_Goods_&_Services.jpg";
 import Footer from "@/components/Footer";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import bgimg from "../assets/images/bg-2.png";
+import { ContentDiv } from "@/styles/globalStyle";
 
 
 
@@ -187,8 +188,8 @@ const ExemptSupplies = () => {
                 backgroundImage: `url(${bgimg.src})`,
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
-             <Box sx={{ width: "80%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+             <ContentDiv>
+                    <Typography variant="h1" >
                     Exempt Supplies of Goods & Services
                 </Typography>
                 <Typography variant="h5" component="h2" sx={{ fontWeight: "bold", my: '1rem' }}>
@@ -263,7 +264,7 @@ const ExemptSupplies = () => {
                             </>
                     ))}
                 </ul>
-            </Box>
+            </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
             <Footer />

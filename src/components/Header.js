@@ -201,7 +201,7 @@ export default function Header() {
                         }}
                       >
                         <div
-                          className={`fixed left-10 right-10 font-normal w-[94%] bg-mainColor flex  min-min-h-[36rem]  ${
+                          className={`fixed left-10 right-10 font-normal w-[94%]  bg-mainColor flex  min-min-h-[36rem]  ${
                             isServicesOpen ? "block" : "hidden"
                           }`}
                         >
@@ -594,7 +594,7 @@ export default function Header() {
                         }}
                       >
                         <div
-                          className={`fixed left-10 right-10 font-normal w-[94%] bg-mainColor flex  min-h-[36rem] ${
+                          className={`fixed  left-10 right-10 font-normal w-[94%]  bg-mainColor flex  min-h-[36rem] ${
                             isFormsOpen ? "block" : "hidden"
                           }`}
                         >
@@ -805,7 +805,7 @@ export default function Header() {
                         }}
                       >
                         <div
-                          className={`fixed left-10 right-10 font-normal w-[94%] bg-mainColor min-h-[36rem] flex ${
+                          className={`fixed  left-10 right-10 font-normal w-[94%]  bg-mainColor min-h-[36rem] flex ${
                             isMediaOpen ? "block" : "hidden"
                           }`}
                         >

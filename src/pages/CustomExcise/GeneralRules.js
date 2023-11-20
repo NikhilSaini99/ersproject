@@ -6,9 +6,10 @@ import Footer from "@/components/Footer";
 import Banner from "../../assets/images/General-Import-&-Export-Rul.jpg";
 import Custom from "../../assets/images/Eswatini_Customs-2.jpg";
 import { customData } from "../../content/data";
-import { Box, Paper } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import bgimg from "../../assets/images/pagebackground1.jpg";
+import { ContentDiv } from "@/styles/globalStyle";
 
 export default function GeneralRules() {
   const data = customData.find((item) => item.id === 1);
@@ -60,15 +61,15 @@ export default function GeneralRules() {
           backgroundAttachment: "fixed",
         }}
       >
-        <section className="py-12  w-[75%] mx-auto Pointsformatting pr-20 ">
+        <ContentDiv>
           {/* ------------------Importants---------------------------- */}
 
           <div className=" ">
-            <h1 className="text-4xl text-primaryColor font-bold pt-2 mb-8">
+            <Typography variant="h1" >
               {data.title}
-            </h1>
-            <h1 className="text-3xl font-semibold mt-4">{data.title1}</h1>
-            <h1 className="text-md font-semibold mt-4">{data.title2}</h1>
+            </Typography>
+            <Typography variant="h2">{data.title1}</Typography>
+            <Typography variant="body1" className="mt-4">{data.title2}</Typography>
             <ul className="mt-2">
               {data.description.map((desc, index) => (
                 <div key={index} className="flex gap-1 items-start pb-2">
@@ -78,7 +79,7 @@ export default function GeneralRules() {
                       className="Pointsformatting"
                     />
                   </span>
-                  <li className="mx-1 lightBlack">{desc}</li>
+                  <Typography variant="body1"  className="mx-1 lightBlack">{desc}</Typography>
                 </div>
               ))}
             </ul>
@@ -95,7 +96,7 @@ export default function GeneralRules() {
                       className="Pointsformatting"
                     />
                   </span>
-                  <li className="mx-1  lightBlack ">{desc}</li>
+                  <Typography variant="body1" className="mx-1  lightBlack ">{desc}</Typography>
                 </div>
               ))}
             </ul>
@@ -109,21 +110,21 @@ export default function GeneralRules() {
 
           {/* ----------------------Personal Imports------------------------ */}
 
-          <div className="flex  mt-10 mb-4">
+          <div className="flex mt-10 mb-4">
             <div>
               <div className="  ">
-                <h1 className="text-2xl font-semibold">{data2.title}</h1>
+              <Typography variant="h2" >{data2.title}</Typography>
                 <p className="mt-4 text-justify">
-                  <span className="lightBlack font-normal">
+                <Typography variant="body1" >
                     {data2.description}
-                  </span>
+                  </Typography>
                 </p>
               </div>
             </div>
           </div>
 
           <div className=" mt-4 ">
-            <h1 className="text-md font-semibold">{data3.title1}</h1>
+          <Typography variant="h2" >{data3.title1}</Typography>
             <ul className="mt-2">
               {data3.description.map((desc, index) => (
                 <div key={index} className="flex gap-1 items-start pb-2">
@@ -133,7 +134,7 @@ export default function GeneralRules() {
                       className="Pointsformatting"
                     />
                   </span>
-                  <li className="lightBlack">{desc}</li>
+                  <Typography variant="body1" className="lightBlack">{desc}</Typography>
                 </div>
               ))}
             </ul>
@@ -142,15 +143,15 @@ export default function GeneralRules() {
             <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">
               <span className="lightBlack font-normal"> {data3.title2}</span>
             </h1>
-            <h1 className="text-lg mt-4 text-justify font-semibold Pointsformatting">
+            <Typography variant="body1">
               <span className="lightBlack font-normal"> {data3.title3}</span>
-            </h1>
+            </Typography>
           </div>
 
           {/* ----------------------EXPORTATION------------------------ */}
           <div className=" my-10 ">
-            <h1 className="text-2xl font-semibold">{data4.title1}</h1>
-            <h1 className="text-md font-semibold mt-4 ">{data4.title2}</h1>
+          <Typography variant="h2">{data4.title1}</Typography>
+          <Typography variant="body1">{data4.title2}</Typography>
             <ul>
               {data4.description.map((desc, index) => (
                 <div key={index} className="flex gap-1 items-start pb-2">
@@ -160,76 +161,76 @@ export default function GeneralRules() {
                       className="Pointsformatting"
                     />
                   </span>
-                  <li className="mx-1 lightBlack">{desc}</li>
+                  <Typography variant="body1" className="mx-1 lightBlack">{desc}</Typography>
                 </div>
               ))}
             </ul>
-            <h1 className="text-lg mt-4 text-justify  Pointsformatting">
+            <Typography variant="body1">
               {data4.title5}
               <span className="lightBlack font-normal"> {data4.title3}</span>
-            </h1>
-            <h1 className="text-lg mt-4 text-justify ">
+            </Typography>
+            <Typography variant="body1">
               {data4.title6}
               <span className="lightBlack font-normal Pointsformatting">{data4.title4}</span>
-            </h1>
+            </Typography>
           </div>
 
           {/* --------------------CROSS BORDER CASH DECLARATION------------------ */}
 
           <div className=" my-10  ">
-            <h1 className="text-2xl font-semibold ">{data5.title1}</h1>
-            <h1 className="text-lg mt-4 text-justify  Pointsformatting ">
+          <Typography variant="h2">{data5.title1}</Typography>
+          <Typography variant="body1">
               {data5.title4}
               <span className="lightBlack font-normal Pointsformatting">
                 {" "}
                 {data5.title2}
               </span>
-            </h1>
-            <h1 className="text-lg mt-4 text-justify  Pointsformatting">
+              </Typography>
+              <Typography variant="body1">
               {data5.title5}
               <span className="lightBlack font-normal Pointsformatting">
                 {data5.title3}
               </span>
-            </h1>
+              </Typography>
           </div>
           {/* ------------------------OFFENCE AND CONFISCATION-------------------- */}
           <div className=" my-10 ">
-            <h1 className="text-2xl font-semibold">{data6.title1}</h1>
-            <h1 className="text-lg mt-4 text-justify  Pointsformatting">
+          <Typography variant="h2">{data6.title1}</Typography>
+          <Typography variant="body1">
               {data6.title4}
               <span className="lightBlack font-normal Pointsformatting">
                 {" "}
                 {data6.title2}
               </span>
-            </h1>
-            <h1 className="text-lg mt-4 text-justify  Pointsformatting">
+            </Typography>
+            <Typography variant="body1">
               {data6.title5}
               <span className="lightBlack font-normal Pointsformatting">
                 {" "}
                 {data6.title3}
               </span>
-            </h1>
+            </Typography>
           </div>
           {/* ------------------------SEARCH-------------------- */}
 
           <div className=" my-10  ">
-            <h1 className="text-2xl font-semibold">{data7.title1}</h1>
-            <h1 className="text-lg mt-4 text-justify  Pointsformatting">
+          <Typography variant="h2">{data7.title1}</Typography>
+          <Typography variant="body1">
               {data7.title4}
               <span className="lightBlack font-normal Pointsformatting">
                 {" "}
                 {data7.title2}
               </span>
-            </h1>
-            <h1 className="text-lg mt-4 text-justify  Pointsformatting">
+            </Typography>
+            <Typography variant="body1">
               {data7.title5}
               <span className="lightBlack font-normal Pointsformatting">
                 {" "}
                 {data7.title3}
               </span>
-            </h1>
+              </Typography>
           </div>
-        </section>
+        </ContentDiv>
       </Box>
 
       <Footer />

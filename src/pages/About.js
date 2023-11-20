@@ -111,7 +111,7 @@ export default function About() {
               alt="about estwani vat"
               className={styles.about_img}
             />
-            <Typography variant="h1" my=".5rem">
+            <Typography variant="h1"  sx={{p:"0", my:".5rem"}}>
               About Eswatini Revenue Service
             </Typography>
             {heroSectionData.description}

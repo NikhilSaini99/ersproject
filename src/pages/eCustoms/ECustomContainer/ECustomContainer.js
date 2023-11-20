@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 import Banner from "../../../assets/images/Eswatini_VAT.png";
 import bgimg from '../../../assets/images/pxfuel.jpg'
+import { ContentDiv } from '@/styles/globalStyle'
 
 
 const ECustomContainer = (props) => {
@@ -32,14 +33,14 @@ const ECustomContainer = (props) => {
                 backgroundImage: `url(${bgimg.src})`,
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }}>
-        <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+        <ContentDiv>
                     <Typography variant="h1" sx={{ pt: '2rem', mb: '1rem' }}>
                        {title}</Typography>
                     <Typography variant="body1" sx={{ lineHeight:"2rem",   mb: '2rem' }}>
                       {description}
                       </Typography>
 
-     </Box>
+     </ContentDiv>
 
  </Box>
         </>

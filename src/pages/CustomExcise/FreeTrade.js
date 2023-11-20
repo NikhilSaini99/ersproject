@@ -8,6 +8,7 @@ import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../../assets/images/bg-2.png";
 import Link from "next/link";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { ContentDiv } from "@/styles/globalStyle";
 const pageData = [
   {
     title: "SADC - EU ECONOMIC PARTNERSHIP AGREEMENT",
@@ -146,32 +147,26 @@ const FreeTrade = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <Box
-          sx={{
-            width: "75%",
-            margin: { xs: "0rem auto", lg: "0rem  auto" },
-            pr: { md: "5rem", lg: "10rem,", xl: "15rem" },
-            py: "2rem",
-          }}
+        <ContentDiv
         >
-          <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
+          <Typography variant="h1">
             Free Trade and Preferential Agreements
           </Typography>
 
           {pageData.map((item, index) => (
-            <Box key={index}>
+            <Box key={index} sx={{mb:'1rem'}}>
               {item.title && (
-                <Typography variant="h3" sx={{ ...h2Styling, color:'black' }}>
+                <Typography variant="h2" >
                   {item.title}
                 </Typography>
               )}
               {item.content && (
-                <Typography variant="body1" className="Pointsformatting" sx={{mt:"1rem"}}>
+                <Typography variant="body1"  sx={{mt:"0.5rem"}}>
                   {item.content}
                 </Typography>
               )}
               {item.content2 && (
-                <Typography variant="body1" className="Pointsformatting" sx={{mt:"1rem"}}>
+                <Typography variant="body1" sx={{mt:"0.5rem"}}>
                   {item.content2}
                 </Typography>
               )}
@@ -188,7 +183,6 @@ const FreeTrade = () => {
                       <Link href="/">
                         <Typography
                           variant="body1"
-                          className="Pointsformatting"
                         >
                           {item}
                         </Typography>
@@ -200,11 +194,11 @@ const FreeTrade = () => {
               <Box mt="0.5rem">
                 {item.chapter && (
                   <Box>
-                    <Typography variant="body1" className="Pointsformatting" sx={{fontWeight:'bold'}}>
+                    <Typography variant="body1"  sx={{fontWeight:'bold'}}>
                       {item.chapter.chapterHead}
                     </Typography>
                     {item.chapter.chapterPoints.map((chapterPoint, index) => (
-                      <Typography variant="body1" className="Pointsformatting"  key={index}>
+                      <Typography variant="body1"  key={index}>
                         {chapterPoint}
                       </Typography>
                     ))}
@@ -215,7 +209,7 @@ const FreeTrade = () => {
               <Box  mt="0.5rem">
                 {item.Annex1 && (
                   <Box>
-                    <Typography variant="body1" className="Pointsformatting" sx={{fontWeight:'bold'}}>
+                    <Typography variant="body1" sx={{fontWeight:'bold'}}>
                       {item.Annex1.head}
                     </Typography>
 
@@ -224,7 +218,6 @@ const FreeTrade = () => {
                         <Typography
                           key={index}
                           variant="body1"
-                          className="Pointsformatting"
                         >
                           {item}
                         </Typography>
@@ -235,7 +228,7 @@ const FreeTrade = () => {
               <Box>
                 {item.Annex2 && (
                   <Box>
-                    <Typography variant="body1" className="Pointsformatting" sx={{fontWeight:'bold'}}>
+                    <Typography variant="body1"  sx={{fontWeight:'bold'}}>
                       {item.Annex2.head}
                     </Typography>
 
@@ -244,7 +237,6 @@ const FreeTrade = () => {
                         <Typography
                           key={index}
                           variant="body1"
-                          className="Pointsformatting"
                         >
                           {item}
                         </Typography>
@@ -254,7 +246,7 @@ const FreeTrade = () => {
               </Box>
             </Box>
           ))}
-        </Box>
+        </ContentDiv>
       </Box>
 
       <Footer />

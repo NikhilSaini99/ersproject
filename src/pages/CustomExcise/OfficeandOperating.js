@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from '../../assets/images/bg-2.png'
 import Footer from '@/components/Footer'
+import { ContentDiv } from '@/styles/globalStyle'
 
 const OfficeandOperating = () => {
 
@@ -60,13 +61,13 @@ const OfficeandOperating = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1">
                         Offices and Operating Hours
                     </Typography>
 
                     {/* First table start */}
-                    <Paper elevation={20} sx={{ width: '100%', margin: '0 auto', my: '2rem' }}>
+                    <Paper elevation={20} sx={{ width: '100%', margin: '0 auto', mb: '1rem' }}>
                         <TableContainer >
                             <Table className={''} aria-label="Form Table">
                                 <TableHead>
@@ -95,7 +96,7 @@ const OfficeandOperating = () => {
                     {/* First table End */}
 
                     <Typography variant="body1" className='Pointsformatting text-left'>
-                    Inland stations (except Saturdays, Sundays and  Public Holidays
+                    Inland stations (except Saturdays, Sundays and  Public Holidays)
                     </Typography>
                       {/* Second table Start */} 
                       <Paper elevation={20} sx={{ width: '100%', margin: '0 auto', my: '2rem' }}>
@@ -125,7 +126,7 @@ const OfficeandOperating = () => {
                     </Paper>
                        {/* Second table End */}
 
-                </Box>
+                </ContentDiv>
             </Box>
             <Footer/>
         </>

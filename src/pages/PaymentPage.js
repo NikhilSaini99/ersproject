@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import { Box, Typography } from '@mui/material';
 import Footer from '@/components/Footer';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ContentDiv } from '@/styles/globalStyle';
 
 const PaymentPage = () => {
     const dataPaymentpage = [
@@ -78,8 +79,8 @@ const PaymentPage = () => {
                     }}
                 />
             </Box>
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+            <ContentDiv>
+                <Typography variant="h1" >
                     Payments
                 </Typography>
                 <Typography variant='body1' className='Pointsformatting mb-2'>The following modes of payment are available for ERS customers to make tax and/or duties payments:</Typography>
@@ -104,7 +105,7 @@ const PaymentPage = () => {
                 </ol>
 
 
-            </Box>
+            </ContentDiv>
 
             {/*-----------------------Footer---------------------*/}
 

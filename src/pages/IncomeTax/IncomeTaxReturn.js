@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Banner from "../../assets/images/Income_Tax_Returns.jpg";
 import bgimg from '../../assets/images/pagebackground1.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ContentDiv } from '@/styles/globalStyle';
 
 const IncomeTaxReturn = () => {
 
@@ -101,12 +102,12 @@ const IncomeTaxReturn = () => {
                 backgroundImage: `url(${bgimg.src})`,
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '8rem,', xl: '10rem' }, py: '2rem' }}>
+                <ContentDiv>
 
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                    <Typography variant="h1">
                         Income Tax Returns</Typography>
 
-                    <Typography variant='body1' my='1rem' className="Pointsformatting">Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayers finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
+                    <Typography variant='body1'  className="Pointsformatting">Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayers finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
                         {<br></br>}
                         Every year the Commisisoner General publishes a notice calling for income tax returns; click HERE to view the current notice.
                     </Typography>
@@ -130,7 +131,7 @@ const IncomeTaxReturn = () => {
                             </div>
                         </Box>
                     ))}
-                </Box>
+                </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

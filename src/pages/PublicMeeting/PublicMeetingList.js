@@ -115,7 +115,7 @@ export default function News() {
 						py: '2rem'
 					}}
 				>
-  <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem", width:"90%", margin:"0 auto" }}>
+  <Typography variant="h1" >
             Public Meetings
           </Typography>
         </Box>

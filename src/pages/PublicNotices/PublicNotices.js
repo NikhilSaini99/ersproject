@@ -95,7 +95,7 @@ const PublicNotices = () => {
             py: "2rem",
           }}
         >
-          <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
+          <Typography variant="h1" >
             Public Notice
           </Typography>
 

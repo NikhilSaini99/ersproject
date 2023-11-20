@@ -8,6 +8,7 @@ import Banner from "../assets/images/Reverse_Charge_Concept.png";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import bgimg from  '../assets/images/pxfuel.jpg'
 import Link from 'next/link'
+import { ContentDiv } from '@/styles/globalStyle'
 
 
 
@@ -104,9 +105,9 @@ const ReverseCharge = () => {
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
            
              
-           <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+           <ContentDiv>
 
-                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                <Typography variant="h1" >
                     Reverse Charge Concept
                 </Typography>
 
@@ -128,7 +129,7 @@ const ReverseCharge = () => {
                     The  <Link href={"/"}> VAT reverse charge declaration form </Link> and payment must be submitted to the ERS within 30 days of the invoice date.</Typography>
                 <Typography variant='body1' sx={{ fontStyle: 'italic' }} className='Pointsformatting'>
                     NOTE: The VAT reverse charge system does not apply to registered businesses with a full right to input tax deduction.</Typography>
-            </Box>
+            </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
             <Footer />

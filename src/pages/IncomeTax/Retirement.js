@@ -8,6 +8,7 @@ import Banner from "../../assets/images/Retirement-and-Redundancy.png";
 import bgimg from  '../../assets/images/pxfuel.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Link from 'next/link';
+import { ContentDiv } from '@/styles/globalStyle';
 
 const Retirement = () => {
     const data = [
@@ -102,9 +103,9 @@ const Retirement = () => {
                 </Box>
             <Box sx={{backgroundImage:`url(${bgimg.src})`,
         backgroundSize:'cover',backgroundAttachment:'fixed'}} >
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: {md:'5rem', lg: '10rem,', xl: '15rem' },py:'2rem' }}>
+            <ContentDiv>
 
-                <Typography variant="h1" sx={{ pt: '1rem', mb: '2rem', ml:"-1.5rem"}}>
+                <Typography variant="h1" >
                     Retirement and Redundancy </Typography>
                     <Box sx={{pl:{xs:'1.3rem', xl:'0'}}}>
                 <ol style={{ listStyleType: 'decimal' }}>
@@ -122,7 +123,7 @@ const Retirement = () => {
                     ))}
                 </ol>
                 </Box>
-            </Box>
+            </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

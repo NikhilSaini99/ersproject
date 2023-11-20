@@ -8,6 +8,7 @@ import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from '../../assets/images/bg-2.png'
 import Footer from '@/components/Footer'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ContentDiv } from '@/styles/globalStyle'
 
 const EuRegistered = () => {
 
@@ -101,49 +102,49 @@ const EuRegistered = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '1rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1" >
                         EU Registered Exporter System
                     </Typography>
-                    <Typography variant="h2" sx={{ fontWeight: 'bold', fontSize: '1.25rem', pt: '2rem', mb: '1rem' }}>
+                    <Typography variant="h2">
                         General information
                     </Typography>
 
                     {data1.map((item, index) => (
                         item.para.split('\n').map((item, index) => (
-                            <Typography key={index} variant='body1' className='Pointsformatting pb-4'>{item}</Typography>
+                            <Typography key={index} variant='body1' className=' pb-4'>{item}</Typography>
                         ))
                     ))}
 
                     {
                         data2.map((section, index) => (
                             <Box key={index} >
-                                <Typography variant="h2" sx={{ fontWeight: 'bold', fontSize: '1.25rem', pt: '2rem', mb: '1rem' }}>
+                                <Typography variant="h2" >
                                     {section.heading}
                                 </Typography>
-                                <Typography variant='body1' className='Pointsformatting '>{section.desc}</Typography>
+                                <Typography variant='body1'>{section.desc}</Typography>
                                 {section.subdata && section.subdata.map((subitem, index) => (
                                     <Box key={index}>
-                                        <Typography variant="h2" sx={{ fontWeight: 'bold', fontSize: '1.25rem', pt: '1rem', mb: '1rem' }}>
+                                        <Typography variant="h2">
                                             {subitem.subhead}
                                         </Typography>
                                         <div className='flex gap-1 items-start '>
                                             <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
-                                            <Typography variant='body1' className='Pointsformatting pb-4'>{subitem.desc}</Typography>
+                                            <Typography variant='body1' className=' pb-4'>{subitem.desc}</Typography>
                                         </div>
                                     </Box>
                                 ))}
-                                {section.note && <Typography variant='body1' className='Pointsformatting font-bold'>{section.note}</Typography>}
+                                {section.note && <Typography variant='body1' className=' font-bold'>{section.note}</Typography>}
                             </Box>
                         ))
                     }
-                    <Typography variant='body1' className='Pointsformatting '>Links:</Typography>
+                    <Typography variant='body1' className=' '>Links:</Typography>
                     <Stack direction="column" >
                         {links.map((link, index) => (
                             <Link href={link.link} className='Pointsformatting text-normalBlue' key={index}>{link.text}</Link>
                         ))}
                     </Stack>
-                </Box>
+                </ContentDiv>
             </Box>
             <Footer />
         </>

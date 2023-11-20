@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Banner from "../../assets/images/Bonded_warehouses_&_rebate_store.jpg";
 import bgimg from '../../assets/images/pxfuel.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ContentDiv } from '@/styles/globalStyle';
 const BondedPage = () => {
     const headingSpacing = {
        color:'black',
@@ -97,41 +98,41 @@ const BondedPage = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1" >
                     Bonded warehouses & rebate store</Typography>
 
 
                 {data.map((item, index) => (
                     <Box key={index}>
-                        <Typography variant='h1' sx={{ ...headingSpacing }}>
+                        <Typography variant='h2' >
                             {item.section}
                         </Typography>
-                        <Typography variant='body1' className='Pointsformatting mb-4'>{item.description}</Typography>
+                        <Typography variant='body1' className='mb-4'>{item.description}</Typography>
                         <ul className='custom-list'>
                             {item.points.map((points, index) => (
                                 <div key={index} className=' flex gap-2 items-star'>
                                 <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
-                                <li className='Pointsformatting pb-2'>{points}</li>
+                                <Typography variant='body1' className='pb-2'>{points}</Typography>
                                 </div>
                             ))}
                         </ul>
                     </Box>
                 ))}
 
-                <Typography variant='body1' className='Pointsformatting'>Bonded area operators have to keep the records for a period five (5) years.</Typography>
-                <Typography variant='body1' sx={{my:'0.5rem',fontWeight:'bold'}} className='Pointsformatting'>Applications should be directed to:</Typography>
+                <Typography variant='body1' >Bonded area operators have to keep the records for a period five (5) years.</Typography>
+                <Typography variant='h2' sx={{ mt:"0.5rem"}}>Applications should be directed to:</Typography>
 
                             <ul className='custom-list'>
                                 {applicationRedirect.map((direct,index)=>(
                                     <div key={index} className=' flex gap-2 items-star'>
                                     {/* <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span> */}
-                                    <li className='Pointsformatting'>{direct}</li>
+                                    <Typography variant='body1'>{direct}</Typography>
                                     </div>
                                 ))}
                             </ul>  
 
-            </Box>
+            </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
 

@@ -24,7 +24,7 @@ const WhatnewComponent = ({ whatNewsData }) => {
                 className="px-8 text-sm leading-6 font-bold cursor-pointer"
                 onClick={() => handlePdfDownload(item?.documentUrl)}
               >
-                {item?.name}:
+                {item?.name}
               </h3>
               <p className="px-8 text-sm leading-6 font-normal mb-3 ">
                 {item?.description}

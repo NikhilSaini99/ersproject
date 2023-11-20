@@ -7,6 +7,7 @@ import Image from "next/image";
 import Banner from "../../assets/images/Zero_Rated_Goods_&_Services.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import bgimg from "../../assets/images/bg-2.png";
+import { ContentDiv } from "@/styles/globalStyle";
 
 const ZeroRated = () => {
   const TypoStyle = {
@@ -178,16 +179,8 @@ const ZeroRated = () => {
             backgroundAttachment: "fixed",
           }}
         >
-          <Box
-            sx={{
-              width: { xs: "80%", md: "80%", lg: "75%" },
-              margin: { xs: "0rem auto", lg: "0rem auto" },
-              pr: { md: "5rem", lg: "10rem,", xl: "15rem" },
-              py: "2rem",
-              lineHeight: "1.8",
-            }}
-          >
-            <Typography variant="h1" sx={{ mt: "0rem", mb: "2.5rem" }}>
+          <ContentDiv>
+            <Typography variant="h1" >
               Zero Rated Goods & Services
             </Typography>
 
@@ -342,7 +335,7 @@ const ZeroRated = () => {
               </ol>
             </Box>
             {/*------------------- Section 3 END-------------------------------- */}
-          </Box>
+          </ContentDiv>
         </Box>
       </Box>
       {/*-----------------------Footer---------------------*/}

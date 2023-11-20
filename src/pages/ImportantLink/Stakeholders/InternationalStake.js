@@ -8,6 +8,7 @@ import Banner from "../../../assets/images/images/registration.jpg";
 import bgimg from '../../../assets/images/pxfuel.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Link from 'next/link'
+import { ContentDiv } from '@/styles/globalStyle'
 
 const InternationalStake = () => {
 
@@ -158,8 +159,8 @@ const InternationalStake = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1">
                         Links
                     </Typography>
                     <Typography variant="h2" sx={{ fontSize: '1.25rem', fontWeight: 'bold', my: '1.2rem' }}>
@@ -260,7 +261,7 @@ const InternationalStake = () => {
                             <Typography variant='body1' component='div' className='Pointsformatting'>{item.description}</Typography>
                         </Box>
                     ))}
-                </Box>
+                </ContentDiv>
             </Box>
 
             {/*-----------------------Footer---------------------*/}

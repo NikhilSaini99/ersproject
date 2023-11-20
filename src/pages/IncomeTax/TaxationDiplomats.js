@@ -8,6 +8,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Footer from '@/components/Footer'
 import bgimg from '../../assets/images/pxfuel.jpg'
 import rightarrow from '../../assets/images/rightarrow.svg'
+import { ContentDiv } from '@/styles/globalStyle'
 
 const TaxationDiplomats = () => {
 
@@ -151,8 +152,8 @@ const TaxationDiplomats = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '1rem', mb: '1rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1" >
                         Taxation of Diplomats and Consul
                     </Typography>
 
@@ -202,7 +203,7 @@ const TaxationDiplomats = () => {
                     ))}
 
                     {/* Second section end here */}
-                </Box>
+                </ContentDiv>
             </Box>
 
             <Footer />

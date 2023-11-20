@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from '../../assets/images/bg-1.png'
 import Footer from '@/components/Footer'
+import { ContentDiv } from '@/styles/globalStyle'
 
 const TraderPrograme = () => {
   return (
@@ -37,13 +38,13 @@ const TraderPrograme = () => {
         backgroundSize: 'cover', backgroundAttachment: 'fixed'
     }} >
 
-        <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-            <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+        <ContentDiv>
+            <Typography variant="h1">
             Preferred Trader Programme
             </Typography>
 
             <Link href="http://www.sra.org.sz/documents/1567671955.pdf" className='Pointsformatting text-normalBlue'>ERS - Preferred Trader Programme External Guide and Procedure-Vsn1_ 2019</Link>
-        </Box>
+        </ContentDiv>
     </Box>
     <Footer/>
 </>

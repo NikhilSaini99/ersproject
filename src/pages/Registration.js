@@ -10,6 +10,7 @@ import rightarrow from '../assets/images/rightarrow.svg'
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import bgimg from "../assets/images/bg-2.png";
 import { useState } from 'react'
+import { ContentDiv } from '@/styles/globalStyle'
 
 
 
@@ -124,11 +125,11 @@ const Registration = () => {
             }} > 
 
             {/* question and arrow*/}
-         <Box sx={{ width: "85%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
+         <ContentDiv>
         <Box sx={FaqContainerStyling}>
 
           <Stack sx={accordionStyling}>
-            <Typography variant="h1" sx={{ mb: '2rem'}}>
+            <Typography variant="h1" >
               Registration
             </Typography>
             {/* question and arrow*/}
@@ -152,7 +153,7 @@ const Registration = () => {
           </Stack>
         </Box>
 
-      </Box>
+      </ContentDiv>
       </Box>
 
       {/*-----------------------Footer---------------------*/}

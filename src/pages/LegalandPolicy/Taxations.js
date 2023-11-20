@@ -18,6 +18,7 @@ import Banner from "../../assets/images/Double_Taxation_Agreements.jpg";
 import bgimg from "../../assets/images/pagebackground1.jpg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Link from "next/link";
+import { ContentDiv } from "@/styles/globalStyle";
 
 
 const arrowStyling = {
@@ -77,19 +78,12 @@ const Taxations = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <Box
-          sx={{
-            width: "75%",
-            margin: { xs: "0rem auto", lg: "0rem  auto" },
-            pr: { md: "5rem", lg: "10rem,", xl: "15rem" },
-            py: "2rem",
-          }}
-        >
-          <Typography variant="h1" sx={{ pt: "2rem", mb: "2rem" }}>
+        <ContentDiv>
+          <Typography variant="h1" >
             Double Taxation Agreements
           </Typography>
 
-          <Typography variant="h6" sx={{ mt: "2rem", mb: "1rem" }}>
+          <Typography variant="h6" sx={{mb: "1rem" }}>
             Status of Double Taxation Avoidance Agreement (DTAA’s) & Tax
             Information Exchange Agreements (TIEA’s)
           </Typography>
@@ -173,7 +167,7 @@ const Taxations = () => {
               </li>
             </ol>
           </Box>
-        </Box>
+        </ContentDiv>
       </Box>
 
       {/*-----------------------Footer---------------------*/}

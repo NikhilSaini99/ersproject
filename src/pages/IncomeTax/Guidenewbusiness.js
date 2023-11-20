@@ -7,6 +7,7 @@ import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from '../../assets/images/pxfuel.jpg'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
+import { ContentDiv } from '@/styles/globalStyle'
 
 const Guidenewbusiness = () => {
     return (
@@ -37,13 +38,13 @@ const Guidenewbusiness = () => {
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
 
-                <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                    <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+                <ContentDiv>
+                    <Typography variant="h1">
                         Step-By Step Guide for New Businesses
                     </Typography>
 
                     <Link href="http://www.ers.org.sz/documents/1674047725.pdf" className='Pointsformatting text-normalBlue'>http://www.ers.org.sz/documents/1674047725.pdf</Link>
-                </Box>
+                </ContentDiv>
             </Box>
             <Footer/>
         </>

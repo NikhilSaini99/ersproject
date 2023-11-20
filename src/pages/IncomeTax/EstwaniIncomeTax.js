@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Banner from "../../assets/images/Eswatini_VAT.png";
 import bgimg from "../../assets/images/bg-2.png";
+import { ContentDiv } from '@/styles/globalStyle';
 
 const EstwaniIncomeTax = () => {
 
@@ -89,11 +90,11 @@ const EstwaniIncomeTax = () => {
                 backgroundImage: `url(${bgimg.src})`,
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'
             }} >
-                 <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                <Typography variant="h1" sx={{ mt: '0rem', mb: '2rem' }}>
+                 <ContentDiv>
+                <Typography variant="h1">
                 Eswatini Income Tax
                 </Typography>
-                <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
+                <Typography variant="h2" >
                     Historical Background</Typography>
 
                 {estwaniVatarr.map((item, index) => (
@@ -120,7 +121,7 @@ const EstwaniIncomeTax = () => {
                         </div>
                     )
                 })}
-            </Box>
+            </ContentDiv>
             </Box>
             {/*-----------------------Footer---------------------*/}
             <Footer />

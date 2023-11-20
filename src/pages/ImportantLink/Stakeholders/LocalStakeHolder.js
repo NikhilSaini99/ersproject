@@ -6,6 +6,7 @@ import { Box, Typography, Stack } from '@mui/material'
 import Image from 'next/image'
 import Banner from "../../../assets/images/registration.jpg";
 import Link from 'next/link'
+import { ContentDiv } from '@/styles/globalStyle'
 
 export default function LocalStakeHolder() {
 
@@ -60,8 +61,8 @@ export default function LocalStakeHolder() {
                 />
             </Box>
 
-            <Box sx={{ width: "75%", margin: { xs: "0rem auto", lg: "0rem  auto" }, pr: { md: '5rem', lg: '10rem,', xl: '15rem' }, py: '2rem' }}>
-                <Typography variant="h1" sx={{ pt: '2rem', mb: '2rem' }}>
+            <ContentDiv>
+                <Typography variant="h1">
                     Resources
                 </Typography>
                 {organizations.map((item, index) => (
@@ -77,7 +78,7 @@ export default function LocalStakeHolder() {
                         </Typography>
                     </Box>
                 ))}
-            </Box>
+            </ContentDiv>
 
             {/*-----------------------Footer---------------------*/}
 
