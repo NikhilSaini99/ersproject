@@ -11,6 +11,8 @@ import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill, BsApple } from "react-icons/bs";
 import { Box, Divider, Stack, Typography } from "@mui/material";
 import { appIcon } from '../content/data'
+import { defaultTheme } from "@/pages/muiTheme";
+import { theme } from "spotlight.js";
 
 
 export default function Footer() {
@@ -36,11 +38,12 @@ export default function Footer() {
 
   return (
     <>
-      <Box className="main" color='white' sx={{
+      <Box className="main"  sx={{
         display: 'flex', gap: '0',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        color: defaultTheme.palette.white.main
       }}>
-        <Box sx={{ position: 'relative', bgcolor: '#F7C347' }}>
+        <Box sx={{ position: 'relative', bgcolor: defaultTheme.palette.secondary.main }}>
           <Box sx={{ ...footerArrowStyling   }}></Box>
           <Stack sx={{
             position: 'absolute', top: '0', left: '0',
@@ -56,7 +59,7 @@ export default function Footer() {
                 fontSize: { xs: '1.5rem', md: '1rem', lg: '1.5rem' }, fontWeight: 'bold'
               }}>
                 Connect With Us</Typography>
-              <Typography variant="h4" sx={{
+              <Typography variant="body1" sx={{
                 fontSize: { xs: '1rem', md: '0.8rem', lg: '1rem' },
               }}>
                 Stay updated with ERS news, data, publications, projects, events and
@@ -86,7 +89,7 @@ export default function Footer() {
               <Divider sx={{ borderBottomWidth: 2.5, bgcolor: '#f4c203', my: { xs: '0.3rem', lg: '0.8rem' } }} />
               <Typography variant="h3" sx={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
                 About ERS</Typography>
-              <Typography variant="body1" sx={{ fontSize: '1rem' }}>
+              <Typography variant="body1" >
                 The Eswatini Revenue Service (ERS) is a semi-autonomous revenue administration agency, established through the Revenue Authority Act No. 1 of 2008. It operates within the broad framework of Government but outside of the civil service.
               </Typography>
               <Divider sx={{ borderBottomWidth: 2.5, bgcolor: '#f4c203', my: { xs: '0.3rem', lg: '0.8rem' } }} />
