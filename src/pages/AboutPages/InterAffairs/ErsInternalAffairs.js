@@ -52,7 +52,7 @@ const ErsInternalAffairs = ({ h2Styling, arrowStyling }) => {
           background: "#F9F9FA",
           borderRadius: "8px",
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-          margin: { xs: "3rem auto 3rem", lg: "3rem auto 3rem" },
+          margin: { xs: "3rem auto 0rem auto", lg: "3rem auto 0rem auto" },
         }}
         data-aos="zoom-in-up"
       >

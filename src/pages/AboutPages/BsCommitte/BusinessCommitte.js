@@ -75,7 +75,7 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
 
   return (
     <>
-      <Typography variant="h2" sx={{ ...h2Styling, mb: "2rem" }}>
+      <Typography variant="h2" sx={h2Styling}>
         Business Consultative Committe
       </Typography>
 
@@ -86,7 +86,7 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
           background: "#F9F9FA",
           borderRadius: "8px",
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-          margin: { xs: "3rem auto", lg: "3rem auto 0" },
+          margin: { xs: "3rem auto 0 auto", lg: "3rem auto 0 auto" },
         }}
         data-aos="fade-left"
       >

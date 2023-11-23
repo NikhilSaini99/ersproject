@@ -187,7 +187,7 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute z-10 top-[49px] font-normal ${
+                      className={`absolute z-10  font-normal ${
                         isServicesOpen ? "block" : "hidden"
                       }`}
                     >
@@ -578,7 +578,7 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute z-10 top-[49px] font-normal ${
+                      className={`absolute z-10  font-normal ${
                         isFormsOpen ? "block" : "hidden"
                       }`}
                     >
@@ -789,7 +789,7 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute  z-10 top-[49px] font-normal w-24 bg-mainColor ${
+                      className={`absolute  z-10  font-normal w-24 bg-mainColor ${
                         isMediaOpen ? "block" : "hidden"
                       }`}
                     >

@@ -18,7 +18,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
           sx={{
             position: "relative",
             top: "0",
-            margin: "3rem auto",
+           
           }}
         >
           <Box

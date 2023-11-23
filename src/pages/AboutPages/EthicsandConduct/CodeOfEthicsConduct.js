@@ -32,7 +32,7 @@ const CodeOfEthicsConduct = ({ h2Styling, arrowStyling }) => {
           gap: "1.5rem",
           p: "1.5rem",
           background: "#F9F9FA",
-          margin: { xs: "3rem auto 1rem", lg: "3rem auto 0.5rem"},
+          margin: { xs: "3rem auto 1rem auto", lg: "3rem auto 0.5rem auto"},
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
         }}>
         <Typography variant="body1" className="Pointsformatting">

@@ -78,7 +78,7 @@ const Alliances = ({ h2Styling, arrowStyling }) => {
 
   return (
     <>
-      <Typography variant="h2" sx={{ ...h2Styling, mb: "2rem" }}>
+      <Typography variant="h2" sx={h2Styling}>
         Alliances and Agreements
       </Typography>
 
