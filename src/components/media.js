@@ -17,6 +17,7 @@ import {
 } from "@mui/material";
 import dayjs from "dayjs";
 import Script from "next/script";
+import { BlackButton } from "@/styles/globalStyle";
 
 function Media() {
   return (
@@ -43,9 +44,7 @@ function Media() {
                   href="https://www.facebook.com/EswatiniRevenueService"
                   target="_blank"
                 >
-                  <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
-                    Follow Us
-                  </button>
+                  <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
             </div>
@@ -81,9 +80,7 @@ function Media() {
                   charset="utf-8"
                 ></Script>
                 <Link href="https://twitter.com/AECOM" target="_blank">
-                  <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
-                    Follow Us
-                  </button>
+                <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
             </div>
@@ -100,9 +97,7 @@ function Media() {
                 ></iframe>
 
                 <Link href="https://www.instagram.com/aecom" target="_blank">
-                  <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
-                    Follow Us
-                  </button>
+                <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
             </div>

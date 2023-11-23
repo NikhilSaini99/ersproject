@@ -164,7 +164,7 @@ export default function Header() {
                   </div>
                 </li>
                 <li className="relative main">
-                  <div className="items-center">
+                  <div className="items-center relative">
                     <button
                       onMouseOver={() => {
                         setServicesOpen(true);
@@ -187,7 +187,7 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute z-10 font-normal ${
+                      className={`absolute z-10 top-[49px] font-normal ${
                         isServicesOpen ? "block" : "hidden"
                       }`}
                     >
@@ -206,9 +206,7 @@ export default function Header() {
                           }`}
                         >
                           {/* Left side of Menu */}
-                          {/* <div className="bg-subColor pt-5 max-w-lg min-w-max sub_items_text_color lg:w-[30%] 2xl:w-[20%]"> */}
                           <WhatnewComponent whatNewsData={data}/>
-                          {/* </div> */}
                           {/* Right side of Menu */}
                           <div
                             className="py-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]"
@@ -580,7 +578,7 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute z-10 font-normal ${
+                      className={`absolute z-10 top-[49px] font-normal ${
                         isFormsOpen ? "block" : "hidden"
                       }`}
                     >
@@ -791,7 +789,7 @@ export default function Header() {
                       </h3>
                     </button>
                     <div
-                      className={`absolute  z-10 font-normal w-24 bg-mainColor ${
+                      className={`absolute  z-10 top-[49px] font-normal w-24 bg-mainColor ${
                         isMediaOpen ? "block" : "hidden"
                       }`}
                     >

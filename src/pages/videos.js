@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Banner from "../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../assets/images/pxfuel.jpg";
 import { useFetch } from "./api/api";
@@ -76,9 +76,6 @@ export default function Videos() {
       },
     ],
   };
-
-  console.log(data?.data.yearwisearray?.[0]?.video?.length);
-  console.log(data?.data.yearwisearray);
 
   return (
     <>

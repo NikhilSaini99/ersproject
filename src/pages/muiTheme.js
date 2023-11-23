@@ -1,10 +1,10 @@
-import {Theme,styled,createTheme } from "@mui/material";
+import {createTheme } from "@mui/material";
 
 
 const paletteColors = {
     primary: {
       main:"#2F2483",
-      light:""  
+      light:"#4634cf"  
     },
     secondary:{
         main:"#f4c402",
@@ -17,7 +17,10 @@ const paletteColors = {
     },
     white:{
         main:"#FFFFFF"
-    }
+    },
+    black:{
+        main:"#000000"
+    },
 }
 
 export const defaultTheme = createTheme({

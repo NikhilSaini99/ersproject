@@ -1,17 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import searchIcon from "../assets/icons/search.png";
-import {
-  IconButton,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from "@mui/material";
-import DownloadForOfflineRoundedIcon from "@mui/icons-material/DownloadForOfflineRounded";
 import { useFetch } from "@/pages/api/api";
 import { useEffect } from "react";
 import Loader from "./Loader";
@@ -31,7 +20,6 @@ export default function FormTable({ title, defaultValue }) {
     setSelectedCategory(categoryData);
   },[defaultValue,data?.data]);
 
-  console.log();
   const handlePDFDownload = (url) => {
     window.open(url, "_blank");
   };
@@ -46,7 +34,6 @@ export default function FormTable({ title, defaultValue }) {
     }
     
   };
-  console.log(selectedCategory);
   const tableHeaders = ["#","Form Name","Category", "Size", "Description","Download",]
   const includeProperties =["id","formName","category","fileSize","description","fileUrl"]
 
@@ -105,80 +92,6 @@ export default function FormTable({ title, defaultValue }) {
                         excluseProperties={excluseProperties}
                         includeProperties={includeProperties}
           /> : <Loader />}
-        {/* {isLoading ? (
-          <Loader />
-        ) : (
-          <Paper elevation={20} sx={{ width: "90%", margin: "0 auto" }}>
-            <TableContainer>
-              <Table className={""} aria-label="Form Table">
-                <TableHead>
-                  <TableRow
-                    sx={{
-                      backgroundColor: "#2f2483",
-                      "& > *": {
-                        color: "white !important",
-                        fontWeight: "bold !important",
-                        fontSize: "1rem !important",
-                        textAlign: "center !important",
-                      },
-                    }}
-                  >
-                    <TableCell>#</TableCell>
-                    <TableCell align="left"> Form Name</TableCell>
-                    <TableCell align="left">Category</TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ width: { md: "15%", lg: "12%" } }}
-                    >
-                      Size
-                    </TableCell>
-                    <TableCell align="left">Description</TableCell>
-                    <TableCell align="left">Download</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  
-                    {selectedCategory?.map((form, index) => (
-                        <TableRow
-                          key={index}
-                          sx={{
-                            "& > *": {},
-                            "&:hover": {
-                              background: "#F2F2F2",
-                            },
-                            "&>td": {
-                              textAlign: "center",
-                            },
-                          }}
-                        >
-                          <TableCell scope="row" align="right">
-                            {index + 1}
-                          </TableCell>
-                          <TableCell>{form.formName}</TableCell>
-                          <TableCell>{form.category}</TableCell>
-                          <TableCell
-                            align="right"
-                            sx={{ width: { md: "15%", lg: "12%" } }}
-                          >
-                            {form.fileSize}
-                          </TableCell>
-                          <TableCell>{form.description}</TableCell>
-                          <TableCell align="center">
-                            <IconButton
-                              onClick={() => handlePDFDownload(form.fileUrl)}
-                            >
-                              <DownloadForOfflineRoundedIcon
-                                sx={{ fontSize: "2rem" }}
-                              />
-                            </IconButton>
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </Paper>
-        )} */}
       </section>
     </>
   );

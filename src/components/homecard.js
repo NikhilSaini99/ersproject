@@ -13,6 +13,7 @@ import LiveHelpIcon from "@mui/icons-material/LiveHelp";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
+import { BlackButton } from "@/styles/globalStyle";
 
 
 
@@ -102,9 +103,7 @@ function News({ icon, description, img, link }) {
             {description}
           </p>
           <Link href={link}>
-            <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border hover:border-black rounded-lg py-3 px-5 flex items-center box">
-              Know More
-            </button>
+           <BlackButton>Know More</BlackButton>
           </Link>
         </div>
       </div>

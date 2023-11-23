@@ -45,7 +45,7 @@ export default function Gallery() {
   if (data?.success) {
     newgalleryData = data?.data;
   }
-// console.log("XXXXX", newgalleryData);
+
   const GroupTitles = newgalleryData && Object.keys(newgalleryData);
   const GroupImages = newgalleryData && Object.values(newgalleryData);
 
@@ -55,14 +55,12 @@ export default function Gallery() {
       GroupImgArr.push(eachGroupImages);
     }
 
-  // console.log(GroupImgArr);
+ 
 
   const handleVisiblity = (i) => {
     setVisibleGroup(i);
   };
-// if(GroupImgArr){
-//   console.log("===========", GroupImgArr?.[visibleGroup]?.[selectedImageIndex])
-// }
+
   return (
     <>
       <Head>

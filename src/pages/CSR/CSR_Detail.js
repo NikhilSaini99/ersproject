@@ -2,7 +2,6 @@ import React from 'react'
 import { Box, Typography } from '@mui/material'
 import Head from 'next/head'
 import Header from '@/components/Header'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Banner from "../../assets/images/Eswatini_VAT.png";
@@ -20,8 +19,6 @@ const CSR_Detail = () => {
   useEffect(()=>{
    fetchAPI();
      },[fetchAPI]);
-
-     console.log(data?.data)
 
   
   return (

@@ -2,25 +2,15 @@ import Header from "@/components/Header";
 import {
   Box,
   Typography,
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
-  TableHead,
-  TableContainer,
-  Paper,
-  Button,
 } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import Banner from "../assets/images/Guide-on-the-Appointment-of.png";
 import bgimg from "../assets/images/pxfuel.jpg";
 import Footer from "@/components/Footer";
 import { useFetch } from "./api/api";
 import { useEffect } from "react";
-import dayjs from "dayjs";
 import TableComponent from "@/components/TableComponent/TableComponent";
 const WhatsNewsDetail = () => {
 
@@ -29,10 +19,6 @@ const WhatsNewsDetail = () => {
   useEffect(()=>{
       fetchAPI();
 }, [fetchAPI]);
-
-if(data){
-  console.log(data)
-}
 
   const handlePDFDownload  = (url) =>{
       window.open(url)

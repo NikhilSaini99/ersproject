@@ -1,13 +1,11 @@
 import React from 'react'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import { Box, Stack, Typography, List, ListItem, ListItemText, Divider } from '@mui/material'
+import { Box, Stack, Typography, Divider } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from "../assets/images/Registration.jpeg"
-import downarrow from '../assets/images/downarrow.svg'
 import rightarrow from '../assets/images/rightarrow.svg'
-import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import bgimg from "../assets/images/bg-2.png";
 import { useState } from 'react'
 import { ContentDiv } from '@/styles/globalStyle'
@@ -18,8 +16,6 @@ const Registration = () => {
   const [isOpen, setisOpen] = useState(null)
 
   const handleOpen = (index) => {
-    console.log(index)
-    console.log(isOpen)
     if (isOpen === index) {
       setisOpen(null);
     }

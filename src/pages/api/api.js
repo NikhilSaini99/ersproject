@@ -37,8 +37,6 @@ export const useFetch = (method, path) => {
                     data: databody
                 }
             )
-
-            // console.log('inside fetchAPI call',response)
             dispatch({ type: 'success', data: response })
         }
         catch (err) {

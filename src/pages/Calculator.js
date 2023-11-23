@@ -296,17 +296,12 @@ const Calculator = () => {
     let finalTexAmount;
 
     if (periods === "Day") {
-      //console.log("inside Day");
       if (0 <= totalIncome && totalIncome <= 273.97) {
-        console.log("inside 1");
         totalIncome = parseFloat(totalIncome);
         texBeforDeductions = (totalIncome * 20) / 100;
       } else if (273.97 <= totalIncome && totalIncome <= 410.96) {
-        //console.log("inside 2")
         texAmount = totalIncome - 273.97;
-        //console.log("texAmount", texAmount)
         texpercentage = (texAmount * 25) / 100;
-        //console.log("texpercentage", texpercentage)
         texBeforDeductions = texpercentage + 54.97;
       } else if (410.96 <= totalIncome && totalIncome <= 547.95) {
         texAmount = totalIncome - 410.96;
@@ -320,16 +315,12 @@ const Calculator = () => {
     }
 
     if (periods === "Monthly") {
-      //console.log("inside Day");
       if (0 <= totalIncome && totalIncome <= 8333.33) {
         totalIncome = parseFloat(totalIncome);
         texBeforDeductions = (totalIncome * 20) / 100;
       } else if (8333.33 <= totalIncome && totalIncome <= 12500) {
-        //console.log("inside 2")
         texAmount = totalIncome - 8333.33;
-        //console.log("texAmount", texAmount)
         texpercentage = (texAmount * 25) / 100;
-        //console.log("texpercentage", texpercentage)
         texBeforDeductions = texpercentage + 1666.67;
       } else if (12500 <= totalIncome && totalIncome <= 16666.67) {
         texAmount = totalIncome - 12500;
@@ -344,7 +335,7 @@ const Calculator = () => {
 
     if (periods === "yearly") {
       if (0 <= totalIncome && totalIncome <= 100000) {
-        console.log("inside 1");
+
         totalIncome = parseFloat(totalIncome);
         texBeforDeductions = (totalIncome * 20) / 100;
       } 
@@ -364,10 +355,6 @@ const Calculator = () => {
         texBeforDeductions = texpercentage + 47500;
       }
     }
-    console.log("ENPF",ENPF);
-    console.log("texBeforDeductions",texBeforDeductions);
-    console.log("deductions",deductions);
-    console.log("totalIncome",totalIncome);
     finalTexAmount = texBeforDeductions - ENPF - deductions;
     return finalTexAmount;
   }

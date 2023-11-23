@@ -119,10 +119,10 @@ const EuRegistered = () => {
                     {
                         data2.map((section, index) => (
                             <Box key={index} >
-                                <Typography variant="h2" >
+                              {section.heading &&  <Typography variant="h2" >
                                     {section.heading}
-                                </Typography>
-                                <Typography variant='body1'>{section.desc}</Typography>
+                                </Typography>}
+                               {section.desc && <Typography variant='body1' className=' pb-4'>{section.desc}</Typography>}
                                 {section.subdata && section.subdata.map((subitem, index) => (
                                     <Box key={index}>
                                         <Typography variant="h2">

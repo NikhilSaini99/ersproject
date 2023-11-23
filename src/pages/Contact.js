@@ -42,7 +42,6 @@ export default function Contact() {
   useEffect(()=>{
     fetchAPI()
   },[fetchAPI])
-  console.log(data)
 
   const headQuarter = data?.data?.filter((item)=>item?.isHeadQuater)
   const serviceCenter = data?.data?.filter((item)=>item?.isHeadQuater===false)

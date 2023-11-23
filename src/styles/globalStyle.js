@@ -1,4 +1,4 @@
-import { Box, styled, useTheme } from "@mui/material";
+import { styled, Button } from "@mui/material";
 export const ContentDiv = styled("div")(({ theme }) => ({
   width: "75%",
   margin: "0 auto",
@@ -16,3 +16,17 @@ export const ContentDiv = styled("div")(({ theme }) => ({
     paddingRight: "15rem",
   },
 }));
+
+export const BlackButton = styled(Button)(({theme})=>({
+    backgroundColor:`${theme.palette.black.main} !important`,
+    color:theme.palette.white.main,
+    borderRadius:"0.5rem",
+    padding:"0.4rem 1rem",
+    fontWeight:600,
+    fontSize:"0.875rem",
+    textTransform:"none",
+    letterSpacing:"0.09em",
+    "&:hover":{
+        backgroundColor:`${theme.palette.primary.main} !important`
+    }
+}))

@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Foot from "../assets/images/footer-head.png";
 import { RiMailFill } from "react-icons/ri";
 import { IoLogoYoutube } from "react-icons/io";
 import { SiHuawei, SiTwitter } from "react-icons/si";
@@ -10,9 +8,8 @@ import { GrLinkedinOption } from "react-icons/gr";
 import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill, BsApple } from "react-icons/bs";
 import { Box, Divider, Stack, Typography } from "@mui/material";
-import { appIcon } from '../content/data'
 import { defaultTheme } from "@/pages/muiTheme";
-import { theme } from "spotlight.js";
+
 
 
 export default function Footer() {

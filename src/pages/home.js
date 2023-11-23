@@ -1,7 +1,6 @@
-import { AiOutlineArrowDown, MdOutlineCalendarMonth } from "react-icons/md";
-import { Box, Typography } from "@mui/material";
-import { Button, Grid, IconButton, Paper } from "@mui/material";
-import { News, Resources } from "@/components/homecard";
+import { MdOutlineCalendarMonth } from "react-icons/md";
+import {  IconButton } from "@mui/material";
+import { News  } from "@/components/homecard";
 import React, { useEffect, useMemo, useState } from "react";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -9,10 +8,10 @@ import CSR from "../assets/images/CSR.jpg";
 import Carousal from "@/components/carousal";
 import Customs from "../assets/images/eCustoms_Tariff_Logo.png";
 import DatasetLinkedOutlinedIcon from "@mui/icons-material/DatasetLinkedOutlined";
-import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+
 import ECoustoms from "../assets/images/e-customs.jpg";
 import ETax from "../assets/images/e-tax.jpg";
-import { FcAbout } from "react-icons/fc";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Icons } from "@/components/homecard";
@@ -29,14 +28,12 @@ import flight from "../assets/icons/flight.png";
 import headphone from "../assets/icons/headphone.png";
 import help from "../assets/icons/help.png";
 import monitoring from "../assets/icons/monitoring.png";
-import notice_board from "../assets/images/Notice_Board.png";
 import validation from "../assets/images/validation.png";
 import notes from "../assets/images/notes.png";
-import recentlyApproved from "../assets/images/Recently_Approved.png";
-import table from "../assets/icons/table.png";
+import table from "../assets/icons/table.png"
 import { useFetch } from "./api/api";
-import { useRef } from "react";
 import ChatboxMock from "@/components/Chatbox/ChatboxMock";
+import { BlackButton } from "@/styles/globalStyle";
 
 
 export default function Home() {
@@ -296,7 +293,6 @@ export default function Home() {
       <Header />
 
       {/*------------------Carousal-------------------*/}
-
       <Carousal bannerData={data?.data} />
 
       {/*------------------Our Resources-------------------*/}
@@ -819,9 +815,9 @@ export default function Home() {
               The ERS s definition for Corporate Social Responsibility is the
               process of how the organization helps the Swazi society.
             </p>
-            <button className="text-white hover:bg-opacity-75 bg-black text-xs leading-3 tracking-wider font-bold border border-black rounded-lg py-3 px-5">
-              <Link href="/CSR/CSR_Detail">See More Stories</Link>
-            </button>
+            <form action="/CSR/CSR_Detail"  method="get" target="_blank" className="inline">
+              <BlackButton type="submit" >See More Stories</BlackButton>
+            </form>
           </div>
         </div>
 

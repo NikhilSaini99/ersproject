@@ -30,35 +30,13 @@ const Feedback = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // try {
-    //   const result = await axios.post(check, {
-    //     name: fullName,
-    //     email: email,
-    //     phone_number: phoneNo,
-    //     feedbacktype: feedbackType,
-    //     feedback_description: comments,
-    //     del_status: Date.now()
-    //   })
-    //   if(result.status===200)
-    //   {
-    //     //clear feild on submmision
-    //     setUserFeedback({})
-    //   }
-    // }
-    // catch (err) {
-    //   console.log(err)
-    // }
-
-    // submitFeedback({feedbacktype,name,email,phone_number,feedback_description,del_status: Date.now()}) 
     fetchAPI({ feedbacktype, name, email, phone_number, feedback_description, del_status: Date.now() })
-    // getFeedback();
     alert('Thank you for the Feedback!!')
     setFeedbacktype('')
     setFullName('')
     setPhoneNo('')
     setEmail('')
     setfeedback_description('')
-    console.log(data)
   }
 
   function handleFeedbackType(e) {

@@ -21,8 +21,6 @@ const SelfAssessment = () => {
     const [isOpen, setisOpen] = useState(null)
 
     const handleOpen = (index) => {
-        console.log(index)
-        console.log(isOpen)
         if (isOpen === index) {
             setisOpen(null);
         }

@@ -16,13 +16,11 @@ const TaxationDiplomats = () => {
     const [isOpen, setisOpen] = useState(null)
 
     const handleOpen = (index) => {
-        console.log(index)
-        console.log(isOpen)
         if (isOpen === index) {
             setisOpen(null);
         }
         else {
-            setisOpen(index); // Open the clicked FAQ
+            setisOpen(index); 
         }
     }
     const FaqContainerStyling = {

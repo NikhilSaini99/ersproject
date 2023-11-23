@@ -1,24 +1,19 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { NewsData } from "@/content/data";
 import Banner from "../assets/images/news-banner.jpg";
 import { LatestNewsSection } from "../pages/news";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { useFetch } from "./api/api";
 import { useRouter } from "next/router";
-import quoteIcon from "../assets/icons/quoteicon.png";
 import Loader from "@/components/Loader";
 import dayjs from "dayjs";
 
 export default function NewsDetails() {
   const router = useRouter();
   const query = router.query;
-
-  console.log(query.apiURl)
 
   const { fetchAPI, data, isLoading } = useFetch(
     "get",

@@ -9,11 +9,7 @@ import {
   TableContainer,
   Paper,
   Button,
-  IconButton,
 } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
-import EditIcon from "@mui/icons-material/Edit";
-import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import dayjs from "dayjs";
 import { useState } from "react";
 
@@ -46,13 +42,12 @@ const TableComponent = (props) => {
   const currentPageData = tableData?.slice(startIndex, endIndex) || [];
 
   const handlePDFDownload = (url) => {
-    console.log('Downloading', url);
+
     window.open(url);
   };
 
   
   const isoToFullDate = (newDate) => {
-    console.log("isoToFullDate ");
     if (dayjs(newDate).isValid()) {
       return dayjs(newDate).format("DD-MM-YYYY");
     } else {
@@ -60,10 +55,6 @@ const TableComponent = (props) => {
     }
   };
 
-  console.log("table Data ", currentPageData)
-
-  //need to re-arrange either table array or the
-  // object based on headers so data comes in sync
 
   const rearrangedData = currentPageData?.map((item) => {
     const rearrangedItem = {};
@@ -80,12 +71,6 @@ const TableComponent = (props) => {
 
     return rearrangedItem;
 });
-
-console.log("rearrangedata",rearrangedData)
-
-// const handlePDFDownload = ()=>{
-
-// }
 
   return (
     <div>
@@ -119,7 +104,7 @@ console.log("rearrangedata",rearrangedData)
                   variant="contained"
                   color="primary"
                   sx={{ backgroundColor: "#2F2483 !important" }}
-                  onClick={() => {console.log("executing download"); handlePDFDownload(item.documentUrl ?  item.documentUrl : item.fileUrl)}}
+                  onClick={() => {handlePDFDownload(item.documentUrl ?  item.documentUrl : item.fileUrl)}}
                 >
                   Downlaod
                 </Button>
