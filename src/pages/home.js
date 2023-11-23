@@ -339,7 +339,7 @@ export default function Home() {
         <div className="w-[80%] flex gap-0 mx-auto bg-gray-200 shadow-2xl">
 
           <div className="w-[50%] flex flex-col gap-4 pt-4 md:px-8 2xl:px-20 pb-8 flex-grow bg-gray-200">
-            <h3 className="px-6 pt-2 pb-2 font-bold text-2xl border-b border-white">
+            <h3 className="px-6 pt-2 pb-2 text-subColor text-2xl font-medium border-b border-white">
               Recently Approved
             </h3>
             <div className="flex md:gap-6 xl:gap-10 2xl:gap-14 p-2">
@@ -352,10 +352,10 @@ export default function Home() {
                   style={{}}
                 />
               </div>
-              <div className="flex flex-col gap-4 font-semibold">
+              <div className="flex flex-col gap-4 font-medium text-black">
 
               {tabSection[0]?.items?.map((point, index) => (
-              <div key={index} className="flex gap-1 items-start pb-2 font-semibold">
+              <div key={index} className="flex gap-1 items-start pb-2 font-medium text-black">
                 <span >
                   <ArrowForwardIosIcon className="mr-2"
                     sx={{ ...arrowStyling, }}
@@ -369,7 +369,7 @@ export default function Home() {
           </div>
 
           <div className=" w-[50%] flex flex-col gap-4 pt-4  md:px-8 2xl:px-20 pb-8 flex-grow bg-gray-100">
-            <p className="px-6 pt-2 pb-2 font-bold text-2xl border-b border-white">
+            <p className="px-6 pt-2 pb-2 text-subColor text-2xl font-medium border-b border-white">
               Notice Boards
             </p>
             <div className="flex md:gap-6 xl:gap-10 2xl:gap-14 p-2">
@@ -383,9 +383,9 @@ export default function Home() {
                   style={{}}
                 />
               </div>
-              <div className="flex flex-col gap-4 font-semibold">
+              <div className="flex flex-col gap-4 font-medium text-black">
               {tabSection[1]?.items?.map((point, index) => (
-              <div key={index} className="flex gap-1 items-start pb-2 font-semibold">
+              <div key={index} className="flex gap-1 items-start pb-2 font-medium text-black">
                 <span >
                   <ArrowForwardIosIcon className="mr-2"
                     sx={{ ...arrowStyling }}

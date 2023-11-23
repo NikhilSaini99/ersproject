@@ -14,9 +14,9 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const pageData = {
   allianceContent:
-    "In furtherance of the ERS mandate, and in working towards adopting best practices, the ERS is a member of various international organisations, such as the: African Tax Administration Forum (ATAF); World Customs Organisation (WCO); and the Commonwealth Association of Tax Administrators (CATA). Furthermore, we collaborate with the International Monetary Fund (IMF) to improve our efficiencies through conducting assessments, such as the Tax Administration Diagnostic Assessment Tool (TADAT). We then compare our performance at all angles against other revenue administrations across the globe. We also utilise the WCO Data Model (DM) as the data foundation for global trade interoperability for over two decades. The aim of this is to suggest areas of improvement.",
+    "In furtherance of the ERS mandate, and in working towards adopting best practices, the ERS is a member of various international organisations, such as the: African Tax Administration Forum (ATAF); World Customs Organisation (WCO); and the Commonwealth Association of Tax Administrators (CATA). Furthermore, we collaborate with the International Monetary Fund (IMF) to improve our efficiencies through conducting assessments, such as the Tax Administration Diagnostic Assessment Tool (TADAT). We then compare our performance at all angles against other revenue administrations across the globe. We also utilise the WCO Data Model (DM) as the data foundation for global trade interoperability for over two decades. The aim of this is to suggest areas of improvement. We constantly pursue alliances and cooperation agreements with other reputable revenue agencies and other international organisations. The list below shows our current agreements.",
   allianceContent2:
-    "We constantly pursue alliances and cooperation agreements with other reputable revenue agencies and other international organisations. The list below shows our current agreements.",
+    "",
 };
 
 const Alliances = ({ h2Styling, arrowStyling }) => {
