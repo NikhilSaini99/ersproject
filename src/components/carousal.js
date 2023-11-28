@@ -5,6 +5,7 @@ import background2 from "../assets/images/Home_Page_2.jpg";
 import background3 from "../assets/images/Advance_Ruling.png";
 import background4 from "../assets/images/Etax_registration.jpg";
 import background5 from "../assets/images/VAT_Returns.jpg";
+import { useFetch } from "@/pages/api/api";
 
 
 const slides = [
@@ -16,6 +17,16 @@ const slides = [
 ];
 
 export default function Carousal({ bannerData }) {
+  const { data, fetchAPI, isLoading } = useFetch("get", "/api/banner-images");
+
+
+  useEffect(() => {
+    fetchAPI();
+  }, [fetchAPI]);
+
+  if(data){
+    console.log(data);
+  }
 
   const mySlides = bannerData?.map(({ id, imageurl }) => ({
     id,

@@ -73,3 +73,5 @@ defaultTheme.typography.body2 = {
     fontSize: "16px",
     fontFamily:"Arial Regular"
 }
+
+export default defaultTheme;
