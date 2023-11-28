@@ -8,7 +8,7 @@ import { GrLinkedinOption } from "react-icons/gr";
 import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill, BsApple } from "react-icons/bs";
 import { Box, Divider, Stack, Typography } from "@mui/material";
-import { defaultTheme } from "@/pages/muiTheme";
+import  defaultTheme  from "@/styles/muiTheme";
 
 
 

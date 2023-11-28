@@ -23,7 +23,7 @@ const paletteColors = {
     },
 }
 
-export const defaultTheme = createTheme({
+const defaultTheme = createTheme({
     typography: {
         fontFamily: [
           "Arial Regular",

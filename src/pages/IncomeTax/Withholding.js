@@ -9,7 +9,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Box, Typography } from "@mui/material";
 import Footer from "@/components/Footer";
 import { ContentDiv } from "@/styles/globalStyle";
-import { defaultTheme } from "../muiTheme";
+import  defaultTheme  from "../../styles/muiTheme";
 
 
 export default function Withholding() {

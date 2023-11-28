@@ -4,7 +4,7 @@ import "material-icons/iconfont/material-icons.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { defaultTheme } from "./muiTheme";
+import  defaultTheme  from "../styles/muiTheme";
 export default function App({ Component, pageProps }) {
   //initializing animation on scroll library
   // AOS.init();
