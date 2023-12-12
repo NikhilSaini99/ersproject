@@ -55,6 +55,12 @@ const TableComponent = (props) => {
     }
   };
 
+  function convertKbToMB(fileSize) {
+    const fileSizeInMB = (Number(fileSize.replace("kb","")) / 1024).toFixed(2);
+    return `${fileSizeInMB}mb`;
+  }
+
+  console.log("cccc",currentPageData)
 
   const rearrangedData = currentPageData?.map((item) => {
     const rearrangedItem = {};
@@ -64,6 +70,9 @@ const TableComponent = (props) => {
             rearrangedItem[property] = isoToFullDate( (item.date) || (item.createdAt));
         } else if (property === "documentUrl" || property === "fileUrl") {
             rearrangedItem[property] = item.documentUrl || item.fileUrl;
+        } 
+        else if (property === "fileSize") {
+          rearrangedItem[property] = convertKbToMB(item.fileSize)
         } else {
             rearrangedItem[property] = item[property];
         }
@@ -71,6 +80,8 @@ const TableComponent = (props) => {
 
     return rearrangedItem;
 });
+
+console.log(rearrangedData && rearrangedData);
 
   return (
     <div>
