@@ -59,7 +59,7 @@ function Media() {
                     href="https://twitter.com/computronics_sd?ref_src=twsrc%5Etfw"
                     scrolling="no"
                     frameBorder="0"
-                    allowTransparency={true}
+                    // allowTransparency={true}
                     allowFullScreen={true}
                     style={{
                       position: "static",
