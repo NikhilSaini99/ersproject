@@ -248,7 +248,7 @@ export default function Home() {
             text: "Recently Approved GuideLines",
           },
           {
-            link: "/legalandpolicy/notes_guidelines",
+            link: "/LegalandPolicy/Notes_Guidelines",
             text: "Approved Practice Notes",
           },
           {

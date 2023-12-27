@@ -84,6 +84,7 @@ export default function About() {
               color: "white",
               fontFamily: "inherit",
               fontWeight: "400",
+              display:"none",
             }}
           >
             About Us
