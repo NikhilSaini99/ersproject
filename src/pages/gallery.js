@@ -13,50 +13,50 @@ import { useMemo } from "react";
 import { Box, IconButton, Modal } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import CloseIcon from "@mui/icons-material/Close"
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function Gallery() {
   const [visibleGroup, setVisibleGroup] = useState(0);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isImageViewerOpen, setImageViewerOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedGroup, setSelectedGroup] = useState(null);
   const { data, fetchAPI, isLoading } = useFetch(
     "get",
     "/api/gallery-images/web"
   );
 
-  
   useEffect(() => {
     fetchAPI();
   }, [fetchAPI]);
 
-  const openImageViewer = (index) => {
-    if (GroupImgArr[visibleGroup]) {
-      setSelectedImageIndex(index);
-      setImageViewerOpen(true);
-    }
+  let newgalleryData;
+  if (data?.success) {
+    newgalleryData = data?.data?.data;
+  }
+  const openImageViewer = (groupIndex, imageIndex) => {
+    setSelectedGroup(groupIndex);
+    setSelectedImage(imageIndex); // Start with the clicked image in the group
+    setOpen(true);
   };
 
   const closeImageViewer = () => {
-    setImageViewerOpen(false);
+    setOpen(false);
   };
 
-  const GroupImgArr = [];
-  let newgalleryData;
-  if (data?.success) {
-    newgalleryData = data?.data;
-  }
+  const nextImage = () => {
+    setSelectedImage(
+      (prevImage) =>
+        (prevImage + 1) % data?.data?.data[selectedGroup]?.imagegroup?.length
+    );
+  };
 
-  const GroupTitles = newgalleryData && Object.keys(newgalleryData);
-  const GroupImages = newgalleryData && Object.values(newgalleryData);
-
-  if (GroupImages)
-    for (const item of GroupImages) {
-      const eachGroupImages = item.url.split(" ");
-      GroupImgArr.push(eachGroupImages);
-    }
-
- 
-
+  const prevImage = () => {
+    setSelectedImage(
+      (prevImage) =>
+        (prevImage - 1 + data?.data?.data[selectedGroup]?.imagegroup?.length) %
+        data?.data?.data[selectedGroup]?.imagegroup?.length
+    );
+  };
   const handleVisiblity = (i) => {
     setVisibleGroup(i);
   };
@@ -80,7 +80,7 @@ export default function Gallery() {
       </section>
 
       {/*-----------------------Gallery---------------------*/}
-    
+
       <section className="bg-white px-6 py-16">
         <div>
           <h1
@@ -97,7 +97,7 @@ export default function Gallery() {
 
         {/* Group Indicator */}
         <div className="flex justify-center items-center gap-5 my-10">
-          {GroupTitles?.map((title, id) => (
+          {data?.data?.data?.map((title, id) => (
             <button
               key={id}
               onClick={() => handleVisiblity(id)}
@@ -108,29 +108,32 @@ export default function Gallery() {
                    : "bg-[#F7F7FA] text-black/80"
                }`}
             >
-              {title}
+              {title.groupName}
             </button>
           ))}
         </div>
 
         <div className="">
-          {GroupImgArr &&
-            GroupImgArr.map((item, index) => (
+          {data?.data?.data &&
+            data?.data?.data.map((item, index) => (
               <div
                 key={index}
                 className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto gap-4 overflow-hidden ${
                   index === visibleGroup ? "block" : "hidden"
                 } `}
               >
-                {item.map((item, i) => {
+                {item?.imagegroup?.map((item, i) => {
                   return (
                     <div
                       key={i}
                       className="flex  max-w-[450px] h-[400px] flex-col justify-between  group relative "
                     >
-                      <div className="  h-full overflow-hidden cursor-pointer " onClick={()=>openImageViewer(i)}>
+                      <div
+                        className="  h-full overflow-hidden cursor-pointer "
+                        onClick={() => openImageViewer(index, i)}
+                      >
                         <img
-                          src={item}
+                          src={item?.url}
                           className="object-cover  group-hover:scale-110  ease-in-out duration-500  group-hover:brightness-50"
                           alt="group-images"
                           style={{ width: "100%", height: "100%" }}
@@ -142,71 +145,51 @@ export default function Gallery() {
                         </h3>
                         <div className="flex flex-col gap-2 px-6 pt-10 pb-4 text-white bg-mainColor">
                           <h1 className="text-[17px] leading-[22px] tracking-wide font-bold">
-                           Image Name
+                            Image Name
                           </h1>
                           <h2 className="text-sm leading-5 tracking-normal font-normal text-center">
-                           Image description
+                            Image description
                           </h2>
                         </div>
                       </div>
                     </div>
                   );
                 })}
-                 <Modal
-        open={isImageViewerOpen}
-        onClose={closeImageViewer}
-        aria-labelledby="image-viewer"
-        aria-describedby="image-viewer"
-      >
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "80vw",
-            height: "80vh",
-            bgcolor: "background.paper",
-            border: "2px solid #000",
-            borderRadius: "8px",
-            p: 2,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <IconButton onClick={closeImageViewer} style={{ position: "absolute", top: 10, right: 10 }}>
-            <CloseIcon />
-          </IconButton>
-          <img
-            src={GroupImgArr?.[visibleGroup]?.[selectedImageIndex]}
-            alt="Selected Image"
-            style={{width:"100%", minHeight:"95%"}}
-            layout="responsive"
-          />
-          <div style={{ marginTop: "1rem" }}>
-            <IconButton
-              onClick={() =>
-                setSelectedImageIndex((prevIndex) =>
-                  prevIndex === 0 ? GroupImgArr[visibleGroup].length - 1 : prevIndex - 1
-                )
-              }
-            >
-              <ArrowBackIosIcon />
-            </IconButton>
-            <IconButton
-              onClick={() =>
-                setSelectedImageIndex((prevIndex) =>
-                  prevIndex === GroupImgArr[visibleGroup].length - 1 ? 0 : prevIndex + 1
-                )
-              }
-            >
-              <ArrowForwardIosIcon />
-            </IconButton>
-          </div>
-        </Box>
-      </Modal>
 
+                <Modal open={open} onClose={closeImageViewer}>
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      width: 1024,
+                      height: 1024,
+                      overflow: "auto",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <IconButton onClick={prevImage} style={{ color: 'white' }}>
+                      <ArrowBackIosIcon />
+                    </IconButton>
+                    {selectedGroup !== null && selectedImage !== null && (
+                      <img
+                        src={
+                          data?.data?.data[selectedGroup]?.imagegroup[
+                            selectedImage
+                          ]?.url
+                        }
+                        alt="Selected"
+                        style={{ height: "65%", width: "85%" }}
+                      />
+                    )}
+                    <IconButton onClick={nextImage} style={{ color: 'white' }}>
+                      <ArrowForwardIosIcon />
+                    </IconButton>
+                  </Box>
+                </Modal>
               </div>
             ))}
         </div>
