@@ -186,18 +186,18 @@ export default function Footer() {
               <Typography variant="h3" sx={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
                 Opening Hours</Typography>
               <Stack direction={'row'} spacing={2}>
-                <Typography variant="body1" sx={{ fontSize: '1rem' }}>
+                <Typography variant="body1" >
                   Mon - Fri
                 </Typography>
-                <Typography variant="body1" sx={{ fontSize: '1rem' }}>
+                <Typography variant="body1" >
                   8am - 5pm
                 </Typography>
               </Stack>
               <Stack direction={'row'} spacing={2}>
-                <Typography variant="body1" sx={{ fontSize: '1rem' }}>
+                <Typography variant="body1">
                   Sat - Sun
                 </Typography>
-                <Typography variant="body1" sx={{ fontSize: '1rem' }}>
+                <Typography variant="body1">
                   Closed
                 </Typography>
               </Stack>
