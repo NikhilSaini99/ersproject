@@ -77,6 +77,8 @@ export default function Videos() {
     ],
   };
 
+  const reverseArr = data?.data ? [...data?.data?.yearwisearray]?.reverse() : [] ;
+
   return (
     <>
       <Head>
@@ -117,7 +119,7 @@ export default function Videos() {
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
             {data &&
-              data?.data?.yearwisearray?.map((item) => {
+              reverseArr?.map((item) => {
                 return (
                   <div key={item?.yearofupload}>
                     <Typography
@@ -127,9 +129,9 @@ export default function Videos() {
                       {item?.yearofupload}
                     </Typography>
                     {item?.video?.length === 1 ? (
-          <div className="w-32 p-5">
+          <div className="lg:w-[50%] p-5">
             <iframe
-              style={{ width: "100%" }}
+              style={{  width: "100%" }}
               height="355"
               src={item?.video[0]?.url?.slice(
                 item?.video[0]?.url?.indexOf("https"),

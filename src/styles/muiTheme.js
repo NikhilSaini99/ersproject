@@ -43,7 +43,16 @@ const defaultTheme = createTheme({
       },
       palette: {
         ...paletteColors
-    }
+    },
+    components: {
+        MuiMenuItem: {
+          styleOverrides: {
+            root: {
+              fontSize: "0.875rem",
+            },
+          },
+        },
+      },
 });
 
 defaultTheme.typography.h1 = {

@@ -21,16 +21,8 @@ import Link from "next/link";
 import { Media } from "@/components/media";
 import TCC from "../assets/images/tcc.png";
 import Tax from "../assets/images/e-tax_logo.png";
-import barcode from "../assets/icons/barcode.png";
-import calculator from "../assets/icons/calculator.png";
-import currency from "../assets/icons/currency.png";
-import flight from "../assets/icons/flight.png";
-import headphone from "../assets/icons/headphone.png";
-import help from "../assets/icons/help.png";
-import monitoring from "../assets/icons/monitoring.png";
 import validation from "../assets/images/validation.png";
 import notes from "../assets/images/notes.png";
-import table from "../assets/icons/table.png"
 import { useFetch } from "./api/api";
 import ChatboxMock from "@/components/Chatbox/ChatboxMock";
 import { BlackButton } from "@/styles/globalStyle";
@@ -66,65 +58,6 @@ export default function Home() {
     fetchAPI();
   }, [fetchAPI]);
 
-  // ----------------------Resources-----------------------
-
-  const resourceData = [
-    {
-      icon: calculator,
-      title: "Calculator",
-      description: "Some random content ...",
-      link: "/Calculator",
-    },
-
-    {
-      icon: table,
-      title: "Tables",
-      description: "Some random content ...",
-      link: "/TaxTables",
-    },
-
-    {
-      icon: currency,
-      title: "eTax",
-      description: "Some random content ...",
-      link: "https://etax.sra.org.sz/",
-    },
-
-    {
-      icon: barcode,
-      title: "Codes",
-      description: "Some random content ...",
-      link: "/TaxItemTable",
-    },
-
-    {
-      icon: headphone,
-      title: "Hotline",
-      description: "Some random content ...",
-      link: "/Hotline",
-    },
-
-    {
-      icon: help,
-      title: "FAQs",
-      description: "Some random content ...",
-      link: "/FAQ",
-    },
-
-    {
-      icon: monitoring,
-      title: "Business",
-      description: "Some random content ...",
-      link: "http://www.sra.org.sz/documents/1619530285.pdf",
-    },
-
-    {
-      icon: flight,
-      title: "Travelling",
-      description: "Some random content ...",
-      link: "https://www.ers.org.sz/documents/1493283598.pdf",
-    },
-  ];
 
   // -----------------------Tax---------------------
 

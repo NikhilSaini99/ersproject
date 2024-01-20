@@ -10,7 +10,7 @@ export default function Carousal({ bannerData }) {
 
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
-
+ 
   function resetTimeout() {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -37,8 +37,9 @@ export default function Carousal({ bannerData }) {
         {/* Slider Wrapper */}
         <div className="slideshow">
           <div
-            className="slideshowSlider"
+            className="slideshowSlider cursor-pointer"
             style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+            onClick={() => {window.open(mySlides[index]?.link)}}
           >
             {mySlides?.map((slide, index) => (
               <Image

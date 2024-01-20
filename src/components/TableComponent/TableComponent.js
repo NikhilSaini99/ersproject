@@ -14,8 +14,17 @@ import dayjs from "dayjs";
 import { useState } from "react";
 
 const TableComponent = (props) => {
-  const { tableData, tableName, tableHeaders, isDownload, isDelete, isUpdate,excluseProperties,includeProperties } =
-    props;
+  const {
+    tableData,
+    tableName,
+    tableHeaders,
+    isDownload,
+    isDelete,
+    isUpdate,
+    excluseProperties,
+    includeProperties,
+    isGap = false
+  } = props;
 
   //tableData - array
   //tableName - string
@@ -42,11 +51,9 @@ const TableComponent = (props) => {
   const currentPageData = tableData?.slice(startIndex, endIndex) || [];
 
   const handlePDFDownload = (url) => {
-
     window.open(url);
   };
 
-  
   const isoToFullDate = (newDate) => {
     if (dayjs(newDate).isValid()) {
       return dayjs(newDate).format("DD-MM-YYYY");
@@ -56,33 +63,32 @@ const TableComponent = (props) => {
   };
 
   function convertKbToMB(fileSize) {
-    const fileSizeInMB = (Number(fileSize.replace("kb","")) / 1024).toFixed(2);
+    const fileSizeInMB = (Number(fileSize.replace("kb", "")) / 1024).toFixed(2);
     return `${fileSizeInMB}mb`;
   }
-
-  console.log("cccc",currentPageData)
 
   const rearrangedData = currentPageData?.map((item) => {
     const rearrangedItem = {};
 
     includeProperties.forEach((property) => {
-        if (property === "date" || property === "createdAt" || property === "publishedDate" || property === "deadline") {
-            rearrangedItem[property] = isoToFullDate( (item.date) || (item.createdAt));
-        } else if (property === "documentUrl" || property === "fileUrl") {
-            rearrangedItem[property] = item.documentUrl || item.fileUrl;
-        } 
-        else if (property === "fileSize") {
-          rearrangedItem[property] = convertKbToMB(item.fileSize)
-        } else {
-            rearrangedItem[property] = item[property];
-        }
+      if (
+        property === "date" ||
+        property === "createdAt" ||
+        property === "publishedDate" ||
+        property === "deadline"
+      ) {
+        rearrangedItem[property] = isoToFullDate(item.date || item.createdAt);
+      } else if (property === "documentUrl" || property === "fileUrl") {
+        rearrangedItem[property] = item.documentUrl || item.fileUrl;
+      } else if (property === "fileSize") {
+        rearrangedItem[property] = convertKbToMB(item.fileSize);
+      } else {
+        rearrangedItem[property] = item[property];
+      }
     });
 
     return rearrangedItem;
-});
-
-console.log(rearrangedData && rearrangedData);
-
+  });
   return (
     <div>
       <TableContainer
@@ -104,7 +110,17 @@ console.log(rearrangedData && rearrangedData);
               }}
             >
               {tableHeaders?.map((item, key) => (
-                <TableCell key={key}>{item}</TableCell>
+                <TableCell
+                  key={key}
+                  style={
+                    item === 'Title' || item === 'Reference'
+                      ? { minWidth: '215px', whiteSpace: 'nowrap' }
+                      : item === 'Deadline' || item === 'Published'
+                        ? { minWidth: '150px', whiteSpace: 'nowrap' }
+                        : { whiteSpace: 'nowrap' }
+                  }>
+                  {item}
+                </TableCell>
               ))}
             </TableRow>
           </TableHead>
@@ -115,7 +131,11 @@ console.log(rearrangedData && rearrangedData);
                   variant="contained"
                   color="primary"
                   sx={{ backgroundColor: "#2F2483 !important" }}
-                  onClick={() => {handlePDFDownload(item.documentUrl ?  item.documentUrl : item.fileUrl)}}
+                  onClick={() => {
+                    handlePDFDownload(
+                      item.documentUrl ? item.documentUrl : item.fileUrl
+                    );
+                  }}
                 >
                   Downlaod
                 </Button>
@@ -124,9 +144,17 @@ console.log(rearrangedData && rearrangedData);
               return (
                 <TableRow
                   key={key}
-                  sx={{"& > *": { textAlign: "center !important" },"&:hover": { background: "#F2F2F2" }}}>
+                  sx={{
+                    "& > *": { textAlign: "center !important" },
+                    "&:hover": { background: "#F2F2F2" },
+                  }}
+                >
                   {Object.keys(item)?.map((rowItem) => {
-                    const cellData =  rowItem.includes("fileUrl") || rowItem.includes("documentUrl")   ? download: item[rowItem];
+                    const cellData =
+                      rowItem.includes("fileUrl") ||
+                        rowItem.includes("documentUrl")
+                        ? download
+                        : item[rowItem];
                     // Check if cellData is empty (undefined, null, or empty string)
                     const isEmptyCell =
                       cellData === undefined ||
@@ -135,9 +163,11 @@ console.log(rearrangedData && rearrangedData);
 
                     // Render TableCell only if cellData is not empty
                     return isEmptyCell ? null : (
-                      <TableCell key={rowItem}>{cellData}</TableCell>
-                    );
-                  })}
+                      <TableCell key={rowItem} sx={{ padding: "0.7rem !important", }}
+                        style={
+                          item === 'Title'
+                            ? { textAlign: "left" }
+                            : {}}>{cellData}</TableCell>)})}
                 </TableRow>
               );
             })}
@@ -151,6 +181,16 @@ console.log(rearrangedData && rearrangedData);
           page={page}
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
+          labelRowsPerPage="Rows Per Page"
+          SelectProps={{
+            MenuProps: {
+              anchorOrigin: {
+                vertical: "bottom",
+                horizontal: "center",
+              },
+              getContentAnchorEl: null,
+            },
+          }}
         />
       </TableContainer>
     </div>

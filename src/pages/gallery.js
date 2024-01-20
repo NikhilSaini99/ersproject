@@ -141,14 +141,14 @@ export default function Gallery() {
                       </div>
                       <div className="absolute opacity-0 group-hover:opacity-100 ease-in duration-500  bottom-0 text-center w-full">
                         <h3 className="text-lg text-white font-medium mx-4">
-                          Image Date
+                          {""}
                         </h3>
                         <div className="flex flex-col gap-2 px-6 pt-10 pb-4 text-white bg-mainColor">
                           <h1 className="text-[17px] leading-[22px] tracking-wide font-bold">
-                            Image Name
+                          {""}
                           </h1>
-                          <h2 className="text-sm leading-5 tracking-normal font-normal text-center">
-                            Image description
+                          <h2 className="text-xl leading-5 tracking-normal font-normal text-center">
+                          {"ERS"}
                           </h2>
                         </div>
                       </div>

@@ -11,6 +11,7 @@ import bgimg from "../../assets/images/pxfuel.jpg";
 import Footer from "@/components/Footer";
 import { useFetch } from "../api/api";
 import TableComponent from "@/components/TableComponent/TableComponent";
+import Loader from "@/components/Loader";
 
 const Tender = () => {
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/tender");
@@ -18,8 +19,7 @@ const Tender = () => {
   useEffect(() => {
     fetchAPI();
   }, [fetchAPI]);
-
-
+  
   const tableHeaders = ["Title","Deadline", "Published", "Reference","Download",]
   const includeProperties =["tenderName","deadline","publishedDate","reference","documentUrl"]
   const excluseProperties = ["id","createdAt","updatedAt",];
@@ -43,16 +43,17 @@ const Tender = () => {
         sx={{backgroundImage: `url(${bgimg.src})`,backgroundSize: "cover",backgroundAttachment: "fixed",}}>
          
         <Box
-          sx={{width: "90%",margin: { xs: "0 auto", lg: "0  auto" },px: { md: "5rem", lg: "5rem,", xl: "10rem" },py: "2rem",}}>
+          sx={{width: "100%",margin: { xs: "0 auto", lg: "0  auto" },px: { md: "5rem", lg: "5rem,", xl: "10rem" },py: "2rem",}}>
           <Typography variant="h1">
-            Tender
+            Tenders
           </Typography>
           {data?.data ? <TableComponent
-                        tableData={data?.data}
+                        tableData={[...data?.data]?.reverse()}
                         tableHeaders={tableHeaders}
                         excluseProperties={excluseProperties}
                         includeProperties={includeProperties}
-          /> : <h1>Loading....</h1>}
+                        isGap={true}
+          /> : <Loader/>}
         </Box>
       </Box>
 

@@ -16,9 +16,8 @@ const WhatnewComponent = ({ whatNewsData }) => {
         <h1 className="text-xl font-bold text-yellowish leading-8 px-8 mb-3">
           What{"'"}s New
         </h1>
-        {/* first News */}
         {whatNewsData &&
-          whatNewsData?.data?.map((item, index) => (
+          whatNewsData?.data?.slice(0,3)?.map?.((item, index) => (
             <div className="flex flex-col" key={index}>
               <h3
                 className="px-8 text-sm leading-6 font-bold cursor-pointer"
@@ -33,7 +32,7 @@ const WhatnewComponent = ({ whatNewsData }) => {
             </div>
           ))}
       </div>
-      <div className="py-8 text-right px-8">
+      <div className="py-8 text-right px-8 font-bold">
         <Link href="/WhatsNewsDetail">View All</Link>
       </div>
     </div>
