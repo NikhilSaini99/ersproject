@@ -100,7 +100,7 @@ export default function News() {
       {/*-----------------------Banner---------------------*/}
 
       <section>
-        <Image src={Banner} alt="..." className="h-96 w-full" />
+        <Image src={Banner} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
       </section>
 
       {/*------------------------News----------------------*/}

@@ -90,14 +90,8 @@ export default function Videos() {
       {/*-----------------------Header---------------------*/}
 
       <Header />
-      <Box sx={{ position: "relative", width: "100%", height: "30rem" }}>
-        <Image
-          src={Banner}
-          alt="about_us"
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
+      <Box sx={{ position: "relative", width: "100%", }}>
+      <Image src={Banner} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
       </Box>
       <Box
         sx={{

@@ -78,8 +78,6 @@ export default function Contact() {
     },
   ];
 
-  
-  
 
   return (
     <>
@@ -94,11 +92,11 @@ export default function Contact() {
       <Header />
 
       {/*------------------Contact Background-------------------*/}
-
+      
       <section>
         <div className="relative">
           <div className="h-96">
-            <Image
+            {/* <Image
               src={bgimg}
               alt=""
               width={0}
@@ -108,7 +106,8 @@ export default function Contact() {
                 height: "100%",
                 objectFit: "cover",
               }}
-            />
+            /> */}
+            <Image src={bgimg} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
           </div>
           <div className="absolute bottom-0 bg-white/80 w-full pl-10 py-[14px]">
             <h1 className="text-subColor text-3xl font-bold leading-8">

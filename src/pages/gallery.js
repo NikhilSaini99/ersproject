@@ -5,15 +5,11 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Banner from "../assets/images/gallery.jpg";
-import { GallaryCard } from "@/components/media";
-import { GalleryData } from "@/content/data";
 import { useFetch } from "./api/api";
 import { useEffect } from "react";
-import { useMemo } from "react";
 import { Box, IconButton, Modal } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import CloseIcon from "@mui/icons-material/Close";
 
 export default function Gallery() {
   const [visibleGroup, setVisibleGroup] = useState(0);
@@ -76,7 +72,7 @@ export default function Gallery() {
       {/*-----------------------Banner---------------------*/}
 
       <section>
-        <Image src={Banner} alt="..." className="h-96 w-full" />
+        <Image src={Banner} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
       </section>
 
       {/*-----------------------Gallery---------------------*/}
@@ -182,7 +178,7 @@ export default function Gallery() {
                           ]?.url
                         }
                         alt="Selected"
-                        style={{ height: "65%", width: "85%" }}
+                        style={{ height: "70%", width: "85%", objectFit: "cover", backgroundAttachment: "fixed" }}
                       />
                     )}
                     <IconButton onClick={nextImage} style={{ color: 'white' }}>
