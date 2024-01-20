@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 export default function Carousal({ bannerData }) {
@@ -42,14 +43,17 @@ export default function Carousal({ bannerData }) {
             onClick={() => {window.open(mySlides[index]?.link)}}
           >
             {mySlides?.map((slide, index) => (
-              <Image
+              <img
                 className="slide"
                 key={index}
                 src={`${slide.imageurl}`}
                 alt={slide?.imageName}
                 width={768}
                 height={768}
-                sizes="(max-width: 768px) 100vw, 33vw"
+                style={{
+                  // width:"100%",
+                  //  height:"100%",
+                    objectFit: "cover"}}
               />
             ))}
           </div>

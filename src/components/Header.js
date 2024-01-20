@@ -6,27 +6,32 @@ import Image from "next/image";
 import logo from "../assets/icons/ERS_Logo.png";
 import call from "../assets/icons/call.png";
 import mail from "../assets/icons/mail.png";
-import search from "../assets/icons/search.png";
-import searchIcon from "../assets/icons/search-icon.png";
 
 import { useFetch } from "@/pages/api/api";
 import { useMemo } from "react";
 import WhatnewComponent from "./shared/WhatnewComponent";
-import { styled, alpha } from '@mui/material/styles';
+import { styled, } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 export default function Header() {
   const router = useRouter();
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/whateNew");
+  const { data:MenuData, fetchAPI:MenuCall, isLoading:menuLoading } = useFetch("get", "/api/menuService/web");
   let services = ["/VAT", "/IncomeTax", "/CustomExcise"];
   let forms = ["/VatForms", "/IncomeForms", "/CustomsForms"];
   let media = ["/news", "/gallery", "/videos", "/NewsDetails"];
 
-  // const [isAboutOpen, setAboutOpen] = useState(false);
   const [isServicesOpen, setServicesOpen] = useState(false);
   const [isFormsOpen, setFormsOpen] = useState(false);
   const [isMediaOpen, setMediaOpen] = useState(false);
   const [isContactOpen, setContactOpen] = useState(false);
+  const [menuService, setMenuService] = useState({
+    formData: [],
+    galleryImagesData: [],
+    newsData: [],
+    videosData: [],
+  });
+  
 
   const [isOpen, setSearchOpen] = useState(false);
 
@@ -36,13 +41,37 @@ export default function Header() {
 
   useEffect(() => {
     fetchAPI();
-  }, [fetchAPI]);
+    MenuCall();
+  }, [fetchAPI,MenuCall]);
 
+  
   useMemo(() => {
     data;
-  }, [data]);
+    MenuData;
+  }, [data,MenuData]);
 
-  const [menuOpen, setMenuOpen] = useState("false");
+  const categories = ['Customs & Excise', 'Income Tax', 'VAT'];
+ 
+
+  const { data: { formData, galleryImagesData, newsData, videosData } = {} } = MenuData || {};
+ 
+  
+  function setLimitItem (filteredData){
+    menuService.formData = filteredData;
+    menuService.galleryImagesData = galleryImagesData.rows.slice(0, 3);
+    menuService.newsData = newsData.rows.slice(0, 3);
+    menuService.videosData = videosData.rows.slice(0, 3);
+  }
+
+  useMemo(() => {
+    if(!menuLoading && formData && galleryImagesData && newsData && videosData){
+      const filteredData = categories.reduce((acc, category) => {
+        const categoryData = formData.filter(item => item.category === category).slice(0, 3);
+        return { ...acc, [category.toLowerCase().replace(/&|\s/g, '_')]: categoryData };
+      }, {});
+      setLimitItem(filteredData);
+    }
+  }, [formData, galleryImagesData, newsData, videosData]);
 
   const [windowScroll, setwindowScroll] = useState("hidden");
   useEffect(() => {
@@ -607,156 +636,61 @@ export default function Header() {
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 VAT Forms
                               </h1>
-                              <div>
-                                <Link
-                                  href={"/VatForms"}
-                                  className="lineclamping line"
-                                >
-                                  <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish  text-slate-400 checking">
-                                    VAT Refunds for Diplomats, Diplomatic and
-                                    Consular Missions & International
-                                    Organizations Printable
-                                  </p>
-                                </Link>
-                                <Link
-                                  href={"/VatForms"}
-                                  className="lineclamping line"
-                                >
-                                  <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
-                                    VAT Refunds for Diplomats, Diplomatic and
-                                    Consular Missions & International
-                                    Organizations
-                                  </p>
-                                </Link>
-                                <Link
-                                  href={"/VatForms"}
-                                  className="lineclamping line"
-                                >
-                                  <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
-                                    VAT Return
-                                  </p>
-                                </Link>
-                                <br/>
-                                <Link
-                                  href={"/VatForms"}
-                                  className="lineclamping line"
-                                >
-                                  <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
-                                    VAT Deregistration Form
-                                  </p>
-                                </Link>
-                                <br/>
-                                <Link
-                                  href={"/VatForms"}
-                                  className="lineclamping line"
-                                >
-                                  <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish  checking">
-                                    VAT Return Printable
-                                  </p>
-                                </Link>
-                                <br/>
+                              {menuService.formData && menuService?.formData?.vat?.map((item) => {
+                                return (
+                                  <div key={item?.id}>
+                                    <Link href={'/VatForms'} className="line">
+                                      <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
+                                        {item?.formName}
+                                      </p>
+                                    </Link>
+                                  </div>
+                                );
+                              })
+                              }
                                 <h6 className="text-sm leading-6 font-bold mt-3 cursor-pointer">
-                                  View More
+                                <Link href={'/VatForms'} className="line">View More</Link>
                                 </h6>
-                              </div>
                             </div>
 
                             <div>
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 Income Tax Forms
                               </h1>
-                              <Link
-                                href={"/IncomeForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
-                                  Notice of Objection Form Printable
-                                </p>
-                              </Link>
-                              <Link
-                                href={"/IncomeForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
-                                  Taxpayer Profile Maintenance Form Individuals
-                                </p>
-                              </Link>
-                              <Link
-                                href={"/IncomeForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
-                                  TIN Registration Form Company
-                                </p>
-                              </Link>
-                              <Link
-                                href={"/IncomeForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
-                                  Taxpayer Profile Maintenance Form Company
-                                </p>
-                              </Link>
-                              <Link
-                                href={"/IncomeForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
-                                  Non-Active Entity Declaration Form
-                                </p>
-                              </Link>
+                              {menuService.formData && menuService?.formData?.income_tax?.map((item) => {
+                                return (
+                                  <div key={item?.id}>
+                                    <Link href={'/IncomeForms'} className="line">
+                                      <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
+                                        {item?.formName}
+                                      </p>
+                                    </Link>
+                                  </div>
+                                );
+                              })
+                              }
                               <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                                View More
+                              <Link href={'/IncomeForms'} className="line">View More</Link>
                               </h6>
                             </div>
                             <div>
                               <h1 className="text-xl font-bold leading-8 mb-3 ">
                                 Customs & Excise
                               </h1>
-                              <Link
-                                href={"/CustomsForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
-                                  CE 73 Application For Special Attendance
-                                </p>
-                              </Link>
-                              <Link
-                                href={"/CustomsForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
-                                  CE 101 Declaration on Transfer of Residence
-                                </p>
-                              </Link>
-                              <br/>
-                              <Link
-                                href={"/CustomsForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
-                                  Certificate A
-                                </p>
-                              </Link>
-                              <br/>
-                              <Link
-                                href={"/CustomsForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm leading-6 font-normal my-1.5 cursor-pointer hover:text-yellowish  checking">
-                                  Baggage Declaration Form E VRA
-                                </p>
-                              </Link>
-                              <Link
-                                href={"/CustomsForms"}
-                                className="lineclamping line"
-                              >
-                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
-                                  CE66 Application For Refund
-                                </p>
-                              </Link>
+                              {menuService.formData && menuService?.formData?.customs___excise?.map((item) => {
+                                return (
+                                  <div key={item?.id}>
+                                    <Link href={'/CustomsForms'} className="line">
+                                      <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
+                                        {item?.formName}
+                                      </p>
+                                    </Link>
+                                  </div>
+                                );
+                              })
+                              }
                               <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                                View More
+                              <Link href={'/CustomsForms'} className="line">View More</Link>
                               </h6>
                             </div>
                           </div>
@@ -820,45 +754,21 @@ export default function Header() {
                                   News
                                 </h1>
                                 <div>
-                                  <div>
-                                    <Link href={"/news"} className="line">
-                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                        Authorised Economic Operator
-                                        Accreditation
-                                      </p>
-                                    </Link>
-                                  </div>
-                                  <div>
-                                    <Link href={"/news"} className="line">
-                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                        ERS Donates To Ekululameni Center
-                                      </p>
-                                    </Link>
-                                  </div>
-                                  <div>
-                                    <Link href={"/news"} className="line">
-                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                        ERS Add TCC System
-                                      </p>
-                                    </Link>
-                                  </div>
-                                  <div>
-                                    <Link href={"/news"} className="line">
-                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                        ERS Donates To Ekululameni Center
-                                      </p>
-                                    </Link>
-                                  </div>
-                                  <div>
-                                    <Link href={"/news"} className="line">
-                                      <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish">
-                                        Pay your Tax on Time
-                                      </p>
-                                    </Link>
-                                  </div>
+                                {menuService.newsData &&  menuService?.newsData?.map((item) => {
+                                  return (
+                                    <div key={item?.id}>
+                                      <Link href={{ pathname: "/NewsDetails", query: { id:item.id, apiURl:'/api/news' } }} className="line">
+                                        <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
+                                          {item.newsName}
+                                        </p>
+                                      </Link>
+                                    </div>
+                                  );
+                                })}
+                                  
                                 </div>
                                 <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                                  View More
+                                <Link href={`/news`} className="line">View More</Link>
                                 </h6>
                               </div>
                             </div>
@@ -868,43 +778,19 @@ export default function Header() {
                                 <h1 className="text-xl font-bold leading-8 mb-3">
                                   Gallery
                                 </h1>
-                                <div>
-                                  <Link href={"/gallery"} className="line">
-                                    <p className="text-sm font-normal cursor-pointer  hover:text-yellowish ">
-                                      Lomahasha Border Hours Extension
-                                    </p>
-                                  </Link>
-                                </div>
-                                <div>
-                                  <Link href={"/gallery"} className="line">
-                                    <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                      PM Submits Income Tax Returns
-                                    </p>
-                                  </Link>
-                                </div>
-                                <div>
-                                  <Link href={"/gallery"} className="line">
-                                    <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                      Income Tax Mobile Clinic
-                                    </p>
-                                  </Link>
-                                </div>
-                                <div>
-                                  <Link href={"/gallery"} className="line">
-                                    <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                      PM Submits Income Tax Returns
-                                    </p>
-                                  </Link>
-                                </div>
-                                <div>
-                                  <Link href={"/gallery"} className="line">
-                                    <p className="text-sm  mt-3 cursor-pointer  hover:text-yellowish ">
-                                      Income Tax Mobile Clinic
-                                    </p>
-                                  </Link>
-                                </div>
+                                {menuService.galleryImagesData &&  menuService?.galleryImagesData?.map((item) => {
+                                  return (
+                                    <div key={item?.id}>
+                                      <Link href={`/gallery`} className="line">
+                                        <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
+                                          {item.groupName}
+                                        </p>
+                                      </Link>
+                                    </div>
+                                  );
+                                })}
                                 <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                                  View More
+                                <Link href={`/gallery`} className="line">View More</Link>
                                 </h6>
                               </div>
                             </div>
@@ -913,43 +799,19 @@ export default function Header() {
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 Videos
                               </h1>
-                              <div>
-                                <Link href={"/videos"} className="line">
-                                  <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
-                                    ERS Public Meeting in Ezulmini Center
-                                  </p>
-                                </Link>
-                              </div>
-                              <div>
-                                <Link href={"/videos"} className="line">
-                                  <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                    ERS Public Meeting in Ezulmini
-                                  </p>
-                                </Link>
-                              </div>
-                              <div>
-                                <Link href={"/videos"} className="line">
-                                  <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                    Pay your Tax in Three Steps
-                                  </p>
-                                </Link>
-                              </div>
-                              <div>
-                                <Link href={"/videos"} className="line">
-                                  <p className="text-sm font-normal mt-3 cursor-pointer hover:text-yellowish ">
-                                    ERS Public Meeting in Ezulmini
-                                  </p>
-                                </Link>
-                              </div>
-                              <div>
-                                <Link href={"/videos"} className="line">
-                                  <p className="text-sm font-normal my-3 cursor-pointer hover:text-yellowish ">
-                                    Pay your Tax in Three Steps
-                                  </p>
-                                </Link>
-                              </div>
+                              {menuService.videosData &&  menuService?.videosData?.map((item) => {
+                                  return (
+                                    <div key={item?.id}>
+                                      <Link href={`/videos`} className="line">
+                                        <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
+                                          {item.name}
+                                        </p>
+                                      </Link>
+                                    </div>
+                                  );
+                                })}
                               <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                                View More
+                              <Link href={`/videos`} className="line">View More</Link>
                               </h6>
                             </div>
                           </div>

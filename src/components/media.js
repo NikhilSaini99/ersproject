@@ -110,7 +110,7 @@ function Media() {
 
 function NewsCard({ url, img, title, date, description, id, apiURl }) {
   const truncate  = (str)=>{
-    return str.substring(0, 200)+"..."
+    return str.substring(0, 35)+"..."
   }
   const [cardHover, setCardHover] = useState(false);
   return (
@@ -140,8 +140,9 @@ function NewsCard({ url, img, title, date, description, id, apiURl }) {
                   transition: "0.5s",
                   filter: "brightness(60%)",
                 }),
-                height: "450px",
+                height: "350px",
                 backgroundSize: "cover",
+                position: "relative",
               }}
               onMouseOver={() => setCardHover(true)}
               onMouseOut={() => setCardHover(false)}
@@ -150,10 +151,12 @@ function NewsCard({ url, img, title, date, description, id, apiURl }) {
                 src={img}
                 alt={title}
                 style={{
+                  position:"relative",
                   width: "100%",
                   height: "100%",
                   display: "block",
                   objectFit: "cover",
+                  backgroundAttachment:"fixed"
                 }}
               />
             </Box>
