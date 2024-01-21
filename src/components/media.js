@@ -108,7 +108,7 @@ function Media() {
   );
 }
 
-function NewsCard({ url, img, title, date, description, id, apiURl }) {
+function NewsCard({ url, img, title, date, description, id, apiURl, authorName }) {
   const truncate  = (str)=>{
     return str.substring(0, 35)+"..."
   }
@@ -225,7 +225,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl }) {
                   variant="body1"
                   sx={{ fontWeight: "bold", color: "black", fontSize: "14px" }}
                 >
-                  BY ADMIN
+                  {authorName}
                 </Typography>
               </Box>
             </Stack>

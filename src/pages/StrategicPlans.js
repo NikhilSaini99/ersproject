@@ -14,6 +14,7 @@ import Link from 'next/link';
 import { useFetch } from './api/api';
 import { useEffect } from 'react';
 import Loader from '@/components/Loader';
+import { GridAutoColumn3 } from '@/styles/globalStyle';
 
 // import pdf1 from '../assets/Pdf/SpPdf1.pdf'
 // import pdf2 from '../assets/Pdf/SpPdf2.pdf'
@@ -21,25 +22,25 @@ import Loader from '@/components/Loader';
 // import pdf4 from '../assets/Pdf/SpPdf4.pdf'
 
 const StrategicPlans = () => {
-        const {data,fetchAPI, isLoading} =useFetch("get","/api/publication");
-        const [StrategicPlans, setStrategicplans] = useState();
+    const { data, fetchAPI, isLoading } = useFetch("get", "/api/publication");
+    const [StrategicPlans, setStrategicplans] = useState();
 
-        useEffect(()=>{
-                fetchAPI();
-        },[]);
+    useEffect(() => {
+        fetchAPI();
+    }, []);
 
-        useEffect(()=>{
-            const Strategic_plan_arr= data?.data?.filter((item)=>item.type==="Strategic Plans");
-            setStrategicplans(Strategic_plan_arr)
-        },[data]);
-        
+    useEffect(() => {
+        const Strategic_plan_arr = data?.data?.filter((item) => item.type === "Strategic Plans");
+        setStrategicplans(Strategic_plan_arr)
+    }, [data]);
 
-    const handlePDFDownload=(url)=>{
-            window.open(url,"_blank");
+
+    const handlePDFDownload = (url) => {
+        window.open(url, "_blank");
     }
-    
 
-   
+
+
 
     return (
         <>
@@ -62,38 +63,45 @@ const StrategicPlans = () => {
                 />
             </Box>
 
-            <Box sx={{ width: {xs:'95%',md:'85%',lg:'80%'}, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
+            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
                 <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
                     Strategic Plans
                 </Typography>
-                {isLoading ? <Loader/> : <Stack sx={{
-                    display: 'flex', flexDirection: { xs: 'column', md: 'row', lg: 'row' },
-                    gap: '0.5rem', justifyContent: 'center', alignItems: 'center', maxWidth:"85%", margin:"0 auto"
-                }}>
-                    
-                    {StrategicPlans?.map((item, index) => (
-                        <Paper elevation={20} key={index} sx={{ maxWidth: { xs: 'inherit',md:'65%', lg: '95%' },cursor:'pointer'}}
-                         component='div'>
-                            <Stack sx={{direction:'column',gap:'0.5rem'}}>
-                         <Link href={`${item.documentUrl}`} target='_blank'>
-                            <Box sx={{width:"350px", height:"350px"}}>
-                            <img src={item.coverPhoto} alt={index}
-                             loading='lazy'
-                                style={{
-                                    width: "100%", height: "100%",
-                                    objectFit:"cover"
-                                }}
-                            />
-                            </Box>
-                            </Link>
-                            <Typography variant='body1' sx={{textAlign:'center',fontWeight:'bold',color:'#323491'}}>
-                            {item.documentName}</Typography>
-                            </Stack>
-                        
-                        </Paper>
-                    ))}
-                </Stack> }
-                
+                {isLoading ? <Loader /> :
+                    <GridAutoColumn3>
+                        {StrategicPlans?.map((item, index) => (
+                            <Paper elevation={20} key={index} sx={{ cursor: 'pointer', position: 'relative' }} component='div'>
+                                <Stack sx={{ direction: 'column', gap: '0.5rem' }}>
+                                    <Link href={`${item.documentUrl}`} target='_blank'>
+                                        <Box sx={{ height: "350px", position: 'relative' }}>
+                                            <img src={item.coverPhoto} alt={index}
+                                                loading='lazy'
+                                                style={{
+                                                    width: "100%", height: "100%",
+                                                    objectFit: "cover",
+                                                    backgroundAttachment:"fixed"
+                                                }}
+                                            />
+                                            <Typography variant='body1' sx={{
+                                                textAlign: 'center', p:"2rem", fontWeight: 'bold',
+                                                position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+                                                display: 'flex', alignItems: 'end', justifyContent: 'center',
+                                                backgroundColor: 'rgba(0, 0, 0, 0.5)', color: '#fff',
+                                                opacity: 0, transition: 'opacity 0.3s',
+                                                backdropFilter: 'blur(5px)',
+                                                // backgroundColor: (theme)=>theme.palette.primary.main,
+                                                ':hover': { opacity: 1 }
+                                            }}>
+                                                {item.documentName}
+                                            </Typography>
+                                        </Box>
+                                    </Link>
+                                </Stack>
+                            </Paper>
+                        ))}
+                    </GridAutoColumn3>
+                }
+
             </Box>
 
             {/*-----------------------Footer---------------------*/}

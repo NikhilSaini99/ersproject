@@ -115,7 +115,7 @@ const TableComponent = (props) => {
                   style={
                     item === 'Title' || item === 'Reference'
                       ? { minWidth: '215px', whiteSpace: 'nowrap' }
-                      : item === 'Deadline' || item === 'Published'
+                      : item === 'Deadline' || item === 'Published' || item === 'Date' || item === 'Notice'
                         ? { minWidth: '150px', whiteSpace: 'nowrap' }
                         : { whiteSpace: 'nowrap' }
                   }>

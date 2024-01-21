@@ -138,12 +138,6 @@ export default function News() {
             ))}
           </Grid>}
          
-
-          {/* Left Side End */}
-
-          {/* Right Side with latest news*/}
-              {/* <LatestNewsSection/> */}
-          {/* Right Side End */}
         </Grid>
        
        </Box>

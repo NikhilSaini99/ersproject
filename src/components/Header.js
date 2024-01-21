@@ -13,7 +13,8 @@ import WhatnewComponent from "./shared/WhatnewComponent";
 import { styled, } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-export default function Header() {
+export default function Header(props) {
+  // const {MenuData, menuLoading} = props;
   const router = useRouter();
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/whateNew");
   const { data:MenuData, fetchAPI:MenuCall, isLoading:menuLoading } = useFetch("get", "/api/menuService/web");
@@ -57,16 +58,17 @@ export default function Header() {
  
   
   function setLimitItem (filteredData){
-    menuService.formData = filteredData;
-    menuService.galleryImagesData = galleryImagesData.rows.slice(0, 3);
-    menuService.newsData = newsData.rows.slice(0, 3);
-    menuService.videosData = videosData.rows.slice(0, 3);
+    setMenuService({...menuService, formData: filteredData, 
+      galleryImagesData: galleryImagesData.rows.slice(0, 5),
+      newsData: newsData.rows.slice(0, 5),
+      videosData: videosData.rows.slice(0, 5),
+    });
   }
 
   useMemo(() => {
     if(!menuLoading && formData && galleryImagesData && newsData && videosData){
       const filteredData = categories.reduce((acc, category) => {
-        const categoryData = formData.filter(item => item.category === category).slice(0, 3);
+        const categoryData = formData.filter(item => item.category === category).slice(0, 5);
         return { ...acc, [category.toLowerCase().replace(/&|\s/g, '_')]: categoryData };
       }, {});
       setLimitItem(filteredData);

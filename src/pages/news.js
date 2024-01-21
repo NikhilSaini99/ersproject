@@ -10,10 +10,10 @@ import rightSideBackground from "../assets/images/sidebar-bg-image.jpg";
 import { newses } from "../content/data";
 import { useFetch } from "./api/api";
 
-export const LatestNewsSection = () => {
+export const LatestNewsSection = ({isPublic}) => {
   return (
     <Grid item xs={4} sx={{ position: "relative" }}>
-      <Image
+      {/* <Image
         src={rightSideBackground}
         alt="rightSideBackground"
         style={{
@@ -23,7 +23,7 @@ export const LatestNewsSection = () => {
           minHeight: "100%",
           backgroundRepeat: "no-repeat",
         }}
-      />
+      /> */}
       <div
         style={{
           position: "absolute",
@@ -35,7 +35,8 @@ export const LatestNewsSection = () => {
           opacity: "0.90",
         }}
       ></div>
-      <Typography
+      {!isPublic &&
+      <> <Typography
         variant="h6"
         sx={{
           position: "relative",
@@ -74,6 +75,7 @@ export const LatestNewsSection = () => {
           ))}
         </Stack>
       </Stack>
+      </>}
     </Grid>
   );
 };
@@ -119,6 +121,7 @@ export default function News() {
                   date={item?.uploadDate}
                   description={item?.description}
                   id={item.id}
+                  authorName={item?.author_name}
                   apiURl={"/api/news"}
                 />
               ))}

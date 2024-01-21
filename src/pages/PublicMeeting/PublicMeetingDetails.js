@@ -61,12 +61,6 @@ export default function PublicMeetingDetails() {
               )
             })}
           </Grid>
-
-
-
-          {/* Right Side with latest news*/}
-          {/* <LatestNewsSection /> */}
-          {/* Right Side End */}
         </Grid>
       </section>
 

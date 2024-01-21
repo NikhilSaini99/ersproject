@@ -30,3 +30,9 @@ export const BlackButton = styled(Button)(({theme})=>({
         backgroundColor:`${theme.palette.primary.main} !important`
     }
 }))
+
+export const GridAutoColumn3 = styled("div")(({theme})=>({
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
+  gap: "1rem",
+}))

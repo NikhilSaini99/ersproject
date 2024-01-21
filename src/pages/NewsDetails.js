@@ -33,7 +33,7 @@ export default function NewsDetails() {
     News.url = url;
     News.uploadDate = uploadDate
   }
-
+console.log("yo man",query.apiURl ==="/api/publicMeeting")
   return (
     <>
       <Head>
@@ -108,7 +108,7 @@ export default function NewsDetails() {
             )}
 
             {/* Right Side with latest news*/}
-            <LatestNewsSection />
+            {<LatestNewsSection isPublic={query.apiURl ==="/api/publicMeeting"}/>}
             {/* Right Side End */}
           </Grid>
         </section>

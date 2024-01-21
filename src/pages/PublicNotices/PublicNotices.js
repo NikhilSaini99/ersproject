@@ -89,9 +89,9 @@ const PublicNotices = () => {
       >
         <Box
           sx={{
-            width: "90%",
+            width: "100%",
             margin: { xs: "0 auto", lg: "0  auto" },
-            px: { md: "5rem", lg: "5rem,", xl: "10rem" },
+            px: { md: "5rem", lg: "5rem,", xl: "5rem" },
             py: "2rem",
           }}
         >
