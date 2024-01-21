@@ -86,7 +86,6 @@ export default function Header() {
     };
   }, []);
 
-
   const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
