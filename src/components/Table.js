@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Loader from "./Loader";
 import { useState } from "react";
 import TableComponent from "./TableComponent/TableComponent";
+import { Box, Typography } from "@mui/material";
 
 export default function FormTable({ title, defaultValue }) {
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/form");
@@ -50,10 +51,14 @@ export default function FormTable({ title, defaultValue }) {
   const includeProperties = ["customId", "formName", "category", "fileSize", "description", "fileUrl"]
   const excluseProperties = ["updatedAt", "deletedAt", "createdAt", "fileType"];
 
-
+  console.log(isLoading)
+  if (isLoading) {
+    return <Loader />;
+  }
+  
   return (
     <>
-     {selectedCategory ? <section className="px-6 py-16 bg-[#F7F7FA]">
+     {selectedCategory?.length>0 ? <section className="px-6 py-16 bg-[#F7F7FA]">
         <div
           className="pb-10 flex justify-between items-center"
           style={{ width: "90%", margin: "0 auto" }}
@@ -69,7 +74,7 @@ export default function FormTable({ title, defaultValue }) {
                 name="category"
                 className="bg-transparent focus:outline-none px-4 py-[6px]"
                 onChange={handleCategorySelect}
-                defaultValue={selectedCategory[0].category}
+                defaultValue={selectedCategory?.[0]?.category}
               >
                 <option value={"All Forms"}>All Forms</option>
                 <option value={"VAT"}>VAT Forms</option>
@@ -104,7 +109,7 @@ export default function FormTable({ title, defaultValue }) {
           excluseProperties={excluseProperties}
           includeProperties={includeProperties}
         /> 
-      </section> : <Loader/>}
+      </section> : <Box sx={{ padding:"2rem", display:"flex", justifyContent:"center"}}><Typography variant="h4">No Form Data</Typography></Box>}
     </>
   );
 }
