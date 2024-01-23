@@ -261,6 +261,25 @@ ul li.starclass:before {
   list-style-type: none;
 }
 
+/* SLICK ARROW */
+.slick-arrow .slick-next{
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #17197C !important;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
 /* anup css */
 /* slider section */
 .image-slider {

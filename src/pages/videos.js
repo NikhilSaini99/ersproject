@@ -1,15 +1,17 @@
-import React, {useEffect } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { Box, Typography } from "@mui/material";
-import Banner from "../assets/images/Guide-on-the-Appointment-of.png";
-import bgimg from "../assets/images/pxfuel.jpg";
-import { useFetch } from "./api/api";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import { Box, Typography } from "@mui/material";
+import React, {useEffect} from "react";
+
+import Banner from "../assets/images/Guide-on-the-Appointment-of.png";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Image from "next/image";
+import Slider from "react-slick";
+import bgimg from "../assets/images/pxfuel.jpg";
+import { useFetch } from "./api/api";
 
 export default function Videos() {
   // var settings = {
@@ -108,7 +110,7 @@ export default function Videos() {
           }}
         >
           <Typography variant="h1">
-            Things to see
+            Things to See
           </Typography>
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
@@ -123,7 +125,7 @@ export default function Videos() {
                       {item?.yearofupload}
                     </Typography>
                     {item?.video?.length === 1 ? (
-          <div className="lg:w-[50%] p-5">
+          <div className="lg:w-[50%] p-5 flex flex-col gap-2">
             <iframe
               style={{  width: "100%" }}
               height="355"
@@ -136,12 +138,13 @@ export default function Videos() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
+            <p className="text-center font-semibold text-base">{item?.video?.[0]?.name}</p>
           </div>
         ) : (
           <Slider {...settings} key={item?.yearofupload}>
             {item?.video?.map((video) => {
               return (
-                <div key={video?.id} className="w-32 p-5">
+                <div key={video?.id} className="w-32 p-5 flex flex-col gap-2">
                   <iframe
                     style={{ width: "100%" }}
                     height="355"
@@ -154,6 +157,7 @@ export default function Videos() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                   ></iframe>
+                  <p className="text-center font-semibold text-base mt-2">{video?.name}</p>
                 </div>
               );
             })}

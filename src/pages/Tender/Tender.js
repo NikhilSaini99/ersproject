@@ -1,17 +1,18 @@
-import Header from "@/components/Header";
 import {
   Box,
   Typography,
 } from "@mui/material";
-import Head from "next/head";
-import Image from "next/image";
 import React, { useEffect } from "react";
+
 import Banner from "../../assets/images/Guide-on-the-Appointment-of.png";
-import bgimg from "../../assets/images/pxfuel.jpg";
 import Footer from "@/components/Footer";
-import { useFetch } from "../api/api";
-import TableComponent from "@/components/TableComponent/TableComponent";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Image from "next/image";
 import Loader from "@/components/Loader";
+import TableComponent from "@/components/TableComponent/TableComponent";
+import bgimg from "../../assets/images/pxfuel.jpg";
+import { useFetch } from "../api/api";
 
 const Tender = () => {
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/tender");
@@ -48,7 +49,7 @@ const Tender = () => {
             Tenders
           </Typography>
           {data?.data ? <TableComponent
-                        tableData={[...data?.data]?.reverse()}
+                        tableData={data?.data}
                         tableHeaders={tableHeaders}
                         excluseProperties={excluseProperties}
                         includeProperties={includeProperties}

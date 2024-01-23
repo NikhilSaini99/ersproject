@@ -1,12 +1,13 @@
-import Image from "next/image";
-import React from "react";
-import searchIcon from "../assets/icons/search.png";
-import { useFetch } from "@/pages/api/api";
-import { useEffect } from "react";
-import Loader from "./Loader";
-import { useState } from "react";
-import TableComponent from "./TableComponent/TableComponent";
 import { Box, Typography } from "@mui/material";
+
+import Image from "next/image";
+import Loader from "./Loader";
+import React from "react";
+import TableComponent from "./TableComponent/TableComponent";
+import searchIcon from "../assets/icons/search.png";
+import { useEffect } from "react";
+import { useFetch } from "@/pages/api/api";
+import { useState } from "react";
 
 export default function FormTable({ title, defaultValue }) {
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/form");
@@ -55,22 +56,24 @@ export default function FormTable({ title, defaultValue }) {
   if (isLoading) {
     return <Loader />;
   }
-  
+
   return (
     <>
-     {selectedCategory?.length>0 ? <section className="px-6 py-16 bg-[#F7F7FA]">
+      {selectedCategory?.length > 0 ? <section className="px-6 py-16 bg-[#F7F7FA]">
         <div
           className="pb-10 flex justify-between items-center"
           style={{ width: "90%", margin: "0 auto" }}
         >
           <div>
-            <h1 className=" text-[#2F3192] text-4xl font-semibold ">{categoryName}</h1>
-            <div className="border mr-12 border-yellowish mt-1"></div>
+            <h1 className=" text-[#2F3192] text-4xl font-semibold relative">
+              {categoryName}
+              <span className="absolute bottom-0 left-0 w-4/5 border-b-2 border-yellowish"></span>
+            </h1>
           </div>
 
           <div className="flex gap-10 text-black">
             <div className="text-base border border-[#DAD8CC] rounded-md">
-             <select
+              <select
                 name="category"
                 className="bg-transparent focus:outline-none px-4 py-[6px]"
                 onChange={handleCategorySelect}
@@ -103,13 +106,13 @@ export default function FormTable({ title, defaultValue }) {
             </div>
           </div>
         </div>
-         <TableComponent
+        <TableComponent
           tableData={selectedCategory}
           tableHeaders={tableHeaders}
           excluseProperties={excluseProperties}
           includeProperties={includeProperties}
-        /> 
-      </section> : <Box sx={{ padding:"2rem", display:"flex", justifyContent:"center"}}><Typography variant="h4">No Form Data</Typography></Box>}
+        />
+      </section> : <Box sx={{ padding: "2rem", display: "flex", justifyContent: "center" }}><Typography variant="h4">No Form Data</Typography></Box>}
     </>
   );
 }

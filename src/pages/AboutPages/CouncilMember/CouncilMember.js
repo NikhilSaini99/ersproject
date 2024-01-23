@@ -1,64 +1,38 @@
-/* eslint-disable @next/next/no-img-element */
-import { Box, Stack, Typography } from "@mui/material";
-import Image from "next/image";
-import React from "react";
-import Slider from "react-slick";
-import profilVector from "@/assets//images/profilevector.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+/* eslint-disable @next/next/no-img-element */
+import { Box, Stack, Typography } from "@mui/material";
+
 import Loader from "@/components/Loader";
+import React from "react";
+import Slider from "react-slick";
 
 const CouncilMember = ({ h2Styling, data }) => {
-  const memeberData = [
-    {
-      id: 1,
-      img: profilVector,
-      name: "David Dlamini",
-      role: "Chairman",
-    },
-    {
-      id: 2,
-      img: profilVector,
-      name: "Brightwell Nkambule (CG)",
-      role: "Board Memeber",
-    },
-    {
-      id: 3,
-      img: profilVector,
-      name: "Carol Muir",
-      role: "Director",
-    },
-    {
-      id: 4,
-      img: profilVector,
-      name: "Phil Mnisi",
-      role: "CEO",
-    },
-    {
-      id: 5,
-      img: profilVector,
-      name: "David Dlamini",
-      role: "Chairman",
-    },
-    {
-      id: 6,
-      img: profilVector,
-      name: "Brightwell Nkambule (CG)",
-      role: "Board Memeber",
-    },
-    {
-      id: 7,
-      img: profilVector,
-      name: "Carol Muir",
-      role: "Director",
-    },
-    {
-      id: 8,
-      img: profilVector,
-      name: "Phil Mnisi",
-      role: "CEO",
-    },
-  ];
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+         className={`${className} !bg-yellowish !p-3 rounded-full `}
+        style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center",
+            height: "50px", right: "-40px", width: "50px"}}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} !bg-yellowish !p-3 rounded-full `}
+        style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center",
+            height: "50px", left: "-40px", width: "50px"}}
+        onClick={onClick}
+      />
+    );
+  }
 
   //settings for carousel
   var settings = {
@@ -67,6 +41,8 @@ const CouncilMember = ({ h2Styling, data }) => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow  />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 2048, // screens greater than or equal to 2048px (2k)
@@ -114,47 +90,13 @@ const CouncilMember = ({ h2Styling, data }) => {
   };
 
 
-
-  // const settings = {
-  //   autoplay: true,
-  //   autoplaySpeed: 3000,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: Math.min(4, data?.length), // Ensure slidesToShow is not greater than data.length
-  //   slidesToScroll: 1,
-  //   dots: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1280, // screens between 1280px and 960px
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 960, // screens between 960px and 600px
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 600, // screens below 600px
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
-
    if (data === undefined) {
     return <Loader />;
   }
 
   return (
     <>
-      <Box sx={{ margin: "0 auto", textAlign: "center" }}>
+      <Box sx={{ margin: "0 auto", textAlign: "center", p:"5rem" }}>
         <Stack direction={"column"} spacing={3}>
           <Typography variant="h2" sx={h2Styling}>
             Board and Corporate Governance

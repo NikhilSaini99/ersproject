@@ -1,15 +1,16 @@
-import React from "react";
 import {
-  TablePagination,
+  Button,
+  Paper,
   Table,
   TableBody,
   TableCell,
-  TableRow,
-  TableHead,
   TableContainer,
-  Paper,
-  Button,
+  TableHead,
+  TablePagination,
+  TableRow,
 } from "@mui/material";
+
+import React from "react";
 import dayjs from "dayjs";
 import { useState } from "react";
 
@@ -77,7 +78,7 @@ const TableComponent = (props) => {
         property === "publishedDate" ||
         property === "deadline"
       ) {
-        rearrangedItem[property] = isoToFullDate(item.date || item.createdAt);
+        rearrangedItem[property] = isoToFullDate(property === "deadline" ? item.deadline : item.date || item.createdAt);
       } else if (property === "documentUrl" || property === "fileUrl") {
         rearrangedItem[property] = item.documentUrl || item.fileUrl;
       } else if (property === "fileSize") {
@@ -105,12 +106,12 @@ const TableComponent = (props) => {
                   color: "white !important",
                   fontWeight: "bold !important",
                   fontSize: "1rem !important",
-                  textAlign: "center !important",
                 },
               }}
             >
               {tableHeaders?.map((item, key) => (
                 <TableCell
+                  sx={{ textAlign: "center !important" }}
                   key={key}
                   style={
                     item === 'Title' || item === 'Reference'
@@ -129,15 +130,19 @@ const TableComponent = (props) => {
               const download = (
                 <Button
                   variant="contained"
-                  color="primary"
-                  sx={{ backgroundColor: "#2F2483 !important" }}
+                  sx={{
+                    backgroundColor: "#2F2483 !important",
+                    '&:hover': {
+                      backgroundColor: "#f4c402 !important", color: "#000000"
+                    }
+                  }}
                   onClick={() => {
                     handlePDFDownload(
                       item.documentUrl ? item.documentUrl : item.fileUrl
                     );
                   }}
                 >
-                  Downlaod
+                  Download
                 </Button>
               );
 
@@ -145,7 +150,7 @@ const TableComponent = (props) => {
                 <TableRow
                   key={key}
                   sx={{
-                    "& > *": { textAlign: "center !important" },
+                    "& > *": { textAlign: "left !important" },
                     "&:hover": { background: "#F2F2F2" },
                   }}
                 >
@@ -167,7 +172,8 @@ const TableComponent = (props) => {
                         style={
                           item === 'Title'
                             ? { textAlign: "left" }
-                            : {}}>{cellData}</TableCell>)})}
+                            : {}}>{cellData}</TableCell>)
+                  })}
                 </TableRow>
               );
             })}

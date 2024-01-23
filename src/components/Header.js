@@ -1,18 +1,19 @@
-import { useState, useEffect } from "react";
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Image from "next/image";
-import logo from "../assets/icons/ERS_Logo.png";
-import call from "../assets/icons/call.png";
-import mail from "../assets/icons/mail.png";
+import { useEffect, useState } from "react";
 
+import Image from "next/image";
+import InputBase from '@mui/material/InputBase';
+import Link from "next/link";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import SearchIcon from '@mui/icons-material/Search';
+import WhatnewComponent from "./shared/WhatnewComponent";
+import call from "../assets/icons/call.png";
+import logo from "../assets/icons/ERS_Logo.png";
+import mail from "../assets/icons/mail.png";
+import { styled, } from '@mui/material/styles';
 import { useFetch } from "@/pages/api/api";
 import { useMemo } from "react";
-import WhatnewComponent from "./shared/WhatnewComponent";
-import { styled, } from '@mui/material/styles';
-import SearchIcon from '@mui/icons-material/Search';
-import InputBase from '@mui/material/InputBase';
+import { useRouter } from "next/router";
+
 export default function Header(props) {
   // const {MenuData, menuLoading} = props;
   const router = useRouter();
@@ -273,7 +274,7 @@ export default function Header(props) {
                                 <br />
                                 <Link href={"/VAT/ZeroRated"} className="line">
                                   <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish ">
-                                    Zero Rated goods & Services
+                                    Zero Rated Goods & Services
                                   </p>
                                 </Link>
                                 <br />
@@ -641,7 +642,7 @@ export default function Header(props) {
                                 return (
                                   <div key={item?.id}>
                                     <Link href={'/VatForms'} className="line">
-                                      <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
+                                      <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish  checking">
                                         {item?.formName}
                                       </p>
                                     </Link>
@@ -662,7 +663,7 @@ export default function Header(props) {
                                 return (
                                   <div key={item?.id}>
                                     <Link href={'/IncomeForms'} className="line">
-                                      <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
+                                      <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish  checking">
                                         {item?.formName}
                                       </p>
                                     </Link>
@@ -682,7 +683,7 @@ export default function Header(props) {
                                 return (
                                   <div key={item?.id}>
                                     <Link href={'/CustomsForms'} className="line">
-                                      <p className="text-sm font-normal cursor-pointer hover:text-yellowish  checking">
+                                      <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish  checking">
                                         {item?.formName}
                                       </p>
                                     </Link>
@@ -759,7 +760,7 @@ export default function Header(props) {
                                   return (
                                     <div key={item?.id}>
                                       <Link href={{ pathname: "/NewsDetails", query: { id:item.id, apiURl:'/api/news' } }} className="line">
-                                        <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
+                                        <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish ">
                                           {item.newsName}
                                         </p>
                                       </Link>
@@ -783,7 +784,7 @@ export default function Header(props) {
                                   return (
                                     <div key={item?.id}>
                                       <Link href={`/gallery`} className="line">
-                                        <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
+                                        <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish ">
                                           {item.groupName}
                                         </p>
                                       </Link>
@@ -804,7 +805,7 @@ export default function Header(props) {
                                   return (
                                     <div key={item?.id}>
                                       <Link href={`/videos`} className="line">
-                                        <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
+                                        <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish ">
                                           {item.name}
                                         </p>
                                       </Link>

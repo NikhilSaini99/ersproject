@@ -1,6 +1,8 @@
 import { Box, Typography } from "@mui/material";
+
 import React from "react";
 import styles from "@/pages/AboutPages/OurMission/OurMission.module.css"
+
 const OurMission = ({h2Styling}) => {
   const ourMissionBoxStyle = {
     width: { xs: "100%", lg: "50%" },
@@ -12,12 +14,12 @@ const OurMission = ({h2Styling}) => {
     borderTop: "25px solid transparent",
     borderRight: "25px solid #f4c402",
     borderLeft: "25px solid #f4c402",
+    color: "#FEFEFE",
 
     transition: "background 0.5s",
-    color: "white",
     "&:hover": {
       background: "#f4c402",
-      color: "black",
+      color: "#000000",
       borderBottom: "25px solid transparent",
       borderTop: "25px solid transparent",
       borderRight: "25px solid #2F248F",

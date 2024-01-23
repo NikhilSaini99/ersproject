@@ -1,12 +1,3 @@
-import React, { useState } from "react";
-import Head from "next/head";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Image from "next/image";
-import Banner from "../assets/images/bg4.jpg";
-import HelpOutlineTwoToneIcon from "@mui/icons-material/HelpOutlineTwoTone";
-import AddCircleOutlineTwoToneIcon from "@mui/icons-material/AddCircleOutlineTwoTone";
-import RemoveCircleOutlineTwoToneIcon from "@mui/icons-material/RemoveCircleOutlineTwoTone";
 import {
   Box,
   FormControl,
@@ -16,12 +7,22 @@ import {
   Select,
   Typography,
 } from "@mui/material";
-import { useFetch } from "./api/api";
-import { useEffect } from "react";
+import React, { useState } from "react";
+
+import AddCircleOutlineTwoToneIcon from "@mui/icons-material/AddCircleOutlineTwoTone";
+import Banner from "../assets/images/bg4.jpg";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import Header from "@/components/Header";
+import HelpOutlineTwoToneIcon from "@mui/icons-material/HelpOutlineTwoTone";
+import Image from "next/image";
 import Loader from "@/components/Loader";
+import RemoveCircleOutlineTwoToneIcon from "@mui/icons-material/RemoveCircleOutlineTwoTone";
+import { useEffect } from "react";
+import { useFetch } from "./api/api";
 
 export default function FAQ() {
-  const [faqOpen, setFaqOpen] = useState(null);
+  const [faqOpen, setFaqOpen] = useState("null");
 
   const [faqCategory, setFaqCategory] = useState();
   const [faqvalue, setFaqValue] = useState("")
@@ -43,6 +44,13 @@ export default function FAQ() {
     }
    
   };
+
+  useEffect(()=>{
+    if(data?.data){
+      handleChange({target:{value:"All FAQ"}})
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[data?.data])
 
   const handleFaqOpen = (index) => {
     if (faqOpen === index) {
@@ -125,6 +133,7 @@ export default function FAQ() {
           {isLoading ? (
             <Loader />
           ) : (
+            faqCategory?.length > 0 ?
             faqCategory?.map((item, index) => (
               <Box
                 key={index}
@@ -191,8 +200,9 @@ export default function FAQ() {
                   
                 </Box>
                 
-              </Box>
-            ))
+              </Box>  
+            )) :
+              <Box sx={{ padding: "2rem", display: "flex", justifyContent: "center" }}><Typography variant="h4">No FAQ Data</Typography></Box>
           )}
         </Box>
       </section>
