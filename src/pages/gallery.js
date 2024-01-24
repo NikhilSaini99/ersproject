@@ -1,15 +1,16 @@
+import { Box, IconButton, Modal, Typography } from "@mui/material";
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Banner from "../assets/images/gallery.jpg";
-import { useFetch } from "./api/api";
-import { useEffect } from "react";
-import { Box, IconButton, Modal } from "@mui/material";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Banner from "../assets/images/gallery.jpg";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Image from "next/image";
+import { useEffect } from "react";
+import { useFetch } from "./api/api";
 
 export default function Gallery() {
   const [visibleGroup, setVisibleGroup] = useState(0);
@@ -134,20 +135,32 @@ export default function Gallery() {
                           alt="group-images"
                           style={{ width: "100%", height: "100%" }}
                         />
+                        <Typography variant='body1' sx={{
+                                                textAlign: 'center', p:"2rem", fontWeight: 'bold',
+                                                position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+                                                display: 'flex', alignItems: 'end', justifyContent: 'center',
+                                                backgroundColor: 'rgba(0, 0, 0, 0.5)', color: '#fff',
+                                                opacity: 0, transition: 'opacity 0.3s',
+                                                backdropFilter: 'blur(5px)',
+                                                // backgroundColor: (theme)=>theme.palette.primary.main,
+                                                ':hover': { opacity: 1 }
+                                            }}>
+                                                
+                                            </Typography>
                       </div>
-                      <div className="absolute opacity-0 group-hover:opacity-100 ease-in duration-500  bottom-0 text-center w-full">
+                      {/* <div className="absolute opacity-0 group-hover:opacity-100 ease-in duration-500  bottom-0 text-center w-full">
                         <h3 className="text-lg text-white font-medium mx-4">
                           {""}
                         </h3>
-                        <div className="flex flex-col gap-2 px-6 pt-10 pb-4 text-white bg-mainColor">
+                        <div className="flex flex-col gap-2 px-6 pt-10 pb-4 text-white bg-mainColor opacity-70">
                           <h1 className="text-[17px] leading-[22px] tracking-wide font-bold">
                           {""}
                           </h1>
-                          <h2 className="text-xl leading-5 tracking-normal font-normal text-center">
+                          <h2 className="text-xl leading-5 tracking-normal h-full flex flex font-medium text-center">
                           {"ERS"}
                           </h2>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   );
                 })}

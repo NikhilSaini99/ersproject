@@ -1,5 +1,4 @@
-import {createTheme } from "@mui/material";
-
+import {createTheme} from "@mui/material";
 
 const paletteColors = {
     primary: {
@@ -61,7 +60,7 @@ defaultTheme.typography.h1 = {
     fontFamily: "Arial Regular",
     letterSpacing:"0.025em",
     fontWeight: "bold",
-    padding: "2rem 0rem",
+    // padding: "2rem 0rem",
 }
 
 defaultTheme.typography.h2 = {

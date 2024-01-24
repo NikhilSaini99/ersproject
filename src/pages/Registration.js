@@ -1,15 +1,16 @@
-import React from 'react'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-import { Box, Stack, Typography, Divider } from '@mui/material'
-import Head from 'next/head'
-import Image from 'next/image'
+import { Box, Divider, Stack, Typography } from '@mui/material'
+
 import Banner from "../assets/images/Registration.jpeg"
-import rightarrow from '../assets/images/rightarrow.svg'
-import bgimg from "../assets/images/bg-2.png";
-import { useState } from 'react'
 import { ContentDiv } from '@/styles/globalStyle'
+import Footer from '@/components/Footer'
+import Head from 'next/head'
+import Header from '@/components/Header'
+import Image from 'next/image'
 import PageLayout from './PagesLayout/Layout'
+import React from 'react'
+import bgimg from "../assets/images/bg-2.png";
+import rightarrow from '../assets/images/rightarrow.svg'
+import { useState } from 'react'
 
 const Registration = () => {
   const [isOpen, setisOpen] = useState(null)
@@ -97,9 +98,11 @@ const Registration = () => {
         <Box sx={FaqContainerStyling}>
 
           <Stack sx={accordionStyling}>
-            <Typography variant="h1" >
-              Registration
-            </Typography>
+          <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Registration
+                            <span className="absolute bottom-0 left-0 w-1/4 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
             {/* question and arrow*/}
             {questionandanswer.map((item, index) => (
               <Stack key={index} sx={insideAccordionStyle}>

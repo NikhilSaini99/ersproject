@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { NewsCard } from "@/components/media";
-import Banner from "../assets/images/news-banner.jpg";
 import { Grid, Stack, Typography } from "@mui/material";
-import rightSideBackground from "../assets/images/sidebar-bg-image.jpg";
+import React, { useEffect } from "react";
+
+import Banner from "../assets/images/news-banner.jpg";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Image from "next/image";
+import { NewsCard } from "@/components/media";
 import { newses } from "../content/data";
+import rightSideBackground from "../assets/images/sidebar-bg-image.jpg";
 import { useFetch } from "./api/api";
 
 export const LatestNewsSection = ({isPublic}) => {
@@ -52,7 +53,7 @@ export const LatestNewsSection = ({isPublic}) => {
       <Stack
         sx={{
           background: "white",
-          width: { xs: "74%", lg: "50%" },
+          width: { xs: "75%", lg: "75%" },
           position: "relative",
           margin: "0 auto 0 4rem",
           top: "8rem",

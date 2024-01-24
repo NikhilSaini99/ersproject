@@ -1,9 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import {
   Avatar,
   Box,
@@ -15,9 +9,16 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import dayjs from "dayjs";
-import Script from "next/script";
+/* eslint-disable @next/next/no-img-element */
+import React, { useState } from "react";
+
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { BlackButton } from "@/styles/globalStyle";
+import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
+import dayjs from "dayjs";
 
 function Media() {
   return (
@@ -140,7 +141,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
                   transition: "0.5s",
                   filter: "brightness(60%)",
                 }),
-                height: "350px",
+                height: "250px",
                 backgroundSize: "cover",
                 position: "relative",
               }}
@@ -156,7 +157,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
                   height: "100%",
                   display: "block",
                   objectFit: "cover",
-                  backgroundAttachment:"fixed"
+                  // backgroundAttachment:"fixed"
                 }}
               />
             </Box>

@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Banner from "../assets/images/news-banner.jpg";
-import { LatestNewsSection } from "../pages/news";
 import { Box, Grid, Stack, Typography } from "@mui/material";
-import { useFetch } from "./api/api";
-import { useRouter } from "next/router";
+import React, { useEffect } from "react";
+
+import Banner from "../assets/images/news-banner.jpg";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Image from "next/image";
+import { LatestNewsSection } from "../pages/news";
 import Loader from "@/components/Loader";
 import dayjs from "dayjs";
+import { useFetch } from "./api/api";
+import { useRouter } from "next/router";
 
 export default function NewsDetails() {
   const router = useRouter();
@@ -49,7 +50,7 @@ console.log("yo man",query.apiURl ==="/api/publicMeeting")
       {/*-----------------------Banner---------------------*/}
 
       <section>
-        <Image src={Banner} alt="..." className="h-96 w-full" />
+      <Image src={Banner} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
       </section>
 
       {/*-----------------------Detailed News---------------------*/}
