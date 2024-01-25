@@ -51,9 +51,14 @@ const Taxations = () => {
     <>
      <PageLayout title={"ERS"} bannerImg={Banner} contentBackground={bgimg}>
         <ContentDiv>
-          <Typography variant="h1" >
-            Double Taxation Agreements
-          </Typography>
+        <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Double Taxation Agreements
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+          {/* <Typography variant="h1" >
+            
+          </Typography> */}
 
           <Typography variant="h6" sx={{mb: "1rem" }}>
             Status of Double Taxation Avoidance Agreement (DTAA’s) & Tax

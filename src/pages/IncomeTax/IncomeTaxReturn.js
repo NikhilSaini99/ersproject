@@ -79,8 +79,13 @@ const IncomeTaxReturn = () => {
             <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
                 <ContentDiv>
 
-                    <Typography variant="h1">
-                        Income Tax Returns</Typography>
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Income Tax Returns
+                            <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1">
+                        Income Tax Returns</Typography> */}
 
                     <Typography variant='body1'  className="Pointsformatting">Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayers finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
                         {<br></br>}

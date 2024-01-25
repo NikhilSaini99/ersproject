@@ -70,8 +70,13 @@ const BondedPage = () => {
         <>
             <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
                 <ContentDiv>
-                    <Typography variant="h1" >
-                    Bonded warehouses & rebate store</Typography>
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Bonded Warehouses & Rebate Store
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1" >
+                    Bonded warehouses & rebate store</Typography> */}
 
 
                 {data.map((item, index) => (

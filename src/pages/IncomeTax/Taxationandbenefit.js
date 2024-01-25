@@ -67,9 +67,14 @@ const Taxationandbenefit = () => {
     <>
      <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
       <ContentDiv>
-        <Typography variant="h1" >
+      <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Taxation of Benefits
+                            <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+        {/* <Typography variant="h1" >
           Taxation of Benefits
-        </Typography>
+        </Typography> */}
         <Box sx={{ ...commonStyling }}>
           <Typography variant="body1" >
             The following benefits are taxable to the extent shown below:

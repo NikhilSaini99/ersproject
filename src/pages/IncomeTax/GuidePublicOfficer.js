@@ -130,9 +130,14 @@ const GuidePublicOfficer = () => {
            <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
 
                 <ContentDiv>
-                    <Typography variant="h1">
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Guide on the Appointment of a Public Officer
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1">
                         Guide on the Appointment of a Public Officer
-                    </Typography>
+                    </Typography> */}
 
                     <Typography variant="h2" sx={{ pb: '1rem' }}>
                         Introduction

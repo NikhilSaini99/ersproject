@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Box,Typography } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Banner from "../../assets/images/Eswatini_VAT.png";
 import bgimg from "../../assets/images/bg-2.png";
@@ -59,11 +59,15 @@ const EstwaniIncomeTax = () => {
     return (
         <>
          <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
-
                  <ContentDiv>
-                <Typography variant="h1">
+                 <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Eswatini Income Tax
+                            <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                {/* <Typography variant="h1">
                 Eswatini Income Tax
-                </Typography>
+                </Typography> */}
                 <Typography variant="h2" >
                     Historical Background</Typography>
 

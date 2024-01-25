@@ -43,8 +43,14 @@ const TaxLegislation = () => {
         <>
          <PageLayout title={"ERS"} bannerImg={Banner} contentBackground={bgimg}>
             <ContentDiv>
-                <Typography variant="h1">
-                    Tax Legislations</Typography>
+
+            <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Tax Legislations
+                            <span className="absolute bottom-0 left-0 w-1/4 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                {/* <Typography variant="h1">
+                    </Typography> */}
 
                 <Typography variant='body1' className='Pointsformatting'>The Eswatini Revenue Service derives its authority to administer various revenue laws from the
                 <Link href={'http://www.sra.org.sz/documents/1497268284.pdf'} style={{ color: '#2f2483'}} className='Pointsformatting'> Revenue Authority Act 2008</Link></Typography>

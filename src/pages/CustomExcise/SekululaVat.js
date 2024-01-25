@@ -191,7 +191,13 @@ const SekululaVat = () => {
     <>
       <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
         <ContentDiv>
-          <Typography variant="h1">Sekulula VAT</Typography>
+        <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Sekulula VAT
+                            <span className="absolute bottom-0 left-0 w-1/5 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+
+          {/* <Typography variant="h1">Sekulula VAT</Typography> */}
 
           <Typography variant="body1">
             The Sekulula VAT Easy system enables importers to settle the VAT

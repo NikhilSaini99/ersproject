@@ -24,11 +24,16 @@ const Excisepage = () => {
         <>
           <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
                 <ContentDiv>
-                    <Typography variant="h1">
-                        Excise</Typography>
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Excise Duties
+                            <span className="absolute bottom-0 left-0 w-1/4 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1">
+                        Excise</Typography> */}
 
-                    <Typography variant='h2' >
-                        EXCISE DUTIES</Typography>
+                    {/* <Typography variant='h2' >
+                        EXCISE DUTIES</Typography> */}
 
 
                     <Typography variant="body1" sx={TypoStyling}  >

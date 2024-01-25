@@ -127,9 +127,14 @@ const TaxationDiplomats = () => {
         <>
             <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
                 <ContentDiv>
-                    <Typography variant="h1" >
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Taxation of Diplomats and Consul
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1" >
                         Taxation of Diplomats and Consul
-                    </Typography>
+                    </Typography> */}
 
                     {/* question and answers */}
                     <Box sx={FaqContainerStyling}>

@@ -16,9 +16,14 @@ const TraderPrograme = () => {
    <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
 
         <ContentDiv>
-            <Typography variant="h1">
+        <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Preferred Trader Programme
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+            {/* <Typography variant="h1">
             Preferred Trader Programme
-            </Typography>
+            </Typography> */}
 
             <Link href="http://www.sra.org.sz/documents/1567671955.pdf" className='Pointsformatting text-normalBlue'>ERS - Preferred Trader Programme External Guide and Procedure-Vsn1_ 2019</Link>
         </ContentDiv>

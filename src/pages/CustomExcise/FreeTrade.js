@@ -120,11 +120,16 @@ const FreeTrade = () => {
   return (
     <>
       <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
-        <ContentDiv
-        >
-          <Typography variant="h1">
+        <ContentDiv>
+
+        <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Free Trade and Preferential Agreements
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+          {/* <Typography variant="h1">
             Free Trade and Preferential Agreements
-          </Typography>
+          </Typography> */}
 
           {pageData.map((item, index) => (
             <Box key={index} sx={{mb:'1rem'}}>
