@@ -103,9 +103,15 @@ const RebateConcession = () => {
            <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
 
                 <ContentDiv>
-                    <Typography variant="h1" >
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Rebate Concessions for New Residents
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+
+                    {/* <Typography variant="h1" >
                         Rebate Concessions for New/Returning Residents
-                    </Typography>
+                    </Typography> */}
                     <Typography variant="h2">
                         REBATE CONCESSION FOR NEW/RETURNING RESIDENTS (Click here for the full  guideline)
                     </Typography>

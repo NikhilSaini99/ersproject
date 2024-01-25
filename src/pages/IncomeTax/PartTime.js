@@ -10,8 +10,13 @@ const PartTime = () => {
         <>
            <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
             <ContentDiv>
-                <Typography variant="h1">
-                    Part Time Employees</Typography>
+            <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Part Time Employees
+                            <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                {/* <Typography variant="h1">
+                    Part Time Employees</Typography> */}
 
 
                 <div className="art-article" style={{ textAlign: 'justify', color: '#000000' }}>

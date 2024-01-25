@@ -46,8 +46,13 @@ const CustomProcedure = () => {
         <>
            <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
                 <ContentDiv>
-                    <Typography variant="h1">
-                    Customs Procedure Codes</Typography>
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Customs Procedure Codes
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1">
+                    Customs Procedure Codes</Typography> */}
 
 
                 {data.map((item, index) => (

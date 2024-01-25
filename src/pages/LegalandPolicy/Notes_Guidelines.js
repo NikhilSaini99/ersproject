@@ -63,8 +63,9 @@ const Notes_Guidelines = () => {
                             <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
                             </Typography>
                     </Box>
-                    {/* <Typography variant="h1" >
-                        Practice Notes and Guidelines</Typography> */}
+
+                    <Typography variant="h1" >
+                        Practice Notes and Guidelines</Typography>
 
 
                     <Typography variant="body1" sx={{ mb: '1rem' }} className='Pointsformatting'>
@@ -81,7 +82,7 @@ const Notes_Guidelines = () => {
                                         <TableRow sx={{ backgroundColor: '#2f2483', '& th': { fontWeight: 'bold !important', color: 'white !important', textAlign: 'center !important' } }}>
 
                                             <TableCell sx={{ minWidth: "25%", width: "26%" }}>Type</TableCell>
-                                            <TableCell>Name</TableCell>
+                                            <TableCell sx= {{textAlign: 'center !important'}}>Name</TableCell>
 
                                             {/* <TableCell>Download</TableCell> */}
                                         </TableRow>
@@ -100,7 +101,7 @@ const Notes_Guidelines = () => {
                                                             borderBottom: index !== item.notesName.length - 1 ? '0.1rem solid rgba(0,0,0,0.4)' : 'none',
                                                         }}>
                                                             <TableCell component='div' sx={{ width: "80%" }}>{subpoints}</TableCell>
-                                                            <TableCell component='div' sx={{ padding: "5px" }}>
+                                                            <TableCell component='div' sx={{ padding: "0px" }}>
                                                                 <Downloading key={index} item={item} index={index} />
                                                             </TableCell>
                                                         </TableRow>

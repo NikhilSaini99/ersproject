@@ -83,8 +83,13 @@ const Retirement = () => {
             <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
             <ContentDiv>
 
-                <Typography variant="h1" >
-                    Retirement and Redundancy </Typography>
+            <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Retirement and Redundancy
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                {/* <Typography variant="h1" >
+                    Retirement and Redundancy </Typography> */}
                     <Box sx={{pl:{xs:'1.3rem', xl:'0'}}}>
                 <ol style={{ listStyleType: 'decimal' }}>
                     {data.map((item, index) => (

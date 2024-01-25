@@ -137,10 +137,14 @@ const RatesandThres = () => {
     return (
         <>
            <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
-
                 <ContentDiv>
-                    <Typography variant="h1">
-                        Rates and Thresholds</Typography>
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Rates and Thresholds
+                            <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1">
+                        Rates and Thresholds</Typography> */}
 
                     {/* <Typography variant='body1' my='1rem'>The rates of Income Tax applicable are as follows</Typography> */}
                     <Typography variant='h2'>Rates of normal TAX for individual</Typography>

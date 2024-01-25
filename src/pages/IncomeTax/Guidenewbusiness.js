@@ -16,9 +16,14 @@ const Guidenewbusiness = () => {
             <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
 
                 <ContentDiv>
-                    <Typography variant="h1">
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Step-By Step Guide for New Businesses
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1">
                         Step-By Step Guide for New Businesses
-                    </Typography>
+                    </Typography> */}
 
                     <Link href="http://www.ers.org.sz/documents/1674047725.pdf" className='Pointsformatting text-normalBlue'>http://www.ers.org.sz/documents/1674047725.pdf</Link>
                 </ContentDiv>

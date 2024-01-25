@@ -124,10 +124,15 @@ const SelfAssessment = () => {
 
 
                 <Box sx={FaqContainerStyling}>
-
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> Self Assessment
+                            <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
                     <Stack sx={accordionStyling}>
-                        <Typography variant="h1" >
-                            Self Assessment</Typography>
+                   
+                        {/* <Typography variant="h1" >
+                            Self Assessment</Typography> */}
                         {/* question and arrow*/}
                         {questionandanswer.map((item, index) => (
                             <Stack key={index} sx={insideAccordionStyle}>

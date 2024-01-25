@@ -154,6 +154,7 @@ const Eswatini = () => {
     
     return (
         <>
+        
             <PageLayout title={"Eswatini VAT"} bannerImg={Banner} contentBackground={bgimg}>
                 <ContentDiv>
                     <Box sx={{ padding: "2rem 0", position:"relative" }}>
@@ -161,6 +162,7 @@ const Eswatini = () => {
                             <span className="absolute bottom-0 left-0 w-1/4 border-b-2 border-yellowish"></span>
                             </Typography>
                     </Box>
+
                     {/*------------------- Section 1-------------------------------- */}
                     <Typography variant="h5" component="h2" className='Pointsformatting text-black'>
                         Every country in the world needs money to provide health, education, social services, roads, and a wide range of other facilities for all its citizens. To provide these facilities or services, the Government of the day budgets for the expenditure of public money. In Eswatini, a major part of Government revenue is collected by way of direct and indirect taxes on income and consumption. Income Tax is a DIRECT TAX payable by individuals and businesses based on their income or profits. However, everybody who benefits from services provided by the Government is also expected to contribute through a broader, neutral tax that is fair to all. Most countries in the world, therefore, impose some form of INDIRECT TAX, usually based on the amount of goods or services consumed by the taxpayer. </Typography>

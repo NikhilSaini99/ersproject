@@ -78,9 +78,15 @@ const EuRegistered = () => {
             <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
 
                 <ContentDiv>
-                    <Typography variant="h1" >
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>EU Registered Exporter System
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+
+                    {/* <Typography variant="h1" >
                         EU Registered Exporter System
-                    </Typography>
+                    </Typography> */}
                     <Typography variant="h2">
                         General information
                     </Typography>

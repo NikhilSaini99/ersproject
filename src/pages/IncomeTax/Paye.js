@@ -135,8 +135,14 @@ const Paye = () => {
         <>
            <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
             <ContentDiv >
-                <Typography variant="h1">
-                    PAYE - Quick Guide</Typography>
+               
+            <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>PAYE - Quick Guide
+                            <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                {/* <Typography variant="h1">
+                    PAYE - Quick Guide</Typography> */}
 
                 <Box className="Pointsformatting">
                     <div >

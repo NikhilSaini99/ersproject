@@ -27,9 +27,14 @@ export default function Withholding() {
      <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
               <ContentDiv>
 
-          <Typography variant="h1">
+              <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Withholding Taxes
+                            <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+          {/* <Typography variant="h1">
             Withholding Taxes
-          </Typography>
+          </Typography> */}
           
           {IncomeTaxData.map((item, key) => (
 

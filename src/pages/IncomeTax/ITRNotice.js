@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box,Typography } from "@mui/material";
 import Link from "next/link";
 import Banner from "../../assets/images/General-Import-&-Export-Rul.jpg"
 import bgimg from "../../assets/images/bg-1.png";
@@ -10,9 +10,15 @@ const ITRNotice = () => {
     <>
        <PageLayout title={"Eswatini Income Tax"} bannerImg={Banner} contentBackground={bgimg}>
             <ContentDiv>
-                <Typography variant="h1">
+
+            <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Income Tax Return Submission Notice 2022
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                {/* <Typography variant="h1">
                 Income Tax Return Submission Notice 2022
-                </Typography>
+                </Typography> */}
         <Link href="http://www.ers.org.sz/documents/1674048256.pdf">
           <Typography variant="h2" sx={{"&:hover":{textDecoration:"underline"}}} >Download Notice</Typography>
         </Link>
