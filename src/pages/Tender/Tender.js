@@ -21,8 +21,8 @@ const Tender = () => {
     fetchAPI();
   }, [fetchAPI]);
   
-  const tableHeaders = ["Title","Deadline", "Published", "Reference","Download",]
-  const includeProperties =["tenderName","deadline","publishedDate","reference","documentUrl"]
+  const tableHeaders = ["Title","Document Name", "Deadline", "Published", "Reference","Download",]
+  const includeProperties =["tenderName","documentName","deadline","publishedDate","reference","documentUrl"]
   const excluseProperties = ["id","createdAt","updatedAt",];
 
   return (

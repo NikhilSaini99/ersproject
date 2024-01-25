@@ -12,9 +12,11 @@ import {
 
 import React from "react";
 import dayjs from "dayjs";
+import useDownload from "@/hooks/useDownload";
 import { useState } from "react";
 
 const TableComponent = (props) => {
+  const {downloadFile, isDownloading, progress} = useDownload();
   const {
     tableData,
     tableName,
@@ -51,8 +53,9 @@ const TableComponent = (props) => {
   // Get the current page's data from the 'tender' array
   const currentPageData = tableData?.slice(startIndex, endIndex) || [];
 
-  const handlePDFDownload = (url) => {
+  const handlePDFDownload = (url, docName) => {
     window.open(url);
+    downloadFile(url, docName || "Document")
   };
 
   const isoToFullDate = (newDate) => {
@@ -83,6 +86,8 @@ const TableComponent = (props) => {
         rearrangedItem[property] = item.documentUrl || item.fileUrl;
       } else if (property === "fileSize") {
         rearrangedItem[property] = convertKbToMB(item.fileSize);
+      } else if(property === "documentName"){
+        rearrangedItem[property] = item.documentName || item.tenderName
       } else {
         rearrangedItem[property] = item[property];
       }
@@ -90,6 +95,7 @@ const TableComponent = (props) => {
 
     return rearrangedItem;
   });
+  console.log("rearrangedData", rearrangedData)
   return (
     <div>
       <TableContainer
@@ -138,7 +144,7 @@ const TableComponent = (props) => {
                   }}
                   onClick={() => {
                     handlePDFDownload(
-                      item.documentUrl ? item.documentUrl : item.fileUrl
+                      item.documentUrl ? item.documentUrl : item.fileUrl, item.documentName
                     );
                   }}
                 >
