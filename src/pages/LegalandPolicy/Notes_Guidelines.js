@@ -64,8 +64,8 @@ const Notes_Guidelines = () => {
                             </Typography>
                     </Box>
 
-                    <Typography variant="h1" >
-                        Practice Notes and Guidelines</Typography>
+                    {/* <Typography variant="h1" >
+                        Practice Notes and Guidelines</Typography> */}
 
 
                     <Typography variant="body1" sx={{ mb: '1rem' }} className='Pointsformatting'>
