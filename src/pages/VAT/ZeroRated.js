@@ -144,9 +144,14 @@ const ZeroRated = () => {
     <>
     <PageLayout title={"ERS"} bannerImg={Banner} contentBackground={bgimg}>
           <ContentDiv>
-            <Typography variant="h1" >
-              Zero Rated Goods & Services
-            </Typography>
+          <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Zero Rated Goods & Services
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+            {/* <Typography variant="h1" >
+              
+            </Typography> */}
 
             {/*------------------- Section 1-------------------------------- */}
             <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>

@@ -16,8 +16,14 @@ const VatRegulations = () => {
            <PageLayout title={"ERS"} bannerImg={Banner} contentBackground={bgimg}>
              
             <ContentDiv>
-                <Typography variant="h1"  >
-                    VAT Regulations</Typography>
+            <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>VAT Regulations
+                            <span className="absolute bottom-0 left-0 w-1/4 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+
+                {/* <Typography variant="h1"  >
+                    VAT Regulations</Typography> */}
 
                 <Typography variant='h6' className='Pointsformatting'>The VAT Regulations <Link href={'http://www.sra.org.sz/documents/1496926588.pdf'}
                     style={{ color: '#2f2483', fontWeight: 'bold' }}>(click here to download) </Link>

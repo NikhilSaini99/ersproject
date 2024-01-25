@@ -151,6 +151,7 @@ const Eswatini = () => {
         'The VAT (Output VAT) that the supplier charges his customer becomes the customer’s input tax. This provides an audit trail to the tax administration to verify the amount declared because output tax by the supplier can be reconciled to the customer’s input VAT.',
     ]
 
+    
     return (
         <>
             <PageLayout title={"Eswatini VAT"} bannerImg={Banner} contentBackground={bgimg}>

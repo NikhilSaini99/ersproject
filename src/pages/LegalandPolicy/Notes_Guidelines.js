@@ -57,8 +57,14 @@ const Notes_Guidelines = () => {
         <>
             <PageLayout title={"ERS"} bannerImg={Banner} contentBackground={bgimg}>
                 <ContentDiv sx={{ width: { xs: "100%", md: "100%", xl: "75%" }, p: "2rem" }}>
-                    <Typography variant="h1" >
-                        Practice Notes and Guidelines</Typography>
+                   
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Practice Notes and Guidelines
+                            <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1" >
+                        Practice Notes and Guidelines</Typography> */}
 
 
                     <Typography variant="body1" sx={{ mb: '1rem' }} className='Pointsformatting'>

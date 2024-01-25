@@ -79,9 +79,15 @@ const ReverseCharge = () => {
         <PageLayout title={"Reverse Charge Concept"} bannerImg={Banner} contentBackground={bgimg}>       
              
            <ContentDiv>
-                <Typography variant="h1" >
-                    Reverse Charge Concept
-                </Typography>
+
+           <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> Reverse Charge Concept
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                {/* <Typography variant="h1" >
+                   
+                </Typography> */}
 
                 {data.map((item) => (
                     <>
