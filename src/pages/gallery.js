@@ -1,3 +1,6 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import { Box, IconButton, Modal, Typography } from "@mui/material";
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
@@ -9,6 +12,7 @@ import Footer from "@/components/Footer";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Image from "next/image";
+import Slider from "react-slick";
 import { useEffect } from "react";
 import { useFetch } from "./api/api";
 
@@ -57,6 +61,71 @@ export default function Gallery() {
   const handleVisiblity = (i) => {
     setVisibleGroup(i);
   };
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+         className={`${className} !bg-yellowish !p-3 rounded-full `}
+        style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center",
+            height: "33px", right: "-39px", width: "33px"}}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} !bg-yellowish !p-3 rounded-full `}
+        style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center",
+            height: "33px", left: "-10px", top: "19px", width: "33px", zIndex:1}}
+        onClick={onClick}
+      />
+    );
+  }
+ 
+  
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+    initialSlide: 0,
+    nextArrow: <SampleNextArrow  />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+        }
+      }
+    ]
+  };
 
   return (
     <>
@@ -73,15 +142,15 @@ export default function Gallery() {
       {/*-----------------------Banner---------------------*/}
 
       <section>
-        <Image src={Banner} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
+        <Image src={Banner} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover" }} />
       </section>
 
       {/*-----------------------Gallery---------------------*/}
 
-      <section className="bg-white px-6 py-16">
+      <section className="bg-white px-12 py-16">
         <div>
           <h1
-            className=" text-[#2F3192] text-4xl font-semibold w-80"
+            className=" text-[#2F3192] text-4xl font-semibold"
             style={{ marginLeft: "2rem" }}
           >
             ERS Image Gallery
@@ -93,21 +162,23 @@ export default function Gallery() {
         </div>
 
         {/* Group Indicator */}
-        <div className="flex justify-center items-center gap-5 my-10 ml-8">
-          {data?.data?.data?.map((title, id) => (
-            <button
-              key={id}
-              onClick={() => handleVisiblity(id)}
-              className={`text-base text-black/80 bg-[#F7F7FA] text-center leading-6 font-semibold uppercase border border-[#ECECEC] rounded-full px-7 py-1
-               hover:text-white hover:bg-mainColor hover:ease-in hover:duration-300 ${
-                 visibleGroup === id
-                   ? "bg-mainColor text-white"
-                   : "bg-[#F7F7FA] text-black/80"
-               }`}
-            >
-              {title.groupName}
-            </button>
-          ))}
+        <div className="my-10 mx-6">
+          <Slider {...settings} className="px-12">
+            {data?.data?.data?.map((title, id) => (
+              <div key={`${title}+${id}`} className="mx-4">
+                <button
+                  onClick={() => handleVisiblity(id)}
+                  className={`text-base text-black/80 bg-[#F7F7FA] text-center leading-6 font-semibold uppercase border border-[#ECECEC] rounded-full px-7 py-1
+         hover:text-white hover:bg-mainColor hover:ease-in hover:duration-300 ${visibleGroup === id
+                      ? "bg-mainColor text-white"
+                      : "bg-[#F7F7FA] text-black/80"
+                    }`}
+                >
+                  {title.groupName}
+                </button>
+              </div>
+            ))}
+          </Slider>
         </div>
 
         <div className="">
@@ -115,9 +186,8 @@ export default function Gallery() {
             data?.data?.data.map((item, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-3 sm:w-95 md:w-full xl:w-95 2xl:w-85 mx-auto gap-4 overflow-hidden ${
-                  index === visibleGroup ? "block" : "hidden"
-                } `}
+                className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4 overflow-hidden ${index === visibleGroup ? "block" : "hidden"
+    } `}
               >
                 {item?.imagegroup?.map((item, i) => {
                   return (
@@ -136,17 +206,17 @@ export default function Gallery() {
                           style={{ width: "100%", height: "100%" }}
                         />
                         <Typography variant='body1' sx={{
-                                                textAlign: 'center', p:"2rem", fontWeight: 'bold',
-                                                position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-                                                display: 'flex', alignItems: 'end', justifyContent: 'center',
-                                                backgroundColor: 'rgba(0, 0, 0, 0.5)', color: '#fff',
-                                                opacity: 0, transition: 'opacity 0.3s',
-                                                backdropFilter: 'blur(5px)',
-                                                // backgroundColor: (theme)=>theme.palette.primary.main,
-                                                ':hover': { opacity: 1 }
-                                            }}>
-                                                
-                                            </Typography>
+                          textAlign: 'center', p: "2rem", fontWeight: 'bold',
+                          position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+                          display: 'flex', alignItems: 'end', justifyContent: 'center',
+                          backgroundColor: 'rgba(0, 0, 0, 0.5)', color: '#fff',
+                          opacity: 0, transition: 'opacity 0.3s',
+                          backdropFilter: 'blur(5px)',
+                          // backgroundColor: (theme)=>theme.palette.primary.main,
+                          ':hover': { opacity: 1 }
+                        }}>
+
+                        </Typography>
                       </div>
                       {/* <div className="absolute opacity-0 group-hover:opacity-100 ease-in duration-500  bottom-0 text-center w-full">
                         <h3 className="text-lg text-white font-medium mx-4">

@@ -28,13 +28,13 @@ export default function NewsDetails() {
 
   const News = {};
   if (data?.data) {
-    const { description, newsName, url, publicMeetingName, uploadDate } = data?.data;
+    const { description, newsName, url, publicMeetingName, uploadDate, author_name } = data?.data;
     News.description = description;
     News.newsName = newsName || publicMeetingName;
     News.url = url;
     News.uploadDate = uploadDate
+    News.author_name = author_name
   }
-console.log("yo man",query.apiURl ==="/api/publicMeeting")
   return (
     <>
       <Head>
@@ -87,8 +87,10 @@ console.log("yo man",query.apiURl ==="/api/publicMeeting")
                       }}
                     />
                   </Box>
-                  <Typography variant="body1" sx={{ color: "grey" }}>
+                  <Typography variant="body1" sx={{  }}>
                     {dayjs(News.uploadDate).format("DD-MM-YYYY")}
+                    <br/>
+                    By - <strong>{News.author_name}</strong>
                   </Typography>
                   <Stack sx={{ flexDirection: "column", gap: "1.5rem" }}>
                     <Typography

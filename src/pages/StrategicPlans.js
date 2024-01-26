@@ -54,7 +54,7 @@ const StrategicPlans = () => {
 
             <Header />
 
-            <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
+            <Box sx={{ height: { xs: '15rem', lg: '30rem', xs: '30rem' } }}>
                 <img src={Banner.src} alt=""
                     style={{
                         width: "100%", height: "100%",
@@ -63,10 +63,17 @@ const StrategicPlans = () => {
                 />
             </Box>
 
-            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
+            <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '2rem auto' } }}>
+               
+            <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> Strategic Plans
+                            <span className="absolute bottom-0 left-0 w-1/5 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+
+                {/* <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
                     Strategic Plans
-                </Typography>
+                </Typography> */}
                 {isLoading ? <Loader /> :
                     <GridAutoColumn3>
                         {StrategicPlans?.map((item, index) => (
