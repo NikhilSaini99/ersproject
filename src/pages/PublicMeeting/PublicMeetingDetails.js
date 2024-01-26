@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { PublicMeetingData } from "@/content/data";
 import Banner from "../../assets/images/contact-bg.png"
 import { LatestNewsSection } from '../../pages/news'
-import { Grid, Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography,Box } from "@mui/material";
 
 
 export default function PublicMeetingDetails() {
