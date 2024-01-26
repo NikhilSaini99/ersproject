@@ -52,22 +52,21 @@ export default function FormTable({ title, defaultValue }) {
   const includeProperties = ["customId", "formName", "category", "fileSize", "description", "fileUrl"]
   const excluseProperties = ["updatedAt", "deletedAt", "createdAt", "fileType"];
 
-  console.log(isLoading)
   if (isLoading) {
     return <Loader />;
   }
 
   return (
     <>
-      {selectedCategory?.length > 0 ? <section className="px-6 py-16 bg-[#F7F7FA]">
+      {selectedCategory?.length > 0 ? <section className="">
         <div
           className="pb-10 flex justify-between items-center"
-          style={{ width: "90%", margin: "0 auto" }}
+          style={{ width: "100%", margin: "0 auto" }}
         >
           <div>
-            <h1 className=" text-[#2F3192] text-4xl font-semibold relative">
+            <h1 className=" text-[#2F3192] text-4xl font-semibold relative leading-none">
               {categoryName}
-              <span className="absolute bottom-0 left-0 w-4/5 border-b-2 border-yellowish"></span>
+              <span className="absolute -bottom-2 left-0 w-4/5 border-b-2 border-yellowish leading-none "></span>
             </h1>
           </div>
 

@@ -3,9 +3,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Banner from "../assets/images/tax.jpg"
+import Banner from "../assets/images/tax.jpg";
 import FormTable from "@/components/Table";
-import {Box} from '@mui/material'
+import { Box } from "@mui/material";
 
 export default function VatForms() {
   return (
@@ -31,16 +31,23 @@ export default function VatForms() {
                 objectFit: 'cover'
               }}
             />
-      </Box>
+            </Box>
 
       {/* <Box sx={{position: "relative"}}>
             <Image src={Banner} alt="etax" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
       </Box> */}
 
       {/*-----------------------Table---------------------*/}
-
-      <FormTable title={"VAT Forms"} defaultValue={"VAT"}/>
-
+      <Box
+        sx={{
+          width: "90%",
+          margin: { xs: "0 auto", lg: "0  auto" },
+          px: { md: "5rem", lg: "5rem,", xl: "10rem" },
+          py: "2rem", background: "transparent !important"
+        }}
+      >
+        <FormTable title={"VAT Forms"} defaultValue={"VAT"} />
+      </Box>
       {/*-----------------------Footer---------------------*/}
 
       <Footer />
