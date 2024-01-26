@@ -63,7 +63,7 @@ const Retirement = () => {
             section: (
                 <>
                     In terms of the proviso to section 12(1)(j)(iv) any amount in excess of E60 000 is taxable at the special
-                    <Link href="http://www.sra.org.sz/incometax/pageview.php?id=69&name=Rates%20and%20Thresholds"><b style={{color:'blue'}}> concessionary rates </b></Link>
+                    <Link href="/IncomeTax/RatesandThres"><b style={{color:'blue'}}> concessionary rates </b></Link>
                      prescribed in Part III of the Third Schedule to the Income Tax Order, 1975, as amended.
                 </>
             ),

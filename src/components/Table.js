@@ -58,7 +58,7 @@ export default function FormTable({ title, defaultValue }) {
 
   return (
     <>
-      {selectedCategory?.length > 0 ? <section className="">
+      {selectedCategory?.length > 0 ? <section className="px-6 py-16">
         <div
           className="pb-10 flex justify-between items-center"
           style={{ width: "100%", margin: "0 auto" }}
