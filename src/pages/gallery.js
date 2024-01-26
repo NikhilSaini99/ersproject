@@ -93,7 +93,7 @@ export default function Gallery() {
         </div>
 
         {/* Group Indicator */}
-        <div className="flex justify-center items-center gap-5 my-10">
+        <div className="flex justify-center items-center gap-5 my-10 ml-8">
           {data?.data?.data?.map((title, id) => (
             <button
               key={id}
