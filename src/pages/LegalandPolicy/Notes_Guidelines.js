@@ -55,7 +55,7 @@ const Notes_Guidelines = () => {
     return (
         <>
             <PageLayout title={"ERS"} bannerImg={Banner} contentBackground={bgimg}>
-                <ContentDiv sx={{ width: { xs: "100%", md: "100%", xl: "75%" }, }}>
+                <ContentDiv sx={{ width: { xs: "90%" }, margin: { xs: "0 auto", lg: "0  auto" },  px: { md: "5rem", lg: "5rem,", xl: "10rem" }, py: "2rem" }}>
                    
                 <Box sx={{ padding: "2rem 0", position:"relative" }}>
                         <Typography variant="h1" sx={{ position: "relative !important" }}>Practice Notes and Guidelines
@@ -67,8 +67,7 @@ const Notes_Guidelines = () => {
                         Practice notes are developed using the applicable legislations and are meant to assist with simplifying the application of the law. They do not replace the legislation but purely provide means for better understanding the principles of the law.
                     </Typography>
 
-
-                    {isLoading ? <Loader /> :
+                        {isLoading ? <Loader /> :
                         dataarr?.length > 0 &&
                         <Paper elevation={20}>
                             <TableContainer sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.4)' } }}>

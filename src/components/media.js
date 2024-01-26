@@ -141,7 +141,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
                   transition: "0.5s",
                   filter: "brightness(60%)",
                 }),
-                height: "250px",
+                height: "15.625rem",
                 backgroundSize: "cover",
                 position: "relative",
               }}
@@ -157,7 +157,6 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
                   height: "100%",
                   display: "block",
                   objectFit: "cover",
-                  // backgroundAttachment:"fixed"
                 }}
               />
             </Box>

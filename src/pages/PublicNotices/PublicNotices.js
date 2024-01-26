@@ -88,13 +88,7 @@ const PublicNotices = () => {
         }}
       >
         <Box
-          sx={{
-            width: "100%",
-            margin: { xs: "0 auto", lg: "0  auto" },
-            px: { md: "5rem", lg: "0rem,", xl: "0rem" },
-            py: "2rem",
-          }}
-        >
+           sx={{width: "90%",margin: { xs: "0 auto", lg: "0  auto" },px: { md: "5rem", lg: "5rem,", xl: "10rem" },py: "2rem",}}>
 
         <Box sx={{ padding: "2rem 0", position:"relative" }}>
                         <Typography variant="h1" sx={{ position: "relative !important" }}> Public Notice

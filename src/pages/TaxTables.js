@@ -53,7 +53,7 @@ const TaxTables = () => {
             }} >
             <section className="py-8  w-95 my-0 flex flex-row leading-8">
 
-                <div className="relative w-3/5 mx-auto my-0 relative">
+                <div className="relative w-3/5 mx-auto my-0">
                     <div className="flex flex-col gap-y-4 float-right clear-right w-20 absolute right-0"
                         style={{ marginRight: 'calc((12.5% + 2px)*2*-1)', top: '1.5rem' }}>
                         <div className="border-t border-black font-bold"></div>
@@ -90,3 +90,4 @@ const TaxTables = () => {
 }
 
 export default TaxTables
+p
