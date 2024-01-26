@@ -498,13 +498,17 @@ export default function Header(props) {
                                   Bonded Warehouses/Rebate Store
                                 </p>
                               </Link>
+                
                               <br />
-                              <Link href={"/CustomExcise/FreeTrade"}>
+                              <Link href={"/CustomExcise/FreeTrade"}
+                              className="line"
+                              >
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish ">
                                   Free Trade and Preferential Agreements
                                 </p>
                               </Link>
-
+                              
+                              <br />
                               <Link
                                 href={"/CustomExcise/Excisepage"}
                                 className="line"

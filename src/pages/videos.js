@@ -109,9 +109,15 @@ export default function Videos() {
             py: "2rem",
           }}
         >
-          <Typography variant="h1">
+          <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> Things to See
+                            <span className="absolute bottom-0 left-0 w-1/6 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+
+          {/* <Typography variant="h1">
             Things to See
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
             {data &&

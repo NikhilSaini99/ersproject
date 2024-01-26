@@ -35,9 +35,16 @@ export default function GeneralRules() {
           {/* ------------------Importants---------------------------- */}
 
           <div className=" ">
-            <Typography variant="h1" >
+
+          <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> {data.title}
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+
+            {/* <Typography variant="h1" >
               {data.title}
-            </Typography>
+            </Typography> */}
             <Typography variant="h2">{data.title1}</Typography>
             <Typography variant="body1" className="mt-4">{data.title2}</Typography>
             <ul className="mt-2">
