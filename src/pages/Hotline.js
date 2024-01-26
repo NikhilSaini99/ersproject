@@ -31,9 +31,21 @@ const Hotline = () => {
 
             <Header />
              {/*-----------------------Banner---------------------*/}
-             <Box>
+           
+             <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
+             <Image src={Banner} alt="Hotline Image"
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
+      </Box>
+           
+             {/* <Box>
             <Image src={Banner} alt="..." className="h-96 w-full" />
-            </Box>
+            </Box> */}
 
             <Box sx={{ width: '80%', margin: {xs:'2rem auto',lg:'5rem auto'} }}>
                 {hotLineData.map((item, index) => (

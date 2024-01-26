@@ -95,20 +95,19 @@ export default function Contact() {
       
       <section>
         <div className="relative">
-          <div className="h-96">
-            {/* <Image
-              src={bgimg}
-              alt=""
+         
+
+          <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
+         <Image src={bgimg} alt="Contact Us"
               width={0}
               height={0}
               style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
+                width: "100%", height: "100%",
+                objectFit: 'cover'
               }}
-            /> */}
-            <Image src={bgimg} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
-          </div>
+            />
+      </Box>
+          
           <div className="absolute bottom-0 bg-white/80 w-full pl-10 py-[14px]">
             <h1 className="text-subColor text-3xl font-bold leading-8">
               CONTACT ERS

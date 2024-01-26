@@ -22,9 +22,20 @@ export default function VatForms() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <Box sx={{position: "relative"}}>
-            <Image src={Banner} alt="etax" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
+     <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
+      <Image src={Banner} alt="etax"
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
       </Box>
+
+      {/* <Box sx={{position: "relative"}}>
+            <Image src={Banner} alt="etax" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
+      </Box> */}
 
       {/*-----------------------Table---------------------*/}
 

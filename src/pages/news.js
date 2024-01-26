@@ -1,4 +1,4 @@
-import { Grid, Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography, Box } from "@mui/material";
 import React, { useEffect } from "react";
 
 import Banner from "../assets/images/news-banner.jpg";
@@ -102,13 +102,23 @@ export default function News() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <section>
-        <Image src={Banner} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
-      </section>
+      
+
+     
 
       {/*------------------------News----------------------*/}
 
       <section>
+      <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
+      <Image src={Banner} alt="NEWS Images"
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
+      </Box>
         <Grid container>
           {/* Left Side */}
           <Grid item xs={8} sx={{ marginTop: "8rem" }}>

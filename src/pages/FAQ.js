@@ -78,9 +78,19 @@ export default function FAQ() {
 
       <Header />
 
-      <section>
+      <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
+      <Image src={Banner} alt="FAQ"
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
+      </Box>
+      {/* <section>
         <Image src={Banner} alt="..." className="h-96 w-full" />
-      </section>
+      </section> */}
 
       <section className="xs:mx-8 sm:mx-20 md:mx-30 lg:mx-30 xl:mx-40 2xl:mx-72 my-14">
         <div>

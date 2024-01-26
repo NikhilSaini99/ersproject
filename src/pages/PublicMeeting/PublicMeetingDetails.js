@@ -25,10 +25,20 @@ export default function PublicMeetingDetails() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <section>
+      {/* <section>
         <Image src={Banner} alt="..." className="h-96 w-full" />
-      </section>
+      </section> */}
 
+      <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
+      <Image src={Banner} alt="Public Meeting"
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
+      </Box>
       {/*-----------------------Detailed News---------------------*/}
 
       <section>

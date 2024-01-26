@@ -33,9 +33,20 @@ const TaxTables = () => {
             <Header />
 
              {/*-----------------------Banner---------------------*/}
-             <Box>
+             {/* <Box>
             <Image src={Banner} alt="..." className="h-96 w-full" />
-            </Box>
+            </Box> */}
+
+        <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
+      <Image src={Banner} alt="Tax Table"
+              width={0}
+              height={0}
+              style={{
+                width: "100%", height: "100%",
+                objectFit: 'cover'
+              }}
+            />
+      </Box>
             <Box sx={{
                 backgroundImage: `url(${bgimg.src})`,
                 backgroundSize: 'cover', backgroundAttachment: 'fixed'

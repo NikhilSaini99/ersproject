@@ -22,7 +22,7 @@ export default function CustomsForms() {
 
       {/*-----------------------Banner---------------------*/}
 
-      <Box sx={{height:{xs:'15rem',lg:'25rem',xs:'30rem'}}}>
+      <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
       <Image src={Banner} alt="etax"
               width={0}
               height={0}

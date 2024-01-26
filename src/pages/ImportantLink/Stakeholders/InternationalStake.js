@@ -144,7 +144,7 @@ const InternationalStake = () => {
 
             <Header />
 
-            <Box sx={{ height: { xs: '15rem', lg: '25rem', xs: '30rem' } }}>
+            <Box sx={{ height: { xs: '15rem', lg: '30rem', xs: '30rem' } }}>
                 <Image src={Banner} alt=""
                     width={0}
                     height={0}
