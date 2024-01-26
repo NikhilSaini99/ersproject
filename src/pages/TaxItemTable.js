@@ -50,23 +50,29 @@ const TaxItemTable = () => {
           sx={{
             width: "85%",
             margin: { xs: "0rem auto", lg: "0rem  auto" },
-            py: "3rem",
+            py: "2rem",
           }}
         >
-          <Typography
+          <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> Tax Item Codes
+                            <span className="absolute bottom-0 left-0 w-1/5 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+          {/* <Typography
             variant="h1"
-            sx={{ pt: "2rem", mb: "2rem", textAlign: "center" }}
-          >
+            sx={{ pt: "2rem", mb: "2rem", textAlign: "center" }}>
             Tax Item Codes
-          </Typography>
+          </Typography> */}
+
+
           <Typography
             variant="body1"
             className="Pointsformatting"
             sx={{
               fontSize: "1rem",
-              textAlign: "center",
+              textAlign: "left",
               pb: "2rem",
-              width: { xs: "96%", md: "90%", xl: "80%" },
+              width: { xs: "96%", md: "100%", xl: "80%" },
               margin: "0rem auto",
             }}
           >
@@ -77,18 +83,18 @@ const TaxItemTable = () => {
             used.* * The MTN Mobile Money provides an option to select the tax
             type for which payment is being made, therefore use of the
             referencing format is not necessary. The table below has the total
-            list of tax item codes for use when referencing payments:
+            list of tax item codes for use when referencing payments
           </Typography>
           <Box
             sx={{
-              width: { xs: "96%", md: "90%", xl: "80%" },
+              width: { xs: "96%", md: "100%", xl: "80%" },
               margin: "0rem auto",
             }}
           >
             {isLoading ? (
               <Loader />
             ) : (
-              <Paper elevation={20} sx={{ width: "90%", margin: "0 auto" }}>
+              <Paper elevation={20} sx={{ width: "100%", margin: "0 auto" }}>
                 <TableContainer 
                 sx={{ '& th, & td': { border: '0.1rem solid rgba(0,0,0,0.1)' } }}
                 >

@@ -54,10 +54,18 @@ useEffect(()=>{
                 />
             </Box>
 
-                        <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '5rem auto' } }}>
-                <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
+                 <Box sx={{ width: { xs: '95%', md: '85%', lg: '80%' }, margin: { xs: '2rem auto', lg: '2rem auto' } }}>
+              
+                 <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> Annual Reports
+                            <span className="absolute bottom-0 left-0 w-1/5 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+
+                {/* <Typography variant="h4" component="h1" sx={{ color: '#2f2483', fontWeight: 'bold', my: '3.5rem' }}>
                     Annual Reports
-                </Typography>
+                </Typography> */}
+              
                 {isLoading? <Loader/>:
                 <Grid container spacing={2}
                     sx={{ '& > .MuiGrid-item': { marginBottom: '2rem' } }}>

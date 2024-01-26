@@ -160,9 +160,14 @@ const InternationalStake = () => {
             }} >
 
                 <ContentDiv>
-                    <Typography variant="h1">
+                <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> Links for International Organisations
+                            <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+                    {/* <Typography variant="h1">
                         Links
-                    </Typography>
+                    </Typography> */}
                     <Typography variant="h2" sx={{ fontSize: '1.25rem', fontWeight: 'bold', my: '1.2rem' }}>
                         INTERNATIONAL ORGANISATIONS AND AGREEMENTS
                     </Typography>

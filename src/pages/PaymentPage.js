@@ -80,9 +80,16 @@ const PaymentPage = () => {
                 />
             </Box>
             <ContentDiv>
+
+            <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> Payments
+                            <span className="absolute bottom-0 left-0 w-1/6 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+{/* 
                 <Typography variant="h1" >
                     Payments
-                </Typography>
+                </Typography> */}
                 <Typography variant='body1' className='Pointsformatting mb-2'>The following modes of payment are available for ERS customers to make tax and/or duties payments:</Typography>
 
                 <ol style={{ listStyleType: 'decimal', marginLeft: "1rem" }}>

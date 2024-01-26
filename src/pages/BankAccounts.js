@@ -71,15 +71,24 @@ const BankAccounts = () => {
                 />
             </Box>
             <ContentDiv>
-                <Typography variant="h1">
-                    Bank Accounts</Typography>
+
+            <Box sx={{ padding: "2rem 0", position:"relative" }}>
+                        <Typography variant="h1" sx={{ position: "relative !important" }}> Bank Accounts
+                            <span className="absolute bottom-0 left-0 w-1/4 border-b-2 border-yellowish"></span>
+                            </Typography>
+                    </Box>
+
+                {/* <Typography variant="h1">
+                    Bank Accounts</Typography> */}
+
+
                 <Typography variant='body1' className='Pointsformatting'>The ERS has two (2) accounts in each of the five banks in
                     Eswatini
                     . Taxpayers are advised to use the accounts in the same bank as their own when making EFT payments; the payment will clear into the ERS account faster and therefore the ERS may timeously receipt such payment. Cross banking and use of the wrong account may cause delays in receipting of payments and therefore result in possible inconveniences for taxpayers
                 </Typography>
                 <Typography variant='body1' className='Pointsformatting my-4' >Below are the ERS transaction accounts:</Typography>
                 <Box >
-                    <Paper elevation={20} sx={{ borderRadius: '10px', width: '90%', margin: '2rem auto' }}>
+                    <Paper elevation={20} sx={{ borderRadius: '10px', width: '100%', margin: '2rem auto' }}>
                         <TableContainer sx={{ borderRadius: '10px' }}>
                             <Table>
                                 <TableHead>
