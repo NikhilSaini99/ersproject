@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Grid, Stack, Typography, Box, Button } from "@mui/material";
+import { Grid, Stack, Typography, Box, Button, IconButton } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 import Banner from "../assets/images/news-banner.jpg";
@@ -14,7 +14,8 @@ import { useFetch } from "./api/api";
 import dayjs from "dayjs";
 import Loader from "@/components/Loader";
 import Link from "next/link";
-
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 5;
@@ -40,7 +41,7 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
   if (isLoading) return <Loader />;
 
   return (
-    <Grid item xs={4} sx={{ position: "relative", mb:"2rem" }}>
+    <Grid item xs={4} sx={{ position: "relative",  }}>
       <div
         style={{
           position: "absolute",
@@ -52,7 +53,10 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
           opacity: "0.90",
         }}
       ></div>
-      {!isPublic && (
+      
+      {paginatedNews && paginatedNews.length > 0 ? (
+        <div>
+        {!isPublic && (
         <>
           {" "}
           <Typography
@@ -62,7 +66,7 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
               fontWeight: "bold",
               textAlign: "left",
               margin: "0 auto 0 4rem",
-              // top: "6.8rem",
+              marginTop: "3rem"
             }}
           >
             Latest News
@@ -72,7 +76,6 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
               width: { xs: "75%", lg: "80%" },
               position: "relative",
               margin: "0 auto",
-              // top: "8rem",
             }}
           >
             <Stack
@@ -86,9 +89,8 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
                     sx={{
                       flexDirection: "column",
                       gap: "0.6rem",
-                      p: "1.5rem",
+                      p: " 1.5rem 1.5rem 1.5rem 1.5rem",
                       cursor: "pointer",
-                      borderRadius: "25px",
                       boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
                       transition: "transform 0.3s ease-in-out",
                       "&:hover": {
@@ -102,7 +104,7 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
                         query: { id: News?.id, apiURl: "/api/news" },
                       }}
                     >
-                    <Box sx={{height:"5rem"}}>
+                    <Box sx={{height:{md:"6rem",lg:"15rem"}}}>
                       <img
                         src={News.url}
                         alt={News.newsName}
@@ -113,12 +115,15 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
                         }}
                       />
                       </Box>
+                      <Box sx={{display:"flex", justifyContent:"space-between", flexWrap:"wrap", mt:"0.5rem"}}>
                       <Typography variant="subtitle2" sx={{ color: "grey" }}>
-                        {dayjs(News.uploadDate).format("DD-MM-YYYY")}
-                        <br />
-                        By - <strong>{News.author_name}</strong>
+                      <strong>Author: {News.author_name}</strong>
                       </Typography>
-                      <Typography variant="subtitle1" fontWeight={600}>{News.newsName}</Typography>
+                      <Typography variant="subtitle2" sx={{ color: "grey" }}>
+                         Posted on {dayjs(News.uploadDate).format("MMM D YYYY")}
+                      </Typography>
+                      </Box>
+                      <Typography variant="body1" fontWeight={600} sx={{ overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', clamp: '2', '@media (max-width: 600px)': { clamp: '1' } }}>{News.newsName}</Typography>
                     </Link>
                   </Stack>
                 ))}
@@ -126,39 +131,23 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
           </Stack>
         </>
       )}
-      <Box sx={{display:'flex', gap:"1rem", justifyContent:"center", my:"2rem"}}>
-      <Button
-        variant="contained"
-        disabled={currentPage === 0}
-        sx={{
-          backgroundColor: "#2F2483 !important",
-          "&:hover": {
-            backgroundColor: "#f4c402 !important",
-            color: "#000000",
-          },
-        }}
-        onClick={handlePreviousPage}
-      >
-        Previous
-      </Button>
-      <Button
-        variant="contained"
-        disabled={
-          currentPage >=
-          Math.ceil(restNews && restNews.length / itemsPerPage) - 1
-        }
-        sx={{
-          backgroundColor: "#2F2483 !important",
-          "&:hover": {
-            backgroundColor: "#f4c402 !important",
-            color: "#000000",
-          },
-        }}
-        onClick={handleNextPage}
-      >
-        Next
-      </Button>
+      <Box sx={{display:'flex', justifyContent:"space-between", my:"2rem", width:"80%", m:"0 auto"}}>
+      <IconButton  disabled={currentPage === 0}  onClick={handlePreviousPage} sx={{cursor: "pointer"}}>
+      <ArrowBackIosIcon sx={{color:(theme)=> theme.palette.secondary.main}}/>
+      </IconButton>
+
+      <IconButton disabled={ currentPage >= Math.ceil(restNews && restNews.length / itemsPerPage) - 1 } onClick={handleNextPage}  sx={{cursor:"pointer"}}>
+      <ArrowForwardIosIcon sx={{color:(theme)=> theme.palette.secondary.main}}/>
+      </IconButton>
       </Box>
+        </div>
+      ) : (
+        <div>
+        <Typography variant="h4" sx={{mt:"3rem", fontWeight: "bold", textAlign: "center", height:"100%",zIndex:"9999"
+        }}>No other NEWS</Typography>
+</div>
+      ) }
+        
     </Grid>
   );
 };
@@ -200,13 +189,15 @@ export default function News() {
             }}
           />
         </Box>
-        <Typography variant="h4" sx={{ fontWeight: "bold", textAlign: "left" }}>
-          All News 
-        </Typography>
         <div>
           <Grid container>
             {/* Left Side */}
-            <Grid item xs={8} sx={{ marginTop: "8rem" }}>
+            <Grid item xs={8} sx={{ marginTop: "3rem" }}>
+            <Box sx={{ mb:"2rem"}}>
+            <Typography variant="h4"  sx={{textAlign:"center", m: "0px auto !important", fontWeight: "bold", width: { xs: "85%", md: "90%", lg: "78%", xl: "70%" } }}>
+          All News 
+        </Typography>
+        </Box>
               {data &&
                 data?.data
                   ?.slice(0, 3)

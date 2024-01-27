@@ -18,7 +18,7 @@ const Spreadsheet = () => {
           <Box sx={{ padding: "2rem 0", position: "relative" }}>
             <Typography variant="h1" sx={{ position: "relative !important" }}>
             PAYE Spreadsheet
-              <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+              <span className="absolute bottom-0 left-0 w-1/4 border-b-2 border-yellowish"></span>
             </Typography>
           </Box>
           <Link href="https://www.ers.org.sz/documents/1685441059.xlsx">
