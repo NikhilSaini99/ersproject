@@ -36,3 +36,9 @@ export const GridAutoColumn3 = styled("div")(({theme})=>({
   gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
   gap: "1rem",
 }))
+
+export const GridNewsColumn = styled("div")(({theme})=>({
+  display: "grid",
+  gridTemplateColumns: "repeat(2, minmax(1fr, 300px))",
+  gridGap: "1rem",
+}))

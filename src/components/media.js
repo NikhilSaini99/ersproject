@@ -19,6 +19,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import dayjs from "dayjs";
+import DOMPurify from "dompurify";
 
 function Media() {
   return (
@@ -122,7 +123,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
         elevation={12}
         sx={{
           margin: {
-            xs: "0px 5rem 4rem 6rem",
+            xs: "0px 5rem 4rem 2rem",
             md: "0px 5rem 4rem 2rem",
             lg: "0px 5rem 4rem 6rem",
             xl: "0px 5rem 4rem 15rem",
@@ -211,7 +212,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
             <Typography
               variant="body1"
               sx={{ color: "grey" }}
-              dangerouslySetInnerHTML={{ __html: truncate(description) }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncate(description))  }}
             ></Typography>
             <Divider />
 
@@ -219,13 +220,19 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
               direction={"row"}
               sx={{ display: "flex", justifyContent: "space-between" }}
             >
-              <Box sx={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-                <Avatar />
+              <Box sx={{ display: "flex", gap: "0.3rem", alignItems: "center" }}>
+                {/* <Avatar /> */}
                 <Typography
                   variant="body1"
                   sx={{ fontWeight: "bold", color: "black", fontSize: "14px" }}
                 >
-                  {authorName}
+                  By -
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontWeight: "bold", color: "black", fontSize: "14px" }}
+                >
+                  {authorName?.toString()?.charAt(0)?.toUpperCase() + authorName?.slice(1)}
                 </Typography>
               </Box>
             </Stack>

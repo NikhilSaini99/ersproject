@@ -11,6 +11,20 @@ import Loader from "@/components/Loader";
 import dayjs from "dayjs";
 import { useFetch } from "./api/api";
 import { useRouter } from "next/router";
+import DOMPurify from "dompurify";
+import styles from "./NewsDetail-style.module.css"
+
+const resetCSS = `
+<style>
+  .reset-this-root {
+    all: unset;
+  }
+  ol, ol ol, ol ol ol, ol ol ol ol, ol ol ol ol ol {
+    list-style-type: decimal !important;
+    padding-left: 40px !important;
+  }
+</style>
+`;
 
 export default function NewsDetails() {
   const router = useRouter();
@@ -20,21 +34,31 @@ export default function NewsDetails() {
     "get",
     `${query.apiURl}/${query.id}`
   );
-
+  const { data: allNews, fetchAPI:allNewsFetch, isLoading:allNewsLoading } = useFetch("get", "/api/news");
 
   useEffect(() => {
     fetchAPI();
-  }, [fetchAPI]);
+    allNewsFetch()
+  }, [fetchAPI,allNewsFetch]);
 
   const News = {};
   if (data?.data) {
-    const { description, newsName, url, publicMeetingName, uploadDate, author_name } = data?.data;
+    const {
+      description,
+      newsName,
+      url,
+      publicMeetingName,
+      uploadDate,
+      author_name,
+    } = data?.data;
     News.description = description;
     News.newsName = newsName || publicMeetingName;
     News.url = url;
-    News.uploadDate = uploadDate
-    News.author_name = author_name
+    News.uploadDate = uploadDate;
+    News.author_name = author_name;
   }
+
+ 
   return (
     <>
       <Head>
@@ -47,31 +71,30 @@ export default function NewsDetails() {
 
       <Header />
 
-      {/*-----------------------Banner---------------------*/}
-
-      {/* <section>
-      <Image src={Banner} alt="about_us" width={0} height={0} className="h-96" style={{ width: "100%", objectFit: "cover"}}/>
-      </section> */}
-
-    <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
-      <Image src={Banner} alt="Public Meeting"
-              width={0}
-              height={0}
-              style={{
-                width: "100%", height: "100%",
-                objectFit: 'cover'
-              }}
-            />
+         <Box sx={{ height: { xs: "15rem", lg: "30rem", xs: "30rem" } }}>
+        <Image
+          src={Banner}
+          alt="Public Meeting"
+          width={0}
+          height={0}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
       </Box>
       {/*-----------------------Detailed News---------------------*/}
       {isLoading ? (
         <Loader />
       ) : (
-        <section>
+        <section className="h-full">
+        <Typography variant="h4" sx={{ fontWeight: "bold", textAlign: "left", ml: "5.9rem", my:"2rem", }}>All News</Typography>
+
           <Grid container>
             {/* LEFT SIDE START */}
             {data?.data && (
-              <Grid item xs={8} sx={{ marginTop: "8rem" }}>
+              <Grid item xs={8} sx={{ marginTop: "0rem" }}>
                 <Stack
                   sx={{
                     flexDirection: "column",
@@ -97,9 +120,9 @@ export default function NewsDetails() {
                       }}
                     />
                   </Box>
-                  <Typography variant="body1" sx={{  }}>
+                  <Typography variant="body1" sx={{}}>
                     {dayjs(News.uploadDate).format("DD-MM-YYYY")}
-                    <br/>
+                    <br />
                     By - <strong>{News.author_name}</strong>
                   </Typography>
                   <Stack sx={{ flexDirection: "column", gap: "1.5rem" }}>
@@ -109,11 +132,11 @@ export default function NewsDetails() {
                     >
                       {News.newsName}
                     </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{ color: "grey" }}
-                      dangerouslySetInnerHTML={{ __html: News.description }}
-                    ></Typography>
+                    <div className={styles.reset_this_root}
+                      dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(resetCSS + News.description),
+                      }}
+                    ></div>
                     <Typography variant="body1"></Typography>
                   </Stack>
                 </Stack>
@@ -121,7 +144,11 @@ export default function NewsDetails() {
             )}
 
             {/* Right Side with latest news*/}
-            {<LatestNewsSection isPublic={query.apiURl ==="/api/publicMeeting"}/>}
+            {
+              <LatestNewsSection restNews={allNews?.data?.slice(3)} isLoading={allNewsLoading}
+                isPublic={query.apiURl === "/api/publicMeeting"}
+              />
+            }
             {/* Right Side End */}
           </Grid>
         </section>

@@ -1,0 +1,41 @@
+.reset_this_root {
+    all: unset;
+  }
+  .reset_this_root > ol,
+.reset_this_root > ul,
+.reset_this_root > p,
+.reset_this_root > h1,
+.reset_this_root > h2,
+.reset_this_root > h3,
+.reset_this_root > h4,
+.reset_this_root > h5,
+.reset_this_root > h6 {
+  all: unset !important;
+}
+
+.reset_this_root > ol {
+    list-style-type: decimal !important;
+  }
+  .reset_this_root > ul {
+    list-style-type: disc !important;
+  }
+
+.reset_this_root table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.reset_this_root th,
+.reset_this_root td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.reset_this_root th {
+    background-color: #f2f2f2;
+}
+
+.reset_this_root > img {
+    max-width: 100%;
+}

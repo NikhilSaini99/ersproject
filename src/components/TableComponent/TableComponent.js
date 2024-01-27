@@ -95,7 +95,6 @@ const TableComponent = (props) => {
 
     return rearrangedItem;
   });
-  console.log("rearrangedData", rearrangedData)
   return (
     <div>
       <TableContainer
