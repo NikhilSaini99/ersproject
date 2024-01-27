@@ -435,6 +435,15 @@ export default function Header(props) {
                               </Link>
                               <br />
                               <Link
+                                href={"/IncomeTax/Spreadsheet"}
+                                className="line"
+                              >
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                  PAYE Spreadsheet
+                                </p>
+                              </Link>
+                              <br/>
+                              <Link
                                 href={"/IncomeTax/Guidenewbusiness"}
                                 className="line"
                               >
@@ -573,6 +582,15 @@ export default function Header(props) {
                                 </p>
                               </Link>
                               <br />
+                              <Link
+                                href={"/CustomExcise/AEO"}
+                                className="line"
+                              >
+                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
+                                Authorised Economic Operator (AEO)
+                                </p>
+                              </Link>
+                              <br/>
                               <Link
                                 href={"/CustomExcise/EuRegistered"}
                                 className="line"
