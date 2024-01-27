@@ -33,6 +33,8 @@ export default function Footer() {
       borderBottom: '59px solid transparent',
     }
   }
+  const currentDate = new Date()
+  const year = currentDate.getFullYear()
 
   return (
     <>
@@ -217,7 +219,7 @@ export default function Footer() {
 
             <Stack sx={{ display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, gap: { xs: '0.5rem', lg: '2.5rem' }, mt: { xs: '0.5rem', lg: '1rem' } }}>
               <Typography variant="body1" alignSelf='center'>
-                2023 © Powered by Computronics Systems
+                {year} © Powered by Computronics Systems
               </Typography>
               <Typography variant="body1" alignSelf='center'>
                 ERS Contacts
@@ -225,12 +227,9 @@ export default function Footer() {
               <Typography variant="body1" alignSelf='center'>
                 Privacy Policy
               </Typography>
-              <Typography variant="body1" alignSelf='center'>
+              {/* <Typography variant="body1" alignSelf='center'>
                 Sitemap
-              </Typography>
-              <Typography variant="body1" alignSelf='center'>
-                Terms of Conditions
-              </Typography>
+              </Typography> */}
               <Typography variant="body1" alignSelf='center'>
                 Terms of Conditions
               </Typography>
@@ -242,8 +241,9 @@ export default function Footer() {
               </Link>
            
             </Stack>
-
-
+              <Typography variant="body1" textAlign="center">
+               {year} © Eswatini Revenue Service. All Rights Reserved
+              </Typography>
           </Box>
 
         </Box>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
@@ -89,8 +90,6 @@ export default function NewsDetails() {
         <Loader />
       ) : (
         <section className="h-full">
-        <Typography variant="h4" sx={{ fontWeight: "bold", textAlign: "left", ml: "5.9rem", my:"2rem", }}>All News</Typography>
-
           <Grid container>
             {/* LEFT SIDE START */}
             {data?.data && (
@@ -102,13 +101,19 @@ export default function NewsDetails() {
                       xs: "0px 5rem 4rem 6rem",
                       md: "0px 5rem 4rem 2rem",
                       lg: "0px 5rem 4rem 6rem",
-                      xl: "0px 5rem 4rem 15rem",
+                      xl: "0px 5rem 4rem 8rem",
                     },
                     width: { xs: "85%", md: "90%", lg: "78%", xl: "70%" },
-                    gap: "2rem",
+                    gap: "1rem",
                   }}
                 >
-                  <Box sx={{ width: "100%", height: "450px" }}>
+                 <Typography
+                      variant="body1"
+                      sx={{ fontWeight: "400", fontSize: "2rem",  mt:"2.5rem"  }}
+                    >
+                      {News.newsName}
+                    </Typography>
+                  <Box sx={{ width: "100%", height: "450px",}}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={News.url}
@@ -120,18 +125,16 @@ export default function NewsDetails() {
                       }}
                     />
                   </Box>
-                  <Typography variant="body1" sx={{}}>
-                    {dayjs(News.uploadDate).format("DD-MM-YYYY")}
-                    <br />
-                    By - <strong>{News.author_name}</strong>
+                  <Box sx={{display:"flex", justifyContent:"space-between"}}>
+                  <Typography variant="body1">
+                  <strong>Author: {News.author_name}</strong>
                   </Typography>
-                  <Stack sx={{ flexDirection: "column", gap: "1.5rem" }}>
-                    <Typography
-                      variant="body1"
-                      sx={{ fontWeight: "400", fontSize: "2rem" }}
-                    >
-                      {News.newsName}
-                    </Typography>
+                  <Typography variant="body2" sx={{ color: "grey" }}>
+                    Posted on {dayjs(News.uploadDate).format("MMM D YYYY")}
+                  </Typography>
+                  </Box>
+                 
+                  <Stack sx={{ flexDirection: "column", gap: "1.5rem", mt:"1rem" }}>
                     <div className={styles.reset_this_root}
                       dangerouslySetInnerHTML={{
                         __html: DOMPurify.sanitize(resetCSS + News.description),

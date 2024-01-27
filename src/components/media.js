@@ -112,7 +112,8 @@ function Media() {
 
 function NewsCard({ url, img, title, date, description, id, apiURl, authorName }) {
   const truncate  = (str)=>{
-    return str.substring(0, 35)+"..."
+    console.log("what streing", str)
+    return str.substring(0, 200)+"..."
   }
   const [cardHover, setCardHover] = useState(false);
   return (
@@ -206,27 +207,24 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
                 {title}
               </Link>
             </Typography>
-            <Typography variant="subtitle2" sx={{ color: "grey" }}>
-              {dayjs(date).format("DD-MM-YYYY")}
-            </Typography>
-            <Typography
+            {/* <Typography
               variant="body1"
               sx={{ color: "grey" }}
               dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncate(description))  }}
-            ></Typography>
+            ></Typography> */}
             <Divider />
 
             <Stack
               direction={"row"}
               sx={{ display: "flex", justifyContent: "space-between" }}
             >
-              <Box sx={{ display: "flex", gap: "0.3rem", alignItems: "center" }}>
+              <Box sx={{ display: "flex", gap: "0.3rem", alignItems: "center", justifyContent:"space-between" }}>
                 {/* <Avatar /> */}
                 <Typography
                   variant="body1"
                   sx={{ fontWeight: "bold", color: "black", fontSize: "14px" }}
                 >
-                  By -
+                  Author:
                 </Typography>
                 <Typography
                   variant="body1"
@@ -235,6 +233,11 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
                   {authorName?.toString()?.charAt(0)?.toUpperCase() + authorName?.slice(1)}
                 </Typography>
               </Box>
+              <Box>
+                <Typography variant="subtitle2" sx={{ color: "grey" }}>
+            Posted on {dayjs(date).format("MMM D YYYY")}
+            </Typography>
+                </Box>
             </Stack>
           </Stack>
         </Stack>
