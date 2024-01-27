@@ -9,6 +9,7 @@ import { ImHome3 } from "react-icons/im";
 import { BsTelephoneFill, BsApple } from "react-icons/bs";
 import { Box, Divider, Stack, Typography } from "@mui/material";
 import  defaultTheme  from "@/styles/muiTheme";
+import Link from "next/link";
 
 
 
@@ -230,12 +231,19 @@ export default function Footer() {
               <Typography variant="body1" alignSelf='center'>
                 Terms of Conditions
               </Typography>
+              <Typography variant="body1" alignSelf='center'>
+                Terms of Conditions
+              </Typography>
+              
+              <Link href="/EmailDisclaimer/EmailDisclaimer">
+              <Typography variant="body1" alignSelf='center'>
+               E-mail Disclaimer 
+              </Typography>
+              </Link>
+           
             </Stack>
 
 
-            <Typography variant="body1" alignSelf='center'>
-              2023 © Powered by Computronics Systems
-            </Typography>
           </Box>
 
         </Box>
