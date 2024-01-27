@@ -272,15 +272,7 @@ export default function VAT() {
           </div>
         </div>
       </section>
-
-
-      {/* testing */}
-
-      {/* <section className="mx-40 my-10 p-10">
-        <div dangerouslySetInnerHTML={{ __html: VatData?.data?.data[0]?.description }}></div>
-      </section> */}
-
-      <Footer />
+        <Footer />
     </>
   );
 }
