@@ -176,7 +176,7 @@ export default function FAQ() {
                         variant="h6"
                         sx={{ fontWeight: "400" }}
                       >
-                        {item?.question}?
+                        {item?.question}
                       </Typography>
                     </Box>
                     <Typography
@@ -193,7 +193,7 @@ export default function FAQ() {
                             }),
                       }}
                     >
-                      {item?.answer}?
+                      {item?.answer}
                     </Typography>
                   </Box>
                   

@@ -1,22 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
-import { Grid, Stack, Typography, Box, Button, IconButton } from "@mui/material";
+import { Box, Button, Grid, IconButton, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Banner from "../assets/images/news-banner.jpg";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Image from "next/image";
+import Link from "next/link";
+import Loader from "@/components/Loader";
 import { NewsCard } from "@/components/media";
+import dayjs from "dayjs";
 import { newses } from "../content/data";
 import rightSideBackground from "../assets/images/sidebar-bg-image.jpg";
 import { useFetch } from "./api/api";
-import dayjs from "dayjs";
-import Loader from "@/components/Loader";
-import Link from "next/link";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
+
+export const LatestNewsSection = ({ isPublic, restNews, isLoading, apiURl }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 5;
 
@@ -101,13 +102,13 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
                     <Link
                       href={{
                         pathname: "/NewsDetails",
-                        query: { id: News?.id, apiURl: "/api/news" },
+                        query: { id: News?.id, apiURl: `${apiURl}` },
                       }}
                     >
                     <Box sx={{height:{md:"6rem",lg:"15rem"}}}>
                       <img
                         src={News.url}
-                        alt={News.newsName}
+                        alt={News.newsName || News.publicMeetingName}
                         style={{
                           width: "100%",
                           height: "100%",
@@ -123,7 +124,11 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading }) => {
                          Posted on {dayjs(News.uploadDate).format("MMM D YYYY")}
                       </Typography>
                       </Box>
-                      <Typography variant="body1" fontWeight={600} sx={{ overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', clamp: '2', '@media (max-width: 600px)': { clamp: '1' } }}>{News.newsName}</Typography>
+                      <Typography variant="body1" fontWeight={600} sx={{ overflow: 'hidden', textOverflow: 'ellipsis',
+                       display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', clamp: '2',
+                        '@media (max-width: 600px)': { clamp: '1' } }}>
+                        {News.newsName || News.publicMeetingName}
+                        </Typography>
                     </Link>
                   </Stack>
                 ))}
@@ -222,6 +227,7 @@ export default function News() {
             <LatestNewsSection
               restNews={data?.data?.slice(3)}
               isLoading={isLoading}
+              apiURl={"/api/news"}
             />
             {/* Right Side End */}
           </Grid>

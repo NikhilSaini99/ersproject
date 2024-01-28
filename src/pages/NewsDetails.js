@@ -3,6 +3,7 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
 import Banner from "../assets/images/news-banner.jpg";
+import DOMPurify from "dompurify";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import Header from "@/components/Header";
@@ -10,10 +11,9 @@ import Image from "next/image";
 import { LatestNewsSection } from "../pages/news";
 import Loader from "@/components/Loader";
 import dayjs from "dayjs";
+import styles from "./NewsDetail-style.module.css"
 import { useFetch } from "./api/api";
 import { useRouter } from "next/router";
-import DOMPurify from "dompurify";
-import styles from "./NewsDetail-style.module.css"
 
 const resetCSS = `
 <style>
@@ -35,7 +35,7 @@ export default function NewsDetails() {
     "get",
     `${query.apiURl}/${query.id}`
   );
-  const { data: allNews, fetchAPI:allNewsFetch, isLoading:allNewsLoading } = useFetch("get", "/api/news");
+  const { data: allNews, fetchAPI:allNewsFetch, isLoading:allNewsLoading } = useFetch("get", `${query.apiURl}`);
 
   useEffect(() => {
     fetchAPI();
@@ -149,7 +149,7 @@ export default function NewsDetails() {
             {/* Right Side with latest news*/}
             {
               <LatestNewsSection restNews={allNews?.data?.slice(3)} isLoading={allNewsLoading}
-                isPublic={query.apiURl === "/api/publicMeeting"}
+                isPublic={false} apiURl={query.apiURl}
               />
             }
             {/* Right Side End */}

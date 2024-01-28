@@ -15,11 +15,11 @@ import React, { useState } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { BlackButton } from "@/styles/globalStyle";
+import DOMPurify from "dompurify";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import dayjs from "dayjs";
-import DOMPurify from "dompurify";
 
 function Media() {
   return (
@@ -112,7 +112,6 @@ function Media() {
 
 function NewsCard({ url, img, title, date, description, id, apiURl, authorName }) {
   const truncate  = (str)=>{
-    console.log("what streing", str)
     return str.substring(0, 200)+"..."
   }
   const [cardHover, setCardHover] = useState(false);
