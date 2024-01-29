@@ -182,12 +182,12 @@ export default function Contact() {
                 <span className="text-sm leading-6 font-normal">
                   info@ers.org.sz
                 </span>
+               <br></br>
               </p>
               <Link href={" "}>
-                <button
+                <button 
                   type="button"
-                  className="rounded-full bg-[#f4c402] w-[10rem] p-2 text-black text-bold"
-                >
+                  className="rounded-full bg-[#f4c402] w-[10rem] p-2 text-black text-bold">
                   Get Directions
                 </button>
               </Link>
@@ -195,10 +195,21 @@ export default function Contact() {
           </div>
 
           <div className="px-[40px] pt-9 bg-[#F5F5F5] w-[68%]">
-            <h1 className="text-xl text-mainColor font-bold leading-8">
+
+          <Typography
+            variant="h5"
+            sx={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              color: "#2F248F",
+            }} >
+            Service Centers and Branches
+            <div className="border mr-12 border-yellowish mt-1 w-32 "></div>
+          </Typography>
+
+            {/* <h1 className="text-xl text-mainColor font-bold leading-8">
               Service Centers and Branches
-            </h1>
-            <div className="border mr-12 border-yellowish mt-1 w-32"></div>
+            </h1> */}
             <MyDiv >
               {data && serviceCenter?.map((item, key) => (
                 <Centers
@@ -226,8 +237,7 @@ export default function Contact() {
               fontWeight: "bold",
               color: "#2F248F",
               marginY: "1rem",
-            }}
-          >
+            }} >
             Border Operations
             <div className="border mr-12 border-yellowish mt-1 w-14 "></div>
           </Typography>
