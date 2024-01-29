@@ -1,32 +1,30 @@
-import { MdOutlineCalendarMonth } from "react-icons/md";
-import {  IconButton } from "@mui/material";
-import { News  } from "@/components/homecard";
 import React, { useEffect, useMemo, useState } from "react";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { BlackButton } from "@/styles/globalStyle";
 import CSR from "../assets/images/CSR.jpg";
 import Carousal from "@/components/carousal";
+import ChatboxMock from "@/components/Chatbox/ChatboxMock";
 import Customs from "../assets/images/eCustoms_Tariff_Logo.png";
 import DatasetLinkedOutlinedIcon from "@mui/icons-material/DatasetLinkedOutlined";
-
 import ECoustoms from "../assets/images/e-customs.jpg";
 import ETax from "../assets/images/e-tax.jpg";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { IconButton } from "@mui/material";
 import { Icons } from "@/components/homecard";
 import Image from "next/image";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Link from "next/link";
+import { MdOutlineCalendarMonth } from "react-icons/md";
 import { Media } from "@/components/media";
+import { News } from "@/components/homecard";
+import SocialMediaCard from "@/components/SocialMediaCard/SocialMediaCard";
 import TCC from "../assets/images/tcc.png";
 import Tax from "../assets/images/e-tax_logo.png";
-import validation from "../assets/images/validation.png";
 import notes from "../assets/images/notes.png";
 import { useFetch } from "./api/api";
-import ChatboxMock from "@/components/Chatbox/ChatboxMock";
-import { BlackButton } from "@/styles/globalStyle";
-
+import validation from "../assets/images/validation.png";
 
 export default function Home() {
   const { data, fetchAPI } = useFetch("GET", "/api/banner-images");
@@ -791,6 +789,7 @@ export default function Home() {
       {/*------------------Social Media-------------------*/}
 
       <Media />
+      {/* <SocialMediaCard/> */}
       <ChatboxMock/>
 
       {/*------------------Footer-------------------*/}

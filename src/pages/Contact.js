@@ -1,16 +1,3 @@
-import React from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Header from "@/components/Header";
-import bgimg from "../assets/images/contact.jpg";
-import { Centers } from "@/components/homecard";
-import { Media } from "@/components/media";
-import Footer from "@/components/Footer";
-import { RiMailFill } from "react-icons/ri";
-import { ImHome3 } from "react-icons/im";
-import { BsTelephoneFill } from "react-icons/bs";
-import { IoLogoWhatsapp } from "react-icons/io";
-import Link from "next/link";
 import {
   Box,
   Paper,
@@ -23,6 +10,20 @@ import {
   Typography,
   styled
 } from "@mui/material";
+
+import { BsTelephoneFill } from "react-icons/bs";
+import { Centers } from "@/components/homecard";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import Header from "@/components/Header";
+import { ImHome3 } from "react-icons/im";
+import Image from "next/image";
+import { IoLogoWhatsapp } from "react-icons/io";
+import Link from "next/link";
+import { Media } from "@/components/media";
+import React from "react";
+import { RiMailFill } from "react-icons/ri";
+import bgimg from "../assets/images/contact.jpg";
 import { useEffect } from "react";
 import { useFetch } from "./api/api";
 
@@ -33,6 +34,12 @@ const MyDiv = styled("div")({
     gap:'2.5rem',
     margin:'1.5rem 0',
 })
+
+export const GridAutoColumn3 = styled("div")(({theme})=>({
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
+  gap: "1rem",
+}))
 
 
 export default function Contact() {
@@ -121,7 +128,7 @@ export default function Contact() {
 
       <section>
         <div className="px-10 flex">
-          <div className="flex flex-col gap-8 bg-subColor text-[#f5f5f5] pl-10 pr-12 pt-9 pb-16 w-[32%]">
+          <div className="flex flex-col gap-8 bg-subColor text-[#f5f5f5] pl-10 pr-12 pt-9 pb-16 w-32">
            
            {headQuarter && headQuarter.map((item,index)=>(
             <div className="flex flex-col gap-2" key={index}>
@@ -194,12 +201,12 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="px-[40px] pt-9 bg-[#F5F5F5] w-[68%]">
+          <div className="px-10 pt-9 bg-[#F5F5F5] w-full">
             <h1 className="text-xl text-mainColor font-bold leading-8">
               Service Centers and Branches
             </h1>
             <div className="border mr-12 border-yellowish mt-1 w-32"></div>
-            <MyDiv >
+            <GridAutoColumn3 >
               {data && serviceCenter?.map((item, key) => (
                 <Centers
                   key={key}
@@ -209,9 +216,11 @@ export default function Contact() {
                   timing={item?.timing}
                   branchCity={item?.branchCity}
                   branchState={item?.branchState}
+                  lat={item?.lat}
+                  long={item?.long}
                 />
               ))}
-            </MyDiv>
+            </GridAutoColumn3>
           </div>
         </div>
 

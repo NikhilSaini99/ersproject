@@ -11,6 +11,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Slider from "react-slick";
 import bgimg from "../assets/images/pxfuel.jpg";
+import dayjs from "dayjs";
 import { useFetch } from "./api/api";
 
 export default function Videos() {
@@ -177,6 +178,7 @@ export default function Videos() {
                     allowFullScreen
                   ></iframe>
                   <p className="text-center font-semibold text-base mt-2">{video?.name}</p>
+                  <p className="text-center font-semibold text-base mt-2"><span>Uploaded on: {dayjs(video?.uploadDate).format("MMM YYYY")}</span></p>
                 </div>
               );
             })}

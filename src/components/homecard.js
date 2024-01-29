@@ -1,22 +1,21 @@
-import React from "react";
+import { Box, Button, Stack, Typography, styled } from "@mui/material";
+
+import BarChartIcon from "@mui/icons-material/BarChart";
+import { BlackButton } from "@/styles/globalStyle";
+import { BsTelephoneFill } from "react-icons/bs";
+import CalculateIcon from "@mui/icons-material/Calculate";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import HomeIcon from "@mui/icons-material/Home";
 import Image from "next/image";
 import Link from "next/link";
-import { BsTelephoneFill } from "react-icons/bs";
-import { Button, Stack, Typography, styled } from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
-import CalculateIcon from "@mui/icons-material/Calculate";
-import TableChartIcon from "@mui/icons-material/TableChart";
-import PaymentsOutlinedIcon from "@mui/icons-material/PaymentsOutlined";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 import LiveHelpIcon from "@mui/icons-material/LiveHelp";
+import PaymentsOutlinedIcon from "@mui/icons-material/PaymentsOutlined";
+import React from "react";
+import TableChartIcon from "@mui/icons-material/TableChart";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
-import { BlackButton } from "@/styles/globalStyle";
-
-
-
+import { getUrlMap } from "@/pages/utils/helperFunction";
 
 const Icons = () => {
   const iconStyling = {
@@ -111,7 +110,11 @@ function News({ icon, description, img, link }) {
   );
 }
 
-function Centers({ branchName, branchLocation, contact, timing,branchState,branchCity }) {
+function Centers({ branchName, branchLocation, contact, timing,branchState,branchCity, lat, long }) {
+  const handleOpenMap = (lat, long)=>{
+    window.open(getUrlMap(lat,long), "_blank");
+    
+  }
   return (
     <>
       <Stack
@@ -155,10 +158,10 @@ function Centers({ branchName, branchLocation, contact, timing,branchState,branc
         <Stack direction={"row"}>
           <Button
             variant="contained"
-            href={"/"}
+            onClick={()=>handleOpenMap(lat, long)}
             sx={{
               fontSize: { xs: "0.6rem", lg: "0.8rem" },
-              background: "black",
+              background: "black !important",
               borderRadius: "50px",
               fontWeight: "light",
               marginTop: "1rem",
