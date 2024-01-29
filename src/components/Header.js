@@ -568,8 +568,8 @@ export default function Header(props) {
                                 href={"/CustomExcise/RebateConcession"}
                                 className="line"
                               >
-                                <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
-                                  Rebate Concessions for New/Returning Residents
+                                <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
+                                  Rebate Concessions for New / Returning Residents
                                 </p>
                               </Link>
                               <br />

@@ -201,7 +201,7 @@ export default function Home() {
           },
           {
             link: "https://ers.mcidirecthire.com/external/currentopportunities",
-            text: "Current Vaccines",
+            text: "Current Vacancies",
           },
           {
             link: "/PublicNotices/PublicNotices",

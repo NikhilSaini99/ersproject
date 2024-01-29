@@ -68,9 +68,8 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading, apiURl }) => 
               textAlign: "left",
               margin: "0 auto 0 4rem",
               marginTop: "3rem"
-            }}
-          >
-            Latest News
+            }}>
+            All News
           </Typography>
           <Stack
             sx={{
@@ -200,7 +199,7 @@ export default function News() {
             <Grid item xs={8} sx={{ marginTop: "3rem" }}>
             <Box sx={{ mb:"2rem"}}>
             <Typography variant="h4"  sx={{textAlign:"center", m: "0px auto !important", fontWeight: "bold", width: { xs: "85%", md: "90%", lg: "78%", xl: "70%" } }}>
-          All News 
+          Latest News
         </Typography>
         </Box>
               {data &&
