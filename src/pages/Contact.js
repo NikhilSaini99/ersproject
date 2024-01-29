@@ -11,7 +11,7 @@ import {
   styled
 } from "@mui/material";
 
-import { BsTelephoneFill } from "react-icons/bs";
+import CallIcon from '@mui/icons-material/Call';
 import { Centers } from "@/components/homecard";
 import Footer from "@/components/Footer";
 import Head from "next/head";
@@ -24,6 +24,7 @@ import { Media } from "@/components/media";
 import React from "react";
 import { RiMailFill } from "react-icons/ri";
 import bgimg from "../assets/images/contact.jpg";
+import getUrlMap from "./utils/helperFunction";
 import { useEffect } from "react";
 import { useFetch } from "./api/api";
 
@@ -85,7 +86,11 @@ export default function Contact() {
     },
   ];
 
-
+  const handleOpenMap = (lat, long)=>{
+    window.open(getUrlMap(lat,long), "_blank");
+    
+  }
+  
   return (
     <>
       <Head>
@@ -127,8 +132,8 @@ export default function Contact() {
       {/*------------------Head Section-------------------*/}
 
       <section>
-        <div className="px-10 flex">
-          <div className="flex flex-col gap-8 bg-subColor text-[#f5f5f5] pl-10 pr-12 pt-9 pb-16 w-32">
+      <div className="px-10 flex flex-col sm:flex-col md:flex-row lg:flex-row">
+      <div className="flex flex-col w-full gap-4 sm:gap-8 bg-subColor text-[#f5f5f5] p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 md:w-32">
            
            {headQuarter && headQuarter.map((item,index)=>(
             <div className="flex flex-col gap-2" key={index}>
@@ -136,14 +141,14 @@ export default function Contact() {
                 {item?.branchName}
               </h1>
               <p className="flex  gap-2  item">
-                <ImHome3 className="text-2xl" />
+                <ImHome3 className="text-2xl min-w-[24px]" />
 
                 <span className="text-sm leading-6 font-normal">
                 {item?.branchLocation},{item?.branchCity}, {item?.branchState}
                 </span>
               </p>
               <p className="flex  gap-2">
-                <BsTelephoneFill className="text-2xl" />
+                <CallIcon className="text-2xl min-w-[24px]" />
 
                 <span className="text-sm leading-6 font-normal">
                   {item?.contactNo}
@@ -163,45 +168,44 @@ export default function Contact() {
                 the ERS Contact Centre on
               </p>
               <p className="flex  gap-1">
-                <BsTelephoneFill className="text-xl" />
+                <CallIcon className="text-xl min-w-[24px]" />
 
                 <span className="text-sm leading-6 font-normal">
                   [+268] 2406 4000
                 </span>
               </p>
               <p className="flex  gap-1">
-                <BsTelephoneFill className="text-xl" />
+                <CallIcon className="text-xl min-w-[24px]" />
 
                 <span className="text-sm leading-6 font-normal">
                   [+268] 2406 4000
                 </span>
               </p>
               <p className="flex  gap-1">
-                <IoLogoWhatsapp className="text-xl" />
+                <IoLogoWhatsapp className="text-xl min-w-[24px]" />
                 <span className="text-sm leading-6 font-normal">
                   WhatsApp-7606 3735
                 </span>
               </p>
 
               <p className="flex  gap-1">
-                <RiMailFill className="text-xl" />
+                <RiMailFill className="text-xl min-w-[24px]" />
 
                 <span className="text-sm leading-6 font-normal">
                   info@ers.org.sz
                 </span>
                <br></br>
               </p>
-              <Link href={" "}>
-                <button 
+                <button  
+                  onClick={()=>handleOpenMap(headQuarter[0]?.lat,headQuarter[0]?.long)}
                   type="button"
                   className="rounded-full bg-[#f4c402] w-[10rem] p-2 text-black text-bold">
                   Get Directions
                 </button>
-              </Link>
             </div>
           </div>
 
-          <div className="px-[40px] pt-9 bg-[#F5F5F5] w-[68%]">
+          <div className="px-10 sm:px-[40px] pt-9 bg-[#F5F5F5] w-full md:w-[68%]">
 
           <Typography
             variant="h5"
@@ -213,10 +217,7 @@ export default function Contact() {
             Service Centers and Branches
             <div className="border mr-12 border-yellowish mt-1 w-32 "></div>
           </Typography>
-
-            {/* <h1 className="text-xl text-mainColor font-bold leading-8">
-              Service Centers and Branches
-            </h1> */}
+          
             <MyDiv >
               {data && serviceCenter?.map((item, key) => (
                 <Centers

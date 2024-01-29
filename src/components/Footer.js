@@ -1,17 +1,16 @@
-import React from "react";
-import { RiMailFill } from "react-icons/ri";
-import { IoLogoYoutube } from "react-icons/io";
+import { Box, Divider, Stack, Typography } from "@mui/material";
+import { BsApple, BsTelephoneFill } from "react-icons/bs";
 import { SiHuawei, SiTwitter } from "react-icons/si";
+
 import { FaFacebookF } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { GrLinkedinOption } from "react-icons/gr";
 import { ImHome3 } from "react-icons/im";
-import { BsTelephoneFill, BsApple } from "react-icons/bs";
-import { Box, Divider, Stack, Typography } from "@mui/material";
-import  defaultTheme  from "@/styles/muiTheme";
+import { IoLogoYoutube } from "react-icons/io";
 import Link from "next/link";
-
-
+import React from "react";
+import { RiMailFill } from "react-icons/ri";
+import  defaultTheme  from "@/styles/muiTheme";
 
 export default function Footer() {
 
@@ -235,7 +234,7 @@ export default function Footer() {
               </Typography>
               
               <Link href="/EmailDisclaimer/EmailDisclaimer">
-              <Typography variant="body1" alignSelf='center'>
+              <Typography variant="body1" alignSelf='center' textAlign="center">
                E-mail Disclaimer 
               </Typography>
               </Link>

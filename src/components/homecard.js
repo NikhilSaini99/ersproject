@@ -2,11 +2,12 @@ import { Box, Button, Stack, Typography, styled } from "@mui/material";
 
 import BarChartIcon from "@mui/icons-material/BarChart";
 import { BlackButton } from "@/styles/globalStyle";
-import { BsTelephoneFill } from "react-icons/bs";
 import CalculateIcon from "@mui/icons-material/Calculate";
+import CallIcon from '@mui/icons-material/Call';
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import HomeIcon from "@mui/icons-material/Home";
+import IconComponent from "./IconComponent/IconComponent";
 import Image from "next/image";
 import Link from "next/link";
 import LiveHelpIcon from "@mui/icons-material/LiveHelp";
@@ -123,38 +124,48 @@ function Centers({ branchName, branchLocation, contact, timing,branchState,branc
         spacing={1}
       >
         <Typography
-          variant="h1"
-          sx={{ fontSize: { xs: "0.8rem", xl: "1rem" }, fontWeight: "bold" }}
+          variant="body1"
+          sx={{color:(theme)=>theme.palette.primary.main, fontSize: { xs: "0.8rem", xl: "1rem" }, fontWeight: "bold" }}
         >
           {branchName}
         </Typography>
-        <Stack direction={"row"} spacing={1}>
-          <HomeIcon sx={{ fontSize: { xs: "1.2rem", lg: "1.65rem" } }} />
+        <Box sx={{display:"flex", gap:"0.3rem", alignItems:"center"}}>
+        <Box sx={{display:"flex", maxWidth:"50px", justifyContent:"flex-start"}}>
+        <HomeIcon sx={{width:"26px", height:"26px"}} />
+        {/* <IconComponent src={homeIcon.src} width={"26px"} height={"26px"} color={"black"}/> */}
+          </Box>
           <Typography
             variant="subtitle2"
             sx={{ fontSize: { xs: "0.7rem", lg: "0.8rem" } }}
           >
             {branchLocation}, {branchState},{branchCity}
           </Typography>
-        </Stack>
-        <Stack direction={"row"} spacing={2}>
-          <WatchLaterIcon className="sm:text-1xl xl:text-xl" />
+        </Box>
+        <Box sx={{display:"flex", gap:"0.3rem",  alignItems:"center"}}>
+        <Box sx={{display:"flex", maxWidth:"50px", justifyContent:"flex-start"}}>
+        <WatchLaterIcon sx={{width:"26px", height:"26px"}}/>
+        {/* <IconComponent src={clockIcon.src} width={"26px"} height={"26px"} color={"black"}/> */}
+          </Box>
           <Typography
             variant="subtitle2"
-            sx={{ fontSize: { xs: "0.7rem", lg: "0.8rem" } }}
+            sx={{ fontSize: { xs: "0.7rem", lg: "0.8rem", } }}
           >
-            08:00 - 17:00
+            {`08:00 - 17:00`}
           </Typography>
-        </Stack>
-        <Stack direction={"row"} spacing={2}>
-          <BsTelephoneFill className="sm:text-1xl xl:text-xl" />
+        </Box>
+        <Box sx={{display:"flex", gap:"0.3rem", alignItems:"center"}}>
+        <Box sx={{display:"flex", maxWidth:"50px", justifyContent:"flex-start"}}>
+        <CallIcon sx={{width:"26px", height:"26px"}}/>
+        {/* <IconComponent src={contactIcon.src} width={"26px"} height={"26px"} color={"black"}/> */}
+          </Box>
           <Typography
             variant="subtitle2"
             sx={{ fontSize: { xs: "0.7rem", lg: "0.8rem" } }}
           >
             {contact}
           </Typography>
-        </Stack>
+        </Box>
+
         <Stack direction={"row"}>
           <Button
             variant="contained"
