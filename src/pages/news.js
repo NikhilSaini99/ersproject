@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Loader from "@/components/Loader";
 import { NewsCard } from "@/components/media";
+import Pagination from '@mui/material/Pagination';
 import dayjs from "dayjs";
 import { newses } from "../content/data";
 import rightSideBackground from "../assets/images/sidebar-bg-image.jpg";
@@ -19,7 +20,7 @@ import { useFetch } from "./api/api";
 
 export const LatestNewsSection = ({ isPublic, restNews, isLoading, apiURl }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 5;
+  const itemsPerPage = 4;
 
   const handleNextPage = () => {
     if (
@@ -35,9 +36,15 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading, apiURl }) => 
       setCurrentPage(currentPage - 1);
     }
   };
+  const handlePageChange = (event, value) => {
+    setCurrentPage(value - 1);
+  };
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedNews = restNews && restNews.slice(startIndex, endIndex);
+  const totalPages = Math.ceil((restNews && restNews.length-1) / itemsPerPage);
+
+
 
   if (isLoading) return <Loader />;
 
@@ -135,7 +142,7 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading, apiURl }) => 
           </Stack>
         </>
       )}
-      <Box sx={{display:'flex', justifyContent:"space-between", my:"2rem", width:"80%", m:"0 auto"}}>
+      {/* <Box sx={{display:'flex', justifyContent:"space-between", my:"2rem", width:"80%", m:"0 auto"}}>
       <IconButton  disabled={currentPage === 0}  onClick={handlePreviousPage} sx={{cursor: "pointer"}}>
       <ArrowBackIosIcon sx={{color:(theme)=> theme.palette.secondary.main}}/>
       </IconButton>
@@ -143,7 +150,18 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading, apiURl }) => 
       <IconButton disabled={ currentPage >= Math.ceil(restNews && restNews.length / itemsPerPage) - 1 } onClick={handleNextPage}  sx={{cursor:"pointer"}}>
       <ArrowForwardIosIcon sx={{color:(theme)=> theme.palette.secondary.main}}/>
       </IconButton>
-      </Box>
+      </Box> */}
+      <Box sx={{display:"flex", justifyContent:"center"}}>
+  {restNews && restNews.length > 0 ? (
+    <Pagination 
+  count={totalPages} 
+  page={currentPage+1} 
+  onChange={handlePageChange} 
+  // variant="outlined" shape="rounded"
+  sx={{ my: 2 }} 
+/>
+  ) : null}
+</Box>
         </div>
       ) : (
         <div>

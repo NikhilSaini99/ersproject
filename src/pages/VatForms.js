@@ -1,11 +1,11 @@
-import React from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Banner from "../assets/images/tax.jpg";
-import FormTable from "@/components/Table";
 import { Box } from "@mui/material";
+import Footer from "@/components/Footer";
+import FormTable from "@/components/Table";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Image from "next/image";
+import React from "react";
 
 export default function VatForms() {
   return (

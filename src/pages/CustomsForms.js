@@ -1,11 +1,11 @@
-import React from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Table from "@/components/Table";
 import Banner from "../assets/images/tax.jpg"
 import {Box} from '@mui/material'
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Image from "next/image";
+import React from "react";
+import Table from "@/components/Table";
 
 export default function CustomsForms() {
   return (
@@ -33,9 +33,17 @@ export default function CustomsForms() {
             />
       </Box>
       {/*-----------------------Table---------------------*/}
+      <Box
+        sx={{
+          width: "90%",
+          margin: { xs: "0 auto", lg: "0  auto" },
+          px: { md: "5rem", lg: "5rem,", xl: "10rem" },
+          py: "2rem", background: "transparent !important"
+        }}
+      >
 
       <Table title={"Customs & Excise Forms"} defaultValue={"Customs & Excise"}/>
-
+        </Box>
       {/*-----------------------Footer---------------------*/}
 
       <Footer />
