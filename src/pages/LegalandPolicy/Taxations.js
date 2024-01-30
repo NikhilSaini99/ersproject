@@ -1,26 +1,26 @@
-import React from "react";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Head from "next/head";
 import {
   Box,
-  Typography,
-  TableContainer,
   Paper,
   Table,
-  TableCell,
-  TableRow,
   TableBody,
+  TableCell,
+  TableContainer,
   TableHead,
+  TableRow,
+  Typography,
 } from "@mui/material";
-import Image from "next/image";
-import Banner from "../../assets/images/Double_Taxation_Agreements.jpg";
-import bgimg from "../../assets/images/pagebackground1.jpg";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Link from "next/link";
-import { ContentDiv } from "@/styles/globalStyle";
-import PageLayout from "../PagesLayout/Layout";
 
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Banner from "../../assets/images/Double_Taxation_Agreements.jpg";
+import { ContentDiv } from "@/styles/globalStyle";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Image from "next/image";
+import Link from "next/link";
+import PageLayout from "../PagesLayout/Layout";
+import React from "react";
+import bgimg from "../../assets/images/pagebackground1.jpg";
 
 const arrowStyling = {
   color: '#2f2483',
@@ -126,7 +126,7 @@ const Taxations = () => {
             </TableContainer>
           </Paper>
           <Box sx={{ marginLeft: { sm: "1.3rem", xl: "none" } }}>
-            <ol style={{ listStyleType: "decimal", fontWeight: "normal" }}>
+            <ol start="2" style={{ listStyleType: "decimal", fontWeight: "normal", }}>
               <li style={{ fontWeight: "bold", fontSize: "1.30rem" }}>
                 Tax Information Exchange Agreements (TIEA)
                 <ol
