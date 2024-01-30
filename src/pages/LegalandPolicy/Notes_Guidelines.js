@@ -7,6 +7,7 @@ import Downloading from './Downloading';
 import Loader from '@/components/Loader';
 import PageLayout from '../PagesLayout/Layout';
 import bgimg from '../../assets/images/pagebackground1.jpg'
+import { firstLetterCapital } from '../utils/helperFunction';
 import { useFetch } from '../api/api';
 
 const Notes_Guidelines = () => {
@@ -84,7 +85,7 @@ const Notes_Guidelines = () => {
                                     <TableBody>
                                         {filterData && filterData?.map((item, index) => (
                                             <TableRow key={index}>
-                                                <TableCell sx={{ fontWeight: 'bold', maxWidth: "20%" }}>{item.name}</TableCell>
+                                                <TableCell sx={{ fontWeight: '', maxWidth: "20%" , textTransform:"capitalize"}}>{firstLetterCapital(item.name)}</TableCell>
                                                 <TableCell sx={{ px: '0', py:"0"}}>
                                                     {item.notesName.map((subpoints, index) => (
                                                         <TableRow component='div' key={index} sx={{
