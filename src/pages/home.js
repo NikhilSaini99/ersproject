@@ -222,6 +222,7 @@ export default function Home() {
       {/*---------------------Header-------------------*/}
 
       <Header />
+      <div id="chatbot-container"></div>
 
       {/*------------------Carousal-------------------*/}
       <Carousal bannerData={data?.data} />
@@ -789,6 +790,8 @@ export default function Home() {
       {/*------------------Social Media-------------------*/}
 
       <Media />
+      <div id="chatbot-container"></div>
+
       {/* <SocialMediaCard/> */}
       <ChatboxMock/>
 
