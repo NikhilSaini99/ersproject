@@ -15,6 +15,8 @@ export default function Index() {
         <link rel="icon" href="/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
+      <div id="chatbot-container"></div>
+      <script type="module" src="./home/saurabh/website/chatbot-front/dist/chat-bot.bundle.js" defer></script>
       <Home />
     </>
   );
