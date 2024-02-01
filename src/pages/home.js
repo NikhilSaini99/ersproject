@@ -790,10 +790,8 @@ export default function Home() {
       {/*------------------Social Media-------------------*/}
 
       <Media />
-      <div id="chatbot-container"></div>
-
       {/* <SocialMediaCard/> */}
-      <ChatboxMock/>
+      {/* <ChatboxMock/> */}
 
       {/*------------------Footer-------------------*/}
 

@@ -39,6 +39,9 @@ body {
   overflow-x: hidden;
   font-family: "Arial Regular", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.chatbot header img{
+  height: 20px !important;
+}
 
 .search-container-open {
   left: 0;
