@@ -65,12 +65,9 @@ export default function Footer() {
                 opportunities.</Typography>
             </Box>
             <Box className="RightSide" sx={{ display: 'flex', gap: { xs: '0.8rem', lg: '1.5rem' }, pt: '1rem' }}>
-              <RiMailFill className="SocialsStyling" />
-              <SiTwitter className="SocialsStyling" />
-              <IoLogoYoutube className="SocialsStyling" />
-              <FaFacebookF className="SocialsStyling" />
-              <FiInstagram className="SocialsStyling" />
-              <GrLinkedinOption className="SocialsStyling" />
+            <Link href="https://www.facebook.com/profile.php?id=100094062796048" target="_blank"><FaFacebookF className="SocialsStyling" /></Link>
+              <Link href="https://www.youtube.com/channel/UCK9y_OZHNmDPwYveSdy5EOw" target="_blank"><IoLogoYoutube className="SocialsStyling" /></Link>
+              <Link href="https://www.linkedin.com/company/100124155/admin/feed/posts/" target="_blank"><GrLinkedinOption className="SocialsStyling" /></Link>
             </Box>
           </Stack>
         </Box>
@@ -221,7 +218,7 @@ export default function Footer() {
                 {year} © Powered by Computronics Systems
               </Typography>
               <Typography variant="body1" alignSelf='center'>
-                ERS Contacts
+                <Link href="/Contact">ERS Contacts</Link>
               </Typography>
               <Typography variant="body1" alignSelf='center'>
                 Privacy Policy
