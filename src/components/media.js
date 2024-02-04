@@ -33,9 +33,9 @@ function Media() {
 
               <div className="flex flex-col justify-between gap-3 my-3">
                 <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcomputronicsswaziland&tabs=timeline&width=340&height=187&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                  width="340"
-                  height="500"
+                  src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D245164751962283%26id%3D100094062796048&show_text=true&width=500"
+                  width="350px"
+                  height="480px"
                   style={{ border: "none", overflow: "hidden" }}
                   scrolling="no"
                   frameBorder="0"
@@ -52,28 +52,20 @@ function Media() {
             </div>
 
             <div>
-              <h1 className="text-3xl font-medium text-mainColor">Twitter</h1>
+              <h1 className="text-3xl font-medium text-mainColor">Linkedin</h1>
               <div className="border w-[70px] border-yellowish mt-1"></div>
               <div className="flex flex-col justify-between gap-3 my-3">
-                <div style={{ minHeight: "500px", overflow: "auto" }}>
-                  <a
-                    className="twitter-timeline"
-                    href="https://twitter.com/computronics_sd?ref_src=twsrc%5Etfw"
-                    scrolling="no"
-                    frameBorder="0"
-                    // allowTransparency={true}
-                    allowFullScreen={true}
-                    style={{
-                      position: "static",
-                      visibility: "visible",
-                      width: " 360px",
-                      height: "500px",
-                      display: "block",
-                      flexGrow: "1",
-                    }}
-                  >
-                    Tweets by SpaceX
-                  </a>
+                <div style={{ overflow: "auto" }}>
+                  <iframe
+                    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7156557130756456448"
+                    width="350px"
+                  height="480px"
+                  style={{ border: "none", overflow: "hidden" }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  ></iframe>
                 </div>
                 <Script
                   strategy="lazyOnload"
@@ -82,7 +74,7 @@ function Media() {
                   charset="utf-8"
                 ></Script>
                 <Link href="https://twitter.com/AECOM" target="_blank">
-                <BlackButton>Follow Us</BlackButton>
+                  <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
             </div>
@@ -92,14 +84,14 @@ function Media() {
               <div className="border w-24 border-yellowish mt-1"></div>
               <div className="flex flex-col justify-between gap-3 my-3">
                 <iframe
-                  width="320"
-                  height="500"
+                  width="340px"
+                  height="480px"
                   src="https://www.instagram.com/p/BdJRABkDbXU/embed/"
                   frameBorder="0"
                 ></iframe>
 
                 <Link href="https://www.instagram.com/aecom" target="_blank">
-                <BlackButton>Follow Us</BlackButton>
+                  <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
             </div>
@@ -110,10 +102,19 @@ function Media() {
   );
 }
 
-function NewsCard({ url, img, title, date, description, id, apiURl, authorName }) {
-  const truncate  = (str)=>{
-    return str.substring(0, 200)+"..."
-  }
+function NewsCard({
+  url,
+  img,
+  title,
+  date,
+  description,
+  id,
+  apiURl,
+  authorName,
+}) {
+  const truncate = (str) => {
+    return str.substring(0, 200) + "...";
+  };
   const [cardHover, setCardHover] = useState(false);
   return (
     <>
@@ -153,7 +154,7 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
                 src={img}
                 alt={title}
                 style={{
-                  position:"relative",
+                  position: "relative",
                   width: "100%",
                   height: "100%",
                   display: "block",
@@ -162,25 +163,25 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
               />
             </Box>
             <Link href={{ pathname: "/NewsDetails", query: { id, apiURl } }}>
-            <Button
-              variant="contained"
-              style={{ background: "#f4c402", color: "black" }}
-              sx={{
-                textTransform: "capitalize",
-                position: "absolute",
-                bottom: "3rem",
-                right: "1rem",
-                "&:hover": { background: "#f4c402" },
-                opacity: "0",
-                fontWeight: "bold",
-                ...(cardHover && {
-                  opacity: "100%",
-                }),
-              }}
-              onMouseOver={() => setCardHover(true)}
-            >
-              Read More
-            </Button>
+              <Button
+                variant="contained"
+                style={{ background: "#f4c402", color: "black" }}
+                sx={{
+                  textTransform: "capitalize",
+                  position: "absolute",
+                  bottom: "3rem",
+                  right: "1rem",
+                  "&:hover": { background: "#f4c402" },
+                  opacity: "0",
+                  fontWeight: "bold",
+                  ...(cardHover && {
+                    opacity: "100%",
+                  }),
+                }}
+                onMouseOver={() => setCardHover(true)}
+              >
+                Read More
+              </Button>
             </Link>
           </Box>
           <Stack
@@ -217,7 +218,14 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
               direction={"row"}
               sx={{ display: "flex", justifyContent: "space-between" }}
             >
-              <Box sx={{ display: "flex", gap: "0.3rem", alignItems: "center", justifyContent:"space-between" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: "0.3rem",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
                 {/* <Avatar /> */}
                 <Typography
                   variant="body1"
@@ -229,14 +237,15 @@ function NewsCard({ url, img, title, date, description, id, apiURl, authorName }
                   variant="body1"
                   sx={{ fontWeight: "bold", color: "black", fontSize: "14px" }}
                 >
-                  {authorName?.toString()?.charAt(0)?.toUpperCase() + authorName?.slice(1)}
+                  {authorName?.toString()?.charAt(0)?.toUpperCase() +
+                    authorName?.slice(1)}
                 </Typography>
               </Box>
               <Box>
                 <Typography variant="subtitle2" sx={{ color: "grey" }}>
-            Posted on {dayjs(date).format("MMM D YYYY")}
-            </Typography>
-                </Box>
+                  Posted on {dayjs(date).format("MMM D YYYY")}
+                </Typography>
+              </Box>
             </Stack>
           </Stack>
         </Stack>

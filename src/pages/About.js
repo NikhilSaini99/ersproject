@@ -104,7 +104,7 @@ export default function About() {
         sx={{ margin: { xs: "3rem auto", lg: "3rem auto 0" } }}
       >
         <Stack width="100%" data-aos="fade-up-right">
-          <Typography className="Pointsformatting" variant="body1">
+          <Typography className="Pointsformatting" variant="body1" component="div">
             <Image
               src={estwaniimg}
               width={0}

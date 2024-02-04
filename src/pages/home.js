@@ -789,8 +789,8 @@ export default function Home() {
 
       {/*------------------Social Media-------------------*/}
 
-      {/* <Media /> */}
-      <SocialMediaCard/>
+      <Media />
+      {/* <SocialMediaCard/> */}
       {/* <ChatboxMock/> */}
 
       {/*------------------Footer-------------------*/}

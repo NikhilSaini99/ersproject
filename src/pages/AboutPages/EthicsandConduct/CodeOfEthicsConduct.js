@@ -53,8 +53,7 @@ const CodeOfEthicsConduct = ({ h2Styling, arrowStyling }) => {
         }}>
         <Grid container rowGap={4} data-aos="fade-up">
           {data.map((item, index) => (
-            <>
-              {item.points.map((point, index) => (
+              item.points.map((point, index) => (
                 <Grid
                   item
                   key={index}
@@ -74,8 +73,7 @@ const CodeOfEthicsConduct = ({ h2Styling, arrowStyling }) => {
                     </Typography>
                   </div>
                 </Grid>
-              ))}
-            </>
+              ))
           ))}
         </Grid>
       </Box>
