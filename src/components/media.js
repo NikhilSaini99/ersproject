@@ -28,60 +28,60 @@ function Media() {
         <div className="bg-zinc-300  bg-opacity-50 md:px-12 px-28 py-16  ">
           <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
             <div>
-              <h1 className="text-3xl font-medium text-mainColor">Facebook</h1>
-              <div className=" border w-[70px] border-yellowish mt-1"></div>
+              {/* <h1 className="text-3xl font-medium text-mainColor">Facebook</h1>
+              <div className=" border w-[70px] border-yellowish mt-1"></div> */}
+              <Typography variant="h4" sx={{ pb: "0.3rem", position: "relative !important", color: (theme) => theme.palette.primary.main }}>Facebook
+                <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+              </Typography>
 
-              <div className="flex flex-col justify-between gap-3 my-3">
-                <iframe
+              <div className="flex flex-col justify-between gap-3 my-3 ">
+              <div className="h-[480px] overflow-auto relative">
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D245556705256421%26id%3D100094062796048&show_text=true&width=500"
+                 width="350"
+                 height="754"
+                 style={{ border: "none", overflow: "auto" }} scrolling="yes" 
+                 frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </div>
+                {/* <iframe
                   src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D245164751962283%26id%3D100094062796048&show_text=true&width=500"
                   width="350px"
                   height="480px"
-                  style={{ border: "none", overflow: "hidden" }}
+                  style={{ border: "none", overflow: "auto" }}
                   scrolling="no"
                   frameBorder="0"
                   allowFullScreen={true}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                ></iframe>
+                ></iframe> */}
                 <Link
-                  href="https://www.facebook.com/EswatiniRevenueService"
+                  href="https://www.facebook.com/profile.php?id=100094062796048"
                   target="_blank"
                 >
                   <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
             </div>
-
-            {/* <div>
-              <h1 className="text-3xl font-medium text-mainColor">Linkedin</h1>
-              <div className="border w-[70px] border-yellowish mt-1"></div>
+            <div>
+              <Typography variant="h4" sx={{ pb: "0.3rem", position: "relative !important", color: (theme) => theme.palette.primary.main }}>Youtube
+                <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+              </Typography>
               <div className="flex flex-col justify-between gap-3 my-3">
-                <div style={{ overflow: "auto" }}>
-                  <iframe
-                    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7156557130756456448"
-                    width="350px"
+                <iframe
+                  width="340px"
                   height="480px"
-                  style={{ border: "none", overflow: "hidden" }}
-                  scrolling="no"
+                  src="https://www.instagram.com/p/BdJRABkDbXU/embed/"
                   frameBorder="0"
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  ></iframe>
-                </div>
-                <Script
-                  strategy="lazyOnload"
-                  async
-                  src="https://platform.twitter.com/widgets.js"
-                  charset="utf-8"
-                ></Script>
-                <Link href="https://twitter.com/AECOM" target="_blank">
+                ></iframe>
+
+                <Link href="https://www.youtube.com/channel/UCK9y_OZHNmDPwYveSdy5EOw" target="_blank">
                   <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
-            </div> */}
+            </div>
 
-            {/* <div>
-              <h1 className="text-3xl font-medium text-mainColor">Instagram</h1>
-              <div className="border w-24 border-yellowish mt-1"></div>
+            <div>
+              <Typography variant="h4" sx={{ pb: "0.3rem", position: "relative !important", color: (theme) => theme.palette.primary.main }}>Instagram
+                <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
+              </Typography>
               <div className="flex flex-col justify-between gap-3 my-3">
                 <iframe
                   width="340px"
@@ -94,7 +94,7 @@ function Media() {
                   <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

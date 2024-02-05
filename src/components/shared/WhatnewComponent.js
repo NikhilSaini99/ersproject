@@ -33,7 +33,7 @@ const WhatnewComponent = ({ whatNewsData }) => {
           ))}
       </div>
       <div className="py-8 text-right px-8 font-bold">
-        <Link href="/WhatsNewsDetail">View All</Link>
+        <Link href="/WhatsNewsDetail" className="line">View All</Link>
       </div>
     </div>
   );

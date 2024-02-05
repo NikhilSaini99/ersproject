@@ -1,13 +1,14 @@
-import React from 'react'
-import PageLayout from '../PagesLayout/Layout'
-import { ContentDiv } from '@/styles/globalStyle'
 import { Box, Typography } from '@mui/material'
-import Link from 'next/link'
-import Banner from "../../assets/images/Eswatini_VAT.png";
-import bgimg from "../../assets/images/bg-2.png";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Point1, Point2, Point3, Point5, Point6 } from '@/content/AEO-data'
+
 import AEO_table from '@/content/AEO-table'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Banner from "../../assets/images/Eswatini_VAT.png";
+import { ContentDiv } from '@/styles/globalStyle'
+import Link from 'next/link'
+import PageLayout from '../PagesLayout/Layout'
+import React from 'react'
+import bgimg from "../../assets/images/bg-2.png";
 
 const arrowStyling = {
     color: '#2f2483',
@@ -19,7 +20,7 @@ const AEO = () => {
   return (
     <>
     <PageLayout
-        title={"Email Disclaimer"}
+        title={"AEO"}
         bannerImg={Banner}
         contentBackground={bgimg}
       >
