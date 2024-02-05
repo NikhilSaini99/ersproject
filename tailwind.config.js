@@ -34,7 +34,7 @@ module.exports = {
         xs:'0px'
       },
       fontFamily: {
-        sans: ['ui-sans-serif', 'system-ui', '-apple-system','Arial Regular', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue',  'Noto Sans', 'sans-serif'],
+        sans: ['Arial Regular','ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue',  'Noto Sans', 'sans-serif'],
       },
       boxShadow:{
         '3xl' : '-1px 0px 10px 1px rgba(0, 0, 0, 0.3)'

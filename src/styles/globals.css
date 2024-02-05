@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial Regular', sans-serif !important;
 }
 
 a {
@@ -24,20 +25,15 @@ body {
 /*------------------Our Resources-------------------*/
 
 .container .fill {
-  /* filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(38deg)
-    brightness(105%) contrast(103%); */
   filter: brightness(0) contrast(100%);
 }
-
-/* .container:hover .fill {
-  filter: none;
-} */
 
 /*------------------Search Bar-------------------*/
 
 body {
   overflow-x: hidden;
-  font-family: "Arial Regular", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Arial Regular", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+   "Segoe UI Symbol", "Noto Color Emoji !important";
 }
 .chatbot header img{
   height: 20px !important;

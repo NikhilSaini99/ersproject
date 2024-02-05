@@ -51,7 +51,7 @@ function Media() {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h1 className="text-3xl font-medium text-mainColor">Linkedin</h1>
               <div className="border w-[70px] border-yellowish mt-1"></div>
               <div className="flex flex-col justify-between gap-3 my-3">
@@ -77,9 +77,9 @@ function Media() {
                   <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
-            </div>
+            </div> */}
 
-            <div>
+            {/* <div>
               <h1 className="text-3xl font-medium text-mainColor">Instagram</h1>
               <div className="border w-24 border-yellowish mt-1"></div>
               <div className="flex flex-col justify-between gap-3 my-3">
@@ -94,7 +94,7 @@ function Media() {
                   <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

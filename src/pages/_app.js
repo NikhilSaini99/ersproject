@@ -1,10 +1,13 @@
 import "@/styles/globals.css";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "material-icons/iconfont/material-icons.css";
-import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
+import AOS from "aos";
 import  defaultTheme  from "../styles/muiTheme";
+import { useEffect } from "react";
+
 export default function App({ Component, pageProps }) {
 
  useEffect(() => {
