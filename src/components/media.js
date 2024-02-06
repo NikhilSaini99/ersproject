@@ -60,7 +60,7 @@ function Media() {
                 </Link>
               </div>
             </div>
-            <div>
+            {/* <div>
               <Typography variant="h4" sx={{ pb: "0.3rem", position: "relative !important", color: (theme) => theme.palette.primary.main }}>Youtube
                 <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
               </Typography>
@@ -76,9 +76,9 @@ function Media() {
                   <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
-            </div>
+            </div> */}
 
-            <div>
+            {/* <div>
               <Typography variant="h4" sx={{ pb: "0.3rem", position: "relative !important", color: (theme) => theme.palette.primary.main }}>Instagram
                 <span className="absolute bottom-0 left-0 w-1/3 border-b-2 border-yellowish"></span>
               </Typography>
@@ -94,7 +94,7 @@ function Media() {
                   <BlackButton>Follow Us</BlackButton>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
