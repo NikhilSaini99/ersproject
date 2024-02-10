@@ -23,11 +23,11 @@ const PartTime = () => {
                     <Typography variant='h2' >DEFINITION OF PART TIME EMPLOYEES</Typography>
 
                     <Typography variant='body1' className='Pointsformatting'>
-                        The expression part-time employee, for the purposes of employees tax, is defined to mean a person who is not in an employers full-time employ and who is not remunerated as a full-time employee for any services rendered. The expression part-time employee excludes unskilled labourers whose remuneration does not exceed E3 416.67 on a monthly basis.<br /><br />
+                        The expression part-time employee, for the purposes of employee&apos;s tax, is defined to mean a person who is not in an employer&apos;s full-time employ and who is not remunerated as a full-time employee for any services rendered. The expression part-time employee excludes unskilled labourers whose remuneration does not exceed E3 416.67 on a monthly basis.<br /><br />
                         Part-time remuneration includes the following:<br />
                         (a) Casual payments for irregular services rendered,<br />
                         (b) Fees paid to part-time lecturers,<br />
-                        (c) Honoraria paid to office-bearers of bodies, clubs, societies, etc,<br />
+                        (c) Honoraria paid to office-bearers of bodies, clubs, societies, etc.,<br />
                         (d) Remuneration paid for occasional services rendered, and<br />
                         (e) Any payment that cannot be regarded as full-time remuneration.<br /><br />
                         <Typography variant='h2' >APPLICABLE RATES FOR PART TIME EMPLOYEES</Typography>
@@ -92,7 +92,7 @@ const PartTime = () => {
                     NOTE
                 </Typography>
                 <Typography variant='body1' sx={{pb:'2rem'}} className='Pointsformatting'>
-                    When applying these rates the rebates should not be taken into account. Part-time employees are still required to file returns of income at the end of a year of assessment, the Final Deduction System notwithstanding. Tax rebates will be granted on assessment for these cases. Employees’ tax certificates (PAYE 5) must be issued to such employees within the stipulated period in accordance with the requirements of paragraph 13 of the Second Schedule.
+                    When applying these rates, the rebates should not be taken into account. Part-time employees are still required to file returns of income at the end of a year of assessment, the Final Deduction System notwithstanding. Tax rebates will be granted on assessment for these cases. Employees’ tax certificates (PAYE 5) must be issued to such employees within the stipulated period in accordance with the requirements of paragraph 13 of the Second Schedule.
                 </Typography>
 
 

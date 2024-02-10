@@ -33,7 +33,7 @@ const SekululaVat = () => {
         {
           heading: "A. COMMERCIAL IMPORTERS",
           subpoints: [
-            "Business entity based in Eswatini that has been registered by SARS as a foregin exporter and purchases goods from a VAT registered vendor in South Africa. To register as a foreign exporter with SARS, an entity is required to complete a form which is to be accompanied by form DA185 used as a nomination/appointment of an agent who is approved by SARS to perfom the functions of licensed clearing agent on behalf of the foreign principal in complying with all legislative obligations required on exporters.",
+            "Business entity based in Eswatini that has been registered by SARS as a foreign exporter and purchases goods from a VAT registered vendor in South Africa. To register as a foreign exporter with SARS, an entity is required to complete a form which is to be accompanied by form DA185 used as a nomination/appointment of an agent who is approved by SARS to perform the functions of licensed clearing agent on behalf of the foreign principal in complying with all legislative obligations required on exporters.",
           ],
         },
         {
@@ -147,7 +147,7 @@ const SekululaVat = () => {
         "Goods purchased from non-VAT registered suppliers in South Africa;",
         "Goods on which no VAT was paid in South Africa;",
         "Goods imported into Eswatini through postal services;",
-        "Goods that are regarded as a direct export from South Africa, i.e. the importer did not collect the goods from South Africa, instead the export was facilitated by the supplier. NB: If the goods’ declaration reflect the supplier as the ‘exporter’ that transaction will also be categorised as a direct export and will not qualify under the ‘VAT Refunds / Sekulula’ system;",
+        "Goods that are regarded as a direct export from South Africa, i.e. the importer did not collect the goods from South Africa, instead the export was facilitated by the supplier. NB: If the goods’ declaration reflects the supplier as the ‘exporter’ that transaction will also be categorised as a direct export and will not qualify under the ‘VAT Refunds / Sekulula’ system;",
         "Goods consumed (in part or in full) in South Africa;",
         "Invoices issued with respect to services rendered in South Africa;",
         "Goods imported through non-commercial border posts (all those that have NOT been listed above) and the airports;",
@@ -299,7 +299,7 @@ const SekululaVat = () => {
               </Box>
             ))}
             <Typography variant="body1">
-              For more information please contact our Contact Centre on
+              For more information, please contact our Contact Centre on
               info@ers.org.sz or call +268 2406 4050
             </Typography>
           </Box>

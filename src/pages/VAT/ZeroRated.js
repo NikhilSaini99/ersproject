@@ -82,7 +82,7 @@ const ZeroRated = () => {
         "Maize meal graded as super maize meal, special maize meal, sifted maize meal, or unsifted maize meal, not further processed other than by the addition of minerals and vitamins not exceeding one per cent by mass of the final product, solely for the purpose of increasing the nutritional value",
         "Samp, not further prepared or processed",
         "Dried beans, whole, split, crushed or in powder form but not further prepared or processed or where packaged as seed",
-        "Dairy products, being milk of all kinds fermented milk, emasi, buttermilk, fresh or UHT cream or sourcream, buttermilk powder, condensed milk, baby milk formulas, butter and margarine and whey",
+        "Dairy products, being milk of all kinds fermented milk, emasi, buttermilk, fresh or UHT cream or sour cream, buttermilk powder, condensed milk, baby milk formulas, butter and margarine and whey",
         "Rice, whether husked, milled, polished, glazed, parboiled or broken",
         "Vegetables, not cooked or treated in any manner except for the purpose of preserving such vegetables in their natural state, but excluding dehydrated, dried, canned or bottled vegetables or such vegetables as are described under separate paragraphs in this Part",
         "Fruit, not cooked or treated in any manner except for the purposes of preserving such fruit in its natural state, but excluding dehydrated, dried, canned or bottled fruit and nuts",
@@ -102,7 +102,7 @@ const ZeroRated = () => {
         "For the purposes of paragraph 3(e), goods or services are treated as exported from Eswatini where in the case of",
       list: [
         "Goods, they are delivered to, or made available at, an address outside Eswatini as evidenced by documentary proof acceptable to the Commissioner General",
-        "Services, they are supplied for useor consumption outside Eswatini asevidenced by documentary proof acceptable to the Commissioner General",
+        "Services, they are supplied for use or consumption outside Eswatini as evidenced by documentary proof acceptable to the Commissioner General",
         "The services are supplied directly in respect of goods temporarily admitted into Eswatini from an export country which are exempt from tax on importation under Item 470 of paragraphs 34 and 35 of First Schedule",
       ],
     },
@@ -110,7 +110,7 @@ const ZeroRated = () => {
       mainHead:
         "For the purposes of paragraph 3(e), international transport of goods or passengers occurs where the goods or passengers are transported by road, rail or air from a place",
       list: [
-        "Outside Eswatini to another place outside Eswatini where the transport or partof the transport is across the territory of Eswatini",
+        "Outside Eswatini to another place outside Eswatini where the transport or part of the transport is across the territory of Eswatini",
         "Outside Eswatini to a place in Eswatini",
         "In Eswatini to a place outside Eswatini",
       ],
@@ -121,15 +121,15 @@ const ZeroRated = () => {
       list: [
         "Petrol, diesel and liquid petroleum gas",
         "Paraffin (kerosene) intended for cooking, illuminating and heating, provided it is not mixed or blended with any other substance for any purpose other than cooking, illuminating or heating",
-        "Supply of exercise books and text books approved by the Ministry responsible for education for the furtherance ofeducation in a qualified educational institution established under public law",
-        "The supply of international transport services in connection with the international transport ofgoods or passengers.",
+        "Supply of exercise books and text books approved by the Ministry responsible for education for the furtherance of education in a qualified educational institution established under public law",
+        "The supply of international transport services in connection with the international transport of goods or passengers",
       ],
       medicine: {
         Medicines: "Medicines and drugs supplied",
         medPoints: [
           "For use in a qualified medical facility",
           "To the Government Central Medical Stores",
-          "To an individual, subject to submission by that individual, of a qualified medical practitioner s prescription issued within thirty (30) days prior to the supply and in such quantities as prescribed by the qualified medical practitioner",
+          "To an individual, subject to submission by that individual, of a qualified medical practitioner's prescription issued within thirty (30) days prior to the supply and in such quantities as prescribed by the qualified medical practitioner",
         ],
       },
     },
@@ -201,7 +201,7 @@ const ZeroRated = () => {
             {/*------------------- Section 2-------------------------------- */}
             <Box sx={{ my: "2.5rem" }}>
               <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                2. PART B ZERO RATED : Supply Of Good Consisting Of Certain
+                2. PART B ZERO RATED: Supply of Good Consisting of Certain
                 Foodstuffs
               </Typography>
 
@@ -236,7 +236,7 @@ const ZeroRated = () => {
             {/*------------------- Section 3-------------------------------- */}
             <Box sx={{ my: "2.5rem" }}>
               <Typography variant="h5" component="h2" sx={{ ...TypoStyle }}>
-                3. PART C ZERO RATED: Supply Of Other Goods And Services
+                3. PART C ZERO RATED: Supply of Other Goods and Services
               </Typography>
               <Typography
                 variant="h5"

@@ -166,14 +166,14 @@ const Paye = () => {
 
                     <div>
                         <Typography variant="body1" className="pt-4 ">
-                            <strong>Step 1</strong> - Determine the employees taxable income
+                            <strong>Step 1</strong> - Determine the employee&apos;s taxable income
                         </Typography>
                     </div>
 
 
                     <ul className='custom-list pb-2' >
 
-                        <li className="Pointsformatting">Lump all amounts that make up the employees remuneration for that month, i.e. gross salary, benefits in kind, commission, etc.</li>
+                        <li className="Pointsformatting">Lump all amounts that make up the employees&apos; remuneration for that month, i.e. gross salary, benefits in kind, commission, etc.</li>
                         <li className="Pointsformatting">Deduct allowable deductions, e.g. statutory deductions (SNPF), contributions to pension fund.</li>
 
                     </ul>

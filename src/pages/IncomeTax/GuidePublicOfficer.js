@@ -101,7 +101,7 @@ const GuidePublicOfficer = () => {
     const boardList = [
         'The company through the board of directors',
         'By an agent',
-        'By an attorne',
+        'By an attorney',
         'Any other body authorized to make such appointment'
 
     ]

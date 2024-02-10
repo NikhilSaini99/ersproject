@@ -32,7 +32,7 @@ const BondedPage = () => {
                 'The building must be equipped with electrical security measures to prevent illegal delivery and dispatch of goods',
                 'The building must comply with health and safety regulations',
                 'The applicant must provide office space and other facilities for ERS Officers as may be specified by the Commissioner General.',
-                'In order to monitor any unauthorized access the applicant must demonstrate that comprehensive security arrangements are provided. The following will assist in determining this',
+                'In order to monitor any unauthorized access, the applicant must demonstrate that comprehensive security arrangements are provided. The following will assist in determining this',
                 'The perimeter fencing may be electrified in full or on the top',
                 'The perimeter must be patrolled by security guards with or without dogs',
                 'Surveillance cameras (CCTV) may be installed to operate round the clock',

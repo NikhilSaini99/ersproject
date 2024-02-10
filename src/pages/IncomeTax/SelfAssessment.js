@@ -71,7 +71,7 @@ const SelfAssessment = () => {
         },
         {
             question: 'How is self-assessment different from the traditional assessment?',
-            answer: 'With self-assessment, when the taxpayer furnishes their own assessment and submit same to the ERS, that submitted income tax return is deemed to be an assessment by the Commissioner General. Hence, any taxable income that is declared by the taxpayer and any tax payable as indicated in the return submitted is considered due and payable. Therefore, NO notice of assessment confirming tax due will be sent to the taxpayer under self-assessment.Meanwhile, the traditional method of assessment required the taxpayer to submit returns and await a notice of assessment from the Commissioner General informing the taxpayer of their tax liability.'
+            answer: 'With self-assessment, when the taxpayer furnishes their own assessment and submit same to the ERS, that submitted income tax return is deemed to be an assessment by the Commissioner General. Hence, any taxable income that is declared by the taxpayer and any tax payable as indicated in the return submitted is considered due and payable. Therefore, NO notice of assessment confirming tax due will be sent to the taxpayer under self-assessment. Meanwhile, the traditional method of assessment required the taxpayer to submit returns and await a notice of assessment from the Commissioner General informing the taxpayer of their tax liability.'
         },
         {
             question: 'Who is required to be self-assess?',

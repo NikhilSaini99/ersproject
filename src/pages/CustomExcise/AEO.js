@@ -163,7 +163,9 @@ const AEO = () => {
                   
                 ))}
                 </Box>
-              
+              <Typography variant="body1" sx={{color:"blue"}}><Link href="https://www.ers.org.sz/documents/1693231250.docx">AEO External Guide and Procedure - 2022 02 02</Link></Typography>
+              <Link href="https://www.ers.org.sz/documents/1693231230.docx"><Typography variant="body1" sx={{color:"blue"}}>AEO application form</Typography></Link>
+
          </Box>
           
         </ContentDiv>

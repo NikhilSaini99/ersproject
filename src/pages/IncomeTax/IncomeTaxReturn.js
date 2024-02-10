@@ -16,11 +16,12 @@ const IncomeTaxReturn = () => {
 
     const ITRdata = [
         {
-            title: 'WHY SUBMIT AN INCOME TAX RETURN',
-            points: ['For effective reconciliation of ones income tax affairs', 'To enable calculation of income tax due (or refund)',
+            title: 'WHY SUBMIT AN INCOME TAX RETURN?',
+            points: ['For effective reconciliation of one\'s income tax affairs', 'To enable calculation of income tax due (or refund)',
                 'If you had an assessed loss in your business, by filling an Income Tax Return, you will carry forwarded that loss.',
                 'Timely submission of returns helps you avoid penalties and interest charges'
-            ]
+            ],
+            important: false,
         },
         {
             title: 'WHO MUST SUBMIT INCOME TAX RETURNS',
@@ -49,21 +50,24 @@ const IncomeTaxReturn = () => {
                 'A person, in continuous employment with a single employer, whose gross income during the year of assessment consisted ONLY of remuneration; save for persons whose income was E1.2 M and above',
                 'The employee’s income tax deducted was payable in terms of the prescribed tax deductions tables and subject to the Final Deduction System (FDS); save for persons whose income was E1.2 M and above',
                 'Such person did not derive any other income, or if the additional income derived, consisted of a dividend, which has been subject to a final withholding tax'
-            ]
+            ],
+            important: false,
         },
         {
-            title: 'HOW TO SUBMIT A TAX RETURN',
+            title: 'HOW TO SUBMIT A TAX RETURN?',
             points: [
                 'Download the form or collect it from your nearest ERS Service Centre or Tax Office',
                 'Complete the form, sign it and submit it to the ERS, attaching financials and all supporting documents, by the due date as announced by the Eswatini Revenue Service',
                 'Companies may register for e-tax and complete the return online, attaching all required documents'
-            ]
+            ],
+            important: false,
         },
         {
             title: 'LATE SUBMISSION',
             points: [
-                'Late return submission attract a penalty of 20% of the tax payable or Twenty Emalangeni (E20) per day in the case of a loss'
-            ]
+                'Late return submission attracts a penalty of 20% of the tax payable or Twenty Emalangeni (E20) per day in the case of a loss'
+            ],
+            important: false,
         }
     ];
 
@@ -87,9 +91,9 @@ const IncomeTaxReturn = () => {
                     {/* <Typography variant="h1">
                         Income Tax Returns</Typography> */}
 
-                    <Typography variant='body1'  className="Pointsformatting">Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayers finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
+                    <Typography variant='body1'  className="Pointsformatting">Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayer&apos;s finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
                         {<br></br>}
-                        Every year the Commisisoner General publishes a notice calling for income tax returns; click HERE to view the current notice.
+                        Every year the Commissioner General publishes a notice calling for income tax returns; click HERE to view the current notice.
                     </Typography>
 
 
@@ -106,7 +110,7 @@ const IncomeTaxReturn = () => {
                                 ))}
                             </ul>
                             <div className='Pointsformatting flex gap-2 flex-row my-2'>
-                                <b>Important:</b>
+                                {item.important && <b>Important:</b>}
                             <p>{item.important}</p>
                             </div>
                         </Box>

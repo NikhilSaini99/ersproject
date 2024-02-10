@@ -22,7 +22,7 @@ const EstwaniIncomeTax = () => {
             text: 'Income Tax was first introduced in Swaziland in 1921 by the Income Tax Proclamation of 1921. This Proclamation was administered under the Treasury Department until 1962 when a separate unit was established to be administered by the Assistant Collector of Taxes as a small section of the Treasury Department. Later it became a Government Department the Department of Taxes – under the Ministry of Finance, and in 2011 the functions passed to the Eswatini Revenue Service.',
         },
         {
-            text: 'The Income Tax Legislation between 1962 and 1975 went through 12 amendments, the major one being in 1975, resulting in the current Income Tax Order 1975. Since 1975, the Order 1975 has had many amendments aimed at simplifying the administration of taxes in Swaziland; the most significant of these amendments being the recognition of women as taxpayers in their own right as well as the introduction of the Final Deduction System (FDS) which is a simple procedure whereby the employer deducts employees tax (PAYE) as a final tax.',
+            text: 'The Income Tax Legislation between 1962 and 1975 went through 12 amendments, the major one being in 1975, resulting in the current <a href="http://www.sra.org.sz/documents/1496924712.pdf" target="_blank" style="color:blue">Income Tax Order 1975</a>. Since 1975, the Order 1975 has had many amendments aimed at simplifying the administration of taxes in Swaziland; the most significant of these amendments being the recognition of women as taxpayers in their own right as well as the introduction of the Final Deduction System (FDS) which is a simple procedure whereby the employer deducts employees tax (PAYE) as a final tax.',
         },
         {
             text: 'The Income Tax year in Swaziland runs from 1st July to 30 June. Any variation from this year-end has to be approved by the  ERS Commissioner General.',
@@ -31,24 +31,24 @@ const EstwaniIncomeTax = () => {
 
     const fiveways = [
         {
-            head: 'PAYE:- ',
-            text: 'Employers are required to deduct Income Tax from the earnings of their employees (Pay As You Earn-PAYE) and to remit that monthly to the ERS. The due date for these remittances is the 7th day of the  following month.',
+            head: 'PAYE: - ',
+            text: 'Employers are required to deduct Income Tax from the earnings of their employees (Pay as You Earn-PAYE) and to remit that monthly to the ERS. The due date for these remittances is the 7th day of the  following month.',
 
         },
         {
-            head: 'Provisional Income Tax:- ',
+            head: 'Provisional Income Tax: - ',
             text: 'All businesses are required to make provisional tax payments twice annually; these advance payments are due on the 31st December and 30th June for each tax year. A third payment is due when there is a short-fall after the provisional taxpayer has submitted a tax return and has been assessed. A business whose approved tax year is different from that which is legislated is required to make first payment within the first six months of the tax year and the second payment before the end of the tax year. A third payment (where due) must be made on receipt of a notice of assessment which clearly states the actual tax liability.'
         },
         {
-            head: 'Corporate Income Tax:- ',
+            head: 'Corporate Income Tax: - ',
             text: 'Like all taxpayers, companies are required to make an annual Income tax return by no later than 31st October annually. Tax returns for Companies which have an approved variation from the year ending 30 June are due 120 days after the approved financial year end.Self Employed Individual Income Tax: Individuals, including those who are self-employed are also required to make an annual Income tax return before the 31st October annually.'
         },
         {
-            head: 'Withholding Taxes:- ',
+            head: 'Withholding Taxes: - ',
             text: 'These are taxes on income imposed at source. A third party is charged with the responsibility of deducting the tax from specified types of payments and remitting the tax to ERS. It may either be a final payment or a payment on account. The categories and rates are shown here.'
         },
         {
-            head: 'Graded Tax:- ',
+            head: 'Graded Tax: - ',
             text: 'Is an annual levy payable by adults in Swaziland. Unemployed male adults (18 years and over) are expected to pay E4.50 per annum whilst unemployed females are not required to pay anything. Employed adults (both male and female) pay E18 per annum.'
         },
         {
@@ -76,8 +76,8 @@ const EstwaniIncomeTax = () => {
                         <div className='flex gap-1 items-start'>
                             <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
                             <Typography variant='body1' key={index} sx={{ mb: '1rem' }}
-                                className='Pointsformatting'>
-                                {item.text}</Typography>
+                                className='Pointsformatting' dangerouslySetInnerHTML={{__html: item.text}}>
+                                </Typography>
                         </div>
                     </>
                 ))}
