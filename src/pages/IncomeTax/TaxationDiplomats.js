@@ -107,7 +107,7 @@ const TaxationDiplomats = () => {
             head: "Taxation of Diplomats/Consul",
             subpoints: [
                 "Tax treatment is provided for by Section 12 of the Income Tax Order 1975 and Section 50 of the VAT Act 2011 which makes reference to the Vienna Conventions on Diplomatic and Consular Relations. It provides as follows:",
-                "Diplomats/Consulshall be exempt from taxation, except in respect of;",
+                "Diplomats/Consul shall be exempt from taxation, except in respect of;",
                 "dues and taxes on private income having its source in Swaziland as well as capital taxes on investments made in commercial undertakings.",
                 "indirect taxes of a kind which are normally incorporated in the price of goods or services",
                 "dues and taxes on private immovable property situated in the territory of the receiving State, unless held on behalf of the sending State",

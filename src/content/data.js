@@ -188,7 +188,7 @@ const IncomeTaxData = [
   {
     title: 'Withholding Tax on Payments to Non Resident Persons ',
 
-    description: 'A person who makes payment to any non-resident person is required to withhold tax on the gross amount resulting from a contract which has a Swazi source of income excluding an employment contract. The main purpose of the contract should be the performance of a service. Goods supplied in the performance of the service are included in the calculation of the tax as they are only incidental i.e. a non-resident mechanic who comes with tools and service parts is liable to tax on the labour fees and the service parts. The non-resident person is liable to withholding tax at the rate offifteen percenton the gross amount of any payment derived by the non-resident under a Swaziland source services contract.',
+    description: 'A person who makes payment to any non-resident person is required to withhold tax on the gross amount resulting from a contract which has a Swazi source of income excluding an employment contract. The main purpose of the contract should be the performance of a service. Goods supplied in the performance of the service are included in the calculation of the tax as they are only incidental i.e. a non-resident mechanic who comes with tools and service parts is liable to tax on the labour fees and the service parts. The non-resident person is liable to withholding tax at the rate of fifteen percent on the gross amount of any payment derived by the non-resident under a Swaziland source services contract.',
 
 
   },

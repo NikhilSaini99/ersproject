@@ -167,7 +167,7 @@ const Eswatini = () => {
                     <Typography variant="h5" component="h2" className='Pointsformatting text-black'>
                         Every country in the world needs money to provide health, education, social services, roads, and a wide range of other facilities for all its citizens. To provide these facilities or services, the Government of the day budgets for the expenditure of public money. In Eswatini, a major part of Government revenue is collected by way of direct and indirect taxes on income and consumption. Income Tax is a DIRECT TAX payable by individuals and businesses based on their income or profits. However, everybody who benefits from services provided by the Government is also expected to contribute through a broader, neutral tax that is fair to all. Most countries in the world, therefore, impose some form of INDIRECT TAX, usually based on the amount of goods or services consumed by the taxpayer. </Typography>
                     <Typography variant="h5" component="h2" className='Pointsformatting pt-4'>
-                        VAT is an indirect tax that is levied on the consumption of goods and services in Eswatini, and is also levied on the importation of goods and services into Eswatini. It was introduced on 1 April 2012 to replace Sales Tax. Like Sales Tax, it is an indirect tax and it is levied on most goods and services at the rate of 15%. The legal basis is the <Link href={"/"}>VAT Act 2011</Link> supplemented by <Link href={"/"}>VAT Regulations</Link>
+                        VAT is an indirect tax that is levied on the consumption of goods and services in Eswatini, and is also levied on the importation of goods and services into Eswatini. It was introduced on 1 April 2012 to replace Sales Tax. Like Sales Tax, it is an indirect tax and it is levied on most goods and services at the rate of 15%. The legal basis is the <Link href={"http://www.sra.org.sz/documents/1496926478.pdf"} target='_blank' style={{color:"blue"}}>VAT Act 2011</Link> supplemented by <Link href={"http://www.sra.org.sz/documents/1496926588.pdf"} target='_blank' style={{color:"blue"}}>VAT Regulations</Link>
                     </Typography>
 
                     <Typography variant='h5' component='h2' sx={{ mt: '2rem', fontWeight: 'bold' }} className='Pointsformatting '>
@@ -176,11 +176,11 @@ const Eswatini = () => {
 
                     <div className='flex gap-1 items-start pb-2'>
                         <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
-                        <Typography variant="body1" className='Pointsformatting '> A person who brings taxable goods or services into Eswatini(usually the importer).</Typography>
+                        <Typography variant="body1" className='Pointsformatting '> A person who brings taxable goods or services into Eswatini (usually the importer).</Typography>
                     </div>
                     <div className='flex gap-1 items-start'>
                         <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
-                        <Typography variant="body1" className='Pointsformatting'>  A person who receives supplies of taxable goods or services in Eswatini. A person in this case includes any individual,partnership, company, trust, government and any public or local authority.</Typography>
+                        <Typography variant="body1" className='Pointsformatting'>  A person who receives supplies of taxable goods or services in Eswatini. A person in this case includes any individual, partnership, company, trust, government and any public or local authority.</Typography>
                     </div>
 
 

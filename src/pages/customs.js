@@ -43,7 +43,7 @@ export default function Customs() {
       img: Advance,
       title: "Advance Ruling",
       description:
-        "ERS has implemented Advance Rulings in terms of the WTO Agreement on Trade Facilitation (TFA). Advance Rulings allow trade to apply for an official written descision by ERS prior to import or export on Tariff Classification, Origin or Valuation.",
+        "ERS has implemented Advance Rulings in terms of the WTO Agreement on Trade Facilitation (TFA). Advance Rulings allow trade to apply for an official written decision by ERS prior to import or export on Tariff Classification, Origin or Valuation.",
     },
 
   ];
@@ -62,7 +62,7 @@ export default function Customs() {
       img: Duty,
       title: "Duty Estimator",
       description:
-        "Estimate Cusoms and Excise Duties using the Duty Estimator. This function removes the need for any manual calculations and allows for more accurate costing. Enter the relevant tariff code, select the country of origin (manufacture) and the system will generate the estimated duties based on the date you select. It also allows you to look at future dates when tariff code amendments come into effect and calculates the estimated duties which will be applicable.",
+        "Estimate Customs and Excise Duties using the Duty Estimator. This function removes the need for any manual calculations and allows for more accurate costing. Enter the relevant tariff code, select the country of origin (manufacture) and the system will generate the estimated duties based on the date you select. It also allows you to look at future dates when tariff code amendments come into effect and calculates the estimated duties which will be applicable.",
          path:'./eCustoms/DutyCalculator'
     },
     {
@@ -331,7 +331,7 @@ export default function Customs() {
                 Schedule 1 Part 7 - Health Promotion Levy
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                ATL - Alcohol and Tabacco Levy
+                ATL - Alcohol and Tobacco Levy
               </li>
               <li className="hover:underline cursor-pointer starclass">
                 Schedule 2 - ​Anti-dumping, Countervailing and Safeguard Duties

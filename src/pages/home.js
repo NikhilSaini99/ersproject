@@ -744,7 +744,7 @@ export default function Home() {
               Corporate Social Responsibility
             </h1>
             <p className="text-2xl leading-9 font-normal text-black mt-8 mb-12">
-              The ERS s definition for Corporate Social Responsibility is the
+              The ERS&apos;s definition for Corporate Social Responsibility is the
               process of how the organization helps the Swazi society.
             </p>
             <form action="/CSR/CSR_Detail"  method="get" target="_blank" className="inline">

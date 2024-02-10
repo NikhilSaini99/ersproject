@@ -78,7 +78,7 @@ const Registration = () => {
     },
     {
       question: 'What is the registration process?',
-      answer: 'Taxpayers can collect the TIN registration form from the nearest ERS office or download it from here. Complete and submit the form with all attachments to any ERS office. The ERS will review the application and inform the taxpayer of the outcome within 30 days. In some cases this may include inspection. Once registered a taxpayer shall be given a registration certificate with a Taxpayer Identification Number (TIN) to be quoted in all dealings with the ERS.'
+      answer: 'Taxpayers can collect the TIN registration form from the nearest ERS office or download it from here. Complete and submit the form with all attachments to any ERS office. The ERS will review the application and inform the taxpayer of the outcome within 30 days. In some cases, this may include inspection. Once registered a taxpayer shall be given a registration certificate with a Taxpayer Identification Number (TIN) to be quoted in all dealings with the ERS.'
     },
     {
       question: 'What are the obligations of a VAT registered business?',
