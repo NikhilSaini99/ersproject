@@ -23,9 +23,9 @@ const pageData = [
     Annex1: {
       head: "Annex 1 - Customs Duties of the EU on Products Originating in the SADC EPA States",
       subAnx: [
-        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter1to20.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 1 to 20</Link>,
-        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter20to39.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 20 to 39</Link>,
-        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter39to64.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 39 to 64</Link>,
+        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter1to20.pdf"} >Annex I - Chapter 1 to 20</Link>,
+        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter20to39.pdf"} style={{color:"blue"}}>Annex I - Chapter 20 to 39</Link>,
+        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter39to64.pdf"} target='_blank'>Annex I - Chapter 39 to 64</Link>,
         <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter64to84.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 64 to 84</Link>,
         <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter84to97.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 84 to 97</Link>,
       ],
