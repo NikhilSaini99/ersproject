@@ -16,26 +16,26 @@ const pageData = [
     content:
       "In June 2016, Eswatini signed the Economic Partnership Agreement with the European Union. The SADC EPA is meant to ensure that there exists deeper regional economic integration in terms of market access, trade in services and Investment for all contracting parties. Following the signing of the Interim EPA, the Kingdom of Eswatini began the internal procedures necessary for the ratification of the agreement, which will lead to its implementation. This agreement allows Eswatini products preferential access into the European market, especially our sugar and beef. The comprehensive Economic Partnership Agreement includes trade in services and cooperation investment. Click below for the Agreement and Chapters to Annex I and II of the Agreement. Click here to download Protocol 1 which provides definition on the concept of originating products and methods of administrative cooperation.",
     links: [
-      "SADC-EU Economic Partnership Agreement 1_of_3",
-      "SADC-EU Economic Partnership Agreement 2_of_3",
-      "SADC-EU Economic Partnership Agreement 3_of_3",
+      "<a href = http://102.36.181.13:8000/documents/SADC-EUEconomicPartnershipAgreement1_of_3.pdf target = _blank> SADC-EU Economic Partnership Agreement 1_of_3 </a>",
+      "<a href = http://102.36.181.13:8000/documents/SADC-EUEconomicPartnershipAgreement2_of_3.pdf target = _blank> SADC-EU Economic Partnership Agreement 2_of_3 </a>",
+      "<a href = http://102.36.181.13:8000/documents/SADC-EUEconomicPartnershipAgreement3_of_3.pdf target = _blank> SADC-EU Economic Partnership Agreement 3_of_3 </a>",    
     ],
     Annex1: {
       head: "Annex 1 - Customs Duties of the EU on Products Originating in the SADC EPA States",
       subAnx: [
-        "Annex I - Chapter 1 to 20",
-        "Annex I - Chapter 20 to 39",
-        "Annex I - Chapter 39 to 64",
-        "Annex I - Chapter 64 to 84",
-        "Annex I - Chapter 84 to 97",
+        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter1to20.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 1 to 20</Link>,
+        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter20to39.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 20 to 39</Link>,
+        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter39to64.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 39 to 64</Link>,
+        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter64to84.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 64 to 84</Link>,
+        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter84to97.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 84 to 97</Link>,
       ],
     },
     Annex2: {
       head: "Annex II - Customs Duties of SACU on Products Originating in the EU",
       subAnx: [
-        "Annex II - Chapter 1 to 37",
-        "Annex II - Chapter 37 to 72",
-        "Annex II - Chapter 72 to 99",
+        <Link href={"http://102.36.181.13:8000/documents/AnnexII-Chapter1to37.pdf"} target='_blank' style={{color:"blue"}}>Annex II - Chapter 1 to 37</Link>,
+        <Link href={"http://102.36.181.13:8000/documents/AnnexII-Chapter37to72.pdf"} target='_blank' style={{color:"blue"}}>Annex II - Chapter 37 to 72</Link>,
+        <Link href={"http://102.36.181.13:8000/documents/AnnexII-Chapter72to99.pdf"} target='_blank' style={{color:"blue"}}>Annex II - Chapter 72 to 99</Link>,
       ],
     },
   },
@@ -158,13 +158,10 @@ const FreeTrade = () => {
                           className="Pointsformatting"
                         />
                       </span>
-                      <Link href="/">
-                        <Typography
-                          variant="body1"
-                        >
-                          {item}
-                        </Typography>
-                      </Link>
+                      <Typography variant="body1"
+                        className="Pointsformatting text-normalBlue" 
+                        dangerouslySetInnerHTML={{__html:item}} 
+                      />
                     </div>
                   ))}
               </Box>

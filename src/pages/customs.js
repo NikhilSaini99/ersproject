@@ -242,37 +242,37 @@ export default function Customs() {
           </h1>
           <ul className="grid grid-cols-2 gap-x-32 text-mainColor text-[15px] px-4 leading-7 font-normal">
             <li className="hover:underline cursor-pointer starclass">
-              SACU Correlation Table
+            <a href = "http://102.36.181.13:8000/documents/SACUCorrelationTable.pdf">SACU Correlation Table</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 1 Part 1
+            <a href = "http://102.36.181.13:8000/documents/Schedule1Part1.pdf">Schedule 1 Part 1</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 1 Part 1 Legal Notes
+            <a href = "http://102.36.181.13:8000/documents/Schedule1Part1LegalNotes.pdf">Schedule 1 Part 1 Legal Notes</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 1 Part 2A
+            <a href = "http://102.36.181.13:8000/documents/Schedule1Part2A.pdf">Schedule 1 Part 2A</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 1 Part 2B
+            <a href = "http://102.36.181.13:8000/documents/Schedule1Part2B.pdf">Schedule 1 Part 2B</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 1 Part 3D
+            <a href = "http://102.36.181.13:8000/documents/Schedule1Part3D.pdf">Schedule 1 Part 3D</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 1 Part 3E
+            <a href = "http://102.36.181.13:8000/documents/Schedule1Part3E.pdf">Schedule 1 Part 3E</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 3
+            <a href = "http://102.36.181.13:8000/documents/Schedule3.pdf">Schedule 3</a> 
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 4
+            <a href = "http://102.36.181.13:8000/documents/Schedule4.pdf">Schedule 4</a> 
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 5
+            <a href = "http://102.36.181.13:8000/documents/">Schedule 5</a> 
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              Schedule 6
+            <a href = "http://102.36.181.13:8000/documents/Schedule6.pdf">Schedule 6</a>
             </li>
           </ul>
         </div>
@@ -283,10 +283,10 @@ export default function Customs() {
           </h1>
           <ul className="grid grid-cols-2 gap-x-32  text-mainColor text-[15px] px-4 leading-7 font-normal">
             <li className="hover:underline cursor-pointer starclass">
-              WCO HS2022 Background
+            <a href = "https://www.wcoomd.org/en/media/newsroom/2020/january/wco-has-published-accepted-amendments-to-hs-2022">WCO HS2022 Background</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-              WCO HS2022 Correlation Tables
+            <a href = "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/correlation-tables-hs-2017-2022.aspx">WCO HS2022 Correlation Tables</a>
             </li>
           </ul>
         </div>
@@ -319,36 +319,36 @@ export default function Customs() {
           <div className="flex items-center">
             <ul className="text-mainColor text-[15px] px-4 leading-7 font-normal">
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 1 Part 1 - Chapters 1 to 99 of the ERS Tariff Book
+              <a href = "http://102.36.181.13:8000/documents/Schedule1Part1-Chapters1to99oftheERSTariffBook.pdf">Schedule 1 Part 1 - Chapters 1 to 99 of the ERS Tariff Book</a> 
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 1 Part 2 - Specific and Ad V{" "}
+              <a href = "http://102.36.181.13:8000/documents/Schedule1Part2-SpecificAndAdValoremExciseDuties.pdf">Schedule 1 Part 2 - Specific and Ad V{" "}</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 1 Part 5 - Fuel and Road Accident Fund Levy
+              <a href = "http://102.36.181.13:8000/documents/Schedule1Part5-FuelAndRoadAccidentFundLevy.pdf">Schedule 1 Part 5 - Fuel and Road Accident Fund Levy</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 1 Part 7 - Health Promotion Levy
+              <a href = "http://102.36.181.13:8000/documents/Schedule1Part7-HealthPromotionLevy.pdf"></a>Schedule 1 Part 7 - Health Promotion Levy
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                ATL - Alcohol and Tobacco Levy
+              <a href = "http://102.36.181.13:8000/documents/ATL-AlcoholAndTabaccoLevy.pdf">ATL - Alcohol and Tobacco Levy</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 2 - ​Anti-dumping, Countervailing and Safeguard Duties
+              <a href = "http://102.36.181.13:8000/documents/Schedule2-Anti-dumpingCountervailingAndSafeguardDutiesOnImportedGoods.pdf">Schedule 2 - ​Anti-dumping, Countervailing and Safeguard Duties</a>
                 on Imported Goods{" "}
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 3 - ​​Industrial Rebates of Customs Duties
+              <a href = "http://102.36.181.13:8000/documents/Schedule3-​IndustrialRebatesOfCustomsDuties.pdf">Schedule 3 - ​​Industrial Rebates of Customs Duties</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 4 - ​​​General Rebates of Customs Duties and Fuel Levy
+              <a href = "http://102.36.181.13:8000/documents/Schedule4-GeneralRebatesOfCustomsDutiesAndFuelLevy.pdf">Schedule 4 - ​​​General Rebates of Customs Duties and Fuel Levy</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 5 - ​Specific Drawbacks and Refunds of Customs Duties
+              <a href = "http://102.36.181.13:8000/documents/Schedule5-SpecificDrawbacksAndRefundsOfCustomsDutiesAndFuelLevy.pdf">Schedule 5 - ​Specific Drawbacks and Refunds of Customs Duties</a>
                 and Fuel Levy
               </li>
               <li className="hover:underline cursor-pointer starclass">
-                Schedule 6 - ​​Refunds and Rebates of Excise Duties and Fuel
+              <a href = "http://102.36.181.13:8000/documents/Schedule6-RefundsAndRebatesOfExciseDutiesAndFuelLevy.pdf">Schedule 6 - ​​Refunds and Rebates of Excise Duties and Fuel</a>
                 Levy
               </li>
             </ul>

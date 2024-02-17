@@ -119,7 +119,14 @@ const BankAccounts = () => {
                             </Table>
                         </TableContainer>
                     </Paper>
+    
                 </Box>
+                <Typography variant="h5" component="h2" sx={{ fontWeight: "bold", mt: '2.5rem' }}>
+                  Note
+                </Typography>
+                <Typography variant='body1' className='Pointsformatting' >The Customs and Excise account is for payment of Customs and Excise duties and prepaid of import VAT</Typography>
+                <Typography variant='body1' className='Pointsformatting' >The Domestic taxes account is for all transactions in relation to domestic taxes as well as deferred import VAT.</Typography>
+
             </ContentDiv>
 
             {/*-----------------------Footer---------------------*/}

@@ -25,7 +25,7 @@ const Guidenewbusiness = () => {
                         Step-By Step Guide for New Businesses
                     </Typography> */}
 
-                    <Link href="http://www.ers.org.sz/documents/1674047725.pdf" className='Pointsformatting text-normalBlue'>http://www.ers.org.sz/documents/1674047725.pdf</Link>
+                    <Link href="http://102.36.181.13:8000/documents/Step-ByStepGuideforNewBusinesses.pdf" className='Pointsformatting text-normalBlue'>Click Here to download Guide for New Businesses</Link>
                 </ContentDiv>
             </PageLayout>
         </>

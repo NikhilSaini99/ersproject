@@ -21,9 +21,9 @@ const Spreadsheet = () => {
               <span className="absolute bottom-0 left-0 w-1/4 border-b-2 border-yellowish"></span>
             </Typography>
           </Box>
-          <Link href="https://www.ers.org.sz/documents/1685441059.xlsx">
+          <Link href="http://102.36.181.13:8000/documents/PAYESpreadsheet.xlsx">
           <Typography variant="body1" sx={{ mb: "1rem" }}>
-            <strong><u>https://www.ers.org.sz/documents/1685441059.xlsx</u></strong>
+            <strong><u>Click here to download the PAYE Spreadsheet</u></strong>
           </Typography>
           </Link>
           

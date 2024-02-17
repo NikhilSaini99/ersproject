@@ -211,7 +211,7 @@ export default function About() {
         }}
       >
         <Typography variant="body1" className="Pointsformatting">
-          <Link href="http://www.sra.org.sz/documents/1606378935.pdf">
+          <Link href="http://102.36.181.13:8000/documents/TermsAndConditionsOfSupplyOfGoodsAndServices.pdf">
             <b style={{color:"#2F248F"}}>Click here</b>{" "}
           </Link>
           to download the Standard Terms and Conditions of Supply of Goods and

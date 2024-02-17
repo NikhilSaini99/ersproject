@@ -60,8 +60,9 @@ const SekululaVat = () => {
     },
     {
       downloadData: [
-        "for an example of a valid simplified Tax/VAT Invoice",
-        "for an example of a valid full Tax/VAT Invoice",
+        "<a href = http://102.36.181.13:8000/documents/foranexampleofavalidsimplifiedTax-VATInvoice.jpg target = _blank> Click Hear for an example of a valid simplified Tax/VAT Invoice </a>",
+        "<a href = http://102.36.181.13:8000/documents/foranexampleofavalidfullTax-VATInvoice.jpg target = _blank> Click Hear for an example of a valid full Tax/VAT Invoice </a>",
+        
       ],
     },
     {
@@ -189,7 +190,7 @@ const SekululaVat = () => {
 
   return (
     <>
-      <PageLayout title={"Services"} bannerImg={Banner} contentBackground={bgimg}>
+      <PageLayout title={"Sekulula VAT"} bannerImg={Banner} contentBackground={bgimg}>
         <ContentDiv>
         <Box sx={{ padding: "2rem 0", position:"relative" }}>
                         <Typography variant="h1" sx={{ position: "relative !important" }}>Sekulula VAT
@@ -277,12 +278,10 @@ const SekululaVat = () => {
                 {item.downloadData &&
                   item.downloadData.map((links, index) => (
                     <div className="flex gap-1 items-start pb-2" key={index}>
-                      <Link
-                        href=""
-                        className="Pointsformatting text-normalBlue"
-                      >
-                        Click Here {links}
-                      </Link>
+                      <Typography variant="body1"
+                        className="Pointsformatting text-normalBlue" 
+                        dangerouslySetInnerHTML={{__html:links}} 
+                      />
                     </div>
                   ))}
                 {item.note && (

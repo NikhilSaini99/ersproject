@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Link} from '@mui/material';
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
@@ -69,8 +69,7 @@ const CustomProcedure = () => {
                         ))}
                     </Box>
                 ))}
-                <Typography variant='body1'  className=' pb-2'>Click here to download the full Customs Procedures Codes Explanatory notes</Typography>
-                
+                <Typography variant='body1' className='pb-2'>Click here to download the full <Link href="http://102.36.181.13:8000/documents/CustomsProceduresCodesExplanatoryNotes.pdf" className='text-normalBlue Pointsformatting'>Customs Procedures Codes Explanatory notes</Link></Typography>
             </ContentDiv>
             </PageLayout>
         </>
