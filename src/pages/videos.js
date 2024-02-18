@@ -15,13 +15,29 @@ import dayjs from "dayjs";
 import { useFetch } from "./api/api";
 
 export default function Videos() {
-  // var settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
-  // };
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+         className={`${className} !bg-yellowish !p-3 rounded-full `}
+        style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center",
+            height: "33px", right: "-39px", width: "33px"}}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} !bg-yellowish !p-3 rounded-full `}
+        style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center",
+            height: "33px", left: "-35px", top: "228px", width: "33px", zIndex:1}}
+        onClick={onClick}
+      />
+    );
+  }
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/videos/web");
 
   useEffect(() => {
@@ -34,6 +50,8 @@ export default function Videos() {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow  />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 2048, // screens greater than or equal to 2048px (2k)
@@ -129,10 +147,7 @@ export default function Videos() {
                             </Typography>
                     </Box>
 
-          {/* <Typography variant="h1">
-            Things to See
-          </Typography> */}
-
+       
           <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
             {data &&
               reverseArr?.map((item) => {

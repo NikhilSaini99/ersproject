@@ -8,8 +8,6 @@ const TarrifBrowse = () => {
   return (
     <>
     <ECustomContainer title="Tariff Browse" description={browseDescription}/>
-    <script src="https://www.esupplychainportal.com/SRA/gts-web.js" type="module"></script>
-    <script src="https://www.esupplychainportal.com/SRA/gts-web-legacy.js" noModule defer></script>
     <Footer/>
     </>
   )

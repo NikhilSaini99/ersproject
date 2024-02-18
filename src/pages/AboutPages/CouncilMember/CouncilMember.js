@@ -2,7 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 /* eslint-disable @next/next/no-img-element */
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 
 import Loader from "@/components/Loader";
 import React from "react";
@@ -16,7 +16,7 @@ const CouncilMember = ({ h2Styling, data }) => {
       <div
          className={`${className} !bg-yellowish !p-3 rounded-full `}
         style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center",
-            height: "50px", right: "-40px", width: "50px"}}
+            height: "50px", right: "-55px", width: "50px"}}
         onClick={onClick}
       />
     );
@@ -28,7 +28,7 @@ const CouncilMember = ({ h2Styling, data }) => {
       <div
         className={`${className} !bg-yellowish !p-3 rounded-full `}
         style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center",
-            height: "50px", left: "-40px", width: "50px"}}
+            height: "50px", left: "-55px", width: "50px"}}
         onClick={onClick}
       />
     );
@@ -39,7 +39,7 @@ const CouncilMember = ({ h2Styling, data }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow  />,
     prevArrow: <SamplePrevArrow />,
@@ -47,35 +47,35 @@ const CouncilMember = ({ h2Styling, data }) => {
       {
         breakpoint: 2048, // screens greater than or equal to 2048px (2k)
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1600, // screens between 1600px and 2047px
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1366, // screens between 1366px and 1599px
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1280, // screens between 1280px and 960px
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 960, // screens between 960px and 600px
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -117,7 +117,7 @@ const CouncilMember = ({ h2Styling, data }) => {
           {/*-------------------carousel----------------------- */}
 
             {data?.length === 1 ? 
-            <Box sx={{display:"flex", width:"100%", margin:"0 auto", gap:"1rem", justifyContent:"center"}}>
+            <Box sx={{display:"flex", margin:"0 auto", gap:"1rem", justifyContent:"center"}}>
              <Box
              sx={{
               maxWidth: "350px",
@@ -178,7 +178,6 @@ const CouncilMember = ({ h2Styling, data }) => {
            </Box>
            <Box
              sx={{
-               width: "100%",
                display: "flex",
                flexDirection: "column",
                border: "1px solid rgba(0, 0, 0, 0.10)",
@@ -213,33 +212,22 @@ const CouncilMember = ({ h2Styling, data }) => {
                     }}
                   >
                     <Box sx={{height:"350px", backgroundAttachment:"cover"}}>
-                    <img
-                      src={item?.url}
-                      alt="imgg"
-                      key={i}
-                      style={{ width: "100%", height: "100%", objectFit:"cover" }}
-                    />
-                    </Box>
-                    <Box
-                      sx={{
-                        width: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                        border: "1px solid rgba(0, 0, 0, 0.10)",
-                        borderTop: "none !important",
-                        overflow: "hidden",
-                        p: "25px 20px 18px",
-                        gap: "1.5rem",
-                        minHeight: "135px",
-                        maxHeight: "135px",
-                      }}
-                    >
-                      <Typography variant="body1" fontWeight={"bold"}>
-                        {item?.name}
-                      </Typography>
-                      <Typography variant="body2" sx={{ color: "#f4c402" }}>
-                        {item?.possition}
-                      </Typography>
+                    <Card sx={{ maxWidth: 300, minHeight: 480 }}>
+                    <CardMedia
+          component="img"
+          image={item?.url}
+          alt="green iguana"
+          sx={{ minHeight:"380px"}}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" fontSize="16px" fontWeight="bold">
+          {item?.name}
+          </Typography>
+          <Typography variant="body2" color="#f4c402">
+          {item?.possition}
+          </Typography>
+        </CardContent>
+        </Card>
                     </Box>
                   </Box>
                 </div>

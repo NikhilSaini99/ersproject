@@ -23,19 +23,19 @@ const pageData = [
     Annex1: {
       head: "Annex 1 - Customs Duties of the EU on Products Originating in the SADC EPA States",
       subAnx: [
-        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter1to20.pdf"} >Annex I - Chapter 1 to 20</Link>,
-        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter20to39.pdf"} style={{color:"blue"}}>Annex I - Chapter 20 to 39</Link>,
-        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter39to64.pdf"} target='_blank'>Annex I - Chapter 39 to 64</Link>,
-        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter64to84.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 64 to 84</Link>,
-        <Link href={"http://102.36.181.13:8000/documents/AnnexI-Chapter84to97.pdf"} target='_blank' style={{color:"blue"}}>Annex I - Chapter 84 to 97</Link>,
+       "<a href=http://102.36.181.13:8000/documents/AnnexI-Chapter1to20.pdf >Annex I - Chapter 1 to 20</Link>",
+        "<a href=http://102.36.181.13:8000/documents/AnnexI-Chapter20to39.pdf style={{color:blue}}>Annex I - Chapter 20 to 39</Link>",
+        "<a href=http://102.36.181.13:8000/documents/AnnexI-Chapter39to64.pdf target='_blank'>Annex I - Chapter 39 to 64</Link>",
+        "<a href=http://102.36.181.13:8000/documents/AnnexI-Chapter64to84.pdf target='_blank' style={{color:blue}}>Annex I - Chapter 64 to 84</Link>",
+        "<a href=http://102.36.181.13:8000/documents/AnnexI-Chapter84to97.pdf target='_blank' style={{color:blue}}>Annex I - Chapter 84 to 97</Link>",
       ],
     },
     Annex2: {
       head: "Annex II - Customs Duties of SACU on Products Originating in the EU",
       subAnx: [
-        <Link href={"http://102.36.181.13:8000/documents/AnnexII-Chapter1to37.pdf"} target='_blank' style={{color:"blue"}}>Annex II - Chapter 1 to 37</Link>,
-        <Link href={"http://102.36.181.13:8000/documents/AnnexII-Chapter37to72.pdf"} target='_blank' style={{color:"blue"}}>Annex II - Chapter 37 to 72</Link>,
-        <Link href={"http://102.36.181.13:8000/documents/AnnexII-Chapter72to99.pdf"} target='_blank' style={{color:"blue"}}>Annex II - Chapter 72 to 99</Link>,
+        "<a href=http://102.36.181.13:8000/documents/AnnexII-Chapter1to37.pdf target='_blank' style={{color:blue}}>Annex II - Chapter 1 to 37</a>",
+        "<a href=http://102.36.181.13:8000/documents/AnnexII-Chapter37to72.pdf target='_blank' style={{color:blue}}>Annex II - Chapter 37 to 72</a>",
+        "<a href=http://102.36.181.13:8000/documents/AnnexII-Chapter72to99.pdf target='_blank' style={{color:blue}}>Annex II - Chapter 72 to 99</a>",
       ],
     },
   },
@@ -190,12 +190,10 @@ const FreeTrade = () => {
 
                     {item.Annex1.subAnx &&
                       item.Annex1.subAnx.map((item, index) => (
-                        <Typography
+                        <Typography dangerouslySetInnerHTML={{__html:item}}
                           key={index}
                           variant="body1"
-                        >
-                          {item}
-                        </Typography>
+                        />
                       ))}
                   </Box>
                 )}

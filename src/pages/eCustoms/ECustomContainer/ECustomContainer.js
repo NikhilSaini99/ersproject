@@ -39,6 +39,7 @@ const ECustomContainer = (props) => {
                     <Typography variant="body1" sx={{ lineHeight:"2rem",   mb: '2rem' }}>
                       {description}
                       </Typography>
+                      <div class="bootstrap-gts"> <gts-web view='duty-calculator'></gts-web> </div>
 
      </ContentDiv>
 
