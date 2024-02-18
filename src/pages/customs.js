@@ -44,6 +44,7 @@ export default function Customs() {
       title: "Advance Ruling",
       description:
         "ERS has implemented Advance Rulings in terms of the WTO Agreement on Trade Facilitation (TFA). Advance Rulings allow trade to apply for an official written decision by ERS prior to import or export on Tariff Classification, Origin or Valuation.",
+        path: '/AdvanceRuiling',
     },
 
   ];

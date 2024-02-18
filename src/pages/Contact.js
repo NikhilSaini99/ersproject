@@ -42,6 +42,11 @@ export const GridAutoColumn3 = styled("div")(({theme})=>({
   gap: "1rem",
 }))
 
+export const GridAutoColumnAdv = styled("div")(({theme})=>({
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
+  gap: "1rem",
+}))
 
 export default function Contact() {
 
