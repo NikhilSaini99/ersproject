@@ -201,3 +201,5 @@ export const advanceRuilingdata = [
         lastText:"The same appeal route is applicable for any public rulings initiated by the Commissioner General."
     }
 ]
+
+export default advanceRuilingdata
