@@ -175,7 +175,7 @@ export default function Footer() {
               <Stack direction={'row'} spacing={2}>
                 <BsTelephoneFill style={{ fontSize: '1.5rem' }} />
                 <Typography variant="body1">
-                  [+268] 2406 4000
+                  (+268) 2406 4000
                 </Typography>
               </Stack>
             </Stack>

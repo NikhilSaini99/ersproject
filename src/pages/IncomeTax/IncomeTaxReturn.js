@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography,Link } from '@mui/material';
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Head from 'next/head'
@@ -93,7 +93,7 @@ const IncomeTaxReturn = () => {
 
                     <Typography variant='body1'  className="Pointsformatting">Income Tax returns are a form of reporting to the Tax Administrator (ERS) on a taxpayer&apos;s finances and tax affairs with respect to a tax year. The tax filing period begins after 30 June, being the end of a tax year for companies that have been authorised to use a different tax year to that which is legislated will align with that approved period.
                         {<br></br>}
-                        Every year the Commissioner General publishes a notice calling for income tax returns; click HERE to view the current notice.
+                        Every year the Commissioner General publishes a notice calling for income tax returns; <Link href={"http://102.36.181.13:8000/documents/IncomeTaxReturns.pdf"} target='_blank' style={{color:"blue"}}>click HERE</Link>to view the current notice.
                     </Typography>
 
 

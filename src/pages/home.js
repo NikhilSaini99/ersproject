@@ -135,7 +135,7 @@ export default function Home() {
       icon: Tax,
       description:
         '"e-Tax is an electronic platform through which taxpayers are required to submit VAT, PAYE, Income Tax and Provisional Tax returns."',
-      link: "https://etax.sra.org.sz/",
+      link: "https://taxease.ers.org.sz/",
     },
     {
       img: ECoustoms,

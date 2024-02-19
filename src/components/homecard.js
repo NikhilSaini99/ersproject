@@ -48,7 +48,7 @@ const Icons = () => {
           <p className="text-center text-sm font-medium">Tax Tables</p>
         </Link>
 
-        <Link href="https://etax.sra.org.sz/" className="flex flex-col gap-2">
+        <Link href="https://taxease.ers.org.sz/" className="flex flex-col gap-2">
           <PaymentsOutlinedIcon sx={iconStyling} />
           <p className="text-center text-sm font-medium">eTax</p>
         </Link>
