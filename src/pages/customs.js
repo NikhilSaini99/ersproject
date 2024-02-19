@@ -35,7 +35,7 @@ export default function Customs() {
       img: Asycuda,
       title: "Asycuda World",
       description:
-        "ASYCUDA is a computerized customs management system which covers most foreign trade procedures.",
+        "The Automated System for Customs Data (ASYCUDA) is a computerized customs management system that covers most foreign trade procedures. It handles manifests and customs declarations, along with accounting, transit and suspense procedures.",
         path: 'http://asyw.sra.org.sz/'
     },
     {
@@ -105,7 +105,7 @@ export default function Customs() {
               sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}
             >
               <Box>
-                <Image src={item.img} alt={item.alt} width={100} height={100} />
+                <Image src={item.img} alt={item.alt} width={150} height={150} />
               </Box>
               <Typography
                 variant="h1"
@@ -156,6 +156,7 @@ export default function Customs() {
         <Box sx={{ position: "relative", mt: "1rem" }}>
           <Stack
             sx={{
+              position:"relative",
               width: { xs: "80%" },
               height: { xs: "25rem", lg: "30rem" },
               margin: "0 auto",
@@ -179,17 +180,17 @@ export default function Customs() {
               background: "white",
               width: "62%",
               height: { xs: "40%", lg: "20%", xl: "25%" },
-              bottom: { xs: "-30%", lg: "-15%", xl: "-15%" },
+              bottom: { xs: "-30%", lg: "-12%", xl: "-15%" },
               left: "50%",
               transform: "translate(-50%, -50%)",
-              borderRadius: "25px",
+              borderRadius: "10px",
               p: "2rem",
             }}
           >
             <Typography
               variant="h1"
               sx={{
-                fontSize: "3rem",
+                fontSize: {xs:"2rem", md:"2rem", xl:"3rem"},
                 fontWeight: "bold",
                 color: "#2f2483",
                 textAlign: "center",
@@ -199,12 +200,9 @@ export default function Customs() {
             </Typography>
             <Typography
               variant="body1"
-              sx={{ color: "grey", textAlign: "center" }}
+              sx={{ color: "grey", textAlign: "center", }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-              libero nostrum, delectus quis in non similique ab doloremque
-              reiciendis incidunt ipsum porro iure, omnis ad provident doloribus
-              sequi. Aperiam, possimus?
+             The following page provides access to the Automated System for Customs Data (ASYCUDA) for computerized customs management system and Advance Ruling for seeking prior decision by ERS for import and export purposes.
             </Typography>
           </Box>
         </Box>
