@@ -226,10 +226,11 @@ export default function Footer() {
               {/* <Typography variant="body1" alignSelf='center'>
                 Sitemap
               </Typography> */}
+              <Link href="/TermsandConditions/TermsCondition">
               <Typography variant="body1" alignSelf='center'>
                 Terms of Conditions
               </Typography>
-              
+              </Link>
               <Link href="/EmailDisclaimer/EmailDisclaimer">
               <Typography variant="body1" alignSelf='center' textAlign="center">
                E-mail Disclaimer 

@@ -208,11 +208,10 @@ const FreeTrade = () => {
                     {item.Annex2.subAnx &&
                       item.Annex2.subAnx.map((item, index) => (
                         <Typography
+                         dangerouslySetInnerHTML={{__html:item}}
                           key={index}
                           variant="body1"
-                        >
-                          {item}
-                        </Typography>
+                        />
                       ))}
                   </Box>
                 )}
