@@ -57,7 +57,7 @@ const TermsCondition = () => {
       ];
 
   return (
-    <PageLayout title={"Terms and Conditions"} bannerImg={Banner} contentBackground={bgimg}>
+    <PageLayout title={"Privacy Policy"} bannerImg={Banner} contentBackground={bgimg}>
                  <ContentDiv>
                  <Box sx={{ padding: "2rem 0", position:"relative" }}>
                         <Typography variant="h1" sx={{ position: "relative !important" }}>DATA PRIVACY STATEMENT 
