@@ -28,11 +28,6 @@ const Calculator = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-   
-   
-  
-    // Handle form submission logic here
-    // You can access the form values using the state variables
     const finaltax = taxCalculaterLogic(
       period,
       basicSalary,
@@ -43,31 +38,38 @@ const Calculator = () => {
       ENPF,
       deductions,
     );
-
-    setFinalTax(finaltax.toFixed(2));
-  };
-
-  if(+finalTax<0){
-    alert("Tax payable cannot be less than 0");
-    return
-}
-
-  const isPositiveNumber = (value) => {
-    return value > 0;
-  };
-
-  function handlePeriodChange(e) {
-    setPeriod(e.target.value);
-    if (e.target.value === "Day") {
-      setENPF(11.67);
-    } else if (e.target.value==="Monthly") {
-      setENPF(350);
-    } else if (e.target.value==="yearly") {
-      setENPF(4200);
+  
+    if (finaltax < 0) {
+      alert("Tax payable cannot be less than 0");
+      setFinalTax(0); // Set finalTax to 0 or any default value
     } else {
-      alert("No correct value selected");
+      setFinalTax(finaltax.toFixed(2));
     }
+  
+    setPeriod("");
+    setBasicSalary("");
+    setOvertime("");
+    setBonuses("");
+    setBenefits("");
+    setAllowances("");
+    setDeductions("");
+    setENPF("");
+  };
+
+
+
+function handlePeriodChange(e) {
+  setPeriod(e.target.value);
+  if (e.target.value === "Day") {
+    setENPF(11.67);
+  } else if (e.target.value==="Monthly") {
+    setENPF(350);
+  } else if (e.target.value==="yearly") {
+    setENPF(4200);
+  } else if (e.target.value !== "") {
+    alert("No correct value selected");
   }
+}
 
   return (
     <>
@@ -249,7 +251,7 @@ const Calculator = () => {
               />
                 <Box sx={{display:"flex", alignItems:"center" , gap:"0.5rem"}}>
                 <Typography variant="h5">Total Tax:</Typography>
-                <Typography variant="h5">{finalTax && finalTax}</Typography>
+                <Typography variant="h5">{finalTax && finalTax <= 0 ? 0  : finalTax}</Typography>
                 </Box>
              
               <Button
