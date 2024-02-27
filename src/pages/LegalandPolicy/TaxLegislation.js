@@ -17,19 +17,19 @@ const TaxLegislation = () => {
         {
             head: 'Primary Legislations',
             subpoint: [
-                { link: 'http://102.36.181.13:8000/documents/CustomsandExciseAct1971.pdf', text: 'Customs and Excise Act 1971' },
-                { link: "http://102.36.181.13:8000/documents/IncomeTaxOrder1975.pdf", text: 'Income Tax Order 1975' },
-                { link: 'http://102.36.181.13:8000/documents/ValueAddedTaxAct2011.pdf', text: 'Value Added Tax Act, 2011' },
-                { link: 'http://102.36.181.13:8000/documents/GradedTaxAct1968.pdf', text: 'Graded Tax Act 1968' },
-                { link: 'http://102.36.181.13:8000/documents/TheFuelTaxAct2022.pdf', text: 'The Fuel Tax Act 2022' }
+                { link: 'http://172.30.200.21:8000/documents/CustomsandExciseAct1971.pdf', text: 'Customs and Excise Act 1971' },
+                { link: "http://172.30.200.21:8000/documents/IncomeTaxOrder1975.pdf", text: 'Income Tax Order 1975' },
+                { link: 'http://172.30.200.21:8000/documents/ValueAddedTaxAct2011.pdf', text: 'Value Added Tax Act, 2011' },
+                { link: 'http://172.30.200.21:8000/documents/GradedTaxAct1968.pdf', text: 'Graded Tax Act 1968' },
+                { link: 'http://172.30.200.21:8000/documents/TheFuelTaxAct2022.pdf', text: 'The Fuel Tax Act 2022' }
             ]
         },
         {
             head: 'Amendments',
             subpoint: [
-                { link: 'http://102.36.181.13:8000/documents/IncomeTaxAmendmentAct2023.pdf', text: 'Income Tax Amendment Act 2023' },
-                { link: 'http://102.36.181.13:8000/documents/TheValueAddedTax(Amendment)Act 2022_Schedules.pdf', text: 'The Value Added Tax (Amendment) Act 2022 Schedules' },
-                { link: 'http://102.36.181.13:8000/documents/TheValueAddedTaxAmendmentAct2022.pdf', text: 'The Value Added Tax Amendment Act 2022' }]
+                { link: 'http://172.30.200.21:8000/documents/IncomeTaxAmendmentAct2023.pdf', text: 'Income Tax Amendment Act 2023' },
+                { link: 'http://172.30.200.21:8000/documents/TheValueAddedTax(Amendment)Act 2022_Schedules.pdf', text: 'The Value Added Tax (Amendment) Act 2022 Schedules' },
+                { link: 'http://172.30.200.21:8000/documents/TheValueAddedTaxAmendmentAct2022.pdf', text: 'The Value Added Tax Amendment Act 2022' }]
         }
     ]
 
@@ -54,7 +54,7 @@ const TaxLegislation = () => {
                     </Typography> */}
 
                 <Typography variant='body1' className='Pointsformatting'>The Eswatini Revenue Service derives its authority to administer various revenue laws from the
-                <Link href={'http://102.36.181.13:8000/documents/RevenueAuthorityAct2008.pdf'} style={{ color: '#2f2483'}} className='Pointsformatting'> Revenue Authority Act 2008</Link></Typography>
+                <Link href={'http://172.30.200.21:8000/documents/RevenueAuthorityAct2008.pdf'} style={{ color: '#2f2483'}} className='Pointsformatting'> Revenue Authority Act 2008</Link></Typography>
                
 
                 <Typography variant='body1' marginY="0.8rem"  className='Pointsformatting'>The laws administered by the Authority include</Typography>

@@ -69,7 +69,7 @@ const Icons = () => {
         </Link>
 
         <Link
-          href="http://102.36.181.13:8000/documents/Business.pdf"
+          href="http://172.30.200.21:8000/documents/Business.pdf"
           className="flex flex-col gap-2"
         >
           <TrendingUpIcon sx={iconStyling} />
@@ -77,7 +77,7 @@ const Icons = () => {
         </Link>
 
         <Link
-          href="http://102.36.181.13:8000/documents/Travelling.pdf"
+          href="http://172.30.200.21:8000/documents/Travelling.pdf"
           className="flex flex-col gap-2"
         >
           <FlightTakeoffIcon sx={iconStyling} />

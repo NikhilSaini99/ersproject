@@ -148,7 +148,7 @@ const Paye = () => {
                     <div >
                         <Typography variant="body1" className="Pointsformatting">
                             The Employers PAYE Guide may be downloaded by{' '}
-                            <Link href="http://102.36.181.13:8000/documents/TheEmployersPAYEGuide.pdf">clicking here</Link>.
+                            <Link href="http://172.30.200.21:8000/documents/TheEmployersPAYEGuide.pdf">clicking here</Link>.
                         </Typography>
                     </div>
 

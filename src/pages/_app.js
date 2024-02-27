@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
 
  useEffect(() => {
     const script = document.createElement("script");
-    script.src = "http://102.36.181.13:5500/dist/chat-bot.bundle.js";
+    script.src = "http://172.30.200.21:5500/dist/chat-bot.bundle.js";
     script.type = "module"; // Add type module
     script.defer = true;
     document.body.appendChild(script);
