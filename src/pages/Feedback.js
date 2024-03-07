@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import { Box, Button, FormControl, InputLabel, MenuItem, Paper, Select, Stack, TextField, Typography } from '@mui/material'
+import { Box, Button, Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Paper, Select, Stack, TextField, Typography } from '@mui/material'
 import Head from 'next/head'
 //import Image from 'next/image'
 //import Banner from "../assets/images/customs.jpg";
@@ -10,6 +10,7 @@ import feedbackimg from '../assets/images/bg-1.png'
 import axios from 'axios'
 import { submitFeedback, getFeedback } from './api/api'
 import { useFetch } from './api/api'
+import Link from 'next/link'
 
 const Feedback = () => {
   const [feedbacktype, setFeedbacktype] = useState('')
@@ -71,7 +72,7 @@ const Feedback = () => {
 
             <Stack sx={{ maxWidth: '600px', display: 'flex', justifyContent: 'center', margin: '0 auto', gap: { xs: '1rem', md: '1rem', xl: '0.4rem' }, px: { xs: '2rem', lg: '1rem' } }}>
 
-              <FormControl sx={{ width: { xs: '60%', md: '65%', xl: '40%', alignSelf: 'center' }, mt: { xs: '2rem', lg: '3rem' } }}>
+              <FormControl sx={{ width: { xs: '60%', md: '65%', xl: '100%', alignSelf: 'center' }, mt: { xs: '2rem', lg: '3rem' }, mb:"1rem" }}>
                 <InputLabel id="Feedback-type">Feedback Type</InputLabel>
                 <Select
                   labelId='Feedback-type'
@@ -93,6 +94,7 @@ const Feedback = () => {
               <TextField variant='outlined' size='medium' type='text' value={email} onChange={(e) => setEmail(e.target.value)} required />
               <InputLabel htmlFor="full-Name">Comments</InputLabel>
               <TextField variant='outlined' size='medium' type='text' multiline={true} minRows={5} value={feedback_description} onChange={(e) => setfeedback_description(e.target.value)} sx={{ mb: '1rem' }} required />
+              <FormControlLabel required  control={<Checkbox size='small' />} label={<Typography  variant="subtitle2">By clicking on Submit I hereby consent to provide my personal information to ERS in compliance with their <Link href="/TermsandConditions/TermsCondition" target='_blank' style={{color:"blue"}}> Data Privacy policy</Link></Typography>} />
               <Button type="submit" variant='contained' color='primary' sx={{ background: '#2f2483 !important', color: 'white', alignSelf: 'center', width: '10rem', mb: { xs: '2rem', lg: '3rem' }, p: '0.8rem' }}>Send</Button>
             </Stack>
           </Paper>
