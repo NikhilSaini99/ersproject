@@ -50,7 +50,7 @@ const Icons = () => {
 
         <Link href="https://taxease.ers.org.sz/" className="flex flex-col gap-2">
           <PaymentsOutlinedIcon sx={iconStyling} />
-          <p className="text-center text-sm font-medium">eTax</p>
+          <p className="text-center text-sm font-medium">Tax Ease</p>
         </Link>
 
         <Link href="/TaxItemTable" className="flex flex-col gap-2">
@@ -69,7 +69,7 @@ const Icons = () => {
         </Link>
 
         <Link
-          href="http://172.30.200.21:8000/documents/Business.pdf"
+          href="/BusinessFAQ"
           className="flex flex-col gap-2"
         >
           <TrendingUpIcon sx={iconStyling} />
@@ -77,7 +77,7 @@ const Icons = () => {
         </Link>
 
         <Link
-          href="http://172.30.200.21:8000/documents/Travelling.pdf"
+          href="/TravellingFAQ"
           className="flex flex-col gap-2"
         >
           <FlightTakeoffIcon sx={iconStyling} />
@@ -93,7 +93,7 @@ function News({ icon, description, img, link }) {
     <>
       <div className=" border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400 ">
         <div className="object-cover relative ">
-          <Image src={img} alt="..." className="h-48 w-full" />
+          <Image src={img} alt="..." className="h-48 w-full" style={{objectFit:"cover"}}/>
           <div className="rounded-2xl absolute -bottom-[76px] left-8 px-8 py-4 bg-white ">
             <Image src={icon} alt="..." className="w-40" />
           </div>
