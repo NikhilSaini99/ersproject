@@ -109,7 +109,7 @@ const SelfAssessment = () => {
             note: 'NOTE: Section 39 of the Income Tax Order, 1975 provides for the ERS to carry out administrative assessments (i.e. raising estimated assessments) for taxpayers who do not submit income tax returns within the stipulated time and in the manner prescribed.'
         },
         {
-            title: 'SRA’S RESPONSIBILITIES TOWARDS SUPPORTING SELF-ASSESSMENT INCLUDE:',
+            title: 'ERS’S RESPONSIBILITIES TOWARDS SUPPORTING SELF-ASSESSMENT INCLUDE:',
             points: ['Taxpayer Education, Awareness campaigns, mobile support',
                 'Issuance of pre-transaction rulings and',
                 'Tax audits and investigations.']

@@ -14,7 +14,7 @@ const Hotline = () => {
             description: 'If you have a complaint or wish to convey compliments on our services we will be pleased to hear from you. Also if you wish to give us information about malpractice by our staff or about evasion of taxes or Customs duties by any person or business you can contact us:-',
             subHeading: 'Head of internal Affairs',
             contact: '(+268) 2404 8449',
-            email: 'internalaffairs@sra.org.sz',
+            email: 'internalaffairs@ers.org.sz',
             alternateContact: 'You may also call on our hotline 800 8000'
         }
     ]

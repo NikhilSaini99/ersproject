@@ -140,7 +140,7 @@ const IncomeTaxData = [
     title: 'Withholding Tax on Interest',
 
     description: ' This should be deducted from the payment of interest to any person other than a company not ordinarily resident; a company not registered in Swaziland or the estate of a deceased person, who at the date of his death was ordinarily resident in Swaziland.',
-    description1: 'The debtor in respect of such amount and who is ordinarily resident or carries on business in Swaziland shall withhold and remit to SRA tax equal to ten per cent of the interest that accrues to or in favour of the non-resident.',
+    description1: 'The debtor in respect of such amount and who is ordinarily resident or carries on business in Swaziland shall withhold and remit toERStax equal to ten per cent of the interest that accrues to or in favour of the non-resident.',
   },
 
   {
