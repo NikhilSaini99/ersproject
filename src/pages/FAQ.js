@@ -97,7 +97,7 @@ export default function FAQ() {
           <h1 className="text-subColor text-6xl font-bold uppercase">FAQ</h1>
           <p className="mt-6 text-gray-500 leading-normal font-normal text-lg">
             The Frequently Asked Questions (FAQ) section is updated with
-            information on how to use the eCustoms Tariff for Eswatini, the SRA
+            information on how to use the eCustoms Tariff for Eswatini, the ERS
             Tariff Book in general and the World Customs Organisation (WCO)
             Harmonised System on which it is based. The WCO FAQ on the
             Harmonised System can be accessed here.

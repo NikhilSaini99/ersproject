@@ -278,7 +278,14 @@ export default function Header(props) {
                                   </p>
                                 </Link>
                                 <br />
+                                <Link href={"https://vatrefundagency.co.za/check-refund-progress/"} className="line">
+                                  <p className="text-sm leading-6 font-normal cursor-pointer hover:text-yellowish ">
+                                  VAT Refund With SARS
+                                  </p>
+                                </Link>
+                                <br />
                               </div>
+                              
 
                               <div>
                                 <h1 className="text-xl font-bold leading-8 mt-12 mb-3">

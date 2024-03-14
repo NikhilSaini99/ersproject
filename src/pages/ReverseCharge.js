@@ -49,7 +49,7 @@ const ReverseCharge = () => {
         {
             id: 6,
             content:
-                'An example: A Swazi business engages a foreign service provider to do a job in Eswatini at a price of E100,000. After the job is done the Swazi business must calculate VAT at 15% of E100,000 and pay the E15,000 to SRA. Furthermore, the Swazi business MUST withhold 15% income tax on E100,000 and pay that E15,000 to the ERS. The end result for the Swazi business is as follows:',
+                'An example: A Swazi business engages a foreign service provider to do a job in Eswatini at a price of E100,000. After the job is done the Swazi business must calculate VAT at 15% of E100,000 and pay the E15,000 to ERS. Furthermore, the Swazi business MUST withhold 15% income tax on E100,000 and pay that E15,000 to the ERS. The end result for the Swazi business is as follows:',
         },
         {
             id: 7,

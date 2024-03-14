@@ -45,7 +45,7 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
     {
       section: "Reporting and Outputs",
       content:
-        "The Chairperson of the BCC is expected to account to the relevant authority (Minister for Finance) for activities undertaken by the Committee and make recommendations to the Minister concerning the adoption of any matters arising from the forum. Minutes of each meeting of the BCC will be published on the SRA website.",
+        "The Chairperson of the BCC is expected to account to the relevant authority (Minister for Finance) for activities undertaken by the Committee and make recommendations to the Minister concerning the adoption of any matters arising from the forum. Minutes of each meeting of the BCC will be published on theERSwebsite.",
     },
     {
       section: "Performance Measures",
@@ -58,15 +58,11 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
         links: [
           {
             text: "1. February 21, 2013",
-            link: "http://www.sra.org.sz/documents/1492785325.pdf",
+            link: "http://172.30.200.21:8000/documents/February_21_2013.pdf",
           },
           {
-            text: "2. February 21, 2013",
-            link: "http://www.sra.org.sz/documents/1492785325.pdf",
-          },
-          {
-            text: "3. February 21, 2013",
-            link: "http://www.sra.org.sz/documents/1492785325.pdf",
+            text: "3. February 20, 2014",
+            link: "http://172.30.200.21:8000/documents/February_20_2014.pdf",
           },
         ],
       },

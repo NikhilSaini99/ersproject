@@ -114,7 +114,7 @@ const InternationalStake = () => {
             name: "Swaziland Government - Ministry of Finance",
             link: 'http://www.gov.sz/index.php?option=com_content&view=article&id=277&Itemid=405',
             description:
-                "The Swaziland Government - Ministry of Finance is the parent Ministry under which the Swaziland Revenue Authority reports.",
+                "The Swaziland Government - Ministry of Finance is the parent Ministry under which the Eswatini Revenue Authority reports.",
         },
         {
             name: "Swaziland Investment Promotion Authority (SIPA)",

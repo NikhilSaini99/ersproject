@@ -25,7 +25,7 @@ const TraderPrograme = () => {
             Preferred Trader Programme
             </Typography> */}
 
-            <Link href="http://www.sra.org.sz/documents/1567671955.pdf" className='Pointsformatting text-normalBlue'>ERS - Preferred Trader Programme External Guide and Procedure-Vsn1_ 2019</Link>
+            <Link href="http://172.30.200.21:8000/documents/Preferred_Trader_Programme.pdf" className='Pointsformatting text-normalBlue'>ERS - Preferred Trader Programme External Guide and Procedure-Vsn1_ 2019</Link>
         </ContentDiv>
     </PageLayout>
 </>

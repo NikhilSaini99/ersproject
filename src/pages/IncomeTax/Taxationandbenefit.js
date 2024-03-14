@@ -97,7 +97,7 @@ const Taxationandbenefit = () => {
             <li>
               Where the employer owns the accommodation or housing, the rental
               benefit value is determined in accordance with Schedule A (
-              <a href="http://www.sra.org.sz/documents/1545136553.pdf">
+              <a href="http://172.30.200.21:8000/documents/Taxation_of_Benefits.pdf">
                 click here to access
               </a>
               ) which is in accordance with size and location.
