@@ -74,8 +74,11 @@ body {
   background-size: 100% 2px;
 }
 
+
+
 .main:hover .arrow {
   transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
 }
 
 /*------------------Slider-------------------*/
@@ -259,6 +262,7 @@ ul li.starclass:before {
   content: '\276F';
   color: '#2F248F';
   list-style-type: none;
+  transition: all 0.3s ease;
 }
 
 /* SLICK ARROW */
