@@ -1,24 +1,30 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
-import InputBase from '@mui/material/InputBase';
+import InputBase from "@mui/material/InputBase";
 import Link from "next/link";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
 import WhatnewComponent from "./shared/WhatnewComponent";
 import call from "../assets/icons/call.png";
 import logo from "../assets/icons/ERS_Logo.png";
 import mail from "../assets/icons/mail.png";
-import { styled, } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import { useFetch } from "@/pages/api/api";
 import { useMemo } from "react";
 import { useRouter } from "next/router";
-
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 export default function Header(props) {
   // const {MenuData, menuLoading} = props;
   const router = useRouter();
+  const menuRef = useRef(null);
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/whateNew");
-  const { data:MenuData, fetchAPI:MenuCall, isLoading:menuLoading } = useFetch("get", "/api/menuService/web");
+  const {
+    data: MenuData,
+    fetchAPI: MenuCall,
+    isLoading: menuLoading,
+  } = useFetch("get", "/api/menuService/web");
   let services = ["/VAT", "/IncomeTax", "/CustomExcise"];
   let forms = ["/VatForms", "/IncomeForms", "/CustomsForms"];
   let media = ["/news", "/gallery", "/videos", "/NewsDetails"];
@@ -33,7 +39,6 @@ export default function Header(props) {
     newsData: [],
     videosData: [],
   });
-  
 
   const [isOpen, setSearchOpen] = useState(false);
 
@@ -44,22 +49,22 @@ export default function Header(props) {
   useEffect(() => {
     fetchAPI();
     MenuCall();
-  }, [fetchAPI,MenuCall]);
+  }, [fetchAPI, MenuCall]);
 
-  
   useMemo(() => {
     data;
     MenuData;
-  }, [data,MenuData]);
+  }, [data, MenuData]);
 
-  const categories = ['Customs & Excise', 'Income Tax', 'VAT'];
- 
+  const categories = ["Customs & Excise", "Income Tax", "VAT"];
 
-  const { data: { formData, galleryImagesData, newsData, videosData } = {} } = MenuData || {};
- 
-  
-  function setLimitItem (filteredData){
-    setMenuService({...menuService, formData: filteredData, 
+  const { data: { formData, galleryImagesData, newsData, videosData } = {} } =
+    MenuData || {};
+
+  function setLimitItem(filteredData) {
+    setMenuService({
+      ...menuService,
+      formData: filteredData,
       galleryImagesData: galleryImagesData.rows.slice(0, 5),
       newsData: newsData.rows.slice(0, 5),
       videosData: videosData.rows.slice(0, 5),
@@ -67,10 +72,21 @@ export default function Header(props) {
   }
 
   useMemo(() => {
-    if(!menuLoading && formData && galleryImagesData && newsData && videosData){
+    if (
+      !menuLoading &&
+      formData &&
+      galleryImagesData &&
+      newsData &&
+      videosData
+    ) {
       const filteredData = categories.reduce((acc, category) => {
-        const categoryData = formData.filter(item => item.category === category).slice(0, 5);
-        return { ...acc, [category.toLowerCase().replace(/&|\s/g, '_')]: categoryData };
+        const categoryData = formData
+          .filter((item) => item.category === category)
+          .slice(0, 5);
+        return {
+          ...acc,
+          [category.toLowerCase().replace(/&|\s/g, "_")]: categoryData,
+        };
       }, {});
       setLimitItem(filteredData);
     }
@@ -89,51 +105,67 @@ export default function Header(props) {
     };
   }, []);
 
-  const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
+  const Search = styled("div")(({ theme }) => ({
+    position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: 'white',
-    '&:hover': {
-      backgroundColor: 'white',
+    backgroundColor: "white",
+    "&:hover": {
+      backgroundColor: "white",
     },
-    display:'flex',
-    alignItems:"center",
+    display: "flex",
+    alignItems: "center",
     marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(1),
-      width: 'auto',
+      width: "auto",
     },
   }));
 
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
+  const SearchIconWrapper = styled("div")(({ theme }) => ({
     padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   }));
 
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
+    color: "inherit",
+    "& .MuiInputBase-input": {
       padding: theme.spacing(1, 1, 1, 0),
-      backgroundColor: '#5D5D5D0A',
+      backgroundColor: "#5D5D5D0A",
       // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        width: '12ch',
-        '&:focus': {
-          width: '20ch',
+      transition: theme.transitions.create("width"),
+      width: "100%",
+      [theme.breakpoints.up("sm")]: {
+        width: "12ch",
+        "&:focus": {
+          width: "20ch",
         },
       },
     },
   }));
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setServicesOpen(false);
+        setFormsOpen(false);
+        setMediaOpen(false);
+      }
+    }
+  
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuRef]);
 
   return (
     <>
@@ -163,81 +195,65 @@ export default function Header(props) {
                 <li className="relative">
                   <div className="items-center">
                     <button
-                    // className=""
-                    // onMouseOver={() => {
-                    //   setAboutOpen(!isAboutOpen);
-                    // }}
-                    // onMouseLeave={() => {
-                    //   setAboutOpen(false);
-                    // }}
                     >
                       <Link href={"/About"}>
                         <h3
-                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor mr-3 ${
-                            router.asPath === "/About"
-                              ? "text-[#2F3192]"
-                              : "text-black/80"
-                          }`}
+                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor mr-3 ${router.asPath === "/About"
+                            ? "text-[#2F3192]"
+                            : "text-black/80"
+                            }`}
                         >
                           About Us
-                          {/* <span style={{ float: "right" }}>
-                          <RiArrowDropDownLine size={25} />
-                        </span> */}
                         </h3>
                       </Link>
                     </button>
-                    {/* <div
-                      className={`absolute z-10 font-normal ${
-                        isAboutOpen ? "block" : "hidden"
-                      }`}
-                    >
-                    </div> */}
                   </div>
                 </li>
                 <li className="relative main">
-                  <div className="items-center relative">
+                  <div ref={menuRef} className="items-center relative">
                     <button
-                      onMouseOver={() => {
-                        setServicesOpen(true);
-                      }}
-                      onMouseLeave={() => {
-                        setServicesOpen(false);
+                      onClick={() => {
+                        setServicesOpen(!isServicesOpen);
+                        setFormsOpen(false);
+                        setMediaOpen(false);
                       }}
                     >
+                    <div className="flex gap-1 items-center">
                       <h3
-                        className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${
-                          services.includes(router.asPath)
-                            ? "text-[#2F3192]"
-                            : "text-black/80"
-                        }`}
+                        className={`block text-lg leading-5 font-medium hover:text-mainColor transition-colors duration-200 ${services.includes(router.asPath)
+                          ? "text-[#2F3192]"
+                          : "text-black/80"
+                          }`}
                       >
                         Services
-                        <span style={{ float: "right" }} className="arrow">
-                          <RiArrowDropDownLine size={25} />
-                        </span>
                       </h3>
+                      <ExpandMoreIcon
+                      sx={{
+                        width: "24px",
+                        height: "24px",
+                        transition: isServicesOpen
+                          ? "transform 0.3s ease-in-out"
+                          : "all 0.3s ease",
+                        transform: isServicesOpen
+                          ? "rotate(180deg)"
+                          : undefined,
+                      }}
+                    />
+                      </div>
                     </button>
+
+                 
                     <div
-                      className={`absolute z-10  font-normal ${
-                        isServicesOpen ? "block" : "hidden"
-                      }`}
+                      className={`absolute z-10  font-normal ${isServicesOpen ? "block" : "hidden"
+                        }`}
                     >
-                      <ul
-                        className={`text-sm font-sans text-white `}
-                        onMouseOver={() => {
-                          setServicesOpen(true);
-                        }}
-                        onMouseLeave={() => {
-                          setServicesOpen(false);
-                        }}
-                      >
+                      <ul className={`text-sm font-sans text-white relative`}>
                         <div
-                          className={`fixed left-10 right-10 font-normal w-[94%]  bg-mainColor flex  min-min-h-[36rem]  ${
-                            isServicesOpen ? "block" : "hidden"
-                          }`}
+                          className={`fixed top-[93px] left-10 right-10 font-normal w-[94%]  bg-mainColor flex  min-min-h-[36rem]  ${isServicesOpen ? "block" : "hidden"
+                            }`}
                         >
                           {/* Left side of Menu */}
-                          <WhatnewComponent whatNewsData={data}/>
+                          <WhatnewComponent whatNewsData={data} />
                           {/* Right side of Menu */}
                           <div
                             className="py-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]"
@@ -449,7 +465,7 @@ export default function Header(props) {
                                   PAYE Spreadsheet
                                 </p>
                               </Link>
-                              <br/>
+                              <br />
                               <Link
                                 href={"/IncomeTax/Guidenewbusiness"}
                                 className="line"
@@ -514,16 +530,17 @@ export default function Header(props) {
                                   Bonded Warehouses/Rebate Store
                                 </p>
                               </Link>
-                
+
                               <br />
-                              <Link href={"/CustomExcise/FreeTrade"}
-                              className="line"
+                              <Link
+                                href={"/CustomExcise/FreeTrade"}
+                                className="line"
                               >
                                 <p className="text-sm font-normal my-2 cursor-pointer hover:text-yellowish ">
                                   Free Trade and Preferential Agreements
                                 </p>
                               </Link>
-                              
+
                               <br />
                               <Link
                                 href={"/CustomExcise/Excisepage"}
@@ -576,7 +593,8 @@ export default function Header(props) {
                                 className="line"
                               >
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
-                                  Rebate Concessions for New / Returning Residents
+                                  Rebate Concessions for New / Returning
+                                  Residents
                                 </p>
                               </Link>
                               <br />
@@ -589,15 +607,12 @@ export default function Header(props) {
                                 </p>
                               </Link>
                               <br />
-                              <Link
-                                href={"/CustomExcise/AEO"}
-                                className="line"
-                              >
+                              <Link href={"/CustomExcise/AEO"} className="line">
                                 <p className="text-sm font-normal mt-2 cursor-pointer hover:text-yellowish ">
-                                Authorised Economic Operator (AEO)
+                                  Authorised Economic Operator (AEO)
                                 </p>
                               </Link>
-                              <br/>
+                              <br />
                               <Link
                                 href={"/CustomExcise/EuRegistered"}
                                 className="line"
@@ -615,49 +630,52 @@ export default function Header(props) {
                   </div>
                 </li>
                 <li className="relative main">
-                  <div className="items-center">
+                  <div className="items-center relative ">
                     <button
-                      onMouseOver={() => {
+                      onClick={() => {
                         setFormsOpen(!isFormsOpen);
-                      }}
-                      onMouseLeave={() => {
-                        setFormsOpen(false);
+                        setServicesOpen(false);
+                        setMediaOpen(false);
                       }}
                     >
+                    <div className="flex gap-1 items-center">
                       <h3
-                        className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${
-                          forms.includes(router.asPath)
-                            ? "text-[#2F3192]"
-                            : "text-black/80"
-                        }`}
+                        className={`block  text-lg leading-5 font-medium hover:text-mainColor transition-colors ${forms.includes(router.asPath)
+                          ? "text-[#2F3192]"
+                          : "text-black/80"
+                          }`}
                       >
                         Forms
-                        <span style={{ float: "right" }} className="arrow">
-                          <RiArrowDropDownLine size={25} />
-                        </span>
                       </h3>
+                      <ExpandMoreIcon
+                      sx={{
+                        width: "24px",
+                        height: "24px",
+                        transition: isFormsOpen
+                          ? "transform 0.3s ease-in-out"
+                          : "all 0.3s ease",
+                        transform: isFormsOpen
+                          ? "rotate(180deg)"
+                          : undefined,
+                      }}
+                    />
+                      </div>
                     </button>
+                    
+
                     <div
-                      className={`absolute z-10  font-normal ${
-                        isFormsOpen ? "block" : "hidden"
-                      }`}
+                      className={`absolute z-10  font-normal ${isFormsOpen ? "block" : "hidden"
+                        }`}
                     >
                       <ul
-                        className={`text-sm font-sans text-white `}
-                        onMouseOver={() => {
-                          setFormsOpen(true);
-                        }}
-                        onMouseLeave={() => {
-                          setFormsOpen(false);
-                        }}
+                        className={`text-sm  font-sans text-white relative `}
                       >
                         <div
-                          className={`fixed  left-10 right-10 font-normal w-[94%]  bg-mainColor flex  min-h-[36rem] ${
-                            isFormsOpen ? "block" : "hidden"
-                          }`}
+                          className={`fixed top-[93px]  left-10 right-10 font-normal w-[94%]  bg-mainColor flex  min-h-[36rem] ${isFormsOpen ? "block" : "hidden"
+                            }`}
                         >
                           {/* Left side of Menu */}
-                          <WhatnewComponent whatNewsData={data}/>
+                          <WhatnewComponent whatNewsData={data} />
                           {/* Right Side of Menu */}
                           <div
                             className="py-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]"
@@ -667,61 +685,77 @@ export default function Header(props) {
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 VAT Forms
                               </h1>
-                              {menuService.formData && menuService?.formData?.vat?.map((item) => {
-                                return (
-                                  <div key={item?.id}>
-                                    <Link href={'/VatForms'} className="line">
-                                      <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish  checking">
-                                        {item?.formName}
-                                      </p>
-                                    </Link>
-                                  </div>
-                                );
-                              })
-                              }
-                                <h6 className="text-sm leading-6 font-bold mt-3 cursor-pointer">
-                                <Link href={'/VatForms'} className="line">View More</Link>
-                                </h6>
+                              {menuService.formData &&
+                                menuService?.formData?.vat?.map((item) => {
+                                  return (
+                                    <div key={item?.id}>
+                                      <Link href={"/VatForms"} className="line">
+                                        <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish  checking">
+                                          {item?.formName}
+                                        </p>
+                                      </Link>
+                                    </div>
+                                  );
+                                })}
+                              <h6 className="text-sm leading-6 font-bold mt-3 cursor-pointer">
+                                <Link href={"/VatForms"} className="line">
+                                  View More
+                                </Link>
+                              </h6>
                             </div>
 
                             <div>
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 Income Tax Forms
                               </h1>
-                              {menuService.formData && menuService?.formData?.income_tax?.map((item) => {
-                                return (
-                                  <div key={item?.id}>
-                                    <Link href={'/IncomeForms'} className="line">
-                                      <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish  checking">
-                                        {item?.formName}
-                                      </p>
-                                    </Link>
-                                  </div>
-                                );
-                              })
-                              }
+                              {menuService.formData &&
+                                menuService?.formData?.income_tax?.map(
+                                  (item) => {
+                                    return (
+                                      <div key={item?.id}>
+                                        <Link
+                                          href={"/IncomeForms"}
+                                          className="line"
+                                        >
+                                          <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish  checking">
+                                            {item?.formName}
+                                          </p>
+                                        </Link>
+                                      </div>
+                                    );
+                                  }
+                                )}
                               <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                              <Link href={'/IncomeForms'} className="line">View More</Link>
+                                <Link href={"/IncomeForms"} className="line">
+                                  View More
+                                </Link>
                               </h6>
                             </div>
                             <div>
                               <h1 className="text-xl font-bold leading-8 mb-3 ">
                                 Customs & Excise
                               </h1>
-                              {menuService.formData && menuService?.formData?.customs___excise?.map((item) => {
-                                return (
-                                  <div key={item?.id}>
-                                    <Link href={'/CustomsForms'} className="line">
-                                      <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish  checking">
-                                        {item?.formName}
-                                      </p>
-                                    </Link>
-                                  </div>
-                                );
-                              })
-                              }
+                              {menuService.formData &&
+                                menuService?.formData?.customs___excise?.map(
+                                  (item) => {
+                                    return (
+                                      <div key={item?.id}>
+                                        <Link
+                                          href={"/CustomsForms"}
+                                          className="line"
+                                        >
+                                          <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish  checking">
+                                            {item?.formName}
+                                          </p>
+                                        </Link>
+                                      </div>
+                                    );
+                                  }
+                                )}
                               <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                              <Link href={'/CustomsForms'} className="line">View More</Link>
+                                <Link href={"/CustomsForms"} className="line">
+                                  View More
+                                </Link>
                               </h6>
                             </div>
                           </div>
@@ -731,49 +765,56 @@ export default function Header(props) {
                   </div>
                 </li>
                 <li className="relative main">
-                  <div className="items-center relative">
+                  <div className="items-center relative ">
                     <button
-                      onMouseOver={() => {
-                        setMediaOpen(true);
+                      onClick={() => {
+                        setMediaOpen(!isMediaOpen);
+                        setServicesOpen(false);
+                        setFormsOpen(false);
                       }}
-                      onMouseLeave={() => {
-                        setMediaOpen(false);
-                      }}
+                    
                     >
+                     <div className="flex gap-1 items-center">
                       <h3
-                        className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${
-                          media.includes(router.asPath)
-                            ? "text-[#2F3192]"
-                            : "text-black/80"
-                        }`}
+                        className={`block  text-lg leading-5 font-medium hover:text-mainColor ${media.includes(router.asPath)
+                          ? "text-[#2F3192]"
+                          : "text-black/80"
+                          }`}
                       >
                         Media{" "}
-                        <span style={{ float: "right" }} className="arrow">
+                        {/* <span style={{ float: "right" }} className="arrow">
                           <RiArrowDropDownLine size={25} />
-                        </span>
+                        </span> */}
                       </h3>
+                      <ExpandMoreIcon
+                      sx={{
+                        width: "24px",
+                        height: "24px",
+                        transition: isMediaOpen
+                          ? "transform 0.3s ease-in-out"
+                          : "all 0.3s ease",
+                        transform: isMediaOpen
+                          ? "rotate(180deg)"
+                          : undefined,
+                      }}
+                    />
+                      </div>
                     </button>
+                    
                     <div
-                      className={`absolute  z-10  font-normal w-24 bg-mainColor ${
-                        isMediaOpen ? "block" : "hidden"
-                      }`}
+                      className={`absolute  z-10  font-normal w-24 bg-mainColor ${isMediaOpen ? "block" : "hidden"
+                        }`}
                     >
                       <ul
-                        className={`text-sm font-sans text-white `}
-                        onMouseOver={() => {
-                          setMediaOpen(true);
-                        }}
-                        onMouseLeave={() => {
-                          setMediaOpen(false);
-                        }}
+                        className={`text-sm font-sans text-white relative `}
+                     
                       >
                         <div
-                          className={`fixed  left-10 right-10 font-normal w-[94%]  bg-mainColor min-h-[36rem] flex ${
-                            isMediaOpen ? "block" : "hidden"
-                          }`}
+                          className={`fixed top-[93px] left-10 right-10 font-normal w-[94%]  bg-mainColor min-h-[36rem] flex ${isMediaOpen ? "block" : "hidden"
+                            }`}
                         >
                           {/* left side of menu */}
-                          <WhatnewComponent whatNewsData={data}/>
+                          <WhatnewComponent whatNewsData={data} />
                           {/* Right Side of menu */}
                           <div
                             className="py-5 px-12 grid grid-cols-3 gap-32 my-1 sub_items_text_color w-[80%]"
@@ -785,21 +826,32 @@ export default function Header(props) {
                                   News
                                 </h1>
                                 <div>
-                                {menuService.newsData &&  menuService?.newsData?.map((item) => {
-                                  return (
-                                    <div key={item?.id}>
-                                      <Link href={{ pathname: "/NewsDetails", query: { id:item.id, apiURl:'/api/news' } }} className="line">
-                                        <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish ">
-                                          {item.newsName}
-                                        </p>
-                                      </Link>
-                                    </div>
-                                  );
-                                })}
-                                  
+                                  {menuService.newsData &&
+                                    menuService?.newsData?.map((item) => {
+                                      return (
+                                        <div key={item?.id}>
+                                          <Link
+                                            href={{
+                                              pathname: "/NewsDetails",
+                                              query: {
+                                                id: item.id,
+                                                apiURl: "/api/news",
+                                              },
+                                            }}
+                                            className="line"
+                                          >
+                                            <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish ">
+                                              {item.newsName}
+                                            </p>
+                                          </Link>
+                                        </div>
+                                      );
+                                    })}
                                 </div>
                                 <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                                <Link href={`/news`} className="line">View More</Link>
+                                  <Link href={`/news`} className="line">
+                                    View More
+                                  </Link>
                                 </h6>
                               </div>
                             </div>
@@ -809,19 +861,27 @@ export default function Header(props) {
                                 <h1 className="text-xl font-bold leading-8 mb-3">
                                   Gallery
                                 </h1>
-                                {menuService.galleryImagesData &&  menuService?.galleryImagesData?.map((item) => {
-                                  return (
-                                    <div key={item?.id}>
-                                      <Link href={`/gallery`} className="line">
-                                        <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish ">
-                                          {item.groupName}
-                                        </p>
-                                      </Link>
-                                    </div>
-                                  );
-                                })}
+                                {menuService.galleryImagesData &&
+                                  menuService?.galleryImagesData?.map(
+                                    (item) => {
+                                      return (
+                                        <div key={item?.id}>
+                                          <Link
+                                            href={`/gallery`}
+                                            className="line"
+                                          >
+                                            <p className="text-sm mt-2 font-normal cursor-pointer hover:text-yellowish ">
+                                              {item.groupName}
+                                            </p>
+                                          </Link>
+                                        </div>
+                                      );
+                                    }
+                                  )}
                                 <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                                <Link href={`/gallery`} className="line">View More</Link>
+                                  <Link href={`/gallery`} className="line">
+                                    View More
+                                  </Link>
                                 </h6>
                               </div>
                             </div>
@@ -830,7 +890,8 @@ export default function Header(props) {
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 Videos
                               </h1>
-                              {menuService.videosData &&  menuService?.videosData?.map((item) => {
+                              {menuService.videosData &&
+                                menuService?.videosData?.map((item) => {
                                   return (
                                     <div key={item?.id}>
                                       <Link href={`/videos`} className="line">
@@ -842,7 +903,9 @@ export default function Header(props) {
                                   );
                                 })}
                               <h6 className="text-sm font-bold mt-3 cursor-pointer  ">
-                              <Link href={`/videos`} className="line">View More</Link>
+                                <Link href={`/videos`} className="line">
+                                  View More
+                                </Link>
                               </h6>
                             </div>
                           </div>
@@ -863,11 +926,10 @@ export default function Header(props) {
                     >
                       <Link href={"/Contact"}>
                         <h3
-                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${
-                            router.asPath === "/Contact"
-                              ? "text-[#2F3192]"
-                              : "text-black/80"
-                          }`}
+                          className={`block pb-4 text-lg leading-5 font-medium hover:text-mainColor ${router.asPath === "/Contact"
+                            ? "text-[#2F3192]"
+                            : "text-black/80"
+                            }`}
                         >
                           Contact Us
                           {/* <span style={{ float: "right" }}>
@@ -877,9 +939,8 @@ export default function Header(props) {
                       </Link>
                     </button>
                     <div
-                      className={`absolute z-10 font-normal ${
-                        isContactOpen ? "block" : "hidden"
-                      }`}
+                      className={`absolute z-10 font-normal ${isContactOpen ? "block" : "hidden"
+                        }`}
                     >
                       <ul
                         className="text-sm font-sans text-white pt-2"
@@ -891,9 +952,8 @@ export default function Header(props) {
                         }}
                       >
                         <div
-                          className={`absolute z-10 font-normal w-24 bg-mainColor ${
-                            isContactOpen ? "block" : "hidden"
-                          }`}
+                          className={`absolute z-10 font-normal w-24 bg-mainColor ${isContactOpen ? "block" : "hidden"
+                            }`}
                         ></div>
                       </ul>
                     </div>
@@ -903,15 +963,14 @@ export default function Header(props) {
               <div className="border-r-2 border-[#999999] h-5 mb-4"></div>
 
               <Search className="pb-4">
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
-
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search…"
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </Search>
 
               {/* <div className={`${isOpen ? "search-container-open" : ""}`}>
                 <button
