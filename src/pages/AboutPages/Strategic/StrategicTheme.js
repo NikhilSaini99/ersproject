@@ -6,26 +6,26 @@ const StrategicTheme = ({ h2Styling }) => {
   const strategicSection = [
     {
       id: 1,
-      title: "COST EFFICIENCIES",
+      title: "Employee Experience",
       description:
-        "To collect the required revenue effectively and efficiently, manage cost of doing business whilst building a financially sustainable organisation.",
+        "To create a conducive work environment, with an engaged and productive workforce that possess the appropriate competencies for the digitalised ERS.",
     },
     {
       id: 2,
-      title: "MODERNISATION",
+      title: "Digitalization",
       description:
-        "Develop an effective institutional framework that promotes correct, uniform and consistent administration of revenue laws/legislation and ease of doing business with and within ERS.",
+        "To accelerate digitalization of operations to ensure efficiencies in revenue collection and trade facilitation.",
     },
     {
       id: 3,
-      title: "HUMAN CAPITAL",
+      title: "Trade Facilitation and Enforcement",
       description:
-        "To attract, retain and build capacity of our staff to meet our revenue, operational and strategic objectives.",
+      "To reduce the time for moving legitimate goods across our borders and implement the Trade Facilitation Agreement that the country signed into with the World Trade Organization.",
     },
     {
       id: 4,
-      title: "CUSTOMER AND STAKEHOLDER CENTRICITY",
-      description: "To deliver customer and stakeholder centricity.",
+      title: "Client Experience and Education",
+      description: "To provide a rewarding client experience to improve trust and deliver educational programs that shall empower our clients to competently honour their tax and customs obligations in full and on time.",
     },
   ];
 

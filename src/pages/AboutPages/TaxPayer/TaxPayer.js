@@ -11,7 +11,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
     <>
       <Box sx={{ position: "relative", margin: "0 auto" }}>
         <Typography variant="h2" sx={h2Styling}>
-          Taxpayer Charter
+        Our Service Promise
         </Typography>
         <Stack
           direction={"column"}

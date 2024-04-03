@@ -46,10 +46,7 @@ const OurMission = ({h2Styling}) => {
             OUR MISSION
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: "0.5rem" }}>
-            To provide an effective and efficient revenue and Customs
-            administration, driven by a high performance culture that promotes
-            compliance through fair, transparent and equitable application of
-            the law.
+            We are an effective and efficient service-oriented revenue and customs administration, driven by a performance culture that promotes compliance through fair, equitable, and transparent application of the law.
           </Typography>
         </Box>
 

@@ -72,7 +72,7 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
   return (
     <>
       <Typography variant="h2" sx={h2Styling}>
-        Business Consultative Committe
+        Business Consultative Committee
       </Typography>
 
       <Box

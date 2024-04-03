@@ -104,8 +104,8 @@ const CouncilMember = ({ h2Styling, data }) => {
           <Typography
             variant="body1"
             sx={{
-              color: "grey",
-              maxWidth: "500px",
+              color: "black",
+              maxWidth: "800px",
               margin: "0 auto",
               placeSelf: "center",
               pb: "1rem",

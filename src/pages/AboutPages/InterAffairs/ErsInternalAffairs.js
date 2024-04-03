@@ -43,7 +43,7 @@ const ErsInternalAffairs = ({ h2Styling, arrowStyling }) => {
   return (
     <>
       <Typography variant="h2" sx={{ ...h2Styling }}>
-        ERS Internal Affairs
+        ERS Internal Affairs Mandate
       </Typography>
       <Box
         width={"95%"}
