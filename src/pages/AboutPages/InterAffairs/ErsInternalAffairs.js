@@ -5,36 +5,58 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 const ErsInternalAffairs = ({ h2Styling, arrowStyling }) => {
   const data = [
     {
-      section: "Duties of the Internal Affairs Division",
+      //section: "Internal Affairs Division ",
       content: {
         subhead:
-          "The ERS is committed to consulting with commercial stakeholders in the Kingdom of Eswatini on its strategies, policies, operational programs and administrative procedures that govern and affect the Kingdom's commercial trade. The purpose of these consultations, in general terms, is to promote mutually beneficial collaboration between the ERS and the commercial trade community on border and tax administration matters to the benefit of Eswatini, the country's economy as well as our trade sector. To this end, the ERS established the Business Consultative Committee (BCC) with a mandate, membership and procedures as described below. The BCC provides a mechanism for representatives of business to discuss operational aspects of the tax and customs system with the Eswatini Revenue Service.",
-        subPoints: [
-          "Detecting and Investigating issues of integrity and unethical behavior including allegations of fraud, corruption and all acts of dishonesty & misconduct occurring and involving personnel of the Eswatini Revenue Service",
-          "Undertaking staff and public awareness or educational initiatives on issues of cus fraud, corruption and any unethical behavior relating to ERS activities",
-          "Carrying out preventative oversight tasks: These are good governance principles furthering the culture of transparency and accountability which includes management of staff gifts, benefits, and hospitality; management of conflict of interests, enforce and monitors staff declaration of income, assets, and liabilities. ",
-        ],
+          "Internal Affairs Division is charged with the responsibility to devise strategies to prevent and combat fraud and corruption within the ERS. Whilst collecting revenue is in the fore-front, it is essential that such task is executed by staff that is ethically clean and free of corruption and related vices. Internal Affairs Division reports to the Commissioner General who is the CEO of the Organization. Since internal fraud and corruption as business risks and has vulnerabilities, the Division is also required to report to the HR & Ethics Committees of the Governing Board.",
+        // subPoints: [
+        //   "Detecting and Investigating issues of integrity and unethical behavior including allegations of fraud, corruption and all acts of dishonesty & misconduct occurring and involving personnel of the Eswatini Revenue Service</b>",
+        // ],
       },
     },
     {
-      section: "Reporting Inappropriate Behaviour",
+      //section: "Detect & Investigate",
       content: {
         subhead:
-          "Any instances or information coming to the knowledge of ERS employees or taxpayers / public on fraud, corruption, nepotism, embezzlement, theft, maladministration, misconduct,  or any act that may constitute a criminal or disciplinary offence or may be prejudicial to the interests of ERS, should be reported.",
+        "To carry out this mandate, the Division uses a three-pronged strategy, namely:"
       },
     },
     {
-      section: "Procedures for reporting to the Internal Affairs Division",
+      section: "Detect & Investigate",
       content: {
         subhead:
-          "Reporting maybe done in the following methods",
+          "This requires the need to detect and investigate all suspicions of internal fraud, corruption and related vices that involves ERS employees. Successful cases are referred to the disciplinary hearing process and or referred to other law enforcement agencies for criminal investigation purposes. Information gathered in the course of investigation is handled in terms of the organization's confidential policies. Witnesses and whistleblowers are protected within the dictates of the organizations' Whistleblowing Policy. Cases are investigated without any fear or favour.",
+      },
+    },
+
+    {
+      section: "Integrity and Ethics Awareness/Education",
+      content: {
+        subhead:
+          "Sensitizing staff and the public on the evil and dangerous effects of corruption and all unethical behaviour within the revenue administration is one of the key proactive means to fighting corruption. Information in this regard is disseminated through various means.  Concomitant to integrity and ethics awareness or education is the promotion of whistleblowing platforms, to report suspicious practices of corruption and any unethical behaviour as linked with ERS.  Anonymous reporting is encouraged where necessary.",
+      },
+    },
+
+    {
+      section: "Corruption Preventative Over-sight Responsibilities",
+      content: {
+        subhead:
+          "This aspect of the strategy regulates certain staff practices considered to be of ethical risk and in conflict with the Code of Ethics and Conduct. These includes management of staff gifts, staff outside/external involvement, management of staff conflict of interests conducting staff lifestyles checks through the annual requirement for staff to declare their income and assets.",
+      },
+    },
+
+    {
+      section: "Internal Affairs Contacts",
+      content: {
+        // subhead:
+        //   "Reporting maybe done in the following methods",
           subPoints: [
-            "Whistleblowing toll free line:  800 8000 The toll-free line was set up so that the public and ERS staff be able to report issues of fraud, corruption, misconduct, and anything detrimental to the mandate of the ERS. Leave a message after the beep with full details of a concern raised, where possible information such as giving names, dates, and places. If you desire to give more details or are in possession of documents relevant to the matter, kindly leave your contact details.",
-            "Surface mail reporting: Director Internal Affairs, Eswatini Revenue Service, P. O. Box 5628 Mbabane, Eswatini",
-            "Electronic mail (email):  internalaffairs@ers.org.sz",
-            "Cell Phone: +268 7606 3107",
-            "ERS Website: Complaint Reporting Form",
-            "Walk-in / In person reporting: First floor, Ingcamu Building, Mhlambanyatsi Road, Mbabane, Eswatini",             "Anyone reporting a matter may choose to remain anonymous. All information received will be handled in utmost confidence. Where possible, feedback on information received will be given.",
+            "Whistleblowing toll free line 800 000",
+            "Slido: www.slido.com passcode 8008000",
+            "Cellphone number 76063107",
+            "Landline: 24048549",
+            "Postal Address: Director Internal Affairs, P.O. Box 5628 Mbabane, Eswatini",
+            "Physical Location: 1st Floor, Ingcamu Building, Somhlolo Road, Mbabane, Eswatini",
           ],
       },
       
