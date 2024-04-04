@@ -15,6 +15,7 @@ import { useMemo } from "react";
 import { useRouter } from "next/router";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { Button, IconButton, InputAdornment, TextField } from "@mui/material";
 export default function Header(props) {
   // const {MenuData, menuLoading} = props;
   const router = useRouter();
@@ -40,11 +41,7 @@ export default function Header(props) {
     videosData: [],
   });
 
-  const [isOpen, setSearchOpen] = useState(false);
-
-  function toggleSearch() {
-    setSearchOpen(!isOpen);
-  }
+  const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
     fetchAPI();
@@ -166,6 +163,15 @@ export default function Header(props) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [menuRef]);
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    console.log("data", searchValue)
+    router.push({
+      pathname: "/SearchResults",
+      query: { q: searchValue },
+    });
+  };
 
   return (
     <>
@@ -962,52 +968,52 @@ export default function Header(props) {
               </ul>
               <div className="border-r-2 border-[#999999] h-5 mb-4"></div>
 
-              <Search className="pb-4">
+              {/* <Search className="pb-4">
                 <SearchIconWrapper>
                   <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
                   placeholder="Search…"
                   inputProps={{ "aria-label": "search" }}
+                  onChange={(e) => setSearchValue(e.target.value)}
                 />
-              </Search>
+              </Search> */}
 
-              {/* <div className={`${isOpen ? "search-container-open" : ""}`}>
-                <button
-                  className="flex gap-3 items-center search-toggle mb-4"
-                  onClick={toggleSearch}
-                >
-                  <div>
-                    <Image src={search} alt="search" height={17} width={17} />
-                  </div>
-                  <h3
-                    className={`text-lg leading-5 font-semibold hover:text-mainColor ${
-                      isOpen ? "text-[#2F3192]" : "text-black/80"
-                    }`}
-                  >
-                    Search
-                  </h3>
-                </button>
-                <div className="search-input px-5 py-3 flex items-center  ">
-                  <h1 className="inline-block text-lg font-semibold text-white">
-                    SEARCH
-                  </h1>
-                  <input
-                    type="text"
-                    placeholder="Keyword..."
-                    className="py-[10px] px-4 w-[350px] focus:outline-none text-base font-normal ml-5 mr-3"
-                  ></input>
-                  <button className="p-2">
-                    <Image
-                      src={searchIcon}
-                      alt="search"
-                      height={17}
-                      width={17}
-                      className="inline-block"
-                    />
-                  </button>
-                </div>
-              </div> */}
+              <form onSubmit={handleSearchSubmit} style={{ marginBottom: "1rem"}}>
+              <TextField variant="outlined" placeholder="Search..." 
+                onChange={(e) => setSearchValue(e.target.value)}
+                sx={{
+                  
+    color: "inherit",
+    "& .MuiOutlinedInput-input": {
+      padding: "1em",
+      backgroundColor: "#5D5D5D0A",
+      width: "100%",
+     
+    },
+    "& .MuiInputBase-input": {
+      height: "5px !important"
+    },
+    "& .MuiOutlinedInput-root": {
+      "&:hover fieldset": {
+        borderColor: "white",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "white",
+      },
+    },
+                }}
+                InputProps={{
+    endAdornment: (
+      <InputAdornment position="end">
+        <IconButton type="submit" sx={{ "&: hover": {background: "transparent", color: (theme)=>theme.palette.primary.main} }}>
+          <SearchIcon />
+        </IconButton>
+      </InputAdornment>
+    ),
+  }}
+                />
+                </form>
             </div>
           </div>
         </div>
