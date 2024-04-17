@@ -15,7 +15,12 @@ import { useMemo } from "react";
 import { useRouter } from "next/router";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import { Button, IconButton, InputAdornment, TextField } from "@mui/material";
+import { Button, IconButton, InputAdornment, TextField , Box } from "@mui/material";
+import { FaFacebookF } from "react-icons/fa";
+import { GrLinkedinOption } from "react-icons/gr";
+import { IoLogoYoutube } from "react-icons/io";
+
+
 export default function Header(props) {
   // const {MenuData, menuLoading} = props;
   const router = useRouter();
@@ -182,9 +187,15 @@ export default function Header(props) {
               <Image src={logo} alt="ERS" width={120} />
             </Link>
           </div>
+
           <div className="flex flex-col justify-between pt-1">
-            <Link href={"/Error"}>
+            <Link href={"/Error"}>  </Link>
               <div className="flex text-mainColor float-right gap-10 font-normal items-center justify-end">
+              <Box className="RightSide" sx={{ display: 'flex', gap: { xs: '0.8rem', lg: '1.5rem' }, pt: '0rem' }}>
+            <Link href="https://www.facebook.com/profile.php?id=100094062796048" target="_blank"><FaFacebookF className="SocialsStyling" /></Link>
+              <Link href="https://www.youtube.com/channel/UCK9y_OZHNmDPwYveSdy5EOw" target="_blank"><IoLogoYoutube className="SocialsStyling" /></Link>
+              <Link href="https://www.linkedin.com/company/100124155/admin/feed/posts/" target="_blank"><GrLinkedinOption className="SocialsStyling" /></Link>
+            </Box>
                 <div>
                   <Image src={mail} alt="mail" className="mr-2 inline" />
                   <span>info@ers.org.sz</span>
@@ -194,7 +205,7 @@ export default function Header(props) {
                   <span>(+268) 2406 4050</span>
                 </div>
               </div>
-            </Link>
+          
 
             <div className="flex space-x-4 items-center">
               <ul className="flex flex-row border-black/40 space-x-5">
