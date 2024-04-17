@@ -247,8 +247,8 @@ const CustomAgents = () => {
                     {/* Second table end*/}
 
                     <Divider sx={{ my: '2rem' }} />
-                    <Link href="http://172.30.200.21:8000/documents/2021ACTIVECLEARINGAGENTSASAT150421.pdf" className='text-normalBlue block Pointsformatting'>2021 ACTIVE CLEARING AGENTS AS AT 150421</Link>
-                    <Link href="http://172.30.200.21:8000/documents/2021ACTIVETRANSITBONDHOLDERSASAT250221.pdf" className='text-normalBlue block Pointsformatting'>2021 ACTIVE TRANSIT BOND HOLDERS AS AT 250221</Link>
+                    <Link href="http://102.36.181.13:8000/documents/2021ACTIVECLEARINGAGENTSASAT150421.pdf" className='text-normalBlue block Pointsformatting'>2021 ACTIVE CLEARING AGENTS AS AT 150421</Link>
+                    <Link href="http://102.36.181.13:8000/documents/2021ACTIVETRANSITBONDHOLDERSASAT250221.pdf" className='text-normalBlue block Pointsformatting'>2021 ACTIVE TRANSIT BOND HOLDERS AS AT 250221</Link>
                 </ContentDiv>
             </PageLayout>
         </>

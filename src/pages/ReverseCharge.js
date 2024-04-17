@@ -102,7 +102,7 @@ const ReverseCharge = () => {
                 <Typography variant='h5' component='h2' sx={{ mt: '2rem', mb: '1rem', fontWeight: 'bold' }} className='Pointsformatting'>
                     DECLARATION AND PAYMENT</Typography>
                 <Typography variant='body1' className='Pointsformatting'>
-                    The  <Link href={"http://172.30.200.21:8000/documents/ReverseChargeDeclarationForm.pdf"} style={{color:"#2f2483"}}> VAT reverse charge declaration form </Link> and payment must be submitted to the ERS within 30 days of the invoice date.</Typography>
+                    The  <Link href={"http://102.36.181.13:8000/documents/ReverseChargeDeclarationForm.pdf"} style={{color:"#2f2483"}}> VAT reverse charge declaration form </Link> and payment must be submitted to the ERS within 30 days of the invoice date.</Typography>
                 <Typography variant='body1' sx={{ fontStyle: 'italic' }} className='Pointsformatting'>
                     NOTE: The VAT reverse charge system does not apply to registered businesses with a full right to input tax deduction.</Typography>
             </ContentDiv>
