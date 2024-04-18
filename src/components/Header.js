@@ -25,6 +25,9 @@ export default function Header(props) {
   // const {MenuData, menuLoading} = props;
   const router = useRouter();
   const menuRef = useRef(null);
+  const servicesRef = useRef(null);
+const formsRef = useRef(null);
+const mediaRef = useRef(null);
   const { data, fetchAPI, isLoading } = useFetch("get", "/api/whateNew");
   const {
     data: MenuData,
@@ -107,54 +110,33 @@ export default function Header(props) {
     };
   }, []);
 
-  const Search = styled("div")(({ theme }) => ({
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: "white",
-    "&:hover": {
-      backgroundColor: "white",
-    },
-    display: "flex",
-    alignItems: "center",
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(1),
-      width: "auto",
-    },
-  }));
 
-  const SearchIconWrapper = styled("div")(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }));
-
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: "inherit",
-    "& .MuiInputBase-input": {
-      padding: theme.spacing(1, 1, 1, 0),
-      backgroundColor: "#5D5D5D0A",
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create("width"),
-      width: "100%",
-      [theme.breakpoints.up("sm")]: {
-        width: "12ch",
-        "&:focus": {
-          width: "20ch",
-        },
-      },
-    },
-  }));
+  // useEffect(() => {
+  //   function handleClickOutside(event) {
+  //     if (menuRef.current && !menuRef.current.contains(event.target)) {
+  //       setServicesOpen(false);
+  //       setFormsOpen(false);
+  //       setMediaOpen(false);
+  //     }
+  //   }
+  
+  //   // Bind the event listener
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     // Unbind the event listener on clean up
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [menuRef]);
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !servicesRef.current.contains(event.target) &&
+        !formsRef.current.contains(event.target) &&
+        !mediaRef.current.contains(event.target)
+      ) {
         setServicesOpen(false);
         setFormsOpen(false);
         setMediaOpen(false);
@@ -167,7 +149,7 @@ export default function Header(props) {
       // Unbind the event listener on clean up
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [menuRef]);
+  }, [menuRef, servicesRef, formsRef, mediaRef]);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -227,7 +209,7 @@ export default function Header(props) {
                   </div>
                 </li>
                 <li className="relative main">
-                  <div ref={menuRef} className="items-center relative">
+                  <div ref={servicesRef} className="items-center relative">
                     <button
                       onClick={() => {
                         setServicesOpen(!isServicesOpen);
@@ -647,7 +629,7 @@ export default function Header(props) {
                   </div>
                 </li>
                 <li className="relative main">
-                  <div className="items-center relative ">
+                  <div  ref={formsRef} className="items-center relative ">
                     <button
                       onClick={() => {
                         setFormsOpen(!isFormsOpen);
@@ -702,6 +684,7 @@ export default function Header(props) {
                               <h1 className="text-xl font-bold leading-8 mb-3">
                                 VAT Forms
                               </h1>
+                              <div>
                               {menuService.formData &&
                                 menuService?.formData?.vat?.map((item) => {
                                   return (
@@ -714,6 +697,7 @@ export default function Header(props) {
                                     </div>
                                   );
                                 })}
+                                </div>
                               <h6 className="text-sm leading-6 font-bold mt-3 cursor-pointer">
                                 <Link href={"/VatForms"} className="line">
                                   View More
@@ -782,7 +766,7 @@ export default function Header(props) {
                   </div>
                 </li>
                 <li className="relative main">
-                  <div className="items-center relative ">
+                  <div ref={mediaRef} className="items-center relative ">
                     <button
                       onClick={() => {
                         setMediaOpen(!isMediaOpen);
