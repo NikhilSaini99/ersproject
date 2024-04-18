@@ -636,7 +636,7 @@ export default function Header(props) {
                   </div>
                 </li>
                 <li className="relative main">
-                  <div className="items-center relative ">
+                  <div ref={menuRef} className="items-center relative ">
                     <button
                       onClick={() => {
                         setFormsOpen(!isFormsOpen);
@@ -771,7 +771,7 @@ export default function Header(props) {
                   </div>
                 </li>
                 <li className="relative main">
-                  <div className="items-center relative ">
+                  <div ref={menuRef} className="items-center relative ">
                     <button
                       onClick={() => {
                         setMediaOpen(!isMediaOpen);
