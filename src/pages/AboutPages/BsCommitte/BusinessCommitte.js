@@ -58,11 +58,11 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
         links: [
           {
             text: "1. February 21, 2013",
-            link: "http://172.30.200.21:8000/documents/February_21_2013.pdf",
+            link: "http://102.36.181.13:8000/documents/February_21_2013.pdf",
           },
           {
             text: "3. February 20, 2014",
-            link: "http://172.30.200.21:8000/documents/February_20_2014.pdf",
+            link: "http://102.36.181.13:8000/documents/February_20_2014.pdf",
           },
         ],
       },

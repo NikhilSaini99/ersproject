@@ -29,7 +29,7 @@ const CustomProcedure = () => {
     const data = [
         {
             section: '1. DEFINITION',
-            content: 'All customs declarations are made by <a href="http://172.30.200.21:8000/documents/CustomsProcedueCodes-CompletionofSAD500Form.pdf" style="color:blue">completion of an SAD500</a> in which all information pertinent for effective processing of that declaration is provided by the importer/declarant. Part of that information is the <a href="http://172.30.200.21:8000/documents/CustomProcedureCodes-CustomProcedureCodes(CPCs).pdf" style="color:blue">Customs Procedure Codes (CPCs)</a> which when correctly used inform the ERS on what the goods are being imported as well as the regime under which Customs will treat it.\nAdditional codes are denoted by the last 3-digit code in the 7-digit Customs Procedure Codes (CPC). A complete CPC may be 4000 444 where: 4000 is the extended code and 444 is the additional code.\nWhen selected, the interpretation would be goods imported for home use (Extended Code 4000) where the VAT payable would be deferred (Additional Code 444).',
+            content: 'All customs declarations are made by <a href="http://102.36.181.13:8000/documents/CustomsProcedueCodes-CompletionofSAD500Form.pdf" style="color:blue">completion of an SAD500</a> in which all information pertinent for effective processing of that declaration is provided by the importer/declarant. Part of that information is the <a href="http://102.36.181.13:8000/documents/CustomProcedureCodes-CustomProcedureCodes(CPCs).pdf" style="color:blue">Customs Procedure Codes (CPCs)</a> which when correctly used inform the ERS on what the goods are being imported as well as the regime under which Customs will treat it.\nAdditional codes are denoted by the last 3-digit code in the 7-digit Customs Procedure Codes (CPC). A complete CPC may be 4000 444 where: 4000 is the extended code and 444 is the additional code.\nWhen selected, the interpretation would be goods imported for home use (Extended Code 4000) where the VAT payable would be deferred (Additional Code 444).',
         },
         {
             section: '2. PURPOSE',
@@ -69,7 +69,7 @@ const CustomProcedure = () => {
                         ))}
                     </Box>
                 ))}
-                <Typography variant='body1' className='pb-2'>Click here to download the full <Link href="http://172.30.200.21:8000/documents/CustomsProceduresCodesExplanatoryNotes.pdf" className='text-normalBlue Pointsformatting'>Customs Procedures Codes Explanatory notes</Link></Typography>
+                <Typography variant='body1' className='pb-2'>Click here to download the full <Link href="http://102.36.181.13:8000/documents/CustomsProceduresCodesExplanatoryNotes.pdf" className='text-normalBlue Pointsformatting'>Customs Procedures Codes Explanatory notes</Link></Typography>
             </ContentDiv>
             </PageLayout>
         </>

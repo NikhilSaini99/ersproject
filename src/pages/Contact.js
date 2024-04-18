@@ -172,13 +172,13 @@ export default function Contact() {
               <p className="text-sm leading-6 font-normal">
                 the ERS Contact Centre on
               </p>
-              <p className="flex  gap-1">
+              {/* <p className="flex  gap-1">
                 <CallIcon className="text-xl min-w-[24px]" />
 
                 <span className="text-sm leading-6 font-normal">
                 (+268) 2406 4050
                 </span>
-              </p>
+              </p> */}
               <p className="flex  gap-1">
                 <CallIcon className="text-xl min-w-[24px]" />
 

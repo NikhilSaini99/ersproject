@@ -14,7 +14,7 @@ const SearchResults = () => {
   const router = useRouter();
   const searchParam = router.query.q;
  
-  const searchAPI = `/api/pagesDataMobile?key=${searchParam}`;
+  const searchAPI = `/api/pagesDataMobile/search?key=${searchParam}`;
   const { data, fetchAPI, isLoading: isSearchLoading } = useFetch("get", searchAPI);
 
   useEffect(() => {
