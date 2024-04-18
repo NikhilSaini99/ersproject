@@ -113,7 +113,7 @@ const RebateConcession = () => {
                         Rebate Concessions for New/Returning Residents
                     </Typography> */}
                     <Typography variant="h2">
-                        REBATE CONCESSION FOR NEW/RETURNING RESIDENTS <a href="http://102.36.181.13:8000/documents/RebateCustoms-GuidelineforProcessingRebatesandExemptionsforNew.pdf" target='_blank' style={{color:"blue"}}> (Click here for the full  guideline)</a>
+                        REBATE CONCESSION FOR NEW/RETURNING RESIDENTS <a href="http://website.ers.org.sz:8000/documents/RebateCustoms-GuidelineforProcessingRebatesandExemptionsforNew.pdf" target='_blank' style={{color:"blue"}}> (Click here for the full  guideline)</a>
                     </Typography>
                     <Typography variant="body1" sx={{ my: '1rem' }} >
                         Goods imported by qualifying individuals/natural persons (not companies) can qualify for a rebate of duty and import in Eswatini
