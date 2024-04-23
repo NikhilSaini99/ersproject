@@ -481,12 +481,15 @@ export default function Home() {
       <section className="" data-aos="fade-up-right">
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div className="w-full md:w-1/2">
-            <Image src={CSR} alt="..." className="h-[500px]" />
+            <Image src={CSR} alt="..." className="h-[420px]" />
           </div>
-          <div className="w-full md:w-1/2 py-10 xs:px-5 md:px-10 px-20 bg-[#DAD8CC]  md:h-[500px] xl:h-[500px]">
-            <h1 className="text-5xl font-semibold text-subColor leading-snug">
+          <div className="w-full md:w-1/2 py-10 xs:px-5 md:px-10 px-20 bg-[#DAD8CC]  md:h-[420px] xl:h-[420px]">
+          <h1 className="text-subColor text-2xl md:text-4xl font-semibold">
+            {/* <h1 className="text-5xl font-semibold text-subColor leading-snug"> */}
               Corporate Social Responsibility
             </h1>
+            <div className="border w-72 md:w-72 xl:w-72 border-yellowish mt-1"></div>
+            
             <p className="text-2xl leading-9 font-normal text-black mt-8 mb-12">
               The ERS&apos;s definition for Corporate Social Responsibility is the
               process of how the organization helps the Swazi society.

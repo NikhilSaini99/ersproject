@@ -113,8 +113,8 @@ export default function Contact() {
       <section>
         <div className="relative">
          
-
-          <Box sx={{height:{xs:'15rem',lg:'30rem',xs:'30rem'}}}>
+        <Box sx={{ position: "relative", width: "100%", height: "40rem" }}>
+          {/* <Box sx={{height:{xs:'30rem',lg:'30rem',xs:'30rem'}}}> */}
          <Image src={bgimg} alt="Contact Us"
               width={0}
               height={0}
