@@ -7,8 +7,8 @@ import Carousal from "@/components/carousal";
 import ChatboxMock from "@/components/Chatbox/ChatboxMock";
 import Customs from "../assets/images/eCustoms_Tariff_Logo.png";
 import DatasetLinkedOutlinedIcon from "@mui/icons-material/DatasetLinkedOutlined";
-import ECoustoms from "../assets/images/e-customs.jpg";
-import ETax from "../assets/images/e-tax.jpg";
+import ECoustoms from "../assets/images/banner_eTarrif.jpg";
+import ETax from "../assets/images/banner_taxease.jpg";
 import taxEase from "../assets/images/taxEase.jpeg";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -23,7 +23,7 @@ import { News } from "@/components/homecard";
 import SocialMediaCard from "@/components/SocialMediaCard/SocialMediaCard";
 import TCC from "../assets/images/tcc.png";
 
-import quickTCCbg from "../assets/images/QuickTcc.webp";
+import quickTCCbg from "../assets/images/banner_tcc.jpg";
 
 import Tax from "../assets/images/e-tax_logo.png";
 import notes from "../assets/images/notes.png";

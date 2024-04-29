@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import banner from "../assets/images/banner-HIRES.png";
+import banner from "../assets/images/about_us_new.jpg";
 import estwaniimg from "../assets/images/aboutusbanner.jpg";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";

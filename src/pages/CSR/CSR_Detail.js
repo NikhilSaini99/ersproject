@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Header from '@/components/Header'
 import Image from 'next/image';
 import Footer from '@/components/Footer';
-import Banner from "../../assets/images/Eswatini_VAT.png";
+import Banner from "../../assets/images/csr-banner.jpg";
 import bgimg from "../../assets/images/bg-2.png";
 import { useFetch } from '../api/api';
 import { useEffect} from 'react';
@@ -72,7 +72,7 @@ const CSR_Detail = () => {
                         },
                         }}> 
 
-                            <Box sx={{ height:"300px", minWidth:'250px', width:{lg:"100%"}}}>
+                            <Box sx={{ height:"300px", minWidth:'350px', width:{lg:"100%"}}}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src={item.url} alt={item.id} style={{width:"100%", height:'100%',  objectFit:'cover'}}/>
                             </Box>

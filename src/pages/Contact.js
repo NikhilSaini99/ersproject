@@ -23,7 +23,7 @@ import Link from "next/link";
 import { Media } from "@/components/media";
 import React from "react";
 import { RiMailFill } from "react-icons/ri";
-import bgimg from "../assets/images/contact.jpg";
+import bgimg from "../assets/images/contact_us_banner.jpg";
 import getUrlMap from "./utils/helperFunction";
 import { useEffect } from "react";
 import { useFetch } from "./api/api";
