@@ -366,6 +366,8 @@ export default function Customs() {
       </section>
 
       <section className="mx-14">
+
+      <Link href={"https://www.eswatinitradeportal.com"}>
         <div className="border-t border-black mx-5 py-8 flex items-center gap-14 text-base font-normal leading-7 text-black">
           <Image src={Trade} alt="..." className="w-96" />
           <p>
@@ -374,6 +376,7 @@ export default function Customs() {
             trading in Eswatini.
           </p>
         </div>
+        </Link>
       </section>
 
       {/*-----------------------Footer---------------------*/}
