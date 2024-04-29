@@ -17,6 +17,14 @@ import TableChartIcon from "@mui/icons-material/TableChart";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import { getUrlMap } from "@/pages/utils/helperFunction";
+import CalculatorImg from "@/assets/icons/ourResourceIcon/calculator.png"
+import TableImg from "@/assets/icons/ourResourceIcon/table.png"
+import ContactImg from "@/assets/icons/ourResourceIcon/contact.png"
+import FaqImg from "@/assets/icons/ourResourceIcon/faq.png"
+import ItemCodeImg from "@/assets/icons/ourResourceIcon/itemCode.png"
+import TravelImg from "@/assets/icons/ourResourceIcon/travel.png"
+import BusinessImg from "@/assets/icons/ourResourceIcon/business.png"
+import TaxEaseImg from "@/assets/icons/ourResourceIcon/taxEase.png"
 
 const Icons = () => {
   const iconStyling = {
@@ -39,32 +47,39 @@ const Icons = () => {
     <>
       <div className="flex flex-wrap justify-center md:justify-center gap-4 xs:gap-6 md:gap-12 xl:gap-20 2xl:gap-24 mt-6">
         <Link href="/Calculator" className="flex flex-col gap-2">
-          <CalculateIcon sx={iconStyling} />
+          <Image src={CalculatorImg} alt="test"  width={80} height= {80} />
           <p className="text-center text-sm font-medium">Tax Calculator</p>
         </Link>
 
         <Link href="/TaxTables" className="flex flex-col gap-2">
-          <TableChartIcon sx={iconStyling} />
+          {/* <TableChartIcon sx={iconStyling} /> */}
+          <Image src={TableImg} alt="test"  width={80} height= {80} />
           <p className="text-center text-sm font-medium">Tax Tables</p>
         </Link>
 
         <Link href="https://taxease.ers.org.sz/" className="flex flex-col gap-2">
-          <PaymentsOutlinedIcon sx={iconStyling} />
+          {/* <PaymentsOutlinedIcon sx={iconStyling} /> */}
+          <Image src={TaxEaseImg} alt="test"  width={80} height= {80} />
+
           <p className="text-center text-sm font-medium">Tax Ease</p>
         </Link>
 
         <Link href="/TaxItemTable" className="flex flex-col gap-2">
-          <BarChartIcon sx={iconStyling} />
+          {/* <BarChartIcon sx={iconStyling} /> */}
+          <Image src={ItemCodeImg} alt="test"  width={80} height= {80} />
           <p className="text-center text-sm font-medium">Item Codes</p>
         </Link>
 
         <Link href="/Hotline" className="flex flex-col gap-2">
-          <ConnectWithoutContactIcon sx={iconStyling} />
+          {/* <ConnectWithoutContactIcon sx={iconStyling} /> */}
+          <Image src={ContactImg} alt="test"  width={80} height= {80} />
+
           <p className="text-center text-sm font-medium">Hotline</p>
         </Link>
 
         <Link href="/FAQ" className="flex flex-col gap-2">
-          <LiveHelpIcon sx={iconStyling} />
+          {/* <LiveHelpIcon sx={iconStyling} /> */}
+          <Image src={FaqImg} alt="test"  width={80} height= {80} />
           <p className="text-center text-sm font-medium">FAQs</p>
         </Link>
 
@@ -72,7 +87,8 @@ const Icons = () => {
           href="/BusinessFAQ"
           className="flex flex-col gap-2"
         >
-          <TrendingUpIcon sx={iconStyling} />
+          {/* <TrendingUpIcon sx={iconStyling} /> */}
+          <Image src={BusinessImg} alt="test"  width={80} height= {80} />
           <p className="text-center text-sm font-medium">Business</p>
         </Link>
 
@@ -80,7 +96,8 @@ const Icons = () => {
           href="/TravellingFAQ"
           className="flex flex-col gap-2"
         >
-          <FlightTakeoffIcon sx={iconStyling} />
+          {/* <FlightTakeoffIcon sx={iconStyling} /> */}
+          <Image src={TravelImg} alt="test"  width={80} height= {80} />
           <p className="text-center text-sm font-medium">Travelling</p>
         </Link>
       </div>

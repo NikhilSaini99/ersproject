@@ -59,7 +59,6 @@ export default function NewsDetails() {
     News.author_name = author_name;
   }
 
- 
   return (
     <>
       <Head>
