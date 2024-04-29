@@ -11,7 +11,7 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['102.36.181.13'],
+    domains: ['website.ers.org.sz'],
   },
 };
 

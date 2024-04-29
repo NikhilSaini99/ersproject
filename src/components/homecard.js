@@ -46,6 +46,8 @@ const Icons = () => {
   return (
     <>
       <div className="flex flex-wrap justify-center md:justify-center gap-4 xs:gap-6 md:gap-12 xl:gap-20 2xl:gap-24 mt-6">
+      
+      
         <Link href="/Calculator" className="flex flex-col gap-2">
           <Image src={CalculatorImg} alt="test"  width={80} height= {80} />
           <p className="text-center text-sm font-medium">Tax Calculator</p>

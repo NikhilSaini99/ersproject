@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import banner from "../assets/images/About_us.jpg";
+import banner from "../assets/images/about_us_new.jpg";
 import estwaniimg from "../assets/images/aboutusbanner.jpg";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
@@ -64,7 +64,7 @@ export default function About() {
       <Header />
 
       {/*----------------------- About Us Banner ------------------*/}
-      <Box sx={{ position: "relative", width: "100%", height: "30rem" }}>
+      <Box sx={{ position: "relative", width: "100%", height: "40rem" }}>
         <Image
           src={banner}
           alt="about_us"
@@ -105,13 +105,13 @@ export default function About() {
       >
         <Stack width="100%" data-aos="fade-up-right">
           <Typography className="Pointsformatting" variant="body1" component="div">
-            <Image
+            {/* <Image
               src={estwaniimg}
               width={0}
               height={0}
               alt="about estwani vat"
               className={styles.about_img}
-            />
+            /> */}
             <Typography variant="h1"  sx={{p:"0", my:".5rem"}}>
               About Eswatini Revenue Service
             </Typography>
@@ -211,7 +211,7 @@ export default function About() {
         }}
       >
         <Typography variant="body1" className="Pointsformatting">
-          <Link href="http://102.36.181.13:8000/documents/TermsAndConditionsOfSupplyOfGoodsAndServices.pdf">
+          <Link href="http://website.ers.org.sz:8000/documents/TermsAndConditionsOfSupplyOfGoodsAndServices.pdf">
             <b style={{color:"#2F248F"}}>Click here</b>{" "}
           </Link>
           to download the Standard Terms and Conditions of Supply of Goods and
