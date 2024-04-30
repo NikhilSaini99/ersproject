@@ -174,9 +174,9 @@ const mediaRef = useRef(null);
             <Link href={"/Error"}>  </Link>
               <div className="flex text-mainColor float-right gap-10 font-normal items-center justify-end">
               <Box className="RightSide" sx={{ display: 'flex', gap: { xs: '0.8rem', lg: '1.5rem' }, pt: '0rem' }}>
-            <Link href="https://www.facebook.com/profile.php?id=100094062796048" target="_blank"><FaFacebookF className="SocialsStyling" /></Link>
-              <Link href="https://www.youtube.com/channel/UCK9y_OZHNmDPwYveSdy5EOw" target="_blank"><IoLogoYoutube className="SocialsStyling" /></Link>
-              <Link href="https://www.linkedin.com/company/100124155/admin/feed/posts/" target="_blank"><GrLinkedinOption className="SocialsStyling" /></Link>
+            <Link href="https://www.facebook.com/profile.php?id=100094062796048" target="_blank"><FaFacebookF className="headerIcons" /></Link>
+              <Link href="https://www.youtube.com/channel/UCK9y_OZHNmDPwYveSdy5EOw" target="_blank"><IoLogoYoutube className="headerIcons" /></Link>
+              <Link href="https://www.linkedin.com/company/100124155/admin/feed/posts/" target="_blank"><GrLinkedinOption className="headerIcons" /></Link>
             </Box>
                 <div>
                   <Image src={mail} alt="mail" className="mr-2 inline" />
