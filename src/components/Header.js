@@ -111,28 +111,11 @@ const mediaRef = useRef(null);
   }, []);
 
 
-  // useEffect(() => {
-  //   function handleClickOutside(event) {
-  //     if (menuRef.current && !menuRef.current.contains(event.target)) {
-  //       setServicesOpen(false);
-  //       setFormsOpen(false);
-  //       setMediaOpen(false);
-  //     }
-  //   }
-  
-  //   // Bind the event listener
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => {
-  //     // Unbind the event listener on clean up
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, [menuRef]);
 
   useEffect(() => {
     function handleClickOutside(event) {
       if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target) &&
+       
         !servicesRef.current.contains(event.target) &&
         !formsRef.current.contains(event.target) &&
         !mediaRef.current.contains(event.target)
@@ -149,7 +132,7 @@ const mediaRef = useRef(null);
       // Unbind the event listener on clean up
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [menuRef, servicesRef, formsRef, mediaRef]);
+  }, [servicesRef, formsRef, mediaRef]);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
