@@ -183,7 +183,7 @@ export default function Contact() {
                 <CallIcon className="text-xl min-w-[24px]" />
 
                 <span className="text-sm leading-6 font-normal">
-                (+268) 2406 4000
+                 2406 4000
                 </span>
               </p>
               <p className="flex  gap-1">
