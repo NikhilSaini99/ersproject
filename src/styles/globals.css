@@ -214,6 +214,11 @@ ul li.starclass:before {
   transition: ease 0.3s;
 }
 
+.headerIcons{
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 
 .sub_items_text_color p {
   /* color: #a5a8f7; */

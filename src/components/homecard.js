@@ -110,11 +110,11 @@ const Icons = () => {
 function News({ icon, description, img, link }) {
   return (
     <>
-      <div className=" border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400 ">
+      <div className="border border-[#E8E8EB] bg-white shadow-lg shadow-zinc-400">
         <div className="object-cover relative ">
-          <Image src={img} alt="..." className="h-48 w-full" style={{objectFit:"cover"}}/>
-          <div className="rounded-2xl absolute -bottom-[76px] left-8 px-8 py-4 bg-white ">
-            <Image src={icon} alt="..." className="w-40" />
+          <Image src={img} alt="..."  style={{objectFit:"cover"}}/>
+          <div className="absolute -bottom-[76px] left-8 px-8 py-4 md:py-0 md:px-0 bg-white ">
+            <Image src={icon} alt="..." className="w-40 " />
           </div>
         </div>
         <div className="px-8 pt-14 pb-4 gap-5 flex flex-col ">

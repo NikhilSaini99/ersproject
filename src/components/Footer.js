@@ -70,6 +70,7 @@ export default function Footer() {
            
            
             <Link href="/Feedback" ><MdFeedback className="SocialsStyling" /></Link>
+            <Divider orientation="vertical" variant="middle" flexItem sx={{ bgcolor: '#FEFEFE', marginTop: "0 !important", height:"37px" }}/>
             <Link href="https://www.facebook.com/profile.php?id=100094062796048" target="_blank"><FaFacebookF className="SocialsStyling" /></Link>
               <Link href="https://www.youtube.com/channel/UCK9y_OZHNmDPwYveSdy5EOw" target="_blank"><IoLogoYoutube className="SocialsStyling" /></Link>
               <Link href="https://www.linkedin.com/company/100124155/admin/feed/posts/" target="_blank"><GrLinkedinOption className="SocialsStyling" /></Link>
