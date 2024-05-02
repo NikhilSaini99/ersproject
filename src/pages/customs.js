@@ -101,9 +101,11 @@ export default function Customs() {
                 borderRadius: "0px 0px 0px 120%",
               }}
             ></Box>
+          <Link href={`${item.path}`}>
+
             <Stack
-              sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}
-            >
+              sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              
               <Box>
                 <Image src={item.img} alt={item.alt} width={150} height={150} />
               </Box>
@@ -115,7 +117,7 @@ export default function Customs() {
                   color: "#003b49",
                 }}
               >
-               <Link href={`${item.path}`}>{item.title}</Link>
+               {item.title}
               </Typography>
               <Typography
                 variant="body1"
@@ -124,6 +126,7 @@ export default function Customs() {
                 {item.description}
               </Typography>
             </Stack>
+            </Link>
           </Box>
         ))}
       </Box>

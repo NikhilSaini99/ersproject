@@ -181,9 +181,8 @@ export default function Contact() {
               </p> */}
               <p className="flex  gap-1">
                 <CallIcon className="text-xl min-w-[24px]" />
-
                 <span className="text-sm leading-6 font-normal">
-                 2406 4000
+                2406 4050
                 </span>
               </p>
               <p className="flex  gap-1">
@@ -219,7 +218,7 @@ export default function Contact() {
               fontWeight: "bold",
               color: "#2F248F",
             }} >
-            Service Centers and Branches
+            Service Centres and Branches
             <div className="border mr-12 border-yellowish mt-1 w-32 "></div>
           </Typography>
           
