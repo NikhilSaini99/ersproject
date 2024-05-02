@@ -131,8 +131,8 @@ export default function FAQ() {
                 <MenuItem value={"Sekulula VAT Easy"}>
                   Sekulula VAT Easy
                 </MenuItem>
-                <MenuItem value={"Alcohol and Tabaco Levy"}>
-                  Alcohol and Tabaco Levy
+                <MenuItem value={"Alcohol and Tobacco Levy"}>
+                  Alcohol and Tobacco Levy
                 </MenuItem>
               </Select>
             </FormControl>
