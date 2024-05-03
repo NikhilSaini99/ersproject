@@ -45,7 +45,7 @@ const EstwaniIncomeTax = () => {
         },
         {
             head: 'Withholding Taxes: - ',
-            text: 'These are taxes on income imposed at source. A third party is charged with the responsibility of deducting the tax from specified types of payments and remitting the tax to ERS. It may either be a final payment or a payment on account. The categories and rates are shown here.'
+            text: 'These are taxes on income imposed at source. A third party is charged with the responsibility of deducting the tax from specified types of payments and remitting the tax to ERS. It may either be a final payment or a payment on account. The categories and rates are shown <a href="http://website.ers.org.sz:3000/IncomeTax/RatesandThres" target="_blank" style="color:blue">here.</a>'
         },
         {
             head: 'Graded Tax: - ',

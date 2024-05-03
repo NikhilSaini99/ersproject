@@ -34,12 +34,12 @@ const CustomAgents = () => {
             ]
         },
         {
-            head: "CONNECTIVITY TO ASYCUDAWorld",
-            description: "Being a web based system, ASYCUDAWorld requires that theERSprovides sufficient bandwidth to host the system. This has been done. However, each and every Clearing Agent or user of the system must also provide sufficient bandwidth to carry ASYCUDA World traffic from their computers to the ERS Network via their Internet Service Provider.\nWhilst the system may be up and running on the ERS network, users will not be able to access the system if the facilities provided by their Internet Service Provider are inadequate. Challenges that traders experience sometimes vary from one Internet Service Provider to another; users are therefore advised to assess the services and facilities offered by their Internet Service Providers in case the challenges they may be facing emanate from the inadequacy of such services or facilities."
+            head: "CONNECTIVITY TO ASYCUDA World",
+            description: "Being a web based system, ASYCUDA World requires that the ERS provides sufficient bandwidth to host the system. This has been done. However, each and every Clearing Agent or user of the system must also provide sufficient bandwidth to carry ASYCUDA World traffic from their computers to the ERS Network via their Internet Service Provider.\nWhilst the system may be up and running on the ERS network, users will not be able to access the system if the facilities provided by their Internet Service Provider are inadequate. Challenges that traders experience sometimes vary from one Internet Service Provider to another; users are therefore advised to assess the services and facilities offered by their Internet Service Providers in case the challenges they may be facing emanate from the inadequacy of such services or facilities."
         },
         {
             head: "LICENSED CLEARING AGENTS",
-            description: "Hereunder is a list of licenced clearing agents as at the 18th February, 2019, whose licences expire on the 31st  December, 2019. TheERSundertakes to notify the public of newly registered and renewed Clearing Agents’ licences on a periodic basis. The listing of licensed Clearing Agents should not, in any way, be taken to mean that the ERS is vouching for their proficiency and/or integrity."
+            description: "Hereunder is a list of licenced clearing agents as at the 18th February, 2019, whose licences expire on the 31st  December, 2019. The ERS undertakes to notify the public of newly registered and renewed Clearing Agents’ licences on a periodic basis. The listing of licensed Clearing Agents should not, in any way, be taken to mean that the ERS is vouching for their proficiency and/or integrity."
         }
     ];
 

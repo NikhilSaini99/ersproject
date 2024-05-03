@@ -190,7 +190,7 @@ export default function About() {
             required to deliver. These standards will also be the tool used to
             measure the ERSs performance in relation to customer service.
             <br />
-            <Link href=""> ERS Customer Standards</Link>
+            <Link href="http://website.ers.org.sz:8000/documents/ERSCustomerStandards.pdf"> ERS Customer Standards</Link>
           </Typography>
         </Box>
       </Box>

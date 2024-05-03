@@ -44,7 +44,7 @@ const Taxations = () => {
     { name: "Seychelles", dateOfSignature: "2015",link:"http://website.ers.org.sz:8000/documents/Seychelles.pdf" },
     { name: "Republic of China on Taiwan", dateOfSignature: "2019",link:"http://website.ers.org.sz:8000/documents/RepublicofChinaOnTaiwan.pdf" },
     { name: "Botswana", dateOfSignature: "2019",link:"http://website.ers.org.sz:8000/documents/Botswana.pdf" },
-    { name: "Lesotho", dateOfSignature: "29 September 2020",link:"http://website.ers.org.sz:8000/documents/" },
+    { name: "Lesotho", dateOfSignature: "29 September 2020",link:"http://website.ers.org.sz:8000/documents/Lesotho.pdf" },
   ];
 
   return (

@@ -509,7 +509,7 @@ const mediaRef = useRef(null);
                                 className="line"
                               >
                                 <p className="text-sm font-normal cursor-pointer hover:text-yellowish ">
-                                  Bonded Warehouses/Rebate Store
+                                  Bonded Warehouses & Rebate Store
                                 </p>
                               </Link>
 
