@@ -29,14 +29,15 @@ const AEO_table = () => {
         {tableRowData.map((row) => (
           <TableRow
             key={row.rowHead}
-            sx={{'& > *': { textAlign: 'center !important' }, '&:hover': { background: '#F2F2F2' } }}
+            sx={{'& > *': { textAlign: 'left !important' }, '&:hover': { background: '#F2F2F2' } }}
             // sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
           >
            <TableCell component="th" align="right"  scope="row">{row.rowHead}</TableCell>
             <TableCell >
               {row.rowData1.map((item, index) => (
                 <div className='flex gap-1 items-start' key={index}>
-                            <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                            <span className='Pointsformatting'></span>
+                            {/* <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span> */}
                             <Typography component="div" variant='body2'  sx={{ mb: '1rem', }}
                                 className=''>
                                 {item}</Typography>
@@ -47,7 +48,7 @@ const AEO_table = () => {
             <TableCell  scope="row">
               {row.rowData2.map((item, index) => (
                 <div className='flex gap-1 items-start' key={index}>
-                            <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                            <span className='Pointsformatting'></span>
                             <Typography component="div" variant='body2'  sx={{ mb: '1rem' }}
                                 className=''>
                                 {item}</Typography>

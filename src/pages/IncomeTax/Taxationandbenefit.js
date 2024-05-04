@@ -22,6 +22,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import bgimg from '../../assets/images/pxfuel.jpg'
 import { ContentDiv } from "@/styles/globalStyle";
 import PageLayout from "../PagesLayout/Layout";
+import { blue } from "@mui/material/colors";
 
 
 const Taxationandbenefit = () => {
@@ -412,7 +413,10 @@ const Taxationandbenefit = () => {
             8. DE MINIMUS RULE
             </Typography>
             <Typography variant="body1">
-            This refers to benefits whose value is so small, as to make it unreasonable or administratively impractical to account for them for tax purposes. Click here for a Guideline on the tax treatment of these kind of benefits.
+            This refers to benefits whose value is so small, as to make it unreasonable or administratively impractical to account for them for tax purposes. 
+            <a href="http://website.ers.org.sz:8000/documents/TaxationOfBenefits.pdf" style={{color:blue}}>
+             Click here
+              </a> for a Guideline on the tax treatment of these kind of benefits.
             </Typography>
           </Box>
           

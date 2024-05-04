@@ -46,7 +46,7 @@ const pageData = [
       content2: "The productive sectors of MERCOSUR which will benefit from tariff preferences include chemical, textile, steel, plastic, automotive, electronics and capital goods, in addition to agricultural products.",
     chapter: {
       chapterHead:
-        "Click here to download the MERCOSUR-SACU Agreement; it is structured as follows:",
+        "MERCUSUR-SACU pdf files is structured as follows:",
       chapterPoints: [
         "Chapter i – Purpose of the Agreement",
         "Chapter ii – Trade Liberalization",

@@ -20,7 +20,7 @@ const AdvanceRuiling = () => {
       <ContentDiv>
         <Box sx={{ padding: "2rem 0", position: "relative" }}>
           <Typography variant="h1" sx={{ position: "relative !important" }}>
-            Advance Ruiling Platform
+          Advanced Ruling
             <span className="absolute bottom-0 left-0 w-1/4 border-b-2 border-yellowish"></span>
           </Typography>
         </Box>

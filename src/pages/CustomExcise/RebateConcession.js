@@ -53,8 +53,8 @@ const RebateConcession = () => {
         {
             title: 'Procedure',
             points: [
-                'The applicant must complete the form CE101 PRIOR TO THE ARRIVAL OF THE GOODS INTO THE KINGDOM',
-                'Form CE 101 is obtainable at the Legislative unit (Eswatini Revenue Service Headquarters, Departments of Customs and Excise Building 02, 3rd Floor, Mbabane Office Park, Mbabane) or the Eswatini Revenue Service website at www.ers.org.sz',
+                'The applicant must complete the form <a href="http://website.ers.org.sz:3000/" target="_blank" style="color:blue">CE101</a> PRIOR TO THE ARRIVAL OF THE GOODS INTO THE KINGDOM',
+                'Form <a href="http://website.ers.org.sz:3000/" target="_blank" style="color:blue">CE 101</a> is obtainable at the Legislative unit (Eswatini Revenue Service Headquarters, Departments of Customs and Excise Building 02, 3rd Floor, Mbabane Office Park, Mbabane) or the Eswatini Revenue Service website at www.ers.org.sz',
                 'The applicant must specify all the goods to be imported in an identifiable manner (serial numbers, marks etc.)',
                 'The applicant must also submit supporting documentation.',
                 'Form CE 101, together with the supporting documents must be submitted to the Legislative unit. All documents must be submitted in triplicate.',
@@ -145,7 +145,7 @@ const RebateConcession = () => {
                                     <div key={index} className='flex gap-1 items-start pb-2'>
                                         <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
                                         <ul>
-                                            <li className='Pointsformatting'>{mainPoints}</li>
+                                            <li className='Pointsformatting' dangerouslySetInnerHTML={{__html: mainPoints}}></li>
                                         </ul>
                                     </div>
                                 ))}

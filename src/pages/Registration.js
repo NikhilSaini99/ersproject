@@ -69,11 +69,11 @@ const Registration = () => {
       answer: 'Other businesses whose turnover is below the threshold of E500 000 may apply for registration if they meet the registration requirements and the Commissioner General is satisfied that they are fit and proper to be registered.'
     },
     {
-      question: 'What are the resgistration requirements?',
+      question: 'What Are The Registration Requirements?',
       answer: 'A fixed place of doing business in Eswatini. \n Capacity to keep proper accounting records. \n Capability to submit regular and reliable returns.'
     },
     {
-      question: 'What attachments should be icluded in the TIN registration form?',
+      question: 'What Attachments Should Be Included In The TIN Registration Form?',
       answer: 'Certified copy of a Certificate of Incorporation (for companies only). Certified copy of Form J (for companies only). Certified copy of Power of Attorney (where applicable). Certified copy of personal identity document (of the Public Officer). Certified copy of partnership deed (if the business is a partnership). Deed of trust (where applicable). Deed of sale (if it is a takeover). Constitution (Only for NGOs and welfare organizations). Certified copy of Trading License'
     },
     {
