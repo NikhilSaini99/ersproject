@@ -163,7 +163,7 @@ const AEO = () => {
                   
                 ))}
                 </Box>
-              <Typography variant="body1" sx={{color:"blue"}}><Link href="http://website.ers.org.sz:8000/documents/AuthorisedEconomicOperatorAEOEXTERNALGUIDE&PROCEDURE.docx">AEO External Guide and Procedure - 2022 02 02</Link></Typography>
+              <Typography variant="body1" sx={{color:"blue"}}><Link href="http://website.ers.org.sz:8000/documents/AuthorisedEconomicOperatorAEOEXTERNALGUIDE&PROCEDURE.docx">AEO External Guide and Procedure - 2022-02-02</Link></Typography>
               <Link href="http://website.ers.org.sz:8000/documents/AuthorisedEconomicOperator-AEOApplicationForm.docx"><Typography variant="body1" sx={{color:"blue"}}>AEO application form</Typography></Link>
 
          </Box>

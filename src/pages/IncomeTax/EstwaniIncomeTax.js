@@ -89,9 +89,12 @@ const EstwaniIncomeTax = () => {
                     return (
                         <div key={index} className='flex gap-1 items-start'>
                             <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} /></span>
+                
                             <Typography variant='body1' sx={{ mb: '1rem' }}
                                 className='Pointsformatting'>
-                                {item.head && <b>{item.head}</b>}{item.text}</Typography>
+                                 {item.head && <b>{item.head}</b>}
+                                <span dangerouslySetInnerHTML={{__html: item.text}}></span>
+                                </Typography>
                         </div>
                     )
                 })}
