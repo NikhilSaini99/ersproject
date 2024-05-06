@@ -235,7 +235,7 @@ export default function Customs() {
       {/*-----------------------Customs ENDS ---------------------*/}
       <section className="m-14 w-4/5 mx-auto">
         <h1 className="text-2xl text-subColor text-center font-semibold uppercase">
-          New! HS2022 Amendments are available.
+          HS2022 Amendments are available.
         </h1>
 
         <div className=" my-5">
