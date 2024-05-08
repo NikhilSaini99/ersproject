@@ -7,20 +7,21 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import AOS from "aos";
 import  defaultTheme  from "../styles/muiTheme";
 import { useEffect } from "react";
+import ChatboxMock from "@/components/Chatbox/ChatboxMock";
 
 export default function App({ Component, pageProps }) {
 
- useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "http://website.ers.org.sz:5500/dist/chat-bot.bundle.js";
-    script.type = "module"; // Add type module
-    script.defer = true;
-    document.body.appendChild(script);
+//  useEffect(() => {
+//     const script = document.createElement("script");
+//     script.src = "http://website.ers.org.sz:5500/dist/chat-bot.bundle.js";
+//     script.type = "module"; // Add type module
+//     script.defer = true;
+//     document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+//     return () => {
+//       document.body.removeChild(script);
+//     };
+//   }, []);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={defaultTheme}>
       <Component {...pageProps} />
+      <ChatboxMock/>
     </ThemeProvider>
   );
 }

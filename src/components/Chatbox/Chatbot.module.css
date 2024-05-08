@@ -1,17 +1,43 @@
 .chat_box_container{
+  cursor: pointer;
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     right: 50px;
 }
 .icon_container{
     cursor: pointer;
-    width: 2.815rem;
-    height: 2.815rem;
+    width: 6.815rem;
+    height: 6.815rem;
+    border-radius: 50%;
+    border: 2px solid #152c5b;
+    background-color: white;
+    position: relative;
 }
+
+.chatwithus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  background-color: #152c5b;
+  position: relative;
+
+  bottom: 12px;
+}
+
+.chatwithus h1 {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  
+}
+
+/* 
 .chat_bot_icon{
     width: 100%;
     height:100%
-}
+} */
 .red{
     color:red
 }

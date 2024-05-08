@@ -342,3 +342,8 @@ ul li.starclass:before {
   cursor: pointer;
   transition: all 0.3s ease;
 } */
+
+/* #chatbot-container .chat-backdrop.chat-backdrop-add{
+  background-color: unset !important;
+  z-index: unset !important;
+} */
