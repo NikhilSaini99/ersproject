@@ -86,7 +86,7 @@ const ChatboxMock = () => {
                         />
                     </div>
                     <div className={styles.chatwithus}> 
-                        <h1>Chat with us</h1>
+                        <h1>Let's Chat!</h1>
                     </div>
                 </div>
             }
