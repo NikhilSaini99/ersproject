@@ -36,7 +36,7 @@ export default function Customs() {
       title: "Asycuda World",
       description:
         "The Automated System for Customs Data (ASYCUDA) is a computerized customs management system that covers most foreign trade procedures. It handles manifests and customs declarations, along with accounting, transit and suspense procedures.",
-        path: 'http://asyw.ers.org.sz/'
+        path: 'http://asyw.ers.org.sz:8081'
     },
     {
       id: 2,
@@ -235,7 +235,7 @@ export default function Customs() {
       {/*-----------------------Customs ENDS ---------------------*/}
       <section className="m-14 w-4/5 mx-auto">
         <h1 className="text-2xl text-subColor text-center font-semibold uppercase">
-          HS2022 Amendments are available.
+           HS2022 Amendments are available.
         </h1>
 
         <div className=" my-5">
@@ -271,7 +271,7 @@ export default function Customs() {
             <a href = "http://website.ers.org.sz:8000/documents/Schedule4.pdf">Schedule 4</a> 
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://website.ers.org.sz:8000/documents/">Schedule 5</a> 
+            <a href = "http://website.ers.org.sz:8000/documents/Schedule5.pdf">Schedule 5</a> 
             </li>
             <li className="hover:underline cursor-pointer starclass">
             <a href = "http://website.ers.org.sz:8000/documents/Schedule6.pdf">Schedule 6</a>
