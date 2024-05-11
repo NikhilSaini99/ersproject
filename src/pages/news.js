@@ -15,7 +15,7 @@ import { NewsCard } from "@/components/media";
 import Pagination from '@mui/material/Pagination';
 import dayjs from "dayjs";
 import { newses } from "../content/data";
-import rightSideBackground from "../assets/images/sidebar-bg-image.jpg";
+// import rightSideBackground from "../assets/images/sidebar-bg-image.jpg";
 import { useFetch } from "./api/api";
 
 export const LatestNewsSection = ({ isPublic, restNews, isLoading, apiURl }) => {

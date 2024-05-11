@@ -6,10 +6,10 @@ import Banner from "../assets/images/registration.jpg";
 import Head from 'next/head'
 import Image from 'next/image'
 import React, { useState } from 'react'
-import pdfimg1 from '../assets/images/pdfimages/SpPdf1.jpg'
-import pdfimg2 from '../assets/images/pdfimages/SpPdf2.jpg'
-import pdfimg3 from '../assets/images/pdfimages/SpPdf3.jpg'
-import pdfimg4 from '../assets/images/pdfimages/SpPdf4.jpg'
+// import pdfimg1 from '../assets/images/pdfimages/SpPdf1.jpg'
+// import pdfimg2 from '../assets/images/pdfimages/SpPdf2.jpg'
+// import pdfimg3 from '../assets/images/pdfimages/SpPdf3.jpg'
+// import pdfimg4 from '../assets/images/pdfimages/SpPdf4.jpg'
 import Link from 'next/link';
 import { useFetch } from './api/api';
 import { useEffect } from 'react';
