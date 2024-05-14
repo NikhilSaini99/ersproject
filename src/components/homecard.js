@@ -32,8 +32,8 @@ const Icons = () => {
     fontSize: "2rem",
     color: "#2F3192",
     backgroundColor: "#E3E5FF",
-    width: "80px",
-    height: "80px",
+    width: "60px",
+    height: "60px",
     p: "18px",
     "&:hover": {
       backgroundColor: "#2F3192",
@@ -45,44 +45,52 @@ const Icons = () => {
   };
   return (
     <>
-      <div className="flex flex-wrap justify-center md:justify-center gap-4 xs:gap-6 md:gap-12 xl:gap-20 2xl:gap-24 mt-6">
+      <div className="flex flex-wrap justify-center md:justify-center gap-2 xs:gap-4 md:gap-8 xl:gap-16 2xl:gap-18 mt-6">
       
       
-        <Link href="/Calculator" className="flex flex-col gap-2">
-          <Image src={CalculatorImg} alt="test"  width={80} height= {80} />
-          <p className="text-center text-sm font-medium">Tax Calculator</p>
+      <Link href="https://taxease.ers.org.sz/" className="flex flex-col gap-2">
+          {/* <PaymentsOutlinedIcon sx={iconStyling} /> */}
+          <Image src={TaxEaseImg} alt="test"  width={60} height= {60} />
+          <p className="text-center text-sm font-medium">Tax Ease</p>
+        </Link>
+
+        <Link href="http://asyw.ers.org.sz:8081/" className="flex flex-col gap-2">
+          {/* <PaymentsOutlinedIcon sx={iconStyling} /> */}
+          <Image src={TaxEaseImg} alt="test"  width={60} height= {60} />
+
+          <p className="text-center text-sm font-medium">Asycuda World</p>
         </Link>
 
         <Link href="/TaxTables" className="flex flex-col gap-2">
           {/* <TableChartIcon sx={iconStyling} /> */}
-          <Image src={TableImg} alt="test"  width={80} height= {80} />
+          <Image src={TableImg} alt="test"  width={60} height= {60} />
           <p className="text-center text-sm font-medium">Tax Tables</p>
         </Link>
 
-        <Link href="https://taxease.ers.org.sz/" className="flex flex-col gap-2">
-          {/* <PaymentsOutlinedIcon sx={iconStyling} /> */}
-          <Image src={TaxEaseImg} alt="test"  width={80} height= {80} />
 
-          <p className="text-center text-sm font-medium">Tax Ease</p>
+        <Link href="/Calculator" className="flex flex-col gap-2">
+          <Image src={CalculatorImg} alt="test"  width={60} height= {60} />
+          <p className="text-center text-sm font-medium">Tax Calculator</p>
         </Link>
 
+        <Link href="/FAQ" className="flex flex-col gap-2">
+          {/* <LiveHelpIcon sx={iconStyling} /> */}
+          <Image src={FaqImg} alt="test"  width={60} height= {60} />
+          <p className="text-center text-sm font-medium">FAQs</p>
+        </Link>
+
+       
         <Link href="/TaxItemTable" className="flex flex-col gap-2">
           {/* <BarChartIcon sx={iconStyling} /> */}
-          <Image src={ItemCodeImg} alt="test"  width={80} height= {80} />
+          <Image src={ItemCodeImg} alt="test"  width={60} height= {60} />
           <p className="text-center text-sm font-medium">Item Codes</p>
         </Link>
 
         <Link href="/Hotline" className="flex flex-col gap-2">
           {/* <ConnectWithoutContactIcon sx={iconStyling} /> */}
-          <Image src={ContactImg} alt="test"  width={80} height= {80} />
+          <Image src={ContactImg} alt="test"  width={60} height= {60} />
 
           <p className="text-center text-sm font-medium">Hotline</p>
-        </Link>
-
-        <Link href="/FAQ" className="flex flex-col gap-2">
-          {/* <LiveHelpIcon sx={iconStyling} /> */}
-          <Image src={FaqImg} alt="test"  width={80} height= {80} />
-          <p className="text-center text-sm font-medium">FAQs</p>
         </Link>
 
         <Link
@@ -90,7 +98,7 @@ const Icons = () => {
           className="flex flex-col gap-2"
         >
           {/* <TrendingUpIcon sx={iconStyling} /> */}
-          <Image src={BusinessImg} alt="test"  width={80} height= {80} />
+          <Image src={BusinessImg} alt="test"  width={60} height= {60} />
           <p className="text-center text-sm font-medium">Business</p>
         </Link>
 
@@ -99,7 +107,7 @@ const Icons = () => {
           className="flex flex-col gap-2"
         >
           {/* <FlightTakeoffIcon sx={iconStyling} /> */}
-          <Image src={TravelImg} alt="test"  width={80} height= {80} />
+          <Image src={TravelImg} alt="test"  width={60} height= {60} />
           <p className="text-center text-sm font-medium">Travelling</p>
         </Link>
       </div>

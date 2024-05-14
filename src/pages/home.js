@@ -72,8 +72,7 @@ export default function Home() {
           head: "Provisional Tax",
           para: "1st payment is due no later than 31st December",
           para2: "2nd payment is due no later than 30th June",
-          para3:
-            "3rd payment is due on receipt of Notice of Assessment after having submitted Income Tax returns",
+          para3:"3rd payment is due on receipt of Notice of Assessment after having submitted Income Tax returns",
         },
         {
           id: 2,
@@ -83,16 +82,14 @@ export default function Home() {
         {
           id: 3,
           head: "Submission of Salary Reconciliations",
-          para: "No later than the 7th every month",
+          para: "No later than the 30th September every year",
         },
         {
           id: 4,
           head: "Submission of Income Tax Returns",
           para: "All Non-VAT registered entities - 31st October",
-          para2:
-            "Individuals with employment income and Individuals with other income - 30th November",
-          para3:
-            "All VAT registered entities and Special groups - 31st December",
+          para2:"Individuals with employment income and Individuals with other income - 30th November",
+          para3:"All VAT registered entities and Special groups - 31st December",
         },
       ],
     },
