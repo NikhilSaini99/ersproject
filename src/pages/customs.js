@@ -271,7 +271,7 @@ export default function Customs() {
             <a href = "http://102.36.181.16:8000/documents/Schedule4.pdf">Schedule 4</a> 
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule5.pdf">Schedule 5</a> 
+            Schedule 5 
             </li>
             <li className="hover:underline cursor-pointer starclass">
             <a href = "http://102.36.181.16:8000/documents/Schedule6.pdf">Schedule 6</a>
@@ -321,36 +321,36 @@ export default function Customs() {
           <div className="flex items-center">
             <ul className="text-mainColor text-[15px] px-4 leading-7 font-normal">
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/Schedule1Part1-Chapters1to99oftheERSTariffBook.pdf">Schedule 1 Part 1 - Chapters 1 to 99 of the ERS Tariff Book</a> 
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullCommodityCodesSchedule_1P1.pdf">Schedule 1 Part 1 - Chapters 1 to 99 of the ERS Tariff Book</a> 
               </li>
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/Schedule1Part2-SpecificAndAdValoremExciseDuties.pdf">Schedule 1 Part 2 - Specific and Ad V{" "}</a>
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullAdditionalCodesSchedule_1P2.pdf">Schedule 1 Part 2 - Specific and Ad V{" "}</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/Schedule1Part5-FuelAndRoadAccidentFundLevy.pdf">Schedule 1 Part 5 - Fuel and Road Accident Fund Levy</a>
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullAdditionalCodesSchedule_1P5.pdf">Schedule 1 Part 5 - Fuel and Road Accident Fund Levy</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/Schedule1Part7-HealthPromotionLevy.pdf"></a>Schedule 1 Part 7 - Health Promotion Levy
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullAdditionalCodesSchedule_1P7.pdf"></a>Schedule 1 Part 7 - Health Promotion Levy
               </li>
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/ATL-AlcoholAndTabaccoLevy.pdf">ATL - Alcohol and Tobacco Levy</a>
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullAdditionalCodesSchedule_ATL.pdf">ATL - Alcohol and Tobacco Levy</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/Schedule2-Anti-dumpingCountervailingAndSafeguardDutiesOnImportedGoods.pdf">Schedule 2 - ​Anti-dumping, Countervailing and Safeguard Duties</a>
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullAdditionalCodesSchedule_2.pdf">Schedule 2 - ​Anti-dumping, Countervailing and Safeguard Duties</a>
                 on Imported Goods{" "}
               </li>
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/Schedule3-​IndustrialRebatesOfCustomsDuties.pdf">Schedule 3 - ​​Industrial Rebates of Customs Duties</a>
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullProcedureMeasuresSchedule_3.pdf">Schedule 3 - ​​Industrial Rebates of Customs Duties</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/Schedule4-GeneralRebatesOfCustomsDutiesAndFuelLevy.pdf">Schedule 4 - ​​​General Rebates of Customs Duties and Fuel Levy</a>
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullProcedureMeasuresSchedule_4.pdf">Schedule 4 - ​​​General Rebates of Customs Duties and Fuel Levy</a>
               </li>
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/Schedule5-SpecificDrawbacksAndRefundsOfCustomsDutiesAndFuelLevy.pdf">Schedule 5 - ​Specific Drawbacks and Refunds of Customs Duties</a>
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullProcedureMeasuresSchedule_5.pdf">Schedule 5 - ​Specific Drawbacks and Refunds of Customs Duties</a>
                 and Fuel Levy
               </li>
               <li className="hover:underline cursor-pointer starclass">
-              <a href = "http://102.36.181.16:8000/documents/Schedule6-RefundsAndRebatesOfExciseDutiesAndFuelLevy.pdf">Schedule 6 - ​​Refunds and Rebates of Excise Duties and Fuel</a>
+              <a href = "https://www.esupplychainportal.com/SRA/PDF/SRATariffBookFullProcedureMeasuresSchedule_6.pdf">Schedule 6 - ​​Refunds and Rebates of Excise Duties and Fuel</a>
                 Levy
               </li>
             </ul>

@@ -128,7 +128,7 @@ function News({ icon, description, img, link }) {
           </div>
         </div>
         <div className="px-8 pt-14 pb-4 gap-5 flex flex-col ">
-          <p className="mt-5 mb-8 text-base font-normal checking">
+          <p className="mt-5 mb-4 text-base font-normal ">
             {description}
           </p>
           <Link href={link}>
