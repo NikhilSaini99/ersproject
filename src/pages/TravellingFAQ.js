@@ -74,9 +74,9 @@ import {
         <section className="xs:mx-8 sm:mx-20 md:mx-30 lg:mx-30 xl:mx-40 2xl:mx-72 my-14">
           <div>
             <h1 className="text-subColor text-6xl font-bold uppercase">Travelling FAQ</h1>
-            <p className="mt-6 text-gray-500 leading-normal font-normal text-lg">
+            {/* <p className="mt-6 text-gray-500 leading-normal font-normal text-lg">
               Loreum ipsum
-            </p>
+            </p> */}
             <Box
               sx={{
                 my: "2rem",
