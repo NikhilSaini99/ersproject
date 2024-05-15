@@ -18,6 +18,7 @@ const Feedback = () => {
   const [phone_number, setPhoneNo] = useState('')
   const [email, setEmail] = useState('')
   const [feedback_description, setfeedback_description] = useState('')
+  const [complianceCheck, setComplianceCheck] = useState(false)
   // const [checkFed,setCheckFed] = useState()
 
   // const myAPI = process.env.NEXT_PUBLIC_API_ENDPOINT;
@@ -38,6 +39,7 @@ const Feedback = () => {
     setPhoneNo('')
     setEmail('')
     setfeedback_description('')
+    setComplianceCheck(false)
   }
 
   function handleFeedbackType(e) {
@@ -94,7 +96,13 @@ const Feedback = () => {
               <TextField variant='outlined' size='medium' type='text' value={email} onChange={(e) => setEmail(e.target.value)} required />
               <InputLabel htmlFor="full-Name">Comments</InputLabel>
               <TextField variant='outlined' size='medium' type='text' multiline={true} minRows={5} value={feedback_description} onChange={(e) => setfeedback_description(e.target.value)} sx={{ mb: '1rem' }} required />
-              <FormControlLabel required  control={<Checkbox size='small' />} label={<Typography  variant="subtitle2">By clicking on Submit I hereby consent to provide my personal information to ERS in compliance with their <Link href="/TermsandConditions/TermsCondition" target='_blank' style={{color:"blue"}}> Data Privacy policy</Link></Typography>} />
+              <Box sx={{ display: "flex", gap: "0.2rem" }}>
+              <FormControlLabel   sx={{ "& .MuiFormControlLabel-asterisk": {
+                display: "none"
+              } }} control={<Checkbox defaultChecked  size='small' required/>} label=""/>
+              <Typography  variant="subtitle2">By clicking on Submit I hereby consent to provide my personal information to ERS in compliance with their <Link href="/TermsandConditions/TermsCondition" target='_blank' style={{color:"blue"}}> Data Privacy policy</Link> * </Typography>
+              </Box>
+              
               <Button type="submit" variant='contained' color='primary' sx={{ background: '#2f2483 !important', color: 'white', alignSelf: 'center', width: '10rem', mb: { xs: '2rem', lg: '3rem' }, p: '0.8rem' }}>Send</Button>
             </Stack>
           </Paper>

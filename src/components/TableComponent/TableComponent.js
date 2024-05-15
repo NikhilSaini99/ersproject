@@ -54,8 +54,9 @@ const TableComponent = (props) => {
   const currentPageData = tableData?.slice(startIndex, endIndex) || [];
 
   const handlePDFDownload = (url, docName) => {
-    window.open(url);
-    downloadFile(url, docName || "Document")
+    // window.open(url);
+    const fileType = url.split('.').pop();
+    downloadFile(url, docName || "Document", fileType)
   };
 
   const isoToFullDate = (newDate) => {

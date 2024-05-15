@@ -140,7 +140,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
             <Image
               src={taxpayersection2}
               alt="taxpayersection1"
-              className="w-5/12"
+              className="w-5/12 object-contain"
             />
           </Stack>
           {/* left side end */}
@@ -154,12 +154,13 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
               flexDirection: { xs: "column", lg: "row" },
               gap: { lg: "1rem" },
               mt: "2rem",
+              pl: { xs: "2rem", lg: "3rem" },
             }}
           >
             <Image
               src={taxpayersection2}
               alt="taxpayersection1"
-              className="w-5/12"
+              className="w-5/12 object-contain md:order-2"
             />
             {taxpayerCharter2.map((item, index) => (
               <Box key={index} sx={{ pr: { xs: "0.5rem", lg: "5rem" } }}>

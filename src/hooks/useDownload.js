@@ -4,7 +4,7 @@ const useDownload = () => {
     const [isDownloading, setIsDownloading] = useState(false);
     const [progress, setProgress] = useState(0);
 
-    const downloadFile = (url, fileName) => {
+    const downloadFile = (url, fileName, fileType) => {
         setIsDownloading(true);
         try {
           var xhr = new XMLHttpRequest();
@@ -20,11 +20,13 @@ const useDownload = () => {
       
           xhr.onload = function() {
             if (this.status === 200) {
-              var blob = new Blob([this.response], { type: 'application/pdf' });
+              var mimeType = fileType === 'pdf' ? 'application/pdf' : 'application/vnd.ms-excel';
+              var fileExtension = fileType === 'pdf' ? '.pdf' : '.xlsx';
+              var blob = new Blob([this.response], { type: mimeType });
               var downloadUrl = URL.createObjectURL(blob);
               var a = document.createElement('a');
               a.href = downloadUrl;
-              a.download = `${fileName}.pdf`;
+              a.download = `${fileName}${fileExtension}`;
               document.body.appendChild(a);
               a.click();
             } 

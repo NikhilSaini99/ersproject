@@ -481,7 +481,7 @@ export default function Home() {
       <section className="" data-aos="fade-up-right">
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div className="w-full md:w-1/2">
-            <Image src={CSR} alt="..." className="h-[420px]" />
+            <Image src={CSR} alt="..." className="h-[420px] object-cover" />
           </div>
           <div className="w-full md:w-1/2 py-10 xs:px-5 md:px-10 px-20 bg-[#DAD8CC]  md:h-[420px] xl:h-[420px]">
           <h1 className="text-subColor text-2xl md:text-4xl font-semibold">
