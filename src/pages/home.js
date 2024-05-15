@@ -2,7 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { BlackButton } from "@/styles/globalStyle";
-import CSR from "../assets/images/CSR.jpg";
+ import CSR from "../assets/images/CSR.jpg";
+// import CSR from "../assets/images/CR1.jpg";
+
 import Carousal from "@/components/carousal";
 import ChatboxMock from "@/components/Chatbox/ChatboxMock";
 import Customs from "../assets/images/eCustoms_Tariff_Logo.png";

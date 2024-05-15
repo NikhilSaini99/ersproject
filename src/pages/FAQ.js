@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 
 import AddCircleOutlineTwoToneIcon from "@mui/icons-material/AddCircleOutlineTwoTone";
-import Banner from "../assets/images/bg4.jpg";
+import Banner from "../assets/images/Banner-FAQs2.jpg";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import Header from "@/components/Header";

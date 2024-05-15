@@ -53,7 +53,7 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
         "All issues that arise from the BCC are meant to be progressed or dealt with within three months of being raised; exceptions are fully reported at the next BCC meeting.",
     },
     {
-      section: "Minutes of previous meetings",
+      section: "Minutes of Previous Meetings",
       content: {
         links: [
           {

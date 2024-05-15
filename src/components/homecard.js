@@ -25,6 +25,9 @@ import ItemCodeImg from "@/assets/icons/ourResourceIcon/itemCode.png"
 import TravelImg from "@/assets/icons/ourResourceIcon/travel.png"
 import BusinessImg from "@/assets/icons/ourResourceIcon/business.png"
 import TaxEaseImg from "@/assets/icons/ourResourceIcon/taxEase.png"
+import AyscudaImg from "@/assets/icons/ourResourceIcon/ASYCUDAicon22.png"
+
+
 
 const Icons = () => {
   const iconStyling = {
@@ -56,8 +59,7 @@ const Icons = () => {
 
         <Link href="http://asyw.ers.org.sz:8081/" className="flex flex-col gap-2">
           {/* <PaymentsOutlinedIcon sx={iconStyling} /> */}
-          <Image src={TaxEaseImg} alt="test"  width={60} height= {60} />
-
+          <Image src={AyscudaImg} alt="test"  width={60} height= {60} />
           <p className="text-center text-sm font-medium">Asycuda World</p>
         </Link>
 

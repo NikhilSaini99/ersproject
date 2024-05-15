@@ -5,17 +5,18 @@ import Footer from '@/components/Footer'
 import { IncomeTaxData } from "@/content/data";
 import styles from '@/styles/IncomeTax.module.css'
 import downloadIcon from "../assets/icons/downloadicon.svg"
-import Banner from "../assets/images/customs.jpg";
+import Banner from "../assets/images/TaxTablesBanner.jpg";
 import Image from 'next/image';
-import { Box } from '@mui/material';
+import { Box, Typography, Link} from '@mui/material';
+
 import bgimg from '../assets/images/bg-2.png'
 const TaxTables = () => {
 
     const taxTableData = [
         {
             heading: 'Tax Tables',
-            content: 'The tax tables provide guidelines on the calculations of Pay As You Earn for employees. The tables summarise the principles of the Income Tax Order, 1975 and practice notes that relate to PAYE. A further resource in the document is tables that employers may use to ascertain the amount of tax they may withhold for various income rates. These tables are separated to cater for DAILY, WEEKLY and MONTHLY wages; note that the tables have already incorporated the tax rebate that all employees are entitled to.Note that effective from the 1st July 2013, Volume 22 of the tax tables replaces Volume 21 following the amendment of tax rates for individuals.',
-            note: 'NOTE. Employers preparing Salary Reconciliations for the tax year ended 30th June 2013 are advised to used Volume 21 for reference purposes.'
+            content: 'The tax tables provide guidelines on the calculations of Pay As You Earn for employees. The tables summarise the principles of the Income Tax Order, 1975 and practice notes that relate to PAYE. A further resource in the document is tables that employers may use to ascertain the amount of tax they may withhold for various income rates. These tables are separated to cater for <a href="http://102.36.181.16:8000/documents/DAILY.pdf" style="color:blue">DAILY,</a>  <a href="http://102.36.181.16:8000/documents/WEEKLY.pdf" style="color:blue">WEEKLY </a> and <a href="http://102.36.181.16:8000/documents/WEEKLY.pdf" style="color:blue">MONTHLY </a> wages; note that the tables have already incorporated the tax rebate that all employees are entitled to.Note that effective from the 1st July 2013, Volume 22 of the tax tables replaces <a href="http://102.36.181.16:8000/documents/Volume21.pdf" style="color:blue">Volume 21</a>  following the amendment of tax rates for individuals.',
+            note: 'NOTE. Employers preparing Salary Reconciliations for the tax year ended 30th June 2013 are advised to used <a href="http://102.36.181.16:8000/documents/Volume21.pdf" style="color:blue">Volume 21</a> for reference purposes.'
         }
     ]
 
@@ -58,10 +59,10 @@ const TaxTables = () => {
                         style={{ marginRight: 'calc((12.5% + 2px)*2*-1)', top: '1.5rem' }}>
                         <div className="border-t border-black font-bold"></div>
                         <h6 className="font-semibold">DOWNLOADS</h6>
-                        <a href="https://www.ers.org.sz/documents/1496926135.pdf" target='_blank' className="w-5 text-normalBlue hover:underline">
+                        <a href="http://102.36.181.16:8000/documents/EmployersGuideforPAYE.pdf" target='_blank' className="w-5 text-normalBlue hover:underline">
                             <div className="flex flex-row gap-x-2" style={{ width: '75%' }}>
                                 <Image src={downloadIcon} className="fill-current" alt="downloadIcon" width="100%" height="100%" />
-                                <p className="">Article</p>
+                                <p className="">Employers Guide for PAYE</p>
                             </div>
                         </a>
                     </div>
@@ -72,12 +73,16 @@ const TaxTables = () => {
                             <h1 className=" text-[40px] font-semibold text-subColor mb-10 mt-6 ">
                                 {item.heading}
                             </h1>
-                            <p className="mb-4  mt-2 text-black/80 Pointsformatting">
+                            <Typography variant='body1' className='pb-2' dangerouslySetInnerHTML={{ __html: item.content }}>
+                            </Typography>
+                            {/* <p className="mb-4  mt-2 text-black/80 Pointsformatting" >
                                 <span className={`tracking-wide `}>{item.content}{" "}</span>
-                            </p>
-                            <p className="mb-4  mt-2 text-black/80 font-bold Pointsformatting">
+                            </p> */}
+                             <Typography variant='body1' className='pb-2' dangerouslySetInnerHTML={{ __html: item.note }}>
+                            </Typography>
+                            {/* <p className="mb-4  mt-2 text-black/80 font-bold Pointsformatting">
                                 <span className={`tracking-wide `}>{item.note}{" "}</span>
-                            </p>
+                            </p> */}
                         </div>
                     ))}
                 </div>

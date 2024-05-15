@@ -163,7 +163,10 @@ const mediaRef = useRef(null);
             </Box>
                 <div>
                   <Image src={mail} alt="mail" className="mr-2 inline" />
+                  <a href="mailto:someone@something.com?subject=your title&body=TThe message">
                   <span>info@ers.org.sz</span>
+                </a>
+                  
                 </div>
                 <div>
                   <Image src={call} alt="call" className="mr-2 inline" />
@@ -171,7 +174,6 @@ const mediaRef = useRef(null);
                 </div>
               </div>
           
-
             <div className="flex space-x-4 items-center">
               <ul className="flex flex-row border-black/40 space-x-5">
                 <li className="relative">
