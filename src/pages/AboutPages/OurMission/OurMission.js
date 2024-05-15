@@ -53,19 +53,19 @@ const OurMission = ({h2Styling}) => {
         <Box sx={ourMissionBoxStyle}>
           <Typography
             variant="h5"
-            sx={{ fontWeight: "bold", marginBottom: "0.rem" }}
+            sx={{ fontWeight: "bold", marginBottom: "0.5rem" }}
           >
             OUR VISION
           </Typography>
           <Typography variant="body1">
-            100% Voluntary Compliance for a better Kingdom of Eswatini
+            100% Voluntary Compliance for a better Kingdom of Eswatini.
           </Typography>
         </Box>
       </Box>
 
       <Typography
         variant="h2"
-        sx={{ ...h2Styling, textAlign: "left", mb: "0.5rem" }}
+        sx={{ ...h2Styling, textAlign: "center", mb: "2rem" }}
       >
         Our Values
       </Typography>

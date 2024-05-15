@@ -48,7 +48,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
                     className="Pointsformatting"
                   />
                 </span>
-                <li>Your rights as a taxpayer</li>
+                <li>Your rights as a taxpayer.</li>
               </div>
               <div className="flex gap-1 items-start">
                 <span className="Pointsformatting">
@@ -57,7 +57,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
                     className="Pointsformatting"
                   />
                 </span>
-                <li>Your important tax obligations</li>
+                <li>Your important tax obligations.</li>
               </div>
               <div className="flex gap-1 items-start">
                 <span className="Pointsformatting">

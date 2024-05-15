@@ -8,9 +8,9 @@ import { NewsCard } from "@/components/media";
 import Banner from "../assets/images/eCustoms_Tariff.jpg";
 import Asycuda from "../assets/images/ASYCUDA_LOGO.png";
 import Advance from "../assets/images/Advance_Ruling_Logo.png";
-import Browse from "../assets/images/TariffBrowseIcon.jpg";
-import Duty from "../assets/images/TariffDutyEstimatorIcon.jpg";
-import Search from "../assets/images/TariffSearchIcon.jpg";
+import Browse from "../assets/images/TariffBrowseIcon.png";
+import Duty from "../assets/images/TariffDutyEstimatorIcon.png";
+import Search from "../assets/images/TariffSearchIcon.png";
 import Trade from "../assets/images/trade-portal.png";
 import education from "../assets/icons/education.png";
 
@@ -107,7 +107,7 @@ export default function Customs() {
               sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               
               <Box>
-                <Image src={item.img} alt={item.alt} width={150} height={150} />
+                <Image src={item.img} alt={item.alt} width={100} height={100} />
               </Box>
               <Typography
                 variant="h1"
