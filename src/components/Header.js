@@ -161,9 +161,10 @@ const mediaRef = useRef(null);
               <Link href="https://www.youtube.com/channel/UCK9y_OZHNmDPwYveSdy5EOw" target="_blank"><IoLogoYoutube className="headerIcons" /></Link>
               <Link href="https://www.linkedin.com/company/100124155/admin/feed/posts/" target="_blank"><GrLinkedinOption className="headerIcons" /></Link>
             </Box>
+
                 <div>
+                <a href="mailto:someone@something.com?subject=your title&body=TThe message">
                   <Image src={mail} alt="mail" className="mr-2 inline" />
-                  <a href="mailto:someone@something.com?subject=your title&body=TThe message">
                   <span>info@ers.org.sz</span>
                 </a>
                   

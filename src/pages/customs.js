@@ -107,7 +107,7 @@ export default function Customs() {
               sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               
               <Box>
-                <Image src={item.img} alt={item.alt} width={100} height={100} />
+                <Image src={item.img} alt={item.alt} width={150} height={150} />
               </Box>
               <Typography
                 variant="h1"
@@ -121,7 +121,7 @@ export default function Customs() {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ fontWeight: "light", color: "grey" }}
+                sx={{ fontWeight: "light"}}
               >
                 {item.description}
               </Typography>
@@ -203,7 +203,7 @@ export default function Customs() {
             </Typography>
             <Typography
               variant="body1"
-              sx={{ color: "grey", textAlign: "center", }}
+              sx={{ textAlign: "center", }}
             >
              The following page provides access to the Automated System for Customs Data (ASYCUDA) for computerized customs management system and Advance Ruling for seeking prior decision by ERS for import and export purposes.
             </Typography>

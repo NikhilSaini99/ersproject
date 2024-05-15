@@ -17,9 +17,9 @@ const advanceRuilingdata = [
         answer:{
             text:"Applicants may apply for Advance Rulings on the following areas",
             list:[
-                "Tariff Classification",
-                "Determination of the Origin of Goods",
-                "Determination of the appropriate Valuation methodology to be used for determining Customs Value"
+                "• Tariff Classification",
+                "• Determination of the Origin of Goods",
+                "• Determination of the appropriate Valuation methodology to be used for determining Customs Value"
             ]
         },
     },
@@ -34,9 +34,9 @@ const advanceRuilingdata = [
         answer:{
             text:"An Advance Ruling has the following benefits",
             list:[
-                "Reduced declaration processing time, as decisions regarding Tariff Classification / Origin Determination / Valuation have already been made",
-                "Certainty and predictability in clearance of goods",
-                "Applicants can make informed business decisions as Advance Rulings are legally binding"
+                "• Reduced declaration processing time, as decisions regarding Tariff Classification / Origin Determination / Valuation have already been made",
+                "• Certainty and predictability in clearance of goods",
+                "• Applicants can make informed business decisions as Advance Rulings are legally binding"
             ]
         },
     }
@@ -68,13 +68,13 @@ const advanceRuilingdata = [
         answer:{
             text:"The online application process will guide you in the specific information to be provided depending on the type of application (ie Tariff, Origin or Valuation). In general, the following information would be needed when completing an application for an Advance Ruling",
             list:[
-                "Detailed product information (for instance: brand, name, function, use, composition, catalogue, specifications, manufacturer name, etc)",
-                "Supporting documentation",
-                "Suggested tariff classification / country of origin / valuation methodology",
-                "Whether a relevant ruling has already been issued for identical or similar goods",
-                "Disclosure of any pending matters relating to the goods before any appellate tribunal, court or government agency",
-                "Indicate which information (from which has been submitted) should remain confidential when the Ruling is issued"
-            ]
+                "• Detailed product information (for instance: brand, name, function, use, composition, catalogue, specifications, manufacturer name, etc)",
+                "• Supporting documentation",
+                "• Suggested tariff classification / country of origin / valuation methodology",
+                "• Whether a relevant ruling has already been issued for identical or similar goods",
+                "• Disclosure of any pending matters relating to the goods before any appellate tribunal, court or government agency",
+                "• Indicate which information (from which has been submitted) should remain confidential when the Ruling is issued"
+            ] 
         },
     }
     ,
@@ -167,11 +167,11 @@ const advanceRuilingdata = [
         answer:{
             text:"Yes, under certain circumstances ERS may decline to issue an Advance Ruling",
             list:[
-                "Where there is insufficient information provided to make a ruling, and/or the applicant is unable to provide all the necessary information.",
-                "Where there is no intention of importing or exporting the goods.",
-                "Where goods have already been cleared through the import / export procedure",
-                "Where an application has already been made on behalf of the applicant for the same goods / circumstances.",
-                "Where the matter is under arbitration or before the courts."
+                "• Where there is insufficient information provided to make a ruling, and/or the applicant is unable to provide all the necessary information.",
+                "• Where there is no intention of importing or exporting the goods.",
+                "• Where goods have already been cleared through the import / export procedure",
+                "• Where an application has already been made on behalf of the applicant for the same goods / circumstances.",
+                "• Where the matter is under arbitration or before the courts."
             ]
         },
     }
@@ -181,10 +181,10 @@ const advanceRuilingdata = [
         answer:{
             text:"Yes, under certain circumstances ERS may revoke or annul an issued Advance Ruling",
             list:[
-                    "If amendments have been made to the Customs Act affecting the goods that are the subject of the Advance Ruling.",
-                    "If any conditions relating to the Ruling have not been satisfied.",
-                    "If the applicant does not fulfil an obligation imposed by the Ruling.",
-                    "If the Ruling was issued based on incomplete, incorrect, false or misleading information."
+                    "• If amendments have been made to the Customs Act affecting the goods that are the subject of the Advance Ruling.",
+                    "• If any conditions relating to the Ruling have not been satisfied.",
+                    "• If the applicant does not fulfil an obligation imposed by the Ruling.",
+                    "• If the Ruling was issued based on incomplete, incorrect, false or misleading information."
             ]
         },
     },
@@ -199,10 +199,10 @@ const advanceRuilingdata = [
         answer:{
             text:"You have the right to appeal the outcome of any Advance Ruling decision by following the appropriate process",
             list:[
-                "If the applicant does not agree with the ruling that has been issued by the Commissioner General, the ruling may be challenged in writing.",
-                "The Commissioner General will make a decision, either affirming the earlier decision or setting aside the ruling in part or in its entirety.",
-                "Where the applicant is still not in agreement with the Commissioner General’s decision, an appeal may be filed with the Revenue Appeals Tribunal within thirty (30) days of the Commissioner General’s decision.",
-                "Subject to the decision of the Revenue Appeals Tribunal, any aggrieved party may approach the High Court for review."
+                "• If the applicant does not agree with the ruling that has been issued by the Commissioner General, the ruling may be challenged in writing.",
+                "• The Commissioner General will make a decision, either affirming the earlier decision or setting aside the ruling in part or in its entirety.",
+                "• Where the applicant is still not in agreement with the Commissioner General’s decision, an appeal may be filed with the Revenue Appeals Tribunal within thirty (30) days of the Commissioner General’s decision.",
+                "• Subject to the decision of the Revenue Appeals Tribunal, any aggrieved party may approach the High Court for review."
             ]
         },
         lastText:"The same appeal route is applicable for any public rulings initiated by the Commissioner General."
@@ -226,18 +226,18 @@ export default function CustomAccordion() {
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
             >
-                <Typography sx={{ color: 'text.primary' }}>{item?.ques}</Typography>
+            <Typography sx={ { color: 'black', fontWeight: "light"}}>{item?.ques}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-                <Typography sx={{ color: 'text.secondary' }}>
+                <Typography sx={{ color: 'black' }}>
                 {item?.answer.text}
                 </Typography>
                 {item.answer.list && item.answer.list.map((list, i) => (
-                    <Typography key={i} sx={{ color: 'text.secondary', ml:"1rem" }}>
+                    <Typography key={i} sx={{ color: 'black', ml:"1rem" }}>
                         {list}
                     </Typography>
                 ))}
-                {item.answer.lastText && <Typography sx={{ color: 'text.secondary' }}>{item.answer.lastText}</Typography>}
+                {item.answer.lastText && <Typography sx={{ color: 'black' }}>{item.answer.lastText}</Typography>}
             </AccordionDetails>
             </Accordion>
         )
