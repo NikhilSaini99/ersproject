@@ -100,12 +100,14 @@ const PublicNotices = () => {
             Public Notice
           </Typography> */}
 
-          {data?.data ? <TableComponent
+          {data?.data ? 
+            data?.data?.length > 0 ?
+          <TableComponent
                         tableData={data?.data}
                         tableHeaders={tableHeaders}
                         excluseProperties={excluseProperties}
                         includeProperties={includeProperties}
-          /> : <Loader />}
+          /> : <Typography variant="h2">No Data Available</Typography> : <Loader />}
 
 
           {/* {isLoading  ? (

@@ -33,18 +33,18 @@ const Taxations = () => {
     {
       name: "South Africa",
       dateOfSignature: "November 2004, replacing DTA signed in 1973",
-      link:"http://website.ers.org.sz:8000/documents/SouthAfrica.pdf"
+      link:"http://102.36.181.16:8000/documents/SouthAfrica.pdf"
     },
-    { name: "Mauritius", dateOfSignature: "1995" ,link:"http://website.ers.org.sz:8000/documents/Mauritius.pdf"},
+    { name: "Mauritius", dateOfSignature: "1995" ,link:"http://102.36.181.16:8000/documents/Mauritius.pdf"},
     {
       name: "United Kingdom",
       dateOfSignature: "December 1968, replacing DTA signed in 1949",
-      link:"http://website.ers.org.sz:8000/documents/UnitedKingdom.pdf"
+      link:"http://102.36.181.16:8000/documents/UnitedKingdom.pdf"
     },
-    { name: "Seychelles", dateOfSignature: "2015",link:"http://website.ers.org.sz:8000/documents/Seychelles.pdf" },
-    { name: "Republic of China on Taiwan", dateOfSignature: "2019",link:"http://website.ers.org.sz:8000/documents/RepublicofChinaOnTaiwan.pdf" },
-    { name: "Botswana", dateOfSignature: "2019",link:"http://website.ers.org.sz:8000/documents/Botswana.pdf" },
-    { name: "Lesotho", dateOfSignature: "29 September 2020",link:"http://website.ers.org.sz:8000/documents/Lesotho.pdf" },
+    { name: "Seychelles", dateOfSignature: "2015",link:"http://102.36.181.16:8000/documents/Seychelles.pdf" },
+    { name: "Republic of China on Taiwan", dateOfSignature: "2019",link:"http://102.36.181.16:8000/documents/RepublicofChinaOnTaiwan.pdf" },
+    { name: "Botswana", dateOfSignature: "2019",link:"http://102.36.181.16:8000/documents/Botswana.pdf" },
+    { name: "Lesotho", dateOfSignature: "29 September 2020",link:"http://102.36.181.16:8000/documents/Lesotho.pdf" },
   ];
 
   return (

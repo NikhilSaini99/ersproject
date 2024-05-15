@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import banner from "../assets/images/about_us_new.jpg";
+import banner from "../assets/images/about_us_new1.jpg";
 // import estwaniimg from "../assets/images/aboutusbanner.jpg";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
@@ -190,7 +190,7 @@ export default function About() {
             required to deliver. These standards will also be the tool used to
             measure the ERSs performance in relation to customer service.
             <br />
-            <Link href="http://website.ers.org.sz:8000/documents/ERSCustomerStandards.pdf"> ERS Customer Standards</Link>
+            <Link href="http://102.36.181.16:8000/documents/ERSCustomerStandards.pdf"> ERS Customer Standards</Link>
           </Typography>
         </Box>
       </Box>
@@ -211,7 +211,7 @@ export default function About() {
         }}
       >
         <Typography variant="body1" className="Pointsformatting">
-          <Link href="http://website.ers.org.sz:8000/documents/TermsAndConditionsOfSupplyOfGoodsAndServices.pdf">
+          <Link href="http://102.36.181.16:8000/documents/TermsAndConditionsOfSupplyOfGoodsAndServices.pdf">
             <b style={{color:"#2F248F"}}>Click here</b>{" "}
           </Link>
           to download the Standard Terms and Conditions of Supply of Goods and

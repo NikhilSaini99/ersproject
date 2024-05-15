@@ -19,7 +19,7 @@ const ITRNotice = () => {
                 {/* <Typography variant="h1">
                 Income Tax Return Submission Notice 2022
                 </Typography> */}
-        <Link href="http://website.ers.org.sz:8000/documents/IncomeTaxReturnSubmissionNotice2022.pdf">
+        <Link href="http://102.36.181.16:8000/documents/IncomeTaxReturnSubmissionNotice2022.pdf">
           <Typography variant="h2" sx={{"&:hover":{textDecoration:"underline"}}} >Download Notice</Typography>
         </Link>
       </ContentDiv>

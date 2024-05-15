@@ -148,12 +148,15 @@ const SelfAssessment = () => {
                                     fontSize: '1.1rem',
                                     lineHeight: '30px', color: 'rgba(0,0,0,0.8)', pb: '2rem',
                                     display: isOpen === index ? 'block' : 'none'
-                                }}>{item.answer}</Typography>
-                                {item.note &&  <Typography variant='body1' sx={{
+                                }}>{item.answer}
+                                    <br/><br/>
+                                    {item.note && item.note}
+                                </Typography>
+                                {/* {item.note &&   <Typography variant='body1' sx={{
                                     fontSize: '1.1rem',
                                     lineHeight: '30px', color: 'rgba(0,0,0,0.8)', pb: '2rem',
                                    
-                                }}>{item.note}</Typography>}
+                                }}>{item.note}</Typography>} */}
                             </Stack>
                         ))}
                     </Stack>

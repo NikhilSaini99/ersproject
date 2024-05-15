@@ -4,6 +4,8 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 
 const advanceRuilingdata = [
     {
@@ -74,7 +76,7 @@ const advanceRuilingdata = [
                 "Whether a relevant ruling has already been issued for identical or similar goods",
                 "Disclosure of any pending matters relating to the goods before any appellate tribunal, court or government agency",
                 "Indicate which information (from which has been submitted) should remain confidential when the Ruling is issued"
-            ]
+            ] 
         },
     }
     ,
@@ -209,6 +211,12 @@ const advanceRuilingdata = [
     }
 ]
 
+const arrowStyling = {
+    color: "#2f2483",
+    fontSize: "1rem",
+    marginRight: "0.5rem",
+  };
+
 export default function CustomAccordion() {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -226,18 +234,30 @@ export default function CustomAccordion() {
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
             >
-                <Typography sx={{ color: 'text.primary' }}>{item?.ques}</Typography>
+            <Typography sx={ { color: 'black', fontWeight: "light"}}>{item?.ques}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-                <Typography sx={{ color: 'text.secondary' }}>
+                <Typography sx={{ color: 'black' }}>
                 {item?.answer.text}
                 </Typography>
                 {item.answer.list && item.answer.list.map((list, i) => (
-                    <Typography key={i} sx={{ color: 'text.secondary', ml:"1rem" }}>
+
+                    <div key={i} className="flex gap-1 items-start pb-2">
+                    <span className="Pointsformatting">
+                      <ArrowForwardIosIcon
+                        sx={{ ...arrowStyling, color: "#2f2483" }}
+                        className="Pointsformatting"
+                      />
+                    </span>
+                    <Typography  className='Pointsformatting' sx={{ color: 'black', ml:"1rem" }}>
                         {list}
                     </Typography>
+                  </div>
+
+
+                  
                 ))}
-                {item.answer.lastText && <Typography sx={{ color: 'text.secondary' }}>{item.answer.lastText}</Typography>}
+                {item.answer.lastText && <Typography sx={{ color: 'black' }}>{item.answer.lastText}</Typography>}
             </AccordionDetails>
             </Accordion>
         )

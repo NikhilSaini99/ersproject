@@ -80,10 +80,38 @@ const TaxItemTable = () => {
             include the correct tax item code when making payment. This code
             provides information on the tax item for which the payment is made
             and it must be provided regardless of the mode of payment being
-            used.* * The MTN Mobile Money provides an option to select the tax
+            used.*
+          </Typography>
+
+          <Typography
+            variant="body1"
+            className="Pointsformatting"
+            sx={{
+              fontSize: "1rem",
+              textAlign: "left",
+              pb: "2rem",
+              width: { xs: "96%", md: "100%", xl: "80%" },
+              margin: "0rem auto",
+              fontStyle: "italic",
+            }}
+          >
+          * The MTN Mobile Money provides an option to select the tax
             type for which payment is being made, therefore use of the
             referencing format is not necessary. The table below has the total
             list of tax item codes for use when referencing payments
+          </Typography>
+          <Typography
+            variant="body1"
+            className="Pointsformatting"
+            sx={{
+              fontSize: "1rem",
+              textAlign: "left",
+              pb: "2rem",
+              width: { xs: "96%", md: "100%", xl: "80%" },
+              margin: "0rem auto",
+            }}
+          >
+           The table below has the total list of tax item codes for use when referencing payments
           </Typography>
           <Box
             sx={{

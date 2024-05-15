@@ -36,8 +36,8 @@ const ECustomContainer = (props) => {
         <ContentDiv>
                     <Typography variant="h1" sx={{ pt: '2rem', mb: '1rem' }}>
                        {title}</Typography>
-                    <Typography variant="body1" sx={{ lineHeight:"2rem",   mb: '2rem' }}>
-                      {description}
+                    <Typography variant="body1" sx={{ lineHeight:"2rem",   mb: '2rem' }} dangerouslySetInnerHTML={{ __html: description }}>
+                      
                       </Typography>
                       <div class="bootstrap-gts"> <gts-web view='duty-calculator'></gts-web> </div>
 

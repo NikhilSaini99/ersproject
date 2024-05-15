@@ -110,7 +110,10 @@ export default function News() {
           Public Meeting 
         </Typography>
         </Box>
-              {data &&
+              {data && 
+
+                data?.data?.length > 0 ?
+
                 data?.data
                   ?.slice(0, 3)
                   ?.map((item, key) => (
@@ -125,7 +128,9 @@ export default function News() {
                       authorName={item?.author_name}
                       apiURl={"/api/publicMeeting"}
                     />
-                  ))}
+                  ))
+                  :
+                  <Typography variant="h2" sx={{ textAlign: "center" }}>No Data Available</Typography>}
             </Grid>
 
             {/* Left Side End */}

@@ -20,6 +20,8 @@ const Tender = () => {
   useEffect(() => {
     fetchAPI();
   }, [fetchAPI]);
+
+  console.log("data?.data", data?.data)
   
   const tableHeaders = ["Title", "Deadline", "Published", "Reference","Document Name","Download",]
   const includeProperties =["tenderName","deadline","publishedDate","reference","documentName","documentUrl"]
@@ -56,13 +58,15 @@ const Tender = () => {
             Tenders
           </Typography> */}
 
-          {data?.data ? <TableComponent
+          {data?.data ? 
+            data?.data?.length > 0 ? 
+          <TableComponent
                         tableData={data?.data}
                         tableHeaders={tableHeaders}
                         excluseProperties={excluseProperties}
                         includeProperties={includeProperties}
                         isGap={true}
-          /> : <Loader/>}
+          /> : <Typography variant="h2">No Data Available</Typography> : <Loader/>}
         </Box>
       </Box>
 

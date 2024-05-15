@@ -64,11 +64,13 @@ const InternationalStake = () => {
     const organizations = [
         {
             name: "Common Market for East and Southern Africa",
+            link: 'https://www.comesa.int/',
             description:
                 "With its 19 member states, population of 430 million (2008) and an annual import bill of around US$ 152 billion (2008) and an export bill of over US$ 157 billion (2008), the Common Market for East and Southern Africa (COMESA) is a major market place for both internal and external trading.",
         },
         {
             name: "Southern African Customs Union (SACU)",
+            link: 'https://www.sacu.int/',
             description:
                 "The Southern African Customs Union (SACU) is the world’s oldest customs union and its current members are Eswatini, South Africa, Botswana, Namibia, and Lesotho. Its primary objectives are:",
             objectives: [
@@ -84,21 +86,25 @@ const InternationalStake = () => {
         },
         {
             name: "Southern African Development Community (SADC)",
+            link: 'https://www.sadc.int/',
             description:
                 "The Southern African Development Community (SADC) was formed in 1992 taking over from the previous Southern African Development Coordination Conference (SADCC) whose primary purpose was to ensure political stability in the region. The new formation’s agenda is socio-economic reform and development in the region. Swaziland is a member of SADC and participates in all programmes and resolutions undertaken by the 15 member state cooperation.",
         },
         {
             name: "World Customs Organisation",
+            link: 'https://www.wcoomd.org/',
             description:
                 "Eswatini is a member of the World Customs Organisation. On this website, you can find information on worldwide Customs procedures, requirements, and developments.",
         },
         {
             name: "Customs Administration of Sweden (Tullverkert)",
+            link: 'https://www.tullverket.se/',
             description:
                 "The Eswatini Revenue Service, World Customs Organisation, and Customs Administration of Sweden (Tullverket) signed an MoU through which Tullverket will run capacity building programs for the benefit of Swaziland. Tullverket is a highly experienced and well-established Customs Administration which has been in existence since 1636. The Administration has over the centuries been instrumental in raising revenue for the state, protecting Swedish industry, and countering the smuggling of goods and narcotics into Sweden. Tullverket, as it is known, joined the European Union (EU) in 1995 thus aligning its regulations with those of the EU and extending its borders to Norway in the West, Russia in the East, and Africa in the South.",
         },
         {
             name: " ",
+            link: '#',
             description:
                 "The World Customs Organisation's role is to provide guidance, strategic advice, monitoring, attendance in steering committees, and further technical or political support upon request from either the ERS or the Customs Administration of Sweden. The WCO is the global centre of Customs expertise and is responsible for the development, promotion, and implementation of Customs standards which are used the world over. Its involvement is thus instrumental in ensuring that all initiatives under the agreement are aligned with current global developments.",
         },
@@ -228,7 +234,9 @@ const InternationalStake = () => {
                         <Box key={index}>
                             <Typography variant='h6' sx={{
                                 fontWeight: 'bold', my: '0.3rem'
-                            }} className='Pointsformatting'>{item.name}</Typography>
+                            }} className='Pointsformatting'>
+                             <Link href={`${item.link}`}>{item.name}</Link>
+                            </Typography>
                             <div className='flex gap-1 items-start pb-2'>
                                 <span className='Pointsformatting'><ArrowForwardIosIcon sx={arrowStyling} className='Pointsformatting' /></span>
                                 <Typography variant='body1' component='div' className='Pointsformatting' >{item.description}

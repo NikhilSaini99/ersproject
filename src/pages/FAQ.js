@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 
 import AddCircleOutlineTwoToneIcon from "@mui/icons-material/AddCircleOutlineTwoTone";
-import Banner from "../assets/images/bg4.jpg";
+import Banner from "../assets/images/Banner-FAQs2.jpg";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import Header from "@/components/Header";
@@ -95,7 +95,7 @@ export default function FAQ() {
       <section className="xs:mx-8 sm:mx-20 md:mx-30 lg:mx-30 xl:mx-40 2xl:mx-72 my-14">
         <div>
           <h1 className="text-subColor text-6xl font-bold uppercase">FAQ</h1>
-          <p className="mt-6 text-gray-500 leading-normal font-normal text-lg">
+          <p className="mt-6 leading-normal font-normal text-lg">
             The Frequently Asked Questions (FAQ) section is updated with
             information on how to use the eCustoms Tariff for Eswatini, the ERS
             Tariff Book in general and the World Customs Organisation (WCO)
