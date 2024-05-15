@@ -107,9 +107,10 @@ const Alliances = ({ h2Styling, arrowStyling }) => {
             fontWeight: "bold",
             color: "#2F248F",
             marginY: "1rem",
+            margin: { xs: "2rem auto", lg: "2rem auto 0" },
           }}
         >
-          ERS’s Alliances and Agreements.
+          ERS’s Alliances and Agreements
         </Typography>
 
         <Paper elevation={10} sx={{ margin: "2rem 0" }}>
@@ -148,7 +149,6 @@ const Alliances = ({ h2Styling, arrowStyling }) => {
                         key={index}
                         sx={{
                           "&>*": {
-                            fontWeight: "bold",
                           },
                           "&:hover": {
                             background: "#F2F2F2",
@@ -168,7 +168,7 @@ const Alliances = ({ h2Styling, arrowStyling }) => {
 
         <Box mt="2rem">
           <Typography variant="body1" className="Pointsformatting" my="1rem">
-            Other Agreements in Force
+            Other Agreements in Force:
           </Typography>
           {agreements.map((agreeItem, index) => (
             <div key={index} className="flex gap-1 items-start pb-2">

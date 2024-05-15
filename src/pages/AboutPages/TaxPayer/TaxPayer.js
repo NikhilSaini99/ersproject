@@ -48,7 +48,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
                     className="Pointsformatting"
                   />
                 </span>
-                <li>Your rights as a taxpayer</li>
+                <li>Your rights as a taxpayer.</li>
               </div>
               <div className="flex gap-1 items-start">
                 <span className="Pointsformatting">
@@ -57,7 +57,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
                     className="Pointsformatting"
                   />
                 </span>
-                <li>Your important tax obligations</li>
+                <li>Your important tax obligations.</li>
               </div>
               <div className="flex gap-1 items-start">
                 <span className="Pointsformatting">
@@ -106,7 +106,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
                     fontSize: "1.5rem",
                     fontWeight: "bold",
                     color: "#2F248F",
-                    marginY: "1rem",
+                    marginY: "0rem",
                   }}
                 >
                   {item.section}
@@ -154,8 +154,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
               flexDirection: { xs: "column", lg: "row" },
               gap: { lg: "1rem" },
               mt: "2rem",
-            }}
-          >
+            }}>
             <Image
               src={taxpayersection2}
               alt="taxpayersection1"
@@ -169,7 +168,7 @@ const TaxPayer = ({ h2Styling, arrowStyling }) => {
                     fontSize: "1.5rem",
                     fontWeight: "bold",
                     color: "#2F248F",
-                    marginY: "1rem",
+                    marginY: "0rem",
                     pr: { xs: "2rem", lg: "3rem" },
                   }}
                 >

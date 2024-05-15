@@ -29,7 +29,7 @@ const ChatboxMock = () => {
                     const script = document.createElement('script');
                     script.id = 'chat-bot-script';
                     script.type = 'text/javascript';
-                    script.src = 'http://website.ers.org.sz:5500/dist/chat-bot.bundle.js';
+                    script.src = 'http://102.36.181.16:5500/dist/chat-bot.bundle.js';
                     script.async = true;
                     script.onload = () => {
                         setLoading(false);

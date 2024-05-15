@@ -4,11 +4,11 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const Mandate = ({ h2Styling, arrowStyling }) => {
   const mandateDatalist = [
-    "Assessment and collection of all revenue on behalf of the Government",
-    "Administering and giving effect to the laws or the specified provisions of the laws set out in the Schedule and account for all revenue to which those laws apply",
+    "Assessment and collection of all revenue on behalf of the Government.",
+    "Administering and giving effect to the laws or the specified provisions of the laws set out in the Schedule and account for all revenue to which those laws apply.",
     "Promoting compliance with the revenue laws.",
-    "Taking such measures as may be required to counteract tax or revenue fraud and other forms of tax or revenue evasion",
-    "Ensuring that all revenue collected is, as soon as reasonably practicable, credited to the Eswatini Government General Account",
+    "Taking such measures as may be required to counteract tax or revenue fraud and other forms of tax or revenue evasion.",
+    "Ensuring that all revenue collected is, as soon as reasonably practicable, credited to the Eswatini Government General Account.",
     "Subject to the provisions of the Act, take such other measures as considered necessary or desirable for the achievement of the purposes or provisions of the revenue laws.",
   ];
 

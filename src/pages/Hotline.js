@@ -5,7 +5,7 @@ import Head from 'next/head'
 import React from 'react'
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
-import Banner from "../assets/images/customs.jpg";
+import Banner from "../assets/images/BannerHotline.jpg";
 import Image from 'next/image'
 const Hotline = () => {
     const hotLineData = [

@@ -9,9 +9,10 @@
     width: 6.815rem;
     height: 6.815rem;
     border-radius: 50%;
-    border: 2px solid #152c5b;
+    border: 0.5px solid #152c5b;
     background-color: white;
     position: relative;
+    
 }
 
 .chatwithus {
@@ -21,14 +22,15 @@
   height: 35px;
   background-color: #152c5b;
   position: relative;
-
   bottom: 12px;
+  border-radius: 10px;
+
 }
 
 .chatwithus h1 {
   color: white;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   margin: 0;
   
 }

@@ -161,9 +161,13 @@ const mediaRef = useRef(null);
               <Link href="https://www.youtube.com/channel/UCK9y_OZHNmDPwYveSdy5EOw" target="_blank"><IoLogoYoutube className="headerIcons" /></Link>
               <Link href="https://www.linkedin.com/company/100124155/admin/feed/posts/" target="_blank"><GrLinkedinOption className="headerIcons" /></Link>
             </Box>
+
                 <div>
+                <a href="mailto:someone@something.com?subject=your title&body=TThe message">
                   <Image src={mail} alt="mail" className="mr-2 inline" />
                   <span>info@ers.org.sz</span>
+                </a>
+                  
                 </div>
                 <div>
                   <Image src={call} alt="call" className="mr-2 inline" />
@@ -171,7 +175,6 @@ const mediaRef = useRef(null);
                 </div>
               </div>
           
-
             <div className="flex space-x-4 items-center">
               <ul className="flex flex-row border-black/40 space-x-5">
                 <li className="relative">

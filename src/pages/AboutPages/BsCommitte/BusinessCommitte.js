@@ -53,16 +53,16 @@ const BusinessCommitte = ({ h2Styling, arrowStyling }) => {
         "All issues that arise from the BCC are meant to be progressed or dealt with within three months of being raised; exceptions are fully reported at the next BCC meeting.",
     },
     {
-      section: "Minutes of previous meetings",
+      section: "Minutes of Previous Meetings",
       content: {
         links: [
           {
             text: "1. February 21, 2013",
-            link: "http://website.ers.org.sz:8000/documents/February_21_2013.pdf",
+            link: "http://102.36.181.16:8000/documents/February_21_2013.pdf",
           },
           {
             text: "3. February 20, 2014",
-            link: "http://website.ers.org.sz:8000/documents/February_20_2014.pdf",
+            link: "http://102.36.181.16:8000/documents/February_20_2014.pdf",
           },
         ],
       },

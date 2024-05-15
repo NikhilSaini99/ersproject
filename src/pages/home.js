@@ -2,7 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { BlackButton } from "@/styles/globalStyle";
-import CSR from "../assets/images/CSR.jpg";
+ import CSR from "../assets/images/CSR.jpg";
+// import CSR from "../assets/images/CR1.jpg";
+
 import Carousal from "@/components/carousal";
 import ChatboxMock from "@/components/Chatbox/ChatboxMock";
 import Customs from "../assets/images/eCustoms_Tariff_Logo.png";
@@ -72,8 +74,7 @@ export default function Home() {
           head: "Provisional Tax",
           para: "1st payment is due no later than 31st December",
           para2: "2nd payment is due no later than 30th June",
-          para3:
-            "3rd payment is due on receipt of Notice of Assessment after having submitted Income Tax returns",
+          para3:"3rd payment is due on receipt of Notice of Assessment after having submitted Income Tax returns",
         },
         {
           id: 2,
@@ -83,16 +84,14 @@ export default function Home() {
         {
           id: 3,
           head: "Submission of Salary Reconciliations",
-          para: "No later than the 7th every month",
+          para: "No later than the 30th September every year",
         },
         {
           id: 4,
           head: "Submission of Income Tax Returns",
           para: "All Non-VAT registered entities - 31st October",
-          para2:
-            "Individuals with employment income and Individuals with other income - 30th November",
-          para3:
-            "All VAT registered entities and Special groups - 31st December",
+          para2:"Individuals with employment income and Individuals with other income - 30th November",
+          para3:"All VAT registered entities and Special groups - 31st December",
         },
       ],
     },
@@ -481,9 +480,9 @@ export default function Home() {
       <section className="" data-aos="fade-up-right">
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div className="w-full md:w-1/2">
-            <Image src={CSR} alt="..." className="h-[420px]" />
+            <Image src={CSR} alt="..." className="h-[460px]" />
           </div>
-          <div className="w-full md:w-1/2 py-10 xs:px-5 md:px-10 px-20 bg-[#DAD8CC]  md:h-[420px] xl:h-[420px]">
+          <div className="w-full md:w-1/2 py-10 xs:px-5 md:px-10 px-20 bg-[#DAD8CC]  md:h-[460px] xl:h-[460px]">
           <h1 className="text-subColor text-2xl md:text-4xl font-semibold">
             {/* <h1 className="text-5xl font-semibold text-subColor leading-snug"> */}
               Corporate Social Responsibility

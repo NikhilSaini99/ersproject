@@ -95,7 +95,7 @@ const Feedback = () => {
               <InputLabel htmlFor="full-Name">Comments</InputLabel>
               <TextField variant='outlined' size='medium' type='text' multiline={true} minRows={5} value={feedback_description} onChange={(e) => setfeedback_description(e.target.value)} sx={{ mb: '1rem' }} required />
               <FormControlLabel required  control={<Checkbox size='small' />} label={<Typography  variant="subtitle2">By clicking on Submit I hereby consent to provide my personal information to ERS in compliance with their <Link href="/TermsandConditions/TermsCondition" target='_blank' style={{color:"blue"}}> Data Privacy policy</Link></Typography>} />
-              <Button type="submit" variant='contained' color='primary' sx={{ background: '#2f2483 !important', color: 'white', alignSelf: 'center', width: '10rem', mb: { xs: '2rem', lg: '3rem' }, p: '0.8rem' }}>Send</Button>
+              <Button type="submit" variant='contained' color='primary' sx={{ background: '#2f2483 !important', color: 'white', alignSelf: 'center', width: '10rem', mb: { xs: '2rem', lg: '3rem' }, p: '0.8rem' }}>Submit</Button>
             </Stack>
           </Paper>
         </Box>
