@@ -166,7 +166,7 @@ export const LatestNewsSection = ({ isPublic, restNews, isLoading, apiURl }) => 
       ) : (
         <div>
         <Typography variant="h4" sx={{mt:"3rem", fontWeight: "bold", textAlign: "center", height:"100%",zIndex:"9999"
-        }}>No other NEWS</Typography>
+        }}>No Other Records</Typography>
 </div>
       ) }
         
