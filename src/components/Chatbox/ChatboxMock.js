@@ -28,14 +28,13 @@ const ChatboxMock = () => {
                          />
                          <div className={styles.chatwithus}> 
                         <h1>Lets Chat!</h1>
-                        
                      </div>
                  </div>
-                   {isOpen &&   <div style={{ position: "absolute", bottom: "426px", right: "22px", maxWidth: "10px", maxHeight: "10px", 
+                 {isOpen &&   <div style={{ position: "absolute", bottom: "434px", right: "26px", maxWidth: "10px", maxHeight: "10px", 
                  border: "0.5px solid transparent", 
 
                   }} onClick={toggleChatBox}>
-                        <span style={{ color: "#FFF", fontSize: "26px" }}>×</span>
+                        <span style={{ color: "#FFF", fontSize: "38px", background: "#2f2483" }}>×</span>
                  </div>}
 
          <iframe
@@ -44,7 +43,8 @@ const ChatboxMock = () => {
                style={{
                  width: "450px",
                  height: "450px",
-                 visibility: isOpen ? "visible" : "hidden",
+                 display: isOpen ? "block" : "none",
+                 backgroundColor: "transparent !important",
                }}
                title="unique"
              />
