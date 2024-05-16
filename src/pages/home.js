@@ -482,7 +482,7 @@ export default function Home() {
           <div className="w-full md:w-1/2">
             <Image src={CSR} alt="..." className="h-[420px] object-cover" />
           </div>
-          <div className="w-full md:w-1/2 py-10 xs:px-5 md:px-10 px-20 bg-[#DAD8CC]  md:h-[460px] xl:h-[460px]">
+          <div className="w-full md:w-1/2 py-10 xs:px-5 md:px-10 px-20 bg-[#DAD8CC]  md:h-[420px] xl:h-[420px]">
           <h1 className="text-subColor text-2xl md:text-4xl font-semibold">
             {/* <h1 className="text-5xl font-semibold text-subColor leading-snug"> */}
               Corporate Social Responsibility
