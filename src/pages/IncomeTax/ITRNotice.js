@@ -12,12 +12,12 @@ const ITRNotice = () => {
             <ContentDiv>
 
             <Box sx={{ padding: "2rem 0", position:"relative" }}>
-                        <Typography variant="h1" sx={{ position: "relative !important" }}>Income Tax Return Submission Notice 2022
+                        <Typography variant="h1" sx={{ position: "relative !important" }}>Income Tax Return Submission Notice 2023
                             <span className="absolute bottom-0 left-0 w-1/2 border-b-2 border-yellowish"></span>
                             </Typography>
                     </Box>
                 {/* <Typography variant="h1">
-                Income Tax Return Submission Notice 2022
+                Income Tax Return Submission Notice 2023
                 </Typography> */}
         <Link href="http://102.36.181.16:8000/documents/IncomeTaxReturnSubmissionNotice2022.pdf">
           <Typography variant="h2" sx={{"&:hover":{textDecoration:"underline"}}} >Download Notice</Typography>
