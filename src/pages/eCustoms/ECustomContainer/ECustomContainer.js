@@ -41,6 +41,17 @@ const ECustomContainer = (props) => {
                       </Typography>
                       <div class="bootstrap-gts"> <gts-web view='duty-calculator'></gts-web> </div>
 
+                      <iframe
+               
+               src="https://preprod.esupplychainportal.com/SRA/search.html"
+               style={{
+                 width: "900px",
+                 height: "780px",
+                 backgroundColor: "transparent !important",
+               }}
+               title="unique"
+             />
+
      </ContentDiv>
 
  </Box>
