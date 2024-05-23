@@ -36,7 +36,7 @@ export default function Customs() {
       title: "Asycuda World",
       description:
         "The Automated System for Customs Data (ASYCUDA) is a computerized customs management system that covers most foreign trade procedures. It handles manifests and customs declarations, along with accounting, transit and suspense procedures.",
-        path: 'http://asyw.ers.org.sz:8081'
+        path: 'http://asyw.sra.org.sz:8081/ '
     },
     {
       id: 2,
