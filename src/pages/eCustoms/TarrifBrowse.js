@@ -7,7 +7,7 @@ const browseDescription = "The World Customs Organisation (WCO) issued the gener
 const TarrifBrowse = () => {
   return (
     <>
-    <ECustomContainer title="Tariff Browse" description={browseDescription}/>
+    <ECustomContainer title="Tariff Browse" description={browseDescription} frame_url={"https://www.esupplychainportal.com/SRA/browse.html"}/>
     <Footer/>
     </>
   )

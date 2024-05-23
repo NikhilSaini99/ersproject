@@ -8,7 +8,7 @@ const dutyDescription ='The Duty Estimator allows a quick Customs and Excise dut
 const DutyCalculator = () => {
   return (
     <>
-    <ECustomContainer title="Duty Calculator" description={dutyDescription}/>
+    <ECustomContainer title="Duty Calculator" description={dutyDescription} frame_url={"https://www.esupplychainportal.com/SRA/duty.html"}/>
     <Footer/>
     </>
   )

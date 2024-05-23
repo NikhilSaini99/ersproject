@@ -3,10 +3,12 @@ import Banner from "../../assets/images/Eswatini_VAT.png";
 import bgimg from "../../assets/images/bg-2.png";
 import PageLayout from '../PagesLayout/Layout';
 import { ContentDiv } from '@/styles/globalStyle';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Link from 'next/link';
 
 const AdvanceRulingSearch = () => {
+  const theme = useTheme();
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'))
   return (
     <PageLayout
       title={"Advance Ruiling Search"}
@@ -24,6 +26,18 @@ const AdvanceRulingSearch = () => {
         <Typography variant="body1" className="Pointsformatting">
         ERS has implemented Advance Rulings in terms of the WTO Agreement on Trade Facilitation (TFA). Advance Rulings allow trade to apply for an official written descision by ERS prior to import or export on Tariff Classification, Origin or Valuation. Advance Rulings are issued and valid for a specified period. This provides traders with the benefit of certainty when exporting or importing the goods covered by the Advance Ruling. Use the tool below to search for a view existing Advance Rulings that have been issued by ERS. If you would like to apply for your own Advance Ruling, <Link style={{color:"blue"}} href="https://art.customs-connect.com/loginers" target="_blank">click here</Link>  to register and apply.
         </Typography>
+
+        <iframe
+               
+               src={"https://www.esupplychainportal.com/SRA/advanceruling.html"}
+               style={{
+                 width: isLargeScreen ? "1200px" : "900px",
+                 height: "780px",
+                 backgroundColor: "transparent !important",
+               }}
+               title="unique"
+             />
+
 
       </ContentDiv>
     </PageLayout>

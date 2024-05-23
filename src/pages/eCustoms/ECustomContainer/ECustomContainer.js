@@ -1,5 +1,5 @@
 import Header from '@/components/Header'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
@@ -9,7 +9,9 @@ import { ContentDiv } from '@/styles/globalStyle'
 
 
 const ECustomContainer = (props) => {
-  const {title,description} = props
+  const { title,description, frame_url } = props
+  const theme = useTheme();
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'))
   return (
     <>
     <Head>
@@ -43,9 +45,9 @@ const ECustomContainer = (props) => {
 
                       <iframe
                
-               src="https://preprod.esupplychainportal.com/SRA/search.html"
+               src={frame_url}
                style={{
-                 width: "900px",
+                 width: isLargeScreen ? "1180px" : "900px",
                  height: "780px",
                  backgroundColor: "transparent !important",
                }}

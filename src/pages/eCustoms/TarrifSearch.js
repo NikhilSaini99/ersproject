@@ -7,7 +7,7 @@ const searchDescription = "Tariff classification of goods is one of the more com
 const TarrifSearch = () => {
   return (
     <>
-    <ECustomContainer title="Tariff Search" description={searchDescription}/>
+    <ECustomContainer title="Tariff Search" description={searchDescription} frame_url={"https://www.esupplychainportal.com/SRA/search.html"}/>
     <Footer/>
     </>
   )
