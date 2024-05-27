@@ -41,7 +41,6 @@ const ECustomContainer = (props) => {
                     <Typography variant="body1" sx={{ lineHeight:"2rem",   mb: '2rem' }} dangerouslySetInnerHTML={{ __html: description }}>
                       
                       </Typography>
-                      <div class="bootstrap-gts"> <gts-web view='duty-calculator'></gts-web> </div>
 
                       <iframe
                
