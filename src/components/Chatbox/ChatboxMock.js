@@ -39,7 +39,7 @@ const ChatboxMock = () => {
 
          <iframe
                 ref={frameRef}
-               src="https://ers.org.sz:5500/"
+               src="https://www.ers.org.sz:5500"
                style={{
                  width: "450px",
                  height: "450px",
