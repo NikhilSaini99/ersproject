@@ -57,6 +57,7 @@ const Icons = () => {
           <p className="text-center text-sm font-medium">Tax Ease</p>
         </Link>
 
+
         <Link href="http://www.asyw.sra.org.sz" className="flex flex-col gap-2">
           {/* <PaymentsOutlinedIcon sx={iconStyling} /> */}
           <Image src={AyscudaImg} alt="test"  width={60} height= {60} />

@@ -15,11 +15,11 @@ const PaymentPage = () => {
             id: 1,
             title: 'ELECTRONIC FUNDS TRANSFER AS WELL AS IN-BRANCH TRANSFERS (ACCOUNT TO ACCOUNT TRANSFERS)',
             details: [
-                'The ERS has <a href="http://102.36.181.16/BankAccounts" style="color:blue">bank accounts</a> bank accounts in all 5 banks in Eswatini therefore taxpayers MUST use the designated ERS account within the same bank as that from the payment is being made.',
+                'The ERS has <a href="https://www.ers.org.sz/BankAccounts" style="color:blue">bank accounts</a> bank accounts in all 5 banks in Eswatini therefore taxpayers MUST use the designated ERS account within the same bank as that from the payment is being made.',
                 'The Domestic Taxes account must be used for all domestic taxes related payments, e.g. PAYE, income tax, domestic VAT, withholding taxes etc; and the Customs account must be used for all transactions that relate to importation of goods.',
                 'To facilitate receipting of payments made through the banks, taxpayers MUST reference payments by providng the following information in a single string and in the order listed:',
                 'Taxpayer identification number (TIN)',
-                'Tax item code (<a href="http://102.36.181.16/TaxItemTable" style="color:blue">Click HERE</a> for a list of all tax item codes)',
+                'Tax item code (<a href="https://www.ers.org.sz/TaxItemTable" style="color:blue">Click HERE</a> for a list of all tax item codes)',
                 'Calendar year for which the payment is being made',
                 'First three letters of the month for which the payment is being made.',
                 'Example: a taxpayer whose TIN is 123 456 789 paying VAT for the tax period March 2020 would reference the payment as follows 123456789VT2020MAR',
