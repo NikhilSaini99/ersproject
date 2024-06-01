@@ -36,7 +36,7 @@ export default function Customs() {
       title: "Asycuda World",
       description:
         "The Automated System for Customs Data (ASYCUDA) is a computerized customs management system that covers most foreign trade procedures. It handles manifests and customs declarations, along with accounting, transit and suspense procedures.",
-        path: 'http://asyw.sra.org.sz:8081/'
+        path: 'http://asyw.sra.org.sz'
     },
     {
       id: 2,
@@ -244,37 +244,37 @@ export default function Customs() {
           </h1>
           <ul className="grid grid-cols-2 gap-x-32 text-mainColor text-[15px] px-4 leading-7 font-normal">
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/SACUCorrelationTable.pdf" target="_blank">SACU Correlation Table</a>
+            <a href = "https://www.ers.org.sz:8000/documents/SACUCorrelationTable.pdf" target="_blank">SACU Correlation Table</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule1Part1.pdf" target="_blank">Schedule 1 Part 1</a>
+            <a href = "https://www.ers.org.sz:8000/documents/Schedule1Part1.pdf" target="_blank">Schedule 1 Part 1</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule1Part1LegalNotes.pdf" target="_blank">Schedule 1 Part 1 Legal Notes</a>
+            <a href = "https://www.ers.org.sz:8000/documents/Schedule1Part1LegalNotes.pdf" target="_blank">Schedule 1 Part 1 Legal Notes</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule1Part2A.pdf" target="_blank">Schedule 1 Part 2A</a>
+            <a href = "https://www.ers.org.sz:8000/documents/Schedule1Part2A.pdf" target="_blank">Schedule 1 Part 2A</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule1Part2B.pdf" target="_blank">Schedule 1 Part 2B</a>
+            <a href = "https://www.ers.org.sz:8000/documents/Schedule1Part2B.pdf" target="_blank">Schedule 1 Part 2B</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule1Part3D.pdf" target="_blank">Schedule 1 Part 3D</a>
+            <a href = "https://www.ers.org.sz:8000/documents/Schedule1Part3D.pdf" target="_blank">Schedule 1 Part 3D</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule1Part3E.pdf" target="_blank">Schedule 1 Part 3E</a>
+            <a href = "https://www.ers.org.sz:8000/documents/Schedule1Part3E.pdf" target="_blank">Schedule 1 Part 3E</a>
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule3.pdf" target="_blank">Schedule 3</a> 
+            <a href = "https://www.ers.org.sz:8000/documents/Schedule3.pdf" target="_blank">Schedule 3</a> 
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule4.pdf" target="_blank">Schedule 4</a> 
+            <a href = "https://www.ers.org.sz:8000/documents/Schedule4.pdf" target="_blank">Schedule 4</a> 
             </li>
             <li className="hover:underline cursor-pointer starclass" onClick={()=>alert("No file found!")}>
             Schedule 5 
             </li>
             <li className="hover:underline cursor-pointer starclass">
-            <a href = "http://102.36.181.16:8000/documents/Schedule6.pdf" target="_blank">Schedule 6</a>
+            <a href = "https://www.ers.org.sz:8000/documents/Schedule6.pdf" target="_blank">Schedule 6</a>
             </li>
           </ul>
         </div>

@@ -25,11 +25,11 @@ const VatRegulations = () => {
                 {/* <Typography variant="h1"  >
                     VAT Regulations</Typography> */}
 
-                <Typography variant='h6' className='Pointsformatting'>The VAT Regulations <Link href={'http://102.36.181.16:8000/documents/TheVATRegulations.pdf'} target='_blank'
+                <Typography variant='h6' className='Pointsformatting'>The VAT Regulations <Link href={'https://www.ers.org.sz:8000/documents/TheVATRegulations.pdf'} target='_blank'
                     style={{ color: '#2f2483', fontWeight: 'bold' }}>(click here to download) </Link>
                     give clarity to certain sections of the VAT Act. These must be read with the Act for better understanding of the provisions of the VAT act no. 12 of 2011.</Typography>
 
-                <Link href='http://102.36.181.16:8000/documents/VATRateAmendmentRegulation2018.pdf' target='_blank'><Typography variant="body1" className='Pointsformatting' sx={{ color: '#2f2483', }} >VAT (Rate) (Amendment) Regulation 2018</Typography></Link>
+                <Link href='https://www.ers.org.sz:8000/documents/VATRateAmendmentRegulation2018.pdf' target='_blank'><Typography variant="body1" className='Pointsformatting' sx={{ color: '#2f2483', }} >VAT (Rate) (Amendment) Regulation 2018</Typography></Link>
                 
             </ContentDiv>
           </PageLayout>

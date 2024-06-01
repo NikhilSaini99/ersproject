@@ -15,8 +15,8 @@ const TaxTables = () => {
     const taxTableData = [
         {
             heading: 'Tax Tables',
-            content: 'The tax tables provide guidelines on the calculations of Pay As You Earn for employees. The tables summarise the principles of the Income Tax Order, 1975 and practice notes that relate to PAYE. A further resource in the document is tables that employers may use to ascertain the amount of tax they may withhold for various income rates. These tables are separated to cater for <a href="http://102.36.181.16:8000/documents/DAILY.pdf" style="color:blue">DAILY,</a>  <a href="http://102.36.181.16:8000/documents/WEEKLY.pdf" style="color:blue">WEEKLY </a> and <a href="http://102.36.181.16:8000/documents/MONTHLY.pdf" style="color:blue">MONTHLY </a> wages; note that the tables have already incorporated the tax rebate that all employees are entitled to.Note that effective from the 1st July 2013, Volume 22 of the tax tables replaces <a href="http://102.36.181.16:8000/documents/Volume21.pdf" style="color:blue">Volume 21</a>  following the amendment of tax rates for individuals.',
-            note: 'NOTE. Employers preparing Salary Reconciliations for the tax year ended 30th June 2013 are advised to used <a href="http://102.36.181.16:8000/documents/Volume21.pdf" style="color:blue">Volume 21</a> for reference purposes.'
+            content: 'The tax tables provide guidelines on the calculations of Pay As You Earn for employees. The tables summarise the principles of the Income Tax Order, 1975 and practice notes that relate to PAYE. A further resource in the document is tables that employers may use to ascertain the amount of tax they may withhold for various income rates. These tables are separated to cater for <a href="https://www.ers.org.sz:8000/documents/DAILY.pdf" style="color:blue">DAILY,</a>  <a href="https://www.ers.org.sz:8000/documents/WEEKLY.pdf" style="color:blue">WEEKLY </a> and <a href="https://www.ers.org.sz:8000/documents/MONTHLY.pdf" style="color:blue">MONTHLY </a> wages; note that the tables have already incorporated the tax rebate that all employees are entitled to.Note that effective from the 1st July 2013, Volume 22 of the tax tables replaces <a href="https://www.ers.org.sz:8000/documents/Volume21.pdf" style="color:blue">Volume 21</a>  following the amendment of tax rates for individuals.',
+            note: 'NOTE. Employers preparing Salary Reconciliations for the tax year ended 30th June 2013 are advised to used <a href="https://www.ers.org.sz:8000/documents/Volume21.pdf" style="color:blue">Volume 21</a> for reference purposes.'
         }
     ]
 
@@ -59,7 +59,7 @@ const TaxTables = () => {
                         style={{ marginRight: 'calc((12.5% + 2px)*2*-1)', top: '1.5rem' }}>
                         <div className="border-t border-black font-bold"></div>
                         <h6 className="font-semibold">DOWNLOADS</h6>
-                        <a href="http://102.36.181.16:8000/documents/EmployersGuideforPAYE.pdf" target='_blank' className="w-5 text-normalBlue hover:underline">
+                        <a href="https://www.ers.org.sz:8000/documents/EmployersGuideforPAYE.pdf" target='_blank' className="w-5 text-normalBlue hover:underline">
                             <div className="flex flex-row gap-x-2" style={{ width: '75%' }}>
                                 <Image src={downloadIcon} className="fill-current" alt="downloadIcon" width="100%" height="100%" />
                                 <p className="">Employers Guide for PAYE</p>

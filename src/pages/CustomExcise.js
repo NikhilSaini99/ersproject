@@ -37,7 +37,7 @@ export default function CustomExcise() {
 
           <Typography variant="body1">
             `Eswatini is a member of the oldest Customs Union in the World established in 1910 the Southern African Customs Union (SACU) consists of what is now Eswatini, Lesotho, Botswana, Namibia and South Africa. Importations between these countries are free of Customs and Excise duty with all importations to the Union being at a Common Customs external tariff. The revenue collected from those duties is pooled and shared under an agreed mechanism. Eswatini is also a member of both SADC and COMESA and goods originating from those countries also enjoy preferential Tariff rates. Full details of preferences and international trade agreements can be found 
-            <Link href="http://102.36.181.16:3000/CustomExcise/FreeTrade"> here.</Link> Customs in Eswatini is administered by the ERS Customs and Excise Department in accordance with the Customs and Excise Act of 1971. The Department performs key functions for the country&apos;s development including:`
+            <Link href="https://www.ers.org.sz:3000/CustomExcise/FreeTrade"> here.</Link> Customs in Eswatini is administered by the ERS Customs and Excise Department in accordance with the Customs and Excise Act of 1971. The Department performs key functions for the country&apos;s development including:`
           </Typography>
 
           {points.map((item, index) => (
@@ -48,7 +48,7 @@ export default function CustomExcise() {
           ))}
 
           <Typography variant="body1">
-          Goods imported into Eswatini from outside of the Southern African Customs Union (SACU) are liable to Customs duty and for some classes of goods also Excise duty. Value Added Tax is also payable on imports both from SACU and elsewhere. Information for businesses importing to, or exporting from, Eswatini can be found  <Link href="http://102.36.181.16:3000/CustomExcise/GeneralRules"> here.</Link> Travellers entering Eswatini must make a declaration at one of our 14 border posts/points of entry. There also are (rebate) allowances for bona fide personal importations Excise duty is also payable on a small range of domestically produced goods (alcoholic drinks, cigarettes etc.).
+          Goods imported into Eswatini from outside of the Southern African Customs Union (SACU) are liable to Customs duty and for some classes of goods also Excise duty. Value Added Tax is also payable on imports both from SACU and elsewhere. Information for businesses importing to, or exporting from, Eswatini can be found  <Link href="https://www.ers.org.sz:3000/CustomExcise/GeneralRules"> here.</Link> Travellers entering Eswatini must make a declaration at one of our 14 border posts/points of entry. There also are (rebate) allowances for bona fide personal importations Excise duty is also payable on a small range of domestically produced goods (alcoholic drinks, cigarettes etc.).
           </Typography>
         </ContentDiv>
         </PageLayout>

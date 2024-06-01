@@ -98,7 +98,7 @@ const Taxationandbenefit = () => {
             <li>
               Where the employer owns the accommodation or housing, the rental
               benefit value is determined in accordance with Schedule A (
-              <a href="http://102.36.181.16:8000/documents/Taxation_of_Benefits.pdf">
+              <a href="https://www.ers.org.sz:8000/documents/Taxation_of_Benefits.pdf">
                 click here to access
               </a>
               ) which is in accordance with size and location.
@@ -414,7 +414,7 @@ const Taxationandbenefit = () => {
             </Typography>
             <Typography variant="body1">
             This refers to benefits whose value is so small, as to make it unreasonable or administratively impractical to account for them for tax purposes. 
-            <a href="http://102.36.181.16:8000/documents/TaxationOfBenefits.pdf" style={{color:blue}}>
+            <a href="https://www.ers.org.sz:8000/documents/TaxationOfBenefits.pdf" style={{color:blue}}>
              Click here
               </a> for a Guideline on the tax treatment of these kind of benefits.
             </Typography>

@@ -60,8 +60,8 @@ const SekululaVat = () => {
     },
     {
       downloadData: [
-        "<a href = http://102.36.181.16:8000/documents/foranexampleofavalidsimplifiedTax-VATInvoice.jpg target = _blank> Click Hear for an example of a valid simplified Tax/VAT Invoice </a>",
-        "<a href = http://102.36.181.16:8000/documents/foranexampleofavalidfullTax-VATInvoice.jpg target = _blank> Click Hear for an example of a valid full Tax/VAT Invoice </a>",
+        "<a href = https://www.ers.org.sz:8000/documents/foranexampleofavalidsimplifiedTax-VATInvoice.jpg target = _blank> Click Hear for an example of a valid simplified Tax/VAT Invoice </a>",
+        "<a href = https://www.ers.org.sz:8000/documents/foranexampleofavalidfullTax-VATInvoice.jpg target = _blank> Click Hear for an example of a valid full Tax/VAT Invoice </a>",
         
       ],
     },
