@@ -166,7 +166,7 @@ export default function About() {
         <Box>
           <Typography variant="body1" className="Pointsformatting">
             Customer service standards are a set of rules that are derived from
-            the ERS’s Vision; they aim to give direction to the ERSs strategic
+            the ERS&apos;s Vision; they aim to give direction to the ERSs strategic
             and business activities as well as its conduct in order to realise
             the Vision.
           </Typography>
