@@ -47,7 +47,7 @@ export default function About() {
   const heroSectionData = {
     title: "About Eswatini Revenue Service",
     description:
-      "The Eswatini Revenue Service (ERS) is a semi-autonomous revenue administration agency. It was set up through the Eswatini Revenue Authority Act, 2008 (as amended). The ERS works within the broad framework of Government but outside of the civil service.The ERS is structured as a corporate entity and strives for operational excellence and efficiency. The organization is headed by a Commissioner General – Mr Brightwell Nkambule since 2022. ERS has a Governing Board appointed by the Honourable Minister of Finance.",
+      "The Eswatini Revenue Service (ERS) is a semi-autonomous revenue administration agency. It was set up through the Revenue Authority Act, 2008 (as amended). The ERS works within the broad framework of Government but outside of the civil service.The ERS is structured as a corporate entity and strives for operational excellence and efficiency. The organization is headed by a Commissioner General – Mr Brightwell Nkambule since 2022. ERS has a Governing Board appointed by the Honourable Minister of Finance.",
   };
 
   return (
@@ -142,7 +142,7 @@ export default function About() {
 
       <TaxPayer h2Styling={h2Styling} arrowStyling={arrowStyling} />
 
-      <BusinessCommitte h2Styling={h2Styling} arrowStyling={arrowStyling} />
+      {/* <BusinessCommitte h2Styling={h2Styling} arrowStyling={arrowStyling} /> */}
 
       <CodeOfEthicsConduct h2Styling={h2Styling} arrowStyling={arrowStyling} />
 
@@ -185,12 +185,12 @@ export default function About() {
           <Typography variant="body1" className="Pointsformatting">
             Service standards are a set of guidelines that govern the conduct of
             all staff towards ensuring quality service delivery by the
-            Authority. Effective customer service standards are defined in very
+            ERS. Effective Customer Service Standards are defined in very
             specific terms to ensure that employees understand what they are
             required to deliver. These standards will also be the tool used to
-            measure the ERSs performance in relation to customer service.
+            measure the ERS's performance in relation to customer service.
             <br />
-            <Link href="https://www.ers.org.sz:8000/documents/ERSCustomerStandards.pdf"> ERS Customer Standards</Link>
+            <Link href="https://www.ers.org.sz:8000/documents/ERSCustomerStandards.pdf"><b style={{color:"#2F248F"}}> ERS Customer Standards </b></Link>
           </Typography>
         </Box>
       </Box>
