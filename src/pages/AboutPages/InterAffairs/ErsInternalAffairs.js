@@ -8,7 +8,7 @@ const ErsInternalAffairs = ({ h2Styling, arrowStyling }) => {
       //section: "Internal Affairs Division ",
       content: {
         subhead:
-          "Internal Affairs Division is charged with the responsibility to devise strategies to prevent and combat fraud and corruption within the ERS. Whilst collecting revenue is in the fore-front, it is essential that such task is executed by staff that is ethically clean and free of corruption and related vices. Internal Affairs Division reports to the Commissioner General who is the CEO of the Organization. Since internal fraud and corruption as business risks and has vulnerabilities, the Division is also required to report to the HR & Ethics Committees of the Governing Board.",
+          "Internal Affairs Division is charged with the responsibility to devise strategies to prevent and combat fraud and corruption within the ERS. Whilst collecting revenue is in the fore-front, it is essential that such task is executed by staff that is ethically clean and free of corruption and related vices. Internal Affairs Division reports to the Commissioner General who is the CEO of the Organization. Since internal fraud and corruption has business risks and has vulnerabilities, the Division is also required to report to the HR & Ethics Committees of the Governing Board.",
         // subPoints: [
         //   "Detecting and Investigating issues of integrity and unethical behavior including allegations of fraud, corruption and all acts of dishonesty & misconduct occurring and involving personnel of the Eswatini Revenue Service</b>",
         // ],
@@ -38,7 +38,7 @@ const ErsInternalAffairs = ({ h2Styling, arrowStyling }) => {
     },
 
     {
-      section: "Corruption Preventative Over-sight Responsibilities",
+      section: "Corruption Preventative Oversight Responsibilities",
       content: {
         subhead:
           "This aspect of the strategy regulates certain staff practices considered to be of ethical risk and in conflict with the Code of Ethics and Conduct. These includes management of staff gifts, staff outside/external involvement, management of staff conflict of interests conducting staff lifestyles checks through the annual requirement for staff to declare their income and assets.",
