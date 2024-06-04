@@ -92,7 +92,7 @@ const Icons = () => {
           {/* <ConnectWithoutContactIcon sx={iconStyling} /> */}
           <Image src={ContactImg} alt="test"  width={60} height= {60} />
 
-          <p className="text-center text-sm font-medium">Hotline</p>
+          <p className="text-center text-sm font-medium">Report Fraud</p>
         </Link>
 
         <Link

@@ -67,20 +67,20 @@ useEffect(()=>{
                 </Typography> */}
               
                 {isLoading? <Loader/>:
-                <Grid container spacing={2}
-                    sx={{ '& > .MuiGrid-item': { marginBottom: '2rem' } }}>
+                <Grid container spacing={1}
+                    sx={{ '& > .MuiGrid-item': { marginBottom: '5rem' } }}>
                     {AnnualReport?.map((item, index) => (
                         <Grid item xs={12} md={6} lg={4} key={index}>
-                            <Paper elevation={20} component="div" sx={{ cursor: 'pointer', height: '250px' }}>
+                            <Paper elevation={20} component="div" sx={{ cursor: 'pointer', height: '350px', width:'300px' }}>
                                 <Stack sx={{ direction: 'column', gap: '0.5rem', }}>
                                     <Link href={item.documentUrl} target="_blank">
-                                        <Box sx={{ height: '250px', }}>
+                                        <Box sx={{ height: '350px' }}>
                                             <img
                                                 src={item.coverPhoto}
                                                 alt="PDF Image"
                                                 style={{
                                                     width: "100%", height: "100%",
-                                                    objectFit: 'cover',
+                                                    objectFit: 'fit',
                                                 }}
                                             />
                                         </Box>

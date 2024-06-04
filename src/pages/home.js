@@ -179,7 +179,7 @@ export default function Home() {
         items: [
           {
             link: "/RecentlyApproved/ApprovedGuidelines",
-            text: "Recently Approved GuideLines",
+            text: "Recently Approved Guidelines",
           },
           {
             link: "/LegalandPolicy/Notes_Guidelines",

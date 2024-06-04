@@ -5,17 +5,22 @@ import Head from 'next/head'
 import React from 'react'
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
+import LanguageIcon from '@mui/icons-material/Language';
+import CodeIcon from '@mui/icons-material/Code';
+
 import Banner from "../assets/images/BannerHotline.jpg";
 import Image from 'next/image'
 const Hotline = () => {
     const hotLineData = [
         {
-            heading: 'Hotline',
-            description: 'If you have a complaint or wish to convey compliments on our services we will be pleased to hear from you. Also if you wish to give us information about malpractice by our staff or about evasion of taxes or Customs duties by any person or business you can contact us:-',
+            heading: 'Report Fraud',
+            description: 'Have you witnessed or suspect tax or customs-related fraud? Report anonymously through any of our Whistleblowing channels:-',
             subHeading: 'Head of internal Affairs',
             contact: '(+268) 2404 8449',
             email: 'internalaffairs@ers.org.sz',
-            alternateContact: 'You may also call on our hotline 800 8000'
+            website: 'www.slido.com',
+            code: '800800',
+            alternateContact: ' Toll Free 800 8000'
         }
     ]
 
@@ -54,9 +59,7 @@ const Hotline = () => {
                             {item.heading}
                         </Typography>
                         <Typography variant='body1' fontSize={'1rem'}>{item.description}</Typography>
-                        <Typography variant='body1' component={'h2'} sx={{ fontWeight: 'bold', textDecoration: 'underline', fontSize: '1.5rem' }}>
-                            {item.subHeading}
-                        </Typography>
+                       
                         <Stack direction={'row'} spacing={2}>
                             <CallIcon />
                             <Typography variant='body1' fontSize={'1rem'}>{item.contact}</Typography>
@@ -65,7 +68,20 @@ const Hotline = () => {
                             <EmailIcon />
                             <Typography variant='body1' fontSize={'1rem'}>{item.email}</Typography>
                         </Stack>
+
+                        <Stack direction={'row'} spacing={2}>
+                            <LanguageIcon />
+                            <Typography variant='body1' fontSize={'1rem'}>{item.website}</Typography>
+                        </Stack>
+
+                        <Stack direction={'row'} spacing={2}>
+                            <CodeIcon />
+                            <Typography variant='body1' fontSize={'1rem'}>{item.code}</Typography>
+                        </Stack>
+                        <Stack direction={'row'} spacing={2}>
+                            <CallIcon />
                         <Typography variant='body1' fontSize={'1rem'}>{item.alternateContact}</Typography>
+                        </Stack>
                     </Stack>
                 ))}
             </Box>

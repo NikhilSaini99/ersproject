@@ -166,7 +166,7 @@ export default function About() {
         <Box>
           <Typography variant="body1" className="Pointsformatting">
             Customer service standards are a set of rules that are derived from
-            the ERS’s Vision; they aim to give direction to the ERSs strategic
+            the ERS&apos;s Vision; they aim to give direction to the ERSs strategic
             and business activities as well as its conduct in order to realise
             the Vision.
           </Typography>
@@ -188,7 +188,7 @@ export default function About() {
             ERS. Effective Customer Service Standards are defined in very
             specific terms to ensure that employees understand what they are
             required to deliver. These standards will also be the tool used to
-            measure the ERS's performance in relation to customer service.
+            measure the ERS’s performance in relation to customer service.
             <br />
             <Link href="https://www.ers.org.sz:8000/documents/ERSCustomerStandards.pdf"><b style={{color:"#2F248F"}}> ERS Customer Standards </b></Link>
           </Typography>
