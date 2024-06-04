@@ -188,7 +188,7 @@ export default function About() {
             ERS. Effective Customer Service Standards are defined in very
             specific terms to ensure that employees understand what they are
             required to deliver. These standards will also be the tool used to
-            measure the ERS's performance in relation to customer service.
+            measure the ERS’s performance in relation to customer service.
             <br />
             <Link href="https://www.ers.org.sz:8000/documents/ERSCustomerStandards.pdf"><b style={{color:"#2F248F"}}> ERS Customer Standards </b></Link>
           </Typography>
