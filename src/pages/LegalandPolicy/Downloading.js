@@ -8,13 +8,14 @@ import useDownload from '@/hooks/useDownload';
 const Downloading = (props) => {
     const { downloadFile, isDownloading, progress } = useDownload();
     const {item , index} = props
+    const fileType = item.documentUrl[index].split(".").pop();
 
   return (
     <TableCell component='div' sx={{ padding: "5px" }}>
     {isDownloading ? (
         <CircularProgressWithLabel value={progress} />
     ) : (
-        <IconButton onClick={() => downloadFile(item.documentUrl[index], item.documentName[index])}>
+        <IconButton onClick={() => downloadFile(item.documentUrl[index], item.documentName[index], fileType)}>
             <DownloadForOfflineIcon sx={{ color: 'black' }} />
         </IconButton>
     )}
