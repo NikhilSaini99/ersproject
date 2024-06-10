@@ -62,11 +62,11 @@ const Registration = () => {
   const questionandanswer = [
     {
       question: 'Who Should Register?',
-      answer: 'The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E500 000. Any business with reasonable expectations to reach this amount should also apply to register. National, regional or public institutions (parastatals and municipalities) which make taxable supplies are required to register for VAT even though they do not meet the above mentioned threshold. Businesses supplying only exempt goods and services are not required to register. However, where a business supplies both exempt and taxable services, that business must register if the total turnover of the taxable supplies meets the annual turnover of E500 000.'
+      answer: 'The VAT Act requires that any business which supplies goods or services which are not exempt from VAT in Eswatini should apply for VAT registration. VAT registration is compulsory for businesses whose annual taxable turnover exceeds E900 000. Any business with reasonable expectations to reach this amount should also apply to register. National, regional or public institutions (parastatals and municipalities) which make taxable supplies are required to register for VAT even though they do not meet the above mentioned threshold. Businesses supplying only exempt goods and services are not required to register. However, where a business supplies both exempt and taxable services, that business must register if the total turnover of the taxable supplies meets the annual turnover of E900 000.'
     },
     {
       question: 'Voluntary Registration?',
-      answer: 'Other businesses whose turnover is below the threshold of E500 000 may apply for registration if they meet the registration requirements and the Commissioner General is satisfied that they are fit and proper to be registered.'
+      answer: 'Other businesses whose turnover is below the threshold of E900 000 may apply for registration if they meet the registration requirements and the Commissioner General is satisfied that they are fit and proper to be registered.'
     },
     {
       question: 'What Are The Registration Requirements?',
